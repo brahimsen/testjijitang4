@@ -6,6 +6,7 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
 
 <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -17,6 +18,79 @@
 <script src="js/bootstrap-modalmanager.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 <script src="js/myjavascript.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+
+<style>
+
+.popover {
+	width: 400px;
+	max-width: none !important;
+	max-height: none !important;
+	padding-bottom: 10px !important;
+
+
+}
+
+.popover .arrow, .popover .top-arrow {
+	display: none;
+
+}
+
+.popover .wrap {
+	border: none !important;
+	text-align: center;
+
+}
+
+.popover-top {
+	color: #877c21;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+
+}
+
+.popover-text {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #999;
+	margin-bottom: 30px !important;
+
+}
+
+</style>
+
+<script type="text/javascript">
+		/* <![CDATA[ */
+			jQuery(document).ready(function($) {
+			
+				
+				
+				$("#ex3a").popover({
+					content: "<p class='popover-top'>Submit My Abstract</p><p class='popover-text'>You don't have any note available to submit, create a note</p><span style='margin-top: 20px !important' class='main-button'><a>Create a Note</a></span>",
+					trigger: 'none'
+					
+					
+					
+					/*
+					
+					The Followind is the front End Code that Is supposed to show up in case there is a note, Usually an if Else statement should do it but in case you cannot trigger this code, we can find another way on how to develop it. Good Luck Xu
+					
+					content: "<p class='popover-top'>Submit My Abstract</p><p class='popover-text'>Select a not a push it to this topic</p><span style='margin-top: 20px !important' class='main-button'><a>Create a Note</a></span>",
+					trigger: 'none'*/
+					
+				});
+				$("#submit-abstract-popover").click(function(event) {
+					event.preventDefault();
+					event.stopPropagation();
+					$("#ex3a").popover('show');
+				});
+			
+	
+		
+			
+			});
+		/* ]]> */
+		</script>
 
 
 
@@ -109,7 +183,10 @@
         </div>        
         <div class="span8 right-content" style=" margin-left: 32%;">
        
-       		<span id="submit-abstract" class="main-button" style=" float: right"><a href="all-submits.html" title='Bottom Popover' rel='popover' data-placement='bottom' >Submit My Abstract</a></span>
+       		<span id="ex3a" class="main-button" style=" float: right"><a href="#" id="submit-abstract-popover">Submit My Abstract</a></span>
+            
+			
+            
             
             <div class="brown-holder" style="margin-top: 60px;">
             <p class="brown-holder-title">Editors Note</p><br />
@@ -161,3 +238,5 @@ $( ".all-submits" ).load( "submits.html" );
   
 
 </script>
+
+

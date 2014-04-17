@@ -220,6 +220,30 @@ background-color: #000 !important;
 	padding-top: 4% !important;
 
 }
+
+.popover {
+	max-width: none !important;
+	max-height: none !important;
+	padding-bottom: 10px !important;
+
+
+}
+}
+
+@media(max-width: 667px) {
+	
+ 
+
+
+.popover {
+	width: 100% !important;
+	max-width: none !important;
+	max-height: none !important;
+	padding-bottom: 10px !important;
+	left: 0px !important;
+
+
+}
 }
 
 #trans-table-header {
