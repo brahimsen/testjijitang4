@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/myjavascript.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+
+<style>
+
+.popover {
+	width: 400px;
+	max-width: none !important;
+	max-height: none !important;
+	padding-bottom: 10px !important;
+
+
+}
+
+.popover .arrow, .popover .top-arrow {
+	display: none;
+
+}
+
+.popover .wrap {
+	border: none !important;
+	text-align: center;
+
+}
+
+.popover-top {
+	color: #877c21;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+
+}
+
+.popover-text {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #999;
+	margin-bottom: 30px !important;
+
+}
+
+</style>
+
+<script type="text/javascript">
+		/* <![CDATA[ */
+			jQuery(document).ready(function($) {
+			
+				
+				
+				$("#ex3a").popover({
+					content: "<p class='popover-top'>Submit My Abstract</p><p class='popover-text'>You don't have any note available to submit, create a note</p><span style='margin-top: 20px !important' class='main-button'><a>Create a Note</a></span>",
+					trigger: 'none'
+					
+					
+					
+					/*
+					
+					The Followind is the front End Code that Is supposed to show up in case there is a note, Usually an if Else statement should do it but in case you cannot trigger this code, we can find another way on how to develop it. Good Luck Xu
+					
+					content: "<p class='popover-top'>Submit My Abstract</p><p class='popover-text'>Select a not a push it to this topic</p><span style='margin-top: 20px !important' class='main-button'><a>Create a Note</a></span>",
+					trigger: 'none'*/
+					
+				});
+				$("#submit-abstract-popover").click(function(event) {
+					event.preventDefault();
+					event.stopPropagation();
+					$("#ex3a").popover('show');
+				});
+			
+	
+		
+			
+			});
+		/* ]]> */
+		</script>
+
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+
+
+
+<div class="container-fluid">
+
+
+
+<!--Sign In Modal-->
+
+
+<div id="Sign-in-Modal" class="modal hide fade" tabindex="-1" data-width="760">
+  <div class="modal-body" style="margin-top: 40px; margin-bottom: 30px">
+    <div class="row-fluid">
+      <div class="span5 left-modal-div" style=" height: 100%; text-align: center; padding-top: 19% ">
+        <p style="color: #333; font-size: 20px; font-family:Arial, Helvetica, sans-serif; font-weight: normal;">Oops, Nedd to Sign In/Sign Up</p>
+       
+      </div>
+      <div class="span7 right-modal-div" style="border-left: 1px solid #CCC; padding-top: 30px; padding-bottom: 30px">
+<p class="offset1" style="color: #333; font-size: 16px; font-family:Arial, Helvetica, sans-serif; font-weight:700;">Sign In</p>        
+
+		<p><input placeholder="Email" type="text" class="span10 offset1" style="height: 40px" /></p>
+        <p><input placeholder="Password" type="text" class="span10 offset1" style="height: 40px" /></p>
+       <p class="offset1" style="color: #666; font-size: 16px; font-family:Arial, Helvetica, sans-serif; margin-top: 10px">No Jijitang Account<a style="color: #3D7D8B; font-family:Arial, Helvetica, sans-serif; font-size: 20px; font-weight: normal; text-decoration:none; cursor: pointer" id="signup-link">, Sign Up</a></p>   
+       		<div class="row-fluid" style="margin-top: 60px">     
+			<button style="float:right; margin-right: 30px;" type="button" class="btn btn-primary sign-btn">Sign In</button>
+            <button style="float:right" type="button" data-dismiss="modal" class="btn back-btn">Back</button>
+   			 
+             </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Sign Up Modal-->
+
+
+<div id="Sign-up-Modal" class="modal hide fade" tabindex="-1" data-width="760">
+  <div class="modal-body" style="margin-top: 40px; margin-bottom: 30px">
+    <div class="row-fluid">
+      <div class="span5 left-modal-div" style=" height: 100%; text-align: center; padding-top: 19% ">
+        <p style="color: #333; font-size: 20px; font-family:Arial, Helvetica, sans-serif; font-weight: normal;">Oops, Nedd to Sign In/Sign Up</p>
+       
+      </div>
+      <div class="span7 right-modal-div" style="border-left: 1px solid #CCC; padding-top: 30px; padding-bottom: 30px">
+<p class="offset1" style="color: #333; font-size: 16px; font-family:Arial, Helvetica, sans-serif; font-weight:700;">Sign Up</p>        
+
+		<p><input placeholder="Email" type="text" class="span10 offset1" style="height: 40px" /></p>
+        <p><input placeholder="Password" type="text" class="span10 offset1" style="height: 40px" /></p>
+        <p><input placeholder="Password Again" type="text" class="span10 offset1" style="height: 40px" /></p>
+       <p class="offset1" style="color: #666; font-size: 16px; font-family:Arial, Helvetica, sans-serif; margin-top: 10px">Have Jijitang Account<a style="color: #3D7D8B; font-family:Arial, Helvetica, sans-serif; font-size: 20px; font-weight: normal; text-decoration:none; cursor: pointer" id="Login-link">, Login</a></p>   
+       		<div class="row-fluid" style="margin-top: 60px">     
+			<button style="float:right; margin-right: 30px;" type="button" class="btn btn-primary sign-btn">Sign Up</button>
+            <button style="float:right" type="button" data-dismiss="modal" class="btn back-btn">Back</button>
+   			 
+             </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<header style=" position:fixed; width: 100%">
+
+
+</header>
+
+	<div id="aside" class="row-fluid" style=" margin-top: 40px;">
+    
+    
+		
+        	
+           
+        </div>        
+        <div class="span8 right-content" style=" margin-left: 32%;">
+       
+       		<span id="ex3a" class="main-button" style=" float: right"><a href="#" id="submit-abstract-popover">Submit My Abstract</a></span>
+            
+			
+            
+            
+            <div class="brown-holder" style="margin-top: 60px;">
+            <p class="brown-holder-title">Editors Note</p><br />
+            <p class="brown-holder-content">Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note </p>
+            
+            </div>
+            
+            <!--Notes-->
+            <div class="Notes">
+            	
+            	
+            </div>
+            
+            
+            
+        	
+            
+         
+        
+            
+        
+        </div>
+        
+    
+    
+    </div>
+
+
+
+
+</div>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "#aside" ).load( "aside.html" );
+$( ".Notes" ).load( "Notes.html" ); 
+  
+
+</script>
+
+
