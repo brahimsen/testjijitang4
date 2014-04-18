@@ -1,0 +1,22 @@
+Main Hosting Details
+Control panel username
+	b15_14679623
+Control panel password 	**********
+Control panel URL
+	cpanel.byethost15.com
+MySQL username
+	b15_14679623
+MySQL password
+	**********
+MySQL hostname
+	sql213.byethost15.com
+FTP username
+	b15_14679623
+FTP password
+	**********
+FTP host name 	ftp.byethost15.com
+
+	
+Your Website URL's
+Home page
+	http://jijitang.byethost15.com

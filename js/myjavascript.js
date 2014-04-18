@@ -55,4 +55,18 @@ content : '<div id="popOverBox">Your Text Here</div>'
 
 
 		});
+		
+		$("#get-in").click(function(){
+				$("#Sign-in-Modal").modal('hide');
+				$("#trans-Modal").modal('show');
+
+
+		});
+		
+		$("#get-up").click(function(){
+				$("#Sign-up-Modal").modal('hide');
+				$("#trans-Modal").modal('show');
+
+
+		});
 	});
