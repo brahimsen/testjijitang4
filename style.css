@@ -617,7 +617,59 @@ background-color: #000 !important;
 	height: 40px;
 	background:#F60;
 	color:#FFF;
+}
+
+footer > p > a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #3D7D8B;
 	
 
+}
+
+footer > p {
+	text-align: center;
+	
+
+}
+
+footer {
+	
+	 height: 40px;
+	 background:#FFF; 
+	 margin-left: 0px !important; 
+	 padding-top: 20px; 
+	 border-top: 1px solid #999; 
+	 margin-top: 30px
+
+}
+
+.notif-holder {
+	margin-left: 0px;
+	 margin-top: 50px;
+
+}
+
+.notif-holder-header {
+	border-bottom: 1px solid #999;
+
+}
+
+.notif-holder-header > p {
+	color: #999;
+	font-size: 13px
+
+}
+
+.notification {
+	margin-left: 0px !important;
+	 margin-top: 30px;
+
+}
+
+.notification > p  {
+	color: #333333;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px; 
 
 }
