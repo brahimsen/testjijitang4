@@ -1,0 +1,216 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/myjavascript.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<script>
+$(window).load(function() {
+	
+	
+	$(".ad-wrapper").show("slide", { direction: "up" }, 8000);
+
+
+});
+
+</script>
+
+
+</head>
+
+<style>
+
+.brown-holder {
+	background: #EDEBD5;
+	height: 30px !important;
+	padding-top: 10px !important;
+	padding-bottom: 0px;
+	border-radius: 5px;
+	
+
+}
+
+.brown-holder > p {
+	color: #999;
+	font-family:Arial, Helvetica, sans-serif;
+	
+
+}
+
+.ad-holder {
+	height: 70px; 
+	width: 100%; 
+	background:#FF6998; 
+	margin-left: 0px; 
+	opacity: 0.5;
+	margin-bottom: -55px; 
+
+
+
+
+}
+@media(max-width: 979px) {
+	.ad-wrapper {
+		position: relative !important;
+		margin-top: 0px !important;
+		margin-bottom: 30px !important;
+		height: 90px !important;
+	}
+	
+	.ad-content-holder {
+	}
+	
+	.ad-text-holder {
+		margin-top: 0px !important;
+	
+	
+	
+	}
+	
+	
+	
+}
+
+</style>
+
+<body>
+
+
+
+
+<div class="container-fluid">
+
+
+
+<header style=" position:fixed; width: 100%">
+
+
+</header>
+
+<div class="ad-wrapper" style="position: fixed; width: 100%; margin-top: 40px; display: none">
+
+
+<div class="ad-holder span12">
+<p style="float:right"><a id="close-add">X</a></p>
+</div>
+
+
+<div class=" ad-content-holder" style="position:relative; height: 40px; width: 100%;">
+<div class="span1" style="  margin-left: 12%">
+
+<img src="img/scan-me.png">
+
+</div>
+<div class="ad-text-holder span7" style="margin-top: 10px; margin-left: 0px; margin-right: 0px;">
+
+<p style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF;">
+妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券！
+<span style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#999; margin-left: 0px; ">
+查看详情
+</span>
+</p>
+
+
+</div>
+<div class="span3"  style="margin-top: 20px;">
+
+<span class="add-button" style="background: #996600; margin-top: 20px; border-radius: 5px; color:#FFF; font-size: 16px; padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px; cursor: pointer">
+上交你的论文摘要
+</span>
+
+</div>
+</div>
+
+</div>
+
+	<div id="aside" class="row-fluid" style=" margin-top: 40px;">
+    
+    
+		
+        	
+           
+        </div>        
+        <div class="span8 right-content" style=" margin-left: 32%; margin-top: 50px">
+       
+       		
+            <div class="brown-holder row-fluid"><p class="span2">Latest Topic</p><p class="span1" style="float: right">More</p></div>
+            
+            <div class="latest-topic row-fluid">
+            <div class="span8 topic-content">
+            <h4>MIT EECS professor : Constantinos Daskalakis</h4>
+            <p>Constantinos (or Costis) Daskalakis is the X-Window Associate Professor of Electrical Engineering and Computer Science, a member of the Computer Science and Artificial Intelligence Laboratory (CSAIL), and an affiliate of the Laboratory for Information and Decision Systems (LIDS) and the Operations Research Center (ORC). He completed his undergraduate studies in Greece, at the National Technical University of Athens, and obtained a PhD in Computer Science from UC Berkeley. After Berkeley he was a postdoctoral researcher in Microsoft Research New England...</p>
+            <p><a>Read 24 articles published under this topic</a></p>
+            </div>
+            <div class="span3 topic-image" style="height: 200px; background:#CCC"></div>
+            
+            </div>
+                        <div class="brown-holder row-fluid"><p class="span3">Recommended Articles</p><p class="span1" style="float: right">More</p></div>
+
+            <!--Editor Picks-->
+            <div class="picks">
+            	
+            	
+            </div>
+            
+            
+         
+            
+            
+         
+            
+            <div style="text-align:center; width: 100%; margin-top: 30px">
+        	<span id="loadMoresubmit" class="load-more-btn"> See More Editor Pick Notes</span>
+            </div>
+            
+        <footer  class="row-fluid span12">
+        
+		</footer>
+        
+        
+        
+        </div>
+        
+    
+    
+    </div>
+
+
+
+
+</div>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+$( "#aside" ).load( "aside.html" );
+$( ".picks" ).load( "pciks.html" ); 
+$( ".all-submits" ).load( "submits.html" ); 
+  
+
+</script>
+
+
