@@ -257,6 +257,26 @@ background-color: #000 !important;
 }
 }
 
+@media(max-width: 310px) {
+	
+ 
+.sidebar-inner-holder {
+	height: 230px !important; 
+	top: 40% !important;
+}
+
+.sidebar-inner-content {
+	height: 230px !important; 
+	top: 40% !important;
+}
+
+.white-btn {
+	margin-top: 15px !important;
+
+}
+
+
+}
 #trans-table-header {
 	border-bottom: 2px solid #666;
 	height: 30px;
@@ -335,11 +355,12 @@ background-color: #000 !important;
 	 position: fixed;
 	 height: 100%;
 	 background:url(img/aside.jpg) center no-repeat;
-	  width: 100%;
-	 height: 100%;
+	 width: 32%;
 	 -webkit-background-size: cover;
 	 -moz-background-size: cover;
 	 background-size: cover;
+	 margin-left: 0px; 
+	 z-index: -1 !important;
 	 
  
  }
@@ -815,6 +836,80 @@ margin-top: -30px;
 	
 }
 
+@media(max-width: 803px) {
+	.ad-wrapper {
+		
+		height: 160px !important;
+	}
+	
+
+	
+	.ad-holder {
+		height: 160px !important;
+	}
+	
+	.text-holder {
+		margin-top: -75px !important;
+	}
+	
+	.add-button{
+		margin-top: -20px !important;
+		margin-left: 7.6% !important;
+	
+	}
+	
+	.close-span {
+		margin-top: -100px !important;
+	
+	}
+	
+}
+
+@media(max-width: 769px) {
+	.ad-wrapper {
+		
+		height: 200px !important;
+	}
+	
+.add-detail-text {
+	margin-top: 10px !important;
+	margin-left: 0px !important;
+
+
+}
+	
+	.ad-holder {
+		height: 200px !important;
+	}
+	
+	.text-holder {
+		margin-top: -190px !important;
+	}
+	
+	.add-button{
+		margin-top: -5px !important;
+		margin-left: 5% !important;
+	
+	}
+	
+	.close-span {
+		margin-top: 0px !important;
+	
+	}
+	
+}
+
+@media(max-width: 1200px) {
+	
+	.add-detail-text {
+		margin-top: 0px !important;
+	
+	}
+
+	
+}
+
+
 	.pick-tabs {
 				background: #FFF !important;
 				
@@ -834,10 +929,24 @@ margin-top: -30px;
 			}
 			
 			
-			.pick-tabs > .active, .pick-tabs > .active:hover, .pick-tabs > .active > a {
+			.pick-tabs > .active,  .pick-tabs > .active > a {
 			background: #FFF !important;
 			color: #999;
 			font-weight:500;
+			font-weight: bold;
+			
+			
+			}
+			
+			.pick-tabs > .active > a:hover {
+			
+			color: #999;
+			
+			}
+			
+			.pick-tabs > li > a:hover {
+				color: #3D7D8B;
+				text-decoration: none !important;
 			
 			
 			}
@@ -955,3 +1064,45 @@ margin-top: -30px;
 		
 			}
 			
+			.topic-content {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			
+			
+			
+			}
+			
+				.topic-content > h4{
+					font-family:Arial, Helvetica, sans-serif;
+					font-size: 18px !important;
+					color: #333;
+					font-weight:normal !important;
+			
+			
+			
+			}
+			
+			.topic-content > p{
+					font-family:Arial, Helvetica, sans-serif;
+					font-size: 14px !important;
+					color: #666;
+					
+			
+			
+			
+			}
+			
+			.topic-content > p > a{
+					font-family:Arial, Helvetica, sans-serif;
+					font-size: 14px !important;
+					color: #3D7D8B;
+					
+			
+			
+			
+			}
+			
+			.topic-image {
+				margin-top: 40px;
+				margin-bottom: 20px !important;
+			}

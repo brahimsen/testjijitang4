@@ -77,15 +77,22 @@ $(document).ready(function() {
 
 
 <div class=" ad-content-holder">
-<span style="float:right; cursor: pointer; width: 20px; background:#FF0; margin-top: -30px"><a id="close-add">X</a></span>
-<div class="span1" style="  margin-left: 14%;">
+<span class="close-span" style="float:right; cursor: pointer; width: 20px; margin-top: -30px"><a id="close-add">X</a></span>
+<div class="span9 text-holder" style="  margin-left: 5%; margin-top: -20px">
 
 
 
-<img src="img/scan-me.png" style="margin-top: -20px">
+<div class="span1">
+<img  src="img/scan-me.png">
+</div>
+<p  class="span7 add-detail-text" style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF; margin-left: 10px; margin-right: 10px; margin-top: 15px">
+妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券！
+<span style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#999; margin-left: 0px ">
+查看详情
+</span>
 
 </div>
-<div class="ad-text-holder span7">
+<!--<div class="ad-text-holder span7">
 
 <p style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF; margin-top: -15px">
 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券！
@@ -95,7 +102,7 @@ $(document).ready(function() {
 </p>
 
 
-</div>
+</div>-->
 
 <input class="add-button" type="button" value="上交你的论文摘要" style="margin-top: -20px; margin-bottom: 20px">
 
@@ -103,20 +110,29 @@ $(document).ready(function() {
 
 </div>
 
-	<div id="aside" class="row-fluid" style=" margin-top: 40px;">
-    
-    
-		
-        	
-           
-        </div>        
-        <div class="span8 right-content" style=" margin-left: 32%; margin-top: 50px">
+	<div class="fixed-sidebar span4"> 
+        <div style=" position: relative; height: 100%">
+        	<div class="sidebar-inner-holder" style="position: absolute; height: 150px; width: 100%; background:#333; top: 60%; opacity: 0.6">
+            
+            </div>
+            <div class="sidebar-inner-content" style="position: absolute; height: 150px; width: 100%; top: 60%;">
+            <p style="color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 22px; margin-top: 15px; margin-left: 5%">Jijitang</p>
+            <p style="color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 18px; margin-top: -5px; margin-left: 5%">better academic reading and wrting !</p>
+            <hr style=" height: 1px; background: #CCC; border: 0px; margin-left: 5%; margin-right: 5%; margin-top: 0px">
+            <div class="row-fluid"><span class="main-button" style="float: right; padding-left: 20px; padding-right: 20px; margin-right: 5%">Sign Up</span><span class="main-button white-btn" style="float: right; padding-left: 20px; padding-right: 20px; margin-right: 5%; margin-top: 0px; background:#FFF; color: #999">Know Jijitang</span></div>
+            
+            </div>
+        
+        </div>
+            
+      </div>       
+        <div class="span8 right-content" style=" margin-left: 32%; margin-top: 100px">
        
        		
             <div class="brown-holder row-fluid"><p class="span2">Latest Topic</p><p class="span1" style="float: right">More</p></div>
             
             <div class="latest-topic row-fluid">
-            <div class="span8 topic-content">
+            <div class="span9 topic-content">
             <h4>MIT EECS professor : Constantinos Daskalakis</h4>
             <p>Constantinos (or Costis) Daskalakis is the X-Window Associate Professor of Electrical Engineering and Computer Science, a member of the Computer Science and Artificial Intelligence Laboratory (CSAIL), and an affiliate of the Laboratory for Information and Decision Systems (LIDS) and the Operations Research Center (ORC). He completed his undergraduate studies in Greece, at the National Technical University of Athens, and obtained a PhD in Computer Science from UC Berkeley. After Berkeley he was a postdoctoral researcher in Microsoft Research New England...</p>
             <p><a>Read 24 articles published under this topic</a></p>
@@ -164,7 +180,7 @@ $(document).ready(function() {
 $( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
 $( "#aside" ).load( "aside.html" );
-$( ".picks" ).load( "pciks.html" ); 
+$( ".picks" ).load( "Notes.html" ); 
 $( ".all-submits" ).load( "submits.html" ); 
   
 
