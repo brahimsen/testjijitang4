@@ -1,35 +1,75 @@
 			
-            
+            <script>
+			$(document).ready(function() {
+				$(".full-like-img").hide();
+				$(".like").click(function(){
+					$('.like-img',this).hide();
+					$('.full-like-img',this).show();
+				});
+			});
+			
+				$(".readlaterfull").hide();
+				$(".read-later-span").click(function(){
+					$('.readlater',this).hide();
+					$('.readlaterfull',this).show();
+				});
+				
+				$(".note-popover-update").hide();
+				$(".save,.note-popover-update").click(function(e){
+					
+					$('.note-popover-update',this).show();
+					e.stopPropagation();
+					
+				
+					
+				});
+				
+				$("html").click(function(e){
+					
+					$('.note-popover-update').hide();
+					
+					
+				
+					
+				});
+				
+				
+				
+				
+		
+			</script>
           
             
             <div class="pick-post">
             		<div class="pick-head row-fluid">
                     	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
                     	<div class="span5">
-                        	<p class="span6"><img src="img/readlater.png"><a class="read-later"> Read Later<a></p>
-                            <img class="pick-avatar">
+                        	<span class="span6 read-later-span"><img class="readlater" src="img/readlater.png"><img class="readlaterfull" src="img/readlaterfull.png"> <a class="read-later"> Read Later</a></span>
+                            <div class="pick-avatar" style="width: 48px; height: 48px; background:#999; border-radius: 25px"></div>
                     
                     	</div>
             
            			</div>
             		
                     <div class="pick-content">
-                    <ul  class="nav nav-tabs pick-tabs row-fluid" style="margin-top: -20px; border-bottom: 0px !important; margin-left: -10px; padding: 0px !important; height: 20px !important">
-  						<li style="margin-top: -20px !important; padding-top: 0px !important; padding-bottom: 0px !important" class="active"><a href="#home" data-toggle="tab">论文摘要</a></li>
-                        <li style="margin-top: -20px !important; padding-top: 0px !important; padding-bottom: 0px !important"><a>/</a></li>
-  						<li style="margin-left: -10px; margin-top: -20px !important; padding-top: 0px !important; padding-bottom: 0px !important"  ><a href="#profile" data-toggle="tab">ABSTRACT</a></li>
+                    <ul class="pick-tabs row-fluid" style="display:inline">
+  						<li class="active"><a href="#home" data-toggle="tab">论文摘要</a></li>
+                        /
+  						<li><a href="#profile" data-toggle="tab">ABSTRACT</a></li>
   					</ul>
                     
                     
                     
-                    <div class="tab-content" style="margin-top: -50px">
-  			<div class="tab-pane active" id="home" style="margin-top: -20px">
-  	 <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
+                    <div class="tab-content note-tab-content" style="margin-top: 10px">
+  			<div class="tab-pane active" id="home">
+  	 <p class="pick-text">
+     Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...
+     </p>
                     </div>
   
   <div class="tab-pane" id="profile"> 
   
-  	 <p class="pick-text">妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券</p>
+  	 <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
                 </div>
     
     </div>
@@ -39,423 +79,33 @@
                     
            		<div class="pick-footer row-fluid">
                     	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span2 pick-author">Adam Tata</div>
-                        <div class="span2 pick-author"> Research Articles</div>
+                        <div class="span4"><span class="pick-author">Adam Tata </span> <span class="pick-research"> in Research Articles</span></div>
                         <div class="span5 pick-comment">
                         	<div class="span4 comment"><img src="img/comment.png"><a id="comment-link"> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a id="save-link">Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a id="like-link">Like(66)</a></div>
+                        	<div class="span4 save" style="position: relative"><img src="img/save.png"><a id="save-link">Save</a>
+                             <div class="note-popover-update">
+                             	<h4>Save this Note</h4>
+                                <p>Choose a list you want to save this list to</p>
+                                <div class="row-fluid">
+                                <div ></div>
+                                <div ><p>List Name</p></div>
+                                <div ><p>Move out</p></div>
+                                </div>
+                                
+                                 <div class="row-fluid">
+                                <div ></div>
+                                <div ><p>List Name</p></div>
+                                <div ><p>Move out</p></div>
+                                </div>
+                             
+                             </div>
+
+                            
+                            
+                            </div>
+                        	<div class="span4 like"><img class="like-img" src="img/like.png"><img class="full-like-img"src="img/full-like.png"><a id="like-link">Like(66)</a></div>
                         </div>
                     
                     </div>
             	</div>
-              
-              <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div>
-                    
-                    </div>
-            	</div>
-                
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div>
-                    
-                    </div>
-            	</div>
-                
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
-                <div class="pick-post">
-            		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<p class="span6" style="color:#999"><img src="img/readlater.png"> Read Later</p>
-                            <img class="pick-avatar">
-                    
-                    	</div>
-            
-           			</div>
-            		
-                    <div class="pick-content">
-                    <p class="pick-abstract">论文摘要/ABSTRACT</p>
-                    <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
-                	
-                    </div>
-                    
-           		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4 pick-author">Adam Tata in Research Articles</div>
-                        <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a> Comment(4)</a></div>
-                        	<div class="span4 save"><img src="img/save.png"><a>Save</a></div>
-                        	<div class="span4 like"><img src="img/like.png"><a>Like(66)</a></div>
-                        </div> 
-                    </div>
-          		</div>
+             

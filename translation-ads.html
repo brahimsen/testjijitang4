@@ -20,6 +20,27 @@
 <script src="js/myjavascript.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 
+<script>
+$(window).load(function() {
+	
+	
+	$(".ad-wrapper").show("slide", { direction: "up" }, 8000);
+
+});
+
+$(document).ready(function() {
+	$("#close-add").click(function(){
+		$(".ad-wrapper").hide();
+
+		
+
+});
+});
+
+
+</script>
+
+
 
 
 <!-- HTML5 shim for IE backwards compatibility -->
@@ -27,16 +48,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<script>
-$(window).load(function() {
-	
-	
-	$(".ad-wrapper").show("slide", { direction: "up" }, 8000);
 
-
-});
-
-</script>
 
 
 </head>
@@ -57,23 +69,25 @@ $(window).load(function() {
 
 </header>
 
-<div class="ad-wrapper" style="position: fixed; width: 100%; margin-top: 40px; display: none">
+<div class="ad-wrapper" style="position: fixed; width: 100%; margin-top: 42px; display: none;">
 
 
 <div class="ad-holder span12">
-<p style="float:right"><a id="close-add">X</a></p>
 </div>
 
 
 <div class=" ad-content-holder">
-<div class="span1" style="  margin-left: 12%">
+<span style="float:right; cursor: pointer; width: 20px; background:#FF0; margin-top: -30px"><a id="close-add">X</a></span>
+<div class="span1" style="  margin-left: 14%;">
 
-<img src="img/scan-me.png">
+
+
+<img src="img/scan-me.png" style="margin-top: -20px">
 
 </div>
 <div class="ad-text-holder span7">
 
-<p style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF;">
+<p style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF; margin-top: -15px">
 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券！
 <span style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#999; margin-left: 0px; ">
 查看详情
@@ -82,13 +96,9 @@ $(window).load(function() {
 
 
 </div>
-<div class="span3"  style="margin-top: 20px;">
 
-<span class="add-button">
-上交你的论文摘要
-</span>
+<input class="add-button" type="button" value="上交你的论文摘要" style="margin-top: -20px; margin-bottom: 20px">
 
-</div>
 </div>
 
 </div>

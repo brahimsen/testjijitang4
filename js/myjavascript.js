@@ -41,6 +41,8 @@ content : '<div id="popOverBox">Your Text Here</div>'
 });
 });
 
+
+
 	$(document).ready(function(){
 		$("#Sign-in-Modal").modal('show');
 		$("#signup-link").click(function(){

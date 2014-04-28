@@ -228,6 +228,17 @@ background-color: #000 !important;
 
 
 }
+
+.note-popover-update {
+					width: 100% !important;
+				  
+				   background:#F00;
+				    position: absolute;
+					left: auto !important;
+					right: auto !important;
+					 top: 20px;
+					 
+			}
 }
 
 @media(max-width: 667px) {
@@ -323,18 +334,19 @@ background-color: #000 !important;
  .fixed-sidebar {
 	 position: fixed;
 	 height: 100%;
+	 background:url(img/aside.jpg) center no-repeat;
+	  width: 100%;
+	 height: 100%;
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 background-size: cover;
 	 
  
  }
  
  .sidebar-inner {
-	 width: 100%;
-	 height: 100%;
-	 position: relative;
-	 background:url(img/aside.jpg) center no-repeat;
-	 -webkit-background-size: cover;
-	 -moz-background-size: cover;
-	 background-size: cover;
+	
+	 
 	 
  
  
@@ -467,10 +479,30 @@ background-color: #000 !important;
 }
 
 .pick-title {
+	font-family:Arial, Helvetica, sans-serif !important;
+	
+	font-size: 18px !important;
+	
+	color: #333 !important;
+	cursor: pointer;
+
+}
+
+.pick-title:hover {
+	font-family:Arial, Helvetica, sans-serif !important;
+	
+	font-size: 18px !important;
+	
+	color: #666 !important;
+
+}
+
+.pick-title:visited {
 	font-family:Arial, Helvetica, sans-serif;
-	;
-	font-size: 16px;
-	font-weight:700
+	
+	font-size: 18px;
+	font-weight:700;
+	color: #666;
 
 }
 
@@ -483,9 +515,15 @@ background-color: #000 !important;
 }
 
 .pick-comment > div > a {
-	color: # 3D7D8B !important;
+	color: #3D7D8B !important;
 	font-size: 11px; 
 	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.pick-comment > div {
+	text-align: center;
+	cursor: pointer;
 
 }
 
@@ -505,6 +543,19 @@ background-color: #000 !important;
 }
 
 .pick-author:hover {
+	color: 877c21;
+
+}
+
+.pick-research {
+	color:#999;
+	font-size: 11px; 
+	font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+
+}
+
+.pick-research:hover {
 	color: 877c21;
 
 }
@@ -709,7 +760,7 @@ footer {
 }
 
 .ad-holder {
-	height: 70px; 
+	height: 90px; 
 	width: 100%; 
 	background:#FF6998; 
 	margin-left: 0px; 
@@ -719,16 +770,22 @@ footer {
 
 .ad-content-holder {
 
-position:relative; height: 40px; width: 100%;
+position:relative; width: 100%;
+margin-top: -30px;
+
 }
 
 .ad-text-holder {
-	margin-top: 10px; margin-left: 0px; margin-right: 0px;
+	margin-top: 10px; margin-left: 10px; margin-right: 0px;
 
 }
 
 .add-button {
-	background: #996600; margin-top: 20px; border-radius: 5px; color:#FFF; font-size: 16px; padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px; cursor: pointer	
+	background: #996600;
+	border-radius: 5px; 
+	color:#FFF; font-size: 16px; 
+	padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px; cursor: pointer;
+	border: none;	
 
 
 }
@@ -750,6 +807,10 @@ position:relative; height: 40px; width: 100%;
 	
 	}
 	
+	.ad-holder {
+		margin-top: 10px;
+	}
+	
 	
 	
 }
@@ -761,20 +822,19 @@ position:relative; height: 40px; width: 100%;
 			
 			}
 			.pick-tabs > li {
+				display: inline;
+			}
+			.pick-tabs > li > a {
 				background: #FFF !important;
-				color:#999;
+				color: #333;
 				font-weight: bold;
 				
 			
 			
 			}
 			
-			.pick-tabs > .active {
-				background: #FFF !important;
 			
-			
-			}
-			.pick-tabs > .active > a, .pick-tabs > .active > a:hover, .pick-tabs > .active > a:focus {
+			.pick-tabs > .active, .pick-tabs > .active:hover, .pick-tabs > .active > a {
 			background: #FFF !important;
 			color: #999;
 			font-weight:500;
@@ -782,15 +842,9 @@ position:relative; height: 40px; width: 100%;
 			
 			}
 			
-			.pick-tabs > .active > a, .pick-tabs > .active > a:hover, .pick-tabs > .active > a:focus {
-			background: #FFF !important;
-			color: #999;
-			font-weight:500;
 			
 			
-			}
-			
-			.pick-tabs > li > a:hover{
+			.pick-tabs > a:hover{
 			color: #3D7D8B;
 			
 			font-weight:500;
@@ -798,14 +852,106 @@ position:relative; height: 40px; width: 100%;
 			
 			}
 			
-			.pick-tabs > li:nth-child(1) {
+			
+			
+			
+			
+			.note-tab-content {
+				width: 100% !important;
+			}
+			
+			.side-banner-content {
+				height: 100px; 
+				background:#666;
+			}
+			
+			
+			.read-later-span {
+				cursor: pointer;
+			}
+			
+			.note-popover-update {
+				 width: 370px;
+			
+				    position: absolute;
+					 top: 30px;
+					  left: -165px;
+					  border-radius: 5px;
+					  border: 1px #CCC solid;
+					  background:#FFF;
+					  
+			}
+			
+			.note-popover-update > h4 {
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 500;
+				font-size: 16px;
+				color: #877c21;
+			}
+			
+			.note-popover-update > p {
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 500;
+				font-size: 14px;
+				color: #999;
+			}
+			
+			.note-popover-update > div {
+			
+				padding-top: 10px; 
+				padding-bottom: 10px;
+				border-bottom: 1px solid #999;
+				
 		
-			
-			
 			}
 			
-			.pick-tabs > a {
-				margin: 0px !important;
-			
-			
+			.note-popover-update > div:hover {
+				background:#eee !important;
+				
+		
 			}
+			
+			.note-popover-update > div > div{
+				float: left;
+				
+		
+			}
+			.note-popover-update > div > div > p{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 11px;
+				color:#999;
+				
+		
+			}
+			
+			
+			.note-popover-update > div > div:nth-child(1){
+				margin-left: 5%;
+				width: 10%;
+				height: 40px; 
+				background:#666
+				
+		
+			}
+			
+			.note-popover-update > div > div:nth-child(2){
+				 
+				width: 65%;
+				text-align: left;
+				
+		
+			}
+			
+			.note-popover-update > div > div:nth-child(2) > p{
+				margin-left: 10px;
+				
+		
+			}
+			
+			.note-popover-update > div > div:nth-child(3){
+			  width: 15%;
+				
+		
+			}
+			
