@@ -20,26 +20,6 @@
 <script src="js/myjavascript.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 
-<script>
-$(window).load(function() {
-	
-	
-	$(".ad-wrapper").show("slide", { direction: "up" }, 8000);
-
-});
-
-$(document).ready(function() {
-	$("#close-add").click(function(){
-		$(".ad-wrapper").hide();
-
-		
-
-});
-});
-
-
-</script>
-
 
 
 
@@ -57,52 +37,29 @@ $(document).ready(function() {
 
 <body>
 
+	<div class="container-fluid">
 
 
 
-<div class="container-fluid">
+		<header style=" position:fixed; width: 100%">
+		</header>
 
+		<div class="ad-wrapper">
+			<div class="ad-holder span12">
+			</div>
 
-
-<header style=" position:fixed; width: 100%">
-
-
-</header>
-
-<div class="ad-wrapper" style="position: fixed; width: 100%; margin-top: 42px; display: none;">
-
-
-<div class="ad-holder span12">
-</div>
-
-
-<div class=" ad-content-holder">
-<span class="close-span" style="float:right; cursor: pointer; width: 20px; margin-top: -30px"><a id="close-add">X</a></span>
-<div class="span9 text-holder" style="  margin-left: 5%; margin-top: -20px">
-
-
-
-<div class="span1">
-<img  src="img/scan-me.png">
-</div>
-<p  class="span7 add-detail-text" style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF; margin-left: 10px; margin-right: 10px; margin-top: 15px">
-妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券！
-<span style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#999; margin-left: 0px ">
-查看详情
-</span>
+			<div class=" ad-content-holder">
+				<span class="close-span"><a id="close-add">X</a></span>
+				<div class="span9 text-holder">
+					<div class="span1">
+						<img  src="img/scan-me.png">
+					</div>
+					<p  class="span7 add-detail-text">
+						妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券！
+					<span style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#999; margin-left: 0px ">查看详情
+					</span>
 
 </div>
-<!--<div class="ad-text-holder span7">
-
-<p style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF; margin-top: -15px">
-妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券！
-<span style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#999; margin-left: 0px; ">
-查看详情
-</span>
-</p>
-
-
-</div>-->
 
 <input class="add-button" type="button" value="上交你的论文摘要" style="margin-top: -20px; margin-bottom: 20px">
 
@@ -112,14 +69,13 @@ $(document).ready(function() {
 
 	<div class="fixed-sidebar span4"> 
         <div style=" position: relative; height: 100%">
-        	<div class="sidebar-inner-holder" style="position: absolute; height: 150px; width: 100%; background:#333; top: 60%; opacity: 0.6">
-            
+        	<div class="sidebar-inner-holder">
             </div>
-            <div class="sidebar-inner-content" style="position: absolute; height: 150px; width: 100%; top: 60%;">
+            <div class="sidebar-inner-content">
             <p style="color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 22px; margin-top: 15px; margin-left: 5%">Jijitang</p>
             <p style="color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 18px; margin-top: -5px; margin-left: 5%">better academic reading and wrting !</p>
-            <hr style=" height: 1px; background: #CCC; border: 0px; margin-left: 5%; margin-right: 5%; margin-top: 0px">
-            <div class="row-fluid"><span class="main-button" style="float: right; padding-left: 20px; padding-right: 20px; margin-right: 5%">Sign Up</span><span class="main-button white-btn" style="float: right; padding-left: 20px; padding-right: 20px; margin-right: 5%; margin-top: 0px; background:#FFF; color: #999">Know Jijitang</span></div>
+            <hr>
+            <div class="row-fluid"><span class="main-button fixed-bar-left-btn">Sign Up</span><span class="main-button white-btn">Know Jijitang</span></div>
             
             </div>
         
@@ -181,7 +137,7 @@ $( "header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
 $( "#aside" ).load( "aside.html" );
 $( ".picks" ).load( "Notes.html" ); 
-$( ".all-submits" ).load( "submits.html" ); 
+
   
 
 </script>

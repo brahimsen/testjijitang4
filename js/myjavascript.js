@@ -72,3 +72,19 @@ content : '<div id="popOverBox">Your Text Here</div>'
 
 		});
 	});
+	
+	$(window).load(function() {
+	
+	
+	$(".ad-wrapper").show("slide", { direction: "up" }, 8000);
+
+});
+
+$(document).ready(function() {
+	$("#close-add").click(function(){
+		$(".ad-wrapper").hide();
+
+		
+
+});
+});

@@ -1106,3 +1106,53 @@ margin-top: -30px;
 				margin-top: 40px;
 				margin-bottom: 20px !important;
 			}
+			
+			.ad-wrapper {
+			position: fixed;
+			 width: 100%; 
+			 margin-top: 42px; 
+			 display: none;
+			}
+			
+			.close-span {
+				float:right;
+				 cursor: pointer; 
+				 width: 20px; 
+				 margin-top: -30px
+			
+			
+			}
+			
+			.text-holder {
+			  margin-left: 5%; margin-top: -20px
+			
+			}
+			
+			.add-detail-text {
+			font-family:Arial, Helvetica, sans-serif; font-size: 17px; color:#FFF; margin-left: 10px; margin-right: 10px; margin-top: 15px
+			
+			}
+			
+			.sidebar-inner-holder {
+				position: absolute; height: 150px; width: 100%; background:#333; top: 60%; opacity: 0.6
+			
+			
+			}
+			
+			.sidebar-inner-content {
+				position: absolute; height: 150px; width: 100%; top: 60%;
+			
+			}
+			
+			.sidebar-inner-content > hr {
+				 height: 1px; background: #CCC; border: 0px; margin-left: 5%; margin-right: 5%; margin-top: 0px
+			
+			}
+			
+			.fixed-bar-left-btn {
+				float: right; padding-left: 20px; padding-right: 20px; margin-right: 5%
+			}
+			
+			.white-btn {
+				float: right; padding-left: 20px; padding-right: 20px; margin-right: 5%; margin-top: 0px; background:#FFF; color: #999
+			}
