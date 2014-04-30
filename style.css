@@ -237,6 +237,7 @@ background-color: #000 !important;
 					left: auto !important;
 					right: auto !important;
 					 top: 20px;
+					 z-index:  1 !important;
 					 
 			}
 }
@@ -675,7 +676,7 @@ background-color: #000 !important;
 }
 
 .header-btns {
-	width: 120px !important;
+	width: 164px !important;
 
 }
 
@@ -988,6 +989,7 @@ margin-top: -30px;
 					  border-radius: 5px;
 					  border: 1px #CCC solid;
 					  background:#FFF;
+					  z-index: 1 !important;
 					  
 			}
 			
@@ -1156,3 +1158,197 @@ margin-top: -30px;
 			.white-btn {
 				float: right; padding-left: 20px; padding-right: 20px; margin-right: 5%; margin-top: 0px; background:#FFF; color: #999
 			}
+			
+			
+			
+			
+			.search-popover-desktop {
+				 width: 370px;
+			
+				    position: absolute;
+					 top: 40px;
+					  left: -135px;
+					  border-radius: 5px;
+					  border: 1px #CCC solid;
+					  background:#FFF;
+					  
+			}
+			
+			.search-popover-desktop > h4 {
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 500;
+				font-size: 16px;
+				color: #877c21;
+			}
+			
+			.search-popover-desktop > p {
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 500;
+				font-size: 14px;
+				color: #999;
+			}
+			
+			.search-popover-desktop > div {
+			
+				padding-top: 10px; 
+				padding-bottom: 10px;
+				border-bottom: 1px solid #999;
+				
+		
+			}
+			
+			.search-popover-desktop > div:hover {
+				background:#eee !important;
+				
+		
+			}
+			
+			.search-popover-desktop> div > div{
+				float: left;
+				
+		
+			}
+			.search-popover-desktop > div > div > p{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 11px;
+				color:#999;
+				
+		
+			}
+			
+			
+			.search-popover-desktop > div > div:nth-child(1){
+				margin-left: 5%;
+				width: 10%;
+				height: 40px; 
+				background:#666
+				
+		
+			}
+			
+			.search-popover-desktop> div > div:nth-child(2){
+				 
+				width: 65%;
+				text-align: left;
+				
+		
+			}
+			
+			.search-popover-desktop > div > div:nth-child(2) > p:nth-child(1){
+				margin-left: 10px;
+				color: #877C21 !important;
+				font-size: 14px !important;
+				
+		
+			}
+			
+			.search-popover-desktop > div > div:nth-child(2) > p:nth-child(2){
+				margin-left: 10px;
+				color: #ccc !important;
+				margin-top: -13px !important;
+				font-size: 14px !important;
+				
+		
+			}
+			
+			.search-popover-desktop > div > div:nth-child(3){
+			  width: 15%;
+				
+		
+			}
+			
+			
+			
+			
+			
+				.alert-popover-desktop {
+				 width: 320px;
+			
+				    position: absolute;
+					 top: 40px;
+					  left: -135px;
+					  border-radius: 5px;
+					  border: 1px #CCC solid;
+					  background:#FFF;
+					  
+			}
+			
+		
+			
+			.alert-popover-desktop > p {
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 500;
+				font-size: 14px;
+				color: #999;
+			}
+			
+			.alert-popover-desktop> div {
+			
+				padding-top: 10px; 
+				padding-bottom: 10px;
+				
+				
+		
+			}
+			
+			.alert-popover-desktop > div:hover {
+				background:#eee !important;
+				
+		
+			}
+			
+			.alert-popover-desktop> div > div{
+				float: left;
+				
+		
+			}
+			.alert-popover-desktop > div > div > p{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 11px;
+				color:#999;
+				
+		
+			}
+			
+			
+			.alert-popover-desktop > div > div:nth-child(1){
+				margin-left: 5%;
+				width: 13%;
+				height: 40px; 
+				background:#666
+				
+		
+			}
+			
+			.alert-popover-desktop> div > div:nth-child(2){
+				 
+				width: 79%;
+				text-align: left;
+				
+		
+			}
+			
+			.alert-popover-desktop > div > div:nth-child(2) > p{
+				margin-left: 10px;
+				color: #333333 !important;
+				font-size: 14px !important;
+				
+		
+			}
+			
+			.alert-popover-desktop > div > div:nth-child(2) > p > a{
+				font-weight: bold;
+				
+		
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
