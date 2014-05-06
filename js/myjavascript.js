@@ -76,15 +76,81 @@ content : '<div id="popOverBox">Your Text Here</div>'
 	$(window).load(function() {
 	
 	
-	$(".ad-wrapper").show("slide", { direction: "up" }, 8000);
+	$(".ad-wrapper").show("slide", { direction: "up" }, 1000);
 
 });
 
 $(document).ready(function() {
 	$("#close-add").click(function(){
-		$(".ad-wrapper").hide();
+		$(".ad-wrapper").hide("slide", { direction: "up" }, 1000);
 
 		
 
 });
 });
+
+
+	$(document).ready(function() {
+				$(".full-like-img").hide();
+				$(".like").click(function(){
+					$('.like-img',this).hide();
+					$('.full-like-img',this).show();
+				});
+			});
+			
+				$(".readlaterfull").hide();
+				$(".read-later-span").click(function(){
+					$('.readlater',this).hide();
+					$('.readlaterfull',this).show();
+				});
+				
+				$(".note-popover-update").hide();
+				$(".save,.note-popover-update").click(function(e){
+					
+					$('.note-popover-update',this).fadeIn();
+					e.stopPropagation();
+					
+				
+					
+				});
+				
+				$("html").click(function(e){
+					
+					$('.note-popover-update').hide();
+					
+					
+				
+					
+				});
+				
+				
+				/* <![CDATA[ */
+			jQuery(document).ready(function($) {
+			
+				
+				
+				$("#ex3a").popover({
+					content: "<p class='popover-top'>Submit My Abstract</p><p class='popover-text'>You don't have any note available to submit, create a note</p><span style='margin-top: 20px !important' class='main-button'><a>Create a Note</a></span>",
+					trigger: 'none'
+					
+					
+					
+					/*
+					
+					The Followind is the front End Code that Is supposed to show up in case there is a note, Usually an if Else statement should do it but in case you cannot trigger this code, we can find another way on how to develop it. Good Luck Xu
+					
+					content: "<p class='popover-top'>Submit My Abstract</p><p class='popover-text'>Select a not a push it to this topic</p><span style='margin-top: 20px !important' class='main-button'><a>Create a Note</a></span>",
+					trigger: 'none'*/
+					
+				});
+				$("#submit-abstract-popover").click(function(event) {
+					event.preventDefault();
+					event.stopPropagation();
+					$("#ex3a").popover('show');
+				});
+			
+	
+		
+			
+			});
+		/* ]]> */
