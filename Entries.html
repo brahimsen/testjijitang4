@@ -1,24 +1,23 @@
-
-           
-              <script>
-			$(document).ready(function() {
-				$(".full-like-img").hide();
-				$(".like").click(function(){
-					$('.like-img',this).hide();
-					$('.full-like-img',this).show();
+  
+ <script>
+ $(document).ready(function() {
+				$(".like-full").hide();
+				$(".like-holder").click(function(){
+					$('.like',this).hide();
+					$('.like-full',this).show();
 				});
 			});
 			
-				$(".readlaterfull").hide();
-				$(".read-later-span").click(function(){
-					$('.readlater',this).hide();
-					$('.readlaterfull',this).show();
+				$(".read-later-full").hide();
+				$(".read-later-holder").click(function(){
+					$('.read-later-empty',this).hide();
+					$('.read-later-full',this).show();
 				});
 				
 				$(".note-popover-update").hide();
 				$(".save,.note-popover-update").click(function(e){
 					
-					$('.note-popover-update',this).show();
+					$('.note-popover-update',this).fadeIn();
 					e.stopPropagation();
 					
 				
@@ -33,23 +32,31 @@
 				
 					
 				});
-				
-				
-				
-				
-		
-			</script>
-          
-           
-           
-            <div class="pick-post">
+				</script>
+  <div class="pick-post">
             		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<span class="span6 read-later-span"><img class="readlater" src="img/readlater.png"><img class="readlaterfull" src="img/readlaterfull.png"> <a class="read-later"> Read Later</a></span>
-                            <div class="pick-avatar" style="width: 48px; height: 48px; background:#999; border-radius: 25px"></div>
+                    	<div class="span12">
+                        	<div class="pick-avatar" style="margin-left: 10px"></div>
+                        	<p class="pick-title"><a>Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome</a>
+                            
+                            <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-bookmark-o"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-bookmark"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span> </p>
+                            
+                       
                     
                     	</div>
+                        
+                        
+                        
+                       
             
            			</div>
             		
@@ -62,10 +69,10 @@
                     
                     
                     
-                    <div class="tab-content note-tab-content" style="margin-top: 10px">
+                    <div class="tab-content note-tab-content">
   			<div class="tab-pane active" id="a1">
   	 <p class="pick-text">
-     妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券
+    妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券
      </p>
                     </div>
   
@@ -81,43 +88,46 @@
                     
            		<div class="pick-footer row-fluid">
                     	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4"><span class="pick-author">Adam Tata </span> <span class="pick-research"> in Research Articles</span></div>
+                        <div class="span4" style="text-align: center"><span class="pick-author">Adam Tata </span> <span class="pick-research"> in Research Articles</span></div>
                         <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a id="comment-link"> Comment(4)</a></div>
-                        	<div class="span4 save" style="position: relative"><img src="img/save.png"><a id="save-link">Save</a>
+                            <div class="span5 comment"><span class="icon-comment-o"></span><span class="mls"> Comment(4)</span></div>
+                            <div class="span3 save" style="position: relative"><span class="icon-copy"></span><span class="mls"> Save(44)</span>
                              <div class="note-popover-update">
+                            
+                             	<div class="note-popover-update-header">
                              	<h4>Save this Note</h4>
                                 <p>Choose a list you want to save this list to</p>
+                                </div>
                                 <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
                                 
                                  <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
                                  <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
                                  <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
                                  <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
                                  <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
                              
                              </div>
@@ -125,41 +135,58 @@
                             
                             
                             </div>
-                        	<div class="span4 like"><img class="like-img" src="img/like.png"><img class="full-like-img"src="img/full-like.png"><a id="like-link">Like(66)</a></div>
+                            <div class="like-holder"><div class="span4 like"><span class="icon-heart-o"></span><span class="mls"> Like(4)</span></div>
+                            <div class="span4 like-full" style="margin-left: 0px"><span class="icon-heart" style="color: #877c21"></span><span class="mls" style="color:#999"> Like(4)</span></div></div>
+                            
                         </div>
                     
                     </div>
             	</div>
                 
-                
-            <div class="pick-post">
+             <div class="pick-post">
             		<div class="pick-head row-fluid">
-                    	<p class="pick-title span7">Glucose-TOR signalling reprograms the transcriptome </p>
-                    	<div class="span5">
-                        	<span class="span6 read-later-span"><img class="readlater" src="img/readlater.png"><img class="readlaterfull" src="img/readlaterfull.png"> <a class="read-later"> Read Later</a></span>
-                            <div class="pick-avatar" style="width: 48px; height: 48px; background:#999; border-radius: 25px"></div>
+                    	<div class="span12">
+                        	<div class="pick-avatar" style="margin-left: 10px"></div>
+                        	<p class="pick-title"><a>Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome</a>
+                            
+                            <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-bookmark-o"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-bookmark"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span> </p>
+                            
+                       
                     
                     	</div>
+                        
+                        
+                        
+                       
             
            			</div>
             		
                     <div class="pick-content">
                     <ul class="pick-tabs row-fluid" style="display:inline">
-  						<li class="active"><a href="#b1" data-toggle="tab">论文摘要</a></li>
+  						<li class="active"><a href="#a1" data-toggle="tab">论文摘要</a></li>
                         /
-  						<li><a href="#b2" data-toggle="tab">ABSTRACT</a></li>
+  						<li><a href="#a2" data-toggle="tab">ABSTRACT</a></li>
   					</ul>
                     
                     
                     
-                    <div class="tab-content note-tab-content" style="margin-top: 10px">
-  			<div class="tab-pane active" id="b1">
+                    <div class="tab-content note-tab-content">
+  			<div class="tab-pane active" id="a1">
   	 <p class="pick-text">
-     妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券
+    妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券
      </p>
                     </div>
   
-  <div class="tab-pane" id="b2"> 
+  <div class="tab-pane" id="a2"> 
   
   	 <p class="pick-text">Meristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
                 </div>
@@ -171,35 +198,57 @@
                     
            		<div class="pick-footer row-fluid">
                     	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4"><span class="pick-author">Adam Tata </span> <span class="pick-research"> in Research Articles</span></div>
+                        <div class="span4" style="text-align: center"><span class="pick-author">Adam Tata </span> <span class="pick-research"> in Research Articles</span></div>
                         <div class="span5 pick-comment">
-                        	<div class="span4 comment"><img src="img/comment.png"><a id="comment-link"> Comment(4)</a></div>
-                        	<div class="span4 save" style="position: relative"><img src="img/save.png"><a id="save-link">Save</a>
+                            <div class="span5 comment"><span class="icon-comment-o"></span><span class="mls"> Comment(4)</span></div>
+                            <div class="span3 save" style="position: relative"><span class="icon-copy"></span><span class="mls"> Save(44)</span>
                              <div class="note-popover-update">
+                            
+                             	<div class="note-popover-update-header">
                              	<h4>Save this Note</h4>
                                 <p>Choose a list you want to save this list to</p>
+                                </div>
                                 <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
                                 
                                  <div class="row-fluid">
                                 <div ></div>
                                 <div ><p>List Name</p></div>
-                                <div ><p>Move out</p></div>
+                                <div ><p class="move-out">Move out</p></div>
                                 </div>
-                                
+                                 <div class="row-fluid">
+                                <div ></div>
+                                <div ><p>List Name</p></div>
+                                <div ><p class="move-out">Move out</p></div>
+                                </div>
+                                 <div class="row-fluid">
+                                <div ></div>
+                                <div ><p>List Name</p></div>
+                                <div ><p class="move-out">Move out</p></div>
+                                </div>
+                                 <div class="row-fluid">
+                                <div ></div>
+                                <div ><p>List Name</p></div>
+                                <div ><p class="move-out">Move out</p></div>
+                                </div>
+                                 <div class="row-fluid">
+                                <div ></div>
+                                <div ><p>List Name</p></div>
+                                <div ><p class="move-out">Move out</p></div>
+                                </div>
                              
                              </div>
 
                             
                             
                             </div>
-                        	<div class="span4 like"><img class="like-img" src="img/like.png"><img class="full-like-img"src="img/full-like.png"><a id="like-link">Like(66)</a></div>
+                            <div class="like-holder"><div class="span4 like"><span class="icon-heart-o"></span><span class="mls"> Like(4)</span></div>
+                            <div class="span4 like-full" style="margin-left: 0px"><span class="icon-heart" style="color: #877c21"></span><span class="mls" style="color:#999"> Like(4)</span></div></div>
+                            
                         </div>
                     
                     </div>
             	</div>
-             
-             

@@ -73,56 +73,10 @@ content : '<div id="popOverBox">Your Text Here</div>'
 		});
 	});
 	
-	$(window).load(function() {
 	
+
+
 	
-	$(".ad-wrapper").show("slide", { direction: "up" }, 1000);
-
-});
-
-$(document).ready(function() {
-	$("#close-add").click(function(){
-		$(".ad-wrapper").hide("slide", { direction: "up" }, 1000);
-
-		
-
-});
-});
-
-
-	$(document).ready(function() {
-				$(".full-like-img").hide();
-				$(".like").click(function(){
-					$('.like-img',this).hide();
-					$('.full-like-img',this).show();
-				});
-			});
-			
-				$(".readlaterfull").hide();
-				$(".read-later-span").click(function(){
-					$('.readlater',this).hide();
-					$('.readlaterfull',this).show();
-				});
-				
-				$(".note-popover-update").hide();
-				$(".save,.note-popover-update").click(function(e){
-					
-					$('.note-popover-update',this).fadeIn();
-					e.stopPropagation();
-					
-				
-					
-				});
-				
-				$("html").click(function(e){
-					
-					$('.note-popover-update').hide();
-					
-					
-				
-					
-				});
-				
 				
 				/* <![CDATA[ */
 			jQuery(document).ready(function($) {
@@ -154,3 +108,15 @@ $(document).ready(function() {
 			
 			});
 		/* ]]> */
+		
+		
+
+
+
+$(window).load(function() {
+	
+	
+	$(".adver-wrapper").show("slide", { direction: "up" }, 1000);
+
+
+});

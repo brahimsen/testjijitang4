@@ -1,9 +1,5 @@
 
-
-
 <script>
-
-
 $( document ).ready(function() {
 	$("#search-text").hide();
 	$(".search-popover-desktop").hide();
@@ -75,13 +71,20 @@ $(".alert-popover-desktop").hide();
 				
 					
 				});
+				
+				$(document).ready(function() {
+	$("#close-add").click(function(){
+		$(".adver-wrapper").hide("slide", { direction: "up" }, 1000);
 
+		
 
-
+});
+});
 
 </script>
+
 <div class="row-fluid">
-<div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse" style="position: relative">
   <div class="navbar-inner" style="position: relative">
   <span class="span2 jijitang-logo">JIJITANG</span>
     <div class="container-fluid nav-holder span10" style="width: 88.905983%">
@@ -216,7 +219,39 @@ $(".alert-popover-desktop").hide();
         </ul>
     </div><!-- /.nav-collapse -->
     </div><!-- /.container -->
+    
   </div><!-- /.navbar-inner -->
+  <div class="adver-wrapper hidden-phone hidden-tablet" style="position: absolute; width: 100%; display: none">
+  			
+            
+            		
+                    <div class="adver-wrapper-inner">
+                    <span class="close-span"><a id="close-add">X</a></span>
+                    <div class="adver-wrapper-content span10 offset1">
+                    	
+                    	<div class="span1">
+                        	<img  src="img/scan-me.png">
+                        </div>
+                        
+                        <div class="span8">
+                        	<p  class=" add-detail-text">妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券.													                            <span style="font-family:Arial, Helvetica,sans-serif; font-size: 17px; color:#999; margin-left: 0px ">&nbsp;查看详情</span></p>	   						</div>
+                            
+                        <div class="span3" >
+                        	<input class="add-button" type="button" value="上交你的论文摘要">
+                        </div>
+                    
+                    
+                 </div>
+               
+            
+            
+            </div>
+            
+            </div>
+
+
 </div><!-- /.navbar -->
+
+
 
 </div>
