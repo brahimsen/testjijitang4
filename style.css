@@ -1899,3 +1899,143 @@ margin-top: -30px;
 
 
 }
+
+.collections {
+	margin-top: 20px;
+
+}
+.collection-item-holder {
+	width: 33.33% !important;
+	
+	margin-left: 0px !important;
+	margin-right: 0px !important
+
+}
+.collection-item {
+	width: 200px;
+	height: 240px;
+	background-image:url(img/collection-background.jpg);
+	background-repeat: no-repeat;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+
+
+}
+
+@media(max-width: 767px) {
+	
+	.collection-item-holder {
+	width: 50% !important;
+
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	float: left !important;
+
+}
+	
+ 
+
+}
+
+@media(max-width: 470px) {
+	
+	.collection-item-holder {
+	width: 100% !important;
+	
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	float: left !important;
+
+	}
+	
+ 
+
+}
+
+collection-icon {
+	float: right;
+
+}
+
+.collection-icon-empty {
+	width: 25px;
+	height: 25px;
+	border-radius: 17px;
+	border: 3px solid #FFF;
+	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+	cursor: pointer;
+}
+
+.collection-icon-empty:hover {
+
+	background: #877C21;
+
+}
+
+.collection-icon-full {
+	width: 25px;
+	height: 25px;
+	border-radius: 17px;
+	background: #877C21;
+	border: 3px solid #FFF;
+	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+	cursor: pointer;
+}
+
+.collection-back {
+	width: 200px; 
+	height: 240px; 
+	background:#000; 
+	position: absolute; 
+	opacity: 0.6
+
+}
+
+.collection-inner-content-holder {
+	position: absolute; 
+	width: 200px; 
+	height: 240px
+
+}
+
+.collection-inner-content {
+	text-align: center;
+	
+	
+	width: 150px;
+	margin-left: 25px;
+	margin-top: 60px;
+
+}
+
+.collection-list-name {
+	color: #FFF;
+	font-size: 18px;
+	line-height: 20px;
+
+}
+
+.collection-list-author {
+	color: #FFF;
+	font-size: 13px;
+
+
+
+
+}
+
+.collection-footer {
+	color: #FFF;
+	font-size: 13px;
+	margin-top: 60px;
+
+
+}
+
+
