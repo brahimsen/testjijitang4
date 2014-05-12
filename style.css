@@ -1924,6 +1924,33 @@ margin-top: -30px;
 
 }
 
+.collection-item-load-more {
+	width: 200px;
+	height: 160px;
+	background: #F2F2F2;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	text-align: center;
+	padding-top: 80px;
+
+
+}
+
+.collection-item-load-more > h3 {
+	color: #3D7D8B;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+
+}
+
+.collection-item-load-more:hover {
+	background: #CCC;
+
+
+}
+
 @media(max-width: 767px) {
 	
 	.collection-item-holder {
@@ -1960,47 +1987,40 @@ collection-icon {
 }
 
 .collection-icon-empty {
-	width: 25px;
-	height: 25px;
-	border-radius: 17px;
-	border: 3px solid #FFF;
 	margin-top: 10px;
-	margin-right: 10px;
-	float: right;
+	margin-right: 20px;
+	font-size: 24px;
 	cursor: pointer;
+	color: #FFF;
 }
 
 .collection-icon-empty:hover {
+		color: #877C21;
 
-	background: #877C21;
+
 
 }
 
 .collection-icon-full {
-	width: 25px;
-	height: 25px;
-	border-radius: 17px;
-	background: #877C21;
-	border: 3px solid #FFF;
 	margin-top: 10px;
-	margin-right: 10px;
-	float: right;
+	margin-right: 20px;
+	font-size: 24px;
+	color: #877C21;
+	
 	cursor: pointer;
 }
 
 .collection-back {
 	width: 200px; 
 	height: 240px; 
-	background:#000; 
-	position: absolute; 
-	opacity: 0.6
-
+	background: rgba(0,0,0,0.5); 
+	
 }
 
 .collection-inner-content-holder {
-	position: absolute; 
 	width: 200px; 
-	height: 240px
+	height: 240px;
+	margin-top: -300px;
 
 }
 
@@ -2011,6 +2031,7 @@ collection-icon {
 	width: 150px;
 	margin-left: 25px;
 	margin-top: 60px;
+	padding-top: 50px;
 
 }
 
