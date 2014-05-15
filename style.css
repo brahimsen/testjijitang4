@@ -1823,7 +1823,7 @@ margin-top: -30px;
 }
 
 .dropdown-menu > li > a:hover {
-	background: #3d7d8b !important;
+	background: #333 !important;
 
 
 }
@@ -2215,5 +2215,62 @@ legend {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #3D7D8B !important;
 
+
+}
+
+@media(max-width: 979px) {
+	
+	.nav-holder {
+		width: 100% !important;
+	
+	}
+	
+	.nav-collapse {
+		margin-top: 20px !important;
+	
+	
+	}
+	
+	.nav-collapse .nav > li {
+		text-align: center;
+	
+	}
+
+}
+
+.btn-navbar {
+	margin-top: -30px !important;
+
+}
+
+.col-md-8 {
+	
+	margin-top: 100px;
+}
+
+@media(max-width: 767px) {
+	
+	.col-md-8 {
+	
+	margin-top: 20px !important;
+}
+
+	
+
+}
+
+.icon-bell-o {
+color: #333; background: #eee; width: 16px; height: 18px; font-size: 14px; padding: 5px; padding-top: 8px; padding-bottom: 4px; padding-left: 8px
+
+}
+
+#search-btn {
+margin-right: 10px; margin-top: 3px; float:right
+
+}
+
+.icon-search {
+
+color: #CCC; background: #333; width: 17px; height: 17px; font-size: 14px; padding: 5px; padding-top: 5px; padding-bottom: 4px; padding-left: 8px
 
 }

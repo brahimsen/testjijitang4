@@ -5,7 +5,7 @@ $( document ).ready(function() {
 	$(".search-popover-desktop").hide();
   $(".search-popover-desktop,#search-btn").click(function(e){
 	  if($("#search-text").val() == ""){
-    $("#search-text").toggle("slide", { direction: "left" }, 1000);
+    $("#search-text").toggle("fade");
 	  }
 	  else {
 		  $('.search-popover-desktop').show();
@@ -113,7 +113,7 @@ $(".alert-popover-desktop").hide();
    </li>
    
     <li class="dropdown hidden-desktop">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="img/plus.png"><b class="caret"></b></a>
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Create<b class="caret"></b></a>
    <ul class="dropdown-menu">
     <li><a href="#">Create a List</a></li>
     <li><a href="#">Write a Notee</a></li>
@@ -122,7 +122,7 @@ $(".alert-popover-desktop").hide();
    </li>
    
     <li class="dropdown hidden-desktop">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="img/admin-nav-avatar.png"><b class="caret"></b></a>
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account<b class="caret"></b></a>
    <ul class="dropdown-menu">
     <li><a href="#">My Jijitang</a></li>
     <li><a href="#">My Feeds</a></li>
@@ -131,15 +131,12 @@ $(".alert-popover-desktop").hide();
     </ul>
    </li>
    
-   <li class="hidden-desktop"><a href="#" style="margin-right: 10px; margin-top: 3px;"><img src="img/alert.jpg"></a>
+   <li class="hidden-desktop"><a href="#">Notifications (3)</a>
       
     
       </li>
    
-      <li id="search-pop-mobile" class="hidden-desktop" style="position:relative"><a href="#" id="search-btn-mobile" style="margin-right: 10px; margin-top: 3px; float: left"><img src="img/search.png"></a><input  type="text" id="search-text-mobile" style=" margin-right: -30px; margin-top: 11px; height: 22px; background: #FFF;; margin-bottom: 0px !important; float: left">
-      
-    
-      </li>
+      <li id="search-pop-mobile" class="hidden-desktop"><a href="#"></i>Search</a></li>
 
    
    
@@ -160,7 +157,7 @@ $(".alert-popover-desktop").hide();
                 
                 <div class="dropdown" style="position: relative">
         		<a style="margin-right: 10px;  float:right" href="#" class="dropdown-toggle alert-btn" data-toggle="dropdown">
-                		<span class="icon-bell-o" style="color: #333; background: #eee; width: 16px; height: 18px; font-size: 14px; padding: 5px; padding-top: 8px; padding-bottom: 4px; padding-left: 8px"></span>
+                		<span class="icon-bell-o"></span>
                 </a>
     			
                 <div class="alert-popover-desktop">
@@ -194,7 +191,7 @@ $(".alert-popover-desktop").hide();
     
     
     
-    <a href="#" id="search-btn" style="margin-right: 10px; margin-top: 3px; float:right"><span class="icon-search" style="color: #CCC; background: #333; width: 17px; height: 17px; font-size: 14px; padding: 5px; padding-top: 5px; padding-bottom: 4px; padding-left: 8px"></span></a></div></</li>
+    <a href="#" id="search-btn"><span class="icon-search"></span></a></div></</li>
     
     <li  style="float:right; position: relative" class="hidden-phone hidden-tablet"><input  type="text" id="search-text">
     
