@@ -387,7 +387,6 @@ background-color: #000 !important;
 
 .nav-tabs > li > a {
 	border: 0px !important;
-	margin: 1px !important;
 	color: #666;
 
 }
@@ -702,6 +701,47 @@ background-color: #000 !important;
 	 border-radius: 5px;
 	 cursor: pointer;
  }
+ 
+  .gray-btn-log {
+	 background: #e2e2e2;
+	 color: #666;
+	 font-family:Arial, Helvetica, sans-serif; 
+	 font-size: 16px;
+	 padding-left: 10px; 
+	 padding-right: 10px; 
+	 padding-top: 15px; 
+	 padding-bottom: 15px;
+	 border-radius: 5px;
+	 cursor: pointer;
+	 border: #333 1px solid;
+	 margin-top: 20px; margin-bottom: 70px; text-align: center
+ }
+ 
+ 
+ @media(max-width: 767px) {
+	
+.sign-in-alert {
+	margin-left: 0px !important;
+	width: 100% !important;
+		margin-bottom: 0px !important;
+
+
+}
+
+.pass-sent-alert {
+margin-left: 0px !important;
+	width: 	95% !important;
+	margin-bottom: 0px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+
+}
+
+}
+ .gray-btn-log > a{
+	color: #666 !important;
+ }
+ 
  
  .main-button > a {
 	 
@@ -1061,7 +1101,7 @@ footer {
 	 background:#FFF; 
 	 margin-left: 0px !important; 
 	 padding-top: 20px; 
-	 border-top: 1px solid #999; 
+	 border-top: 1px solid #ccc; 
 	 margin-top: 30px
 
 }
@@ -1981,6 +2021,17 @@ margin-top: -30px;
 
 }
 
+@media(max-width: 1200px) {
+	
+	.latest-collection {
+		margin-left: 0px !important;
+
+	}
+	
+ 
+
+}
+
 collection-icon {
 	float: right;
 
@@ -1995,7 +2046,7 @@ collection-icon {
 }
 
 .collection-icon-empty:hover {
-		color: #877C21;
+		color: #FFF;
 
 
 
@@ -2005,7 +2056,7 @@ collection-icon {
 	margin-top: 10px;
 	margin-right: 20px;
 	font-size: 24px;
-	color: #877C21;
+	color: #FFF;
 	
 	cursor: pointer;
 }
@@ -2059,4 +2110,110 @@ collection-icon {
 
 }
 
+.collections-nav {
+	border-bottom: 0px !important;
 
+}
+
+.collections-nav > li > a {
+	border-radius: 5px !important;
+	color: #999;
+	font-size: 16px;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.collections-nav > li > a:hover {
+		background: #F2F2F2 !important;
+		color: #877c21 !important  
+
+}
+
+.collections-nav > .active > a {
+	background: #EDEBD5 !important;
+	color: #877c21 !important   
+
+}
+
+.collections-nav > .active > a:hover {
+	background: #EDEBD5 !important;
+	color: #877c21 !important   
+
+}
+
+.latest-collection {
+	margin-left: -27px;
+
+}
+
+label.error{
+color: red !important;
+margin-left: 10px !important;
+}
+
+label.valid{
+margin-left: 10px !important;
+color: green !important;}
+
+label {
+	display: inline-block !important;
+
+}
+
+.form-control {
+	
+	height: 50px !important;
+	border: 1px solid #999 !important;
+
+}
+
+legend {
+	border: none !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 24px !important;
+	color:#333 !important;;
+
+}
+
+.sign-in-text > p {
+	font-size: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #999;
+
+}
+
+.sign-in-text > p > a {
+	font-size: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #3D7D8B !important;
+
+}
+
+.sign-in-text  {
+	margin-top: 50px;
+
+}
+
+.controls {
+	margin-bottom: 30px !important;
+
+}
+
+.sign-in-alert {
+ width: 60%; padding-top: 10px; padding-bottom: 10px; text-align: center; background: #F2DEDE; border: 1px solid #EBCCD1; color: #A94442; margin-bottom: 50px; border-radius: 5px; margin-left: 10%
+
+}
+
+.pass-sent-alert {
+ width: 80%; padding-top: 10px; padding-bottom: 10px; padding-right: 35px; padding-left: 35px; text-align: center; background: #DFF0DB; border: 1px solid #ccc; color: #468847; margin-bottom: 50px; border-radius: 5px; margin-left: 10%
+
+}
+
+.login-link {
+	
+		font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #3D7D8B !important;
+
+
+}
