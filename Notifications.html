@@ -12,6 +12,8 @@
 
 
 <script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-popover.js"></script>
 <script src="js/bootstrap-tooltip.js"></script>
@@ -36,18 +38,27 @@
 <div class="container-fluid">
 
 
-	<header style=" position:fixed; width: 100%">
+	<header >
 
 
 	</header>
 
-	<div id="aside" class="row-fluid" style=" margin-top: 40px;">
-     
-   	</div>        
+	 <div class="fixed-sidebar span4"> 
+        <div class="fixed-sidebar-wrapper">
+        	
+            <div class="fixed-sidebar-inner">
+            <p class="sidebar-title" > My Notification</p>
+            
+            </div>
+        
+        </div>
+            
+      </div>       
+          
         
         
         
-    <div class="span8 right-content" style=" margin-left: 32%;">
+    <div class="span8 right-content">
        
         
         <div class="row-fluid span12 notif-holder" >
@@ -138,7 +149,7 @@
 
 $( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
-$( "#aside" ).load( "aside.html" );
+
 
   
 </script>

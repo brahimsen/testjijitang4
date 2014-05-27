@@ -1,0 +1,210 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/collection-script.js"></script>
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+
+
+<body>
+
+	<div class="container-fluid">
+
+
+
+		<header >
+        
+        
+		</header>
+
+	<div class="fixed-sidebar span4"> 
+        <div>
+        	
+            <div class="sidebar-inner-content-collection">
+           		<p class="left-bar-collection-title">Name of the collection Name of the collection Name of the...</p>
+                <p class="left-bar-collection-description">Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection... </p>
+                
+                <p class="left-bar-author">Created by Yuyu Xuan. 0 Notes</p>
+            	<div class="collection-side-btn-holder">
+                	<span class="main-button fixed-bar-left-btn" style="float: none">Following | 1</span>
+                </div>
+            </div>
+       </div>          
+    </div>
+    
+         
+        <div class="span8 right-content" >
+       
+       <div class="row-fluid create-button-holder">
+            
+            	<span class="span2 create-col-btn">Share</span>
+                <span class="span2 create-col-btn">Submit</span>
+            
+            </div>
+       
+       
+        
+                
+                      <ul class="nav nav-tabs collections-nav">
+  							<li   class="active span2"><a href="#a1" data-toggle="tab">Most Popular</a></li>
+ 		 					<li  class="span1"><a class="latest-collection" href="#a2" data-toggle="tab">Latest</a></li>
+                            <li  class="span2"><a class="latest-collection" href="#a3" data-toggle="tab">My Submission</a></li>
+  					  </ul>
+
+                    
+                    
+                    
+                    <div class="tab-content note-tab-content">
+  						<div class="tab-pane active" id="a1">
+                     	
+  							<ul  class="nav nav-tabs status-nav">
+  								<li   class="active"><a href="#a11" data-toggle="tab">Pending</a></li>
+ 		 						<li  ><a href="#a12" data-toggle="tab">Approved</a></li>
+  					  		</ul>
+    					
+    						<div class="tab-content status-nav-content">
+                            	
+                              <div class="tab-pane active" id="a11"> 
+                                	<div id="note1"></div>
+                              </div>
+                              
+                              <div class="tab-pane" id="a12"> 
+                                	<div id="note2"></div>
+                              </div>
+                            
+                            
+                            </div>
+    
+                    	
+                        
+                        </div>
+  
+ 					    <div class="tab-pane" id="a2"> 
+                        
+                        	<ul  class="nav nav-tabs status-nav">
+  								<li   class="active"><a href="#a21" data-toggle="tab">Pending</a></li>
+ 		 						<li  ><a href="#a22" data-toggle="tab">Approved</a></li>
+  					  		</ul>
+    					
+    						<div class="tab-content status-nav-content">
+                            	
+                              <div class="tab-pane active" id="a21"> 
+                                	<div id="note3"></div>
+                              </div>
+                              
+                              <div class="tab-pane" id="a22"> 
+                                	<div id="note4"></div>
+                              </div>
+                            
+                            
+                            </div>
+  
+                	    </div>
+                        
+                        <div class="tab-pane" id="a3"> 
+                        
+                        	<ul  class="nav nav-tabs status-nav">
+  								<li   class="active"><a href="#a31" data-toggle="tab">Pending</a></li>
+ 		 						<li  ><a href="#a32" data-toggle="tab">Approved</a></li>
+  					  		</ul>
+    					
+    						<div class="tab-content status-nav-content">
+                            	
+                              <div class="tab-pane active" id="a31"> 
+                                	<div id="note5"></div>
+                              </div>
+                              
+                              <div class="tab-pane" id="a32"> 
+                                	<div id="note6"></div>
+                              </div>
+                            
+                            
+                            </div>
+  
+                	    </div>
+                </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       	      
+            
+   
+         
+             
+         
+     
+            
+         
+            
+           
+            
+        <footer  class="row-fluid span12">
+        
+		</footer>
+        
+        
+        
+        
+    
+    
+    </div>
+
+
+
+
+</div>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" );
+$( "footer" ).load( "footer.html" );
+$( "#note1" ).load( "Testnotes/Note1.html" );
+$( "#note2" ).load( "Testnotes/Note2.html" );
+$( "#note3" ).load( "Testnotes/Note3.html" );
+$( "#note4" ).load( "Testnotes/Note4.html" );
+$( "#note5" ).load( "Testnotes/Note5.html" );
+$( "#note6" ).load( "Testnotes/Note6.html" );
+
+
+
+
+  
+
+</script>
+<script src="js/myjavascript.js"></script>
+

@@ -19,6 +19,8 @@
 <script src="js/bootstrap-modalmanager.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
 
 
 
@@ -27,40 +29,9 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<script>
- $(document).ready(function() {
-	 
-	 			$(".collection-icon-full").hide();
-				
-				
-				$(".collection-icon-empty").hide();
-				$(".collection-inner-content-holder").hover(function(){
-					
-					if($('.collection-icon-full',this).css("display") == "none"){
-						      $('.collection-icon-empty',this).toggle();
 
-					}
-					
-					
-				
-				});
-				
-			
-				$(".collection-icon").click(function(){
-						$(".collection-icon-empty,.collection-icon-full",this).toggle(
-						
-						
-						);
-					
-						
-								
-				});
-				
-				
-				
-			});
 
-</script>
+
 
 
 </head>
@@ -73,7 +44,7 @@
 
 
 
-		<header style=" position:fixed; width: 100%">
+		<header>
         
         
 		</header>
@@ -103,16 +74,23 @@
         
                 
                       <ul class="nav nav-tabs collections-nav">
-  							<li   class="active span2"><a href="#a1" data-toggle="tab">Most Popular</a></li>
- 		 					<li  class="span2"><a class="latest-collection" href="#a2" data-toggle="tab">Latest</a></li>
+  							<li   class="active span2"><a href="#x1" data-toggle="tab">Notes</a></li>
+ 		 					<li  class="span2"><a class="latest-collection" href="#x2" data-toggle="tab">Collections</a></li>
+                            <li  class="span2"><a class="latest-collection" href="#x3" data-toggle="tab">people</a></li>
   					  </ul>
 
                     
                     
                     
                     <div class="tab-content note-tab-content">
-  			<div class="tab-pane active" id="a1">
-            <div class="collection-item-holder span3 ">
+  			<div class="tab-pane active" id="x1">
+            
+            	<div id="Entries"></div>
+            	
+  			</div>
+  				<div class="tab-pane" id="x2" style="margin-top: 0px"> 
+  				
+  				 <div class="collection-item-holder span3 ">
                 	<div class="collection-item">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
@@ -279,149 +257,47 @@
                       
                 	</div>
                 </div>
-  	
+                
+                
+                </div>
+                
+                <div class="tab-pane" id="x3"> 
+  
+  				<div class="span7 people-holder">
+                
+                	<div class="span1 people-pic">
+                    	
+                        <div>
+                        </div>
+                    
                     </div>
-  
-  <div class="tab-pane" id="a2"> 
-  
-  	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
+                    
+                    <div class="span4 people-desc">
+                    
+                    	<p class="people-name"> USER NAME</p>
+                    	<p class="people-user-desc">USER DESCRIPTION</p>
+                    
+                    </div>
+                    <div class="span2 people-follow">
+                    
+                    	<span id="follow" class="main-button" >
+                        Follow This User
+                        </span>
+                        <span id="unfollow" class=" gray-btn-log" >
+                        Unfollow
+                        </span>
+
+                    
+                    </div>
+                
                 </div>
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
+                
+                
+                
+                
                 </div>
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			<div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star-o "></span>
-                        			<span class="collection-icon-full icon-star"></span>
-                       			</div>
-                            <div class="collection-inner-content">
-                            	<p class="collection-list-name">Sara Seager's Publication</p>
-                                <p class="collection-list-author">Yuyu Xuan</p>
-                                <p class="collection-footer">26 Notes  34 followers</p>
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                	
-                	
-                	<div class="collection-item-holder span3 ">
-                	<div class="collection-item-load-more">
-                    <h3>Load More...</h3>
-                     
-                      
-                	</div>
-                </div>
-                </div>
+                
+                
                 </div>
     
     

@@ -1,91 +1,9 @@
 
-<script>
-$( document ).ready(function() {
-	$("#search-text").hide();
-	$(".search-popover-desktop").hide();
-  $(".search-popover-desktop,#search-btn").click(function(e){
-	  if($("#search-text").val() == ""){
-    $("#search-text").toggle("fade");
-	  }
-	  else {
-		  $('.search-popover-desktop').show();
-					e.stopPropagation();
-					
-		 
-	  }
-	  
-	  $("html").click(function(e){
-					
-					$('.search-popover-desktop').hide();
-					
-					
-				
-					
-				});
-});
-
-
-});
-
-$( document ).ready(function() {
-	$("#search-text-mobile").hide();
-	$(".search-popover-mobile").hide();
-  $(".search-popover-mobile,#search-btn-mobile").click(function(e){
-	  if($("#search-text-mobile").val() == ""){
-    $("#search-text-mobile").toggle( "slide");
-	  }
-	  else {
-		   $('.search-popover-mobile').show();
-					e.stopPropagation();
-		
-		 
-	  }
-	  
-	  $("html").click(function(e){
-					
-					$('.search-popover-mobile').hide();
-					
-					
-				
-					
-				});
-});
-});
-
-
-$(".alert-popover-desktop").hide();
-				$(".alert-btn,.alert-popover-desktop").click(function(e){
-					
-					$('.alert-popover-desktop').show();
-					e.stopPropagation();
-					
-				
-					
-				});
-				
-				$("html").click(function(e){
-					
-					$('.alert-popover-desktop').hide();
-					
-					
-				
-					
-				});
-				
-				$(document).ready(function() {
-	$("#close-add").click(function(){
-		$(".adver-wrapper").hide("slide", { direction: "up" }, 1000);
-
-		
-
-});
-});
-
-</script>
+<script src="js/headerscript.js"></script>
 
 <div class="row-fluid">
-<div class="navbar navbar-inverse" style="position: relative">
-  <div class="navbar-inner" style="position: relative">
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner" >
   <span class="span2 jijitang-logo">JIJITANG</span>
     <div class="container-fluid nav-holder span10" style="width: 88.905983%">
   <a class="btn btn-navbar" id="top-menu-btn" data-toggle="collapse" data-target=".nav-collapse">
@@ -140,14 +58,14 @@ $(".alert-popover-desktop").hide();
 
    
    
-   <li class="span3 header-btns hidden-phone hidden-tablet" style=" float:right">
-   		<div class="row-fluid" style="margin-top: 5px">
+   <li class="span3 header-btns hidden-phone hidden-tablet">
+   		<div class="row-fluid header-btns-holder">
         
         		<div class="dropdown">
-        		<a style="margin-right: 10px;  float:right" href="#" class="dropdown-toggle" data-toggle="dropdown">
+        		<a href="#" class="dropdown-toggle avatar-link" data-toggle="dropdown">
                 		<img src="img/admin-nav-avatar.png">
                 </a>
-    			<ul class="dropdown-menu" style="margin-top: 40px">
+    			<ul class="dropdown-menu nav-admin-holder">
     				<li><a href="#">My Jijitang</a></li>
     				<li><a href="#">My Feeds</a></li>
     				<li><a href="#">Account Settings</a></li>
@@ -155,8 +73,8 @@ $(".alert-popover-desktop").hide();
     			</ul>
                 </div>
                 
-                <div class="dropdown" style="position: relative">
-        		<a style="margin-right: 10px;  float:right" href="#" class="dropdown-toggle alert-btn" data-toggle="dropdown">
+                <div class="dropdown nav-alert-holder">
+        		<a href="#" class="dropdown-toggle alert-btn" data-toggle="dropdown">
                 		<span class="icon-bell-o"></span>
                 </a>
     			
@@ -173,17 +91,17 @@ $(".alert-popover-desktop").hide();
                                 <div ><p>You successfully submitted your abstract, jijitang will review your submit and let you know when the traslation is finished. </p></div>
                                
                                 </div>
-                             <div style="width: 100%; text-align: center; margin-bottom:0px"><a href="" style="text-align: center">Check all my Notifications..</a></div>
+                             <div class="all-notif-pop"><a href="">Check all my Notifications..</a></div>
                              </div>
                              
                 
                 </div>
     
     			<div class="dropdown">
-                <a style="margin-right: 10px; float:right; margin-top: 7px" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle plus-create-link" data-toggle="dropdown">
     					<img src="img/plus.png">
                 </a>
-    			<ul class="dropdown-menu" style="margin-top: 40px">
+    			<ul class="dropdown-menu create-holder">
     				<li><a href="#">Create a List</a></li>
     				<li><a href="#">Write a Note</a></li>
     			</ul>
@@ -193,7 +111,7 @@ $(".alert-popover-desktop").hide();
     
     <a href="#" id="search-btn"><span class="icon-search"></span></a></div></</li>
     
-    <li  style="float:right; position: relative" class="hidden-phone hidden-tablet"><input  type="text" id="search-text">
+    <li class="hidden-phone hidden-tablet search-box-holder"><input  type="text" id="search-text">
     
     	<div class="search-popover-desktop">
                              	
@@ -218,10 +136,8 @@ $(".alert-popover-desktop").hide();
     </div><!-- /.container -->
     
   </div><!-- /.navbar-inner -->
-  <div class="adver-wrapper hidden-phone hidden-tablet" style="position: absolute; width: 100%; display: none">
+  <div class="adver-wrapper hidden-phone hidden-tablet">
   			
-            
-            		
                     <div class="adver-wrapper-inner">
                     <span class="close-span"><a id="close-add">X</a></span>
                     <div class="adver-wrapper-content span10 offset1">
@@ -231,7 +147,9 @@ $(".alert-popover-desktop").hide();
                         </div>
                         
                         <div class="span8">
-                        	<p  class=" add-detail-text">妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券.													                            <span style="font-family:Arial, Helvetica,sans-serif; font-size: 17px; color:#999; margin-left: 0px ">&nbsp;查看详情</span></p>	   						</div>
+                        	<p  class=" add-detail-text">妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券.													                            	<span>&nbsp;查看详情</span>
+                            </p>	   						
+                        </div>
                             
                         <div class="span3" >
                         	<input class="add-button" type="button" value="上交你的论文摘要">

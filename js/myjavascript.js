@@ -45,6 +45,7 @@ content : '<div id="popOverBox">Your Text Here</div>'
 
 	$(document).ready(function(){
 		$("#Sign-in-Modal").modal('show');
+		$(".sign-in-alert").hide();
 		$("#signup-link").click(function(){
 				$("#Sign-in-Modal").modal('hide');
 				$("#Sign-up-Modal").modal('show');
@@ -58,10 +59,24 @@ content : '<div id="popOverBox">Your Text Here</div>'
 
 		});
 		
+		$("#submitabstract").click(function(){
+				$("#trans-Modal").modal('hide');
+				$("#trans-submitted-Modal").modal('show');
+
+
+		});
+		
 		$("#get-in").click(function(){
+			
+				if( $("#emailsign").val() == "jijitang" && $("#passsign").val() == "jijitang" ){
 				$("#Sign-in-Modal").modal('hide');
 				$("#trans-Modal").modal('show');
-
+			}
+				
+				else {
+			$(".sign-in-alert").fadeIn(500)
+			
+			}
 
 		});
 		
@@ -112,14 +127,13 @@ content : '<div id="popOverBox">Your Text Here</div>'
 		
 
 
-
-$(window).load(function() {
+$(window).ready(function() {
 	
 	
-	$(".adver-wrapper").show("slide", { direction: "up" }, 1000);
-
+	setTimeout(function(){
+        $('.adver-wrapper').show("slide", { direction: "up" }, 1000);
+    }, 1000);
 
 });
-
 
 
