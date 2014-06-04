@@ -1,0 +1,270 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.css">
+<link href="../css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+
+
+<link href="styleadmin.css" rel="stylesheet" type="text/css">
+
+
+<script src="../js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/bootstrap-popover.js"></script>
+<script src="../js/bootstrap-modalmanager.js"></script>
+<script src="../js/bootstrap-modal.js"></script>
+<script src="../js/bootstrap-tooltip.js"></script>
+<script src="../js/admin-script.js"></script>
+
+
+	
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" class="init">
+
+
+$(document).ready(function() {
+	$('#example').dataTable();
+	$('#example2').dataTable();
+} );
+
+
+	</script>
+
+
+<script>
+
+
+</script>
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+
+
+<body>
+
+<div id="Email-send-Modal" class="modal hide fade" tabindex="-1" data-width="460">
+ 
+
+  <div class="modal-body">
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="admin-send-email" placeholder="Input the User You want to send this Email  to">
+				</div>
+			</div>	
+		</div>
+		
+		<div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="admin-email-content"  placeholder="Email Content">
+                    <span class="white-span"> Send</span>
+				</div>
+			</div>
+            <span class="white-span"> Send to all jijitang users</span>
+		</div>
+        
+       
+    
+		
+	
+	
+		
+		
+  </div>
+</div>
+
+<header>
+</header>
+
+<div class="container page-top">
+
+		<h1>Jijitang Email & Announcement</h1>
+        <p>All() Today()</p>
+
+</div>
+
+<div class="container admin-content">
+
+
+
+
+		<div class="admin-left-bar span3"> 
+        
+        	<ul class="nav nav-tabs">
+  					<li class="active"><a href="#all-table" data-toggle="tab">Email sent history</a></li>
+  					<li><a href="#common-email" data-toggle="tab">Common used Emails</a></li>
+                    <li><a href="#create-admin-email" data-toggle="tab">Create and send an new Email</a></li>
+  					
+			</ul>
+        
+        
+        </div>
+        
+        <div class="admin-right-content span9 tab-content">
+  			<div class="tab-pane active" id="all-table">
+            
+            <section>
+			
+
+		
+
+			<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th >ID</th>
+						<th>Title</th>
+						<th>Send To</th>
+						<th>Sent at</th>
+						<th>Manage</th>
+					
+					</tr>
+				</thead>
+
+			
+
+				<tbody>
+					<tr>
+						<td>23</td>
+						<td>Welcome to jijitang</td>
+						<td class="send-to-td">All</td>
+						<td>10:29 PM <br/>2014-5-12</td>
+						<td><img class="email-arrow-up" src="../img/arrow.jpg"> <img src="../img/eye.jpg"><img src="../img/saveemail.png"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+                    <tr>
+						<td>67</td>
+						<td>Welcome to jijitang</td>
+						<td class="send-to-td">78</td>
+						<td>10:29 PM <br/>2014-5-12</td>
+						<td><img class="email-arrow-up" src="../img/arrow.jpg"><img src="../img/eye.jpg"><img src="../img/saveemail.png"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+               
+					
+			
+				
+				
+				
+			
+				
+				</tbody>
+			</table>
+
+	
+	
+		</section>
+            
+            
+            
+            </div>
+  			<div class="tab-pane" id="common-email">
+            
+               <section>
+			
+
+		
+
+			<table id="example2" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th >ID</th>
+						<th>Title</th>
+						<th>Send To</th>
+						<th>Sent at</th>
+						<th>Manage</th>
+					
+					</tr>
+				</thead>
+
+			
+
+				<tbody>
+					<tr>
+						<td>23</td>
+						<td>Welcome to jijitang</td>
+						<td class="send-to-td">All</td>
+						<td>10:29 PM <br/>2014-5-12</td>
+						<td><img class="email-arrow-up" src="../img/arrow.jpg"> <img src="../img/eye.jpg"><img src="../img/saveemail.png"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+                    <tr>
+						<td>67</td>
+						<td>Welcome to jijitang</td>
+						<td class="send-to-td">78</td>
+						<td>10:29 PM <br/>2014-5-12</td>
+						<td><img class="email-arrow-up" src="../img/arrow.jpg"><img src="../img/eye.jpg"><img src="../img/saveemail.png"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+               
+					
+			
+				
+				
+				
+			
+				
+				</tbody>
+			</table>
+
+	
+	
+		</section>
+            
+            </div>
+            
+            
+            <div class="tab-pane" id="create-admin-email">
+            
+            <div><label>Title</label><input type="text" placeholder="Title"></div>
+            <div><label>Description</label><textarea placeholder="Description"></textarea></div>
+            <div style="height: 100px"><label>Picture</label></div>
+            <div ><label></label><span class="white-span email-arrow-up" > Send</span><span class="white-span"> Save as common used email</span><span class="white-span">Cancel</span><span class="white-span"> Delete</span></div>
+            
+            </div>
+  			
+		</div>
+        
+   
+        
+        
+       
+
+</div>
+
+
+</body>
+
+
+<script>
+
+$( "header" ).load( "AdminHeader.html" );
+
+
+
+
+  
+
+</script>
+<script src="../js/myjavascript.js"></script>
+

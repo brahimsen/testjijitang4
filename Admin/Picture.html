@@ -1,0 +1,182 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.css">
+
+
+<link href="styleadmin.css" rel="stylesheet" type="text/css">
+
+
+<script src="../js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/bootstrap-popover.js"></script>
+<script src="../js/bootstrap-tooltip.js"></script>
+<script src="../js/admin-script.js"></script>
+
+
+	
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" class="init">
+
+
+$(document).ready(function() {
+	$('#example').dataTable();
+} );
+
+
+	</script>
+
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+
+
+<body>
+
+<header>
+</header>
+
+<div class="container page-top">
+
+		<h1>Jijitang Article Management</h1>
+        <p>All() Today()</p>
+
+</div>
+
+<div class="container admin-content">
+
+		<div class="admin-left-bar span3"> 
+        
+        	<ul class="nav nav-tabs">
+  					<li class="active"><a href="#all-table" data-toggle="tab">JIJITANG</a></li>
+                    <li ><a href="#artcile-tab" data-toggle="tab">Articles </a></li>
+                    <li ><a href="#collection-tab" data-toggle="tab">Collections</a></li>
+  					<li><a href="#create-admin-picture" data-toggle="tab">Create </a></li>
+  					
+			</ul>
+        
+        
+        </div>
+        
+        <div class="admin-right-content span9 tab-content">
+  			<div class="tab-pane active" id="all-table">
+            
+            <section>
+			
+
+		
+
+			<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th >ID</th>
+						<th>Picture</th>
+						<th>Title</th>
+						<th>Description</th>
+						<th>Manage</th>
+					
+					</tr>
+				</thead>
+
+			
+
+				<tbody>
+					<tr>
+						<td>23</td>
+						<td><div class="admin-user-pic"></div></td>
+						<td>Jijitang</td>
+						<td>Better Academic Reading and Writting</td>
+						<td><div class="arrow-holder"><img class="arrow-down" src="../img/arrow-down.jpg"><img class="arrow-up" src="../img/arrow.jpg"></div> <img src="../img/eye.jpg"><img src="../img/pen.jpg"><img src="../img/trash.jpg"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+                    <tr>
+						<td>67</td>
+						<td><div class="admin-user-pic"></div></td>
+						<td>Jijitang</td>
+						<td>Better Academic Reading and Writting</td>
+						<td><div class="arrow-holder"><img class="arrow-down" src="../img/arrow-down.jpg"><img class="arrow-up" src="../img/arrow.jpg"></div> <img src="../img/eye.jpg"><img src="../img/pen.jpg"><img src="../img/trash.jpg"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+               
+					
+			
+				
+				
+				
+			
+				
+				</tbody>
+			</table>
+
+	
+	
+		</section>
+            
+            
+            
+            </div>
+            <div class="tab-pane" id="artcile-tab"></div>
+            <div class="tab-pane" id="collection-tab"></div>
+  			<div class="tab-pane" id="create-admin-picture">
+            
+              <div><label>For Page</label><select> 
+              
+            						<option value="Jijitang">Jijitang</option>
+                                    <option value="article">article</option>
+                                    <option value="collection">collection</option>
+                                    
+                                    </select></div>
+              <div><label>Title</label><input type="text" placeholder="Chinese Title"></div>
+              <div><label></label><input type="text" placeholder="English Title"></div>
+            <div><label>Description</label><textarea placeholder="Chinese Description"></textarea></div>
+            <div><label></label><textarea placeholder="English Description"></textarea></div>
+            <div style="height: 100px"><label>Picture</label></div>
+            <div ><label></label><span class="white-span"> Save </span><span class="white-span">Cancel</span><span class="white-span"> Delete</span></div>
+            
+            
+            </div>
+  			
+		</div>
+        
+   
+        
+        
+       
+
+</div>
+
+
+</body>
+
+
+<script>
+
+$( "header" ).load( "AdminHeader.html" );
+
+
+
+
+  
+
+</script>
+<script src="../js/myjavascript.js"></script>
+

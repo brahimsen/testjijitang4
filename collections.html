@@ -19,6 +19,9 @@
 <script src="js/bootstrap-modalmanager.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/myform.js"></script>
+<script src="js/collection-script.js"></script>
 
 
 
@@ -26,41 +29,6 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-<script>
- $(document).ready(function() {
-	 
-	 			$(".collection-icon-full").hide();
-				
-				
-				$(".collection-icon-empty").hide();
-				$(".collection-inner-content-holder").hover(function(){
-					
-					if($('.collection-icon-full',this).css("display") == "none"){
-						      $('.collection-icon-empty',this).toggle();
-
-					}
-					
-					
-				
-				});
-				
-			
-				$(".collection-icon").click(function(){
-						$(".collection-icon-empty,.collection-icon-full",this).toggle(
-						
-						
-						);
-					
-						
-								
-				});
-				
-				
-				
-			});
-
-</script>
 
 
 </head>
@@ -73,7 +41,7 @@
 
 
 
-		<header style=" position:fixed; width: 100%">
+		<header>
         
         
 		</header>
@@ -81,14 +49,11 @@
 	<div class="fixed-sidebar span4"> 
         <div class="fixed-side-container">
         	
-            <div class="sidebar-inner-content">
-            <h3 >Jijitang</h3>
-            <p >better academic reading and wrting !</p>
-            <hr>
-            <div class="row-fluid">
-            	<span class="main-button fixed-bar-left-btn">Sign Up</span>
-                <span class="main-button white-btn">Know Jijitang</span>
-            </div>
+            <div class="simple-sidebar-inner-content">
+            <h3 >Collections</h3>
+            
+           
+          
             
             </div>
         
@@ -97,7 +62,12 @@
       </div>       
         <div class="span8 right-content" >
        
-       
+       	<div class="row-fluid create-button-holder">
+            
+            	<span class="span4 create-col-btn create-new-coll">Create a new collection</span>
+                
+            
+            </div>
        
        
         
@@ -476,7 +446,7 @@
 
 <script>
 
-$( "header" ).load( "header-jijitang.html" );
+$( "header" ).load( "index-header.html" )
 $( "footer" ).load( "footer.html" );
 $( "#aside" ).load( "aside.html" );
 $( "#Entries" ).load( "Entries.html" );

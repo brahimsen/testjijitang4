@@ -78,3 +78,11 @@ $(".alert-popover-desktop").hide();
 
 });
 });
+
+
+			$("#index-login-modal").click(function(){
+
+				$("#index-Sign-in-Modal").modal('show');
+
+
+		});

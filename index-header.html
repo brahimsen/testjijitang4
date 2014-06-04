@@ -1,0 +1,217 @@
+
+
+<script src="js/headerscript.js"></script>
+
+
+<div class="row-fluid">
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner" >
+  <span class="span2 jijitang-logo">JIJITANG</span>
+    <div class="container-fluid nav-holder span10" style="width: 88.905983%">
+  <a class="btn btn-navbar" id="top-menu-btn" data-toggle="collapse" data-target=".nav-collapse">
+   <span class="icon-bar"></span>
+   <span class="icon-bar"></span>
+   <span class="icon-bar"></span>
+  </a>
+  <div class="nav-collapse collapse">
+  <ul class="nav span12">
+   <li class="active"><a href="articles.html"></i>Articles</a></li>
+  
+   
+  
+   <li><a href="collections.html">Collections</a></li>
+   <li id="index-login-modal" style="float:right" class="header-login"><a  href="#">LOGIN</a></li>
+     
+   
+    
+   
+ 
+   
+ 
+   
+
+   
+   
+
+        	
+                
+              
+    			
+    
+    
+    
+  
+ 
+        </ul>
+    </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+    
+  </div><!-- /.navbar-inner -->
+
+
+
+</div><!-- /.navbar -->
+
+<div id="index-Sign-in-Modal" class="modal hide fade" tabindex="-1" data-width="860">
+ 
+ <div class="sign-in-alert" style="margin-left:19%"> Wrong Email/Password combination, please try again!</div>
+  <div class="modal-body">
+    <legend class="modal-legend">Log in Before Submit</legend>		
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control span4" id="emailsign" name="email" placeholder="Email">
+				</div>
+			</div>	
+		</div>
+		
+		<div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="password" class="form-control span4" id="passsign" name="pass" placeholder="Password">
+                    <label style="margin-left: 10px;"><a href="http://jijitang.byethost15.com/password.html" class="login-link" > Find back my Password </a></label>
+				</div>
+			</div>
+		</div>
+        
+       
+        <div class="form-group sign-in-text ">
+			
+            <p> No JIJITANG Account,<a id="signup-link" style="cursor: pointer">Sign Up</a></p>
+            
+		</div>
+		
+	
+	
+		
+		
+	      <div class="controls" style="margin-left: 0%;">
+
+	       <button id="get-in" class="main-button span2"  >Sign Up</button>
+	        <span data-dismiss="modal" class="gray-btn-log span2" style="float: right" ><a href="http://myjijitang/Signin.html">Back</a></span>
+	      </div>
+  </div>
+</div>
+
+<!--Sign Up Modal-->
+
+
+<div id="Sign-up-Modal" class="modal hide fade" tabindex="-1" data-width="860">
+  <div class="modal-body" >
+   <form class="myfirstform" role="form">
+	 
+		<legend>30 Seconds Sign Up</legend>		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control span5" name="name" placeholder="Name">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control span5" id="email" name="email" placeholder="Email">
+				</div>
+			</div>	
+		</div>
+		
+		<div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="password" class="form-control span5" id="pass" name="pass" placeholder="Password">
+				</div>
+			</div>
+		</div>
+        
+        <div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="password" class="form-control span5" id="passconf" name="passconf" placeholder="Password Confirmation">
+				</div>
+			</div>
+		</div>
+        
+        <div class="form-group sign-in-text ">
+			
+            <p> Have JIJITANG account,<a id="Login-link" style="cursor: pointer">Sign In</a></p>
+            
+		</div>
+		
+	
+	
+		
+		
+	      <div class="controls" style="margin-left: 0%;">
+		  
+	       <button type="submit" id="mybtn"  class="main-button span2" style="border: 0px !important; float: right;  margin-top: 20px; height: 50px; margin-bottom: 20px;" >Sign Up</button>
+           <span data-dismiss="modal" class="gray-btn-log span2 " style="float: right" ><a href="http://myjijitang/Signin.html">Back</a></span>
+	        
+	      </div>
+		</form>
+  </div>
+</div>
+
+
+<!-- Translation Modal -->
+
+<div id="trans-Modal" class="modal hide fade" tabindex="-1" data-width="860">
+  <div class="modal-body" >
+    <div class="row-fluid">
+    
+      <div class="span12 " >
+<p style="color: #333; font-size: 18px; font-family:Arial, Helvetica, sans-serif;  ">Submit Abstract</p>        
+
+		<input placeholder="Title of your Paper" type="text" class="span12" style="height: 45px; margin-top: 20px" />
+        <textarea placeholder="Abstract of your paper (Less than 600 words)" type="text" class="span12" style="height: 270px;" ></textarea>
+        
+        <div class="form-group sign-in-text " style="margin-top: 0px;">
+			
+            <p><a style="cursor: pointer; font-size: 18px;">查看服务详情</a><a style="cursor: pointer; font-size: 18px">About the translation service</a></p>
+            
+		</div>
+         
+
+       		<div class="controls" style="margin-left: 0%;">
+		  
+	       <button id="submitabstract" type="submit"   class="main-button span4" style="border: 0px !important; float: right;  margin-top: 20px; height: 50px; margin-bottom: 20px;" >Submit Abstract</button>
+           <span data-dismiss="modal" class="gray-btn-log span3 trans-btn" style="float: right; margin-right: 20px; margin-bottom: 0px !important" ><a >Back</a></span>
+	        
+	      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="trans-submitted-Modal" class="modal hide fade" tabindex="-1" data-width="760">
+  <div class="modal-body">
+    <div class="row-fluid trans-submit-holder">
+    	<h2>Abstract submitted successfully!</h2>
+        <h3> We will review and start translating your abstract, Usually it takes 1-5 days to translate! </h3>
+      <div class="span12" style="margin-top: 40px">
+      		
+            <div class="span6" >
+            	<p>Pay the service!</p>
+            	<p>输入你的优惠码！</p>
+                <input type="text" class="span11" style="height: 40px">
+                 <span data-dismiss="modal" class="gray-btn-log span5 trans-btn" style="float: right; margin-right: 20px; margin-bottom: 20px !important; margin-top: 30px" >Pay With Alipay</span>
+            
+            </div>
+            <div class="span6" >
+            	<p>Free!</p>
+            	<p>告诉小伙伴唧唧堂的论文摘要翻译服务！</p>
+                 <span data-dismiss="modal" class="gray-btn-log span7 trans-btn" style="float: right; margin-right: 20px; margin-bottom: 20px !important; margin-top: 60px" >Connect to Webchat</span>
+            
+            
+            </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+</div>
