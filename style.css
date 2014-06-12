@@ -9,6 +9,7 @@
 	font-style: normal;
 }
 
+
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
@@ -276,7 +277,7 @@ width: 100% ;
 .brown-div > p {
 	color: #333333;
 	font-size: 28px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 30px;
 
 }
@@ -320,7 +321,7 @@ position: relative;
 }
 
 .admin-logo {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #FFF;
 	font-size:18px;
 	margin-top: 10px;
@@ -330,7 +331,7 @@ position: relative;
 }
 
 .jijitang-logo {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #FFF;
 	font-size:20px;
 	margin-top: 12px;
@@ -360,14 +361,14 @@ position: relative;
 
 .main-button > a {
 	color: #3D7D8B;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:12px;
 
 }
 
 .main-button > a:hover {
 	color: #FFF;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -550,12 +551,19 @@ position: relative;
  .pick-time {
 	color:#999;
 	font-size: 13px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-align: center;
 	cursor: pointer;
 
 
 }
+
+.myentry-share-poup  {
+	margin-left: auto !important;
+	margin-right: auto !important;
+
+}
+
 }
 
 @media(max-width: 667px) {
@@ -711,7 +719,7 @@ position: relative;
  .main-button {
 	 background: #3D7D8B;
 	 color: #FFF;
-	 font-family:Arial, Helvetica, sans-serif; 
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	 font-size: 16px;
 	 padding-left: 40px; 
 	 padding-right: 40px; 
@@ -724,7 +732,7 @@ position: relative;
   .gray-btn-log {
 	 background: #e2e2e2;
 	 color: #666;
-	 font-family:Arial, Helvetica, sans-serif; 
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	 font-size: 16px;
 	 padding-left: 10px; 
 	 padding-right: 10px; 
@@ -765,14 +773,14 @@ margin-left: 0px !important;
  .main-button > a {
 	 
 	 color: #FFF;
-	 font-family:Arial, Helvetica, sans-serif; 
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	 font-size: 16px;
  }
  
  .gray-button {
 	 background: #F2F2F2;
 	 color: ##3D7D8B;
-	 font-family:Arial, Helvetica, sans-serif; 
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	 font-size: 16px;
 	 padding-left: 40px; 
 	 padding-right: 40px; 
@@ -785,14 +793,14 @@ margin-left: 0px !important;
  .gray-button > a {
 	 
 	 color: #3D7D8B !important;
-	 font-family:Arial, Helvetica, sans-serif; 
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	 font-size: 12px;
  }
  
   .main-button:hover {
 	 background: #4C9CAD;
 	 color: #FFF;
-	 font-family:Arial, Helvetica, sans-serif; 
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	 font-size: 16px;
 	 padding-left: 40px; 
 	 padding-right: 40px; 
@@ -836,13 +844,13 @@ margin-left: 0px !important;
  }
  
  .brown-holder-link > a{
-	 font-family: Arial, Helvetica, sans-serif;
+	 font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	 font-size: 13px;
 	 color: #3D7D8B;
  }
  
   .brown-holder > .brown-holder-title{
-	  font-family:Arial, Helvetica, sans-serif;
+	  font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	  color:#333;
 	  font-size: 24px;
  
@@ -850,7 +858,7 @@ margin-left: 0px !important;
  }
  
  .brown-holder-content {
-	 font-family:Arial, Helvetica, sans-serif;
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	 font-size: 14px;
 	 color:#333;
 	 margin-top: -20px;
@@ -872,7 +880,7 @@ margin-left: 0px !important;
  }
  
 .picks > span {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px; 
 	color: #999;
 
@@ -886,7 +894,7 @@ margin-left: 0px !important;
 }
 
 .pick-title > a{
-	font-family:Arial, Helvetica, sans-serif !important;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	
 	font-size: 18px !important;
 	
@@ -898,7 +906,7 @@ margin-left: 0px !important;
 }
 
 .pick-title > a:hover {
-	font-family:Arial, Helvetica, sans-serif !important;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	
 	font-size: 18px !important;
 	
@@ -908,7 +916,7 @@ margin-left: 0px !important;
 }
 
 .pick-title:visited {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	
 	font-size: 18px;
 	font-weight:700;
@@ -919,7 +927,7 @@ margin-left: 0px !important;
 .pick-text {
 	margin-top: -3px;
 	color: #333;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 
 }
@@ -927,7 +935,7 @@ margin-left: 0px !important;
 .pick-comment > div > .icon-text {
 	color: #3D7D8B !important;
 	font-size: 13px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	
 
 }
@@ -957,7 +965,7 @@ margin-left: 0px !important;
 .pick-time {
 	color:#999;
 	font-size: 13px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 	cursor: pointer;
 
@@ -967,7 +975,7 @@ margin-left: 0px !important;
 .pick-author {
 	color:#999;
 	font-size: 13px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	cursor: pointer;
 
 }
@@ -980,7 +988,7 @@ margin-left: 0px !important;
 .pick-research {
 	color:#999;
 	font-size: 13px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	cursor: pointer;
 
 }
@@ -1005,7 +1013,7 @@ margin-left: 0px !important;
 .load-more-btn {
 	background:#F2F2F2;
 	color: #3D7D8B;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	margin-top: 30px;
 	cursor: pointer;
@@ -1031,7 +1039,7 @@ margin-left: 0px !important;
  }
  
 .all-submits > span {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px; 
 	color: #999;
 
@@ -1045,7 +1053,7 @@ margin-left: 0px !important;
 }
 
 .submit-title {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	;
 	font-size: 16px;
 	font-weight:700
@@ -1055,7 +1063,7 @@ margin-left: 0px !important;
 .submit-text {
 	margin-top: -5px;
 	color: #666;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 
 }
@@ -1063,21 +1071,21 @@ margin-left: 0px !important;
 .submit-comment > div > a {
 	color: # 3D7D8B !important;
 	font-size: 11px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
 .submit-time {
 	color:#999;
 	font-size: 11px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
 .submit-author {
 	color:#999;
 	font-size: 11px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -1138,7 +1146,7 @@ position: relative
 }
 
 footer > p > a {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #3D7D8B;
 	
@@ -1187,7 +1195,7 @@ footer {
 
 .notification > p  {
 	color: #333333;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px; 
 
 }
@@ -1195,7 +1203,7 @@ footer {
 .read-later {
 	color: #999 !important;
 	font-size: 13px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: normal !important;
 	margin-left: -5px;
 	cursor: pointer;
@@ -1460,14 +1468,14 @@ margin-top: -30px;
 			
 			.note-popover-update-header > h4 {
 				text-align: center;
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-weight: 500;
 				font-size: 16px;
 				color: #877c21;
 			}
 			
 			.note-popover-update-header > p {
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-weight: 500;
 				font-size: 14px;
 				color: #999;
@@ -1494,7 +1502,7 @@ margin-top: -30px;
 		
 			}
 			.note-popover-update > div > div > p{
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-size: 14px;
 				color:#333;
 				
@@ -1502,7 +1510,7 @@ margin-top: -30px;
 			}
 			
 			.move-out {
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-size: 13px !important;
 				color:#999 !important;
 			
@@ -1510,7 +1518,7 @@ margin-top: -30px;
 			}
 			
 			.move-out:hover {
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-size: 13px;
 				color:#3d7d8b !important;
 			
@@ -1558,7 +1566,7 @@ margin-top: -30px;
 			}
 			
 				.topic-content > h4{
-					font-family:Arial, Helvetica, sans-serif;
+					font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 					font-size: 18px !important;
 					color: #333;
 					font-weight:normal !important;
@@ -1568,7 +1576,7 @@ margin-top: -30px;
 			}
 			
 			.topic-content > p{
-					font-family:Arial, Helvetica, sans-serif;
+					font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 					font-size: 14px !important;
 					color: #666;
 					
@@ -1578,7 +1586,7 @@ margin-top: -30px;
 			}
 			
 			.topic-content > p > a{
-					font-family:Arial, Helvetica, sans-serif;
+					font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 					font-size: 14px !important;
 					color: #3D7D8B;
 					
@@ -1614,7 +1622,7 @@ margin-top: -30px;
 			}
 			
 			.add-detail-text {
-			font-family:Arial, Helvetica, sans-serif; font-size: 2.7vmin; color:#FFF; margin-top: 10px
+			font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 2.7vmin; color:#FFF; margin-top: 10px
 			
 			}
 			
@@ -1626,11 +1634,11 @@ margin-top: -30px;
 			}
 			
 			.sidebar-inner-content > h3 {
-					color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 22px; margin-top: 15px; margin-left: 5%; font-weight: normal !important; margin-top: 0px !important;			
+					color:#FFF; font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 22px; margin-top: 15px; margin-left: 5%; font-weight: normal !important; margin-top: 0px !important;			
 			}
 			
 			.sidebar-inner-content > p {
-					color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 18px; margin-top: -5px; margin-left: 5%
+					color:#FFF; font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 18px; margin-top: -5px; margin-left: 5%
 				}
 			
 			
@@ -1664,14 +1672,14 @@ margin-top: -30px;
 			
 			.search-popover-desktop > h4 {
 				text-align: center;
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-weight: 500;
 				font-size: 16px;
 				color: #877c21;
 			}
 			
 			.search-popover-desktop > p {
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-weight: 500;
 				font-size: 14px;
 				color: #999;
@@ -1698,7 +1706,7 @@ margin-top: -30px;
 		
 			}
 			.search-popover-desktop > div > div > p{
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-size: 11px;
 				color:#999;
 				
@@ -1765,7 +1773,7 @@ margin-top: -30px;
 		
 			
 			.alert-popover-desktop > p {
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-weight: 500;
 				font-size: 14px;
 				color: #999;
@@ -1792,7 +1800,7 @@ margin-top: -30px;
 		
 			}
 			.alert-popover-desktop > div > div > p{
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-size: 11px;
 				color:#999;
 				
@@ -1869,13 +1877,13 @@ margin-top: -30px;
 
 .popover-top {
 	color: #877c21;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 
 }
 
 .popover-text {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #999;
 	margin-bottom: 30px !important;
@@ -1948,7 +1956,7 @@ margin-top: -30px;
 
 .brown-short-holder > p {
 	color: #999;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
 
@@ -2055,7 +2063,7 @@ position: absolute; width: 100%; display: none
 .collection-item-load-more > h3 {
 	color: #3D7D8B;
 	font-size: 18px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	cursor: pointer;
 
 }
@@ -2198,7 +2206,7 @@ collection-icon {
 	border-radius: 5px !important;
 	color: #999;
 	font-size: 16px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -2248,7 +2256,7 @@ label {
 
 legend {
 	border: none !important;
-	font-family: Arial, Helvetica, sans-serif !important;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	font-size: 24px !important;
 	color:#333 !important;;
 
@@ -2256,14 +2264,14 @@ legend {
 
 .sign-in-text > p {
 	font-size: 24px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #999;
 
 }
 
 .sign-in-text > p > a {
 	font-size: 24px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #3D7D8B !important;
 
 }
@@ -2291,7 +2299,7 @@ legend {
 .login-link {
 	
 		font-size: 20px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #3D7D8B !important;
 
 
@@ -2324,7 +2332,7 @@ legend {
 
 .col-md-8 {
 	
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 @media(max-width: 767px) {
@@ -2473,14 +2481,14 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 
 .people-name {
 	font-size: 18px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #877C21
 
 }
 
 .people-user-desc {
 	font-size: 14px; 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #666;
 
 }
@@ -2491,7 +2499,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 }
 
 .modal-legend {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 20px !important;
 
 }
@@ -2503,7 +2511,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 
 .trans-submit-holder > h2 {
 	font-size: 28px !important;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #339900;
 	font-weight: normal !important;
 	
@@ -2512,7 +2520,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 
 .trans-submit-holder > h3 {
 	font-size: 20px !important;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color:#666;
 	font-weight: normal !important;
 	line-height: 30px !important;
@@ -2523,7 +2531,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 
 .trans-submit-holder > div > div > p {
 	font-size: 20px !important;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color:#666;
 	margin-top: 30px;
 	
@@ -2538,7 +2546,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 	font-weight: normal;
 	border: 2px solid #3D7D8B;
 	border-radius: 6px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-align: center;
 	float: right !important;
 	margin-bottom: 15px;
@@ -2629,7 +2637,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 }
 
 .Add-Editor > h3 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px !important;
 	color:#666;
 	line-height: 20px !important;
@@ -2638,7 +2646,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 }
 
 .public-status > h3 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px !important;
 	color:#666;
 	line-height: 20px !important;
@@ -2646,7 +2654,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 }
 
 .public-status > label {
-font-family: Arial, Helvetica, sans-serif;
+font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px !important;
 	color:#666;
 
@@ -2738,7 +2746,7 @@ position: absolute; padding-top: 40px; padding-bottom: 30px; background: rgba(0,
 
 
 .sidebar-title {
-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 24px; margin-left: 5%; margin-top: 0px !important;
+color:#FFF; font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; margin-left: 5%; margin-top: 0px !important;
 }
 
 .left-bar-collection-title {
@@ -2776,7 +2784,7 @@ color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size: 24px; margin-le
 			
 .collection-side-btn-holder {
 
-text-align: center;  margin-top: 20px
+text-align: center;  margin-top: 20px; margin-bottom: 35px
 
 }
 
@@ -2799,7 +2807,7 @@ text-align: center;  margin-top: 20px
 	text-align: left !important;
 	margin-left: 0px !important;
 	margin-bottom: 0px !important;
-	width: 100px;
+	width: 80px;
 	border-radius: 0px !important;
 
 
@@ -2888,6 +2896,170 @@ border: 0px !important; float: right; margin-right: 0px !important; margin-top: 
 	font-weight: normal !important;
 	margin-left: 20px;
 	
+
+
+}
+
+.header-wrapper {
+	position: relative; 
+	z-index: 9999; 
+
+}
+
+.myentry-poup {
+	
+	 width: 140px; position: absolute; top: 25px; border: 1px solid #ccc; border-radius: 5px; padding-left: 5px; padding-right: 5px; right: 0px; background:#FFF; -webkit-border-radius: 3px; -webkit-box-shadow: 0px 3px 8px rgba(0,0,0,0.3); -webkit-background-clip: padding-box;
+
+
+}
+
+.myentry-poup > div {
+	
+padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-bottom: 1px solid #ccc; font-size: 14px; font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; cursor: pointer; color:#000 !important;
+
+
+}
+
+.myentry-poup > div:nth-child(last) {
+	border-bottom: none !important;
+
+}
+
+.myentry-poup > div:hover {
+	background:#eee;
+	color:#333;
+	
+}
+
+.myentry-poup > div > img {
+	float: left !important;
+	
+	
+}
+
+.myentry-share-poup  {
+	
+	 width: 140px; position: absolute; top: 25px; border: 1px solid #ccc; border-radius: 5px; padding-left: 5px; padding-right: 5px; right: -13px; background:#FFF; -webkit-border-radius: 3px; -webkit-box-shadow: 0px 3px 8px rgba(0,0,0,0.3); -webkit-background-clip: padding-box;
+
+
+}
+
+.myentry-share-poup  > div {
+	
+padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-bottom: 1px solid #ccc; font-size: 14px; font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; cursor: pointer; color:#000 !important;
+
+
+}
+
+.myentry-share-poup  > div:nth-child(last) {
+	border-bottom: none !important;
+
+}
+
+.myentry-share-poup  > div:hover {
+	background:#eee;
+	color:#333;
+	
+}
+
+.myentry-share-poup > div > img {
+	float: left !important;
+	
+	
+}
+
+.myentry-share {
+	position: relative;
+
+}
+
+.model-delete-body {
+	text-align: center;
+
+}
+
+.pass-change-btn {
+border: 0px !important; margin-left: 0px !important; margin-top: 20px; height: 50px; margin-bottom: 70px
+
+}
+
+.pass-confirm-btn {
+border: 0px !important; margin-left: 0px !important; margin-top: 20px; height: 50px;
+
+}
+
+.collection-create-btn > span:nth-child(1) {
+	
+	font-size: 28px;
+	color:#000;
+	margin-right: 20px;
+
+
+}
+
+.collection-create-btn > span:nth-child(2) {
+	
+	font-size: 18px;
+	color: #999;
+	margin-top: 20px;
+
+
+
+}
+
+.email-edit {
+margin-bottom: 20px; margin-left: 0px; float: left
+}
+
+.left-bar-author-descr {
+	color:#FFF;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+.myentry-popup {
+
+margin-left: 10px; float: right; position: relative; width: 34px; height: 21px; background:url(img/chevron-down.png); cursor: pointer 
+}
+
+.save {
+	position: relative;
+
+}
+
+.my-like-full {
+
+margin-left: 0px
+}
+
+.my-like-full > span:nth-child(1) {
+
+color: #877c21
+}
+
+.my-like-full > span:nth-child(2) {
+
+color:#999
+}
+
+.my-page-search {
+	float: right; 
+
+}
+
+.my-search-btn {
+	padding-top: 3px !important;
+	padding-bottom: 3px !important;
+	font-size: 12px !important;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+
+}
+
+.my-page-search > input {
+	margin-top: 5px;
+	boder-radius: 0px !important;
 
 
 }

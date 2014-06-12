@@ -46,4 +46,35 @@ success: function(label) {
 });
 
      
+$(document).ready(function(){
+	$(".sign-in-alert").hide();
+	$(".pass-sent-alert").hide();
+	$("#mybtn").click(function(){
+		
+			if( $("#email").val() == "jijitang"){
+				$(".sign-in-alert").hide();
+				$(".pass-sent-alert").fadeIn(500)
+			}
+			else {
+			$(".sign-in-alert").fadeIn(500)
+			$(".pass-sent-alert").hide();
+			
+			}
+		});
 
+});
+
+$(document).ready(function(){
+	$(".sign-in-alert").hide();
+	$("#mybtn").click(function(){
+		
+			if( $("#email").val() == "jijitang" && $("#pass").val() == "jijitang" ){
+				window.location.replace("http://myjijitang/jijitang-index.html")
+			}
+			else {
+			$(".sign-in-alert").fadeIn(500)
+			
+			}
+		});
+
+});

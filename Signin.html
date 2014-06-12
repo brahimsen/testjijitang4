@@ -23,28 +23,7 @@
 <script src="js/jquery.json-2.4.min.js"></script>
 <script src="js/bootstrap-select.js"></script>
 <script src="js/jquery.validate.min.js"></script>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-	$(".sign-in-alert").hide();
-	$("#mybtn").click(function(){
-		
-			if( $("#email").val() == "jijitang" && $("#pass").val() == "jijitang" ){
-				window.location.replace("http://myjijitang/jijitang-index.html")
-			}
-			else {
-			$(".sign-in-alert").fadeIn(500)
-			
-			}
-		});
-
-});
-
-     
-
-</script>
-
+<script src="js/myform.js"></script>
 
 <!-- HTML5 shim for IE backwards compatibility -->
     <!--[if lt IE 9]>
@@ -69,28 +48,22 @@ $(document).ready(function(){
 		</header>
 
 	<div class="fixed-sidebar span4"> 
-        <div class="fixed-side-container">
+        	<div class="fixed-side-container">
         	
-            <div class="sidebar-inner-content">
-            <h3 >Jijitang</h3>
-            <p >better academic reading and wrting !</p>
-            <hr>
-            <div class="row-fluid">
-            	<span class="main-button fixed-bar-left-btn">Sign Up</span>
-                <span class="main-button white-btn">Know Jijitang</span>
-            </div>
-            
-            </div>
+            	<div class="simple-sidebar-inner-content">
+            		<h3 >Sign In</h3>
+            	</div>
         
-        </div>
+       		 </div>
             
-      </div>     
-        <div class="span8 right-content" style=" margin-left: 32%; padding-top: 50px">
+   		</div>    
+            
+        <div class="span8 right-content" style="padding-top: 50px">
        			<div class="sign-in-alert"> Wrong Email/Password combination, please try again!</div>
        
        		
            
-           <div class="container col-md-8" style="margin-top: 100px">
+           <div class="container col-md-8">
 	 
 		<legend>Welcome to JIJITANG</legend>		
 		
@@ -122,9 +95,9 @@ $(document).ready(function(){
 	
 		
 		
-	      <div class="controls" style="margin-left: 0%;">
+	      <div class="controls">
 		  
-	       <button id="mybtn" class="main-button span3" style="border: 0px !important; margin-left: 0px !important; margin-top: 20px; height: 50px; margin-bottom: 70px" >Sign Up</button>
+	       <button id="mybtn" class="main-button span3 pass-confirm-btn"  >Sign Up</button>
 	        
 	      </div>
 		</div>
@@ -155,13 +128,8 @@ $(document).ready(function(){
 
 <script>
 
-$( "header" ).load( "header-jijitang.html" );
-$( "footer" ).load( "footer.html" );
-$( "#aside" ).load( "aside.html" );
-$( "#Entries" ).load( "Entries.html" );
-
-
-  
+$( "header" ).load( "login-header.html" );
+$( "footer" ).load( "footer.html" );  
 
 </script>
 <script src="js/myjavascript.js"></script>
