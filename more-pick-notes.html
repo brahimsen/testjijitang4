@@ -38,36 +38,46 @@
 
 </header>
 
-	<div id="aside" class="row-fluid" style=" margin-top: 40px;">
-		
+	
+    <div class="fixed-sidebar span4"> 
+        <div class="fixed-sidebar-wrapper">
         	
-           
-        </div>        
-        <div class="span8 right-content" style=" margin-left: 32%;">
-       
-       		<span id="submit-abstract" class="main-button" style=" float: right"><a title='Bottom Popover' rel='popover' data-placement='bottom' >Submit My Abstract</a></span>
+            <div class="fixed-sidebar-inner">
+            <p class="sidebar-title" >Topic Title: Translation Event</p>
             
-            <div class="brown-holder" style="margin-top: 60px;">
+            </div>
+        
+        </div>
+            
+      </div>  
+    
+         
+        <div class="span8 right-content">
+       
+       		<span id="submit-abstract" class="main-button right-float"><a title='Bottom Popover' rel='popover' data-placement='bottom' >Submit My Abstract</a></span>
+            
+           <div class="brown-holder">
             <p class="brown-holder-title">Editors Note</p><br />
-            <p class="brown-holder-content">Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note </p>
+            <p class="brown-holder-content">Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors...<span class="brown-holder-link"><a href="">Read More</a></span>  </p>
             
             </div>
             
-            <ul class="nav nav-tabs" style="margin-top: 50px; border-bottom: 0px !important">
-  <li style=" width: 135px" class="active"><a href="#home" data-toggle="tab">Editor Picks</a></li>
-  <li style=" width: 135px" ><a href="#profile" data-toggle="tab">All Submits</a></li>
+            <ul class="nav nav-tabs more-picks-nav">
+  <li  class="active"><a href="#home" data-toggle="tab">Editor Picks</a></li>
+  <li  ><a href="#profile" data-toggle="tab">All Submits</a></li>
   
 </ul>
 
 <div class="tab-content" style="margin-top: -50px">
   <div class="tab-pane active" id="home">
-  	<div class="picks">
+  	<div id="note1">
     </div>
   </div>
   <div class="tab-pane" id="profile"> 
   
-  	<div class="all-submits">
-            </div></div>
+  	<div id="note2">
+    </div>
+      </div>
   
 </div>
             
@@ -99,8 +109,8 @@
 
 $( "header" ).load( "header-jijitang.html" ); 
 $( "#aside" ).load( "aside.html" );
-$( ".picks" ).load( "pciks.html" ); 
-$( ".all-submits" ).load( "submits.html" ); 
+$( "#note1" ).load( "Testnotes/Note1.html" ); 
+$( "#note2" ).load( "Testnotes/Note2.html" ); 
   
 
 </script>

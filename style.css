@@ -612,7 +612,6 @@ position: relative;
 
 
 .tab-content {
-	width: 79.358974%;
 	
 
 }
@@ -2287,7 +2286,7 @@ legend {
 }
 
 .sign-in-alert {
- width: 60%; padding-top: 10px; padding-bottom: 10px; text-align: center; background: #F2DEDE; border: 1px solid #EBCCD1; color: #A94442; margin-bottom: 50px; border-radius: 5px; margin-left: 10%
+ width: 60%; padding-top: 10px; padding-bottom: 10px; text-align: center; background: #F2DEDE; border: 1px solid #EBCCD1; color: #A94442; margin-bottom: 50px; border-radius: 5px; margin-left: 19%
 
 }
 
@@ -2506,6 +2505,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 
 .trans-btn {
 	margin-right: 20px; 
+	
 
 }
 
@@ -3048,6 +3048,11 @@ color:#999
 
 }
 
+.right-float {
+	float: right;
+
+}
+
 .my-search-btn {
 	padding-top: 3px !important;
 	padding-bottom: 3px !important;
@@ -3062,4 +3067,95 @@ color:#999
 	boder-radius: 0px !important;
 
 
+}
+
+#signup-link {
+	cursor: pointer;
+
+}
+
+#Login-link {
+	
+	cursor: pointer;
+
+
+}
+
+.pointer {
+
+cursor: pointer;
+}
+
+.float-right-btn {
+	float:right;
+
+}
+
+.pay-btn-right {
+
+float: right; margin-right: 20px; margin-bottom: 20px !important; margin-top: 30px
+
+}
+
+.pay-btn-left {
+
+	float: right; margin-right: 20px; margin-bottom: 20px !important; margin-top: 60px
+
+}
+
+.submit-trans-btn {
+
+float: right; margin-right: 20px; margin-bottom: 0px !important
+
+}
+
+.pay-service {
+	margin-top: 40px;
+
+}
+
+.pay-service > div > input {
+	height: 40px;
+
+}
+
+.more-picks-nav {
+	
+	margin-top: 50px; border-bottom: 0px !important
+
+
+}
+
+.more-picks-nav > li {
+	width: 135px;
+
+}
+
+.notification > img {
+
+width: 50px; height: 50px
+
+}
+
+#trans-Modal > div > div > div > p{
+	
+	color: #333; font-size: 18px; font-family:Arial, Helvetica, sans-serif;  
+
+
+}
+
+#trans-Modal > div > div > div > input{
+	height: 45px; margin-top: 20px
+
+}
+
+#trans-Modal > div > div > div > textarea{
+	
+height: 270px;
+
+}
+
+.sign-in-text > p > a {
+	
+	cursor: pointer; font-size: 18px;
 }
