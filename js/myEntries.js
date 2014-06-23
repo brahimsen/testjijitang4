@@ -12,7 +12,7 @@
 					$('.read-later-full',this).show();
 				});
 				
-				$(".note-popover-update").hide();
+					$(".note-popover-update").hide();
 				$(".save,.note-popover-update").click(function(e){
 					
 					$('.note-popover-update',this).fadeIn();
@@ -22,9 +22,20 @@
 					
 				});
 				
+				$('.myentry-share-poup').hide();
+				$(".myentry-share,.myentry-share-poup").click(function(e){
+					
+				
+					$('.myentry-share-poup',this).fadeIn();
+					e.stopPropagation();
+					
+					
+				});
+				
 				$("html").click(function(e){
 					
 					$('.note-popover-update').hide();
+					$('.myentry-share-poup').hide();
 					
 					
 				

@@ -1,44 +1,9 @@
-  
- <script>
- $(document).ready(function() {
-				$(".like-full").hide();
-				$(".like-holder").click(function(){
-					$('.like',this).hide();
-					$('.like-full',this).show();
-				});
-			});
-			
-				$(".read-later-full").hide();
-				$(".read-later-holder").click(function(){
-					$('.read-later-empty',this).hide();
-					$('.read-later-full',this).show();
-				});
-				
-				$(".note-popover-update").hide();
-				$(".save,.note-popover-update").click(function(e){
-					
-					$('.note-popover-update',this).fadeIn();
-					e.stopPropagation();
-					
-				
-					
-				});
-				
-				$("html").click(function(e){
-					
-					$('.note-popover-update').hide();
-					
-					
-				
-					
-				});
-				</script>
-                
+<script src="../js/myEntries.js"></script>
                 
   			<div class="pick-post">
             		<div class="pick-head row-fluid">
                     	<div class="span12">
-                        	<div class="pick-avatar" style="margin-left: 10px"></div>
+                        	<div data-toggle="tooltip"  title="Adam Tata" class="pick-avatar" style="margin-left: 10px"></div>
                         	<p class="pick-title"><a>Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome Glucose-TOR signalling reprograms the transcriptome</a>
                             
                             <span class="read-later-holder">
@@ -89,10 +54,10 @@
                    
                     
            		<div class="pick-footer row-fluid">
-                    	<div class="span3 pick-time">10:29 PM, 4 minutes ago</div>
-                        <div class="span4" style="text-align: center"><span class="pick-author">Adam Tata </span> <span class="pick-research"> in Research Articles</span></div>
-                        <div class="span5 pick-comment">
-                            <div class="span5 comment"><span class="icon-comment-o"></span><span class="mls"> Comment(4)</span></div>
+                    	<div class="span5 pick-time">10:29 PM, 4 minutes ago</div>
+                      
+                        <div class="span7 pick-comment" >
+                            <div class="span4 comment"><span class="icon-comment-o"></span><span class="mls"> Comment(4)</span></div>
                             <div class="span3 save" style="position: relative"><span class="icon-copy"></span><span class="mls"> Save(44)</span>
                              <div class="note-popover-update">
                             
@@ -137,8 +102,25 @@
                             
                             
                             </div>
-                            <div class="like-holder"><div class="span4 like"><span class="icon-heart-o"></span><span class="mls"> Like(4)</span></div>
-                            <div class="span4 like-full" style="margin-left: 0px"><span class="icon-heart" style="color: #877c21"></span><span class="mls" style="color:#999"> Like(4)</span></div></div>
+                            <div class="like-holder"><div class="span3 like"><span class="icon-heart-o"></span><span class="mls"> Like(4)</span></div>
+                            <div class="span3 like-full" style="margin-left: 0px"><span class="icon-heart" style="color: #877c21"></span><span class="mls" style="color:#999"> Like(4)</span></div></div>
+                            
+                            <div class="span2 myentry-share">
+                            	<span class="icon-arrow-circle-o-up"></span>
+                            	<span class="mls"> Share</span>
+                                <div class="myentry-share-poup" >
+                                        
+                                     <div><img src="../img/plus.png" />Facebook</div>
+                                     <div><img src="../img/plus.png" />Twitter</div>
+                                     <div><img src="../img/plus.png" />Wechat</div>
+                                     <div><img src="../img/plus.png" />Sina Weibo</div>
+                                     <div><img src="../img/plus.png" />Douban</div>
+                                        
+                                </div>
+                            
+                            
+                            
+                            </div>
                             
                         </div>
                     

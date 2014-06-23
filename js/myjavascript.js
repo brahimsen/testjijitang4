@@ -88,6 +88,13 @@ content : '<div id="popOverBox">Your Text Here</div>'
 
 
 		});
+		
+		$("#crop-click").click(function(){
+			
+				$("#crop-Modal").modal('show');
+
+
+		});
 	});
 	
 	
@@ -139,3 +146,72 @@ $(window).ready(function() {
 });
 
 
+	$(document).ready(function() {
+		$('.coll-title').on('keyup change', function() {
+			$('.left-bar-title').text($(this).val());
+		
+			
+		
+		});
+		
+		$("#delete-collectionbtn").click(function(){
+		
+		$("#Delete-collection-Modal").modal('show');
+
+	});
+		
+		
+	});
+	
+	
+		$(document).ready(function() {
+		$('.coll-title').on('keyup change', function() {
+			$('.left-bar-title').text($(this).val());
+		
+		});
+		
+		$('.coll-content').on('keyup change', function() {
+			$('.left-bar-content').text($(this).val());
+		
+		});
+		
+		$("#delete-collectionbtn").click(function(){
+		
+		$("#Delete-collection-Modal").modal('show');
+
+	});
+		
+		
+	});
+	
+	$(document).ready(function() {
+	
+		
+		$("#collection-created-link").click(function(){
+			window.location.href = "http://jijitang.byethost15.com/collection-created.html"
+
+	});
+		
+		$(".collection-popover-submit").hide();
+				$(".share-collection,.collection-popover-submit").click(function(e){
+					
+					$('.collection-popover-submit',this).fadeIn();
+					e.stopPropagation();
+					
+				
+					
+				});
+				
+				$("html").click(function(e){
+					
+					$('.collection-popover-submit').hide();
+					
+					
+				
+					
+				});
+		
+	});
+	
+	
+	
