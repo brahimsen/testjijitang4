@@ -24,6 +24,8 @@
 				
 				$('.myentry-share-poup').hide();
 				$(".myentry-share,.myentry-share-poup").click(function(e){
+				
+					
 					
 				
 					$('.myentry-share-poup',this).fadeIn();

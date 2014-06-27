@@ -195,7 +195,7 @@ $(window).ready(function() {
 		$(".collection-popover-submit").hide();
 				$(".share-collection,.collection-popover-submit").click(function(e){
 					
-					$('.collection-popover-submit',this).fadeIn();
+					$('.collection-popover-submit',this).toggle();
 					e.stopPropagation();
 					
 				
