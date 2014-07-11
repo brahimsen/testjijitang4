@@ -25,6 +25,47 @@
 <script>
 
 $(document).ready(function() {
+	
+				
+	
+				$('.view-comment-section').hide();
+				
+				$('.answer-comment').hide();
+				
+				$(".view-comment-answer").click(function(){
+				
+					
+				$('.answer-comment',this).show();
+					
+					
+				});
+				
+				$(".view-comment-show").click(function(e){
+				
+				
+				$('.article-left').hide();
+				$('.article-right').animate({'marginLeft' : "5%"});
+				$('.view-comment-section').hide();
+				$('.view-comment-section',this).toggle();
+					e.stopPropagation();
+				
+					
+					
+				});
+				
+					$("html").click(function(e){
+					
+					
+					$('.view-comment-section').hide();
+					$('.article-left').delay(200).fadeIn(500);
+					$('.article-right').animate({'marginLeft' : "23%"});
+					
+					
+				
+					
+				});
+				
+				
 			$('.myentry-share-poup').hide();
 			
 			
@@ -49,6 +90,21 @@ $(document).ready(function() {
 					
 				});
 				
+				$('.view-comment-btn-hover').hide();
+			
+			
+				$(".article-view-tab-content").hover(function(){
+				
+					
+				
+				$('.view-comment-btn-hover',this).toggle();
+				$('.view-comment-btn',this).toggle();
+					
+				
+					
+					
+				});
+				
 				
 				});
 </script>
@@ -64,6 +120,16 @@ $(document).ready(function() {
 </head>
 
 <body >
+
+<div id="Comment-Modal" class="modal hide fade hidden-desktop" tabindex="-1" data-width="860">
+ 
+
+  <div class="modal-body">
+  
+  </div>
+</div>
+
+<!--End of Comment Modal-->
 
 <div class="container-fluid">
 
@@ -178,7 +244,7 @@ $(document).ready(function() {
         
         </div>
       
-      	<div class="article-right span10" data-spy="scroll" data-target="#navbar-example" data-offset="0" style="" >
+      	<div class="article-right span10" data-spy="scroll" data-target="#navbar-example" data-offset="0"  >
         
         <div class="article-title" >
         
@@ -202,13 +268,123 @@ $(document).ready(function() {
         </div>
         	
      
+   
+    <div class="section" >
+    
     <ul id="Abstract" class="pick-tabs row-fluid article-view-tab" style="display:inline">
   			<li class="active"><a href="#p11" data-toggle="tab">论文摘要</a></li>
             /
-  			<li><a id="Abstract" href="#p12" data-toggle="tab"> ABSTRACT </a></li>
+  			<li><a id="Abstract" href="#p12" data-toggle="tab"> Abstract </a></li>
   	</ul>
     
-    <div class="tab-content article-view-tab-content">
+    <div class="tab-content article-view-tab-content" >
+    
+    <div  class="view-comment-show">
+    	<span class="view-comment-btn">+</span>
+    	<span class="view-comment-btn-hover">+</span>
+        
+    	
+        <!-- Section Comment -->
+        <div class="hidden-phone hidden-tablet view-comment-section">
+    
+    		<!--Write Comment-->
+            <div class="view-write-comment" >
+        
+     		 <div>
+        
+				<div class="comment-large-view-avatar">
+        		</div>
+            
+        		<div style=" margin-left: 50px">
+            
+            		<p><a>Adam Tata</a></p>
+                	<input type="text" placeholder="Write Down Your Comment..."/> 
+                    <p><span>Comment</span> . <span>Save as Note</span> . <span>Cancel</span></p>  
+        		
+                </div>
+        
+    		 </div>
+    
+			</div><!-- End of Write Comment-->
+            
+            <!-- Display Comment 1-->
+            <div class="view-display-comment" >
+        
+     		 <div>
+        
+				<div class="comment-small-view-avatar">
+        		</div>
+            
+        		<div style=" margin-left: 50px">
+            
+            		<p><a>Adam Tata</a></p>
+                	<p> Very Good Article </p> 
+                    <p><span>Edit</span></p>
+                    
+                    <div class="view-comment-answer">
+                    <p><span>Answer this comment</span></p>
+                    <input class="answer-comment" type="text" placeholder="Write Down Your Comment..." />
+                    <p class="ten-top-margin"><span class="gray-color">Note Saved</span> . <span>Check Note!</span></p>
+                    		
+                            <div class="view-display-comment-child">
+                            	
+                                <div>
+                                	
+                                    <div class="comment-tiny-view-avatar">
+        							</div>
+                                    
+                                    <div style=" margin-left: 30px">
+            
+            							<p><a>Adam Tata</a></p>
+                						<p> Very Good Article </p> 
+                    					<p><span>Edit</span></p>
+                                        
+                                    </div>
+                                         
+                                </div>
+                         
+                            </div>
+                    </div>
+                    
+                </div>
+        
+    		 </div>
+    
+			</div><!-- End of Display Comment 1-->
+            
+            
+            <!-- Display Comment 2-->
+            <div class="view-display-comment" >
+        
+     		 <div>
+        
+				<div class="comment-small-view-avatar">
+        		</div>
+            
+        		<div style=" margin-left: 50px">
+            
+            		<p><a>Adam Tata</a></p>
+                	<p> Very Good Article </p> 
+                    <p><span>Edit</span></p>
+                    
+                    <div class="view-comment-answer">
+                    <p><span>Answer this comment</span></p>
+                    <input class="answer-comment" type="text" placeholder="Write Down Your Comment..." />
+                    <p><span>Note Saved</span> . <span>Check Note!</span></p>
+                   		
+                    </div>
+                    
+                </div>
+        
+    		 </div>
+    
+			</div><!-- End of Display Comment 2-->
+        
+        
+        </div><!-- End of Comment Display-->
+    </div><!--End View Comment Show-->
+    
+    
     
     <div class="tab-pane active" id="p11">
    
@@ -224,16 +400,129 @@ $(document).ready(function() {
    
    </div>
    
+   
+   
    </div>
    
    
-       <ul id="Introduction" class="pick-tabs row-fluid article-view-tab" style="display:inline">
-  			<li class="active"><a href="#p21" data-toggle="tab">简介</a></li>
+   
+   </div>
+   
+     <div class="section" >
+    
+    <ul id="Abstract" class="pick-tabs row-fluid article-view-tab" style="display:inline">
+  			<li class="active"><a href="#p21" data-toggle="tab">论文摘要</a></li>
             /
   			<li><a id="Abstract" href="#p22" data-toggle="tab"> Introduction </a></li>
   	</ul>
     
-    <div class="tab-content article-view-tab-content">
+    <div class="tab-content article-view-tab-content" >
+    
+    <div  class="view-comment-show">
+    	<span class="view-comment-btn">+</span>
+    	<span class="view-comment-btn-hover">+</span>
+    	
+        <!-- Section Comment -->
+        <div class="hidden-phone hidden-tablet view-comment-section">
+    
+    		<!--Write Comment-->
+            <div class="view-write-comment" >
+        
+     		 <div>
+        
+				<div class="comment-large-view-avatar">
+        		</div>
+            
+        		<div style=" margin-left: 50px">
+            
+            		<p><a>Adam Tata</a></p>
+                	<input type="text" placeholder="Write Down Your Comment..."/> 
+                    <p><span>Comment</span> . <span>Save as Note</span> . <span>Cancel</span></p>  
+        		
+                </div>
+        
+    		 </div>
+    
+			</div><!-- End of Write Comment-->
+            
+            <!-- Display Comment 1-->
+            <div class="view-display-comment" >
+        
+     		 <div>
+        
+				<div class="comment-small-view-avatar">
+        		</div>
+            
+        		<div style=" margin-left: 50px">
+            
+            		<p><a>Adam Tata</a></p>
+                	<p> Very Good Article </p> 
+                    <p><span>Edit</span></p>
+                    
+                    <div class="view-comment-answer">
+                    <p><span>Answer this comment</span></p>
+                    <input class="answer-comment" type="text" placeholder="Write Down Your Comment..." />
+                    <p class="ten-top-margin"><span class="gray-color">Note Saved</span> . <span>Check Note!</span></p>
+                    		
+                            <div class="view-display-comment-child">
+                            	
+                                <div>
+                                	
+                                    <div class="comment-tiny-view-avatar">
+        							</div>
+                                    
+                                    <div style=" margin-left: 30px">
+            
+            							<p><a>Adam Tata</a></p>
+                						<p> Very Good Article </p> 
+                    					<p><span>Edit</span></p>
+                                        
+                                    </div>
+                                         
+                                </div>
+                         
+                            </div>
+                    </div>
+                    
+                </div>
+        
+    		 </div>
+    
+			</div><!-- End of Display Comment 1-->
+            
+            
+            <!-- Display Comment 2-->
+            <div class="view-display-comment" >
+        
+     		 <div>
+        
+				<div class="comment-small-view-avatar">
+        		</div>
+            
+        		<div style=" margin-left: 50px">
+            
+            		<p><a>Adam Tata</a></p>
+                	<p> Very Good Article </p> 
+                    <p><span>Edit</span></p>
+                    
+                    <div class="view-comment-answer">
+                    <p><span>Answer this comment</span></p>
+                    <input class="answer-comment" type="text" placeholder="Write Down Your Comment..." />
+                    <p><span>Note Saved</span> . <span>Check Note!</span></p>
+                   		
+                    </div>
+                    
+                </div>
+        
+    		 </div>
+    
+			</div><!-- End of Display Comment 2-->
+        
+        
+        </div><!-- End of Comment Display-->
+    </div><!--End View Comment Show-->
+    
+    
     
     <div class="tab-pane active" id="p21">
    
@@ -249,18 +538,31 @@ $(document).ready(function() {
    
    </div>
    
+   
+   
    </div>
-
    
    
    
-    <ul id="Methods" class="pick-tabs row-fluid article-view-tab" style="display:inline">
+   </div>
+ 
+ <div class="section" >
+    
+    <ul id="Abstract" class="pick-tabs row-fluid article-view-tab" style="display:inline">
   			<li class="active"><a href="#p31" data-toggle="tab">方法</a></li>
             /
-  			<li><a id="Abstract" href="#p32" data-toggle="tab"> Methods </a></li>
+  			<li><a id="Abstract" href="#p32" data-toggle="tab"> Methods  </a></li>
   	</ul>
     
     <div class="tab-content article-view-tab-content">
+    
+    <div style="background:#00F" class="view-comment-show">
+    <span class="view-comment-btn">+</span>
+    <span class="view-comment-btn-hover">+</span>
+    <div class="hidden-phone hidden-tablet view-comment-section"></div>
+    </div>
+    
+    
     
     <div class="tab-pane active" id="p31">
    
@@ -276,9 +578,15 @@ $(document).ready(function() {
    
    </div>
    
+   
+   
    </div>
    
-</div>
+   
+   
+   </div>
+   
+ 
 
 <script>
 

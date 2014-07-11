@@ -1,0 +1,243 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/bootstrap-select.css"  type="text/css"/>
+
+
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.json-2.4.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/myform.js"></script>
+<script src="js/myjavascript.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+				
+	
+				$('.account-edit-password-holder').hide();
+				
+				$('.account-edit-email-holder').hide();
+				
+				$(".account-password-edit").click(function(){
+				
+					
+				$('.account-edit-password-holder').fadeIn(500);
+					});
+					
+					
+				$(".account-email-edit").click(function(){
+				
+				$('.account-edit-email-holder').fadeIn(500);
+					
+					
+				});
+				
+			
+			
+				
+				$(".cancel-password-edit").click(function(){
+				
+					
+				$('.account-edit-password-holder').hide();
+					});
+					
+					
+				$(".cancel-email-edit").click(function(){
+				
+				$('.account-edit-email-holder').hide();
+					
+					
+				});
+				
+				
+				
+				
+			
+			
+				
+				
+				
+				
+			
+			
+			
+				
+				
+				});
+</script>
+
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+	<div class="container-fluid">
+
+
+
+		<header >
+        
+        
+		</header>
+        
+
+		<div class="fixed-sidebar span4"> 
+        	<div class="fixed-side-container">
+        	
+            	<div class="simple-sidebar-inner-content">
+            		<h3 >Account Settings</h3>
+            	</div>
+        
+       		 </div>
+            
+   		</div>  
+    
+             
+    <div class="span8 right-content right-content-log top-padding-bug" >
+       
+
+            
+            
+            <div class="settings-navigatiion">
+            
+            <span class="span2"><a href="profile-setting.html">Profile Settings</a></span>
+            <span class="span2 active" ><a href="account-setting.html">Account Settings</a></span>
+
+            
+            </div>
+            
+            
+            <div class="collection-form-holder">
+            
+            	<div class="caption-div">
+               		<p>Email</p>
+               		<hr/>
+                    
+                    <p><span class="settings-email">brahim_senhaji@gmail.com</span><span class="account-email-edit">Edit</span></p>
+                    
+                    <div class="account-edit-email-holder">
+                    
+                    <p> <span class="settings-email span2">Old Email</span><span class="dark-gray-color">brahim_senhaji@gmail.com</span></p>
+                    <p> <span class="settings-email span2">New Email</span><input type="text"></p>
+                     <p> <span class="settings-email span2">Password</span><input type="password"></p>
+                     <p><span class="cancel-email-edit">Cancel</span></p>
+                     
+                     </div>
+                    
+                    
+               </div>
+              
+          
+            
+               <div class="caption-div">
+               		<p>Password</p>
+               		<hr/>
+                    
+                        <p><span class="settings-email">*************</span><span class="account-password-edit">Edit</span></p>
+                    
+                    <div class="account-edit-password-holder">
+                    
+                    <p> <span class="settings-email span2">Old Password</span><input type="password"></p>
+                    <p> <span class="settings-email span2">New Password</span><input type="password"></p>
+                     <p> <span class="settings-email span2">Confirm New Password</span><input type="password"></p>
+                     <p><span class="cancel-password-edit">Cancel</span></p>
+                     
+                     </div>
+                     
+                     
+               </div>
+             
+             	<div class="caption-div">
+               		<p>Language</p>
+               		<hr/>
+                    
+                    <select>
+                    
+                    	<option value="English">English</option>
+                        <option value="Chinese">Chinese</option>
+
+                    
+                    </select>
+                    
+               </div>
+               
+               
+              <button class="main-button no-border">Save</button>
+                <button class="gray-btn-log paddin-fix">Cancel</button>
+            
+            </div>
+            
+          
+   
+          
+       
+         
+        
+         
+            
+           
+            
+        <footer  class="row-fluid span12">
+        
+		</footer>
+        
+        
+        
+        </div>
+        
+    
+    
+    </div>
+
+
+
+
+</div>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" );
+$( "footer" ).load( "footer.html" );
+$( "#aside" ).load( "aside.html" );
+$( "#Entries" ).load( "Entries.html" );
+
+
+  
+
+</script>
+
