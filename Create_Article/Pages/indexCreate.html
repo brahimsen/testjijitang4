@@ -23,17 +23,7 @@
     
     <script type="application/javascript">
 
-$().ready(function(){
 
-$('#clickme').click(function () {
-	
-	alert("nihaaaaao");
-	
-
-	
-	});
-
-});
 
 $(document).ready(function(){
 	$("#publish-article").click(function(){
@@ -133,20 +123,78 @@ $(document).ready(function(){
     
     <div id="container" class="text-editor-holder">
     
-    	<div class="editable" id="a" data-placeholder="Title of Your Article">
+    	<div style="background:#FF0"class="editable" id="a" data-placeholder="Title of Your Article">
+        
+        			
         </div>
         
-        <div class="editable" id="b" data-placeholder="More of Your Article, Select text for styling....">
-            
+        <div style="background:#F00" class="editable" id="b" data-placeholder="More of Your Article, Select text for styling....">
+        
+        
+        		
+        
+        
+           
         </div>
+        
+      
+        
+    </div><!--text editor holder-->
+    
+    	<button class="add-section" style=" padding: 20px; background:#FFF; color: #3D7D8B; float:right; box-shadow: none; border:none; font-weight: bold; margin-right: 20%;">Add New Section</button>
+    
     </div>
     
     
     <script src="../dist/js/medium-editor.js"></script>
+    <script src="../dist/js/medium-editor-insert-plugin.all.min.js"></script>
+     <script>
+    var editor = new MediumEditor('.editable', {
+      excludedActions: ['u', 'h3', 'blockquote'],
+      buttonLabels: 'fontawesome'
+    });
+
+    $(function () {
+      $('.editable').mediumInsert({
+        editor: editor,
+        addons: {
+          images: {},
+          embeds: {},
+          tables: {}
+        }
+      });
+    });
+
+    var cssLink = document.getElementById('medium-editor-theme');
+    document.getElementById('sel-themes').addEventListener('change', function () {
+      cssLink.href = this.value + '.css';
+    });
+  </script>
     <script>
-        var editor = new MediumEditor('.editable', {
+        
+		$(document).ready(function(){
+			
+		
+
+$('.add-section').click(function () {
+	
+		$("#b").append('<div class="create-section" style="background:#ccc; height: 200px; width: 100%;"><div class="section-create-title">Section Title</div><div class="section-create-content">Section Content</div></div>');
+		
+		
+
+	
+	});
+
+});
+		
+		
+		var editor = new MediumEditor('.editable', {
             buttonLabels: 'fontawesome'
         });
+		
+		
+		
+		
     </script>
     
     <script>

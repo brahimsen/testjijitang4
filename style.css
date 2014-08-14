@@ -2575,7 +2575,7 @@ color: #CCC; width: 17px; height: 17px; font-size: 14px; padding: 5px; padding-t
 }
 
 .create-button-holder {
-	margin-top: -20px !important;
+	margin-top: 30px !important;
 
 }
 
@@ -2649,11 +2649,25 @@ color: #CCC; width: 17px; height: 17px; font-size: 14px; padding: 5px; padding-t
 
 }
 
+.four-right-top-menu-holder > div {
+	width: 25% !important;
+	text-align: center;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	color: #666;
+
+}
+
 
 
 
 
 .right-top-menu-holder > div:hover {
+	color: #3d7d8b !important;
+
+}
+
+.four-right-top-menu-holder > div:hover {
 	color: #3d7d8b !important;
 
 }
@@ -2668,6 +2682,10 @@ color: #CCC; width: 17px; height: 17px; font-size: 14px; padding: 5px; padding-t
 
 }
 
+.four-right-top-menu-holder > div > div {
+	margin-left: 40% !important;
+
+}
 
 }
 
@@ -3487,10 +3505,9 @@ height: 270px;
 	.view-article-left-nav > li {
 		text-align: center !important;
 		float: none !important;
-		
-	
-	
 	}
+	
+	
 	
 	.view-right-top-menu-holder > div {
 	width: 20% !important;
@@ -3541,8 +3558,15 @@ height: 270px;
 	margin-right: 10px; margin-left: 10px;
 	width: 90px;
 	color: #666;
+}
 
-
+.four-right-top-menu-holder > div {
+	height: 40px;
+	cursor: pointer;
+	float: right;
+	margin-right: 10px; margin-left: 10px;
+	width: 90px;
+	color: #666;
 }
 
 .view-right-top-menu-holder > div {
@@ -3550,13 +3574,23 @@ height: 270px;
 	cursor: pointer;
 	float: right;
 	margin-right: 30px; margin-left: 10px;
-	
 	color: #666;
+}
+
+
+
+.right-top-menu-holder > a > div {
+	height: 40px;
+	cursor: pointer;
+	float: right;
+	margin-right: 10px; margin-left: 10px;
+	width: 90px;
+	color: #666 !important;
 
 
 }
 
-.right-top-menu-holder > a > div {
+.four-right-top-menu-holder > a > div {
 	height: 40px;
 	cursor: pointer;
 	float: right;
@@ -3580,9 +3614,10 @@ height: 270px;
 
 .right-top-menu-holder > div:hover {
 	color: #3d7d8b;
+}
 
-
-
+.four-right-top-menu-holder > div:hover {
+	color: #3d7d8b;
 }
 
 .view-right-top-menu-holder > div:hover {
@@ -3593,6 +3628,15 @@ height: 270px;
 }
 
 .right-top-menu-holder > div > div > span:nth-child(1) {
+	
+	font-size: 24px;
+	
+	float: left;
+
+
+}
+
+.four-right-top-menu-holder > div > div > span:nth-child(1) {
 	
 	font-size: 24px;
 	
@@ -3613,6 +3657,16 @@ height: 270px;
 
 
 .right-top-menu-holder > div > div > a > span:nth-child(1) {
+	
+	font-size: 24px !important;
+	color:#666; !important;
+	float: left !important;
+	margin-top: 3px;
+
+
+}
+
+.four-right-top-menu-holder > div > div > a > span:nth-child(1) {
 	
 	font-size: 24px !important;
 	color:#666; !important;
@@ -3646,6 +3700,18 @@ height: 270px;
 
 }
 
+.four-right-top-menu-holder > div > p {
+	
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	
+	float: left;
+	margin-left: 14px;
+	margin-top: 5px;
+
+
+}
+
 .view-right-top-menu-holder > div > p {
 	
 	font-size: 16px;
@@ -3666,6 +3732,18 @@ height: 270px;
 }
 
 .right-top-menu-holder > div > p > a {
+	
+	font-size: 16px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	
+	float: left !important;
+	margin-left: 5px !important;
+	margin-top: 20px !important;
+
+
+}
+
+.four-right-top-menu-holder > div > p > a {
 	
 	font-size: 16px !important;
 	font-family: Arial, Helvetica, sans-serif !important;
@@ -5120,5 +5198,84 @@ z-index: 9999;
 .article-left {
 
 width:100%;   margin-right: 0px; 
+
+}
+
+#Publish-article-Modal {
+	top: 25% !important;
+
+
+}
+
+#Delete-article-Modal {
+	top: 25% !important;
+
+
+}
+
+.editable {
+	border-bottom: none !important;
+
+}
+
+.editor {
+border-bottom: 1px solid #ccc; padding-bottom: 30px; width: 84% !important; margin-left: 8%
+
+}
+
+.add-section {
+
+padding: 20px; background:#FFF; color: #3D7D8B; box-shadow: none; border:none; font-weight: bold;  cursor: pointer
+
+}
+
+.add-section-btn-holder {
+
+width: 84%; margin-left: 8%
+}
+
+#editor-title {
+
+font-size: 32px; font-family: 'RobotoBold'
+
+}
+
+.seventy-top {
+
+margin-top: 70px !important;
+
+}
+
+.top-index {
+	z-index: 9999 !important; 
+
+
+}
+
+.blank-section {
+ margin-top:20px;
+}
+
+.section-title {
+
+background:#f9f9f9; margin-top:20px;
+
+}
+
+.section-content {
+
+background:#f9f9f9; margin-top:0px
+
+}
+
+.mediumInsert-buttonsOptions > li:nth-child(2) {
+	display: none !important
+
+
+}
+
+.mediumInsert-buttonsOptions > li:nth-child(3) {
+	display: none !important
+
 
 }
