@@ -25,6 +25,10 @@
 
 
 
+
+
+
+
 <!-- HTML5 shim for IE backwards compatibility -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,41 +46,53 @@
 
 
 
-		<header>
+		<div class="header-wrapper">
+        	<header>
         
         
 		</header>
+       </div>
 
 	<div class="fixed-sidebar span4"> 
-        <div class="fixed-side-container">
+       
+        <div class="fixed-sidebar-wrapper">
         	
-            <div class="simple-sidebar-inner-content">
-            	<h3 >Articles/Notes</h3>
+            <div class="fixed-sidebar-inner">
+            	
+                <p class="sidebar-title" >Notes/Articles</p>
+            
             </div>
         
         </div>
             
-   </div>   
+      </div>    
       
           
         <div class="span8 right-content" >
        
-       	<div class="row-fluid create-button-holder">
-            
-            	<span class="span4 create-col-btn create-new-coll">Create a new article</span>
-                
-            
-            </div>
-       
+      
        
         
                 
+                      <div class="nav-wrapper">
+                      
+                      
+                      <div class="nav-wrapper-inner">
+                      <div class="nav-mobile-btn" ></div>
                       <ul class="nav nav-tabs collections-nav">
-  							<li   class="active span2"><a href="#a1" data-toggle="tab">Most Popular</a></li>
- 		 					<li  class="span2"><a class="latest-collection" href="#a2" data-toggle="tab">Latest</a></li>
+  							<li   class="active"><a href="#a1" data-toggle="tab">Most Popular</a></li>
+ 		 					<li ><a class="latest-collection" href="#a2" data-toggle="tab">Latest</a></li>
+                            <li ><a href="#a3" data-toggle="tab">Read Later</a></li>
   					  </ul>
+                      </div>
+                      	
+                      <div class="create-button-nav">
+            
+            				<a href="/Editor/Editor/"><div>New Article</div><div class="new-article">+</div></a>
+              
+         		      </div>
 
-                    
+                    </div>
                     
                     
                     <div class="tab-content note-tab-content">
@@ -84,8 +100,7 @@
       
                 
                 <div id="note1"></div>
-                <div id="note2"></div>
-                <div id="note3"></div>
+                
                
               
                
@@ -96,15 +111,25 @@
   	
                     </div>
   
-  <div class="tab-pane" id="a2"> 
+  				<div class="tab-pane" id="a2"> 
   
-   <div id="note4"></div>
-                 <div id="note5"></div>
-                 <div id="note6"></div>
+   			
+                	
+                
+               </div>
+               
+               	<div class="tab-pane" id="a3"> 
+  
+   				
                 
                 	
                 
-                </div>
+               </div>
+                
+                
+                
+                
+                
                 </div>
     
     
@@ -153,10 +178,7 @@ $( "#note3" ).load( "Testnotes/Note3.html" );
 $( "#note4" ).load( "Testnotes/Note4.html" );
 $( "#note5" ).load( "Testnotes/Note5.html" );
 $( "#note6" ).load( "Testnotes/Note6.html" );
-
-
-  
-
 </script>
+
 <script src="js/myjavascript.js"></script>
 

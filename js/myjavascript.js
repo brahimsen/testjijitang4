@@ -47,6 +47,8 @@ content : '<div id="popOverBox">Your Text Here</div>'
 		$("#Sign-in-Modal").modal('show');
 		$(".sign-in-alert").hide();
 		$("#signup-link").click(function(){
+			
+				
 				$("#Sign-in-Modal").modal('hide');
 				$("#index-Sign-in-Modal").modal('hide');
 				$("#Sign-up-Modal").modal('show');

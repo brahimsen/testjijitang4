@@ -26,6 +26,7 @@
 
 
 
+
 <!-- HTML5 shim for IE backwards compatibility -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -55,23 +56,30 @@
 			</header>
         </div>
 
-	<div class="fixed-sidebar span4"> 
-        <div class="fixed-side-container">
+	
+      
+       <div class="fixed-sidebar span4"> 
+       
+        <div class="fixed-sidebar-wrapper">
         	
-            <div class="sidebar-inner-content">
+            <div class="fixed-sidebar-inner">
+            
             <h3 >Jijitang</h3>
             <p >better academic reading and wrting !</p>
             <hr>
             <div class="row-fluid">
-            	<span class="main-button fixed-bar-left-btn"><a href="login.html">Sign Up</a></span>
-                <span class="main-button white-btn">Know Jijitang</span>
+            	<button class="main-button fixed-bar-left-btn"><a href="login.html">Sign Up</a></button>
+                <button class="main-button white-btn">Know Jijitang</button>
             </div>
+            	
             
             </div>
         
         </div>
             
-      </div>     
+      </div>   
+        
+        
         <div class="span8 right-content">
        
        		
@@ -80,7 +88,19 @@
           
            <div class="brown-short-holder"><p>Most Popular Articles</p><p>More</p></div>
 
-          <div id="Entries">
+          <div id="Entries1">
+          </div>
+          
+          <div id="Entries2">
+          </div>
+           
+           <div id="Entries3">
+          </div>
+          
+           <div id="Entries4">
+          </div>
+          
+           <div id="Entries5">
           </div>
                 
              
@@ -215,14 +235,19 @@
 
 $( "header" ).load( "index-header.html" );
 $( "footer" ).load( "footer.html" );
-$( "#aside" ).load( "aside.html" );
-$( "#Entries" ).load( "Entries.html" );
+$( "#Entries1" ).load( "Testnotes/Note1.html" );
+$( "#Entries2" ).load( "Testnotes/Note2.html" );
+$( "#Entries3" ).load( "Testnotes/Note3.html" );
+$( "#Entries4" ).load( "Testnotes/Note4.html" );
+$( "#Entries5" ).load( "Testnotes/Note5.html" );
 
 
   
 
 </script>
 <script src="js/myjavascript.js"></script>
+
+
 
 
 

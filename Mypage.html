@@ -74,30 +74,29 @@
 	<div class="container-fluid">
 
 
+<div class="header-wrapper">
+	<header>
 
-		<header >
-        
-        
-		</header>
+
+	</header>
+</div>
 
 	<div class="fixed-sidebar span4"> 
-        <div>
+        <div class="fixed-sidebar-wrapper">
         	
-            <div class="sidebar-inner-content-collection">
+            <div class="fixed-sidebar-inner">
            		<div class="fixed-bar-avatar">
                 	<div></div>
                 </div>
                 
                 <p class="left-bar-author">Eve Williams</p>
+                <p class="left-bar-follow-info">24 Followers . 32 Fans</p>
                 <p class="left-bar-author-descr">Professor of Planetary Science and Physics at the Massachusetts Institute of Technology. She holds the Class of 1941 Professorship Chair.</p>
             	<div class="collection-side-btn-holder">
                 	<span class="main-button fixed-bar-left-btn" style="float: none">Follow | 1</span>
                   
                 </div>
-                <div class="collection-side-btn-holder">
-                	<span class="main-button fixed-bar-left-btn" style="float: none">Account Setting</span>
-                  
-                </div>
+               
             </div>
        </div>          
     </div>
@@ -106,15 +105,26 @@
         <div class="span8 right-content" >
        
                    
-                      <ul class="nav nav-tabs collections-nav" >
-                      		<li   class="active span2 zero-left-margin" ><a href="#a1" data-toggle="tab" >My News</a></li>
-  							<li   class="span2" ><a class="latest-collection" href="#a2" data-toggle="tab">My Articles</a></li>
- 		 					<li  class="span1" ><a class="latest-collection" href="#a3" data-toggle="tab">My Likes</a></li>
-                            <li  class="span2" ><a class="latest-collection" href="#a4" data-toggle="tab">My Collections</a></li>
-                            
-		
+                   <div class="nav-wrapper">
                       
-                      </ul>
+                      
+                      <div class="nav-wrapper-inner">
+                      <div class="nav-mobile-btn" ></div>
+                      <ul class="nav nav-tabs collections-nav">
+  							<li   class="active"><a href="#a1" data-toggle="tab">News</a></li>
+ 		 					<li ><a  href="#a2" data-toggle="tab">Articles</a></li>
+                            <li ><a href="#a3" data-toggle="tab">Likes</a></li>
+                            <li ><a href="#a4" data-toggle="tab">Collections</a></li>
+  					  </ul>
+                      </div>
+                      	
+                      <div class="create-button-nav" style="height: 20px">
+            
+              
+         		      </div>
+
+                    </div>
+                    
 
                     
                     
@@ -210,19 +220,23 @@
                                     
                                 </div>
                                 
-                                <div class="mynews-body collection-news"  >
+                                <div class="mynews-body collection-news">
                                 
                                 	
-                                 		<div >
-                                    	<p>Jijitang Most popular research papaers reading list</p>
-                                        <p>This is the description of this collectionMeristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic </p>
-                                        <p>Total 13 Articles under this collection</p>
-                                        </div>
+                                 		<p style="float: left">
+                                    	<!--<p class="collection-news-title">Jijitang Most popular research papaers reading list</p>
+                                        <p class="collection-news-text">This is the description of this collectionMeristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic </p>
+                                        <p class="collection-news-total">Total 13 Articles under this collection</p>-->
+                                        This is the description of this collectionMeristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic
+                                        This is the description of this collectionMeristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic
                                         
-                                        <div >
-                                        <img height="131" width="90" src="img/right-image.jpg">
+                                        </p>
                                         
-                                    	</div>
+                                        
+                                       
+                                        <img class="collection-news-image"  width="120" src="img/right-image.jpg">
+                                        
+                                    	
                                         
                                         
                                 
@@ -241,18 +255,20 @@
   
  					    <div class="tab-pane" id="a2"> 
                         
-                        	<ul  class="nav nav-tabs status-nav span4" >
-  								<li   class="active span1"><a href="#a11" data-toggle="tab">All</a></li>
- 		 						<li class="span1" style="text-align: center"  ><a href="#a12" data-toggle="tab">Public</a></li>
-                                <li class="span1" ><a href="#a13" data-toggle="tab">Private</a></li>
- 		 						<li class="span1"  ><a href="#a14" data-toggle="tab">Team</a></li>
+                        	<div style="height: auto; overflow: auto">
+                            <ul  class="nav status-nav">
+  								<li   class="active"><a href="#a11" data-toggle="tab">All</a></li>
+ 		 						<li ><a href="#a12" data-toggle="tab">Public</a></li>
+                                <li ><a href="#a13" data-toggle="tab">Private</a></li>
+ 		 						<li><a href="#a14" data-toggle="tab">Team</a></li>
   					  		</ul>
                             
                             <div class="my-page-search"> 
                             
                             		<input type="text" placeholder="find my article">
-                                    <span class="main-button my-search-btn"> Search</span>
+                                    <span class="icon-search my-search-btn"></span>
                            
+                           </div>
                            </div>
     					
     						<div class="tab-content status-nav-content">

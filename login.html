@@ -43,37 +43,44 @@
 	<div class="container-fluid">
 
 
-
-		<header>
+		<div class="header-wrapper">
+        	
+            <header>
         
-        
-		</header>
+			
+            </header>
+       
+       </div>
 
    <div class="fixed-sidebar span4"> 
-        <div class="fixed-side-container">
+       
+        <div class="fixed-sidebar-wrapper">
         	
-            <div class="simple-sidebar-inner-content">
-            	<h3 >Sign Up</h3>
+            <div class="fixed-sidebar-inner">
+            	
+                <p class="sidebar-title" >Sign Up</p>
+            
             </div>
         
         </div>
             
-   </div>       
+      </div>     
        
        
-        <div class="span8 right-content right-content-log" >
+        <div class="span8 right-content right-content-log" style="padding-top: 80px"  >
        
        
        		
            
-           <div class="container col-md-8">
+           <div class=" col-md-8"  >
+     
       <form class="myfirstform" role="form">
 	 
 		<legend>Welcome to JIJITANG</legend>		
 		<div class="form-group">
 			<div class="controls">
 			    <div class="input-group">
-					<input type="text" class="form-control span5" name="name" placeholder="Name">
+					<input type="text" class="form-control" name="name" placeholder="Name">
 				</div>
 			</div>
 		</div>
@@ -82,7 +89,7 @@
 		<div class="form-group">
 			<div class="controls">
 			    <div class="input-group">
-					<input type="text" class="form-control span5" id="email" name="email" placeholder="Email">
+					<input type="text" class="form-control" id="email" name="email" placeholder="Email">
 				</div>
 			</div>	
 		</div>
@@ -90,7 +97,7 @@
 		<div class="form-group ">
 			<div class="controls">
 			    <div class="input-group">
-					<input type="password" class="form-control span5" id="pass" name="pass" placeholder="Password">
+					<input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
 				</div>
 			</div>
 		</div>
@@ -98,16 +105,12 @@
         <div class="form-group ">
 			<div class="controls">
 			    <div class="input-group">
-					<input type="password" class="form-control span5" id="passconf" name="passconf" placeholder="Password Confirmation">
+					<input type="password" class="form-control" id="passconf" name="passconf" placeholder="Password Confirmation">
 				</div>
 			</div>
 		</div>
         
-        <div class="form-group sign-in-text ">
-			
-            <p> Have JIJITANG account,<a href="http://myjijitang/Signin.html">Sign In</a></p>
-            
-		</div>
+     
 		
 	
 	
@@ -115,11 +118,23 @@
 		
 	      <div class="controls" >
 		  
-	       <button type="submit" id="mybtn"  class="main-button span3 pass-change-btn ">Sign Up</button>
+	       <button type="submit" id="mybtn"  class="main-button pass-confirm-btn " style="margin-top: 10px">Sign Up</button>
+           <hr class="login-line">
+           <div class="New-user-sign" ><a href="/signin.html"> If You Have a JIJITANG Account, Sign In </a></div>
 	        
 	      </div>
+           
+	        
+	     
 		</form>
 		</div>
+        
+         
+         <footer  class="row-fluid span12">
+        
+		</footer>
+         
+         </div>
 		
        
          
@@ -128,9 +143,7 @@
             
            
             
-        <footer  class="row-fluid span12">
         
-		</footer>
         
         
         
@@ -138,12 +151,7 @@
         
     
     
-    </div>
-
-
-
-
-</div>
+   
 
 <script>
 

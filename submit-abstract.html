@@ -23,6 +23,7 @@
 <script src="js/myform.js"></script>
 
 
+
 <!-- HTML5 shim for IE backwards compatibility -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,16 +41,16 @@
 <!--Sign In Modal-->
 
 
-<div id="Sign-in-Modal" class="modal hide fade" tabindex="-1" data-width="860">
+<div id="Sign-in-Modal" class="modal hide fade sign-modals" tabindex="-1" >
  
- <div class="sign-in-alert"> Wrong Email/Password combination, please try again!</div>
+ <div class="sign-in-alert full-width"> Wrong Email/Password combination, please try again!</div>
   <div class="modal-body">
     <legend class="modal-legend">Log in Before Submit</legend>		
 		
 		<div class="form-group">
 			<div class="controls">
 			    <div class="input-group">
-					<input type="text" class="form-control span4" id="emailsign" name="email" placeholder="Email">
+					<input type="text" class="form-control" id="email" name="email" placeholder="Email">
 				</div>
 			</div>	
 		</div>
@@ -57,8 +58,7 @@
 		<div class="form-group ">
 			<div class="controls">
 			    <div class="input-group">
-					<input type="password" class="form-control span4" id="passsign" name="pass" placeholder="Password">
-                    <label style="margin-left: 10px;"><a href="password.html" class="login-link" > Find back my Password </a></label>
+					<input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
 				</div>
 			</div>
 		</div>
@@ -66,66 +66,7 @@
        
         <div class="form-group sign-in-text ">
 			
-            <p> No JIJITANG Account,<a id="signup-link">Sign Up</a></p>
-            
-		</div>
-		
-	
-	
-		
-		
-	      <div class="controls" >
-
-	       <button id="get-in" class="main-button span2"  >Sign Up</button>
-	        <span data-dismiss="modal" class="gray-btn-log span2 float-right-btn" ><a href="Signin.html">Back</a></span>
-	      </div>
-  </div>
-</div>
-
-<!--Sign Up Modal-->
-
-
-<div id="Sign-up-Modal" class="modal hide fade" tabindex="-1" data-width="860">
-  <div class="modal-body" >
-   <form class="myfirstform" role="form">
-	 
-		<legend>30 Seconds Sign Up</legend>		
-		<div class="form-group">
-			<div class="controls">
-			    <div class="input-group">
-					<input type="text" class="form-control span5" name="name" placeholder="Name">
-				</div>
-			</div>
-		</div>
-		
-		
-		<div class="form-group">
-			<div class="controls">
-			    <div class="input-group">
-					<input type="text" class="form-control span5" id="email" name="email" placeholder="Email">
-				</div>
-			</div>	
-		</div>
-		
-		<div class="form-group ">
-			<div class="controls">
-			    <div class="input-group">
-					<input type="password" class="form-control span5" id="pass" name="pass" placeholder="Password">
-				</div>
-			</div>
-		</div>
-        
-        <div class="form-group ">
-			<div class="controls">
-			    <div class="input-group">
-					<input type="password" class="form-control span5" id="passconf" name="passconf" placeholder="Password Confirmation">
-				</div>
-			</div>
-		</div>
-        
-        <div class="form-group sign-in-text ">
-			
-            <p> Have JIJITANG account,<a id="Login-link">Sign In</a></p>
+            <p><a href="http://myjijitang/password.html" class="login-link"> Find back my Password </a></p>
             
 		</div>
 		
@@ -135,10 +76,80 @@
 		
 	      <div class="controls">
 		  
-	       <button type="submit" id="mybtn"  class="main-button span2 pass-change-btn float-right-btn">Sign Up</button>
-           <span data-dismiss="modal" class="gray-btn-log span2 float-right-btn margin-fix "  ><a href="Signin.html">Back</a></span>
+	       <button id="mybtn" class="main-button  pass-confirm-btn modal-confirm-btn" >Sign In</button>
+           <button data-dismiss="modal"  class="gray-btn-log pass-confirm-btn modal-confirm-btn" >Back To Main</button>
+
+         
+           <hr class="login-line">
+           <div class="New-user-sign" style="text-align: center" ><a id="signup-link"> If You Are New To JIJIANG, Sign Up </a></div>
 	        
 	      </div>
+  </div>
+</div>
+
+<!--Sign Up Modal-->
+
+
+<div id="Sign-up-Modal" class="modal hide fade sign-modals" tabindex="-1" style=" top: 54%">
+  <div class="modal-body" style="margin-top: 0px; margin-bottom: 0px" >
+   <form class="myfirstform" role="form">
+	 
+		<legend>30 Seconds Sign Up</legend>		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control" name="name" placeholder="Name">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control" id="email" name="email" placeholder="Email">
+				</div>
+			</div>	
+		</div>
+		
+		<div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+				</div>
+			</div>
+		</div>
+        
+        <div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="password" class="form-control" id="passconf" name="passconf" placeholder="Password Confirmation">
+				</div>
+			</div>
+		</div>
+        
+      <!--  <div class="form-group sign-in-text ">
+			
+            <p> Have JIJITANG account,<a id="Login-link">Sign In</a></p>
+            
+		</div>-->
+		
+	
+	
+		
+		
+	     
+            <div class="controls">
+		  
+	       <button type="submit"  class="main-button  pass-confirm-btn modal-confirm-btn" >Sign Up</button>
+           <button data-dismiss="modal"  class="gray-btn-log pass-confirm-btn modal-confirm-btn" >Back To Main</button>
+
+         
+           <hr class="login-line">
+           <div class="New-user-sign" style="text-align: center" ><a id="Login-link"> If You Have a Jijitang Account, Sign In </a></div>
+	        
+	      </div>
+          
 		</form>
   </div>
 </div>
@@ -211,10 +222,12 @@
 
 	
     <div class="fixed-sidebar span4"> 
+       
         <div class="fixed-sidebar-wrapper">
         	
             <div class="fixed-sidebar-inner">
-            <p class="sidebar-title" >Topic Title: Translation Event</p>
+            	
+                <p class="sidebar-title" >Topic Title: Translation Event</p>
             
             </div>
         
@@ -232,7 +245,7 @@
             
             <div class="brown-holder">
             <p class="brown-holder-title">Editors Note</p><br />
-            <p class="brown-holder-content">Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors Note Editors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors NoteEditors...<span class="brown-holder-link"><a href="">Read More</a></span>  </p>
+            <p class="brown-holder-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...<span class="brown-holder-link"><a href="">Read More</a></span>  </p>
             
             </div>
             
@@ -240,10 +253,10 @@
             
             <!--Editor Picks-->
           
-            <div class="Entries"></div>
-            <div class="Entries"></div>
-             
-             
+            <div class="Entries1"></div>
+           
+<!--            <div class="Entries2"></div>
+-->             
             
             
         	<div class="load-more-holder">
@@ -256,8 +269,8 @@
             <div class="Entry-label"><span>All Sbumits (12)</span></div>
             
         
-              <div class="Entries"></div>
-           
+<!--              <div class="Entries3"></div>
+-->           
             
             <div class="load-more-holder">
         	<span id="loadMoresubmit" class="load-more-btn">Load More</span>
@@ -273,19 +286,16 @@
         
     
     
-    </div>
-
-
-
-
-</div>
+   
 
 <script>
 
 $( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
 $( "#aside" ).load( "aside.html" );
-$( ".Entries" ).load( "Testnotes/Note1.html" );
+$( ".Entries1" ).load( "Testnotes/Note1.html" );
+$( ".Entries2" ).load( "Testnotes/Note2.html" );
+$( ".Entries3" ).load( "Testnotes/Note3.html" );
 
   
 
