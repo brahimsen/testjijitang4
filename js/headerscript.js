@@ -20,11 +20,15 @@ $( document ).ready(function() {
 
 
 $(".alert-popover-desktop").hide();
+
 $(".alert-btn,.alert-popover-desktop").click(function(e){
 					
 					$('.alert-popover-desktop').toggle();
 					$('.nav-admin-holder').addClass('hide-fix');
 					$('.create-holder').addClass('hide-fix');
+					$(".have-notification").hide();
+					$(".alert-btn").css("margin-right","22px");
+					
 					
 					e.stopPropagation();
 					

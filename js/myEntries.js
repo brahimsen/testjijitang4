@@ -88,5 +88,70 @@ $(document).ready(function(){
 					
 	});
 	
+		$(".myentry-poup-holder").hide();
+		$(".myentry-popup").click(function(z){
+					$(this).find(".myentry-poup-holder").toggle();
+					z.stopPropagation();
+	
+	});
+	
+	$("html").click(function(z){
+					
+					
+					$('.myentry-poup-holder').hide();
+					
+					
+				
+					
+				});
+	
+	
+	
 
 	});
+	
+	
+	$(window).resize(function(){
+	
+	var width = $(window).width();
+	
+	if ( width < 980 ) {
+		
+		$('.myentry-popup').css('display','block');
+		
+		
+		
+	} else {
+	
+	
+	$('.myentry-popup').css('display','none');
+
+	
+	}
+	
+});
+
+$(document).ready(function() {
+	
+	var width = $(window).width();
+	
+	if ( width < 980 ) {
+		
+		$('.myentry-popup').css('display','block');
+		
+		
+		
+		
+	} else {
+	
+	$('.myentry-popup').css('display','none');
+	
+	}
+	
+		$(".pick-post").hover(function(){
+					$(this).find(".myentry-popup").toggleClass("show-entry-popup");
+	
+	});
+
+
+});

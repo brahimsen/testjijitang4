@@ -869,9 +869,15 @@ body {
 	 cursor: pointer;
 	 float: right;
 	 
-	  border: none !important;
 	  width: 100%;
+	  border: 1px solid #FFF;
  }
+ 
+  .follow-btn:hover {
+	  background: #4C9CAD;
+ }
+ 
+
  
  .unfollow-btn {
 	 background: #ccc;
@@ -888,6 +894,19 @@ body {
 	 
 	  border: none !important;
 	  width: 100%;
+ }
+ 
+  .unfollow-btn:hover {
+	  background: #eee;
+ }
+ 
+ .follow-btn-side-holder {
+	 width: 40% !important;
+	 margin-left: auto;
+	 margin-right: auto;
+	 float: none !important;
+ 
+ 
  }
  
  .approved-btn {
@@ -1220,6 +1239,7 @@ margin-left: 0px !important;
 	padding-bottom: 15px;
 	padding-left: 80px; 
 	padding-right: 80px;
+	font-weight: bold;
 
 }
 
@@ -1318,7 +1338,7 @@ margin-right: 10px;  float:right
 
 .alert-btn {
 
-margin-right: 10px;  float:right
+margin-right: 15px;  float:right; text-decoration: none !important;
 
 }
 
@@ -1366,7 +1386,7 @@ footer {
 	 margin-left: 0px !important; 
 	 padding-top: 20px; 
 	 border-top: 1px solid #ccc; 
-	 margin-top: 30px
+	 margin-top: 100px
 
 }
 
@@ -2796,7 +2816,7 @@ legend {
 }
 
 .icon-bell-o {
-color: #CCC; width: 16px; height: 18px; font-size: 14px; padding: 5px; padding-top: 8px; padding-bottom: 4px; padding-left: 8px
+color: #CCC; width: 16px; height: 18px; font-size: 15px; padding-top: 8px; padding-bottom: 4px; padding-left: 8px; margin-right: -3px;
 
 }
 
@@ -3091,7 +3111,7 @@ margin-left: 0px; width: 102px; min-width: 75px !important
 
 .collection-form-holder > textarea {
 	width: 100%;
-	height: 200px;
+	height: 130px;
 	border: none !important;
 	margin-top: 5px;
 	font-size: 16px !important;
@@ -3208,10 +3228,17 @@ text-align: center;  color:#FFF; font-family: Arial, Helvetica, sans-serif; font
 
 }
 
-.coll-left-bar-author > span {
+.coll-left-bar-author > a {
 	font-size: 13px;
 	cursor: pointer;
 	font-weight: bold;
+	color: #FFF !important;
+	font-weight: normal;
+
+}
+
+.thirteen-top {
+	margin-top: 13px !important;
 
 }
 
@@ -3539,32 +3566,64 @@ border: 0px !important; float: right; margin-right: 0px !important; margin-top: 
 
 }
 
-.myentry-poup {
+.myentry-poup-holder {
 	
-	 width: 140px; position: absolute; top: 25px; border: 1px solid #ccc; border-radius: 5px; padding-left: 5px; padding-right: 5px; right: 0px; background:#FFF; -webkit-border-radius: 3px; -webkit-box-shadow: 0px 3px 8px rgba(0,0,0,0.3); -webkit-background-clip: padding-box;
+	 width: 140px; position: absolute; top: 25px; border: 1px solid #ccc; border-radius: 5px; padding-left: 0px; padding-right: 0px; right: 0px; background:#FFF; -webkit-border-radius: 3px; -webkit-box-shadow: 0px 3px 8px rgba(0,0,0,0.3); -webkit-background-clip: padding-box;
 
 
 }
 
-.myentry-poup > div {
+.myentry-poup-holder > div {
 	
 padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-bottom: 1px solid #ccc; font-size: 14px; font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; cursor: pointer; color:#000 !important;
 
 
 }
 
-.myentry-poup > div:nth-child(last) {
+.public-private-holder {
+	padding-top: 3px; padding-bottom: 3px; padding-right: 15px; padding-left: 15px; background: #FFFF33; color: #999; margin-left: 20px;
+
+
+}
+
+.have-notification {
+	
+	font-weight: bold;
+	color:#FFF;
+	font-size: 12px;
+	
+	padding-left: 2px;
+	padding-right: 2px;
+	border-radius: 2px;
+	
+	
+	margin-left: -7px;
+	background:#F00;
+	text-decoration: none !important;
+
+
+
+}
+
+.show-entry-popup {
+	
+	display: block !important;
+
+
+}
+
+.myentry-poup-holder > div:nth-child(last) {
 	border-bottom: none !important;
 
 }
 
-.myentry-poup > div:hover {
+.myentry-poup-holder > div:hover {
 	background:#eee;
 	color:#333;
 	
 }
 
-.myentry-poup > div > img {
+.myentry-poup-holder > div > img {
 	float: left !important;
 	
 	
@@ -6839,7 +6898,10 @@ margin-top: 10px;
 
 }
 
+.coll-top-padding-bug {
+	padding-top: 10px !important;
 
+}
 
 .dashbord-create-inner > div > h4{
 	
@@ -6964,4 +7026,9 @@ margin-top: 10px;
 
 	
 	
+}
+
+.coll-top-padding-bug {
+	padding-top: 70px ;
+
 }
