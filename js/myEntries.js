@@ -1,7 +1,9 @@
  $(document).ready(function() {
 				$(".like-full").hide();
 				$(".like-holder").click(function(){
-					$('.like-toggle',this).toggle();
+					
+					$(this).children('.like').toggle();
+					$(this).children('.like-full').toggle();
 					
 				});
 			});
@@ -72,6 +74,16 @@ $(document).ready(function(){
 	$(".myentry-share").click(function(y){
 				
 					$('.myentry-share-poup',this).toggle();
+				
+					
+	});
+	
+	$('.approved-btn').hide();
+	
+	$(".approve-note").click(function(){
+				
+					$(this).children('.approved-btn').toggle();
+					$(this).children('.approve-btn').toggle();
 				
 					
 	});

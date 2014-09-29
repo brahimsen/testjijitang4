@@ -326,8 +326,27 @@ window.onscroll = function(){
 				
 					
 					
+					$(".read-later-full").hide();
+				$(".article-view-read-later").click(function(){
+				
 					
+					$(this).children('.read-later-empty').toggle();
+					$(this).children('.read-later-full').toggle();
+					
+				});
+				
+					$(".like-full").hide();
+				$(".like-holder").click(function(){
+				
+					
+					$(this).children('.like').toggle();
+					$(this).children('.like-full').toggle();
+					
+				});
 					
 					
 				
 				});
+				
+				
+				
