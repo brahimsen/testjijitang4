@@ -20,6 +20,7 @@
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
  <script>
  $(document).ready(function() {
 				$(".like-full").hide();
@@ -131,6 +132,8 @@
                     
                     <div class="tab-content note-tab-content">
   						<div class="tab-pane active" id="mp1">
+                        
+                               <div id="empty-news"></div>
                      	
   							<div class="mynews">
                             	<div class="mynews-header">
@@ -274,22 +277,12 @@
                                         
                                         <span class="follow-news-desc">This is the description of this collectionMeristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic </span><br/>
                                       
-                                        <a class="news-follow-link"><span class="icon-group"></span><span class="mls">Follow</span></a>
-                                        
+										<div class="follow-user-btn-holder " style="float: left">
+                     						<button class="follow-btn">Follow</button>
+                     						<button class="unfollow-btn">Unfollow</button>
+                						</div>                                        
                                         </p>
-                                        
-                                        
-                                        
-                                        
-                                       
-                                       
-                                        
-                                    	
-                                        
-                                        
-                                
-                                	
-                
+              
                                 </div>
                                 
                                 <div class="mynews-footer">
@@ -466,6 +459,7 @@
 $( "header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
 $( "#note1" ).load( "MyEntries.html" );
+$( "#empty-news" ).load( "empty-news-message.html" );
 
 
 
