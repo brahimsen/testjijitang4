@@ -5,8 +5,8 @@ $(window).scroll(function(){
   
       scroll = $(window).scrollTop();
 
-  if (scroll >= 100) { $('.mobile-article-top').addClass('fixed-top-article'); $('.article-left-mobile-wrapper').addClass('minus-twenty-top'); }
-  else{ $('.mobile-article-top').removeClass('fixed-top-article'); $('.article-left-mobile-wrapper').removeClass('minus-twenty-top'); }
+  if (scroll >= 100) { $('.article-top-wrapper').addClass('fixed-top-article'); $('.article-left-mobile-wrapper').addClass('plus-twenty-top'); }
+  else{ $('.article-top-wrapper').removeClass('fixed-top-article'); $('.article-left-mobile-wrapper').removeClass('plus-twenty-top'); }
 });
 
 
@@ -291,7 +291,7 @@ window.onscroll = function(){
 					$('.mobile-comment-holder').hide();
 					$('.view-comment-btn-hover-mobile').click(function(){
 					
-					$('.mobile-comment-holder').show('slide', {direction: 'right'}, 1000);
+					$('.mobile-comment-holder').fadeIn("slow");
 					$('.mobile-article-top').addClass('hide-fix');
 					$('.header-wrapper').addClass('hide-fix');
 					$('body').addClass('disable-scroll');		
