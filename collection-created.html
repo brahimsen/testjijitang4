@@ -27,6 +27,7 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/myjavascript.js"></script>
+<script src="js/follow-script.js"></script>
 
 
 <!-- HTML5 shim for IE backwards compatibility -->
@@ -56,20 +57,25 @@
 
 
 	<div class="fixed-sidebar span4"> 
-        <div>
-        	<div class="sidebar-inner-holder">
-            </div>
-            <div class="sidebar-inner-content">
-           		<p class="left-bar-title"></p>
-                <p class="left-bar-author">Created by Yuyu Xuan. 0 Notes</p>
-            	<div style="text-align: center;  margin-top: 20px">
-                	<span class="main-button fixed-bar-left-btn" style="float: none">Following | 1</span>
+       
+        <div class="fixed-sidebar-wrapper">
+        	
+            <div class="fixed-sidebar-inner">
+           		<p class="left-bar-collection-title">Name of the collection....</p>
+                <p class="left-bar-collection-description">Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of </p>
+                
+                <p class="coll-left-bar-author">Created by <a href="#">Yuyu Xuan</a> . 0 Notes . <a href="/followers.html"> 1 Follower </a> </p>
+            	
+                <div class="follow-user-btn-holder follow-btn-side-holder ">
+                     <button class="follow-btn thirteen-top">Follow</button>
+                     <button class="unfollow-btn thirteen-top">Unfollow</button>
                 </div>
+                
             </div>
        </div>          
     </div>
              
-    <div class="span8 right-content right-content-log top-padding-bug" >
+    <div class="span8 right-content right-content-log coll-top-padding-bug" >
        
        
        		<div class="row-fluid create-button-holder" >
@@ -77,7 +83,7 @@
             	<div class="right-top-menu-holder">
         	
             <div id="delete-collectionbtn"  >
-            	<div><span  class="icon-pencil"></span></div>
+            	<div><span  class="icon-uniE605"></span></div>
                 <p class="hidden-phone">Edit</p>
             
             </div>
@@ -85,14 +91,14 @@
            
             
             <div class="icon-width-bug" >
-            	<div><span class="icon-times"></span></div>
+            	<div><span class="icon-uniE603"></span></div>
                 <p class="hidden-phone">Share</p>
             
             </div>
             
              <div  id="collection-created-link" >
              
-            	<div><span class="icon-download"></span></div>
+            	<div><span class="icon-uniE608"></span></div>
                 <p class="hidden-phone icon-left-top-margin-bug ">Submit</p>
               
             

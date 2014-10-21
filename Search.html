@@ -44,22 +44,20 @@
 
 
 
-		<header>
+		<div class="header-wrapper">
+		<header >
         
         
 		</header>
+        </div>
 
 	<div class="fixed-sidebar span4"> 
-        <div class="fixed-side-container">
+       
+        <div class="fixed-sidebar-wrapper">
         	
-            <div class="sidebar-inner-content">
-            <h3 >Jijitang</h3>
-            <p >better academic reading and wrting !</p>
-            <hr>
-            <div class="row-fluid">
-            	<span class="main-button fixed-bar-left-btn">Sign Up</span>
-                <span class="main-button white-btn">Know Jijitang</span>
-            </div>
+            <div class="fixed-sidebar-inner">
+            	
+                <p class="sidebar-title" >Search</p>
             
             </div>
         
@@ -72,23 +70,35 @@
        
        
         
-                
+                 <div class="nav-wrapper">
+                      
+                      
+                      <div class="nav-wrapper-inner">
+                      <div class="nav-mobile-btn" ></div>
                       <ul class="nav nav-tabs collections-nav">
-  							<li   class="active span2"><a href="#x1" data-toggle="tab">Notes</a></li>
- 		 					<li  class="span2"><a class="latest-collection" href="#x2" data-toggle="tab">Collections</a></li>
-                            <li  class="span2"><a class="latest-collection" href="#x3" data-toggle="tab">people</a></li>
+  							<li   class="active"><a href="#mp1" data-toggle="tab">Notes</a></li>
+ 		 					<li ><a  href="#mp2" data-toggle="tab">Collections</a></li>
+                            <li ><a href="#mp3" data-toggle="tab">People</a></li>
+                           
   					  </ul>
+                      </div>
+                      	
+                      <div class="create-button-nav" style="height: 20px">
+            
+              
+         		      </div>
 
+                    </div>
                     
                     
                     
                     <div class="tab-content note-tab-content">
-  			<div class="tab-pane active" id="x1">
+  			<div class="tab-pane active" id="mp1">
             
             	<div id="Entries"></div>
             	
   			</div>
-  				<div class="tab-pane" id="x2" style="margin-top: 0px"> 
+  				<div class="tab-pane" id="mp2" style="margin-top: 0px"> 
   				
   				 <div class="collection-item-holder span3 ">
                 	<div class="collection-item">
@@ -261,36 +271,31 @@
                 
                 </div>
                 
-                <div class="tab-pane" id="x3"> 
+                <div class="tab-pane" id="mp3"> 
   
-  				<div class="span7 people-holder">
+  			<div class="follower">
+            
+            	<div class="follower-img-holder">
                 
-                	<div class="span1 people-pic">
-                    	
-                        <div>
-                        </div>
-                    
-                    </div>
-                    
-                    <div class="span4 people-desc">
-                    
-                    	<p class="people-name"> USER NAME</p>
-                    	<p class="people-user-desc">USER DESCRIPTION</p>
-                    
-                    </div>
-                    <div class="span2 people-follow">
-                    
-                    	<span id="follow" class="main-button" >
-                        Follow This User
-                        </span>
-                        <span id="unfollow" class=" gray-btn-log" >
-                        Unfollow
-                        </span>
-
-                    
-                    </div>
+                	<img src="img/brahim.png"/>
                 
                 </div>
+                
+                <p>
+                
+                		<span>Brahim Senhaji</span><br/>
+                        <span>Get close enough to your TV screen and you'll see pixels.</span>
+                
+                </p>
+                
+              <div class="follow-user-btn-holder ">
+                     <button class="follow-btn">Follow</button>
+                     <button class="unfollow-btn">Unfollow</button>
+                </div>
+            
+            
+            
+            </div>
                 
                 
                 
@@ -354,8 +359,8 @@
 
 $( "header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
-$( "#aside" ).load( "aside.html" );
-$( "#Entries" ).load( "Entries.html" );
+
+$( "#Entries" ).load( "Testnotes/Note1.html" );
 
 
   

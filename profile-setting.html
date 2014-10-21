@@ -60,37 +60,42 @@
 	<div class="container-fluid">
 
 
-
+<div class="header-wrapper">
 		<header >
         
         
 		</header>
+        </div>
         
-
-
-	<div class="fixed-sidebar span4"> 
-        <div>
+        <div class="fixed-sidebar span4"> 
+        <div class="fixed-sidebar-wrapper">
         	
-            <div class="sidebar-inner-content-collection">
+            <div class="fixed-sidebar-inner">
            		<div class="fixed-bar-avatar">
-                	<div></div>
+                	<img src="img/brahim.png" />
                 </div>
-               
-            	<div class="sidebar-inner-holder">
-            	</div>
-            	<div class="sidebar-inner-content">
-           			<p class="left-bar-title"><span>Title of Your Collection</span></p>
-               		<p class="left-bar-content"><span>Description of This Collection</span></p>
+                
+                
+               <div class="sidebar-inner-content">
+           			<p class="left-bar-title font-sixteen"><span>Title of Your Collection</span></p>
+               		<p class="left-bar-content font-thirteen"><span>Description of This Collection</span></p>
             	</div>
                 
-            
-                <div class="collection-side-btn-holder">
-                	<span class="main-button fixed-bar-left-btn" style="float: none">Account Setting</span>
+               <div class="collection-side-btn-holder">
+                	<span class="main-button fixed-bar-left-btn" style="float: none"><a href="/account-setting.html">Account Setting</a></span>
                   
                 </div>
+                
+               
+            	
+               
             </div>
        </div>          
     </div>
+        
+
+
+	
     
  
     
@@ -98,10 +103,10 @@
     <div class="span8 right-content right-content-log top-padding-bug" >
        
 			
-             <div class="settings-navigatiion">
+            <div class="settings-navigatiion">
             
-            <span class="span2 active"><a href="profile-setting.html">Profile Settings</a></span>
-            <span class="span2 " ><a href="account-setting.html">Account Settings</a></span>
+            <li class=" active" ><a href="profile-setting.html">Profile Settings</a></li>
+            <li  ><a href="account-setting.html">Account Settings</a></li>
 
             
             </div>
@@ -122,8 +127,8 @@
                </div>
                <img src="img/screenshot-64.ico" />
             
-                <input class="coll-title" placeholder="Full Name" maxlength="50">
-                <textarea class="coll-content" maxlength="500" placeholder="Your Description"></textarea>
+                <input class="coll-title" placeholder="Full Name" maxlength="30">
+                <textarea class="coll-content" maxlength="300" placeholder="Your Description"></textarea>
             
             	<button class="main-button no-border">Save</button>
                 <button class="gray-btn-log paddin-fix">Cancel</button>
