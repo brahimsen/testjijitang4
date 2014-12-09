@@ -15,6 +15,102 @@
   <script src="../dist/js/Jquery-11.js"></script>
   <script src="../../js/bootstrap.js"></script>
   <script src="../../js/myjavascript.js"></script>
+  <script src='../../js/jquery.autosize.js'></script>
+  
+  
+  
+  
+
+  <script>
+  
+  $(document).ready(function() {
+	  
+	  
+	  $(".editor-comment-icon").click(function(){
+		  
+		  
+		  
+		  if($('.editor-left-comment-bar').css("width") == "0px"){
+		  
+		  $('.editor-left-comment-bar').animate({width: "24%"});
+		  $('.editor').animate({"width": "62%", "margin-left": "28%" });
+		  
+			
+				
+		  }
+		  else {
+			  
+			$('.editor-left-comment-bar').animate({width: "0%"});
+			
+			$('.editor').animate({"width": "84%", "margin-left": "8%" });
+		  
+		  }
+			
+	  });
+	  
+	  $(".myentry-share-poup").hide();
+	  
+	  $("#editor-share-btn").click(function(e){
+		  
+		  $(".myentry-share-poup").toggle();
+		  e.stopPropagation();
+	  
+	  
+	  });
+	  
+	  $("html").click(function(e){
+		  $(".myentry-share-poup").hide();
+		  
+	  });
+	  
+  });
+  
+  $(window).resize(function(){
+	
+	var width = $(window).width();
+	
+	if ( width < 980 ) {
+		
+	$('.editor').animate({"width": "84%", "margin-left": "8%" });
+	$('.editor-left-comment-bar').animate({width: "0%"});
+	} 
+	
+});
+
+$(window).scroll(function(){
+	
+		
+  
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 50 && $(window).width() < 980 ) {
+	  
+	 
+	  
+	  
+	  
+	  
+	  
+	   $('.editor-icons-holder').addClass('fix-editor-icons-to-top');
+	   $('.dashbord-create-inner > div').css("padding-bottom","0px");  
+	   $('.editor-icons-holder').css("padding-top","10px");
+	  }
+  
+  
+  else{ $('.editor-icons-holder').removeClass('fix-editor-icons-to-top');
+  
+			$('.dashbord-create-inner > div').css("padding-bottom","5px"); $('.editor-icons-holder').css("padding-top","5px"); 
+  
+  
+   }
+
+
+	
+
+});
+  
+  </script>
+  
   
 </head>
 <body>
@@ -29,6 +125,8 @@
   		<p>Everyone will see your article if you publish it. Are you sure you want to publish it. </p>
         <button id="confirm-delete" class="Confirm-Modal-btn">Publish</button>
         <button  data-dismiss="modal" id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
+        <div><span>Publish This Article with a Collection</span></div>
+        
   	
   </div>
  
@@ -37,7 +135,7 @@
 
 
 <!--delete Artical popup-->
-<div id="Delete-article-Modal" class="modal hide fade" tabindex="-1" data-width="460">
+<!--<div id="Delete-article-Modal" class="modal hide fade" tabindex="-1" data-width="460">
 
   <div class="modal-body">
   
@@ -47,7 +145,7 @@
   	
   </div>
  
-</div><!--end of Publish Artical popup-->
+</div>--><!--end of Publish Artical popup-->
 
 	
     
@@ -58,7 +156,70 @@
     
     
     <!--Buttons holder-->
-    <div class="row-fluid create-button-holder seventy-top">
+    
+    <div class="editor-icons-holder" style="z-index: 9999">
+    
+    	<div id="delete-article " class="icon-right-float icon-banner-relativity">
+        	<a><span class="icon-remove"></span><span class="hidden-tablet hidden-phone">Delete</span></a>
+            
+            <!--<div class="editor-delete-popup" >
+            	
+                <p>Are you sure you want to delete this article? </p>
+        		<button id="confirm-delete" class="Confirm-Modal-btn">Delete</button>
+        		<button   id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
+            
+            </div>-->
+        </div>
+        
+        <div class="icon-right-float icon-banner-relativity" id="editor-share-btn">
+        	<a><span class="icon-uniE603"></span><span class="hidden-tablet hidden-phone">Add Collaborator</span></a>
+            <!--<div class="editor-coll-popup" >
+            	
+                <div class="note-popover-update-header"><h4>Invite to Edit this Article</h4></div>
+                <div>
+                
+                	<input type="text" placeholder="www.jijitang.com/article/edit/4%hkh#$laj">
+                    <p></p>
+                    <button id="confirm-delete" class="Confirm-Modal-btn">Copy Link</button>
+                    
+                
+                </div>
+            
+            </div>-->
+           
+        </div>
+        
+        <div id="publish-article" class="icon-right-float icon-banner-relativity">
+        	<a><span class="icon-blog"></span><span class="hidden-tablet hidden-phone">Publish</span></a>
+            <div class="editor-publish-popup" >
+            	
+                <div class="note-popover-update-header"><h4>Publish</h4></div>
+                <div class="publish-no-collection">
+                
+                    <p>Are you sure you want to publish this article? </p>
+        		<button id="confirm-delete" class="Confirm-Modal-btn">Delete</button>
+        		<button   id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
+                
+                </div>
+                
+                <div class="note-popover-update-header"><p style="color: #3D7D8B !important">Publish  with a collection</p></div>
+            
+            </div>
+        </div>
+        
+        
+        
+        <div class="icon-left-float"><a><span class="icon4-arrow-left" ></span></a></div>
+        
+        <div class="icon-left-float editor-comment-icon">
+        	<a><span class="icon-uniE607"></span></a>
+        </div>
+    
+    
+    </div>
+    
+    
+   <!-- <div class="row-fluid create-button-holder seventy-top">
             
             	<div class="four-right-top-menu-holder">
         	
@@ -96,32 +257,199 @@
             
         </div>
             
-            </div><!-- End of Buttons holder-->
+            </div>--><!-- End of Buttons holder-->
+            
+            <div style="position:relative; margin-top: -44px">
+            
+            <div class="hidden-phone hidden-tablet editor-left-comment-bar" style="width: 0%; height: 100%;  position: fixed; ">
+            
+            	
+                <div class="editor-left-comments-inner" > 
+                
+                <div style=" padding-top: 10px; padding-bottom: 10px; height: auto; overflow: hidden" >
+                
+                	<div style="width: 20%; float: left; ">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                   
+                   <div style="width: 80%; float: left; ">
+                    <div class="editor-comment-bubble"> very persuasive article !! good job, keep on</div>
+
+					<div style="width: 100%">
+                    <span style=" font-size: 11px; color: #999">Today 12:34 P.M </span>
+                    </div>
+
+                	</div>
+                
+                </div>
+                
+                <div style=" padding-top: 10px; padding-bottom: 10px; height: auto; overflow: hidden" >
+                
+                	<div style="width: 20%; float: left;">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                   
+                   <div style="width: 80%; float: left; ">
+                    <div class="editor-comment-bubble"> very persuasive article !! good job, keep on !! I would like to add more details concerning the attribution of the article to the authors of the bla bla bla, nice job, keep up working !!</div>
+					<div style="width: 100%">
+                    <span style=" font-size: 11px; color: #999">Today 12:34 P.M </span>
+                    </div>
+                	</div>
+                
+                </div>
+                
+                <div style=" padding-top: 10px; padding-bottom: 10px; height: auto; overflow: hidden" >
+                
+                	<div style="width: 20%; float: left;">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                   
+                   <div style="width: 80%; float: left; ">
+                    <div class="editor-comment-bubble"> very persuasive article !! good job, keep on !! I would like to add more details concerning the attribution of the article to the authors of the bla bla bla, nice job, keep up working !!</div>
+					<div style="width: 100%">
+                    <span style=" font-size: 11px; color: #999">Today 12:34 P.M </span>
+                    </div>
+                	</div>
+                
+                </div>
+                
+                <div style=" padding-top: 10px; padding-bottom: 10px; height: auto; overflow: hidden" >
+                
+                	<div style="width: 20%; float: left;">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                   
+                   <div style="width: 80%; float: left; ">
+                    <div class="editor-comment-bubble"> very persuasive article !! good job, keep on !! I would like to add more details concerning the attribution of the article to the authors of the bla bla bla, nice job, keep up working !!</div>
+					<div style="width: 100%">
+                    <span style=" font-size: 11px; color: #999">Today 12:34 P.M </span>
+                    </div>
+                	</div>
+                
+                </div>
+                
+                <div style=" padding-top: 10px; padding-bottom: 10px; height: auto; overflow: hidden" >
+                
+                	<div style="width: 20%; float: left;">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                   
+                   <div style="width: 80%; float: left; ">
+                    <div class="editor-comment-bubble"> very persuasive article !! good job, keep on !! I would like to add more details concerning the attribution of the article to the authors of the bla bla bla, nice job, keep up working !!</div>
+					<div style="width: 100%">
+                    <span style=" font-size: 11px; color: #999">Today 12:34 P.M </span>
+                    </div>
+                	</div>
+                
+                </div>
+                
+                <div style=" padding-top: 10px; padding-bottom: 10px; height: auto; overflow: hidden" >
+                
+                	<div style="width: 20%; float: left;">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                   
+                   <div style="width: 80%; float: left; ">
+                    <div class="editor-comment-bubble"> very persuasive article !! good job, keep on !! I would like to add more details concerning the attribution of the article to the authors of the bla bla bla, nice job, keep up working !!</div>
+					<div style="width: 100%">
+                    <span style=" font-size: 11px; color: #999">Today 12:34 P.M </span>
+                    </div>
+                	</div>
+                
+                </div>
+                
+                <div style=" padding-top: 10px; padding-bottom: 10px; height: auto; overflow: hidden" >
+                
+                	<div style="width: 20%; float: left;">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                   
+                   <div style="width: 80%; float: left; ">
+                    <div class="editor-comment-bubble"> Nice</div>
+                    
+                	</div>
+                
+                </div>
+                
+                
+                
+                
+                
+                 </div>
+                 
+                 
+                <div style="width: 99.7%; bottom: 100px; height:auto; background:#eee; border: 1px solid #ccc; padding-top: 15px; padding-bottom: 10px; overflow: hidden">
+                
+                
+                <div style="width: 17%; float: left; margin-left: 5%">
+                    <img src="../../img/brahim.png" style="width: 40px; border-radius: 40px; float: left"/>
+                    </div>
+                <textarea class="editor-left-comment-input" placeholder="Write a Comment..." style="width:68%; margin-left: 2.5%; border-radius: 0px; border: 1px solid #ccc; float: left;   box-shadow: none !important "></textarea>
+                
+                
+                
+                </div>
+            
+            </div>
 
   <!--Editor-->
-  <div id="container" class="editor">
+  <div id="container" class="editor" style="background: #0F0">
     
-    <div class="editable" id="editor-title"  data-placeholder="Title of Your Article">
+    <input style="width: 100%" id="editor-title"  placeholder="Title of Your Article">
    			
-    </div>
+    </input>
         
     <div class="editable" id="section0"  data-placeholder="More of Your Article, Select text for styling....">
+    
+    
+    
      
     </div><!--End of Editor-->
   
   
+ 
+  
+  </div>
   </div>
   
   <!--Add Section btn-->
-  <div class="container add-section-btn-holder">
+  <!--<div class="container add-section-btn-holder">
   		<button class="add-section">Add New Section</button>
-  </div><!--End of Add Section btn-->
+  </div>--><!--End of Add Section btn-->
 
   <script src="../dist/js/medium-editor.min.js"></script>
   <script src="../dist/js/medium-editor-insert-plugin.all.min.js"></script>
+  <script src="../dist/js/medium-editor-insert-tables.min.js"></script>
+ 
   <script src="../../js/editor-script.js"></script>
   <script>
 	$( "header" ).load( "header-jijitang.html" );
+  </script>
+  
+  <script>
+  
+  	
+		
+		$(document).on('click', 'p', function(){
+			
+			$(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "1", "transform":"scale(1)"})
+			$(this).next().children(".editor-comment").css({"opacity" : "1", "transform":"scale(1)"})
+			$("p").not(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "0", "transform":"scale(0)"})
+			$("p").not(this).next().children(".editor-comment").css({"opacity" : "0", "transform":"scale(0)"})
+	
+		});
+		
+		$(document).on('click', '.editor-comment', function(){
+			
+			$(this).children(".editor-comment-pop").css({"display" : "block"})
+			$(".editor-comment").not(this).children(".editor-comment-pop").css({"display" : "none"})
+			
+		});
+		
+		
+		
+  
+  
   </script>
     
 </body>

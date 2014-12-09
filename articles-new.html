@@ -1,0 +1,549 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/myform.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
+
+<script>
+
+$(window).scroll(function(){
+	
+		
+  
+      scroll = $(window).scrollTop();
+	  
+	
+	  
+	 
+
+  if (scroll >= 50 && $(window).width() < 980 ) {
+	  
+	 
+	  
+	  
+	  
+	  
+	  
+	   $('.main-sub-navigatiion').addClass('fix-icon-banner-to-top');
+	   $('.main-sub-navigatiion').css("padding-top","10px");
+	    
+	   
+  
+  $('.article-left-mobile-wrapper').addClass('minus-twenty-top'); }
+  
+  
+  else{ $('.main-sub-navigatiion').removeClass('fix-icon-banner-to-top'); $('.main-sub-navigatiion').css("padding-top","5px");
+  
+  
+   }
+
+
+	
+
+});
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+	
+	if ($(window).width() > 980 ) {
+		
+		$(".article-graph-bottom-icon").hide();
+		$(".article-graph-wrapper").mouseenter(function(){
+			
+			$(this).find(".article-graph-bottom-icon").show();
+		
+		
+		}).mouseleave(function() {
+			
+			$(this).find(".article-graph-bottom-icon").hide();
+		});
+	
+	
+	}
+	
+	
+	
+	
+	
+	$('.articles-graphic-view').hide();
+	$("#show-list-articles").click(function() {
+		$('.articles-graphic-view').hide();
+		$('.articles-list-view').show();
+		
+		
+		});
+	$("#show-graph-articles").click(function() {
+		$('.articles-graphic-view').show();
+		$('.articles-list-view').hide();
+		
+		
+		});
+	
+	
+	});
+	
+	
+$(document).ready(function(){
+    var videoPath = "videos/lg/";
+    var draggedItem = null; 
+    $('.segmentListItem').each(function(index){
+        $(this).on("dragstart", handleDragStart);
+        $(this).on("drop", handleDrop);
+        $(this).on("dragover", handleDragOver);
+    });
+
+function handleDragStart(e){
+        //console.log('start');
+        draggedItem=this;
+        e.originalEvent.dataTransfer.effectAllowed = 'move';
+        //e.dataTransfer.dropEffect = 'move'; //MH - do we need both of these?
+        e.originalEvent.dataTransfer.setData('text/html', this.innerHTML);
+    }
+
+    function handleDragOver(e) {
+          if (e.preventDefault) {
+            e.preventDefault(); // Necessary. Allows us to drop.
+          }
+          e.originalEvent.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+          return false;
+    }
+
+    function handleDrop(e){
+        if (e.stopPropagation) {
+            e.stopPropagation(); // Stops some browsers from redirecting.
+        }
+
+        if (draggedItem != this) { //MH - swap if we're not dragging the item onto itself
+            var copy=$(this).clone(true,true);
+            $(this).replaceWith($(draggedItem).clone(true,true));
+            $(draggedItem).replaceWith($(copy).clone(true,true));
+        } 
+        return false;
+    }    
+    
+});
+
+
+</script>
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div class="header-wrapper">
+	<header>
+
+
+	</header>
+</div>
+
+    <div class="main-page-wrapper">
+    
+    	
+    
+ 		
+        
+        <div class="main-page-content" >
+        
+        <div class="main-sub-navigatiion">
+            
+            <li  ><a class="hidden-phone hidden-tablet" href="dashbord-new.html">Dashboard</a><a class="hidden-desktop" href="dashbord-new.html"><span class="icon3-feed"></span></a></li>
+            <li class="active"><a href="articles-new.html" class="hidden-phone hidden-tablet">My Articles</a><a class="hidden-desktop" href="articles-new.html"><span class="icon3-drawer"></span></a> </li>
+            <li  ><a href="collections-dashbord.html" class="hidden-phone hidden-tablet">My Collections</a><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon3-folders"></span></a></li>
+            <li style="margin-right: 3%;" class="hidden-desktop right-float padding-fix"  ><a  class="hidden-desktop" href="create-collection.html"><span class="icon-copy"></span></a></li>
+            <li  class="hidden-desktop right-float padding-fix"  ><a class="hidden-desktop" href="Editor/Editor/index.html"><span class="icon-file"></span></a></li>
+
+            
+            </div>
+        
+        		<div class="main-page-left hidden-tablet hidden-phone">
+                
+                	<div class="main-page-left-update">
+                    
+                    <img src="img/brahim.png">
+                    
+                    <p>
+                    	
+                        <span>Title of the Article</span>
+                        <span>Today 12:09 P.M</span><br>
+                        <span>Brahim Senhaji</span>
+                        <span>Edited this article</span>
+                    
+                     </p>
+                 
+                 </div>
+                 
+                 <div class="main-page-left-update">
+                    
+                    <img src="img/brahim.png">
+                    
+                    <p>
+                    	
+                        <span>Title of the Article</span>
+                        <span>Today 12:09 P.M</span><br>
+                        <span>Brahim Senhaji</span>
+                        <span>Edited this article</span>
+                    
+                     </p>
+                 
+                 </div>
+                 
+                 <div class="main-page-left-update">
+                    
+                    <img src="img/brahim.png">
+                    
+                    <p>
+                    	
+                        <span>Title of the Article</span>
+                        <span>Today 12:09 P.M</span><br>
+                        <span>Brahim Senhaji</span>
+                        <span>Edited this article</span>
+                    
+                     </p>
+                 
+                 </div>
+                 
+                 <div class="main-page-left-update">
+                    
+                    <img src="img/brahim.png">
+                    
+                    <p>
+                    	
+                        <span>Title of the Article</span>
+                        <span>Today 12:09 P.M</span><br>
+                        <span>Brahim Senhaji</span>
+                        <span>Edited this article</span>
+                    
+                     </p>
+                 
+                 </div>
+                 
+                 <div class="main-page-left-update">
+                    
+                    <img src="img/brahim.png">
+                    
+                    <p>
+                    	
+                        <span>Title of the Article</span>
+                        <span>Today 12:09 P.M</span><br>
+                        <span>Brahim Senhaji</span>
+                        <span>Edited this article</span>
+                    
+                     </p>
+                 
+                 </div>
+                    
+                   
+                	
+                
+                		
+                        
+                     
+                
+                </div>
+                
+                <div class="main-page-right">
+                
+                	<div class="main-page-right-tab">
+                    
+                    <p class="hidden-desktop">My Articles </p>
+                    <div id="show-graph-articles"><span class="icon3-file"></span></div>
+                    <div id="show-list-articles"><span class="icon3-list"></span></div>
+                    <input type="text" placeholder="Search">
+                    
+                    
+                    
+                    </div>
+                    
+                    <div class="main-page-right-content">
+                    
+                    <div class="articles-graphic-view" id="loadedSegments">
+                    
+                    <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                   <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                        <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                        <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                        <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                        <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                        <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                        <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    	
+                        <div class="article-graph-wrapper" >
+                    
+                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                            
+                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
+                        
+                        </div> 
+                        
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="articles-list-view">
+                    
+                    <div class="article-list-holder article-list-holder-header hidden-phone hidden-tablet">
+                    
+                    	<div>
+                      		<p>Title</p>
+                        </div>
+                        
+                        <p>Creator</p>
+                        <p>Last Modified</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div >
+                        
+                        <img  src="img/brahim.png" />
+                       
+                        <p style=""><a>This is the title of the article title of the article</a></p>
+                        
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div>
+                        <img src="img/brahim.png" />
+                        <p><a>This is the title of</a></p>
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div>
+                        <img src="img/brahim.png" />
+                        <p><a>This is the title of the article title of the article title of the article title of the article</a></p>
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div>
+                        <img src="img/brahim.png" />
+                        <p><a>This is the title of the </a></p>
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div>
+                        <img src="img/brahim.png" />
+                        <p><a>This is the title of the article title of the article title of the article title of the article title of the article title of the article title of the article title of the article title of the article</a></p>
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div>
+                        <img src="img/brahim.png" />
+                        <p><a>This is the title of the article</a></p>
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div>
+                        <img src="img/brahim.png" />
+                        <p><a>This is the title of the article</a></p>
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    <div class="article-list-holder">
+                    
+                    	<div>
+                        <img src="img/brahim.png" />
+                        <p><a>This is the title of the article</a></p>
+                        </div>
+                        
+                        <p><a>Adam Tata</a></p>
+                        <p>11/24/2014</p>
+                        
+                    
+                    </div>
+                    
+                    </div>
+                    
+                    
+                    </div>
+                
+               
+        
+        
+        
+        		</div>
+    
+    
+    
+    
+    
+    </div>
+   
+
+      
+   
+        
+    
+    
+   
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+$( "#aside" ).load( "aside.html" );
+$( ".Entries1" ).load( "Testnotes/Note1.html" );
+$( ".Entries2" ).load( "Testnotes/Note2.html" );
+$( ".Entries3" ).load( "Testnotes/Note3.html" );
+
+  
+
+</script>
+
+<script src="js/myjavascript.js"></script>
+<script src="js/myEntries.js"></script>  
+

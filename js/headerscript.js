@@ -21,6 +21,57 @@ $( document ).ready(function() {
 
 $(".alert-popover-desktop").hide();
 
+$("#top-menu-btn").click(function(){
+	
+	if($(".nav-collapse").hasClass("full-height")){
+		
+		$(".nav-collapse").removeClass("full-height");
+		$(".nav-collapse").addClass("no-height");
+		
+	 } else {
+	
+		$(".nav-collapse").addClass("full-height");
+		$(".nav-collapse").removeClass("no-height");
+	
+	}
+	
+	$(".nav-collapse-2").addClass("no-height");
+	$(".nav-collapse-2").removeClass("full-height");
+	
+	
+	
+	
+	
+
+});
+
+$("#top-menu-btn-2").click(function(){
+	
+	if($(".nav-collapse-2").hasClass("full-height")){
+		
+		$(".nav-collapse-2").removeClass("full-height");
+		$(".nav-collapse-2").addClass("no-height");
+		
+	 } else {
+	
+		$(".nav-collapse-2").addClass("full-height");
+		$(".nav-collapse-2").removeClass("no-height");
+	
+	}
+	
+	$(".nav-collapse").addClass("no-height");
+	$(".nav-collapse").removeClass("full-height");
+	
+	
+	
+
+});
+
+$(".alert-popover-desktop").click(function(){
+	$('.nav-admin-holder').addClass('hide-fix');
+
+});
+
 $(".alert-btn,.alert-popover-desktop").click(function(e){
 					
 					$('.alert-popover-desktop').toggle();
