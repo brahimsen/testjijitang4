@@ -410,7 +410,7 @@ position: relative;
 }
 
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
-	background-color: #FFF !important;
+	background-color: #FFF;
 	color: #FFF;
 
 
@@ -2716,7 +2716,7 @@ position: absolute; width: 100%; display: none
 }
 
 .collections-nav > .active > a {
-	background: #FFF !important;
+	background: #FFF;
 	color: #877c21 !important;
 	 
 
@@ -2732,7 +2732,7 @@ position: absolute; width: 100%; display: none
 }
 
 .collections-nav > .active > a:hover {
-	background: #FFF !important;
+	background: #FFF;
 	color: #877c21 !important   
 
 }
@@ -6848,7 +6848,7 @@ border-bottom: 1px solid #ccc; padding-bottom: 30px; width: 84% !important; marg
 
 	overflow: hidden;
 	background:#FFF;
-	margin-top: 55px;
+	margin-top: 65px;
 	
 
 }
@@ -6950,26 +6950,41 @@ margin-top: 10px; color:#666;
 
 }
 
-.dashbord-left-profile-holder > img {
+.dashbord-left-profile-holder  > img {
 	
-	height:60px; float: left
+	height:60px; float: left !important
 
 
 }
 
 .dashbord-left-profile-holder > a {
 	
-	font-size: 14px; color: #999; margin-right: 5px; float: right; margin-top: 20px 
+	font-size: 14px; color: #999; margin-right: 5px; float: right; margin-top: -8px 
 
 
 }
 
-.dashbord-left-profile-holder > p {
+.dashbord-left-profile-holder > p:nth-child(2) > a {
 	
-	font-size: 18px; color: #877c21; margin-left: 10px; float: left; margin-top: 20px 
+	font-size: 16px; color: #877c21; margin-left: 10px; float: left; margin-top: 2px; font-weight: bold;
 
 
 }
+
+.dashbord-left-profile-holder > p:nth-child(4) {
+	
+	font-size: 13px; color: #999; margin-left: 10px; float: left; margin-top: 20px 
+
+
+}
+.dashbord-left-profile-holder > p:nth-child(4) > a {
+	
+	font-size: 13px; color: #999
+
+
+}
+
+
 
 .dashbord-content-left-article {
 	position: relative;
@@ -7004,7 +7019,14 @@ margin-top: 10px; color:#666;
 	
 	height: auto;
 	overflow: hidden;
+	margin-bottom: 12px;
+	margin-top: 5px;
 	
+
+}
+
+.fifty-six-top {
+	margin-top: 66px !important;
 
 }
 
@@ -7137,6 +7159,11 @@ margin-top: 10px; color:#666;
 }
 
 @media(max-width: 980px) {
+	
+	.fifty-six-top {
+	margin-top: 30px !important;
+
+}
 	
 	
 	
@@ -7471,6 +7498,11 @@ margin-top: 10px; color:#666;
 
 }
 
+.minus-ninteen-top {
+	margin-top: -19px !important;
+
+}
+
 
 .main-sub-navigatiion {
 	
@@ -7482,8 +7514,8 @@ margin-top: 10px; color:#666;
 	padding-left: 3%;
 	position: fixed;
 	background: #FFF;
-	padding-top: 5px;
-	z-index: 9999;
+	padding-top: 15px;
+	z-index: 0;
 	
 
 
@@ -7663,7 +7695,7 @@ margin-top: 10px; color:#666;
 	background:#FFF;
 	border-right: 1px solid #ccc;
 	padding-top: 10px;
-	margin-top: 53px
+	margin-top: 63px
 
 }
 
@@ -7694,7 +7726,7 @@ margin-top: 10px; color:#666;
 	width: 81%;
 	margin-left: 10%;
 	
-	height: 50px; 
+	
 	border-bottom: 1px solid #ccc;
 	padding-top: 10px;
 	padding-bottom: 10px
@@ -7756,7 +7788,7 @@ margin-top: 10px; color:#666;
 	
 	height: auto;
 	overflow: hidden;
-	margin-top: 10px;
+	margin-top: 30px;
 
 }
 
@@ -8659,15 +8691,85 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 	float: left;
 
 }
-.article-list-holder  > div > p {
- margin-left: 40px;
+.article-list-holder  > div  > span {
+
+ font-size: 22px;
+ float: left;
+ width: 10%;
+ 
+ 
+}
+
+@media (max-width: 767px) {
+	
+	.article-list-holder  > div  > span {
+
+
+ width: 6% !important;
+
+ 
+}
+
+	.article-list-holder > p:nth-child(2)  {
+
+	
+	margin-left: 6% !important;
+	width: 30% !important;
+	padding-left: 0% !important;
+	padding-right: 0% !important
+}
+
+.article-list-holder  > div > p > a {
+
+	 width: 94% !important;
+	
+}
+
+	
+
+}
+
+@media (max-width: 580px) {
+	
+.article-list-holder > p:nth-child(2)  {
+
+	
+	margin-left: 10% !important;
+	width: 30% !important;
+	padding-left: 0% !important;
+	padding-right: 0% !important
+}
+	
+	.article-list-holder  > div  > span {
+
+
+ width: 10% !important;
+
+ 
+}
+
+.article-list-holder  > div > p > a {
+
+	 width: 90% !important;
+	
+}
+
+	
+
 }
 
 .article-list-holder  > div > p > a {
 	color: #333 !important;
 	font-size: 14px;
 	text-decoration: none;
+	 float: left;
+	 width: 90%;
+	
 }
+
+
+
+
 
 .article-list-holder > p:nth-child(2)  {
 	width: 15%;
@@ -8687,26 +8789,39 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 	
 	.article-list-holder > div   {
 	
-	width: 98% !important;
+	width: 100% !important;
+	padding-left: 0% !important;
+	padding-right: 0% !important;
+	}
+	
+	.article-list-holder > p:nth-child(2) {
+		
+		margin-top: 10px !important
+	
+	}
+	
+	.article-list-holder > p:nth-child(3) {
+		
+		margin-top: 10px !important
+	
+	}
+
 
 
 
 
 }
 	
-	.article-list-holder > p:nth-child(2)  {
-	width: 30%;
-	float: left;
-	padding-left: 0% !important;
-	padding-right: 0% !important;
-	
-	margin-left: 50px
+.ten-padding-fix {
+	padding-top: 15px !important;
+	padding-bottom: 20px !important;
+
 }
 
 .article-list-holder > p:nth-child(3)  {
 	
 	
-	width: 50%;
+	width: 27%;
 	float: right;
 	text-align: right !important;
 	
@@ -8725,6 +8840,7 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 	color: #877c21 !important;
 	font-size: 14px;
 	text-decoration: none;
+	
 }
 
 .article-list-holder > p:nth-child(3){
@@ -8747,6 +8863,18 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 
 }
 
+.article-list-holder-header > div > p {
+	font-weight: bold;
+	
+
+}
+
+.article-list-holder-header > p {
+	font-weight: bold;
+	
+
+}
+
 .article-list-holder-header:hover {
 	background: #FFF !important;
 
@@ -8759,7 +8887,7 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 	height: auto;
 	overflow: hidden;
 	
-	margin-top: 30px;
+	margin-top: 50px;
 
 }
 
