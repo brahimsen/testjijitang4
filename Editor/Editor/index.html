@@ -25,6 +25,43 @@
   
   $(document).ready(function() {
 	  
+	  $(".editor-publish-popup").hide();
+	  $(".publish-with-collection-wrapper").hide();
+	  
+	  
+	  $("#publish-article-icon").click(function(){
+		  
+		  $(".editor-publish-popup").toggle();
+		  
+	  });
+	  
+	  $("#note-popover-update-footer").click(function(){
+		  
+		  $(".publish-with-collection-wrapper").show();
+		  $(".publish-no-collection").hide();
+		  $("#note-popover-update-footer").hide();
+		  
+		  
+		  
+		  
+	  });
+	  
+	   $("#cancel-publish-no-col").click(function(){
+		   
+		  
+		  $(".editor-publish-popup").hide();
+		  
+	  });
+	  
+	   $("#cancel-publish-with-col").click(function(){
+		  
+		  $(".editor-publish-popup").hide();
+		  
+	  });
+	  
+	   $(".editor-comment-icon").click(function(){
+	  });
+	  
 	  
 	  $(".editor-comment-icon").click(function(){
 		  
@@ -190,19 +227,84 @@ $(window).scroll(function(){
         </div>
         
         <div id="publish-article" class="icon-right-float icon-banner-relativity">
-        	<a><span class="icon-blog"></span><span class="hidden-tablet hidden-phone">Publish</span></a>
+        	<a id="publish-article-icon"><span class="icon-blog"></span><span class="hidden-tablet hidden-phone">Publish</span></a>
             <div class="editor-publish-popup" >
             	
                 <div class="note-popover-update-header"><h4>Publish</h4></div>
                 <div class="publish-no-collection">
                 
-                    <p>Are you sure you want to publish this article? </p>
-        		<button id="confirm-delete" class="Confirm-Modal-btn">Delete</button>
-        		<button   id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
+                <p>Are you sure you want to publish this article? </p>
+        		<button id="confirm-publish-no-col" class="Confirm-Modal-btn">Delete</button>
+        		<button   id="cancel-publish-no-col" class="Cancel-Modal-btn">Cancel</button >
                 
                 </div>
                 
-                <div class="note-popover-update-header"><p style="color: #3D7D8B !important">Publish  with a collection</p></div>
+                <div class="publish-with-collection-wrapper">
+                
+                 <div class="publish-with-collection">
+                
+                	<div>
+                    
+                    	<img src="../../img/collection-background.jpg"/>
+                        <p style="float: left"><a>Title of the collection</a></p>
+                        <input type="checkbox" style="float: right; border: none !important; color: #0F0;">
+                    
+                    </div>
+                    
+                    <div>
+                    
+                    	<img src="../../img/collection-background.jpg"/>
+                        <p><a>Title of the collection</a></p>
+                    
+                    </div>
+                    
+                    <div>
+                    
+                    	<img src="../../img/collection-background.jpg"/>
+                        <p><a>Title of the collection</a></p>
+                    
+                    </div>
+                    
+                    <div>
+                    
+                    	<img src="../../img/collection-background.jpg"/>
+                        <p><a>Title of the collection</a></p>
+                    
+                    </div>
+                    
+                     <div>
+                    
+                    	<img src="../../img/collection-background.jpg"/>
+                        <p><a>Title of the collection</a></p>
+                    
+                    </div>
+                    
+                     <div>
+                    
+                    	<img src="../../img/collection-background.jpg"/>
+                        <p><a>Title of the collection</a></p>
+                        
+                    
+                    </div>
+                    
+                     <div>
+                    
+                    	<img src="../../img/collection-background.jpg"/>
+                        <p><a>Title of the collection</a></p>
+                    
+                    </div>
+                
+                </div>
+                
+                <div class="publish-with-collection-btns">
+                
+                <p>Don't Have a Collection.<a> Create a New Collection</a> </p>
+        		<button id="confirm-publish-with-col" class="Confirm-Modal-btn">Publish </button>
+        		<button   id="cancel-publish-with-col" class="Cancel-Modal-btn">Cancel</button >
+                </div>
+                </div>
+                
+                <div class="note-popover-update-header" id="note-popover-update-footer"><p style="color: #3D7D8B !important">Publish  with a collection</p></div>
             
             </div>
         </div>

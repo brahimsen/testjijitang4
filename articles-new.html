@@ -68,21 +68,7 @@ $(window).scroll(function(){
 
 $(document).ready(function(){
 	
-	if ($(window).width() > 980 ) {
-		
-		$(".article-graph-bottom-icon").hide();
-		$(".article-graph-wrapper").mouseenter(function(){
-			
-			$(this).find(".article-graph-bottom-icon").show();
-		
-		
-		}).mouseleave(function() {
-			
-			$(this).find(".article-graph-bottom-icon").hide();
-		});
 	
-	
-	}
 	
 	
 	
@@ -279,9 +265,13 @@ function handleDragStart(e){
                 
                 <div class="main-page-right">
                 
-                	<div class="main-page-right-tab">
+                	<p class="hidden-desktop new-articles-top-label"><span> My Articles </span></p>
+                    <div class="update-red-dot"></div>
+                    <p class="updates-mobile-link hidden-desktop"><a href="/updates-mobile.html">13 Updates</a></p>
                     
-                    <p class="hidden-desktop">My Articles </p>
+                    <div class="main-page-right-tab">
+                    
+                    
                     <div id="show-graph-articles"><span class="icon3-file"></span></div>
                     <div id="show-list-articles"><span class="icon3-list"></span></div>
                     <input type="text" placeholder="Search">
@@ -300,7 +290,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -311,7 +300,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -322,7 +310,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -333,7 +320,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -344,7 +330,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -355,7 +340,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -366,7 +350,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -377,7 +360,6 @@ function handleDragStart(e){
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
                             
-                             <div class="article-graph-bottom"><span class="icon5-cog article-graph-bottom-icon"></span></div>
                         
                         </div> 
                         
@@ -399,7 +381,8 @@ function handleDragStart(e){
                     
                     </div>
                     
-                    <div class="article-list-holder">
+                    
+                    <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3" >
                     
                     	<div >
                         
@@ -415,7 +398,7 @@ function handleDragStart(e){
                     
                     </div>
                     
-                     <div class="article-list-holder">
+                     <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3">
                     
                     	<div >
                         
@@ -431,7 +414,7 @@ function handleDragStart(e){
                     
                     </div>
                     
-                     <div class="article-list-holder">
+                     <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3">
                     
                     	<div >
                         
@@ -447,7 +430,7 @@ function handleDragStart(e){
                     
                     </div>
                     
-                   <div class="article-list-holder">
+                   <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3">
                     
                     	<div >
                         
@@ -463,7 +446,7 @@ function handleDragStart(e){
                     
                     </div>
                     
-                     <div class="article-list-holder">
+                     <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3">
                     
                     	<div >
                         
@@ -479,7 +462,7 @@ function handleDragStart(e){
                     
                     </div>
                     
-                    <div class="article-list-holder">
+                    <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3">
                     
                     	<div >
                         
@@ -495,7 +478,7 @@ function handleDragStart(e){
                     
                     </div>
                     
-                     <div class="article-list-holder">
+                     <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3">
                     
                     	<div >
                         
@@ -511,7 +494,7 @@ function handleDragStart(e){
                     
                     </div>
                     
-                    <div class="article-list-holder">
+                    <div class="article-list-holder segmentListItem" draggable="true"  data-duration="3">
                     
                     	<div >
                         

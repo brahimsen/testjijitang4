@@ -1,17 +1,4 @@
-	$(document).ready(function(){
-		
-		$("#publish-article").click(function(){
-		$("#Publish-article-Modal").modal('show');
 
-	});
-	
-	$("#delete-article").click(function(){
-		$("#Delete-article-Modal").modal('show');
-
-	});
-			
-
-    });
 
   
   	$(document).ready(function(){

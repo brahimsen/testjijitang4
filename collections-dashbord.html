@@ -58,6 +58,46 @@ $(window).scroll(function(){
 
 });
 
+$(document).ready(function(){
+    var videoPath = "videos/lg/";
+    var draggedItem = null; 
+    $('.segmentListItem').each(function(index){
+        $(this).on("dragstart", handleDragStart);
+        $(this).on("drop", handleDrop);
+        $(this).on("dragover", handleDragOver);
+    });
+
+function handleDragStart(e){
+        //console.log('start');
+        draggedItem=this;
+        e.originalEvent.dataTransfer.effectAllowed = 'move';
+        //e.dataTransfer.dropEffect = 'move'; //MH - do we need both of these?
+        e.originalEvent.dataTransfer.setData('text/html', this.innerHTML);
+    }
+
+    function handleDragOver(e) {
+          if (e.preventDefault) {
+            e.preventDefault(); // Necessary. Allows us to drop.
+          }
+          e.originalEvent.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+          return false;
+    }
+
+    function handleDrop(e){
+        if (e.stopPropagation) {
+            e.stopPropagation(); // Stops some browsers from redirecting.
+        }
+
+        if (draggedItem != this) { //MH - swap if we're not dragging the item onto itself
+            var copy=$(this).clone(true,true);
+            $(this).replaceWith($(draggedItem).clone(true,true));
+            $(draggedItem).replaceWith($(copy).clone(true,true));
+        } 
+        return false;
+    }    
+    
+});
+
 </script>
 
 
@@ -116,10 +156,10 @@ $(window).scroll(function(){
             
            
             
-            	<div>
+            	<div id="loadedSegments">
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -153,7 +193,7 @@ $(window).scroll(function(){
                 <div>
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -187,7 +227,7 @@ $(window).scroll(function(){
                 <div>
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -221,7 +261,7 @@ $(window).scroll(function(){
                 <div>
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -255,7 +295,7 @@ $(window).scroll(function(){
                 <div>
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -289,7 +329,7 @@ $(window).scroll(function(){
                 <div>
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -323,7 +363,7 @@ $(window).scroll(function(){
                 <div>
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -339,7 +379,7 @@ $(window).scroll(function(){
                                 
                             <div class="collection-inner-content">
                             
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                            		<p class="collection-list-name">Sara Seager's uuu Publication</p>
                               
                                 	
                             </div>
@@ -357,7 +397,7 @@ $(window).scroll(function(){
                 <div>
                 
                 
-                	<div class="collection-item">
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
                         <div class="collection-inner-content-holder">
                     			
@@ -373,7 +413,7 @@ $(window).scroll(function(){
                                 
                             <div class="collection-inner-content">
                             
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                            		<p class="collection-list-name">Sara Seager's jjhjh Publication</p>
                               
                                 	
                             </div>
