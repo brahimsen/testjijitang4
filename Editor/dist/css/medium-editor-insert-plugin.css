@@ -81,14 +81,17 @@
       margin-top: -4px; }
   .mediumInsert .mediumInsert-buttons {
     position: absolute;
-    width: 40px;
+   
     bottom: 0;
-    left: 0;
+    right: 0;
     color: #ddd;
     font-size: 0.9em; }
     .mediumInsert .mediumInsert-buttons a {
       text-decoration: underline;
-      cursor: pointer; }
+      cursor: pointer;
+	  float: left;
+	  
+	  }
       .mediumInsert .mediumInsert-buttons a.active {
         font-weight: bold; }
   .mediumInsert ul.mediumInsert-buttonsOptions {
@@ -98,7 +101,7 @@
     display: none;
     position: absolute;
     z-index: 2;
-    left: 40px;
+    left: -60px;
     top: -10px;
     border-radius: 5px; }
     .mediumInsert ul.mediumInsert-buttonsOptions button {
@@ -198,11 +201,7 @@
     color: #999; }
   .mediumInsert.hover .mediumInsert-placeholder {
     background: #f0f0f0; }
-  .mediumInsert:hover .mediumInsert-buttonsShow {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-    opacity: 1; }
+ 
   .mediumInsert.small .mediumInsert-placeholder {
     width: 33.33%;
     float: left;

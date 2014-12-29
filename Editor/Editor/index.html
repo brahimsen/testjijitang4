@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../dist/css/medium-editor.css">
   <link rel="stylesheet" href="../dist/css/default.css" id="medium-editor-theme">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="../dist/css/medium-editor-insert-plugin.min.css">
+  <link rel="stylesheet" href="../dist/css/medium-editor-insert-plugin.css">
   <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="../../css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
   <link href="../../style.css" rel="stylesheet" type="text/css">
@@ -27,13 +27,41 @@
 	  
 	  $(".editor-publish-popup").hide();
 	  $(".publish-with-collection-wrapper").hide();
+	  $(".editor-delete-popup").hide();
 	  
 	  
-	  $("#publish-article-icon").click(function(){
+	  $("#publish-article-icon").click(function(z){
 		  
 		  $(".editor-publish-popup").toggle();
+		  $(".editor-delete-popup").hide();
+		   z.stopPropagation();
 		  
 	  });
+	  
+	    $("#icon-remove-article").click(function(e){
+		  
+		  $(".editor-delete-popup").toggle();
+		  $(".editor-publish-popup").hide();
+		  e.stopPropagation();
+		  
+	  });
+	  
+	  $("html").click(function(e){
+		  $(".editor-delete-popup").hide();
+		  
+	  });
+	  
+	  
+	  
+	  $("#cancel-delete").click(function(){
+		  
+		  $(".editor-delete-popup").hide();
+		  
+	
+		  
+	  });
+	  
+	  
 	  
 	  $("#note-popover-update-footer").click(function(){
 		  
@@ -55,7 +83,9 @@
 	  
 	   $("#cancel-publish-with-col").click(function(){
 		  
-		  $(".editor-publish-popup").hide();
+		  $(".publish-with-collection-wrapper").hide();
+		  $(".publish-no-collection").show();
+		  $("#note-popover-update-footer").show();
 		  
 	  });
 	  
@@ -102,7 +132,7 @@
 	  
   });
   
-  $(window).resize(function(){
+ /* $(window).resize(function(){
 	
 	var width = $(window).width();
 	
@@ -112,7 +142,7 @@
 	$('.editor-left-comment-bar').animate({width: "0%"});
 	} 
 	
-});
+});*/
 
 $(window).scroll(function(){
 	
@@ -145,7 +175,10 @@ $(window).scroll(function(){
 	
 
 });
-  
+
+	$(document).ready(function(){
+	$('#editor-title').autosize();
+	});
   </script>
   
   
@@ -154,20 +187,7 @@ $(window).scroll(function(){
 
 
 
-<!--Publish Artical popup-->
-<div id="Publish-article-Modal" class="modal hide fade" tabindex="-1" data-width="460">
 
-  <div class="modal-body">
-  
-  		<p>Everyone will see your article if you publish it. Are you sure you want to publish it. </p>
-        <button id="confirm-delete" class="Confirm-Modal-btn">Publish</button>
-        <button  data-dismiss="modal" id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
-        <div><span>Publish This Article with a Collection</span></div>
-        
-  	
-  </div>
- 
-</div><!-- end of Publish Artical popup-->
 
 
 
@@ -197,15 +217,15 @@ $(window).scroll(function(){
     <div class="editor-icons-holder" style="z-index: 9999">
     
     	<div id="delete-article " class="icon-right-float icon-banner-relativity">
-        	<a><span class="icon-remove"></span><span class="hidden-tablet hidden-phone">Delete</span></a>
+        	<a id="icon-remove-article"><span  class="icon-remove"></span><span class="hidden-tablet hidden-phone">Delete</span></a>
             
-            <!--<div class="editor-delete-popup" >
+            <div class="editor-delete-popup" >
             	
                 <p>Are you sure you want to delete this article? </p>
         		<button id="confirm-delete" class="Confirm-Modal-btn">Delete</button>
         		<button   id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
             
-            </div>-->
+            </div>
         </div>
         
         <div class="icon-right-float icon-banner-relativity" id="editor-share-btn">
@@ -254,35 +274,40 @@ $(window).scroll(function(){
                     <div>
                     
                     	<img src="../../img/collection-background.jpg"/>
-                        <p><a>Title of the collection</a></p>
+                        <p style="float: left"><a>Title of the collection</a></p>
+                        <input type="checkbox" style="float: right; border: none !important; color: #0F0;">
                     
                     </div>
                     
                     <div>
                     
                     	<img src="../../img/collection-background.jpg"/>
-                        <p><a>Title of the collection</a></p>
+                        <p style="float: left"><a>Title of the collection</a></p>
+                        <input type="checkbox" style="float: right; border: none !important; color: #0F0;">
                     
                     </div>
                     
                     <div>
                     
                     	<img src="../../img/collection-background.jpg"/>
-                        <p><a>Title of the collection</a></p>
+                        <p style="float: left"><a>Title of the collection</a></p>
+                        <input type="checkbox" style="float: right; border: none !important; color: #0F0;">
                     
                     </div>
                     
                      <div>
                     
                     	<img src="../../img/collection-background.jpg"/>
-                        <p><a>Title of the collection</a></p>
+                        <p style="float: left"><a>Title of the collection</a></p>
+                        <input type="checkbox" style="float: right; border: none !important; color: #0F0;">
                     
                     </div>
                     
                      <div>
                     
                     	<img src="../../img/collection-background.jpg"/>
-                        <p><a>Title of the collection</a></p>
+                        <p style="float: left"><a>Title of the collection</a></p>
+                        <input type="checkbox" style="float: right; border: none !important; color: #0F0;">
                         
                     
                     </div>
@@ -290,7 +315,8 @@ $(window).scroll(function(){
                      <div>
                     
                     	<img src="../../img/collection-background.jpg"/>
-                        <p><a>Title of the collection</a></p>
+                        <p style="float: left"><a>Title of the collection</a></p>
+                        <input type="checkbox" style="float: right; border: none !important; color: #0F0;">
                     
                     </div>
                 
@@ -480,7 +506,7 @@ $(window).scroll(function(){
                  </div>
                  
                  
-                <div style="width: 99.7%; bottom: 100px; height:auto; background:#eee; border: 1px solid #ccc; padding-top: 15px; padding-bottom: 10px; overflow: hidden">
+                <div style="width: 99.7%; bottom: 100px; height:30%; background:#eee; border: 1px solid #ccc; padding-top: 15px; padding-bottom: 10px; overflow: hidden">
                 
                 
                 <div style="width: 17%; float: left; margin-left: 5%">
@@ -495,9 +521,9 @@ $(window).scroll(function(){
             </div>
 
   <!--Editor-->
-  <div id="container" class="editor" style="background: #0F0">
+  <div id="container" class="editor">
     
-    <input style="width: 100%" id="editor-title"  placeholder="Title of Your Article">
+    <textarea style="width: 100%; border: none !important; box-shadow: none !important; margin-top: 40px;" id="editor-title"  placeholder="Title of Your Article"></textarea>
    			
     </input>
         
@@ -519,9 +545,8 @@ $(window).scroll(function(){
   		<button class="add-section">Add New Section</button>
   </div>--><!--End of Add Section btn-->
 
-  <script src="../dist/js/medium-editor.min.js"></script>
+  <script src="../dist/js/medium-editor.js"></script>
   <script src="../dist/js/medium-editor-insert-plugin.all.min.js"></script>
-  <script src="../dist/js/medium-editor-insert-tables.min.js"></script>
  
   <script src="../../js/editor-script.js"></script>
   <script>
@@ -530,14 +555,34 @@ $(window).scroll(function(){
   
   <script>
   
+  		$(document).ready(function(){
+			
+			
+			
+			$(".editor-headings-inner").hide();
+			
+		});
+  
+  		$(document).on('click', '.editor-headings', function(e){
+			
+			$(this).children(".editor-headings-inner").addClass("editor-headings-inner-active")
+			e.stopPropagation
+			
+		});
+		
+		$("html").click(function(e){
+		  $(".editor-headings-inner").removeClass("editor-headings-inner-active")
+		  
+	  });
+  
   	
 		
 		$(document).on('click', 'p', function(){
 			
 			$(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "1", "transform":"scale(1)"})
-			$(this).next().children(".editor-comment").css({"opacity" : "1", "transform":"scale(1)"})
+			$(this).next().children(".mediumInsert-buttons").find(".editor-comment").css({"opacity" : "1", "transform":"scale(1)"})
 			$("p").not(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "0", "transform":"scale(0)"})
-			$("p").not(this).next().children(".editor-comment").css({"opacity" : "0", "transform":"scale(0)"})
+			$("p").not(this).next().children(".mediumInsert-buttons").find(".editor-comment").css({"opacity" : "0", "transform":"scale(0)"})
 	
 		});
 		
@@ -545,6 +590,44 @@ $(window).scroll(function(){
 			
 			$(this).children(".editor-comment-pop").css({"display" : "block"})
 			$(".editor-comment").not(this).children(".editor-comment-pop").css({"display" : "none"})
+			
+		});
+		
+		$(document).on('click', '.editor-headings-normal', function(){
+			
+			$(this).parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<p/>');
+		$(this).parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("p").parent(".editable").blur();
+		
+			
+			
+			
+		});
+		
+		$(document).on('click', '.editor-headings-h1', function(){
+			
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<h1/>');
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("h1").parent(".editable").blur();
+		
+			
+			
+			
+		});
+		
+		$(document).on('click', '.editor-headings-h2', function(){
+			
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<h2/>');
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("h2").parent(".editable").blur();
+			
+			
+			
+		});
+		
+		$(document).on('click', '.editor-headings-h3', function(){
+			
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<h3/>');
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("h3").parent(".editable").blur();
+			
+			
 			
 		});
 		

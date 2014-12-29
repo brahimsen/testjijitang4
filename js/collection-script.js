@@ -5,6 +5,8 @@
 				
 				$(".collection-icon-empty").hide();
 				$(".edit-collection-icon").hide();
+				$(".privacy-icon-eye").hide();
+				$(".privacy-icon-eye-blocked").hide();
 				$(".collection-inner-content-holder").hover(function(){
 					
 					if($('.collection-icon-full',this).css("display") == "none"){
@@ -13,6 +15,10 @@
 					}
 					
 					$('.edit-collection-icon',this).toggle();
+					$('.privacy-icon-eye-blocked',this).toggle();
+					$('.privacy-icon-eye',this).toggle();
+					
+					
 
 				
 				});

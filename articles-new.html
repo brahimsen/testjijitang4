@@ -179,7 +179,14 @@ function handleDragStart(e){
         
         		<div class="main-page-left hidden-tablet hidden-phone">
                 
-                	<div class="main-page-left-update">
+                
+                	 <div class=" article-first-time-enter">
+                            
+                         <p>You don't have any activity regarding articles.</p>
+                            
+                     </div>
+                
+                	<!--<div class="main-page-left-update">
                     
                     <img src="img/brahim.png">
                     
@@ -254,7 +261,7 @@ function handleDragStart(e){
                  
                  </div>
                     
-                   
+                   -->
                 	
                 
                 		
@@ -266,7 +273,7 @@ function handleDragStart(e){
                 <div class="main-page-right">
                 
                 	<p class="hidden-desktop new-articles-top-label"><span> My Articles </span></p>
-                    <div class="update-red-dot"></div>
+                    <div class="update-red-dot hidden-desktop"></div>
                     <p class="updates-mobile-link hidden-desktop"><a href="/updates-mobile.html">13 Updates</a></p>
                     
                     <div class="main-page-right-tab">
@@ -282,18 +289,23 @@ function handleDragStart(e){
                     
                     <div class="main-page-right-content">
                     
-                    <div class="articles-graphic-view" id="loadedSegments">
                     
-                    <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
+                    
+                    <div class="articles-graphic-view">
+                    
+                      <div class="article-graph-holder" > 
                     	
-                        <div class="article-graph-wrapper" >
+                        <div class="article-graph-wrapper-load-more" >
                     
-                   			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                   			 <a href="/editor/editor/index.html"> <h1>+</h1> </a>
                             
                         
                         </div> 
                         
-                        </div>
+                   </div>
+                    
+                    <div id="loadedSegments">
+                   
                    <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
                     	
                         <div class="article-graph-wrapper" >
@@ -364,6 +376,19 @@ function handleDragStart(e){
                         </div> 
                         
                         </div>
+                        
+                        </div>
+                        
+                         <div class="article-graph-holder" > 
+                    	
+                        <div class="article-graph-wrapper-load-more" >
+                    
+                   			 <a href="/create-collection.html"> <h3>Load More</h3> </a>
+                            
+                        
+                        </div> 
+                        
+                   </div>
                     
                     </div>
                     

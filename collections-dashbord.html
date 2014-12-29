@@ -70,16 +70,23 @@ $(document).ready(function(){
 function handleDragStart(e){
         //console.log('start');
         draggedItem=this;
+		$(draggedItem).css("opacity","0.4");
+		/*$(draggedItem).children(".collection-inner-content-holder").css("display","none");*/
+		
         e.originalEvent.dataTransfer.effectAllowed = 'move';
         //e.dataTransfer.dropEffect = 'move'; //MH - do we need both of these?
         e.originalEvent.dataTransfer.setData('text/html', this.innerHTML);
     }
 
     function handleDragOver(e) {
+		
+		
           if (e.preventDefault) {
             e.preventDefault(); // Necessary. Allows us to drop.
+			
           }
           e.originalEvent.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+		 
           return false;
     }
 
@@ -89,10 +96,16 @@ function handleDragStart(e){
         }
 
         if (draggedItem != this) { //MH - swap if we're not dragging the item onto itself
-            var copy=$(this).clone(true,true);
+            $(draggedItem).css("opacity","1");
+			/*$(draggedItem).children(".collection-inner-content-holder").css("display","block");*/
+			
+			var copy=$(this).clone(true,true);
             $(this).replaceWith($(draggedItem).clone(true,true));
+			
             $(draggedItem).replaceWith($(copy).clone(true,true));
+			
         } 
+		
         return false;
     }    
     
@@ -154,10 +167,21 @@ function handleDragStart(e){
         	
             <div class="collections-dashbord-holder">
             
-           
+         
+            
+            <div class="collection-item collection-item-load-more-holder" >
+            	<div class="collection-item-load-more" >
+                       
+                    			
+                <a href="/create-collection.html"> <h1>+</h1> </a>
+            
+                	</div>
+               </div>
             
             	<div id="loadedSegments">
                 
+                  
+                
                 
                 	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
                         <div class="collection-back"></div>
@@ -166,6 +190,10 @@ function handleDragStart(e){
                                 <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
                                     <span class="collection-icon-empty icon-star "></span>
                         			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 <div class="privacy-icon" style="float:right">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
                                 </div>
                                 
                                 <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
@@ -202,38 +230,9 @@ function handleDragStart(e){
                         			<span class="collection-icon-full icon2-star"></span>
                                 </div>
                                 
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-                <div>
-                
-                
-                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
+                                <div class="privacy-icon" style="float:right">
+                                    <span class="privacy-icon-eye icon9-eye "></span>
+                        			
                                 </div>
                                 
                                 <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
@@ -270,38 +269,8 @@ function handleDragStart(e){
                         			<span class="collection-icon-full icon2-star"></span>
                                 </div>
                                 
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-                <div>
-                
-                
-                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
+                                 <div class="privacy-icon" style="float:right">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
                                 </div>
                                 
                                 <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
@@ -338,6 +307,10 @@ function handleDragStart(e){
                         			<span class="collection-icon-full icon2-star"></span>
                                 </div>
                                 
+                                 <div class="privacy-icon" style="float:right">
+                                    <span class="privacy-icon-eye icon9-eye "></span>
+                                </div>
+                                
                                 <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
                                      <span class="edit-collection-icon icon-uniE605"></span>
                                 </div>
@@ -370,6 +343,87 @@ function handleDragStart(e){
                                 <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
                                     <span class="collection-icon-empty icon-star "></span>
                         			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 <div class="privacy-icon" style="float:right">
+                                    <span class="privacy-icon-eye icon9-eye "></span>
+                                </div>
+                                
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                
+                <div>
+                
+                
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 <div class="privacy-icon" style="float:right">
+                                    <span class="privacy-icon-eye icon9-eye "></span>
+                                </div>
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                
+                <div>
+                
+                
+                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 <div class="privacy-icon" style="float:right">
+                                    <span class="privacy-icon-eye icon9-eye "></span>
                                 </div>
                                 
                                 <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
@@ -406,6 +460,10 @@ function handleDragStart(e){
                         			<span class="collection-icon-full icon2-star"></span>
                                 </div>
                                 
+                                 <div class="privacy-icon" style="float:right">
+                                    <span class="privacy-icon-eye icon9-eye "></span>
+                                </div>
+                                
                                 <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
                                      <span class="edit-collection-icon icon-uniE605"></span>
                                 </div>
@@ -428,7 +486,23 @@ function handleDragStart(e){
                 	</div>
                 </div>
                 
-               
+                <div>
+                
+              
+                
+                
+                
+                </div>
+                
+                <div class="collection-item collection-item-load-more-holder" >
+            		<div class="collection-item-load-more" >
+                       
+                    			
+                <a> <h3>Load More</h3> </a>
+            
+                	</div>
+               </div>
+                	
             
             </div>
                

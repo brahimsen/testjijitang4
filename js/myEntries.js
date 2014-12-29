@@ -17,6 +17,14 @@
 					
 				});
 				
+					$(".add-collection-popover").hide();
+				$(".empty-collection-list-block").click(function(){
+					
+					$(this).children(".add-collection-popover").show();
+					$(this).children(".collection-empty-text").hide();
+					
+				});
+				
 					$(".note-popover-update").hide();
 				$(".save,.note-popover-update").click(function(e){
 					

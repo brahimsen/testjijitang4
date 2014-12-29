@@ -168,22 +168,20 @@ window.onscroll = function(){
 					
 				});
 				
-				$('.view-comment-btn-hover').addClass('hide-fix');
 			
 			
 				$(".article-view-tab-content").hover(function(){
 				
 					
 				
-				$('.view-comment-btn-hover',this).toggleClass('hide-fix');
-				$('.view-comment-btn',this).toggleClass('hide-fix');
+				$('.view-comment-btn',this).toggleClass('comment-button-hovered');
+				
 					
 				
 					
 					
 				});
 				
-				$('.view-comment-btn-hover-mobile').addClass('hide-fix');
 			
 			
 				$(".article-view-tab-content").hover(function(){
