@@ -9912,13 +9912,13 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 
 .promotion-wrapper {
 	
-	width: 100%; height: 100%; background:#CCC
+	width: 100%; height: 100%; background: url(img/promotion-back.jpg); background-position:center; background-size: 100% 100%;
 
 }
 
 .promotion-inner {
 	
-	background: rgba(0,0,0,0.5); padding-top: 25px; padding-bottom: 25px; text-align: center; position: relative; transform: translateY(-50%); top: 50%;
+	background: rgba(0,0,0,0.5); padding-top: 25px; padding-bottom: 25px; position: relative; transform: translateY(-50%); top: 50%;
 
 }
 
@@ -9929,13 +9929,78 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 	
 	height: auto;
 	overflow: hidden;
+	
 
 }
 
-.promotion-inner > div > div  {
+
+
+.promotion-inner > div > div:nth-child(2)  {
 	
-	width: 33.33%;
+	width: 70%;
 	float: left;
+	
+	
+
+	
+
+}
+
+.promotion-inner > div > div:nth-child(2) > p:nth-child(1)  {
+	color: #FFF; margin-bottom: 30px; font-size: 16px;
+	
+
+	
+
+}
+
+.promotion-inner > div > div:nth-child(2) > p:nth-child(4)  {
+	color: #FFF; margin-bottom: 30px; font-size: 16px;
+	
+
+	
+
+}
+
+.promotion-inner > div > div:nth-child(2) > p  {
+	color: #FFF; font-size: 16px;
+	
+
+	
+
+}
+
+.promotion-inner > div > div:nth-child(2) > p > a:nth-child(1)  {
+	 font-size: 18px; text-decoration: underline; float: left; color: #edebd5 !important; margin-bottom: 20px; margin-right: 100px;
+	
+
+	
+
+}
+
+.promotion-inner > div > div:nth-child(2) > p > a:nth-child(2)  {
+	 font-size: 18px; text-decoration: underline; float: left; color: #edebd5 !important; margin-bottom: 20px;
+	
+
+	
+
+}
+
+
+
+.promotion-inner > div > div:nth-child(3)  {
+	
+	width: 30%;
+	float: left;
+	
+	
+	
+
+}
+
+.promotion-inner > div > div:nth-child(3) > button  {
+	float: right;
+	
 	
 
 }
@@ -9943,10 +10008,17 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 .promotion-inner > div > h1 {
 	
 	color: #FFF;
+	margin-bottom: 20px;
 
 }
 
-@media (max-width: 667px) {
+.promotion-inner > div > p {
+	
+	color: #FFF;
+
+}
+
+@media (max-width: 767px) {
 	
 	.promotion-inner > div > div  {
 	
@@ -9960,18 +10032,66 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 		margin-bottom: 10px;
 
 }
+
+.promotion-inner > div > div:nth-child(2) > p  {
+	color: #FFF; margin-bottom: 15px !important; font-size: 13px !important;
+	
+
+	
+
+}
+
+.promotion-inner > div > h1 {
+	font-size: 22px !important;
+	margin-bottom: 15px;
+
+}
+
+.promotion-inner > div > div:nth-child(2) > p > a:nth-child(1)  {
+	 font-size: 13px; text-decoration: underline; float: left !important; color: #edebd5 !important; margin-bottom: 10px; margin-right: 20px;
+	
+
+	
+
+}
+
+.promotion-inner > div > div:nth-child(2) > p > a:nth-child(2)  {
+	 font-size: 13px; text-decoration: underline; float: left !important; color: #edebd5 !important; margin-bottom: 10px;
+	
+
+	
+
+}
+
+.promotion-btn {
+	 background: #edebd5 !important;
+	 color: #877C21 !important;
+	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	 font-size: 16px;
+	
+	 padding-top: 10px !important; 
+	 padding-bottom: 10px !important;
+	 border-radius: 5px;
+;
+	 cursor: pointer;
+	
+	
+	  border: none !important;
+	  width: 100% !important;
+	 
+ }
 	
 	
 }
 
 .promotion-btn {
-	 background: #877c21 !important;
-	 color: #FFF !important;
+	 background: #edebd5 !important;
+	 color: #877C21 !important;
 	 font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	 font-size: 16px;
 	
-	 padding-top: 10px; 
-	 padding-bottom: 10px;
+	 padding-top: 20px; 
+	 padding-bottom: 20px;
 	 border-radius: 5px;
 ;
 	 cursor: pointer;
@@ -9980,4 +10100,30 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 	  border: none !important;
 	  width: 70%;
 	 
+ }
+ 
+
+ 
+ .promotion-footer {
+	 
+	 width: 70%; position: absolute; bottom: 0; padding-top: 15px; padding-bottom: 15px; margin-left: 15%;
+ 
+ 
+ 
+ }
+ 
+ .promotion-footer > div {
+	 
+	 width: 16.66%; float: left; text-align: center;
+ 
+ 
+ 
+ }
+ 
+ .promotion-footer > div > a  {
+	 
+	 color: #FFF !important;
+ 
+ 
+ 
  }
