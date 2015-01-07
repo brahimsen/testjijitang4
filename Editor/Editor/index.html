@@ -580,9 +580,11 @@ $(window).scroll(function(){
 		$(document).on('click', 'p', function(){
 			
 			$(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "1", "transform":"scale(1)"})
-			$(this).next().children(".mediumInsert-buttons").find(".editor-comment").css({"opacity" : "1", "transform":"scale(1)"})
+			/*$(this).next().children(".mediumInsert-buttons").find(".editor-comment").css({"opacity" : "1", "transform":"scale(1)"})*/
+			$(this).next().children(".mediumInsert-buttons").find(".editor-headings").css({"opacity" : "1", "transform":"scale(1)"})
 			$("p").not(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "0", "transform":"scale(0)"})
-			$("p").not(this).next().children(".mediumInsert-buttons").find(".editor-comment").css({"opacity" : "0", "transform":"scale(0)"})
+			/*$("p").not(this).next().children(".mediumInsert-buttons").find(".editor-comment").css({"opacity" : "0", "transform":"scale(0)"})*/
+			$("p").not(this).next().children(".mediumInsert-buttons").find(".editor-headings").css({"opacity" : "0", "transform":"scale(0)"})
 	
 		});
 		
@@ -595,8 +597,8 @@ $(window).scroll(function(){
 		
 		$(document).on('click', '.editor-headings-normal', function(){
 			
-			$(this).parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<p/>');
-		$(this).parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("p").parent(".editable").blur();
+			$(this).parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev().contents().unwrap().wrap('<p/>');
+		$(this).parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev("p").parent(".editable").blur();
 		
 			
 			
@@ -605,8 +607,8 @@ $(window).scroll(function(){
 		
 		$(document).on('click', '.editor-headings-h1', function(){
 			
-			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<h1/>');
-			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("h1").parent(".editable").blur();
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev().contents().unwrap().wrap('<h1/>');
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev("h1").parent(".editable").blur();
 		
 			
 			
@@ -615,8 +617,8 @@ $(window).scroll(function(){
 		
 		$(document).on('click', '.editor-headings-h2', function(){
 			
-			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<h2/>');
-			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("h2").parent(".editable").blur();
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev().contents().unwrap().wrap('<h2/>');
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev("h2").parent(".editable").blur();
 			
 			
 			
@@ -624,8 +626,8 @@ $(window).scroll(function(){
 		
 		$(document).on('click', '.editor-headings-h3', function(){
 			
-			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev().contents().unwrap().wrap('<h3/>');
-			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert").prev("h3").parent(".editable").blur();
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev().contents().unwrap().wrap('<h3/>');
+			$(this).parent(".editor-headings-hs").parent(".editor-headings-inner").parent(".editor-headings").parent(".mediumInsert-buttons").parent(".mediumInsert").prev("h3").parent(".editable").blur();
 			
 			
 			
