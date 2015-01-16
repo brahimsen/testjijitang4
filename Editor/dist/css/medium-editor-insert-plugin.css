@@ -55,7 +55,7 @@
 
 .mediumInsert {
   position: relative;
-  margin: -1em 0 -1em -40px;
+  margin: -1em -40px -1em -40px;
   min-height: 18px; }
   .mediumInsert .mediumInsert-buttonsShow {
     opacity: 0;

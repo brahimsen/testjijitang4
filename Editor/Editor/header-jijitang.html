@@ -14,9 +14,8 @@
                 <div class="hidden-desktop nav-btn-mobile-holder">
                 <a class="btn btn-navbar" id="top-menu-btn" data-toggle="collapse" data-target=".nav-collapse">
    		
-        			<span class="icon-bar"></span>
-   					<span class="icon-bar"></span>
-   					<span class="icon-bar"></span>
+        			<span class="icon-menu"></span>
+   					
   		
         		</a>
                 </div>
@@ -31,10 +30,23 @@
   					
                     <ul class="nav span12">
                     
-                    <li><a href="#">Topics</a></li>
-                    <li><a href="#">Topics</a></li>
-                    <li><a href="#">Topics</a></li>
-                    <li><a href="#">Topics</a></li>
+                    <li id="search-pop-mobile" class="hidden-desktop"><a href="/Search.html"></i>Search</a></li>
+                    <li class="dropdown hidden-desktop">
+    						
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Create<b class="caret"></b></a>
+   							<ul class="dropdown-menu">
+    						
+                            	<li><a href="#">Create a List</a></li>
+    							<li><a href="#">Write a Notee</a></li>
+    						
+                            </ul>
+   						</li>
+                 
+                    <li class="hidden-desktop"><a href="/Notifications.html">Notifications (3)</a></li>
+   						
+                    <li><a href="#">Account</a></li>
+                    
+                 
                     
                     </ul>
                 </div>
@@ -45,7 +57,11 @@
    					
                     	<li class="active"><a href="#"></i>Articles</a></li>
    						<li><a href="#">collections</a></li>
-      					<li class="dropdown">
+                        <li class="hidden-desktop"><a href="#">Scan Wechat QR Code</a></li>
+                        <li class="hidden-desktop"><a href="#">About Us</a></li>
+                        <li class="hidden-desktop"><a href="#">Feedback</a></li>
+                        <li class="hidden-desktop"><a href="#">Help</a></li>
+      					<li class="dropdown hidden-tablet hidden-phone">
     				
                     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<b class="caret"></b></a>
    							<ul class="dropdown-menu">
@@ -61,33 +77,11 @@
    					
                     	</li>
    
-    					<li class="dropdown hidden-desktop">
-    						
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Create<b class="caret"></b></a>
-   							<ul class="dropdown-menu">
-    						
-                            	<li><a href="#">Create a List</a></li>
-    							<li><a href="#">Write a Notee</a></li>
-    						
-                            </ul>
-   						</li>
-   
-    					<li class="dropdown hidden-desktop">
     					
-                        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Account<b class="caret"></b></a>
-   							<ul class="dropdown-menu">
-    					
-                        		<li><a href="#">My Jijitang</a></li>
-    							<li><a href="#">My Feeds</a></li>
-    							<li><a href="#">Account Settings</a></li>
-    							<li><a href="#">Logout</a></li>
-    					
-                        	</ul>
    						
-                        </li>
+    					
    
-   						<li class="hidden-desktop"><a href="/Notifications.html">Notifications (3)</a></li>
-   						<li id="search-pop-mobile" class="hidden-desktop"><a href="/Search.html"></i>Search</a></li>
+   						
    						<li class="span3 header-btns hidden-phone hidden-tablet">
    							
                             <div class="row-fluid header-btns-holder">
@@ -104,6 +98,28 @@
    										<li><a href="#">Logout</a></li>
     								</ul>
                 				</div>
+                                
+                                   <div class="nav-promote hidden-phone hidden-tablet">
+                                
+                                	
+                                	<a href="/promotion.html"><span class="icon10-banknote"></span><div class="promotion-notification"></div></a>
+                                     
+                                    
+                                    
+                                  
+                                                                 
+                                </div>
+                                
+                                <div class="nav-read-later hidden-phone hidden-tablet">
+                                
+                                	
+                                	<span style="margin-top: 10px" class="icon-uniE600"></span>
+                                    
+                                    <!-- Read Later Icon Full -->
+                                   
+                                	<!--<span class="icon-uniE616"></span>-->
+                                                                 
+                                </div>
                 
                 				<div class="dropdown nav-alert-holder">
         							<a href="#" class="dropdown-toggle alert-btn" data-toggle="dropdown">
@@ -144,15 +160,15 @@
     							</ul>
                 			</div>
     
-    						<a href="#" id="search-btn"><span class="icon-uniE601"></span></a></div></</li>
+    						<a href="#" id="search-btn"><span class="icon-uniE601" style="padding-top: 3px"></span></a></div></</li>
     
-    						<li class="hidden-phone hidden-tablet search-box-holder"><input placeholder="Search for Articles, Notes, Authors..."  type="text" id="search-text">
+    						<li class="hidden-phone hidden-tablet search-box-holder"><input placeholder="Search for Articles, Notes, Authors..."  type="text" id="search-text" style="height: 13px !important;">
     
     							<div class="search-popover-desktop">
                              	
                                 <div class="row-fluid">
                                 	<div ><img src="../../img/brahim.png" width="40" height="40"/></div>
-                                	<div ><p>Adam Tata</p><p>Shanghai University</p></div>
+                                	<div ><p>Adam Tata</p><p>Shanghai Universityyy</p></div>
                                 	<div ><p>List</p></div>
                                 </div>
                                 
@@ -194,7 +210,7 @@
                                 
                                 <div class="row-fluid see-more-search-results">
                              	    
-                                    <a href="/search.html"> See more results for xyz </a>
+                                    <a href="../../search.html"> See more results for xyz </a>
                                     
                                 </div>
                              
