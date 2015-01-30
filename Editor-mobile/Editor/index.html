@@ -18,6 +18,8 @@
   <script src="../../js/myjavascript.js"></script>
   <script src='../../js/jquery.autosize.js'></script>
   <script src='../dist/js/editor-script-top.js'></script>
+  <script src='../dist/js/jquery.keysequencedetector.js'></script>
+	
   
   
   <style>
@@ -79,13 +81,7 @@
         </div>
         
         <div class="icon-right-float icon-banner-relativity" id="editor-share-btn">
-        	<a><span class="icon-close"></span><span class="hidden-tablet hidden-phone">Cancel</span></a>
-           
-           
-        </div>
-        
-         <div class="icon-right-float icon-banner-relativity" id="editor-share-btn">
-        	<a><span class="icon-uniE609"></span><span class="hidden-tablet hidden-phone">Save</span></a>
+        	<a><span class="icon-uniE603"></span><span class="hidden-tablet hidden-phone">Add Collaborator</span></a>
            
            
         </div>
@@ -358,6 +354,15 @@
 	$( "header" ).load( "header-jijitang.html" );
   </script>
   <script src='../dist/js/editor-script-bottom.js'></script>
+  <script>
+		$(function(){
+		
+			$('p').keySequenceDetector('easter eggs', function() { alert('booms'); });
+			
+		});
+		
+	
+	</script>
     
 </body>
 </html>

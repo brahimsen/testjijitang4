@@ -252,6 +252,12 @@ window.onscroll = function(){
 					
 					$(this).siblings(".edit-comment-block").show();
 					
+					var height = $(this).siblings(".display-comment-text").height();
+				
+					$(this).siblings(".display-comment-text").contents().unwrap().wrap("<textarea style='width: 100%; border: none; box-shadow: none; margin-top: -16px; font-size: 13px; color: #333; margin-left: 3px'></textarea>");
+					$(this).siblings("textarea").focus();
+					$(this).siblings("textarea").css("height",height);
+					
 					$(this).hide();
 		
 					});
@@ -264,28 +270,32 @@ window.onscroll = function(){
 					$(this).parent().siblings(".edit-comment-link").show();
 					$(this).parent().siblings(".view-comment-answer").children(".note-saved-block").hide();
 					$(this).parent().siblings(".note-saved-block").hide();
+					$(this).parent().siblings("textarea").contents().unwrap().wrap("<p class='display-comment-text'></p>");
+					
 					
 					
 		
+					});
+					
+					$('.comment-save-note').click(function(){
+						
+						
+						var newtext = $(this).parent().siblings("textarea").val();
+						
+						
+						
+						$(this).parent().siblings("textarea").contents().unwrap().wrap("<p class='display-comment-text'></p>");
+						$(this).parent().siblings(".display-comment-text").text(newtext);
+						$(this).parent().siblings(".edit-comment-link").show();
+						$(this).parent().siblings(".note-saved-block").hide();
+						$(this).parent().hide();
+						
+				
 					});
 					
 					
 					$('.note-saved-block').hide();
-					$('.comment-save-note').click(function(){
-						
-						
-					
-					
-					$(this).parent().siblings(".view-comment-answer").children(".note-saved-block").show();
-					$(this).parent().siblings(".note-saved-block").show();
-					
-					
-		
-					});
-					
-					
-					
-					
+				
 					$('.mobile-comment-holder').hide();
 					$('.view-comment-btn-hover-mobile').click(function(){
 					
