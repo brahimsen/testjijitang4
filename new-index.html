@@ -1,0 +1,932 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/myform.js"></script>
+<script src="js/collection-script.js"></script>
+
+<style>
+
+#sticky {
+
+}
+#sticky.sticka {
+    position: fixed;
+    top: 50;
+	width: 100% !important;
+    z-index: 10000;
+    
+}
+
+
+.hideme {
+  
+    opacity: 0;
+}
+</style>
+
+<script>
+
+
+
+
+$(document).ready(function() {
+	
+	function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top;
+    if (window_top > div_top) {
+        $('#sticky').addClass('sticka');
+		
+    } else {
+        $('#sticky').removeClass('sticka');
+		
+    }
+}
+
+$(function () {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
+});
+
+$('.index-slide-holder').hide().fadeIn(2500);
+
+});
+
+$(window).scroll(function(e) {
+    var sw = $('.index-top-page-header'),
+       
+        diff = 300 - window.pageYOffset;
+            
+    sw.css('background-color', diff < 100 ? 'black' : '');
+});
+
+$(window).on("load",function() {
+    function fade() {
+        $('.hideme').each(function() {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top + $(this).outerHeight() -100;
+            var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+            
+            /* If the object is completely visible in the window, fade it in */
+            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if ($(this).css('opacity')==0) {$(this).fadeTo(500,1);}
+            } else { //object goes out of view (scrolling up)
+                if ($(this).css('opacity')==1) {$(this).fadeTo(500,0);}
+            }
+        });
+    }
+    fade(); //Fade in completely visible elements during page-load
+    $(window).scroll(function() {fade();}); //Fade in elements during scroll
+});
+
+
+</script>
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+	<div class="container-fluid">
+    
+    		<div class="index-top-page">
+            
+            	<div style="position: relative; z-index: 9999">
+                
+                <div class="index-top-page-header">
+                
+                	<div class="index-container">
+                
+                	<span><a>JIJITANG</a></span>
+                    <span class="scrolled-btn"><a>Sign up</a></span>
+                    <span><a>Login</a></span>
+                    
+                    
+                    </div>
+                   
+                    
+                
+                </div>
+                
+                </div>
+                
+                 <div class="index-slide-holder"> 
+                    
+                    	<h2>Home for Everyone's Research Writing Pieces</h2>
+                        <p>Get your Written Pieces Shared and Reviewed, Discover Newly Published Articles, Keep Learning and be Inspired !</p>
+                        <a class="brown-btn main-index-brown">GET STARTED</a>
+                    
+                     </div>
+            
+            <div class="index-arrow-down-holder"><a href="#arrow-target" class="icon13-arrow-down"  ></a></div>
+            
+            </div>
+    
+    	<div class="index-home-full-width">
+        
+        <div class="index-home-container">
+        
+        	<div class="index-thumb-holder">
+            
+            		<div><span class="icon3-file"></span></div>
+                    <div>
+                    	
+                        <p>Write and Share</p>
+                        <p>Write your notes, papers, articles with jijitang collobeorative online editor.</p>
+                        <a class="brown-btn brown-padding">Start Writing</a>
+                        
+                    
+                    
+                    </div>
+            
+            			
+            
+            </div>
+            <div class="index-thumb-holder ">
+            
+            		<div class="ten-p-left-margin"><span class="icon-uniE601"></span></div>
+                    <div>
+                    	
+                        <p>Read and Review</p>
+                        <p>Find newly published and popular reasearch articles and and stay updated on Jijitang.</p>
+                        <a class="brown-btn brown-padding">Start Research</a>
+                        
+                    
+                    
+                    </div>
+            
+            			
+            
+            </div>
+        
+        
+        </div>
+        
+        </div>
+        <div id="arrow-target" ></div>
+        
+        <div class="index-collections-holder-header ">
+        
+        	<p class="instead-of-h1">A Community For Researchers</p>
+            <p class="instead-of-p">Growing with academic and industrial reasearchers and consultants from all over the world. Share, Create, Write and make a difference.</p>
+        
+        
+        </div>
+        
+         <div id="sticky-anchor"></div>
+         <div class="new-index-nav-holder" id="sticky">
+         
+         
+         
+          <ul class="nav nav-tabs new-index-nav"  role="tablist">
+    <li role="presentation" class="active  hidden-phone"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Business and Economics</a></li>
+    <li role="presentation" class="hidden-phone"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Psychology</a></li>
+    <li role="presentation" class="hidden-phone"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Natural Sciences</a></li>
+    <li role="presentation" class="dropdown new-index-nav-drop"><a id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">More<b class="caret"></b></a>
+    
+    		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+            <li class="hidden-desktop hidden-tablet"><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Business and Economics(<span>22</span>)</a></li>
+            <li class="hidden-desktop hidden-tablet"><a href="#profile"tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Psychology(<span>43</span>)</a></li>
+            <li class="hidden-desktop hidden-tablet"><a href="#messages" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Natural Sciences(<span>35</span>)</a></li>
+          <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Technology (<span>22</span>)</a></li>
+          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> Religion(<span>12</span>)</a></li>
+          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> IT(<span>26</span>)</a></li>
+          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> ARTS(<span>3</span>)</a></li>
+          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> Tech(<span>4</span>)</a></li>
+        </ul>
+    
+    </li>
+  </ul>
+  
+  </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content index-tab-contents">
+  
+  <div role="tabpanel" class="tab-pane" id="dropdown1" aria-labelledby="dropdown1-tab">
+        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+      </div>
+   
+   <div role="tabpanel" class="tab-pane" id="dropdown2" aria-labelledby="dropdown2-tab">
+        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+      </div>
+  
+    <div role="tabpanel" class="tab-pane active" id="home">
+    
+    	<div class="collections-dashbord-holder index-collections-dashbord-holder ">
+        	
+            <div>
+            
+            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                
+                    <div>
+            
+            <div class="collection-item segmentListItem hideme  " draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+            
+                <div>
+            
+            <div class="collection-item segmentListItem hideme  " draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+            
+                <div>
+            
+            <div class="collection-item segmentListItem hideme  " draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+            
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+            
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+            
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		    <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+                <div>
+            
+            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                        
+                        
+                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
+                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
+                                </div>
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                 
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+    		
+    		
+                
+         	</div>
+        
+        
+                
+                
+                
+    
+    
+    
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+    
+    
+    
+    <div class="tab-panel-index-footer" >
+    
+    	<div> <span class="tab-panel-brown-btn"> <a> Sign Up Now </a> </span></div>
+        <div> <span class="tab-panel-gray-btn"> <a> Learn More </a> </span></div>
+    
+    
+    </div>
+    
+    
+  </div>
+   
+        
+    <div class="new-index-footer">
+    
+    
+    		<div>
+            
+            	<div><h3>JIJITANG</h3></div>
+                <div>
+                	<h4> About </h4>
+                    <p> Jijitang is home for everyone's writing peieces. we provide tools and services to help you get better experience on research, reading writing, and sharing. </p>
+                    <a class="active">English</a><a>Chinese</a>
+                
+                </div>
+            
+            </div>
+            
+            
+            <div>
+            
+            		<div>
+                    	
+                        <h4>Jijitang</h4>
+                        <p><a>About</a></p>
+                        <p><a>Help</a></p>
+                        <p><a>Feedback</a></p>
+                        <p><a>Blogs</a></p>
+                        <p><a>Jobs</a></p>
+                    
+                    
+                    </div>
+                    
+                    <div>
+                    
+                    	<h4>Apps</h4>
+                        <p><a>JijiNote</a></p>
+                    	
+                    
+                    </div>
+                    
+                    <div>
+                    
+                    	  <h4>Social</h4>
+                        <p><a>Facebook</a></p>
+                        <p><a>Twitter</a></p>
+                        <p><a>Wechat</a></p>
+                        <p><a>Sina Weibo</a></p>
+                        <p><a>Douban</a></p>
+                    
+                    </div>
+                    <div class="hidden-tablet hidden-phone">
+                    
+                    		<h4>Join</h4>
+                            <a class="brown-btn footer-join-btn">GET STARTED</a>
+                    
+                    </div>
+            
+            
+            </div>
+       
+       
+      
+
+       
+  
+		
+
+
+	</div>
+    
+    
+    </div>
+
+</body>
+
+<script>
+
+$( "header" ).load( "index-header.html" );
+$( "footer" ).load( "footer.html" );
+$( "#Entries1" ).load( "Testnotes/Note1.html" );
+$( "#Entries2" ).load( "Testnotes/Note2.html" );
+$( "#Entries3" ).load( "Testnotes/Note3.html" );
+$( "#Entries4" ).load( "Testnotes/Note4.html" );
+$( "#Entries5" ).load( "Testnotes/Note5.html" );
+
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('.index-arrow-down-holder a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.index-arrow-down-holder a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            currLink.addClass("left-active");
+        }
+        else{
+            currLink.removeClass("left-active");
+        }
+    });
+}
+
+ 
+</script>
+<script src="js/myjavascript.js"></script>
+
+
+
+
+

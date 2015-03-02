@@ -84,7 +84,7 @@ $('.add-section').click(function () {
   
   $(document).ready(function(){
 			
-			$("#mediumInsert-0").children(".mediumInsert-buttons").find("a").css({"opacity" : "1", "transform":"scale(1)"})
+			$("#mediumInsert-0").children(".mediumInsert-buttons").find("button").css({"opacity" : "1", "transform":"scale(1)"})
 			$("#mediumInsert-0").children(".mediumInsert-buttons").find(".editor-headings").css({"opacity" : "1", "transform":"scale(1)"})
 			
 			$("#first-line-placeholder").click(function(){
@@ -131,7 +131,7 @@ $('.add-section').click(function () {
 		
 		$(document).on('click', 'p,h1,h2,h3', function(){
 			
-			$(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "1", "transform":"scale(1)"})
+			$(this).next().children(".mediumInsert-buttons").find("button").css({"opacity" : "1", "transform":"scale(1)"})
 			$(this).next().children(".mediumInsert-buttons").find(".editor-headings").css({"opacity" : "1", "transform":"scale(1)"})
 			$("p,h1,h2,h3").not(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "0", "transform":"scale(0)"})
 			

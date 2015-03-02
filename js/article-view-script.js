@@ -27,6 +27,7 @@ window.onscroll = function(){
 	$('.view-comment-section').hide();			
 	$('.answer-comment-input').hide();
 	$('.answer-comment-link-cancel').hide();
+	$('.answer-comment-link-save').hide();
 	var s = $(".article-left");
 	var e = $(".article-right");
 	var h = $(".article-title").css("height");;
@@ -60,22 +61,36 @@ window.onscroll = function(){
 
 				$(".view-comment-show").click(function(e){
 				
+				if($(window).width() >= 980) {
+				
 				
 				$('.article-left-wrapper').animate({"width":"hide","opacity":"hide" });
 				$('.article-title').animate({"margin-left":"2%" });
+				
 				
 				if($('.article-left-wrapper').css("display") == "block") {
 				$('.article-right').animate({"width":"95.5%"});
 				
 				}
 				
+				
+				
 				$('.view-comment-section').hide();
 				$('.view-comment-section',this).toggle();
 					e.stopPropagation();
 				
+					}
 					
+					else {
+					
+					
+					$('#view-comment-Modalshow').modal();
+					
+					}
 					
 				});
+				
+				
 				
 					$("html").click(function(e){
 					
@@ -91,6 +106,7 @@ window.onscroll = function(){
 				
 					
 				});
+				
 			
 			
 			
@@ -184,17 +200,7 @@ window.onscroll = function(){
 				
 			
 			
-				$(".article-view-tab-content").hover(function(){
 				
-					
-				
-				$('.view-comment-btn-hover-mobile',this).toggleClass('hide-fix');
-				$('.view-comment-btn-mobile',this).toggleClass('hide-fix');
-					
-				
-					
-					
-				});
 				
 			
 				
@@ -219,7 +225,10 @@ window.onscroll = function(){
 					
 					$('.empty-comment').click(function(){
 					
-					 $(this).parent().siblings(".main-comment-text").val("");
+					 $(this).parent().siblings(".article-main-comment-field").val("");
+					 $(this).parent().siblings(".article-main-comment-field").css("height","30px");
+					 $(this).parent().parent().parent().parent().hide();
+					 $(this).parent().parent().parent().parent().siblings(".comment-add-note-for").fadeIn();
 					 
 				
 					
@@ -227,11 +236,27 @@ window.onscroll = function(){
 					
 					});
 					
+					$(".view-write-comment").hide();
+					$('.comment-add-note-for').click(function(){
+					
+					 $(this).siblings(".view-write-comment").fadeIn();
+					 $(this).hide();
+					 
+					 
+				
+					
+					
+					
+					});
+					
+					
+					
 					$('.answer-comment-link').click(function(){
 						
 					
-					$(this).siblings(".answer-comment-input").show();
-					$(this).siblings(".answer-comment-link-cancel").show();
+					$(this).siblings(".answer-comment-input").fadeIn();
+					$(this).siblings(".answer-comment-link-cancel").fadeIn();
+					$(this).siblings(".answer-comment-link-save").fadeIn();
 					$(this).siblings(".note-saved-block").hide();
 					$(this).hide();
 		
@@ -241,20 +266,48 @@ window.onscroll = function(){
 						
 					
 					$(this).siblings(".answer-comment-input").hide();
-					$(this).siblings(".answer-comment-link").show();
+					$(this).siblings(".answer-comment-link").fadeIn();
+					$(this).siblings(".answer-comment-input").children("input").val("");
 					$(this).hide();
+					$(this).siblings(".answer-comment-link-save").hide();
 		
 					});
 					
 					$('.edit-comment-block').hide();
-					$('.edit-comment-link').click(function(){
+					$('.edit-comment-link-parent').click(function(){
+						
+					
+					$(this).parent().siblings(".edit-comment-block").show();
+					$(this).siblings(".comment-collapse-link").hide();
+					
+					var height = $(this).parent().siblings(".display-comment-text").height();
+				
+					$(this).parent().siblings(".display-comment-text").contents().unwrap().wrap("<textarea style='width: 100%; border: none; box-shadow: none; margin-top: -16px; font-size: 13px; color: #333; margin-left: 7px; margin-bottom: 0px'></textarea>");
+					$(this).parent().siblings("textarea").focus();
+					$(this).parent().siblings("textarea").css("height",height);
+					
+					$(this).hide();
+		
+					});
+					
+					$(".view-comment-answer").hide();
+					$('.comment-collapse-link').click(function(){
+						
+						var txt = $(this).parent(".edit-comment-link").siblings(".view-comment-answer").is(':visible') ? '+ show replies' : '- hide replies';
+     					$(this).text(txt);
+						
+						$(this).parent(".edit-comment-link").siblings(".view-comment-answer").slideToggle( "slow" );
+						
+						});
+					
+					$('.edit-comment-link-child').click(function(){
 						
 					
 					$(this).siblings(".edit-comment-block").show();
 					
 					var height = $(this).siblings(".display-comment-text").height();
 				
-					$(this).siblings(".display-comment-text").contents().unwrap().wrap("<textarea style='width: 100%; border: none; box-shadow: none; margin-top: -16px; font-size: 13px; color: #333; margin-left: 3px'></textarea>");
+					$(this).siblings(".display-comment-text").contents().unwrap().wrap("<textarea style='width: 100%; border: none; box-shadow: none; margin-top: -9px; font-size: 13px; color: #333; margin-left: -6px'></textarea>");
 					$(this).siblings("textarea").focus();
 					$(this).siblings("textarea").css("height",height);
 					
@@ -265,9 +318,24 @@ window.onscroll = function(){
 					$('.comment-edit-cancel').click(function(){
 						
 						
+					$(this).parent().siblings(".edit-comment-link").children(".comment-collapse-link").show();
+					$(this).parent().hide();
+					$(this).parent().siblings(".edit-comment-link").children(".edit-comment-link-parent").show();
+					$(this).parent().parent().siblings(".view-comment-answer").children(".note-saved-block").hide();
+					$(this).parent().siblings(".note-saved-block").hide();
+					$(this).parent().siblings("textarea").contents().unwrap().wrap("<p class='display-comment-text'></p>");
+					
+					
+					
+		
+					});
+					
+					$('.comment-edit-cancel').click(function(){
+						
+						
 					
 					$(this).parent().hide();
-					$(this).parent().siblings(".edit-comment-link").show();
+					$(this).parent().siblings(".edit-comment-link-child").show();
 					$(this).parent().siblings(".view-comment-answer").children(".note-saved-block").hide();
 					$(this).parent().siblings(".note-saved-block").hide();
 					$(this).parent().siblings("textarea").contents().unwrap().wrap("<p class='display-comment-text'></p>");
@@ -277,16 +345,21 @@ window.onscroll = function(){
 		
 					});
 					
+					$(".update-comment-fade").hide();
+					
 					$('.comment-save-note').click(function(){
 						
 						
 						var newtext = $(this).parent().siblings("textarea").val();
 						
-						
-						
+						$(this).parent().siblings(".edit-comment-link").show();
+						$(this).parent().siblings(".edit-comment-link").children(".comment-collapse-link").show();
+
 						$(this).parent().siblings("textarea").contents().unwrap().wrap("<p class='display-comment-text'></p>");
 						$(this).parent().siblings(".display-comment-text").text(newtext);
-						$(this).parent().siblings(".edit-comment-link").show();
+						$(this).parent().siblings(".edit-comment-link").children(".edit-comment-link-parent").show();
+						$(this).parent().siblings(".comment-author-name-holder").children(".update-comment-fade").fadeIn(1000);
+						setTimeout($(this).parent().siblings(".comment-author-name-holder").children(".update-comment-fade").fadeOut(), 3000 );
 						$(this).parent().siblings(".note-saved-block").hide();
 						$(this).parent().hide();
 						
@@ -297,15 +370,9 @@ window.onscroll = function(){
 					$('.note-saved-block').hide();
 				
 					$('.mobile-comment-holder').hide();
-					$('.view-comment-btn-hover-mobile').click(function(){
-					
-					$('.mobile-comment-holder').fadeIn("slow");
-					$('.mobile-article-top').addClass('hide-fix');
-					$('.header-wrapper').addClass('hide-fix');
-					$('body').addClass('disable-scroll');		
 					
 					
-					});
+					
 					
 					$('.cancel-mobile-comment').click(function(){
 					
@@ -357,4 +424,4 @@ window.onscroll = function(){
 				});
 				
 				
-				
+	

@@ -14,9 +14,11 @@
   <link href="../../css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
   <link href="../../style.css" rel="stylesheet" type="text/css">
   <script src="../dist/js/Jquery-11.js"></script>
+  <script src="../../js/jquery.easing.1.3.js"></script>
   <script src="../../js/bootstrap.js"></script>
   <script src="../../js/myjavascript.js"></script>
   <script src='../../js/jquery.autosize.js'></script>
+  <script src="../../js/article-view-script.js"></script>
   <script src='../dist/js/editor-script-top.js'></script>
   
   
@@ -49,7 +51,25 @@
   
   </style>
   
+<script>
 
+$(function(){	
+    var cubuk_seviye = $(document).scrollTop();
+    var header_yuksekligi = $('.yapiskan').outerHeight();
+
+    $(window).scroll(function() {
+        var kaydirma_cubugu = $(document).scrollTop();
+
+        if (kaydirma_cubugu > header_yuksekligi){$('.yapiskan').addClass('gizle');} 
+        else {$('.yapiskan').removeClass('gizle');}
+
+        if (kaydirma_cubugu > cubuk_seviye){$('.yapiskan').removeClass('sabit');} 
+        else {$('.yapiskan').addClass('sabit');}				
+
+        cubuk_seviye = $(document).scrollTop();	
+     });
+});
+</script>
   
   
   
@@ -63,134 +83,97 @@
     
     
     <!--Buttons holder-->
+    <div class="hidden-desktop yapiskan" style="">
     
-    <div class="editor-icons-holder" style="z-index: 9998">
-    
-    	<div id="delete-article " class="icon-right-float icon-banner-relativity">
-        	<a id="icon-remove-article"><span  class="icon-remove"></span><span class="hidden-tablet hidden-phone">Delete</span></a>
-            
-            <div class="editor-delete-popup" >
-            	
-                <p>Are you sure you want to delete this article? </p>
-        		<button id="confirm-delete" class="Confirm-Modal-btn">Delete</button>
-        		<button   id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
-            
-            </div>
-        </div>
-        
-        <div class="icon-right-float icon-banner-relativity" id="editor-share-btn">
-        	<a><span class="icon-close"></span><span class="hidden-tablet hidden-phone">Cancel</span></a>
-           
-           
-        </div>
-        
-         <div class="icon-right-float icon-banner-relativity" id="editor-share-btn">
-        	<a><span class="icon-uniE609"></span><span class="hidden-tablet hidden-phone">Save</span></a>
-           
-           
-        </div>
-        
-        <div id="publish-article" class="icon-right-float icon-banner-relativity">
-        	<a id="publish-article-icon"><span class="icon-blog"></span><span class="hidden-tablet hidden-phone">Publish</span></a>
-            <div class="editor-publish-popup" >
-            	
-                <div class="note-popover-update-header"><h4>Publish</h4></div>
-                <div class="publish-no-collection">
-                
-                <p>Are you sure you want to publish this article? </p>
-        		<button  id="confirm-publish-no-col" class="Confirm-Modal-btn">Publish</button>
-        		<button   id="cancel-publish-no-col" class="Cancel-Modal-btn">Cancel</button >
-                
-                </div>
-                
-                <div class="publish-with-collection-wrapper">
-                
-                 <div class="publish-with-collection">
-                
-                	<div>
-                    
-                    	<img src="../../img/collection-background.jpg"/>
-                        <p style="float: left"><a>Title of the collection</a></p>
-                        <input class="coll-checkbox" type="checkbox">
-                    
-                    </div>
-                    
-                    <div>
-                    
-                    	<img src="../../img/collection-background.jpg"/>
-                        <p style="float: left"><a>Title of the collection</a></p>
-                        <input class="coll-checkbox" type="checkbox" >
-                    
-                    </div>
-                    
-                    <div>
-                    
-                    	<img src="../../img/collection-background.jpg"/>
-                        <p style="float: left"><a>Title of the collection</a></p>
-                        <input class="coll-checkbox" type="checkbox">
-                    
-                    </div>
-                    
-                    <div>
-                    
-                    	<img src="../../img/collection-background.jpg"/>
-                        <p style="float: left"><a>Title of the collection</a></p>
-                        <input class="coll-checkbox" type="checkbox" >
-                    
-                    </div>
-                    
-                     <div>
-                    
-                    	<img src="../../img/collection-background.jpg"/>
-                        <p style="float: left"><a>Title of the collection</a></p>
-                        <input class="coll-checkbox" type="checkbox" >
-                    
-                    </div>
-                    
-                     <div>
-                    
-                    	<img src="../../img/collection-background.jpg"/>
-                        <p style="float: left"><a>Title of the collection</a></p>
-                        <input class="coll-checkbox" type="checkbox" >
-                        
-                    
-                    </div>
-                    
-                     <div>
-                    
-                    	<img src="../../img/collection-background.jpg"/>
-                        <p style="float: left"><a>Title of the collection</a></p>
-                        <input class="coll-checkbox" type="checkbox" >
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="publish-with-collection-btns">
-                
-                <p>Don't Have a Collection.<a> Create a New Collection</a> </p>
-        		<button id="confirm-publish-with-col" class="Confirm-Modal-btn">Publish </button>
-        		<button   id="cancel-publish-with-col" class="Cancel-Modal-btn">Cancel</button >
-                </div>
-                </div>
-                
-                <div class="note-popover-update-header" id="note-popover-update-footer"><p style="color: #3D7D8B !important">Publish  with a collection</p></div>
-            
-            </div>
-        </div>
-        
-        
-        
-        <div class="icon-left-float"><a><span class="icon4-arrow-left" ></span></a></div>
-        
-        <div class="icon-left-float editor-comment-icon">
-        	<a><span class="icon-uniE607"></span></a>
-        </div>
-    
+    <a class="view-top-menu-collection view-top-menu-collection-first "><img src="img/collection-background.jpg" /></a>
+        <a class="view-top-menu-author "><img src="../../img/brahim.png" /></a>
+        <a class="view-top-menu-author "><img src="../../img/brahim.png" /></a>
+        <span class="top-view-publish-time ">Draft</span>
     
     </div>
     
-    
+    <div class="article-top-wrapper" style="z-index: 1">
+     <div class="article-top">
+        
+        <div class="view-right-top-menu-holder">
+        
+       
+<!--        <a><span class="icon-uniE607 editor-comment-icon"></span><span class="editor-comment-icon-counter" >3</span></a>
+        
+        
+       
+        <a class="view-top-menu-author hidden-phone hidden-tablet"><img src="../../img/brahim.png" /></a>
+        <a class="view-top-menu-author hidden-phone hidden-tablet"><img src="../../img/brahim.png" /></a>
+       
+        <span class="top-view-publish-time hidden-phone hidden-tablet">Draft</span> -->
+        	
+          <div id="icon-remove-article" class="myentry-share three-percent-margin">
+            	<div><span class="icon-remove"></span></div>
+                <p class="hidden-phone hidden-tablet">Remove</p>
+                <div class="editor-delete-popup" >
+            	
+                <p>Are you sure you want to delete this article? </p>
+        		<button id="confirm-delete" class="Confirm-Modal-btn">Delete</button>
+        		<button   id="cancel-delete" class="Cancel-Modal-btn thirty-three-width">Cancel</button >
+            
+            </div>
+            
+            </div>
+            
+           
+            
+            <div class="share-collection" style=" position: relative" >
+            	<div><span class="icon-uniE608"></span></div>
+                <p class="hidden-phone hidden-tablet">Publish</p> 
+                
+                 <div class="collection-popover-submit view-pop-over-submit">
+                            
+                             <div class="note-popover-update-header">
+                             	<h4>Publish This Article as</h4>
+                                
+                   
+                             
+                             </div>     
+                             
+                             <div class="editor-publish-holder">
+                                 <input class="editor-radio-btns" type="radio" name="publish-type" value="Public"><span style="margin-top: 20px; font-weight: bold" >Public</span><p class="editor-radio-btns-text">The article/note will be public. Your followers will be notified when you publish.</p>
+								<input class="editor-radio-btns" type="radio" name="publish-type" value="Unlisted"><span  style="margin-top: 20px; font-weight: bold"  >Unlisted</span><p class="editor-radio-btns-text">The article/note will only be visible to those with the link. It won't be listed on JIJITANG's public pages (your profile, homepage) and people won't be able to find it using a search engine.</p>    
+                                
+                           </div>     
+ 
+            </div>
+            
+            </div>
+            
+             <div class="like-holder" >
+          <div><span class="icon-uniE603"></span></div>
+                <p class="hidden-phone hidden-tablet">Share Draft</p> 
+            </div>
+            
+           
+            
+               <div id="publish-article" class="article-view-read-later" >
+            	<div><span class="icon-uniE609"></span></div>
+                <p class="hidden-phone hidden-tablet">Save</p> 
+            </div>
+            
+            <div class="editor-comment-icon"  >
+            
+            	<div><span class="icon-uniE607"></span></div>
+     			<!--<div class="editor-comment-icon-counter" >3</div>-->
+            </div>
+            
+             <a class="view-top-menu-author hidden-phone hidden-tablet"><img src="../../img/brahim.png" /></a>
+        <a class="view-top-menu-author hidden-phone hidden-tablet"><img src="../../img/brahim.png" /></a>
+        <span class="top-view-publish-time hidden-phone hidden-tablet">Draft</span>
+            
+        </div>
+                 
+        
+        </div>
+        
+    	</div><!--End of desktop article Top -->
+    </div>
 		<!-- End of Buttons holder-->
             
             <div class="editor-page-wrapper">
@@ -211,7 +194,7 @@
                    <div class="editor-comment-bubble-wrapper">
                     <div class="editor-comment-bubble"> very persuasive article !! good job, keep on !! I would like to add more details concerning the attribution of the article to the authors of the bla bla bla, nice job, keep up working !!</div>
 					<div class="editor-comment-bubble-time">
-                    <span style="">Today 12:34 P.M </span>
+                    <span style="">Draft</span>
                     </div>
                 	</div>
                 
@@ -331,7 +314,7 @@
   <!--Editor-->
   <div id="container" class="editor">
     
-    <textarea id="editor-title"  placeholder="Title of Your Article"></textarea>
+    <textarea id="editor-title"  placeholder="Title "></textarea>
    			
     </input>
         
@@ -339,12 +322,14 @@
     
     	<p><span id="first-line-placeholder">Type More of Your Text....</span><br></p>
      
-    </div><!--End of Editor-->
+    </div>
   
-  
+  	
  
   
-  </div>
+  </div><!--End of Editor-->
+  <!--<div class="editor-categories"><span>Category</span><a>Economics,</a><a>Finance, </a><a>Business</a></div>
+    <div class="editor-tags"><span>Tags</span><a>crisis</a><a>money</a></div>-->
   </div>
   
   <!--Add Section btn-->
