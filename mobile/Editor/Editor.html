@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0;">
+		<title>JIJITANG</title>
+		<link rel="stylesheet" href="../themes/jquery.mobile-1.4.4.css">
+        <link rel="stylesheet" href="../mobile-style.css">
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="editor.js"></script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="editor.css" type="text/css" rel="stylesheet"/>
+
+
+
+<script>
+
+$(window).on("load",function() {
+	
+	function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top;
+    if (window_top > div_top) {
+        $('#menuBarDiv').addClass('sticka');
+		
+    } else {
+        $('#menuBarDiv').removeClass('sticka');
+		
+    }
+}
+
+$(function () {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
+});
+});
+
+
+</script>
+
+    
+    <script type="text/javascript">
+		$(document).ready( function() {
+            
+         $("#txtEditor").Editor();                    
+         
+    });
+  </script>
+	</head>
+    
+    
+	<body ng-app ng-controller="todoCtrl">
+	<div data-role="page" class="jqm-demos main-mobile-editor" id="panel-fixed-page1" data-title="Panel fixed positioning">
+
+    <div data-role="header"  class="mobile-header editor-mobile-header">
+        <h1>Create a Note</h1>
+        <a href="#nav-panel" class="icon15-arrow-left" ></a>
+       
+    </div><!-- /header -->
+
+	<div class="mobile-editor-title">
+    <input type="text" style="width: 100%; height: 40px;" placeholder="Type your Title">
+	</div>
+
+
+
+<div data-role="popup" id="addtopopup" data-theme="a" data-overlay-theme="b" >
+					<ul data-role="listview" data-inset="true" style="min-width:210px;">
+						<li data-role="list-divider">Choose an action</li>
+						<li><a href="#">View details</a></li>
+						<li><a href="#">Edit</a></li>
+						<li><a href="#">Disable</a></li>
+						<li><a href="#">Delete</a></li>
+					</ul>
+			</div>
+            
+            
+
+    <div role="main" class="ui-content jqm-content jqm-fullwidth mobile-editor-wrapper">
+	<div id="sticky-anchor"></div>
+    <div class="container">
+<div class="row">
+	<div class="col-lg-12 nopadding">
+    	<textarea id="txtEditor" ></textarea> 
+        
+    </div>
+</div>  
+</div>
+
+	
+       
+
+	</div><!-- /content -->
+    
+
+
+    <div data-role="footer" data-position="fixed" class="mobile-footer">
+    	<div data-role="navbar">
+		<ul>
+			<li><a href="a.html" class="icon-uniE609"></a></li>
+			<li><a href="#sharearticle" data-rel="popup" data-transition="pop" data-position-to="window" class="icon-uniE603"></a></li>
+			<li><a href="#publisharticle" data-rel="popup" data-transition="pop" data-position-to="window" class="icon-blog"></a></li>
+			<li><a href="#deletearticle" data-rel="popup" data-transition="pop" data-position-to="window" class="icon-remove"></a></li>
+		</ul>
+	</div><!-- /navbar -->
+    </div><!-- /footer -->
+
+	<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel">
+
+		<ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="#panel-fixed-page2">Abstract</a></li>
+                <li><a href="#panel-fixed-page2">Introduction</a></li>
+                <li><a href="#panel-fixed-page2">Results</a></li>
+                <li><a href="#panel-fixed-page2">Possibilities</a></li>
+                <li><a href="#panel-fixed-page2">Conclusion</a></li>
+                <li><a href="#panel-fixed-page2">References</a></li>
+                
+                
+		</ul>
+
+	</div><!-- /panel -->
+
+ <div data-role="popup" id="deletearticle" class="ui-content" data-theme="a">
+<p>Are you Sure you Want to Delete this Article?</p>
+<button  class="ui-btn ui-shadow mobile-main-btn">Delete</button>
+<a data-rel="back" class="ui-btn ui-shadow">Cancel</a>
+</div>
+
+ <div data-role="popup" id="sharearticle" class="ui-content" data-theme="a">
+<p>Share Draft</p>
+<input type="text" placeholder="Write Your Link" name="text-basic" id="text-basic" value="">
+<button  class="ui-btn ui-shadow mobile-main-btn">Copy</button>
+<a data-rel="back" class="ui-btn ui-shadow">Cancel</a>
+<p>Anyone who get the above link can view this draft</p>
+</div>
+
+ <div data-role="popup" id="publisharticle" data-theme="a">
+
+	<div class="mobile-grid">Publish</div>
+    <div class="mobile-grid"><span class="icon21-clock"></span><p>Last publish time: 10 pm, 12/23/2015</p></div>
+    <div class="mobile-grid"><a>Select a category</a><span class="icon15-arrow-right"></span></div>
+    <div class="mobile-grid"><span><a data-transition="slide" href="#view-comments">+ Add a Key Word</a></span></div>
+    <div class="mobile-grid"><button  class="ui-btn ui-shadow mobile-main-btn">Publish</button></div>
+
+</div>
+
+	<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
+
+        <form class="userform">
+
+        	<h2>Login</h2>
+
+            <label for="name">Username:</label>
+            <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+                <div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Save</a></div>
+			</div>
+        </form>
+
+	</div><!-- /panel -->
+
+</div><!-- /page -->
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>JIJITANG</title>
+		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
+        <link rel="stylesheet" href="mobile-style.css">
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	</head>
+	<body>
+	<!--	<div data-role="page" data-theme="a" id="panel-fixed-page1" data-title="Panel fixed positioning" data-url="panel-fixed-page1">
+			<div data-role="header" data-position="fixed">
+        <h1>Fixed header</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+    </div>
+
+		<div class="mobile-top-holder" data-role="navbar">
+					<ul>
+						<li><a href="dashbord-mobile.html" data-icon="home" class="ui-btn-active" >Dashboard</a></li>
+						<li><a href="articles.html" data-icon="star" > Articles</a></li>
+						<li><a href="collections.html" data-icon="grid"> Collections</a></li>
+						
+					</ul>
+				</div>
+
+
+<div class="mobile-body-holder">
+<div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul class="mobile-tabs">
+      <li><a href="#one" data-ajax="false">News</a></li>
+      <li><a href="#two" data-ajax="false">Read Later</a></li>
+    </ul>
+  </div>
+  <div id="one" class="ui-body-d ui-content">
+
+		<ul class="mobile-list-view" data-role="listview" data-inset="true">
+    	<li><a href="#">
+        	<img src="img/brahim.png">
+    		<h2>Broken Bells</h2>
+    		<p>Sep 13th, 2014</p></a>
+    </li>
+    
+    <li><a href="#">
+        	<img src="img/brahim.png">
+    <h2>Warning</h2>
+    <p>Sep 13th, 2014</p></a>
+    </li>
+    <li><a href="#">
+        	<img src="img/brahim.png">
+    <h2>Wolfgang Amadeus Phoenix</h2>
+    <p>Sep 13th, 2014</p></a>
+    </li>
+</ul>
+
+
+  </div>
+  <div id="two">
+    <ul data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+  </div>
+</div>
+
+
+		</div>
+        
+     
+        
+        
+        </div>
+        -->
+        
+        
+        <div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="Panel fixed positioning">
+
+    <div data-role="header" data-position="fixed" class="mobile-header">
+        <h1>Fixed header</h1>
+        <a href="#nav-panel" data-icon="carat-l" data-iconpos="notext" class="ui-nodisc-icon">Menu</a>
+        <a href="#add-form" data-icon="gear" data-iconpos="notext" class="ui-nodisc-icon">Add</a>
+    </div><!-- /header -->
+    	<div class="mobile-top-holder" data-role="navbar">
+					<ul>
+						<li><a href="dashbord-mobile.html" data-icon="home" class="ui-btn-active" >Dashboard</a></li>
+						<li><a href="articles.html" data-icon="star" > Articles</a></li>
+						<li><a href="collections.html" data-icon="grid"> Collections</a></li>
+						
+					</ul>
+				</div>
+
+  <div class="mobile-body-holder">
+<div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul class="mobile-tabs">
+      <li><a href="#one" data-ajax="false">News</a></li>
+      <li><a href="#two" data-ajax="false">Read Later</a></li>
+    </ul>
+  </div>
+  <div id="one" class="ui-body-d ui-content">
+
+		<ul class="mobile-list-view" data-role="listview" data-inset="true">
+    	<li><a href="#">
+        	<img src="img/brahim.png">
+    		<h2>Broken Bells</h2>
+    		<p>Sep 13th, 2014</p></a>
+    </li>
+    
+    <li><a href="#">
+        	<img src="img/brahim.png">
+    <h2>Warning</h2>
+    <p>Sep 13th, 2014</p></a>
+    </li>
+    <li><a href="#">
+        	<img src="img/brahim.png">
+    <h2>Wolfgang Amadeus Phoenix</h2>
+    <p>Sep 13th, 2014</p></a>
+    </li>
+</ul>
+
+
+  </div>
+  <div id="two">
+    <ul data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+  </div>
+</div>
+
+
+		</div>
+
+
+
+	
+
+	<div data-role="panel" data-position="right" data-position-fixed="true" data-display="push" data-theme="b" id="add-form">
+
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="#panel-fixed-page2">Home</a></li>
+                <li><a href="#panel-fixed-page2">Write a Note</a></li>
+                <li><a href="#panel-fixed-page2">Write Article</a></li>
+                <li><a href="#panel-fixed-page2">Notifications</a></li>
+                <li><a href="#panel-fixed-page2">Collections</a></li>
+                <li><a href="#panel-fixed-page2">Scan QR </a></li>
+                <li><a href="#panel-fixed-page2">About Us</a></li>
+                <li><a href="#panel-fixed-page2">FeedBack</a></li>
+                <li><a href="#panel-fixed-page2">Account</a></li>
+             
+             
+		</ul>
+
+	</div><!-- /panel -->
+
+</div><!-- /page -->
+
+
+        
+	</body>
+</html>
