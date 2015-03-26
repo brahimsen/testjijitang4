@@ -13,44 +13,53 @@
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
         
+        <script>
+        $(document).ready(function(){
+			
+			 $('#mobile-like').click(function(){
+				 
+				$(this).toggleClass('icon-uniE602');
+				$(this).toggleClass('icon-uniE615');
+				$(this).toggleClass('brown-button');
+				
+        		
+    			});
+				
+				 $('#mobile-read-later').click(function(){
+				 
+				$(this).toggleClass('icon-uniE600');
+				$(this).toggleClass('icon-uniE616');
+				$(this).toggleClass('brown-button');
+				
+        		
+    			});
+        
+        });
+        
+        </script>
+        
          <style id="center">
 		.center {
 			text-align: center;
 		}
 	</style>
     
+    <style>
+
+	 
+	</style>
+    
 	</head>
-	<body ng-app ng-controller="todoCtrl">
+	<body>
 	<div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="Panel fixed positioning">
 
-    <div data-role="header" data-position="fixed" class="mobile-header">
-        <h1>JIJITANG</h1>
-        <a href="#nav-panel" data-icon="bars" data-iconpos="notext" class="ui-nodisc-icon">Menu</a>
-        <a href="#add-form" data-icon="gear" data-iconpos="notext" class="ui-nodisc-icon">Add</a>
+    <div data-role="header" data-position="fixed" class=" mobile-header view-mobile-header">
+        <h1>Publication Title</h1>
+        <a href="#nav-panel" class="icon15-arrow-left" ></a>
+        <a id="view-header-comment-icon"  data-transition="slide" href="#view-comments" class="icon-uniE607" ><span>23</span></a>
     </div><!-- /header -->
 
-	<div data-demo-html="true" data-demo-css="#center" style="background:#eee">
-            <div class="ui-grid-d center">
-                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline ">Button</a></div>
-                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-heart ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                <div class="ui-block-c"><a class="ui-shadow ui-btn ui-corner-all ui-icon-tag ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                <div class="ui-block-d"><a data-position-to="window" data-transition="pop" href="#addtopopup" data-rel="popup" class="ui-shadow ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                <div class="ui-block-e"><a  data-position-to="window" data-transition="pop" href="#sharepopup" data-rel="popup" class="ui-shadow ui-btn ui-corner-all ui-icon-forward ui-btn-icon-notext ui-btn-inline">Button</a></div>
-            </div>
-        </div><!--/demo-html -->
 
-
-
-<div data-role="popup" id="addtopopup" data-theme="a" data-overlay-theme="b" >
-					<ul data-role="listview" data-inset="true" style="min-width:210px;">
-						<li data-role="list-divider">Choose an action</li>
-						<li><a href="#">View details</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">Disable</a></li>
-						<li><a href="#">Delete</a></li>
-					</ul>
-			</div>
-            
             <div data-role="popup" id="sharepopup" data-theme="a" data-overlay-theme="b" >
 					<ul data-role="listview" data-inset="true" style="min-width:210px;">
 						<li data-role="list-divider">Select a network</li>
@@ -64,124 +73,227 @@
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
 
-    	<h2>Title of the article</h2>
-
-        <div class="mobile-section-holder">
-        <a href="#view-comments" role="button" class="ui-btn ui-icon-comment ui-btn-icon-notext mobile-comment-icon ui-corner-all" data-transition="slide">Icon only</a>
+    	<h3 class="mobile-article-title">Title of the article</h3>
+        <p class="mobile-article-info" >
         
-        <p>This is a typical page that has two buttons in the header bar that open panels. The left panel has the push display mode. The right panel opens as overlay. For both panels we set <code>data-position-fixed="true"</code>. We also set position fixed for the header and footer on this page.</p>
-
-        <p>The left panel contains a long menu to demonstrate that the framework will check the panel contents height and unfixes the panel so its content can be scrolled. In the right panel there is a short form that shows the fixed positioning.</p>
+        		<a>Adam Tata</a>
+                <a>March, 22, 2015</a>
         
-        </div>
+        </p>
+        
+        <p class="mobile-article-content" >
+        
+        		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        
+        </p>
+        
+        <p class="article-number-likes"><span>5</span> People liked this Article/Note/Publication</p>
+        
+        <p class="article-likes-avatars"><a><img src="../img/brahim.png"/></a><a><img src="../img/brahim.png"/></a><a><img src="../img/brahim.png"/></a></p>
+        
+        <p class="article-number-saves"><span>11</span> People saved this Article to their collection</p>
 
-		<div data-demo-html="#panel-fixed-page1"></div><!--/demo-html -->
+		<p class="article-saves-avatars"><a><img src="../img/collection-background.jpg"/></a><a><img src="../img/collection-background.jpg"/></a><a><img src="../img/collection-background.jpg"/></a></p>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <a href="../" data-rel="back" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Back</a>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+       
       
 
-        <p>We made the page a bit longer because you only see the panel fixed positioning if you can scroll the page :-)</p>
+       
+      
+
+        
 
 	</div><!-- /content -->
 
-    <div data-role="footer" data-position="fixed" class="mobile-footer">
-    	<h4>Fixed footer</h4>
-    </div><!-- /footer -->
+   <div data-role="footer" data-position="fixed" class="mobile-footer">
+    	<div data-role="navbar">
+		<ul>
+			<li><a data-transition="slide" href="#add-comment" class="icon-uniE607"></a></li>
+			<li><a id="mobile-read-later" class="icon-uniE600"></a></li>
+			<li><a id="mobile-like" class="icon-uniE602"></a></li>
+			<li><a href="#add-to-collection" data-transition="slide" class="icon3-folders"></a></li>
+            <li>
+            <a href="#sharepopup" data-rel="popup" data-transition="pop" data-position-to="window" class="icon-uniE603"></a>
+            </li>
 
-	<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel">
-
-		<ul data-role="listview">
-            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-                <li><a href="#panel-fixed-page2">Abstract</a></li>
-                <li><a href="#panel-fixed-page2">Introduction</a></li>
-                <li><a href="#panel-fixed-page2">Results</a></li>
-                <li><a href="#panel-fixed-page2">Possibilities</a></li>
-                <li><a href="#panel-fixed-page2">Conclusion</a></li>
-                <li><a href="#panel-fixed-page2">References</a></li>
-                
-                
 		</ul>
+	</div><!-- /navbar -->
+    </div><!-- /footer -->
+	
 
-	</div><!-- /panel -->
-
-	<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
-
-        <form class="userform">
-
-        	<h2>Login</h2>
-
-            <label for="name">Username:</label>
-            <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
-
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
-
-            <div class="ui-grid-a">
-                <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
-                <div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Save</a></div>
-			</div>
-        </form>
-
-	</div><!-- /panel -->
+	
 
 </div><!-- /page -->
-<div data-role="page" data-dialog="true" id="view-comments">
+<div data-role="page" id="view-comments">
 
+		<div data-role="header" data-position="fixed" class=" mobile-header view-mobile-header">
+        <h1>All Comments</h1>
+        <a href="#panel-fixed-page1" data-transition="slide" data-direction="reverse" class="icon15-arrow-left" ></a>
+        <a href="#add-comment"  data-transition="slide" class="add-comment-plus-icon"  >+</a>
+        
+       
 
-
-		<div data-role="header" data-theme="b">
-		<h1>Comments(23)</h1>
-		</div>
+    </div><!-- /header -->
+    
+    	<div class="mobile-large-list-view">
+        
+        	<div>
+            
+            	 <a>
+                 	<img  style="" src="../img/brahim.png"/>
+                 </a>
+                
+                 <div>
+                	
+                    <div>
+                    
+                    	<a>brahim Senhaji</a>
+                        <span>5:21 P.M</span>
+                        
+                    </div>
+                    
+                    <p>Man with all his noble qualities still bears in his bodily frame the indelible stamp of his lowly origin by Charles Darwin</p>
+                    
+                
+                </div>
+            
+            
+            </div>
+            
+            <div>
+            
+            	 <a>
+                 	<img  style="" src="../img/brahim.png"/>
+                 </a>
+                
+                 <div>
+                	
+                    <div>
+                    
+                    	<a>Adam Tata</a>
+                        <span>22/02/2014</span>
+                        
+                    </div>
+                    
+                    <p>Man with all his noble qualities still bears in his bodily frame the indelible stamp of.</p>
+                    
+                
+                </div>
+            
+            
+            </div>
+            
+            <div>
+            
+            	 <a>
+                 	<img  style="" src="../img/brahim.png"/>
+                 </a>
+                
+                 <div>
+                	
+                    <div>
+                    
+                    	<a>Said Hammouni</a>
+                        <span>5:21 P.M</span>
+                        
+                    </div>
+                    
+                    <p>Man with all his noble qualities still bears in his bodily frame the indelible stamp of his lowly origin by Charles Darwin in his bodily frame the indelible stamp of his lowly origin by Charles Darwin</p>
+                    
+                
+                </div>
+            
+            
+            </div>
+            
+            <div>
+            
+            	 <a>
+                 	<img  style="" src="../img/brahim.png"/>
+                 </a>
+                
+                 <div>
+                	
+                    <div>
+                    
+                    	<a>George Carlin</a>
+                        <span>Yesterday 4:04 P.m</span>
+                        
+                    </div>
+                    
+                    <p>Man with all his noble qualities</p>
+                    
+                
+                </div>
+            
+            
+            </div>
+            
+        
+        
+        </div>
+        
+        
+        
+        
         
         
 
-		<div role="main" class="ui-content">
-        <form ng-submit="todoAdd()">
-    <textarea type="text" ng-model="todoInput" size="50" placeholder="Write a Comment"></textarea>
-    <input type="submit" value="Add New">
-</form>
-
-<br>
-
-<div ng-repeat="x in todoList">
-    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
-</div>
-
-<p><button ng-click="remove()">Remove marked</button></p>
-
-<script>
-function todoCtrl($scope) {
-    $scope.todoList = [{todoText:'Clean House', done:false}];
-
-    $scope.todoAdd = function() {
-        $scope.todoList.push({todoText:$scope.todoInput, done:false});
-        $scope.todoInput = "";
-    };
-
-    $scope.remove = function() {
-        var oldList = $scope.todoList;
-        $scope.todoList = [];
-        angular.forEach(oldList, function(x) {
-            if (!x.done) $scope.todoList.push(x);
-        });
-    };
-}
-</script>
 		
 		</div>
+	</div>
+
+
+
+
+<div data-role="page" id="add-comment">
+
+		<div data-role="header" data-position="fixed" class=" mobile-header view-mobile-header">
+        <h1>Comment</h1>
+        <a class="mobile-write-comment-header-btns" href="#panel-fixed-page1" data-transition="slide" data-direction="reverse" >Cancel</a>
+        <a class="mobile-write-comment-header-btns">Submit</a>
+        
+       
+
+    </div><!-- /header -->
+    
+    
+    	<textarea style="overflow-y: hidden" placeholder="Write Your Comment..."></textarea>
+    
+
+		
+	</div>
+    
+<div data-role="page" id="add-to-collection">
+
+		<div data-role="header" data-position="fixed" class=" mobile-header view-mobile-header">
+        <h1>Save To Collection</h1>
+        <a data-transition="slide" data-direction="reverse" href="#panel-fixed-page1" class="icon15-arrow-left" ></a>
+        <a class="mobile-write-comment-header-btns">Confirm</a>
+        
+       
+
+    </div><!-- /header -->
+    
+    <div data-demo-html="true">
+			<form>
+				<fieldset data-role="controlgroup" data-iconpos="right">
+					
+					<input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+					<label for="checkbox-h-6a">by Charles Darwin</label>
+					<input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+					<label for="checkbox-h-6b">Computer Sience</label>
+					<input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+					<label for="checkbox-h-6c">Man with all his noble qualities still bears in his bodily frame the indelible stamp of his lowly origin by Charles Darwin</label>
+				</fieldset>
+			</form>
+		</div><!--/demo-html -->
+    	
+    
+
+		
 	</div>
 
 
