@@ -724,7 +724,7 @@
 	.mobile-footer > div > ul > li:nth-child(1) > a {
 		  background: #FFF !important;
 		  font-size: 18px !important;
-		 color: #877c21 !important;
+		
 		  text-shadow: none !important;
 	  
 	  
@@ -801,3 +801,98 @@
 		 background-color: #FFF !important;
 	 
 	 }
+	 
+	 
+	 .main-mobile-btn {
+		 background: #3D7D8B !important;
+		 color: #FFF !important;
+		 text-shadow: none !important;
+		 border: none !important;
+		 box-shadow: none !important;
+	 
+	 }
+	 
+	 .main-mobile-btn:hover {
+		 background: #4C9CAD !important; 
+		 color: #FFF !important;
+		  border: none !important;
+		 
+	 
+	 }
+	 
+	 .main-mobile-gray-btn {
+		 background: #ccc !important;
+		 color: #333 !important;
+		 text-shadow: none !important;
+		  border: none !important;
+		  box-shadow: none !important;
+	 
+	 }
+	 
+	 .main-mobile-gray-btn:hover {
+		 background: #eee !important;
+		 color: #333 !important;
+		 text-shadow: none !important;
+		  border: none !important;
+	 
+	 }
+	 
+	 
+	 input {
+		 box-shadow: none !important;
+	 
+	 }
+	 
+	 .panel-collapse-item {
+		 padding: 0px !important;
+	 
+	 }
+	 
+	  .panel-collapse-item > h3 {
+		  margin-top: 0px !important;
+		  margin-bottom: 0px !important;
+		  font-weight: normal !important;
+	 
+	 }
+	 
+	  .panel-collapse-item > h3 > a {
+		
+		  font-weight: normal !important;
+	 
+	 }
+	 
+	 .menu-panel > li > a {
+		 border: 0px !important;
+		 font-weight: normal !important;
+		 padding-top: 8px !important;
+		 padding-bottom: 8px !important
+	 }
+	 
+	 .menu-panel > li > div > ul > li > a{
+		 border: 0px !important;
+		 font-weight: normal !important;
+		 padding-top: 8px !important;
+		 padding-bottom: 8px !important;
+		 font-size: 12px;
+		 padding-left: 30px !important;
+	 }
+	 
+	 .menu-panel > li > h3 > a {
+		 border: 0px !important;
+		 padding-top: 8px !important;
+		 padding-bottom: 8px !important
+	 }
+	 
+	 .menu-panel > li  {
+		 border: 0px !important;
+	 }
+	 
+	 .bottom-border {
+		 border-bottom: 1px solid #666 !important;
+		 
+		 }
+		 
+	.main-panel-holder {
+		background-color: #f6f6f6 !important;
+	
+	}
