@@ -741,8 +741,9 @@ You should have received a copy of the GNU General Public License along with thi
 												methods.restoreSelection.apply(this);												
 												if($('#imageList').data('current')){
 													if(navigator.userAgent.match(/MSIE/i)){
-														var imageStr = '<img  src="'+$('#imageList').data('current')+'"/>'
-														methods.restoreSelection.apply(this,[imageStr,'html'])
+														var imageStr = '<img src="'+$('#imageList').data('current')+'"/>'
+														methods.restoreSelection.apply(this,[imageStr,'html']);
+														alert("hooooooo")
 													}
 													else{
 														document.execCommand('insertimage', false, $('#imageList').data('current'));

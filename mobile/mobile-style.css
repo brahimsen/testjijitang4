@@ -624,7 +624,7 @@
 		height: 45px;
 		width: 100%;
 		z-index: 10000000;
-		background: #FFF !important;
+		background: #000 !important;
 	
 	
 	
@@ -633,8 +633,8 @@
 	.view-mobile-header > h1 {
 		line-height: 1.2 !important;
 		font-weight: Bold;
-		background: #FFF !important;
-		color: #877c21 !important;
+		background: #000 !important;
+		color: #FFF !important;
 		text-transform: uppercase;
 		margin-top: 4px !important;
 		font-size: 15px !important;
@@ -644,7 +644,7 @@
 	}
 	
 	#view-header-comment-icon {
-		color: #999 !important;
+		color: #FFF !important;
 		padding-top: 13px !important;
 		
 	
@@ -672,8 +672,8 @@
 	
 	.view-mobile-header > a:nth-child(2) {
 		
-		background: #FFF !important;
-		color: #999 ;
+		background: #000 !important;
+		color: #FFF ;
 		font-size: 16px ;
 		box-shadow: none ;
 		
@@ -684,7 +684,7 @@
 	
 	.mobile-write-comment-header-btns {
 		padding-top: 14px !important;
-		color: #999 !important;
+		color: #FFF !important;
 		font-size: 12px !important;
 		text-shadow: none !important;
 	
@@ -692,8 +692,8 @@
 	
 		.view-mobile-header > a:nth-child(3) {
 		
-		background: #FFF !important;
-		color: #999 ;
+		background: #000 !important;
+		color: #FFF !important ;
 		font-size: 13px ;
 		box-shadow: none ;
 		border: 1px solid #666;
@@ -712,17 +712,28 @@
 	
 	}
 	
-	.mobile-footer > div > ul > li > a {
-		  background: #FFF !important;
+	 .mobile-footer > div > ul > li > a {
+		  background: #eee !important;
 		  font-size: 18px !important;
-		 
-		  text-shadow: none !important;
+		  color: #666 !important;
+		  padding-top: 8px !important;
+		  padding-bottom: 2px !important;
+		  line-height: 11px !important;
+		  padding-right: 5px !important;
+		  padding-left: 5px !important;
+	  
+	  
+	  }
+	  
+	  .mobile-footer > div > ul > li > a > span {
+		  font-size: 10px !important;
+		  font-weight: normal !important;
 	  
 	  
 	  }
 	  
 	.mobile-footer > div > ul > li:nth-child(1) > a {
-		  background: #FFF !important;
+		  background: #eee !important;
 		  font-size: 18px !important;
 		
 		  text-shadow: none !important;
@@ -768,6 +779,7 @@
 	 .article-number-likes {
 		 color: #999 !important;
 		 font-size: 12px;
+		 margin-top: 30px;
 	 
 	 }
 	 
@@ -894,5 +906,32 @@
 		 
 	.main-panel-holder {
 		background-color: #f6f6f6 !important;
+	
+	}
+	
+	.tag-text {
+		float: left;
+	
+	}
+	
+	.tag-icon {
+		float: right;
+		font-size: 24px;
+	
+	}
+	
+	.tag-list > p {
+		height: auto; 
+		overflow: hidden;
+		border-bottom: 1px solid #ccc;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	
+	}
+	
+	.tag-list  {
+		margin-top: 20px;
+		margin-left: 3%;
+		margin-right: 3%;
 	
 	}
