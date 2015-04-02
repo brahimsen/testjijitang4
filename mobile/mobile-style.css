@@ -941,3 +941,26 @@
 	padding-left: 10px; padding-right: 10px; color: #877c21 !important; background: #edebd5 !important; font-size: 12px !important; margin-left: 10px !important;
 
 }
+
+
+.Load-more-btn {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: #eee !important;
+	color: #666 !important;
+	
+	margin-top: 40px;
+	
+
+
+}
+
+.Load-more-btn-holder {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	text-align: center;
+
+
+}
