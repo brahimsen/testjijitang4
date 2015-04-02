@@ -23,6 +23,7 @@
 <script src="js/myform.js"></script>
 <script src="js/collection-script.js"></script>
 <script src="js/follow-script.js"></script>
+<script src="js/jquery.dataTables.js"></script>
 
 <script>
 
@@ -179,14 +180,14 @@ function handleDragStart(e){
         
         		<div class="main-page-left hidden-tablet hidden-phone">
                 
-                
+                <!--
                 	 <div class=" article-first-time-enter">
                             
                          <p>You don't have any activity regarding articles.</p>
                             
-                     </div>
+                     </div>-->
                 
-                	<!--<div class="main-page-left-update">
+                	<div class="main-page-left-update">
                     
                     <img src="img/brahim.png">
                     
@@ -261,7 +262,7 @@ function handleDragStart(e){
                  
                  </div>
                     
-                   -->
+                  
                 	
                 
                 		
@@ -303,8 +304,14 @@ function handleDragStart(e){
                         </div> 
                         
                    </div>
+                   
+                   
                     
                     <div id="loadedSegments">
+                    
+                    
+                    
+                    
                    
                    <div class="article-graph-holder segmentListItem" draggable="true"  data-duration="3" > 
                     	
@@ -536,6 +543,50 @@ function handleDragStart(e){
                     </div>
                     
                     </div>
+                    
+                    <table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th >ID</th>
+						<th>Author</th>
+						<th>Title</th>
+						<th>Content</th>
+						<th>Manage</th>
+					
+					</tr>
+				</thead>
+
+			
+
+				<tbody>
+					<tr>
+						<td>23</td>
+						<td>Adam</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
+						<td><div class="arrow-holder"><img class="arrow-down" src="../img/arrow-down.jpg"><img class="arrow-up" src="../img/arrow.jpg"></div> <img src="../img/eye.jpg"><img src="../img/pen.jpg"><img src="../img/trash.jpg"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+                    <tr>
+						<td>67</td>
+						<td>Sara</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
+						<td><div class="arrow-holder"><img class="arrow-down" src="../img/arrow-down.jpg"><img class="arrow-up" src="../img/arrow.jpg"></div> <img src="../img/eye.jpg"><img src="../img/pen.jpg"><img src="../img/trash.jpg"><div class="multi-select-admin"></div></td>
+						
+					</tr>
+                    
+               
+					
+			
+				
+				
+				
+			
+				
+				</tbody>
+			</table>
                     
                     
                     </div>
