@@ -721,6 +721,15 @@
 		  line-height: 11px !important;
 		  padding-right: 5px !important;
 		  padding-left: 5px !important;
+		  text-shadow: none !important;
+		  box-shadow: none !important;
+	  
+	  
+	  }
+	  
+	  .mobile-large-list-view > div > div > p > span {
+		  font-size: 12px !important;
+		  color: #999;
 	  
 	  
 	  }

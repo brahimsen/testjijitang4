@@ -7,6 +7,8 @@
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="css/dataTables.scroller.css">
 <link href="style.css" rel="stylesheet" type="text/css">
 
 
@@ -24,8 +26,79 @@
 <script src="js/collection-script.js"></script>
 <script src="js/follow-script.js"></script>
 <script src="js/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="js/dataTables.scroller.js"></script>
+<script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="js/demo.js"></script>
+
+
+<style>
+
+	select {
+		width: 100px;
+			
+	
+	
+	}
+	
+	
+	#example_filter > label {
+		float: left;
+		
+	
+	}
+	
+	thead > tr {
+		border-bottom: 0px !important;
+	}
+	
+	thead > tr > th {
+		border-bottom: 0px !important;
+	}
+	
+	thead{
+		border-bottom: 0px !important;
+	}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+	
+	background: #3D7D8B !important;
+	border: 0px !important;
+	color: #FFF !important;
+	font-weight: bold;
+
+
+
+}
+
+
+table {
+	margin-bottom: 20px;
+
+}
+
+.dataTables_wrapper .dataTables_paginate {
+	margin-bottom: 20px;
+
+
+}
+
+</style>
+
 
 <script>
+
+$(document).ready(function() {
+oTable = $('#example').dataTable({
+   
+   
+ 
+  "oLanguage": {
+    "sSearch": "",
+  }
+});
+} ); 
+
+	
 
 $(window).scroll(function(){
 	
@@ -45,15 +118,15 @@ $(window).scroll(function(){
 	  
 	  
 	  
-	   $('.main-sub-navigatiion').addClass('fix-icon-banner-to-top');
-	   $('.main-sub-navigatiion').css("padding-top","10px");
+	   $('.article-sub-navigation ').addClass('fix-icon-banner-to-top');
+	   $('.article-sub-navigation ').css("padding-top","10px");
 	    
 	   
   
   $('.article-left-mobile-wrapper').addClass('minus-twenty-top'); }
   
   
-  else{ $('.main-sub-navigatiion').removeClass('fix-icon-banner-to-top'); $('.main-sub-navigatiion').css("padding-top","15px");
+  else{ $('.article-sub-navigation ').removeClass('fix-icon-banner-to-top'); $('.article-sub-navigation ').css("padding-top","15px");
   
   
    }
@@ -67,22 +140,34 @@ $(window).scroll(function(){
 
 <script>
 
+
 $(document).ready(function(){
 	
 	
+
+  $("#example_filter").append("<div class='main-page-right-tab'><div class='show-graph-articles'><span class='icon3-file'></span></div><div class='show-list-articles'><span class='icon3-list'></span></div></div>")
+
+
+});
+
+$(document).ready(function(){
 	
+	
+	$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 	
 	
 	
 	
 	$('.articles-graphic-view').hide();
-	$("#show-list-articles").click(function() {
+	$(".show-list-articles").click(function() {
 		$('.articles-graphic-view').hide();
 		$('.articles-list-view').show();
 		
 		
 		});
-	$("#show-graph-articles").click(function() {
+	$(".show-graph-articles").click(function() {
 		$('.articles-graphic-view').show();
 		$('.articles-list-view').hide();
 		
@@ -138,6 +223,8 @@ function handleDragStart(e){
 
 
 
+
+
 <!-- HTML5 shim for IE backwards compatibility -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -167,13 +254,18 @@ function handleDragStart(e){
         
         <div class="main-page-content" >
         
-        <div class="main-sub-navigatiion">
+        <div class="article-sub-navigation">
+        
+        
+        	<p style="float: left; margin-top: 10px; font-size: 16px; font-weight: bold; color: #999; margin-right: 30px">My Articles/Notes</p>
             
-            <li  ><a class="hidden-phone hidden-tablet" href="dashbord-new.html">Dashboard</a><a class="hidden-desktop" href="dashbord-new.html"><span class="icon3-feed"></span></a></li>
-            <li class="active"><a href="articles-new.html" class="hidden-phone hidden-tablet">My Articles</a><a class="hidden-desktop" href="articles-new.html"><span class="icon3-drawer"></span></a> </li>
-            <li  ><a href="collections-dashbord.html" class="hidden-phone hidden-tablet">My Collections</a><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon3-folders"></span></a></li>
-            <li style="margin-right: 3%;" class="hidden-desktop right-float padding-fix"  ><a  class="hidden-desktop" href="create-collection.html"><span class="icon-copy"></span></a></li>
-            <li  class="hidden-desktop right-float padding-fix"  ><a class="hidden-desktop" href="Editor/Editor/index.html"><span class="icon-file"></span></a></li>
+           <li class="active"  ><a  href="dashbord-new.html">All</a></li>
+            <li  ><a  href="dashbord-new.html">Drafts  8</a></li>
+            <li  ><a  href="dashbord-new.html">Public 4</a></li>
+            <li  ><a  href="dashbord-new.html">Unlisted 1</a></li>
+            <li  ><a  href="dashbord-new.html">Collaberation 7</a></li>
+            <li class="article-sub-navigation-write" style="float:right"><a href="#">Write</a></li>
+          
 
             
             </div>
@@ -189,14 +281,15 @@ function handleDragStart(e){
                 
                 	<div class="main-page-left-update">
                     
-                    <img src="img/brahim.png">
+                    <a href="#"><img src="img/brahim.png"></a>
                     
                     <p>
                     	
-                        <span>Title of the Article</span>
+                        <a>The Power Jquery with Ajax Following the Model View Controller Design Pattern </a>
                         <span>Today 12:09 P.M</span><br>
-                        <span>Brahim Senhaji</span>
+                        <a>Brahim Senhaji</a>
                         <span>Edited this article</span>
+                        <a><span class="icon20-mobile"></span>JIJINOTE</a>
                     
                      </p>
                  
@@ -204,14 +297,15 @@ function handleDragStart(e){
                  
                  <div class="main-page-left-update">
                     
-                    <img src="img/brahim.png">
+                    <a href="#"><img src="img/brahim.png"></a>
                     
                     <p>
                     	
-                        <span>Title of the Article</span>
-                        <span>Today 12:09 P.M</span><br>
-                        <span>Brahim Senhaji</span>
+                        <a>The Power Jquery</a>
+                        <span>15/03/2015</span><br>
+                        <a>Brahim Senhaji</a>
                         <span>Edited this article</span>
+                      
                     
                      </p>
                  
@@ -219,14 +313,15 @@ function handleDragStart(e){
                  
                  <div class="main-page-left-update">
                     
-                    <img src="img/brahim.png">
+                     <a href="#"><img src="img/brahim.png"></a>
                     
                     <p>
                     	
-                        <span>Title of the Article</span>
-                        <span>Today 12:09 P.M</span><br>
-                        <span>Brahim Senhaji</span>
-                        <span>Edited this article</span>
+                        <a>The Power Jquery with Ajax According to W3schools</a>
+                        <span>5 Minutes</span><br>
+                        <a>Jonas Pudzianovski </a>
+                        <span>Created this article</span>
+                        <a><span class="icon20-mobile"></span>JIJINOTE</a>
                     
                      </p>
                  
@@ -234,14 +329,15 @@ function handleDragStart(e){
                  
                  <div class="main-page-left-update">
                     
-                    <img src="img/brahim.png">
+                    <a href="#"><img src="img/brahim.png"></a>
                     
                     <p>
                     	
-                        <span>Title of the Article</span>
+                        <a>The Power of combining Jquery with Ajax</a>
                         <span>Today 12:09 P.M</span><br>
-                        <span>Brahim Senhaji</span>
+                        <a>Brahim Senhaji</a>
                         <span>Edited this article</span>
+                        <a><span class="icon20-mobile"></span>JIJINOTE</a>
                     
                      </p>
                  
@@ -249,14 +345,15 @@ function handleDragStart(e){
                  
                  <div class="main-page-left-update">
                     
-                    <img src="img/brahim.png">
+                    <a href="#"><img src="img/brahim.png"></a>
                     
                     <p>
                     	
-                        <span>Title of the Article</span>
+                        <a>The Power  Jquery with Ajax</a>
                         <span>Today 12:09 P.M</span><br>
-                        <span>Brahim Senhaji</span>
+                        <a>Brahim Senhaji</a>
                         <span>Edited this article</span>
+                        <a><span class="icon20-mobile"></span>JIJINOTE</a>
                     
                      </p>
                  
@@ -277,22 +374,15 @@ function handleDragStart(e){
                     <div class="update-red-dot hidden-desktop"></div>
                     <p class="updates-mobile-link hidden-desktop"><a href="/updates-mobile.html">13 Updates</a></p>
                     
-                    <div class="main-page-right-tab">
                     
-                    
-                    <div id="show-graph-articles"><span class="icon3-file"></span></div>
-                    <div id="show-list-articles"><span class="icon3-list"></span></div>
-                    <input type="text" placeholder="Search">
-                    
-                    
-                    
-                    </div>
                     
                     <div class="main-page-right-content">
                     
                     
                     
                     <div class="articles-graphic-view">
+                    
+                    <div style="width: 100%" class="main-page-right-tab"><div class="show-graph-articles"><span class="icon3-file"></span></div><div class="show-list-articles"><span class="icon3-list"></span></div></div>
                     
                       <div class="article-graph-holder" > 
                     	
@@ -318,6 +408,7 @@ function handleDragStart(e){
                         <div class="article-graph-wrapper" >
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                             <div class="graph-article-footer"><span>Draft</span><a data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a><a  data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a></div>
                             
                         
                         </div> 
@@ -328,6 +419,8 @@ function handleDragStart(e){
                         <div class="article-graph-wrapper" >
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                              <div class="graph-article-footer"><span>Draft</span><a data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a><a  data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a></div>
+                            
                             
                         
                         </div> 
@@ -338,6 +431,8 @@ function handleDragStart(e){
                         <div class="article-graph-wrapper" >
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                              <div class="graph-article-footer"><span>Draft</span><a data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a><a  data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a></div>
+                            
                             
                         
                         </div> 
@@ -348,6 +443,8 @@ function handleDragStart(e){
                         <div class="article-graph-wrapper" >
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                              <div class="graph-article-footer"><span>Draft</span><a data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a><a  data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a></div>
+                            
                             
                         
                         </div> 
@@ -358,6 +455,8 @@ function handleDragStart(e){
                         <div class="article-graph-wrapper" >
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                              <div class="graph-article-footer"><span>Draft</span><a data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a><a  data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a></div>
+                            
                             
                         
                         </div> 
@@ -368,6 +467,8 @@ function handleDragStart(e){
                         <div class="article-graph-wrapper" >
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                              <div class="graph-article-footer"><span>Draft</span><a data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a><a  data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a></div>
+                            
                             
                         
                         </div> 
@@ -378,6 +479,8 @@ function handleDragStart(e){
                         <div class="article-graph-wrapper" >
                     
                    			 <div class="article-graph-top"><span class="icon5-location"></span></div>
+                              <div class="graph-article-footer"><span>Draft</span><a data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a><a  data-toggle="tooltip" data-placement="left" title="Brahim Senhaji"><img src="img/brahim.png" /></a></div>
+                            
                             
                         
                         </div> 
@@ -401,7 +504,186 @@ function handleDragStart(e){
                     
                     <div class="articles-list-view">
                     
-                    <div class="article-list-holder article-list-holder-header hidden-phone hidden-tablet">
+                    <table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Name</th>
+                        <th>Edited by</th>
+						<th>Status</th>
+						<th>Date</th>
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The African dina proposed by muammar ghaddafi</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p >Said Aoutia article</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>Yuyu Article</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>Brahim Senhaji Article</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Published</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>Brahim Senhaji article</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Phblished</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+                    <tr class="article-new-table-row">
+						<td class="article-new-table-title"><span class="icon3-file" ></span>
+                        <p ><a>The power of Ajax and Jquery in combination with Json using the MVC design pattern</a></p></td>
+                        
+                        <td class="article-new-table-edit"><a><img src="img/brahim.png"/></a><a><img src="img/brahim.png"/></a></td>
+						<td class="article-new-table-status">Draft</td>
+						<td class="article-new-table-date">11/24/2014</td>
+						
+					</tr>
+				</tbody>
+                
+			</table>
+                    
+                <!--    <div class="article-list-holder article-list-holder-header hidden-phone hidden-tablet">
                     
                     	<div>
                       		<p>Title</p>
@@ -540,53 +822,13 @@ function handleDragStart(e){
                         <p>11/24/2014</p>
                         
                     
-                    </div>
+                    </div>-->
+                    
+                    
                     
                     </div>
-                    
-                    <table id="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th >ID</th>
-						<th>Author</th>
-						<th>Title</th>
-						<th>Content</th>
-						<th>Manage</th>
-					
-					</tr>
-				</thead>
-
-			
-
-				<tbody>
-					<tr>
-						<td>23</td>
-						<td>Adam</td>
-						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
-						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
-						<td><div class="arrow-holder"><img class="arrow-down" src="../img/arrow-down.jpg"><img class="arrow-up" src="../img/arrow.jpg"></div> <img src="../img/eye.jpg"><img src="../img/pen.jpg"><img src="../img/trash.jpg"><div class="multi-select-admin"></div></td>
-						
-					</tr>
-                    
-                    <tr>
-						<td>67</td>
-						<td>Sara</td>
-						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
-						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico 史前墨西哥恰帕斯洲使用辣椒的情况</td>
-						<td><div class="arrow-holder"><img class="arrow-down" src="../img/arrow-down.jpg"><img class="arrow-up" src="../img/arrow.jpg"></div> <img src="../img/eye.jpg"><img src="../img/pen.jpg"><img src="../img/trash.jpg"><div class="multi-select-admin"></div></td>
-						
-					</tr>
                     
                
-					
-			
-				
-				
-				
-			
-				
-				</tbody>
-			</table>
                     
                     
                     </div>
