@@ -116,6 +116,7 @@
 				
 				background-color: #000 !important;
 				border: none !important;
+				color: #FFF !important;
 				
 			
 			
@@ -185,3 +186,12 @@
 		margin-top: 0px !important;
 	
 	}
+	
+	.main-list-view > li {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		background: #FFF !important;
+	
+	}
+	
+	

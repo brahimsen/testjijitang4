@@ -18,6 +18,7 @@
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 		<link href="editor.css" type="text/css" rel="stylesheet"/>
+       
 
     
     	<script type="text/javascript">
@@ -26,6 +27,8 @@
          	$("#txtEditor").Editor();                    
          
     	});
+		
+		
   	</script>
 	
     </head>
@@ -69,17 +72,14 @@
 </div>  
 </div>
 
-	
-       
 
-	</div><!-- /content -->
     
 
 
     <div data-role="footer" data-position="fixed" class="mobile-footer">
     	<div data-role="navbar">
 		<ul>
-			<li><a href="a.html" class="icon-uniE609"><span><br>Save</span></a></li>
+			<li><a class="icon-uniE609 show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Saving Article" data-inline="true"><span><br>Save</span></a></li>
 			<li><a href="#sharearticle" data-rel="popup" data-transition="pop" data-position-to="window" class="icon-uniE603"><span><br>Share</span></a></li>
 			<li><a href="#publisharticle" data-rel="popup" data-transition="pop" data-position-to="window" class="icon-blog"><span><br>Publish</span></a></li>
 			<li><a href="#deletearticle" data-rel="popup" data-transition="pop" data-position-to="window" class="icon-remove"><span><br>Delete</span></a></li>
@@ -122,7 +122,7 @@
 	<div class="mobile-grid">Publish</div>
     <div class="mobile-grid"><span class="icon21-clock"></span><p>Last publish time: 10 pm, 12/23/2015</p></div>
     <div class="mobile-grid"><a>Select a category</a><span class="icon15-arrow-right"></span></div>
-    <div class="mobile-grid"><span><a data-transition="slide" href="#editor-add-tag">+ Add a Key Word</a></span></div>
+    <div class="mobile-grid"><span><a data-transition="slide" href="#editor-add-tags">+ Add a Key Word</a></span></div>
     <div class="mobile-grid"><button  class="ui-btn ui-shadow mobile-main-btn">Publish</button></div>
 
 </div>
@@ -131,7 +131,7 @@
 
 </div><!-- /page -->
 
-<div data-role="page" class="jqm-demos" id="editor-add-tag" style="background-color: #FFF" >
+<div data-role="page" class="jqm-demos" id="editor-add-tags" style="background-color: #FFF" >
 
  <div data-role="header"  class="mobile-header editor-mobile-header">
         <h1>Add Tags</h1>
@@ -139,7 +139,7 @@
        
     </div><!-- /header -->
 
-   <div class="tag-content">
+  <!-- <div class="tag-content">
    
    		<div>
         
@@ -154,10 +154,11 @@
         	
         
         </div>
-   
+   -->
    
    
    </div>
+
 
 
 </div><!-- /page -->
@@ -165,4 +166,6 @@
 
 
 	</body>
+    
+    
 </html>
