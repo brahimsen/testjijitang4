@@ -146,40 +146,40 @@ function handleDragStart(e){
         
         <div class="main-page-content" >
         
-            <div class="article-sub-navigation">
-        
-        
-        	<li class="sub-main-element"  ><a  href="subscriptions.html">Subscriptions</a></li>
-            <li class="sub-main-element"  ><a  href="articles-new.html" >My Articles</a></li>
-             <li class="sub-main-element"  ><a  href="dashbord-new.html" style="color: #877c21">My Collections</a></li>
-               <li class="active"  ><a  href="dashbord-new.html">All</a></li>
-            <li  ><a  href="dashbord-new.html">Public 8</a></li>
-            <li  ><a  href="dashbord-new.html">Private  4</a></li>
-            <li  ><a  href="dashbord-new.html">Following 14</a></li>
+        <div class="main-sub-navigatiion">
             
-           
-          
+            <li  ><a class="hidden-phone hidden-tablet" href="dashbord-new.html">Dashboard</a><a class="hidden-desktop" href="dashbord-new.html"><span class="icon3-feed"></span></a></li>
+            <li ><a href="articles-new.html" class="hidden-phone hidden-tablet">My Articles</a><a class="hidden-desktop" href="articles-new.html"><span class="icon3-drawer"></span></a> </li>
+            <li class="active" ><a href="collections-dashbord.html" class="hidden-phone hidden-tablet">My Collections</a><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon3-folders"></span></a></li>
+            <li style="margin-right: 3%;" class="hidden-desktop right-float padding-fix"  ><a  class="hidden-desktop" href="collections-dashbord.html"><span class="icon-copy"></span></a></li>
+            <li  class="hidden-desktop right-float padding-fix" style="padding-left: 5px !important"  ><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon-file"></span></a></li>
 
             
             </div>
+         
+         <div class="my-collections-top-holder">
             
-            <p class="hidden-desktop hidden-tablet mycollections-span">My Collections</p>
-        
-        	 <div class="collection-dashbord-input" >
+            	<h1>Publish or Save Related Articles Together With a Collection</h1>
+                <input placeholder="Search"><span class="main-button"><a>Create a Collection</a></span>
             
-            	<input  type="text" placeholder="Search" />
             
             </div>
-        	
+         
+         
             <div class="collections-dashbord-holder">
+            
+            
             
          
             
             <div class="collection-item collection-item-load-more-holder" >
-            	<div class="collection-item-load-more" >
+            	<div class="collection-item-load-more collections-item-tabs" >
                        
                     			
-                <a href="/create-collection.html"> <h1>+</h1> </a>
+                <p><a class="active" href="/create-collection.html">Recommend</a></p>
+                <p><a href="/create-collection.html">Popular</a></p>
+                <p><a href="/create-collection.html">Upcoming</a></p>
+                <p><a href="/create-collection.html">Search</a></p>
             
                 	</div>
                </div>

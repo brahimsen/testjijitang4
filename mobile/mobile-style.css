@@ -743,7 +743,7 @@
 	}
 	
 	 .mobile-footer > div > ul > li > a {
-		  background: #eee !important;
+		  background: #FFF !important;
 		  font-size: 18px !important;
 		  color: #666 !important;
 		  padding-top: 8px !important;
@@ -773,7 +773,7 @@
 	  }
 	  
 	.mobile-footer > div > ul > li:nth-child(1) > a {
-		  background: #eee !important;
+		  background: #FFF !important;
 		  font-size: 18px !important;
 		
 		  text-shadow: none !important;
@@ -1293,4 +1293,166 @@
 }
 
 
+.long-list-view > li > a > div > p {
+	white-space: normal !important;
+	font-size: 12px !important;
+	text-shadow: none !important;
+	margin-top: 0px !important;
+}
 
+.long-list-view > li > a  {
+	background: #FFF !important;
+	text-shadow: none !important;
+}
+
+.long-list-view > li > a > div {
+	height: auto;
+	overflow: hidden;
+	
+}
+
+.long-list-view > li > a > p > span:nth-child(1) {
+	color: #877c21 !important;
+	font-weight: bold;
+	margin-right: 15px;
+	text-shadow: none !important;
+}
+
+.long-list-view > li > a > p > span:nth-child(2) {
+	color: #999 !important;
+	text-shadow: none !important;
+	
+}
+
+
+
+.long-list-view > li > a > p:nth-child(2) {
+	white-space: normal !important;
+	font-size: 12px !important;
+	text-shadow: none !important;
+
+
+
+}
+
+.long-list-view-main-content > img {
+	float: left;
+	height: 60px !important;
+	width: 60px !important;
+	margin-right: 10px;
+
+}
+
+
+.long-list-view > li > a > h2 {
+	white-space: normal !important;
+	font-size: 15px !important;
+	text-shadow: none !important;
+
+
+
+
+}
+
+
+.long-list-view > li > a:after {
+	display: none !important;
+
+
+
+}
+
+.long-list-view > li > a {
+	
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+
+
+
+}
+
+
+.list-divider  {
+	
+	 background: none !important;
+	 color: #999;
+	 margin-bottom: 0px !important;
+	 border: 0px !important;
+	 border-radius: 0px !important;
+
+
+}
+
+.long-list-view {
+	margin: 0px !important;
+	border-radius: 0px !important;
+
+
+}
+
+.list-divider > p {
+	
+	 background: none !important;
+	 color: #999;
+	 margin-bottom: 0px !important;
+	
+	 font-size: 16px !important;
+	 font-weight: bold !important;
+	 
+
+
+}
+
+
+.list-divider > p > a {
+	float: right;
+	 color: #3D7D8B !important;
+	 background: none !important;
+	 font-size: 14px !important;
+
+
+}
+
+.list-divider > span {
+	color: #999;
+	float: left;
+
+
+}
+
+.long-list-view-footer > div > div > div {
+	text-align: center;
+	background: #FFF !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+
+}
+
+.long-list-view-footer > div > div > div > a {
+	
+	background: #FFF !important;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px !important;
+	box-shadow: none !important;
+	font-size: 11px !important;
+	font-weight: normal !important;
+	color: #666 !important
+
+
+}
+
+
+
+.long-list-view  {
+	background: rgba(237,235,213,0.5) !important
+
+
+}
+
+.list-non-divider {
+	margin-bottom: 10px !important;
+
+}

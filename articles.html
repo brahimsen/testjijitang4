@@ -42,160 +42,111 @@
 
 <body>
 
-	<div class="container-fluid">
+<div class="header-wrapper">
+	<header>
 
 
-
-		<div class="header-wrapper">
-        	<header>
-        
-        
-		</header>
-       </div>
-
-	<div class="fixed-sidebar span4"> 
-       
-        <div class="fixed-sidebar-wrapper">
-        	
-            <div class="fixed-sidebar-inner">
-            	
-                <p class="sidebar-title" >Notes/Articles</p>
-            
-            </div>
-        
-        </div>
-            
-      </div>    
-      
-          
-        <div class="span8 right-content" >
-       
-      
-       
-        
-                
-                      <div class="nav-wrapper">
-                      
-                      
-                      <div class="nav-wrapper-inner">
-                      <div class="nav-mobile-btn" ></div>
-                      <ul class="nav nav-tabs collections-nav">
-  							<li   class="active"><a href="#a1" data-toggle="tab">Most Popular</a></li>
- 		 					<li ><a class="latest-collection" href="#a2" data-toggle="tab">Latest</a></li>
-                            <li ><a href="#a3" data-toggle="tab">Read Later</a></li>
-  					  </ul>
-                      </div>
-                      	
-                      <div class="create-button-nav">
-            
-            				<a href="/Editor/Editor/"><div>New Article</div><div class="new-article">+</div></a>
-              
-         		      </div>
-
-                    </div>
-                    
-                    
-                    <div class="tab-content note-tab-content">
-  			<div class="tab-pane active" id="a1">
-      
-                
-                <div id="note1"></div>
-                
-                <div class="load-more-holder">
-                
-                <span class="load-more-btn"> Load More...</span>
-                
-                
-                </div>
-                
-               
-              
-               
-              
-               
-              
-                
-  	
-                    </div>
-  
-  				<div class="tab-pane" id="a2"> 
-  
-   			  <div class="load-more-holder">
-                
-                <span class="load-more-btn"> Load More...</span>
-                
-                
-                </div>
-                	
-                
-               </div>
-               
-               	<div class="tab-pane" id="a3"> 
-  
-   				
-                  <div class="load-more-holder">
-                
-                <span class="load-more-btn"> Load More...</span>
-                
-                
-                </div>
-                	
-                
-               </div>
-                
-                
-                
-                
-                
-                </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-       	      
-            
-   
-         
-             
-         
-      
-            
-         
-            
-           
-            
-        <footer  class="row-fluid span12">
-        
-		</footer>
-        
-        
-        
-        
-    
-    
-    </div>
-
-
-
-
+	</header>
 </div>
+
+    <div class="main-page-wrapper">
+    
+    	
+    
+ 		
+        
+        <div class="main-page-content">
+       
+        
+        		<div class="main-page-left hidden-tablet hidden-phone" style="margin-top: 0px; background: rgba(237,235,213,0.5)">
+                
+                
+                		<div class="articles-laft-inner">
+                        
+                        		<div style="margin-top: 4px;">
+                                
+                                	<p><a>Recommend</a></p>
+                                    <p><a class="active">Popular</a></p>
+                                    <p><a>Upcoming</a></p>
+                                
+                                </div>
+                                <div>
+                                	
+                                    <p><a>All Category</a></p>
+                                    <p><a>Economics and Finance</a></p>
+                                    <p><a>Business, Management, Marketing</a></p>
+                                    <p><a class="active">Psychology</a></p>
+                                    <p><a>Natural Science</a></p>
+                                    <p><a>Biology</a></p>
+                                    <p><a>Biology</a></p>
+                                
+                                
+                                </div>
+                                
+                                
+                                <div>
+                                
+                                	<p><a>Featured Tags</a></p>
+                                    
+                                    <p><span><a>Business</a></span> <span><a>Histoty</a></span> <span><a>Information Technology</a></span> <span><a>Business</a></span></p>
+                                
+                                </div>
+                        
+                        	
+                        
+                        </div>
+                
+             	
+               
+                    
+               	</div>
+                    
+                    
+                    
+                    
+                
+                
+                
+                
+                <div class="main-page-right tag-page-right-content" style="margin-top: 30px">
+                
+                	<div id="Entries1"></div>
+                    <div id="Entries2"></div>
+                    <div id="Entries3"></div>
+                    
+    
+    
+    			</div>
+   
+
+      
+       </div>
+                  
+                	
+                
+                		
+                        
+                     
+                
+                </div>
+        
+    
+    
+   
 
 <script>
 
-$( "header" ).load( "index-header.html" )
+$( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
-$( "#note1" ).load( "Testnotes/Note1.html" );
-$( "#note2" ).load( "Testnotes/Note2.html" );
-$( "#note3" ).load( "Testnotes/Note3.html" );
-$( "#note4" ).load( "Testnotes/Note4.html" );
-$( "#note5" ).load( "Testnotes/Note5.html" );
-$( "#note6" ).load( "Testnotes/Note6.html" );
+$( "#aside" ).load( "aside.html" );
+$( "#Entries1" ).load( "Testnotes/NewNote1.html" );
+$( "#Entries2" ).load( "Testnotes/NewNote2.html" );
+$( "#Entries3" ).load( "Testnotes/NewNote3.html" );
+
+  
+
 </script>
 
 <script src="js/myjavascript.js"></script>
+<script src="js/myEntries.js"></script>  
 
