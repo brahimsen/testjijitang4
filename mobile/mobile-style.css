@@ -754,6 +754,14 @@
 		  text-shadow: none !important;
 		  box-shadow: none !important;
 		  border-color: #CCC !important;
+		  border-left: 0px !important;
+		  border-right: 0px !important;
+	  
+	  
+	  }
+	  
+	  .notifications-main-content {
+		  padding: 0px !important;
 	  
 	  
 	  }
@@ -1454,5 +1462,46 @@
 
 .list-non-divider {
 	margin-bottom: 10px !important;
+
+}
+
+.notifications-list > li > a {
+	
+	padding-left: 0px !important;
+	background: #FFF !important;
+	background-color: #FFF !important;
+	box-shadow: none !important;
+	border-radius: 0px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	text-shadow: none !important;
+
+
+}
+
+.notifications-list > li > a > span{
+	margin-right: 20px;
+
+
+}
+
+.ui-listview .ui-btn-icon-right .ui-li-count {
+	background: #F00 !important;
+	border: none !important;
+
+}
+
+
+.notifications-list > li  {
+
+
+
+}
+
+.notifications-list  {
+
+	box-shadow: none !important;
+	border-radius: 0px !important;
+
 
 }

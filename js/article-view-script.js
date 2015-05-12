@@ -98,8 +98,8 @@ window.onscroll = function(){
 					$('.view-comment-section').hide();
 					<!--$('.article-left-wrapper').delay(200).fadeIn(500);-->
 					$('.article-left-wrapper').animate({"width":"show","opacity":"show" });
-					$('.article-title').animate({"margin-left":"22%" });
-					$('.article-right').css("width","74%")
+					$('.article-title').animate({"margin-left":"20%" });
+					$('.article-right').css("width","60%")
 					
 					
 					
@@ -236,18 +236,8 @@ window.onscroll = function(){
 					
 					});
 					
-					$(".view-write-comment").hide();
-					$('.comment-add-note-for').click(function(){
-					
-					 $(this).siblings(".view-write-comment").fadeIn();
-					 $(this).hide();
-					 
-					 
-				
 					
 					
-					
-					});
 					
 					
 					
@@ -414,8 +404,8 @@ window.onscroll = function(){
 				$(".like-holder").click(function(){
 				
 					
-					$(this).children('.like').toggle();
-					$(this).children('.like-full').toggle();
+					$(".like-holder").children('.like').toggle();
+					$(".like-holder").children('.like-full').toggle();
 					
 				});
 					
