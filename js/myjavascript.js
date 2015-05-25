@@ -195,9 +195,11 @@ $(window).ready(function() {
 	});
 		
 		$(".collection-popover-submit").hide();
-				$(".share-collection,.collection-popover-submit").click(function(e){
+				$(".share-collection,.to-hide-publish-popover").click(function(e){
 					
-					$('.collection-popover-submit',this).toggle();
+					$('.to-hide-publish-popover',this).toggle();
+					 $(".editor-delete-popup").hide();
+					 $('.to-hide-share-popover').hide();
 					e.stopPropagation();
 					
 				
@@ -206,7 +208,30 @@ $(window).ready(function() {
 				
 				$("html").click(function(e){
 					
-					$('.collection-popover-submit').hide();
+					$('.collection-popover-submit',this).hide();
+					
+					
+				
+					
+				});
+				
+				
+					$(".share-collection-2,.to-hide-share-popover").click(function(z){
+					
+					$('.to-hide-share-popover',this).toggle();
+					$('.to-hide-publish-popover').hide();
+					$(".editor-delete-popup").hide();
+										
+
+					z.stopPropagation();
+					
+				
+					
+				});
+				
+				$("html").click(function(z){
+					
+					$('.collection-popover-submit',this).hide();
 					
 					
 				

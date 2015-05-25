@@ -17,6 +17,8 @@
 		  
 		  $(".editor-delete-popup").toggle();
 		  $(".editor-publish-popup").hide();
+		  $('.share-collection-2 > .collection-popover-submit ').hide();
+		  $('.share-collection > .collection-popover-submit ').hide();
 		  e.stopPropagation();
 		  
 	  });

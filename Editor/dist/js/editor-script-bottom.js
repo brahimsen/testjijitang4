@@ -133,7 +133,7 @@ $('.add-section').click(function () {
 			
 			$(this).next().children(".mediumInsert-buttons").find("button").css({"opacity" : "1", "transform":"scale(1)"})
 			$(this).next().children(".mediumInsert-buttons").find(".editor-headings").css({"opacity" : "1", "transform":"scale(1)"})
-			$("p,h1,h2,h3").not(this).next().children(".mediumInsert-buttons").find("a").css({"opacity" : "0", "transform":"scale(0)"})
+			$("p,h1,h2,h3").not(this).next().children(".mediumInsert-buttons").find("button").css({"opacity" : "0", "transform":"scale(0)"})
 			
 			$("p,h1,h2,h3").not(this).next().children(".mediumInsert-buttons").find(".editor-headings").css({"opacity" : "0", "transform":"scale(0)"})
 	

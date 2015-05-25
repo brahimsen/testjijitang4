@@ -2232,6 +2232,8 @@ margin-top: -30px;
 			.collection-popover-submit > div > input {
 				width: 100%;
 				height: 28px;
+				margin-top: 1px;
+				
 			
 			}
 			
@@ -2280,6 +2282,13 @@ margin-top: -30px;
 		
 			}
 			
+				.collection-popover-submit> div:hover {
+				
+				
+		
+			}
+			
+			
 			.note-popover-update > div:hover {
 				background:#f2f2f2 !important;
 				
@@ -2287,7 +2296,7 @@ margin-top: -30px;
 			}
 			
 			.collection-popover-submit > div:hover {
-				background:#f2f2f2 !important;
+			
 				
 		
 			}
@@ -4906,8 +4915,8 @@ height: 270px;
 	color: #3d7d8b;
 }
 
-.view-right-top-menu-holder > div:hover {
-	color: #877c21 !important;
+.view-right-top-menu-holder > div > p:hover {
+	color: #877c21;
 
 
 
@@ -10165,8 +10174,9 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 	background: #FFF;
 	
 	right: 0%;
-	top: 54px;
+	top: 44px;
 	border-radius: 3px;
+	box-shadow: 0px 1px 15px #CCC;
 	
 
 }
@@ -10526,8 +10536,8 @@ width: 95%; margin-left: 5%; overflow: hidden; height: 70%;
 }
 
 .editor-radio-btns-text {
-	margin-left: 20px !important;
-	margin-top: 20px !important;
+	margin-left: 42px !important;
+	margin-top: 5px !important;
 	margin-right: 20px !important;
 	
 
@@ -13515,7 +13525,7 @@ margin-right: 10px;
 .article-tag-navigation {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	background: rgba(237,235,213,0.5);
+	background: #fcfcf8;
 	height: auto;
 	overflow: hidden;
 	padding-left: 3%;
@@ -13529,8 +13539,7 @@ margin-right: 10px;
 
 .article-tag-navigation > div:nth-child(1) {
 	
-	float: left;
-	width: 70%
+
 
 
 
@@ -13544,24 +13553,37 @@ margin-right: 10px;
 }
 
 .article-tag-navigation > div > p {
-	float: left;
 	margin-left: 20px;
+	width: 100% !important;
+	text-align: center;
+	margin-bottom: 0px !important;
 
 
 }
 
 .article-tag-navigation > div > p > a {
-	float: left;
+	
 	margin-right: 20px;
 	font-size: 14px !important;
 	color: #666 !important;
-	margin-top: 12px;
+	
+
+
+}
+
+.article-tag-navigation > div > p > a:nth-child(3) {
+	
+	margin-left: 20px !important;
+	font-size: 14px !important;
+	color: #666 !important;
+	
 
 
 }
 
 .article-tag-navigation > div > p > span {
 	font-size: 18px;
+	margin-left: 10px;
 
 
 }
@@ -13587,7 +13609,7 @@ margin-right: 10px;
 }
 
 .tag-page-right-content {
-	margin-top: 110px;
+	margin-top: 90px;
 
 
 }
@@ -14206,6 +14228,496 @@ margin-right: 10px;
 .section h3 {
 	font-size: 18px;
 	line-height: 24px;
+
+
+}
+
+.editor-all-tags {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #333;
+	background: #eee;
+	float: left;
+	border: 1px dashed #999;
+	
+	margin-right: 15px;
+	margin-bottom: 15px;
+
+}
+
+.tag-delete {
+
+	background: #999 !important;
+	color: #FFF !important;
+	cursor: pointer;
+	font-size: 18px;
+	float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 30px;
+	margin-right: -20px;
+	margin-top: -16px;
+
+
+}
+
+.publish-categorie-holder {
+	width: 90%;
+	margin-left: 5%;
+
+
+
+}
+
+.publish-categorie-holder > div > label {
+	width: 20%;
+	font-size: 13px;
+	margin-top: -5px;
+	
+
+
+
+}
+
+.publish-categorie-holder > div > select  {
+	width: 80% !important;
+
+
+}
+
+.publish-categorie-holder > div  {
+	margin-bottom: 10px;
+
+}
+
+.editor-publish-holder > hr  {
+	width: 90%;
+	margin-left: 5%;
+}
+
+.publish-categorie-holder > div > input {
+	width: 76% !important;
+
+
+}
+
+.editor-publish-holder {
+	max-height: 400px !important;
+	overflow-y: scroll;
+
+
+}
+
+
+.publish-categorie-holder > div > button {
+	width: 100% !important;
+	margin-top: 10px
+
+
+}
+
+
+.editor-publish-holder::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background: #EEE;
+
+}
+
+.editor-publish-holder::-webkit-scrollbar{
+	width: 6px;
+	background-color: #EEE;
+
+}
+
+.editor-publish-holder::-webkit-scrollbar-thumb{
+	background-color: #3D7D8B !important
+
+}
+
+.editor-share-link-div {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+	width: 90%;
+	margin-left: 5%;
+	border-bottom: 0px !important;
+
+}
+
+.editor-share-link-div > input {
+	width: 97% !important;
+
+}
+
+.editor-share-link-div > p {
+	font-size: 14px;
+	color: #999;
+	margin-bottom: 0px !important;
+
+}
+
+.editor-share-link-div > p > a {
+	font-size: 14px;
+	color: #3D7D8B !important;
+
+}
+
+.register-lang-domain {
+	
+	text-align: center;
+	padding-top: 110px;
+	padding-bottom: 70px;
+	width: 80%;
+	margin-left: 10%;
+
+
+
+}
+
+.register-lang-domain > p {
+	font-size: 27px;
+	line-height: 32px;
+	margin-bottom: 50px;
+
+
+
+}
+
+.register-lang-domain > div > label {
+	width: 200px;
+	text-align: right;
+	margin-right: 25px;
+	color: #999;
+	font-size: 16px;
+
+
+
+}
+
+
+.users-check {
+	
+	height: auto;
+	overflow: hidden;
+	width: 80%;
+	margin-left: 10%;
+
+
+}
+
+
+.unsers-check-single {
+	
+	width: 33.33% !important;
+	float: left;
+	margin-bottom: 25px;
+	position: relative;
+
+	
+
+
+
+}
+
+.unsers-check-single-holder {
+	
+	padding: 10px;
+	height: 80px;
+	
+	border: 1px solid #ccc;
+	cursor: pointer;
+	
+	
+	
+	width: 320px;
+	
+	
+	
+
+
+
+}
+
+
+.users-check > .unsers-check-single:nth-child(3n-1) > .unsers-check-single-holder {
+	margin-right: auto;
+	
+	
+
+
+
+}
+
+.users-check > .unsers-check-single:nth-child(3n-1) > .big-check {
+	left: 0%;
+	margin-left: 0px;
+	
+	
+
+
+
+}
+
+
+.users-check > .unsers-check-single:nth-child(3n) > .unsers-check-single-holder {
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+
+
+
+}
+
+.users-check > .unsers-check-single:nth-child(3n) > .big-check {
+	left: 50%;
+	margin-left: -171px;
+	
+	
+	
+	
+	
+
+
+
+}
+
+.users-check > .unsers-check-single:nth-child(3n+1) > .unsers-check-single-holder {
+	margin-left: auto;
+	
+	
+
+
+
+}
+
+.users-check > .unsers-check-single:nth-child(3n+1) > .big-check {
+	right: 0%;
+	
+	
+
+
+
+}
+
+
+
+.unsers-check-single-holder > p {
+	margin-left: 90px;
+	margin-bottom: 3px !important;
+	font-size: 12px;
+	
+
+	
+
+
+
+}
+
+.unsers-check-single-holder > p > a {
+	
+	color: #877C21 !important;
+	font-weight: bold;
+	font-size: 14px !important;
+	
+	
+
+
+
+}
+
+.unsers-check-single-holder > p > span {
+	
+	margin-right: 10px;
+	
+	
+
+
+
+}
+
+
+
+
+.unsers-check-single-holder > img {
+	
+	width: 80px;
+	height: 80px;
+	border-radius: 90px;
+	float: left;
+	
+
+
+
+}
+
+.big-check {
+	position: absolute;
+	width: 342px;
+	height: 100px;
+	background: rgba(0,0,0,0.5);
+	margin-top: -102px;
+	border: 1px solid #ccc;
+
+
+}
+
+
+.big-check > p {
+	font-size: 68px;
+	font-weight: bold;
+	color: #FFF;
+	margin-bottom: 0px;
+	margin-top: 14px;
+	text-align: center;
+
+}
+
+.fix-width {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 50px;
+
+}
+
+.fix-this-width-too {
+	padding-top: 0px !important;
+	width: 86% !important;
+	margin-left: 7% !important;
+
+
+}
+
+@media (max-width: 980px) {
+	
+	.fix-width {
+	width: 94% !important;
+	margin-left: 3% !important;
+
+}
+	
+	.register-lang-domain {
+	
+	text-align: center;
+	padding-top: 110px;
+	padding-bottom: 70px;
+	width: 94% !important;
+	margin-left: 3% !important;
+
+
+
+}
+
+.users-check {
+	width:
+	 94% !important;
+	 margin-left: 3% !important;
+
+
+}
+	
+}
+
+
+@media (max-width: 1320px) {
+	
+	.unsers-check-single {
+	
+	width: 50% !important;
+	float: left;
+	margin-bottom: 25px;
+	position: relative;
+
+	
+
+
+
+}
+
+.unsers-check-single-holder {
+	
+	padding: 10px;
+	height: 80px;
+	
+	border: 1px solid #ccc;
+	cursor: pointer;
+	
+	
+	
+	width: 320px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	
+	
+	
+
+
+
+}
+	
+	
+	.big-check {
+	position: absolute;
+	width: 342px;
+	height: 100px;
+	background: rgba(0,0,0,0.5);
+	margin-top: -102px;
+	border: 1px solid #ccc;
+	margin-left: -171px !important;
+	left: 50% !important;
+	cursor: pointer;
+
+}
+
+
+
+	
+	
+}
+
+
+
+
+@media (max-width: 767px) {
+	
+	.unsers-check-single {
+	
+	width: 100% !important;
+	float: left;
+	margin-bottom: 25px;
+	position: relative;
+
+	
+
+
+
+}
+	
+}
+
+.user-register-underline {
+	padding-bottom: 25px;
+	color: #999;
+	font-size: 19px;
+	
+	border-bottom: 1px solid #ccc;
+	
+	margin-bottom: 50px;
+
+
+}
+
+.register-more-padding {
+	padding-left: 110px !important;
+	padding-right: 110px !important;
+
+
+}
+
+.register-small-padding {
+	padding-left: 60px !important;
+	padding-right: 60px !important;
 
 
 }

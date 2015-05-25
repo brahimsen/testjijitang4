@@ -28,6 +28,7 @@
 		font-family: 'RobotoRegular';
 		color: #333;
 		font-size: 27px !important;
+		text-shadow: none !important
 	
 	
 	}
@@ -36,6 +37,7 @@
 		font-family: 'RobotoRegular';
 		color: #333;
 		font-size: 24px !important;
+		text-shadow: none !important
 	
 	
 	}
@@ -44,6 +46,7 @@
 		font-family: 'RobotoRegular';
 		color: #333;
 		font-size: 21px !important;
+		text-shadow: none !important
 	
 	
 	}
@@ -52,6 +55,7 @@
   </style>
   
 <script>
+
 
 $(function(){	
     var cubuk_seviye = $(document).scrollTop();
@@ -69,6 +73,40 @@ $(function(){
         cubuk_seviye = $(document).scrollTop();	
      });
 });
+
+
+
+
+
+
+
+
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+	
+
+	
+	
+	$("#editor-tag-input").keypress(function(e) {
+    if(e.which == 13) {
+           $(".publish-tag-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#editor-tag-input").val()+"</span><div class='tag-delete'>x</div></div>");
+	   $("#editor-tag-input").val('')
+    }
+});
+
+	 $('.publish-tag-list').on('click', '.tag-delete', function(){
+	 	
+	 $(this).parent().remove()
+   
+});
+	
+	
+	});
+
 </script>
   
   
@@ -98,14 +136,6 @@ $(function(){
         <div class="view-right-top-menu-holder">
         
        
-<!--        <a><span class="icon-uniE607 editor-comment-icon"></span><span class="editor-comment-icon-counter" >3</span></a>
-        
-        
-       
-        <a class="view-top-menu-author hidden-phone hidden-tablet"><img src="../../img/brahim.png" /></a>
-        <a class="view-top-menu-author hidden-phone hidden-tablet"><img src="../../img/brahim.png" /></a>
-       
-        <span class="top-view-publish-time hidden-phone hidden-tablet">Draft</span> -->
         	
           <div id="icon-remove-article" class="myentry-share three-percent-margin">
             	<div><span class="icon-remove"></span></div>
@@ -126,7 +156,7 @@ $(function(){
             	<div><span class="icon-uniE608"></span></div>
                 <p class="hidden-phone hidden-tablet">Publish</p> 
                 
-                 <div class="collection-popover-submit view-pop-over-submit">
+                 <div class="collection-popover-submit view-pop-over-submit to-hide-publish-popover">
                             
                              <div class="note-popover-update-header">
                              	<h4>Publish This Article as</h4>
@@ -136,8 +166,19 @@ $(function(){
                              </div>     
                              
                              <div class="editor-publish-holder">
-                                 <input class="editor-radio-btns" type="radio" name="publish-type" value="Public"><span style="margin-top: 20px; font-weight: bold" >Public</span><p class="editor-radio-btns-text">The article/note will be public. Your followers will be notified when you publish.</p>
-								<input class="editor-radio-btns" type="radio" name="publish-type" value="Unlisted"><span  style="margin-top: 20px; font-weight: bold"  >Unlisted</span><p class="editor-radio-btns-text">The article/note will only be visible to those with the link. It won't be listed on JIJITANG's public pages (your profile, homepage) and people won't be able to find it using a search engine.</p>    
+                                 <input class="editor-radio-btns" type="radio" name="publish-type" value="Public"><span style="margin-top: 20px; font-weight: bold; margin-left: -15px" >Public</span><p class="editor-radio-btns-text">The article/note will be public. Your followers will be notified when you publish.</p>
+								<input class="editor-radio-btns" type="radio" name="publish-type" value="Unlisted"><span  style="margin-top: 20px; font-weight: bold; margin-left: -15px"  >Unlisted</span><p class="editor-radio-btns-text">The article/note will only be visible to those with the link. It won't be listed on JIJITANG's public pages (your profile, homepage) and people won't be able to find it using a search engine.</p>    
+                                
+                                <hr>
+                                
+                                
+                                <div class="publish-categorie-holder">
+                                <div><label>Category</label><select></select></div>
+                                <div><label>Tags</label><input id="editor-tag-input" type="text" placeholder="Type tags here"></div>
+                                <div class="publish-tag-list"></div>
+                                <div><button class="main-button">Publish</button></div>
+                                
+                                </div>
                                 
                            </div>     
  
@@ -145,9 +186,35 @@ $(function(){
             
             </div>
             
-             <div class="like-holder" >
+             <div class="share-collection-2" style="position: relative" >
           <div><span class="icon-uniE603"></span></div>
                 <p class="hidden-phone hidden-tablet">Share Draft</p> 
+                
+                      <div class="collection-popover-submit view-pop-over-submit to-hide-share-popover">
+                            
+                             <div class="note-popover-update-header">
+                             	<h4>
+
+Share this draft with
+</h4>
+                                
+                   
+                             
+                             </div>     
+                             
+                            <div class="editor-share-link-div" >
+                            
+                            	<input type="text" placeholder="Place your link here" >
+                                <p>
+
+People with link - <a>Change</a>
+</p>
+                            
+                            
+                            </div>   
+ 
+            </div>
+                
             </div>
             
            
@@ -320,7 +387,7 @@ $(function(){
         
     <div class="editable" id="section0" >
     
-    	<p><span id="first-line-placeholder">Type More of Your Text....</span><br></p>
+    	<p><span id="first-line-placeholder">Type More of Your Text, Select Text to Add its Format and Add Link....</span><br></p>
      
     </div>
   
@@ -343,6 +410,7 @@ $(function(){
 	$( "header" ).load( "header-jijitang.html" );
   </script>
   <script src='../dist/js/editor-script-bottom.js'></script>
+
     
 </body>
 </html>
