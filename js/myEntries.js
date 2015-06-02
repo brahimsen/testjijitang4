@@ -27,7 +27,7 @@
 				
 					$(".note-popover-update").hide();
 				$(".save,.note-popover-update").click(function(e){
-					
+					$(".myentry-share-poup").hide();
 					
 					if($(window).width() > 767){
 					$('.note-popover-update',this).fadeToggle();
@@ -69,22 +69,37 @@ $(document).ready(function(){
 	$('.myentry-share-poup').hide();
 	$('.social-icons-holder').addClass('hide-fix');
 	
-	$(".share-hoz-holder").click(function(){
+	$(".share-hoz-holder").click(function(f){
 				
 					$('.myentry-share-poup',this).toggle();
 					$(this).parent().siblings(".social-icons-holder").toggleClass('hide-fix');
+					
+					$('.note-popover-update').hide();
+						f.stopPropagation();
 						
 					
 					
 	});
 	
+	$("html").click(function(f){
+					
+					$('.myentry-share-poup').hide();
+					
+					
+					
+				
+					
+				});
+	
 	
 	$(".myentry-share").click(function(y){
 				
 					$('.myentry-share-poup',this).toggle();
+					
 				
 					
 	});
+	
 	
 	$('.approved-btn').hide();
 	

@@ -20,6 +20,7 @@
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
 
 
 
@@ -54,10 +55,11 @@
            		<p class="left-bar-collection-title">Name of the collection....</p>
                 <p class="left-bar-collection-description">Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection Description of the this collection</p>
                 
-                <p class="coll-left-bar-author">Created by Yuyu Xuan . 0 Notes . <span> Following | 1 </span></p>
-            	<!--<div class="collection-side-btn-holder">
-                	<span class="main-button fixed-bar-left-btn" style="float: none">Following | 1</span>
-                </div>-->
+                <p class="left-bar-follow-info text-left-mobile">24 Followers . 32 Fans</p>
+             <div class="follow-user-btn-holder twenty-left-margin-min-with hidden-tablet hidden-phone ">
+                     	<button class="follow-btn follow-btn-short">Follow</button>
+                     	<button class="unfollow-btn follow-btn-short">Unfollow</button>
+                </div>  
             </div>
        </div>          
     </div>
@@ -65,127 +67,32 @@
          
         <div class="span8 right-content top-padding-bug" >
        
-       <div class="row-fluid create-button-holder">
-            
-            	   	<div class="right-top-menu-holder">
-        	
-        
-            
-           
-            
-            <div >
-            	<div><span class="icon-times"></span></div>
-                <p class="hidden-phone">Share</p>
-            
-            </div>
-            
-             <div >
-             
-            	<div><span class="icon-download"></span></div>
-                <p class="hidden-phone ">Submit</p>
-              
-            
-            </div>
-            
-           
-            
-             
-            
-        </div>
-            
-            </div>
-       
-       
-        
+      			<div class="collections-top-icons">
                 
-                      <ul class="nav nav-tabs collections-nav">
-  							<li   class="active span2 zero-left-margin"><a href="#a1" data-toggle="tab">Most Popular</a></li>
- 		 					<li  class="span1"><a class="latest-collection" href="#a2" data-toggle="tab">Latest</a></li>
-                            <li  class="span2"><a class="latest-collection" href="#a3" data-toggle="tab">My Submission</a></li>
-  					  </ul>
+                		<span>Articles</span>
+                        <a><span class="icon-uniE603"></span>Share</a>
+                        <a><span class="icon-copy"></span>Add Aricle</a>
+                        
+                
+                </div>
+       
+       
+        			<div class="collection-view-articles-holder">
+                    
+                    
+                    		<div id="note1"></div>
+                    
+                    
+                    
+                    
+                    
+                    </div>
+                
+                    
 
                     
                     
-                    
-                    <div class="tab-content note-tab-content">
-  						<div class="tab-pane active" id="a1">
-                     	
-  							<ul  class="nav nav-tabs status-nav">
-  								<li   class="active"><a href="#a11" data-toggle="tab">All</a></li>
-                                <li   ><a href="#a12" data-toggle="tab">Pending</a></li>
- 		 						<li  ><a href="#a13" data-toggle="tab">Approved</a></li>
-  					  		</ul>
-    					
-    						<div class="tab-content status-nav-content">
-                            	
-                              <div class="tab-pane active" id="a11"> 
-                              
-                           			<div id="note1"></div>
-                           
-                              </div>
-                              
-                              <div class="tab-pane" id="a12"> 
-                              </div>
-                              
-                               <div class="tab-pane" id="a13"> 
-                              </div>
-                            
-                            
-                            </div>
-    
-                    	
-                        
-                        </div>
-  
- 					    <div class="tab-pane" id="a2"> 
-                        
-                        	<ul  class="nav nav-tabs status-nav">
-  								<li class="active"  ><a href="#a21" data-toggle="tab">All</a></li>
-                                <li   ><a href="#a22" data-toggle="tab">Pending</a></li>
- 		 						<li  ><a href="#a23" data-toggle="tab">Approved</a></li>
-  					  		</ul>
-    					
-    						<div class="tab-content status-nav-content">
-                            	
-                              <div class="tab-pane active" id="a21"> 
-                              </div>
-                              
-                              <div class="tab-pane" id="a22"> 
-                              </div>
-                              
-                               <div class="tab-pane" id="a23"> 
-                                
-                              </div>
-                            
-                            
-                            </div>
-  
-                	    </div>
-                        
-                        <div class="tab-pane" id="a3"> 
-                        
-                        	<ul  class="nav nav-tabs status-nav">
-  								<li class="active"><a href="#a31" data-toggle="tab">All</a></li>
-                                <li ><a href="#a32" data-toggle="tab">Pending</a></li>
- 		 						<li><a href="#a33" data-toggle="tab">Approved</a></li>
-  					  		</ul>
-    					
-    						<div class="tab-content status-nav-content">
-                            	
-                              <div class="tab-pane active" id="a31"> 
-                              </div>
-                              
-                              <div class="tab-pane" id="a32"> 
-                              </div>
-                              
-                              <div class="tab-pane" id="a33"> 
-                                	
-                              </div>
-                            
-                            
-                            </div>
-  
-                	    </div>
+                  
                 </div>
     
     
@@ -207,10 +114,6 @@
          
             
            
-            
-        <footer  class="row-fluid span12">
-        
-		</footer>
         
         
         
@@ -228,7 +131,7 @@
 
 $( "header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
-$( "#note1" ).load( "Testnotes/NewsNote1.html" );
+$( "#note1" ).load( "Testnotes/NewNote1.html" );
 
 
 
