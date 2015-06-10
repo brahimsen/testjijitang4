@@ -27,7 +27,45 @@
 <script src="js/follow-script.js"></script>
 
 
+<script>
 
+$( document ).ready(function() {
+	
+	$(".myentry-share").click(function(){
+					
+					
+					$('.view-pop-over-submit').hide();
+					
+					
+				
+					
+				});
+
+$(".share-collection, .view-pop-over-submit").click(function(e){
+					
+					$('.view-pop-over-submit').show();
+					$('.view-share-pop-up').hide();
+					e.stopPropagation();
+					
+				
+					
+				});
+
+
+				
+				$("html").click(function(e){
+					
+					$('.collection-popover-submit').hide();
+					
+					
+				
+					
+				});
+				
+				});
+
+
+</script>
 
 
 <!-- HTML5 shim for IE backwards compatibility -->
@@ -213,8 +251,9 @@
             
             </div>
             
-            <div id="show-menu" class="hidden-desktop" >
-            	<div><span  class="icon-menu article-read-later-empty"></span></div>
+            <div>
+            	<div><span  class="icon-uniE605"></span></div>
+                <p class="hidden-phone hidden-tablet">Edit</p>
                 
                 
             
@@ -442,6 +481,13 @@
              </div>
             
             </div>
+            
+    
+    <a class="icon-facebook"></a>
+    <a class="icon-twitter"></a>
+    <a class="icon-uniE611"></a>
+    <a class=" icon-uniE612"></a>
+     <span>Share to</span>
    
    </div>
   
@@ -488,7 +534,7 @@
             
         		<div class="fifty-left">
             
-            		<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            		<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">1 hour ago</span><span class="icon11-check update-comment-fade"></span></p>
                 	<p class="display-comment-text"> Moving to music is an essential human pleasure particularly related to musical groove. Structurally, music associated with groove is often characterised by rhythmic complexity in, music associated with groove is often characterised by rhythmic complexity in</p> 
                     
                     <p class="edit-comment-link"><a class="edit-comment-link-parent">Edit</a> <a class="comment-collapse-link"> + Show replies (2) </a></p>
@@ -509,7 +555,7 @@
                                     
                                     <div class="thirty-left">
             
-            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">34 minutes ago</span><span class="icon11-check update-comment-fade"></span></p>
                 						<p class="display-comment-text">Moving to music is an essential human pleasure</p> 
                     					<p class="edit-comment-link edit-comment-link-child"><a>Edit</a></p>
                     <p class="edit-comment-block"><a class="comment-save-note">Save Note</a> . <a class="comment-edit-cancel">Cancel</a> . <a class="comment-edit-delete">Delete</a></p>
@@ -532,7 +578,7 @@
                                     
                                     <div class="thirty-left">
             
-            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">Yesterday 6:34 P.M</span><span class="icon11-check update-comment-fade"></span></p>
                 						<p class="display-comment-text">Moving to music is an essential human pleasure</p> 
                     					<p class="edit-comment-link edit-comment-link-child"><a>Edit</a></p>
                     <p class="edit-comment-block"><a class="comment-save-note">Save Note</a> . <a class="comment-edit-cancel">Cancel</a> . <a class="comment-edit-delete">Delete</a></p>
@@ -577,7 +623,7 @@
             
         		<div class="fifty-left">
             
-            		<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            		<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">22/05/2015</span><span class="icon11-check update-comment-fade"></span></p>
                 	<p class="display-comment-text"> and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure, particularly for participants who enjoy dancing to music. Hence, there is an inverted U-shaped relationship between syncopation, body-movement and pleasure, and syncopation seems to be an important structural factor i</p> 
                     
                     <p class="edit-comment-link"><a class="edit-comment-link-parent">Edit</a> <a class="comment-collapse-link"> + Show replies (2) </a></p>
@@ -598,7 +644,7 @@
                                     
                                     <div class="thirty-left">
             
-            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">1 hour ago</span><span class="icon11-check update-comment-fade"></span></p>
                 						<p class="display-comment-text">Moving to music is an essential human pleasure</p> 
                     					<p class="edit-comment-link edit-comment-link-child"><a>Edit</a></p>
                     <p class="edit-comment-block"><a class="comment-save-note">Save Note</a> . <a class="comment-edit-cancel">Cancel</a> . <a class="comment-edit-delete">Delete</a></p>
@@ -621,7 +667,7 @@
                                     
                                     <div class="thirty-left">
             
-            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">1 hour ago</span><span class="icon11-check update-comment-fade"></span></p>
                 						<p class="display-comment-text">Moving to music is an essential human pleasure</p> 
                     					<p class="edit-comment-link edit-comment-link-child"><a>Edit</a></p>
                     <p class="edit-comment-block"><a class="comment-save-note">Save Note</a> . <a class="comment-edit-cancel">Cancel</a> . <a class="comment-edit-delete">Delete</a></p>
@@ -644,7 +690,7 @@
                                     
                                     <div class="thirty-left">
             
-            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">1 hour ago</span><span class="icon11-check update-comment-fade"></span></p>
                 						<p class="display-comment-text">Moving to music is an essential human pleasure</p> 
                     					<p class="edit-comment-link edit-comment-link-child"><a>Edit</a></p>
                     <p class="edit-comment-block"><a class="comment-save-note">Save Note</a> . <a class="comment-edit-cancel">Cancel</a> . <a class="comment-edit-delete">Delete</a></p>
@@ -667,7 +713,7 @@
                                     
                                     <div class="thirty-left">
             
-            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="icon11-check update-comment-fade"></span></p>
+            							<p class="comment-author-name-holder"><a>Adam Tata</a><span class="comment-publish-date">1 hour ago</span><span class="icon11-check update-comment-fade"></span></p>
                 						<p class="display-comment-text">Moving to music is an essential human pleasure</p> 
                     					<p class="edit-comment-link edit-comment-link-child"><a>Edit</a></p>
                     <p class="edit-comment-block"><a class="comment-save-note">Save Note</a> . <a class="comment-edit-cancel">Cancel</a> . <a class="comment-edit-delete">Delete</a></p>
