@@ -66,8 +66,8 @@ border: 1px solid #ccc;
 
 @media screen and (max-width:500px) {
 	.square-grid-item  {
-		width: 96%;
-		margin: 0 2% 20px 0;
+		width: 100%;
+		margin: 0 0% 20px 0;
 		height: 175px;
 		
 	}
@@ -75,7 +75,7 @@ border: 1px solid #ccc;
 		.square-grid-desc {
 
 		height: 100px;
-		background: #F0F;
+		
 		text-overflow: ellipsis;
 		
   overflow: hidden;
@@ -213,21 +213,12 @@ padding-bottom: 10px;
 color: #877C21 !important;
 font-size: 15px;
 font-weight: bold;
+float: left;
 
 
 }
 
-.square-grid-name > a:nth-child(2) {
-margin-left: 10px;
-color: #666;
-padding-left: 5px;
-padding-right: 5px;
 
-
-
-
-
-}
 
 .square-grid-bottom > p {
 
@@ -256,6 +247,50 @@ padding-bottom: 0px;
 
 	background: #eee;
 
+
+
+}
+
+.profile-follow {
+
+	float: left;
+	margin-left: 10px;
+
+}
+
+.profile-unfollowed {
+
+	
+	color: #999;
+	text-decoration: none !important;
+	cursor: pointer;
+	display: none;
+
+
+
+}
+
+.profile-followed {
+
+	
+	color: #b27300;
+	text-decoration: none !important;
+	cursor: pointer;
+
+
+
+}
+
+.hide-follow-check {
+
+	display: none !important;
+
+
+}
+
+.square-grid-item:hover .profile-unfollowed{
+
+		display: block
 
 
 }

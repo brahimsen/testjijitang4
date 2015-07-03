@@ -7,10 +7,7 @@
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
-<<<<<<< HEAD
 <link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
-=======
->>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 
 <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -31,26 +28,7 @@
 
 <style>
 
-<<<<<<< HEAD
 
-=======
-#sticky {
-
-}
-#sticky.sticka {
-    position: fixed;
-    top: 50;
-	width: 100% !important;
-    z-index: 10000;
-    
-}
-
-
-.hideme {
-  
-    opacity: 0;
-}
->>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 </style>
 
 <script>
@@ -60,47 +38,18 @@
 
 $(document).ready(function() {
 	
-<<<<<<< HEAD
-
-=======
-	
-	$(".big-check").hide();
-				$(".unsers-check-single").click(function(){
+			 $(".profile-follow").click(function(){
+						$(".profile-unfollowed,.profile-followed",this).toggleClass("hide-follow-check");
 					
-					$('.big-check',this).toggle();
-					
-					
-				
-					
+						
+								
 				});
->>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 	
 	
 
 });
 
 
-<<<<<<< HEAD
-=======
-$(window).on("load",function() {
-    function fade() {
-        $('.hideme').each(function() {
-            /* Check the location of each desired element */
-            var objectBottom = $(this).offset().top + $(this).outerHeight() -100;
-            var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-            
-            /* If the object is completely visible in the window, fade it in */
-            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-                if ($(this).css('opacity')==0) {$(this).fadeTo(500,1);}
-            } else { //object goes out of view (scrolling up)
-                if ($(this).css('opacity')==1) {$(this).fadeTo(500,0);}
-            }
-        });
-    }
-    fade(); //Fade in completely visible elements during page-load
-    $(window).scroll(function() {fade();}); //Fade in elements during scroll
-});
->>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 
 
 </script>
@@ -163,7 +112,6 @@ $(window).on("load",function() {
 
   <!-- Tab panes -->
  
-<<<<<<< HEAD
  
  
 	<div class="square-grids">
@@ -226,8 +174,11 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a><span class="icon11-check"></span> Follow</a>
 		
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -256,36 +207,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-	
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -314,7 +239,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		
+	<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -343,7 +271,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -372,7 +303,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -401,7 +335,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -430,36 +367,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-	
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -488,7 +399,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+	<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -517,7 +431,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -546,7 +463,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -575,7 +495,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -604,7 +527,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -633,37 +559,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
-
-
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -692,7 +591,10 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -721,7 +623,106 @@ $(window).on("load",function() {
 	<div class="square-grid-name">
 		
 		<a>Brahim Senhaji</a>
-		<a>Follow</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+	</div>
+	
+	<div class="square-grid-bottom">
+		
+	<p>
+	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
+	<span>Articles</span>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+
+<div class="square-grid-item" > 
+<div class="square-grid-item-inner"> 
+
+	<div class="square-grid-desc">
+	<a href="#"><img src="img/brahim.png" /></a>
+	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration
+	
+	</div>
+	
+	<div class="square-grid-name">
+		
+		<a>Brahim Senhaji</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+	
+	</div>
+	
+	<div class="square-grid-bottom">
+		
+	<p>
+	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
+	<span>Articles</span>
+	</p>
+	</div>
+
+</div> 
+</div> 
+ 
+<div class="square-grid-item" > 
+<div class="square-grid-item-inner"> 
+
+	<div class="square-grid-desc">
+	<a href="#"><img src="img/brahim.png" /></a>
+	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration
+	
+	</div>
+	
+	<div class="square-grid-name">
+		
+		<a>Brahim Senhaji</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+	
+	</div>
+	
+	<div class="square-grid-bottom">
+		
+	<p>
+	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
+	<span>Articles</span>
+	</p>
+	</div>
+
+</div> 
+</div> 
+ 
+<div class="square-grid-item" > 
+<div class="square-grid-item-inner"> 
+
+	<div class="square-grid-desc">
+	<a href="#"><img src="img/brahim.png" /></a>
+	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration
+	
+	</div>
+	
+	<div class="square-grid-name">
+		
+		<a>Brahim Senhaji</a>
+		<div class="profile-follow">
+		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
+		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
 	
 	</div>
 	
@@ -742,462 +743,6 @@ $(window).on("load",function() {
 	</div>
   
    		
-=======
-  
-   		
-    
-    	<div class="collections-dashbord-holder index-collections-dashbord-holder fix-this-width-too ">
-        
-       
-        	
-            <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-                    
-                    
-                    
-                    
-                  <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-            
-                <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-    		
-            
-                <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-    		
-            
-                 <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-    		
-                 <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-    		
-            
-               <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-                
-              <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-    		
-               <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-                
-                
-                
-              <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-               <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-                 <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-    		
-            <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder profile-inner-content-holder">
-                        
-                        
-                        		<div class="profile-image-holder">
-                                
-                                
-                                	<a>
-                                    
-                                    	<img src="img/brahim.png"/>
-                                    </a>
-                                
-                                
-                                </div>	
-                    			
-                        
-                            
-                            <div class="collection-inner-content-footer profile-inner-content-footer">
-                            
-                            	<p class="profile-list-author">Yuyu Xuan</p>
-                                <p class="collection-list-author">32 Notes/Articles</p>
-                                	<p class="collection-footer">10 Following . 34 Fans</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-    		
-                
-         	</div>
-        
-        
-                
-                
-                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  </div>
-   
-        
-   
-    
-    
-    </div>
->>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 
 </body>
 
