@@ -11454,7 +11454,11 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 }
 
 .nav-admin-holder {
+<<<<<<< HEAD
 	left: 34px !important;
+=======
+	left: 12px !important;
+>>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 }
 
 .nav-admin-holder > hr {
@@ -13713,10 +13717,15 @@ margin-right: 10px;
 
 .articles-laft-inner {
 	
+<<<<<<< HEAD
 	margin-left: 5%;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	margin-right: 5%
+=======
+	margin-left: 10%;
+	padding-top: 30px;
+>>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 
 
 
@@ -13785,6 +13794,7 @@ margin-right: 10px;
 
 }
 
+<<<<<<< HEAD
 .articles-laft-inner > div > h4  {
 
 	color: #999;
@@ -13797,6 +13807,8 @@ margin-right: 10px;
 
 }
 
+=======
+>>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 .articles-laft-inner > div:nth-child(1) > p > .active {
 	color: #333 !important;
 	
@@ -13805,6 +13817,7 @@ margin-right: 10px;
 
 }
 
+<<<<<<< HEAD
 .filter-categories > p  {
 
 		width: 45%;
@@ -13839,6 +13852,8 @@ overflow: hidden;
 
 }
 
+=======
+>>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
 
 .articles-laft-inner > div > p > a {
 	color: #999 !important;
@@ -15285,6 +15300,7 @@ overflow: hidden;
 	padding-bottom: 4px;
 	border-bottom: 1px solid #efefef;
 
+<<<<<<< HEAD
 }
 
 .create-project-holder {
@@ -15339,3 +15355,6 @@ overflow: hidden;
 
 
 
+=======
+}
+>>>>>>> 553c28bc9e851fb7a1e311477741e94e7acc8ae9
