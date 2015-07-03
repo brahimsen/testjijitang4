@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/myform.js"></script>
+<script src="js/collection-script.js"></script>
+
+
+<script>
+
+$(document).ready(function() {
+
+});
+
+</script>
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+
+
+<body>
+
+  	<div class="header-wrapper">
+			
+            <header>
+
+
+			</header>
+
+		</div>
+
+	<div class="container-fluid">
+	
+		<div class="create-project-holder">
+		
+			<p>Create a Project / Edit Your Project</p>
+			
+			<div>
+			
+				<p class="create-project-label">
+				Project Title:
+				</p>
+				
+				<input type="text"/>
+			
+			
+			
+			</div>
+		
+		
+		</div>
+    
+
+    
+    </div>
+
+</body>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+$( "#Entries1" ).load( "Testnotes/Note1.html" );
+$( "#Entries2" ).load( "Testnotes/Note2.html" );
+$( "#Entries3" ).load( "Testnotes/Note3.html" );
+$( "#Entries4" ).load( "Testnotes/Note4.html" );
+$( "#Entries5" ).load( "Testnotes/Note5.html" );
+
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('.index-arrow-down-holder a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.index-arrow-down-holder a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            currLink.addClass("left-active");
+        }
+        else{
+            currLink.removeClass("left-active");
+        }
+    });
+}
+
+ 
+</script>
+<script src="js/myjavascript.js"></script>
+
+
+
+
+

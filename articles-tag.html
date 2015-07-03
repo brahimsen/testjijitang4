@@ -1,0 +1,368 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="css/dataTables.scroller.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/myform.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="js/dataTables.scroller.js"></script>
+<script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="js/demo.js"></script>
+
+
+<style>
+
+.dataTables_info {
+	
+	display: none !important;		
+
+
+}
+
+.dataTables_paginate {
+	
+	display: none !important;		
+
+
+}
+
+	#example_length {
+		display: none !important;		
+	
+	}
+	
+	thead {
+		display: none;		
+	
+	}
+	
+	
+	#example_filter {
+		float: left !important;
+		width: 100%;
+		
+	
+	}
+	
+	#example_filter > label {
+		float: none !important;
+		width: 100%;
+		
+	
+	}
+	
+	#example_filter > label > input {
+		float: none !important;
+		width: 97%;
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	
+		box-shadow: none !important;
+		border-radius: 3px !important;
+		
+		
+	
+	}
+	
+	#example_filter {
+		float: left !important;
+		
+	
+	}
+	
+	
+	tbody > tr {
+		float: left !important;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		background: #eee !important;
+		background-color: #eee !important;
+		border: 1px solid #ccc !important;
+	}
+	
+	tbody > tr > td {
+	
+		background: #eee !important;
+		background-color: #eee !important;
+	}
+	
+	tbody > tr > td > a {
+		color: #333;
+		font-size: 13px;
+	}
+	
+		table.dataTable.no-footer {
+			border-bottom: 0px !important;
+	}
+	
+
+
+
+
+table {
+	margin-bottom: 20px;
+
+}
+
+.dataTables_wrapper .dataTables_paginate {
+	margin-bottom: 20px;
+
+
+}
+
+</style>
+
+
+<script>
+
+$(document).ready(function() {
+oTable = $('#example').dataTable({
+    "oLanguage": {
+    "sSearch": "",
+  },
+"lengthMenu": [[40, 100, 200, -1], [40, 100, 200, "All"]]
+});
+} ); 
+
+	
+
+$(window).scroll(function(){
+	
+		
+  
+      scroll = $(window).scrollTop();
+	  
+	
+	  
+	 
+
+  if (scroll >= 50 && $(window).width() < 980 ) {
+	  
+	 
+	  
+	  
+	  
+	  
+	  
+	   $('.article-sub-navigation ').addClass('fix-icon-banner-to-top');
+	   $('.article-sub-navigation ').css("padding-top","10px");
+	    
+	   
+  
+  $('.article-left-mobile-wrapper').addClass('minus-twenty-top'); }
+  
+  
+  else{ $('.article-sub-navigation ').removeClass('fix-icon-banner-to-top'); $('.article-sub-navigation ').css("padding-top","15px");
+  
+  
+   }
+
+
+	
+
+});
+
+</script>
+
+
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div class="header-wrapper">
+	<header>
+
+
+	</header>
+</div>
+
+    <div class="main-page-wrapper">
+    
+    	
+    
+ 		
+        
+        <div class="main-page-content" >
+        
+        <div class="article-tag-navigation">
+        
+        
+        		<div>
+                
+                
+                <p><span class="icon31-tag"></span><span>Information Technology</span><a class="icon9-eye">1234 views</a><a class="icon3-file">56 Articles</a></p>
+                
+                
+                
+                </div>
+                
+           
+        
+        
+            
+        </div>
+        
+        		<div class="main-page-left hidden-tablet hidden-phone" style="margin-top: 52px; padding-top: 30px;">
+                
+             		<div class="left-tag-holder">
+                    
+                    <!--<p>More Tags from JIJITANG</p>-->
+                  
+                    
+                    <div>
+                    
+                    	   <table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>tags</th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><a>Business</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>management</a></td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><a>Information Technology</a></td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><a>history</a></td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><a>sociology</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>charlie hebdo</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>racism</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>china</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>morocco</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>air crash</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>trading</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>ajax</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>MSQL</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>tazmamart</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>hassan 2</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>coup d'etat</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>houwa hadak</a></td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><a>sir 3lah</a></td>
+					</tr>
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+                    
+                    </div>
+                    
+                    
+                    
+                    
+                    </div>
+                  
+                	
+                
+                		
+                        
+                     
+                
+                </div>
+                
+                <div class="main-page-right tag-page-right-content">
+                
+                	<div id="Entries1"></div>
+                    
+    
+    
+    			</div>
+   
+
+      
+   
+        
+    
+    
+   
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+$( "#aside" ).load( "aside.html" );
+$( "#Entries1" ).load( "Testnotes/NewNote1.html" );
+
+  
+
+</script>
+
+<script src="js/myjavascript.js"></script>
+<script src="js/myEntries.js"></script>  
+

@@ -1,0 +1,771 @@
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-xvh5d9');
+	src:url('../fonts/icomoon.eot?#iefix-xvh5d9') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-xvh5d9') format('woff'),
+		url('../fonts/icomoon.ttf?-xvh5d9') format('truetype'),
+		url('../fonts/icomoon.svg?-xvh5d9#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+	content: "\f002";
+}
+.icon-envelope-o:before {
+	content: "\f003";
+}
+.icon-heart:before {
+	content: "\f004";
+}
+.icon-star:before {
+	content: "\f005";
+}
+.icon-star-o:before {
+	content: "\f006";
+}
+.icon-user:before {
+	content: "\f007";
+}
+.icon-th-list:before {
+	content: "\f00b";
+}
+.icon-check:before {
+	content: "\f00c";
+}
+.icon-times:before {
+	content: "\f00d";
+}
+.icon-search-plus:before {
+	content: "\f00e";
+}
+.icon-search-minus:before {
+	content: "\f010";
+}
+.icon-signal:before {
+	content: "\f012";
+}
+.icon-gear:before {
+	content: "\f013";
+}
+.icon-trash-o:before {
+	content: "\f014";
+}
+.icon-home:before {
+	content: "\f015";
+}
+.icon-file-o:before {
+	content: "\f016";
+}
+.icon-clock-o:before {
+	content: "\f017";
+}
+.icon-download:before {
+	content: "\f019";
+}
+.icon-arrow-circle-o-down:before {
+	content: "\f01a";
+}
+.icon-arrow-circle-o-up:before {
+	content: "\f01b";
+}
+.icon-inbox:before {
+	content: "\f01c";
+}
+.icon-rotate-right:before {
+	content: "\f01e";
+}
+.icon-refresh:before {
+	content: "\f021";
+}
+.icon-lock:before {
+	content: "\f023";
+}
+.icon-tag:before {
+	content: "\f02b";
+}
+.icon-tags:before {
+	content: "\f02c";
+}
+.icon-bookmark:before {
+	content: "\f02e";
+}
+.icon-print:before {
+	content: "\f02f";
+}
+.icon-font:before {
+	content: "\f031";
+}
+.icon-bold:before {
+	content: "\f032";
+}
+.icon-italic:before {
+	content: "\f033";
+}
+.icon-text-height:before {
+	content: "\f034";
+}
+.icon-text-width:before {
+	content: "\f035";
+}
+.icon-align-left:before {
+	content: "\f036";
+}
+.icon-align-center:before {
+	content: "\f037";
+}
+.icon-align-right:before {
+	content: "\f038";
+}
+.icon-align-justify:before {
+	content: "\f039";
+}
+.icon-list:before {
+	content: "\f03a";
+}
+.icon-dedent:before {
+	content: "\f03b";
+}
+.icon-indent:before {
+	content: "\f03c";
+}
+.icon-picture-o:before {
+	content: "\f03e";
+}
+.icon-pencil:before {
+	content: "\f040";
+}
+.icon-chevron-left:before {
+	content: "\f053";
+}
+.icon-chevron-right:before {
+	content: "\f054";
+}
+.icon-question-circle:before {
+	content: "\f059";
+}
+.icon-info-circle:before {
+	content: "\f05a";
+}
+.icon-expand:before {
+	content: "\f065";
+}
+.icon-compress:before {
+	content: "\f066";
+}
+.icon-comment:before {
+	content: "\f075";
+}
+.icon-folder:before {
+	content: "\f07b";
+}
+.icon-folder-open:before {
+	content: "\f07c";
+}
+.icon-twitter-square:before {
+	content: "\f081";
+}
+.icon-facebook-square:before {
+	content: "\f082";
+}
+.icon-comments:before {
+	content: "\f086";
+}
+.icon-thumbs-o-up:before {
+	content: "\f087";
+}
+.icon-thumbs-o-down:before {
+	content: "\f088";
+}
+.icon-heart-o:before {
+	content: "\f08a";
+}
+.icon-github-square:before {
+	content: "\f092";
+}
+.icon-bookmark-o:before {
+	content: "\f097";
+}
+.icon-bullhorn:before {
+	content: "\f0a1";
+}
+.icon-bell:before {
+	content: "\f0a2";
+}
+.icon-wrench:before {
+	content: "\f0ad";
+}
+.icon-filter:before {
+	content: "\f0b0";
+}
+.icon-group:before {
+	content: "\f0c0";
+}
+.icon-chain:before {
+	content: "\f0c1";
+}
+.icon-copy:before {
+	content: "\f0c5";
+}
+.icon-pinterest-square:before {
+	content: "\f0d3";
+}
+.icon-google-plus-square:before {
+	content: "\f0d4";
+}
+.icon-comment-o:before {
+	content: "\f0e5";
+}
+.icon-comments-o:before {
+	content: "\f0e6";
+}
+.icon-cloud-download:before {
+	content: "\f0ed";
+}
+.icon-cloud-upload:before {
+	content: "\f0ee";
+}
+.icon-bell-o:before {
+	content: "\f0f3";
+}
+.icon-quote-left:before {
+	content: "\f10d";
+}
+.icon-quote-right:before {
+	content: "\f10e";
+}
+.icon-github-alt:before {
+	content: "\f113";
+}
+.icon-weibo:before {
+	content: "\f18a";
+}
+.icon-renren:before {
+	content: "\f18b";
+}
+
+
+header {
+	width: 100%;
+	background: #000;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+.container {
+	width: 1200px !important;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.header-wrapper > div {
+	float: left;
+	width: 120px;
+	text-align: center;
+
+}
+
+.header-wrapper > div:nth-child(1) {
+	float: left;
+	width: 200px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFF;
+
+}
+
+.header-wrapper > div:nth-child(9) {
+	float: right;
+
+
+}
+
+.header-wrapper > div:nth-child(9) > a {
+	float: right;
+
+
+}
+
+
+
+.header-wrapper > div > a {
+	
+	color:#CCC !important;
+	font-size: 13px
+	
+}
+
+.page-top {
+	
+	padding: 30px;
+
+
+}
+.page-top > h1 {
+	float: left;
+	color:#000;
+	font-size: 36px !important;
+	font-family: Arial;
+	font-weight: normal !important;
+	margin-right: 100px;
+
+}
+
+.page-top > p {
+	float: left;
+	color:#000;
+	font-size: 18px !important;
+	font-family: Arial;
+	font-weight: normal !important;
+	margin-top: 26px;
+	font-weight: bold;
+
+}
+
+.page-top > p > span {
+	float: left;
+	color:#FF9900;
+	font-size: 18px !important;
+	font-family: Arial;
+	font-weight: normal !important;
+
+}
+
+.admin-left-bar  {
+	margin: 0px !important;
+
+}
+
+.admin-right-content {
+	margin-top: 0xp !important;
+	margin-left: 0xp !important;
+	margin-right: 0xp !important;
+	margin-bottom: 50px;
+	border-bottom: #CCC 1px solid;
+	width: 960px !important;
+
+}
+
+.nav-tabs > li, .nav-pills > li {
+	float: none !important;
+
+}
+
+.nav-tabs {
+	border-bottom: none !important;
+
+}
+
+.nav-tabs > li > a {
+	color: #3D7D8B !important;
+	font-size: 18px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+	color: #999 !important;
+	border: none !important;
+
+}
+
+.Admin-table > table > thead > tr > td {
+	font:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color:#333;
+
+
+}
+
+.Admin-table > table > thead > tr {
+	border-bottom: 1px #333 solid;
+
+
+}
+
+.Admin-table > table > thead > tr > td:nth-child(1) {
+	
+	width: 100px;
+	margin-right: 20px;
+
+
+}
+
+.Admin-table > table > thead > tr > td:nth-child(2) {
+	
+	width: 120px;
+	margin-right: 20px;
+
+
+}
+
+.Admin-table > table > thead > tr > td:nth-child(3) {
+	
+	width: 230px;
+	margin-right: 20px;
+
+
+}
+
+.Admin-table > table > thead > tr > td:nth-child(4) {
+	
+	width: 230px;
+	margin-right: 20px;
+
+
+}
+
+.Admin-table > table > thead > tr > td:nth-child(5) {
+	
+	width: 290px;
+	margin-right: 20px;
+
+
+}
+
+.Admin-table > table > tbody > tr > td {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background:#0F0;
+	border-bottom: 1px #999 solid;
+
+
+}
+
+ td > img {
+	margin-right: 15px;
+	float: left;
+	cursor: pointer;
+
+
+}
+
+.admin-user-pic {
+	background:#999;
+	width: 50px; 
+	height: 50px;
+
+
+}
+
+th {
+	font-size: 13px !important;
+
+}
+
+ .current {
+	background: #3D7D8B !important;
+	color: #FFF !important;
+	font-weight: bold;
+	border: none !important;
+	border-radius: 3px;
+ }
+ 
+ #example_info {
+	 display: none !important;
+ 
+ }
+ 
+  #example2_info {
+	 display: none !important;
+ 
+ }
+ 
+ #example_paginate {
+	 float: left !important;
+	 margin-top: 30px;
+	 margin-bottom: 70px;
+	 border-bottom: 1px solid;
+ 
+ }
+ 
+  #example2_paginate {
+	 float: left !important;
+	 margin-top: 30px;
+	 margin-bottom: 70px;
+	 border-bottom: 1px solid;
+ 
+ }
+ 
+ .dataTables_filter > label > input {
+	 border-radius: 0px !important;
+	 width: 150px !important;
+ 
+ }
+ 
+  #example_length > label > select {
+	 border-radius: 0px !important;
+	 width: 75px !important;
+ 
+ }
+ 
+ #example2_length > label > select {
+	 border-radius: 0px !important;
+	 width: 75px !important;
+ 
+ }
+	
+.paginate_button:hover {
+	background: #3D7D8B !important;
+	border: none !important;
+	border-radius: 3px;
+	color: #FFF !important;
+	
+
+
+}
+
+.odd {
+	background:#FFF !important;
+
+}
+
+table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+	background:#FFF !important;
+
+}
+
+table.dataTable.display tbody tr.even > .sorting_1, table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+
+	background:#FFF !important;
+
+}
+
+table.dataTable.hover tbody tr:hover, table.dataTable.hover tbody tr.odd:hover, table.dataTable.hover tbody tr.even:hover, table.dataTable.display tbody tr:hover, table.dataTable.display tbody tr.odd:hover, table.dataTable.display tbody tr.even:hover {
+
+background:#FFF !important;
+
+}
+.multi-select-admin {
+	width: 15px;
+	height: 15px;
+	background:#FFF;
+	float: left;
+	border-radius: 20px;
+	border: 2px #999 solid;
+	cursor: pointer;
+
+}
+
+.arrow-holder {
+	float: left;
+	cursor: pointer;
+	margin-right: 15px;
+
+}
+
+.Admin-login-holder {
+	padding-top: 40px;
+	padding-left: 100px;
+	
+
+}
+
+.Admin-login-holder > h1{
+	font-weight: normal !important;
+	margin-bottom: 40px;
+	
+
+}
+
+.Admin-login-holder > div > input{
+	width: 400px;
+	height: 30px;
+	margin-bottom: 20px;
+	
+
+}
+
+.Admin-login-holder > div > input:nth-child(2){
+
+	margin-bottom: 50px;
+	
+
+}
+
+ .main-button {
+	 background: #3D7D8B;
+	 color: #FFF;
+	 font-family:Arial, Helvetica, sans-serif; 
+	 font-size: 16px;
+	 padding-left: 40px; 
+	 padding-right: 40px; 
+	 padding-top: 10px; 
+	 padding-bottom: 10px;
+	 border-radius: 5px;
+	 cursor: pointer;
+ }
+ 
+  .main-button > a {
+	 
+	 color: #FFF;
+	 font-family:Arial, Helvetica, sans-serif; 
+	 font-size: 16px;
+ }
+ 
+  .main-button-table {
+	 background: #3D7D8B;
+	 color: #FFF;
+	 font-family:Arial, Helvetica, sans-serif; 
+	 font-size: 16px;
+	 padding-left: 7px; 
+	 padding-right: 7px; 
+	 padding-top: 4px; 
+	 padding-bottom: 4px;
+	 border-radius: 3px;
+	 cursor: pointer;
+ }
+ 
+  .main-button-table > a {
+	 
+	 color: #FFF;
+	 font-family:Arial, Helvetica, sans-serif; 
+	 font-size: 12px;
+ }
+ 
+ th {
+	 max-width: 200px !important;
+ 
+ }
+ 
+ td {
+	 max-width: 200px !important;
+	 font-size: 12px !important;
+	 font-family: Arial, Helvetica, sans-serif;
+	 
+ 
+ }
+ 
+td > select {
+	width: 70px !important;
+
+}
+
+.admin-send-email {
+	border: 0px !important;
+	box-shadow: none !important;
+	width: 300px;
+
+}
+
+.admin-email-content {
+	border-radius: 0px !important;
+	width: 300px;
+	float: left;
+	margin-right: 15px;
+	height: 30px !important;
+
+}
+
+.white-span {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid
+	#333;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	cursor: pointer;
+
+}
+
+.send-to-td {
+	color:#F00 !important;
+
+}
+
+#create-admin-email > div > label {
+	width: 130px;
+	color:#333;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	float: left;
+
+}
+
+#create-admin-email > div > input {
+	width: 700px;
+	border-radius: 0px !important;
+	margin-bottom: 30px;
+
+}
+
+#create-admin-email > div > textarea {
+	width: 700px;
+	height: 200px;
+	border-radius: 0px !important;
+	margin-bottom: 30px;
+
+}
+
+#create-admin-picture > div > label {
+	width: 130px;
+	color:#333;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	float: left;
+
+}
+
+#create-admin-picture > div > input {
+	width: 700px;
+	border-radius: 0px !important;
+	margin-bottom: 30px;
+
+}
+
+#create-admin-picture > div > textarea {
+	width: 700px;
+	height: 200px;
+	border-radius: 0px !important;
+	margin-bottom: 30px;
+
+}
+
+#create-admin-picture > div > select {
+
+margin-bottom: 30px;
+}
+
+
+
+.email-image-holder{
+	width: 100px;
+	height: 100px;
+	background:#666;
+	float: left;
+	margin-bottom: 30px;
+
+}
+
+.recommend-input {
+	width: 57px;
+	border-radius: 0px !important;
+
+}
+
+.arrange-number {
+	color:#F00;
+	margin-right: 20px;
+
+}

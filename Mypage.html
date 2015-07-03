@@ -1,0 +1,556 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
+
+ <script>
+ $(document).ready(function() {
+				$(".like-full").hide();
+				$(".like-holder").click(function(){
+					$('.like',this).hide();
+					$('.like-full',this).show();
+				});
+			});
+			
+				$(".read-later-full").hide();
+				$(".read-later-holder").click(function(){
+					$('.read-later-empty',this).hide();
+					$('.read-later-full',this).show();
+				});
+				
+				$(".note-popover-update").hide();
+				$(".save,.note-popover-update").click(function(e){
+					
+					$('.note-popover-update',this).fadeIn();
+					e.stopPropagation();
+					
+				
+					
+				});
+				
+				$("html").click(function(e){
+					
+					$('.note-popover-update').hide();
+					
+					
+				
+					
+				});
+				</script>
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+
+
+<body>
+
+	<div class="container-fluid">
+
+
+<div class="header-wrapper">
+	<header>
+
+
+	</header>
+</div>
+
+	<div class="fixed-sidebar span4"> 
+        <div class="fixed-sidebar-wrapper">
+        	
+            <div class="fixed-sidebar-inner">
+           		<div class="fixed-bar-avatar hidden-tablet hidden-phone">
+                	<img src="img/brahim.png" />
+                </div>
+                
+                <div class="hidden-desktop left-bar-mobile-profile">
+                
+                <img src="img/brahim.png"/>
+                
+                <div class="follow-user-btn-holder twenty-left-margin-min-with hidden-desktop ">
+                     	<button class="follow-btn follow-btn-short">Follow</button>
+                     	<button class="unfollow-btn follow-btn-short">Unfollow</button>
+                </div> 
+                
+                </div>
+              
+                <div class="autohor-info-mobile-change" >
+                
+                <p class="left-bar-author text-left-mobile">Brahim Senhaji</p>
+                
+               
+                
+                <p class="left-bar-follow-info text-left-mobile">24 Followers . 32 Fans</p>
+                <p class="left-bar-author-descr">Graduated From Al Akhawayn University and Illinois Wesleyan University with a Bachelor of Science in Computer Science with a minor in Business Administration.</p>
+                
+               <div class="follow-user-btn-holder twenty-left-margin-min-with hidden-tablet hidden-phone ">
+                     	<button class="follow-btn follow-btn-short">Follow</button>
+                     	<button class="unfollow-btn follow-btn-short">Unfollow</button>
+                </div>  
+                
+                </div> 
+            	
+               
+            </div>
+       </div>          
+    </div>
+    
+         
+        <div class="span8 right-content" >
+       
+                   
+                   <div class="nav-wrapper">
+                      
+                      
+                      <div class="nav-wrapper-inner">
+                      <div class="nav-mobile-btn" ></div>
+                      <ul class="nav nav-tabs collections-nav">
+  							<li   class="active"><a href="#mp1" data-toggle="tab">About</a></li>
+ 		 					<li ><a  href="#mp2" data-toggle="tab">Articles</a></li>
+                            
+                            <li ><a href="#mp4" data-toggle="tab">Collections</a></li>
+                            <li ><a href="#mp3" data-toggle="tab">Projects</a></li>
+                            <li ><a href="#mp3" data-toggle="tab">Liked</a></li>
+                            <li ><a href="#mp3" data-toggle="tab">Saved</a></li>
+  					  </ul>
+                      </div>
+                      	
+                    
+
+                    </div>
+                    
+
+                    
+                    
+                    
+                    <div class="tab-content note-tab-content">
+  						<div class="tab-pane active" id="mp1">
+                        
+                               <div id="empty-news"></div>
+                     	
+  							<div class="mynews">
+                            	<div class="mynews-header">
+                                	<div class="mynews-avatar">
+                                    <img src="img/brahim.png" />
+                                    </div>
+                                    <div class="mynews-title" >
+                                    <span><a>Adam Tata</a></span>&nbsp Created &nbsp <span><a>Jijitang Most popular research papaers reading list</a></span>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="mynews-body">
+                                <div class="pick-post mynews-pick-post">
+            		<div class="pick-head mynews-pick-head row-fluid">
+                    	<div class="span12">
+                        	<div class="pick-avatar" style="margin-left: 10px"></div>
+                        	<p class="pick-title "><a>Glucose-TOR signalling reprograms the transcriptome Glucose-TOR transcriptome Glucose-TOR</a>
+                            
+                            <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span> </p>
+                            
+                       
+                    
+                    	</div>
+                        
+                        
+                        
+                       
+            
+           			</div>
+            		
+                    <div class="pick-content">
+                    <ul class="pick-tabs row-fluid" style="display:inline">
+  						<li class="active"><a href="#eg1" data-toggle="tab">论文摘要</a></li>
+                        /
+  						<li><a href="#eg2" data-toggle="tab">ABSTRACT</a></li>
+  					</ul>
+                    
+                    
+                    
+                    <div class="tab-content note-tab-content">
+  			<div class="tab-pane active" id="eg1">
+  	 <p class="pick-text">
+    妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券 妈妈再也不怕我写不出论文啦！扫二维码获得唧唧堂论文摘要翻译优惠券
+     </p>
+                    </div>
+  
+  <div class="tab-pane" id="eg2"> 
+  
+  	 <p class="pick-text">Meristems encompaass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through glycolysis and mitochondrial bioenergetics to control root meristem activation, which is decoupled from direct glucose sensing, growth-hormone signalling and stem-cell maintenance...</p>
+                </div>
+    
+    </div>
+  
+</div>
+                   
+                    
+           		
+            	</div>
+                
+                                </div>
+                                
+                                <div class="mynews-footer">
+                                <span>April 10, 2014  10:22 PM</span>
+                                </div>
+                                
+                         
+                            
+                            
+                            </div>
+    
+                    	       <div class="mynews">
+                            	<div class="mynews-header">
+                                	<div class="mynews-avatar">
+                                            <img src="img/brahim.png" />                       
+                                    </div>
+                                    <div class="mynews-title" >
+                                    <span><a>Adam Tata</a></span>&nbsp Created a Collection
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="mynews-body collection-news">
+                                
+                                	<img class="collection-news-image"   src="img/right-image.jpg">
+                                 		<p>
+                                        
+                                         
+                                    	<span class="collection-news-title">Jijitang Most popular research papaers reading list</span><br/><br/>
+                                        
+                                        <span class="collection-news-text">This is the description of this collectionMeristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic </span><br/><br/>
+                                        <span class="collection-news-total">Total 13 Articles under this collection</span>
+                                      
+                                        
+                                        </p>
+                                        
+                                        
+                                       
+                                       
+                                        
+                                    	
+                                        
+                                        
+                                
+                                	
+                
+                                </div>
+                                
+                                <div class="mynews-footer">
+                                <span>April 10, 2014  10:22 PM</span>
+                                </div>
+                            
+                            
+                            </div>
+                            
+                            <div class="mynews">
+                            	<div class="mynews-header">
+                                	<div class="mynews-avatar">
+                                    <img src="img/brahim.png" />
+                                    </div>
+                                    <div class="mynews-title" >
+                                    <span><a>Adam Tata</a></span>&nbsp Followed &nbsp <span><a>Brahim Senhaji</a></span>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="mynews-body collection-news">
+                                
+                                	<img class="follow-news-image" src="img/brahim.png">
+                                 		<p>
+                                        
+                                         
+                                    	<a class="follow-news-name">Sara Sieger</a><br/>
+                                        <span class="follow-news-info"> 56 Followers . 23 Fans</span><br/>
+                                        
+                                        <span class="follow-news-desc">This is the description of this collectionMeristems encompass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic </span><br/>
+                                      
+										<div class="follow-user-btn-holder " style="float: left">
+                     						<button class="follow-btn">Follow</button>
+                     						<button class="unfollow-btn">Unfollow</button>
+                						</div>                                        
+                                        </p>
+              
+                                </div>
+                                
+                                <div class="mynews-footer">
+                                <span>April 10, 2014  10:22 PM</span>
+                                </div>
+                            
+                            
+                            </div>
+                        
+                        </div>
+  
+ 					    <div class="tab-pane" id="mp2"> 
+                        
+                        	<div style="height: auto; overflow: auto">
+                            <ul  class="nav status-nav">
+  								<li   class="active"><a href="#a11" data-toggle="tab">All</a></li>
+ 		 						<li ><a href="#a12" data-toggle="tab">Public</a></li>
+                                <li ><a href="#a13" data-toggle="tab">Private</a></li>
+ 		 						<li><a href="#a14" data-toggle="tab">Team</a></li>
+  					  		</ul>
+                            
+                            <div class="my-page-search"> 
+                            
+                            		<input type="text" placeholder="find my article">
+                                    <span class="icon-uniE601 my-search-btn"></span>
+                           
+                           </div>
+                           </div>
+    					
+    						<div class="tab-content status-nav-content">
+                            	
+                              <div class="tab-pane active" id="a11"> 
+                                	<div id="note1"></div>
+                              </div>
+                              
+                              <div class="tab-pane" id="a12"> 
+                           
+                              </div>
+                              
+                              <div class="tab-pane" id="a13"> 
+                                
+                              </div>
+                              
+                              <div class="tab-pane" id="a14"> 
+                                
+                              </div>
+                            
+                            
+                            </div>
+    					
+    						
+  
+                	    </div>
+                        
+                        <div class="tab-pane" id="mp3"> 
+                        
+                        	
+                                	<div id="note2"></div>
+                              
+  
+                	    </div>
+                        
+                          <div class="tab-pane" id="mp4"> 
+                        
+                         <div class="collection-item-holder span3 ">
+                	<div class="collection-item">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                
+                <div class="collection-item-holder span3 ">
+                	<div class="collection-item">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                
+                <div class="collection-item-holder span3 ">
+                	<div class="collection-item">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                
+               <div class="collection-item-holder span3 ">
+                	<div class="collection-item">
+                        <div class="collection-back"></div>
+                        <div class="collection-inner-content-holder">
+                    			
+                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
+                                    <span class="collection-icon-empty icon-star "></span>
+                        			<span class="collection-icon-full icon2-star"></span>
+                                </div>
+                                
+                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
+                                     <span class="edit-collection-icon icon-uniE605"></span>
+                                </div>
+                                
+                                
+                            <div class="collection-inner-content">
+                            
+                            		<p class="collection-list-name">Sara Seager's Publication</p>
+                              
+                                	
+                            </div>
+                            
+                            <div class="collection-inner-content-footer">
+                            
+                            	<p class="collection-list-author">Yuyu Xuan</p>
+                                	<p class="collection-footer">26 Notes . 34 Followers</p>
+                            
+                            </div>
+                        </div>
+                	</div>
+                </div>
+  
+                	    </div>
+                </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       	      
+            
+   
+      
+             
+         
+     
+            
+         
+            
+           
+            
+        <footer  class="row-fluid span12">
+        
+		</footer>
+        
+        
+        
+        
+    
+    
+    </div>
+
+
+
+
+</div>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" );
+$( "footer" ).load( "footer.html" );
+$( "#note1" ).load( "MyEntries.html" );
+$( "#empty-news" ).load( "empty-news-message.html" );
+
+
+
+
+
+  
+
+</script>
+<script src="js/myjavascript.js"></script>
+

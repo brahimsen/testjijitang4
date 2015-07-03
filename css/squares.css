@@ -1,0 +1,265 @@
+/*	Authors		Craig Rozynski craigrozynski.com
+							Marco Lago marcolago.com
+		Version		2.0 2015-02-02 */
+
+/* CSS Reset (customised) */
+
+/* Primary Styles */
+  
+
+.square-grid-item  {
+	float: left;
+	width: 100%;
+	height: auto;
+	margin-bottom: 30px;
+	text-decoration: none;
+}
+
+.square-grid-item-inner {
+position: absolute;
+
+
+height: 165px;
+padding-left: 2%;
+padding-right: 2%;
+padding-top: 5px;
+padding-bottom: 3px;
+border: 1px solid #ccc;
+
+
+
+
+}
+
+
+
+/* Media Queries */
+
+/* Column Control Media Queries */
+
+
+	
+	.square-grid-item  {
+		-webkit-transition: background-color .3s linear;
+		-moz-transition: -color .3s linear;
+		transition: background-color .3s linear;
+	}
+	.square-grid-item { background-color: #fff;  }
+	.square-grid-item  { background-color: #fff; }
+	.square-grid-item  {
+		position: relative;
+		top: 0;
+		overflow: hidden;
+	}
+	
+.square-grid-filter {
+	
+		height: 565px !important;
+		background: rgba(237,235,213,0.5);
+	
+	
+	
+	}
+
+
+/* One Column */
+
+@media screen and (max-width:500px) {
+	.square-grid-item  {
+		width: 96%;
+		margin: 0 2% 20px 0;
+		height: 175px;
+		
+	}
+	
+		.square-grid-desc {
+
+		height: 100px;
+		background: #F0F;
+		text-overflow: ellipsis;
+		
+  overflow: hidden;
+
+
+}
+
+.square-grid-desc  > a > img {
+height: 100%;
+float: left;
+margin-right: 10px;
+
+	
+
+
+}
+	
+	
+}
+
+/* Two Column */
+
+@media screen and (min-width:500px) {
+	.square-grid-item  {
+		width: 47%;
+		margin: 0 1.5% 20px 1.5%;
+		height: 175px;
+		
+	}
+	
+		.square-grid-desc {
+
+		height: 100px;
+		
+		text-overflow: ellipsis;
+		
+  overflow: hidden;
+
+
+}
+
+.square-grid-desc  > a > img {
+height: 100%;
+float: left;
+margin-right: 10px;
+
+	
+
+
+}
+	
+	
+}
+
+/* Three Column */
+
+@media screen and (min-width:800px) {
+	.square-grid-item {
+		width: 31.33%;
+		margin: 0 1% 20px 1%;
+		height: 175px;
+	
+	}
+	
+	.square-grid-desc {
+
+		height: 100px;
+		
+		text-overflow: ellipsis;
+		
+  overflow: hidden;
+
+
+}
+
+.square-grid-desc  > a > img {
+height: 100%;
+float: left;
+margin-right: 10px;
+
+	
+
+
+}
+}
+
+/* Four Column */
+
+@media screen and (min-width:1200px) {
+	.square-grid-item {
+		width: 23%;
+		margin: 20px 1% 0 1%;
+		height: 175px;
+		
+	}
+	
+	
+	
+	.square-grid-desc {
+
+		height: 100px;
+		
+		text-overflow: ellipsis;
+		
+		
+  overflow: hidden;
+
+
+}
+
+.square-grid-desc  > a > img {
+height: 100%;
+float: left;
+margin-right: 10px;
+
+	
+
+
+}
+
+
+
+
+}
+
+.square-grid-name {
+
+padding-top: 10px;
+padding-bottom: 10px;
+
+
+}
+
+.square-grid-name > a:nth-child(1) {
+color: #877C21 !important;
+font-size: 15px;
+font-weight: bold;
+
+
+}
+
+.square-grid-name > a:nth-child(2) {
+margin-left: 10px;
+color: #666;
+padding-left: 5px;
+padding-right: 5px;
+
+
+
+
+
+}
+
+.square-grid-bottom > p {
+
+
+margin-bottom: 0px !important;
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+
+
+}
+
+.square-grid-bottom  {
+
+position: absolute;
+width: 100%;
+bottom: 5px;
+padding-top: 5px;
+padding-bottom: 0px;
+
+
+
+}
+
+.square-grid-item-inner:hover {
+
+	background: #eee;
+
+
+
+}
+
+/* Font Size Control Media Queries */
+
+
