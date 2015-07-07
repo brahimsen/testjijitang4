@@ -1,7 +1,7 @@
 Main Hosting Details
 Control panel username
 	b15_14679623
-Control panel password 	**********
+Control panel password 	********** 
 Control panel URL
 	cpanel.byethost15.com
 MySQL username
