@@ -8,6 +8,7 @@
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/article-grids.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
 
 <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -25,6 +26,8 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="../js/myEntries.js"></script>  
 
 <style>
 
@@ -34,6 +37,8 @@
 	
 	
 	}
+	
+	
 
 
 </style>
@@ -42,21 +47,62 @@
 
 <script>
 
-
+$(document).ready(function() {
+oTable = $('.example').dataTable({
+    "oLanguage": {
+    "sSearch": "",
+  },
+"lengthMenu": [[5, 6, 7, -1], [5, 6, 7, "All"]]
+});
+} ); 
 
 
 $(document).ready(function() {
 	
-			 $(".profile-follow").click(function(){
-						$(".profile-unfollowed,.profile-followed",this).toggleClass("hide-follow-check");
+			 $(".article-graph-save").click(function(f){
+						$(this).siblings(".article-graph-save-drop").toggleClass("article-graph-save-hide");
+						$(".article-graph-share").removeClass("article-graph-save-hide");
+						
 					
 						
 								
 				});
+				
+				
+				
+					 $(".article-graph-share-btn").click(function(e){
+						$(".article-graph-share",this).toggleClass("article-graph-save-hide");
+						$(".article-graph-save-drop").removeClass("article-graph-save-hide");
+					e.stopPropagation();
+						
+								
+				});
+				
+				
+				
+				$("html").click(function(e){
+					
+					$(".article-graph-share").removeClass("article-graph-save-hide");
+		
+				});
+				
+				
+				
+	
+	$(".read-later-full").hide();
+				$(".read-later-holder").click(function(){
+					
+					
+					$(this).children('.read-later-empty').toggle();
+					$(this).children('.read-later-full').toggle();
+					
+				});
+				
 	
 	
 
 });
+
 
 
 
@@ -150,8 +196,22 @@ $(document).ready(function() {
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
+		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		 <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span>
+		
+		
+		</p>
 		
 		<div class="article-grids-content-inner">
 		
@@ -168,17 +228,214 @@ $(document).ready(function() {
 	<div class="square-grid-bottom">
 	
 		
-		<div><button> <span class="icon-uniE602" ></span> <span>5</span> Likes</button></div>
-		<div><button> <span class="icon-uniE607" ></span> <span>67</span> Comments</button></div>
-		<div><button> <span class="icon-uniE603" ></span> <span>3</span> Shares</button></div>
-		
-		<div class="dropdown">
-		 <button type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="icon-copy"></span> <span>34</span> Saves</button>
-		<ul class="dropdown-menu" >
-    ...
-  </ul>
+		<div class="like-holder">
+                            
+                            	<div class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									<span class="article-graph-btn-text" >Like</span>
+                            
+                            	</div>
+                            	
+                                <div class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                                	<span class="mls" style="color:#999"> Unlike</span>
+                                 </div>
+                                
+                             </div>
+		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
+		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
 		
 		</div>
+		
+		
+		
+		<div class="article-graph-save" >
+		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
 		
 	
 		
@@ -204,13 +461,27 @@ $(document).ready(function() {
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
+		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics.</a></p>
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		 <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span>
+		
+		
+		</p>
 		
 		<div class="article-grids-content-inner">
 		
 			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
+			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed,</p>
 		
 		</div>
 	
@@ -222,10 +493,216 @@ $(document).ready(function() {
 	<div class="square-grid-bottom">
 	
 		
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
+		<div class="like-holder">
+                            
+                            	<div class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									<span class="article-graph-btn-text" >Like</span>
+                            
+                            	</div>
+                            	
+                                <div class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                                	<span class="mls" style="color:#999"> Unlike</span>
+                                 </div>
+                                
+                             </div>
+		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
+		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save" >
+		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
 		
 		
 		
@@ -234,9 +711,12 @@ $(document).ready(function() {
 	
 	</div>
 
-</div> 
-</div> 
+</div>
 
+
+
+
+</div> 
 <div class="square-grid-item" >
 
 	
@@ -246,11 +726,25 @@ $(document).ready(function() {
 	<div class="article-grids-content">
 	
 		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		 <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span>
+		
+		
+		</p>
 		
 		<div class="article-grids-content-inner">
 		
-			<img src="img/imagetest.jpg" />
+			
 			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
 		
 		</div>
@@ -262,18 +756,231 @@ $(document).ready(function() {
 	
 	<div class="square-grid-bottom">
 	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
+		
+		<div class="like-holder">
+                            
+                            	<div class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									<span class="article-graph-btn-text" >Like</span>
+                            
+                            	</div>
+                            	
+                                <div class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                                	<span class="mls" style="color:#999"> Unlike</span>
+                                 </div>
+                                
+                             </div>
+		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
+		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save" >
+		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
 	
 	</div>
 
-</div> 
-</div> 
+</div>
 
+
+
+
+</div> 
 <div class="square-grid-item" >
 
 	
@@ -282,8 +989,22 @@ $(document).ready(function() {
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
+		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		 <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span>
+		
+		
+		</p>
 		
 		<div class="article-grids-content-inner">
 		
@@ -299,18 +1020,231 @@ $(document).ready(function() {
 	
 	<div class="square-grid-bottom">
 	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
+		
+		<div class="like-holder">
+                            
+                            	<div class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									<span class="article-graph-btn-text" >Like</span>
+                            
+                            	</div>
+                            	
+                                <div class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                                	<span class="mls" style="color:#999"> Unlike</span>
+                                 </div>
+                                
+                             </div>
+		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
+		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save" >
+		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
 	
 	</div>
 
-</div> 
-</div> 
+</div>
 
+
+
+
+</div> 
 <div class="square-grid-item" >
 
 	
@@ -319,8 +1253,22 @@ $(document).ready(function() {
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
+		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		 <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span>
+		
+		
+		</p>
 		
 		<div class="article-grids-content-inner">
 		
@@ -336,18 +1284,231 @@ $(document).ready(function() {
 	
 	<div class="square-grid-bottom">
 	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
+		
+		<div class="like-holder">
+                            
+                            	<div class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									<span class="article-graph-btn-text" >Like</span>
+                            
+                            	</div>
+                            	
+                                <div class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                                	<span class="mls" style="color:#999"> Unlike</span>
+                                 </div>
+                                
+                             </div>
+		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
+		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save" >
+		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
 	
 	</div>
 
-</div> 
-</div> 
+</div>
 
+
+
+
+</div> 
 <div class="square-grid-item" >
 
 	
@@ -356,8 +1517,22 @@ $(document).ready(function() {
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
+		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		 <span class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                    <span class="mls"> Read Later</span>
+                                </span>
+                            </span>
+		
+		
+		</p>
 		
 		<div class="article-grids-content-inner">
 		
@@ -373,239 +1548,246 @@ $(document).ready(function() {
 	
 	<div class="square-grid-bottom">
 	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
-	
-	</div>
-
-</div> 
-</div> 
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner"> 
-
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
 		
-		<div class="article-grids-content-inner">
-		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
-		
-		</div>
+		<div class="like-holder">
+                            
+                            	<div class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									<span class="article-graph-btn-text" >Like</span>
+                            
+                            	</div>
+                            	
+                                <div class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                                	<span class="mls" style="color:#999"> Unlike</span>
+                                 </div>
+                                
+                             </div>
+		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
+		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
 	
-	
-	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
-	
-	</div>
-
-</div> 
-</div> 
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner"> 
-
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
-		
-		<div class="article-grids-content-inner">
-		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
 		
 		</div>
-	
-	
-	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
-	
-	</div>
-
-</div> 
-</div> 
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner"> 
-
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
 		
-		<div class="article-grids-content-inner">
 		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
+		
+		<div class="article-graph-save" >
+		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		
 		
 		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+					<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business</td>
+						<td >Move Out</td>
+					</tr>
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
 	
+		
+		
+		
+		
+		
 	
 	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
-	
-	</div>
+
+</div>
+
+
+
 
 </div> 
-</div> 
 
-<div class="square-grid-item" >
 
-	
-	
-<div class="square-grid-item-inner"> 
 
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
-		
-		<div class="article-grids-content-inner">
-		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
-		
-		</div>
-	
-	
-	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
-	
-	</div>
 
-</div> 
-</div> 
 
-<div class="square-grid-item" >
 
-	
-	
-<div class="square-grid-item-inner"> 
 
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
-		
-		<div class="article-grids-content-inner">
-		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
-		
-		</div>
-	
-	
-	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
-	
-	</div>
 
-</div> 
-</div> 
 
-<div class="square-grid-item" >
 
-	
-	
-<div class="square-grid-item-inner"> 
 
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span></p>
-		
-		<div class="article-grids-content-inner">
-		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
-		
-		</div>
-	
-	
-	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		<p>
-		<a> <span class="icon-uniE602" ></span> <span>5</span> Likes</a>
-		<a> <span class="icon-uniE607" ></span> <span>67</span> Comments</a>
-		<a> <span class="icon-uniE603" ></span> <span>3</span> Shares</a>
-		<a> <span class="icon-copy" ></span> <span>34</span> Saves</a>
-		</p>
-	
-	</div>
 
-</div> 
-</div> 
+
+
+
 
 
 	
