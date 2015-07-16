@@ -58,6 +58,10 @@ oTable = $('.example').dataTable({
 
 
 $(document).ready(function() {
+
+			$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 	
 			 $(".article-graph-save").click(function(f){
 						$(this).siblings(".article-graph-save-drop").toggleClass("article-graph-save-hide");
@@ -162,22 +166,64 @@ $(document).ready(function() {
                                 	
 									<h4>Research Field</h4>
                                     <p><a>All Category</a></p>
-                                    <p><a>Economics and Finance</a></p>
-                                    <p><a>Business, Management, Marketing</a></p>
+                                    <p><a>Economics / Finance</a></p>
+                                    <p ><a >Business, Management, Marketing</a></p>
                                     <p><a class="active">Psychology</a></p>
-                                    <p><a>Natural Science</a></p>
-                                    <p><a>Biology</a></p>
-                                    <p><a>Biology</a></p>
+									<p><a>Arts and Literature</a></p>
+									<p><a>Astronomy / Astrophysics / Space Science</a></p>
+									<p><a>Biological Sciences</a></p>
+									<p><a>Chemistry</a></p>
+									<p ><a>Computer and Information Science</a></p>
+									<p><a>Design</a></p>
+									<p><a>Earth Sciences</a></p>
+									<p><a>Economics</a></p>
+									<p><a>Education</a></p>
+									<p><a>Electrical and Electronic Engineering</a></p>
+									<p><a>Engineering</a></p>
+									<p><a>Environmental Sciences</a></p>
+									<p><a>Humanities, Law</a></p>
+									<p><a>Linguistics</a></p>
+									<p><a>Materials Science</a></p>
+									<p><a>Mathematics</a></p>
+									<p><a>Medicine</a></p>
+									<p><a>Philosophy</a></p>
+									<p><a>Physics</a></p>
+									<p><a>Psychology</a></p>
+									<p><a>Social Sciences</a></p>
+									<p><a> Sports and Recreation</a></p>
+									
+                                    
                                 
                                 
                                 </div>
                                 
                                 
-                                <div>
+                                <div class="filter-tags">
                                 
                                 	<h4>Research Directions</h4>
                                     
-                                    <p><span><a>Business</a></span> <span><a>Histoty</a></span> <span><a>Information Technology</a></span> <span><a>Business</a></span></p>
+                                    <p><span><a>Business</a></span> <span><a>Business</a></span> 
+									<span><a>Histoty</a></span> <span><a>Information Technology</a></span>
+									<span><a>Business</a></span> <span><a>Information Technology</a></span>
+										<span><a>haj</a></span><span><a>hicham</a></span><span><a>isaac newton</a></span>
+										<span><a>Computers</a></span>
+										<span><a>JAVA</a></span> <span><a>HTML</a></span> <span><a>PHP</a></span>
+										<span><a>JQuery</a></span><span><a>AJAX</a></span><span><a>mvc</a></span><span><a>Json</a></span>
+										<span><a>CSS</a></span>
+										<span><a>Phonegap</a></span>
+										<span><a>Codeigniter</a></span>
+										<span><a>Zend</a></span>
+										<span><a>Symphony</a></span>
+										<span><a>Node.js</a></span>
+										<span><a>FTP</a></span>
+										<span><a>Angular.js</a></span>
+										<span><a>Ember.js</a></span>
+										<span><a>Lavarell</a></span>
+										<span><a>Bootstrap</a></span>
+										<span><a>Sticky.js</a></span>
+										<span><a>Business</a></span>
+										
+									</p>
                                 
                                 </div>
                         
@@ -199,16 +245,16 @@ $(document).ready(function() {
 		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
 		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
 		
-		 <span class="read-later-holder">
+		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
                                 	<span class="icon-uniE600"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
                                 <span class="read-later-full">
                                 	<span class="icon-uniE616"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
-                            </span>
+		</span>
 		
 		
 		</p>
@@ -228,25 +274,26 @@ $(document).ready(function() {
 	<div class="square-grid-bottom">
 	
 		
-		<div class="like-holder">
+		<div class="like-holder grid-bottom-container">
                             
-                            	<div class=" like like-toggle">
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
                             
                             		<span class="icon-uniE602"></span>
                             		<span class="mls"> 675</span>
-									<span class="article-graph-btn-text" >Like</span>
+									
                             
-                            	</div>
+                            	</button>
                             	
-                                <div class="like-full like-toggle" style="margin-left: 0px">
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
                             		<span class="icon-uniE615" style="color: #877c21"></span>
-                                	<span class="mls" style="color:#999"> Unlike</span>
-                                 </div>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
                              </div>
-		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
-		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -261,8 +308,8 @@ $(document).ready(function() {
 		
 		
 		
-		<div class="article-graph-save" >
-		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -461,27 +508,27 @@ $(document).ready(function() {
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics.</a></p>
+		<p class="article-grid-title"><a>The </a></p>
 		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
 		
-		 <span class="read-later-holder">
+			 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
                                 	<span class="icon-uniE600"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
                                 <span class="read-later-full">
                                 	<span class="icon-uniE616"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
-                            </span>
+		</span>
 		
 		
 		</p>
 		
 		<div class="article-grids-content-inner">
 		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed,</p>
+			
+			<p>Abstract </p>
 		
 		</div>
 	
@@ -493,25 +540,26 @@ $(document).ready(function() {
 	<div class="square-grid-bottom">
 	
 		
-		<div class="like-holder">
+		<div class="like-holder grid-bottom-container">
                             
-                            	<div class=" like like-toggle">
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
                             
                             		<span class="icon-uniE602"></span>
                             		<span class="mls"> 675</span>
-									<span class="article-graph-btn-text" >Like</span>
+									
                             
-                            	</div>
+                            	</button>
                             	
-                                <div class="like-full like-toggle" style="margin-left: 0px">
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
                             		<span class="icon-uniE615" style="color: #877c21"></span>
-                                	<span class="mls" style="color:#999"> Unlike</span>
-                                 </div>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
                              </div>
-		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
-		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -526,8 +574,8 @@ $(document).ready(function() {
 		
 		
 		
-		<div class="article-graph-save" >
-		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -725,19 +773,21 @@ $(document).ready(function() {
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles</a></p>
+		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles 
+		and the Statistical Physics of Hair Fiber Bundles and the Statistical Physics of Hair Fiber Bundles
+		</a></p>
 		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
 		
-		 <span class="read-later-holder">
+			 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
                                 	<span class="icon-uniE600"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
                                 <span class="read-later-full">
                                 	<span class="icon-uniE616"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
-                            </span>
+		</span>
 		
 		
 		</p>
@@ -745,7 +795,9 @@ $(document).ready(function() {
 		<div class="article-grids-content-inner">
 		
 			
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
+			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual 
+			fibers as elastic filaments with random intrinsic curvatures. and the Statistical Physics of Hair Fiber Bundles.
+			and the Statistical Physics of Hair Fiber Bundles. and the Statistical Physics of Hair Fiber Bundles</p>
 		
 		</div>
 	
@@ -757,25 +809,26 @@ $(document).ready(function() {
 	<div class="square-grid-bottom">
 	
 		
-		<div class="like-holder">
+		<div class="like-holder grid-bottom-container">
                             
-                            	<div class=" like like-toggle">
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
                             
                             		<span class="icon-uniE602"></span>
                             		<span class="mls"> 675</span>
-									<span class="article-graph-btn-text" >Like</span>
+									
                             
-                            	</div>
+                            	</button>
                             	
-                                <div class="like-full like-toggle" style="margin-left: 0px">
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
                             		<span class="icon-uniE615" style="color: #877c21"></span>
-                                	<span class="mls" style="color:#999"> Unlike</span>
-                                 </div>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
                              </div>
-		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
-		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -790,8 +843,8 @@ $(document).ready(function() {
 		
 		
 		
-		<div class="article-graph-save" >
-		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -992,16 +1045,16 @@ $(document).ready(function() {
 		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
 		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
 		
-		 <span class="read-later-holder">
+			 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
                                 	<span class="icon-uniE600"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
                                 <span class="read-later-full">
                                 	<span class="icon-uniE616"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
-                            </span>
+		</span>
 		
 		
 		</p>
@@ -1021,25 +1074,26 @@ $(document).ready(function() {
 	<div class="square-grid-bottom">
 	
 		
-		<div class="like-holder">
+		<div class="like-holder grid-bottom-container">
                             
-                            	<div class=" like like-toggle">
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
                             
                             		<span class="icon-uniE602"></span>
                             		<span class="mls"> 675</span>
-									<span class="article-graph-btn-text" >Like</span>
+									
                             
-                            	</div>
+                            	</button>
                             	
-                                <div class="like-full like-toggle" style="margin-left: 0px">
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
                             		<span class="icon-uniE615" style="color: #877c21"></span>
-                                	<span class="mls" style="color:#999"> Unlike</span>
-                                 </div>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
                              </div>
-		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
-		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -1054,8 +1108,8 @@ $(document).ready(function() {
 		
 		
 		
-		<div class="article-graph-save" >
-		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -1245,6 +1299,10 @@ $(document).ready(function() {
 
 
 </div> 
+
+
+
+
 <div class="square-grid-item" >
 
 	
@@ -1256,16 +1314,16 @@ $(document).ready(function() {
 		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
 		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
 		
-		 <span class="read-later-holder">
+			 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
                                 	<span class="icon-uniE600"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
                                 <span class="read-later-full">
                                 	<span class="icon-uniE616"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
-                            </span>
+		</span>
 		
 		
 		</p>
@@ -1282,28 +1340,29 @@ $(document).ready(function() {
 	
 	
 	
-	<div class="square-grid-bottom">
+		<div class="square-grid-bottom">
 	
 		
-		<div class="like-holder">
+		<div class="like-holder grid-bottom-container">
                             
-                            	<div class=" like like-toggle">
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
                             
                             		<span class="icon-uniE602"></span>
                             		<span class="mls"> 675</span>
-									<span class="article-graph-btn-text" >Like</span>
+									
                             
-                            	</div>
+                            	</button>
                             	
-                                <div class="like-full like-toggle" style="margin-left: 0px">
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
                             		<span class="icon-uniE615" style="color: #877c21"></span>
-                                	<span class="mls" style="color:#999"> Unlike</span>
-                                 </div>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
                              </div>
-		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
-		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -1318,8 +1377,8 @@ $(document).ready(function() {
 		
 		
 		
-		<div class="article-graph-save" >
-		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -1509,6 +1568,10 @@ $(document).ready(function() {
 
 
 </div> 
+
+
+
+
 <div class="square-grid-item" >
 
 	
@@ -1520,16 +1583,16 @@ $(document).ready(function() {
 		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
 		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
 		
-		 <span class="read-later-holder">
+			 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
                                 	<span class="icon-uniE600"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
                                 <span class="read-later-full">
                                 	<span class="icon-uniE616"></span>
-                                    <span class="mls"> Read Later</span>
+                                   
                                 </span>
-                            </span>
+		</span>
 		
 		
 		</p>
@@ -1549,25 +1612,26 @@ $(document).ready(function() {
 	<div class="square-grid-bottom">
 	
 		
-		<div class="like-holder">
+		<div class="like-holder grid-bottom-container">
                             
-                            	<div class=" like like-toggle">
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
                             
                             		<span class="icon-uniE602"></span>
                             		<span class="mls"> 675</span>
-									<span class="article-graph-btn-text" >Like</span>
+									
                             
-                            	</div>
+                            	</button>
                             	
-                                <div class="like-full like-toggle" style="margin-left: 0px">
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
                             		<span class="icon-uniE615" style="color: #877c21"></span>
-                                	<span class="mls" style="color:#999"> Unlike</span>
-                                 </div>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
                              </div>
-		<div><button> <span class="icon-uniE607" ></span> <span>675</span> <span class="article-graph-btn-text">Comments</span></button></div>
-		<div class="article-graph-share-btn"><button> <span class="icon-uniE603" ></span> <span>355</span><span class="article-graph-btn-text"> Shares</span></button>
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -1582,8 +1646,8 @@ $(document).ready(function() {
 		
 		
 		
-		<div class="article-graph-save" >
-		 <button><span class="icon-copy"></span> <span>345</span> <span class="article-graph-btn-text">Saves</span></button>
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -1766,9 +1830,6 @@ $(document).ready(function() {
 		
 	
 	</div>
-
-</div>
-
 
 
 

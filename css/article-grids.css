@@ -16,7 +16,7 @@
 }
 
 .square-grid-item-inner {
-position: absolute;
+
 
 
 height: 240px;
@@ -54,7 +54,7 @@ border: 1px solid #ccc;
 	
 .square-grid-filter {
 	
-		height: 520px !important;
+		height: 790px !important;
 		background: rgba(237,235,213,0.5);
 	
 	
@@ -261,7 +261,9 @@ background: none;
 border: 0px !important;
 color: #999;
 font-size: 12px;
-padding: 0px !important;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px
 	
 
 
@@ -269,7 +271,7 @@ padding: 0px !important;
 
 .square-grid-bottom > div {
 
-margin-right: 10px;
+	
 	
 
 
@@ -285,13 +287,31 @@ margin-right: 10px;
 
 }
 
-.square-grid-bottom > div > button:hover {
+.square-grid-bottom > div > button:hover  {
 
 	background: none !important;
+
+	color: #3d7d8b !important;
+	
 	
 
 
 }
+
+
+
+.square-grid-bottom > div > button:hover  > span:nth-child(1)   {
+
+	font-size: 18px !important;
+	margin-right: 5px;
+	margin-top: -3px;
+	
+
+
+}
+
+
+
 
 .square-grid-bottom > p {
 
@@ -309,30 +329,18 @@ white-space: nowrap;
 .square-grid-bottom  {
 
 position: absolute;
-opacity: 0;
+
 width: 96%;
 bottom: 5px;
 padding-top: 5px;
 padding-bottom: 0px;
-height: 0;
-    transition: all 0.4s ease-in-out;
-    position: margin-top: -100px;
-   
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    transition: all .8s ease;
+
 
 
 
 
 }
 
-.square-grid-item:hover  .square-grid-bottom {
-    height: 20px;
-	opacity: 1;
-}
 
 .square-grid-bottom > div  {
 
@@ -344,6 +352,13 @@ float: left;
 
 
 }
+
+.article-grid-meta > .read-later-holder {
+
+padding: 10px;
+
+}
+
 
 .square-grid-item-inner:hover {
 
@@ -421,6 +436,13 @@ white-space: nowrap;
 }
 
 
+.read-later-holder:hover > span {
+
+	font-size: 18px !important;
+	
+
+}
+
 
 .article-grid-meta > a:nth-child(1) {
 
@@ -493,7 +515,7 @@ margin-right: 10px;
 	border: 1px solid #ccc;
 	box-shadow: 0px 1px 15px #CCC;
 	right: 0px;
-	top: 30px;
+	top: 35px;
 	width: 300px;
 }
 
@@ -615,7 +637,7 @@ table > tbody > tr > td:nth-child(3) {
 	
  position: absolute;
   top: -7px;
-  right: 90px;
+  right: 39px;
   display: inline-block;
   border-right: 7px solid transparent;
   border-bottom: 7px solid #f2f2f2 !important;
@@ -630,7 +652,7 @@ table > tbody > tr > td:nth-child(3) {
 	
 	  position: absolute;
   top: -6px;
-  right: 91px;
+  right: 40px;
   display: inline-block;
   border-right: 6px solid transparent;
   border-bottom: 6px solid #f2f2f2;
@@ -722,7 +744,7 @@ table > tbody > tr > td:nth-child(3) {
 	box-shadow: 0px 1px 15px #CCC;
 	border: 1px solid #ccc;
 	position: absolute;
-	top: 30px;
+	top: 35px;
 	z-index: 1;
 	display: none;
 
@@ -806,3 +828,11 @@ margin-right: 10px;
 
 }
 
+.grid-bottom-container {
+
+	width: 25%;
+	text-align: center;
+
+
+
+}
