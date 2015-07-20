@@ -1,0 +1,323 @@
+/*	Authors		Craig Rozynski craigrozynski.com
+							Marco Lago marcolago.com
+		Version		2.0 2015-02-02 */
+
+/* CSS Reset (customised) */
+
+/* Primary Styles */
+  
+
+.square-grid-item  {
+	float: left;
+	width: 100%;
+	height: auto;
+	margin-bottom: 30px;
+	text-decoration: none;
+	background: #ff0;
+}
+
+.square-grid-item-inner {
+
+
+
+height: 420px;
+
+border: 1px solid #ccc;
+
+
+
+
+}
+
+.project-graph-inner-content {
+
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2)
+
+
+
+}
+
+.project-graph-inner-content > div:nth-child(1) {
+
+	height: 30px;
+	max-height: 30px;
+	overflow: hidden;
+	width: 90%;
+	margin-left: 5%;
+	padding-top: 10px;
+
+
+
+}
+
+.project-graph-inner-content > div:nth-child(2) {
+
+height: 220px;
+	max-height: 230px;
+	overflow: hidden;
+	
+
+
+
+}
+
+.project-graph-inner-content > div:nth-child(2) > p{
+
+	width: 90%;
+	margin-left: 5%;
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	line-height: 28px;
+	margin-top: 50px;
+
+
+
+}
+
+.project-graph-inner-content > div:nth-child(3) {
+
+	height: 100px;
+	max-height: 100px;
+	overflow: hidden;
+	
+
+
+
+}
+
+.project-graph-inner-content > div:nth-child(3) > p {
+
+	width: 65%;
+	margin-left: 17.5%;
+	height: auto;
+	overflow: hidden;
+	
+
+	
+
+
+}
+
+.project-graph-inner-content > div:nth-child(3) > p > a:nth-child(1) {
+
+	
+	color: #fff !important;
+	width: 50%;
+	display: inline-block;
+
+	
+
+
+}
+
+.project-graph-inner-content > div:nth-child(3) > p > a:nth-child(2) {
+
+	
+	color: #fff !important;
+		width: 50%;
+		display: inline-block;
+
+	
+
+	
+
+
+}
+
+.project-graph-content {
+
+	height: 360px;
+
+
+
+}
+
+.project-graph-bottom {
+
+	height: 50px;
+	padding: 5px;
+	background: #f2f2f2;
+
+}
+
+.project-graph-bottom > p > a {
+
+	color: #666;
+	font-weight: bold;
+}
+
+.project-graph-bottom > p > a > span {
+
+	color: #666;
+	font-weight: normal !important;
+
+}
+
+.project-graph-bottom > a > img {
+
+	float: left;
+	margin-right: 7px;
+	height: 50px;
+
+}
+
+
+
+/* Media Queries */
+
+/* Column Control Media Queries */
+
+
+	
+	.square-grid-item  {
+		-webkit-transition: background-color .3s linear;
+		-moz-transition: -color .3s linear;
+		transition: background-color .3s linear;
+	}
+	.square-grid-item { background-color: #fff;  }
+	.square-grid-item  { background-color: #fff; }
+	.square-grid-item  {
+		position: relative;
+		top: 0;
+		
+	}
+	
+.square-grid-filter {
+	
+		height: 870px !important;
+		background: rgba(237,235,213,0.5);
+	
+	
+	
+	}
+
+
+/* One Column */
+
+@media screen and (min-width:300px) {
+	.square-grid-item  {
+		width: 100%;
+		margin: 0 0% 20px 0;
+		height: 250px;
+		
+	}
+	
+	
+	
+	
+}
+
+/* Two Column */
+
+@media screen and (min-width:767px) {
+	.square-grid-item  {
+	width: 100%;
+		margin: 0 0% 20px 0;
+		height: 250px;
+		
+	}
+	
+
+	
+	
+}
+
+/* Three Column */
+
+@media screen and (min-width:980px) {
+	.square-grid-item {
+		width: 47%;
+		margin: 0 1.5% 20px 1.5%;
+		height: 250px;
+	
+	}
+	
+
+}
+
+/* Four Column */
+
+@media screen and (min-width:1140px) {
+	.square-grid-item {
+		width: 31.33%;
+		margin: 0 1% 30px 1%;
+		height: 420px;
+		
+	}
+	
+
+}
+
+
+
+
+
+}
+
+@media screen and (min-width:1250px) {
+
+	
+	
+	
+	
+	}
+
+.profile-follow {
+
+	float: right;
+	margin-left: 10px;
+	margin-right: 5px;
+
+}
+
+.profile-unfollowed {
+
+	
+	color: #fff;
+	text-decoration: none !important;
+	cursor: pointer;
+	font-size: 17px !important;
+	
+
+
+
+}
+
+.profile-followed {
+
+	
+	color: #fff;
+	text-decoration: none !important;
+	cursor: pointer;
+	font-size: 17px !important;
+
+
+
+}
+
+.hide-follow-check {
+
+	display: none !important;
+
+
+}
+
+.like-holder {
+
+		float: right;
+
+
+}
+
+.like-holder > button {
+
+		background: none !important;
+		border: 0px !important;
+		color: #fff !important;
+		font-size: 16px !important;
+
+
+}

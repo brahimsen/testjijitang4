@@ -13794,6 +13794,42 @@ margin-right: 10px;
 
 }
 
+.filter-tags > p > span > a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 5px;
+	color: #666 !important;
+	border: 1px solid #ccc;
+	background: #eee;
+	display: inline-block
+
+
+
+
+}
+
+.filter-tags > p > span  {
+
+
+}
+
+.filter-tags > p > span > a  {
+	margin-top: 10px;
+
+
+}
+
+.filter-tags > p  {
+	height: auto;
+	overflow: hidden;
+
+
+
+
+}
+
 .articles-laft-inner > div:nth-child(3) > p > span > a {
 	padding-top: 5px;
 	padding-bottom: 5px;
