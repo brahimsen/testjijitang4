@@ -186,7 +186,7 @@ height: 220px;
 	}
 	
 .square-grid-filter {
-	
+		
 		height: 870px !important;
 		background: rgba(237,235,213,0.5);
 	
@@ -200,8 +200,8 @@ height: 220px;
 @media screen and (min-width:300px) {
 	.square-grid-item  {
 		width: 100%;
-		margin: 0 0% 20px 0;
-		height: 250px;
+		margin: 0 0% 30px 0;
+		height: 420px;
 		
 	}
 	
@@ -215,9 +215,14 @@ height: 220px;
 @media screen and (min-width:767px) {
 	.square-grid-item  {
 	width: 100%;
-		margin: 0 0% 20px 0;
-		height: 250px;
+		margin: 0 0% 30px 0;
+		height: 420px;
 		
+	}
+	
+	.dashbord-project-item {
+	
+	
 	}
 	
 
@@ -230,8 +235,8 @@ height: 220px;
 @media screen and (min-width:980px) {
 	.square-grid-item {
 		width: 47%;
-		margin: 0 1.5% 20px 1.5%;
-		height: 250px;
+		margin: 0 1.5% 30px 1.5%;
+		height: 420px;
 	
 	}
 	
@@ -246,6 +251,15 @@ height: 220px;
 		margin: 0 1% 30px 1%;
 		height: 420px;
 		
+	}
+	
+	.dashbord-project-item {
+	
+		width: 46% !important;
+		margin-left: 2% !important;
+		margin-right: 2% !important;
+		
+	
 	}
 	
 
@@ -318,6 +332,112 @@ height: 220px;
 		border: 0px !important;
 		color: #fff !important;
 		font-size: 16px !important;
+
+
+}
+
+.dashbord-right-project-header  {
+
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	width: 96%;
+	margin-left: 2%;
+
+}
+
+
+.dashbord-right-project-header > p {
+
+		font-size: 18px;
+		float: left;
+
+}
+
+.dashbord-right-project-header > input {
+
+		float: right;
+			background: #eee;
+	width: 250px !important;
+	height: 30px;
+	border: 1px solid #ccc;
+	
+	
+	border-radius: 0px;
+
+}
+
+.project-activity {
+
+padding-top: 25px !important;
+
+
+
+
+
+}
+
+.project-activity-feed  {
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+
+
+
+}
+
+.project-activity-feed  > a  {
+
+	float: left;
+
+
+
+}
+
+.project-activity-feed  > a > img  {
+
+	width: 50px;
+	margin-right: 10px
+
+
+
+}
+
+.project-activity-meta {
+
+margin-bottom: 5px !important;
+height: auto;
+overflow: hidden;
+
+
+
+}
+
+.project-activity-desc{
+font-size: 13px;
+
+
+
+}
+
+.project-activity-meta  > a {
+
+	float: left;
+	color: #877c21 !important;
+	font-weight: bold;
+
+
+
+}
+
+.project-activity-meta  > span {
+
+	float: right;
+	color: #999;
+	font-size: 13px;
+
 
 
 }

@@ -3261,7 +3261,7 @@ position: absolute; width: 100%; display: none
 .collection-back {
 	width: 100%; 
 	height: 300px; 
-	background: rgba(0,0,0,0.5); 
+	background: rgba(0,0,0,0.2); 
 	
 }
 
@@ -15459,5 +15459,84 @@ overflow-y: scroll;
 
 .filter-tags::-webkit-scrollbar-thumb{
 	background-color: #3D7D8B !important
+
+}
+
+
+.create-project-holder-label {
+
+	position: absolute;
+	background: #877C21 !important;
+	color: #fff !important;
+	top: 0px;
+	left: 30px;
+	font-size: 21px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+
+}
+
+.create-project-holder > div {
+
+	position: relative;
+	padding-top: 100px;
+	
+
+
+}
+
+.create-project-label {
+
+	font-size: 16px;
+	
+
+
+
+}
+
+.project-view-content {
+
+	width: 80%;
+	margin-left: 10%;
+	padding-top: 150px;
+
+
+
+}
+
+.project-view-featured {
+
+	float: right;
+	width: 250px;
+	margin-left: 50px;
+
+
+}
+
+.project-view-meta-member > img {
+
+	width: 40px;
+	border-radius: 50px;
+	margin-right: 10px;
+
+
+}
+
+.project-view-meta {
+
+	height: auto;
+	overflow: hidden;
+
+}
+
+.project-view-inner-published {
+
+padding: 10px;
+	background: #EDEBD5;
+
+
+
 
 }
