@@ -15383,8 +15383,7 @@ overflow: hidden;
 
 .create-project-holder  > div{
 
-	border: 1px solid #ccc;
-	padding: 15px;
+	
 
 
 
@@ -15481,7 +15480,9 @@ overflow-y: scroll;
 .create-project-holder > div {
 
 	position: relative;
-	padding-top: 100px;
+	height: auto;
+	overflow: hidden;
+
 	
 
 
@@ -15533,9 +15534,292 @@ overflow-y: scroll;
 
 .project-view-inner-published {
 
-padding: 10px;
+	padding: 10px;
 	background: #EDEBD5;
 
+}
+
+
+.project-form-image-holder  {
+
+	height: auto;
+	overflow: hidden;
+
+}
+
+.project-form-image-holder > div > div > input  {
+
+	height: 100px !important;
+
+	
+
+}
+
+.project-form-image-holder > div:nth-child(1) {
+
+	width: 70% !important;
+	float: left;
+
+
+}
+
+
+.project-form-image-holder > div:nth-child(2) {
+
+	width: 24% !important;
+	float: right;
+	margin-right: 10px;
+
+
+}
+
+
+.project-form-image-inner {
+
+	width: 100%;
+	height: 250px;
+	border: 2px dashed #999;
+
+
+
+}
+
+.project-form-type > div {
+float: left;
+margin-right: 40px;
+margin-bottom: 20px;
+
+}
+
+.project-form-type {
+height: auto;
+overflow: hidden;
+margin-top: 20px;
+
+}
+
+.project-timing {
+
+height: auto;
+overflow: hidden;
+
+
+}
+
+.project-timing > div {
+
+width: 150px;
+float: left;
+margin-right: 50px
+
+}
+
+.create-project-btn {
+float: right;
+
+}
+
+.upload-project-image {
+
+	color: transparent;
+	background: #fff !important;
+	margin-top: 15px;
+	
+
+
+}
+
+
+.create-project-inner {
+
+border: 1px solid #ccc;
+	padding: 25px;
+
+}
+
+.create-project-progress-bar {
+margin-top: 25px;
+margin-bottom: 25px;
+
+
+}
+
+.create-project-progress-phase {
+
+	float: left;
+
+
+}
+
+.create-project-progress-phase > span {
+
+	float: left;
+	margin-right: 20px;
+	background: #999;
+	color: #fff;
+	font-size: 32px;
+	padding: 10px;
+	border-radius: 50px;
+
+
+}
+
+.create-project-progress-phase > p {
+
+	float: left;
+	width: 100px;
+	margin-right: 20px;
+	color: #999;
+	font-size: 16px;
+	font-weight: bold;
+
+
+}
+
+.create-project-progress-phase > hr {
+
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+	height: 5px;
+	background: #999;
+
+
+}
+
+.project-phase-active > span {
+
+
+	background: #877C21 !important;
+	color: #fff;
+
+
+
+}
+
+.project-phase-active > p {
+
+	
+	color: #877C21 !important;
+	
+
+
+}
+
+.project-phase-active > hr {
+
+
+	background: #877C21 !important;
+
+
+}
+
+#project-member-modal {
+
+	padding: 30px;
+
+
+
+}
+
+.project-member-modal-inner > input {
+
+margin-top: 15px;
+margin-bottom: 15px;
+
+height: 35px;
+
+
+}
+
+.project-member-modal-inner > input:nth-child(1){
+
+	width: 100%;
+
+
+}
+
+.project-member-modal-inner > input:nth-child(2){
+
+	width: 47%;
+	margin-right: 2%;
+
+
+}
+
+.project-member-modal-inner > input:nth-child(3){
+
+	width: 48%;
+	margin-left: 2%;
+
+
+}
+
+.project-members {
+
+	background: #eee;
+	border: 1px solid #ccc;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 16px;
+	margin-right: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	float: left;
+	margin-bottom: 20px;
+
+
+
+}
+
+.project-team-members-holder {
+
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 30px;
+
+
+
+}
+
+.create-project-phase-header {
+
+font-size: 24px;
+color: #999;
+margin-bottom: 25px;
+
+
+
+
+}
+
+.project-form-privacy p {
+
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 20px;
+
+}
+
+.project-privacy-check-box {
+margin-right: 10px;
+float: left;
+
+}
+
+.project-privacy-span-bold {
+font-size: 15px;
+color: #999;
+font-weight: bold;
+margin-left: 20px !important;
+
+
+}
+
+.project-privacy-span {
+font-size: 15px;
+color: #999;
+margin-left: 0px !important;
 
 
 

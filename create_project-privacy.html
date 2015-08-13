@@ -1,0 +1,222 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+
+<script src="js/zebra_datepicker.js"></script>
+
+<style>
+
+.input-group {
+	
+	margin-bottom: 25px;
+
+
+
+}
+
+.input-group p {
+
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+
+
+
+}
+
+</style>
+
+
+<script>
+
+
+
+$(document).ready(function(){
+	
+
+	
+	
+	$("#project-add-user-btn").click(function(e) {
+    
+           $(".project-team-members-holder").append(" <div class='project-members'><span class='tag-text'>"+$("#project-member-name").val()+"</span>(<span>"+$("#project-member-role").val()+"</span>)</div>");
+	   $("#project-member-name").val('');
+	   $("#project-member-email").val('');
+	   $("#project-member-role").val('')
+    
+});
+
+	 $('.publish-tag-list').on('click', '.tag-delete', function(){
+	 	
+	 $(this).parent().remove()
+   
+});
+	
+	
+	});
+
+</script>
+
+</script>
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="modal fade" id="project-member-modal">
+
+
+	<div class="project-member-modal-inner" >
+	
+		<input id="project-member-email" type="text" placeholder="Email" >
+		
+		<input id="project-member-name" type="text" placeholder="Name">
+		
+		<input id="project-member-role" type="text" placeholder="Role">
+	
+	
+	</div>
+	
+	<button type="submit" id="project-add-user-btn"  class="main-button pass-confirm-btn create-project-btn " data-dismiss="modal">Invite</button>
+  
+</div><!-- /.modal -->
+
+  	<div class="header-wrapper">
+			
+            <header>
+
+
+			</header>
+
+		</div>
+
+	<div class="container-fluid">
+	
+		<div class="create-project-holder">
+		
+			
+		
+			<p>Create a Project / Edit Your Project</p>
+			
+			<div class="create-project-progress-bar">
+			
+			<div class="create-project-progress-phase project-phase-active">
+			
+				<span>1 </span>
+				<p>Basic Information</p>
+				<hr>
+			
+			</div>
+			
+			<div class="create-project-progress-phase project-phase-active">
+			
+			<span>2 </span>
+				<p>Privacy Information</p>
+				<hr>
+			
+			</div>
+			
+			<div class="create-project-progress-phase">
+			
+			<span>3 </span>
+				<p>More Information</p>
+				
+			
+			</div>
+			
+			</div>
+			
+			
+			
+			
+			
+			
+			<div class="create-project-inner">
+			
+			<p class="create-project-phase-header">Privacy Information</p>
+			
+			
+			<form class="project-form-privacy" role="form">
+			
+			
+			<p>Team Members</p>
+			
+			<div class="project-team-members-holder">
+			
+			<div class="project-members"  data-toggle="modal" data-target="#project-member-modal"><a>+ Add Member</a></div>
+			
+			
+			
+			
+			</div>
+			
+			
+			<p>Who can view this project</p>
+			
+			<input type="checkbox" class="project-privacy-check-box"><span class="project-privacy-span-bold">Make this Project Private,</span><span class="project-privacy-span"> People Can not Find it on JIJITANG, Untill they get invitation or Link from Creator.</span>
+			
+		
+		
+		<button type="submit" id="mybtn"  class="main-button pass-confirm-btn create-project-btn ">Next</button>
+			
+			</form>
+			
+			
+			
+			</div>
+		
+		
+		</div>
+    
+
+    
+    </div>
+
+</body>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+
+
+
+ 
+</script>
+<script src="js/myjavascript.js"></script>
+
+
+
+
+
