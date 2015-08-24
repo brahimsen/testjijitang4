@@ -192,6 +192,34 @@
 }
 
 
+@font-face {
+	font-family: 'mail';
+	src:url('fonts/mail.eot?-774hw0');
+	src:url('fonts/mail.eot?#iefix-774hw0') format('embedded-opentype'),
+		url('fonts/mail.ttf?-774hw0') format('truetype'),
+		url('fonts/mail.woff?-774hw0') format('woff'),
+		url('fonts/mail.svg?-774hw0#mail') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon99-"], [class*=" icon99-"] {
+	font-family: 'mail';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon99-envelop:before {
+	content: "\e600";
+}
 
 
 
@@ -616,6 +644,10 @@
 	content: "\e7667";
 }
 
+
+
+
+
 @font-face {
 	font-family: 'money';
 	src:url('fonts/money.eot?-yd8e59');
@@ -1028,6 +1060,14 @@ position: relative;
 
 
 @media(max-width: 767px) {
+
+.project-test-content-inner {
+
+	width: 70% !important;
+
+
+
+}
 	
 	#editor-title {
 		font-size: 28px !important;
@@ -1481,7 +1521,7 @@ body {
 	 border-radius: 5px;
 	 cursor: pointer;
 	 border: #333 1px solid;
-	 margin-top: 25px !important;  text-align: center
+	 margin-top: 15px !important;  text-align: center
  }
  
  
@@ -1844,9 +1884,10 @@ margin-left: 0px !important;
 }
 
 .header-btns {
-	width: 235px !important;
+
 	float: right !important;
 	margin-left: 10px !important;
+	width: 165px;
 
 }
 
@@ -1867,7 +1908,7 @@ margin-left: 0px !important;
 
 .alert-btn {
 
-margin-right: 15px;  float:right; text-decoration: none !important;
+margin-right: 20px;  float:right; text-decoration: none !important;
 
 }
 
@@ -2797,9 +2838,18 @@ margin-top: -30px;
 }
 
 .nav-admin-holder > li:nth-child(3) > a > span {
-	font-size: 18px !important;
+	font-size: 14px !important;
 	margin-right: 16px;
+
+	margin-right: 11px;
+
+}
+
+.nav-admin-holder > li:nth-child(2) > a > span {
+	font-size: 18px !important;
+	margin-right: 15px;
 	font-weight: bold;
+	
 
 }
 
@@ -3440,17 +3490,17 @@ legend {
 }
 
 .controls {
-	margin-bottom: 15px !important;
+	margin-bottom: 0px !important;
 
 }
 
 .sign-in-alert {
- width: 60%; padding-top: 10px; padding-bottom: 10px; text-align: center; background: #F2DEDE; border: 1px solid #EBCCD1; color: #A94442; margin-bottom: 50px; border-radius: 5px; margin-left: 19%
+ width: 60%; padding-top: 10px; padding-bottom: 10px; text-align: center; background: #F2DEDE; border: 1px solid #EBCCD1; color: #A94442; margin-bottom: 0px; border-radius: 5px; margin-left: 19%
 
 }
 
 .full-width {
-	width: 100% !important;
+	width: calc( 100% - 2px ) !important;
 	margin-left: 0% !important;
 	border-radius: 0% !important;
 
@@ -3509,18 +3559,18 @@ legend {
 }
 
 .icon-bell-o {
-color: #CCC; width: 16px; height: 18px; font-size: 15px; padding-top: 8px; padding-bottom: 4px; padding-left: 8px; margin-right: -3px;
+color: #CCC; width: 16px; height: 18px; font-size: 18px; padding-top: 8px; padding-bottom: 4px; padding-left: 8px; margin-right: -2px;
 
 }
 
 #search-btn {
-margin-right: 2px; margin-top: 4px; float:right
+margin-right: 12px; margin-top: 3px; float:right
 
 }
 
 .icon-uniE601 {
 
-color: #CCC; width: 17px; height: 17px; font-size: 14px; padding: 5px; padding-top: 5px; padding-bottom: 4px; padding-left: 8px
+color: #CCC; width: 17px; height: 17px; font-size: 17px; padding: 5px; padding-top: 5px; padding-bottom: 4px; padding-left: 8px
 
 }
 
@@ -4319,16 +4369,39 @@ padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-bottom: 1px so
 	
 	font-weight: bold;
 	color:#FFF;
-	font-size: 12px;
+	font-size: 11px;
+	line-height: 18px;
 	
-	padding-left: 2px;
-	padding-right: 2px;
+	padding-left: 3px;
+	padding-right: 3px;
 	border-radius: 2px;
 	
 	
 	margin-left: -7px;
 	background:#F00;
 	text-decoration: none !important;
+	float: right;
+
+
+
+}
+
+.have-messages {
+	
+	font-weight: bold;
+	color:#FFF;
+	font-size: 11px;
+	line-height: 18px;
+	
+	padding-left: 3px;
+	padding-right: 3px;
+	border-radius: 2px;
+	
+	
+	margin-left: -7px;
+	background:#F00;
+	text-decoration: none !important;
+	float: right;
 
 
 
@@ -11499,7 +11572,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 }
 
 .nav-admin-holder {
-	left: 34px !important;
+	left: -9px !important;
 }
 
 .nav-admin-holder > hr {
@@ -15820,6 +15893,251 @@ margin-left: 20px !important;
 font-size: 15px;
 color: #999;
 margin-left: 0px !important;
+
+
+
+}
+
+
+#project-publications-modal {
+
+	padding: 20px;
+
+
+
+}
+
+#project-publications-modal textarea {
+
+	width: 100%;
+	height: 100px;
+
+
+
+}
+
+.nav-message-icon {
+
+	color: #ccc;
+	font-size: 18px;
+	margin-top: 8px;
+
+
+}
+
+.message-nav-btn {
+float: right;
+margin-right: 11px;
+
+
+}
+
+@font-face {
+	font-family: 'home';
+	src:url('fonts/home.eot?-bq8bdk');
+	src:url('fonts/home.eot?#iefix-bq8bdk') format('embedded-opentype'),
+		url('fonts/home.ttf?-bq8bdk') format('truetype'),
+		url('fonts/home.woff?-bq8bdk') format('woff'),
+		url('fonts/home.svg?-bq8bdk#home') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon100-"], [class*=" icon100-"] {
+	font-family: 'home';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon100-home:before {
+	content: "\e601";
+}
+
+
+.project-test-content {
+
+width: 100%;
+height: 100%;
+background-image: url(img/index-back2.jpg);
+background-size: cover;
+padding-top: 150px;
+
+
+
+}
+
+.project-test-content-inner {
+
+	width: 50%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background: rgba(255,255,255,0.7);
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	overflow: hidden;
+
+
+}
+
+.project-test-content-inner .input-group {
+
+	margin-bottom: 30px;
+
+
+}
+
+.project-test-content-inner input {
+
+	width: 100%;
+	height: 55px;
+
+
+}
+
+.project-test-btn-holder {
+
+text-align: center;
+
+
+}
+
+.project-keyword-list {
+
+height: auto;
+overflow: hidden;
+padding-top: 10px;
+padding-bottom: 10px
+
+}
+
+
+.test-results-heading {
+
+text-align: center;
+
+
+}
+
+.test-results-text {
+
+text-align: center;
+margin-bottom: 30px;
+
+
+}
+
+
+.project-test-result-btn-holder {
+
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+
+
+
+
+}
+
+.project-test-result-btn-holder > a {
+
+	width: 150px !important;
+	display: inline-block;
+
+
+
+
+}
+
+.sign-modals {
+
+	width: 340px;
+	margin-left: -170px;
+	border-radius: 0px !important;
+
+
+}
+
+.sign-modals .modal-body {
+
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+
+
+}
+
+.sign-modals legend {
+
+	
+	margin-bottom: 10px !important;
+	text-align: center;
+	font-size: 16px !important;
+	
+
+
+}
+
+.modal-scrollable {
+
+background: rgba(47,47,47,0.8);
+
+
+}
+
+.sign-close-modal {
+
+float: right;
+
+color: #333;
+font-size: 28px;
+text-transform: none !important;
+text-decoration: none !important;
+cursor: pointer;
+
+
+}
+
+
+.wechat-login {
+
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: center;
+width: 100%;
+font-weight: bold;
+font-size: 15px;
+background: #7bb32e;
+color: #fff;
+text-transform: none !important;
+text-decoration: none !important;
+display: inline-block;
+margin-bottom: 20px;
+
+
+
+}
+
+.wechat-login:hover {
+
+color: #fff !important;
+
+
+
+}
+
+.wechat-login > span {
+
+margin-right: 15px;
 
 
 

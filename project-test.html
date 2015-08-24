@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/bootstrap-select.css"  type="text/css"/>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.json-2.4.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/test-form.js"></script>
+
+<script language="JavaScript">
+function disableEnterKey(e)
+{
+     var key;
+
+     if(window.event)
+          key = window.event.keyCode;     //IE
+     else
+          key = e.which;     //firefox
+
+     if(key == 13)
+          return false;
+     else
+          return true;
+}
+</script>
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+<script>
+
+$(document).ready(function(){
+	
+
+	
+	
+	$("#project-keywords").keypress(function(e) {
+    if(e.which == 13) {
+           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete'>x</div></div>");
+	   $("#project-keywords").val('')
+    }
+});
+
+	 $('.project-keyword-list').on('click', '.tag-delete', function(){
+	 	
+	 $(this).parent().remove()
+   
+});
+	
+	
+	});
+
+</script>
+	
+	
+
+</head>
+
+
+
+<body>
+
+	<div class="container-fluid">
+
+		<div class="header-wrapper">
+        	
+            <header>
+        
+			
+            </header>
+       
+       </div>
+
+	   
+		<div class="project-test-content">
+		
+		
+			<div class="project-test-content-inner">
+			
+			
+				<form action="project-test-results.html" class="test-form-main" role="form">
+			
+			
+				
+				
+				
+				<div class="input-group">
+					
+					<p>你的项目研究领域</p>
+					<select name="test-project-category" class="form-control required" >
+						<option disabled="disabled">Choose...</option>
+						<option value="1">Economics</option>
+						<option value="2">Natural Sciences</option>
+						</select>
+				</div>
+				
+				<div class="input-group">
+					
+					<p>你的项目名称</p>
+					<input type="text" name="testprojectname" onKeyPress="return disableEnterKey(event)" class="form-control" placeholder="Keep the name less than 200 Characters....."/>
+				</div>
+				
+				<div class="input-group">
+					
+					<p>你的项目关键词</p>
+					<input type="text" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="You can add at most 5 Key Words, Type ENTER to create one key word"/>
+				</div>
+				
+				<div class="project-keyword-list"></div>
+		
+			
+			
+			
+			
+			
+			
+		<div class="project-test-btn-holder">
+		<button type="submit" id="mybtn"  class="brown-btn  ">Start Testing</button>
+		
+		</div>
+			
+			</form>
+			
+			
+			
+		
+		
+		
+		</div>
+	   
+	   
+	   
+	   
+  
+    </div>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" );
+$( "footer" ).load( "footer.html" );
+
+
+
+  
+
+</script>
+

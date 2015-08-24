@@ -136,6 +136,13 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 
 		});
 		
+		$("#index-signup-modal").click(function(){
+
+				$("#Sign-up-Modal").modal('show');
+
+
+		});
+		
 			$("#signup-link").click(function(){
 
 				$("#Sign-up-Modal").modal('show');

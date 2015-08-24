@@ -23,6 +23,7 @@
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
+<script src="js/headerscript.js"></script>
 <script src="js/collection-script.js"></script>
 
 <style>
@@ -122,26 +123,16 @@ $(window).on("load",function() {
 
 
 
+
+
+
 	<div class="container-fluid">
     
     		<div class="index-top-page">
             
-            	<div style="position: relative; z-index: 9999">
+            	<div class="new-index-header" style="position: relative; z-index: 9999">
                 
-                <div class="index-top-page-header">
-                
-                	<div class="index-container">
-                
-                	<span><a>JIJITANG</a></span>
-                    <span class="scrolled-btn"><a>Sign up</a></span>
-                    <span><a>Login</a></span>
-                    
-                    
-                    </div>
-                   
-                    
-                
-                </div>
+               
                 
                 </div>
                 
@@ -879,7 +870,7 @@ $(window).on("load",function() {
 
 <script>
 
-$( "header" ).load( "index-header.html" );
+$( ".new-index-header" ).load( "welcome-header.html" );
 $( "footer" ).load( "footer.html" );
 $( "#Entries1" ).load( "Testnotes/Note1.html" );
 $( "#Entries2" ).load( "Testnotes/Note2.html" );
