@@ -55,15 +55,35 @@ $(document).ready(function(){
 	
 	
 	$("#project-add-user-btn").click(function(e) {
+	
+			
+	
+			if( $("#project-member-name").val() && $("#project-member-role").val() && $("#project-member-email").val()) {
     
-           $(".project-team-members-holder").append(" <div class='project-members'><span class='tag-text'>"+$("#project-member-name").val()+"</span>(<span>"+$("#project-member-role").val()+"</span>)</div>");
+           $(".project-team-members-holder").append(" <div class=' editor-all-tags member-tags'><span class='tag-text'>"+$("#project-member-name").val()+"</span>(<span>"+$("#project-member-role").val()+"</span>)<div class='tag-delete'>x</div></div>");
 	   $("#project-member-name").val('');
 	   $("#project-member-email").val('');
-	   $("#project-member-role").val('')
+	   $("#project-member-role").val('');
+	   
+	   $('#project-member-modal').modal('hide');
+	   $("#add-member-alert").hide();
+	   
+	   
+	   
+	   } else {
+	   
+	   
+		$("#add-member-alert").show();
+	   
+	   
+	   
+	   
+	   
+	   }
     
 });
 
-	 $('.publish-tag-list').on('click', '.tag-delete', function(){
+	 $('.project-team-members-holder').on('click', '.tag-delete', function(){
 	 	
 	 $(this).parent().remove()
    
@@ -96,8 +116,15 @@ $(document).ready(function(){
 
 <div class="modal fade" id="project-member-modal">
 
+<div id="add-member-alert" class="sign-in-alert full-width"> Please enter member name, email, and role</div>
 
+	<div class="project-member-modal-holder">
+	
+	<p class="project-modal-headers">Add New Member</p>
 	<div class="project-member-modal-inner" >
+	
+	
+		
 	
 		<input id="project-member-email" type="text" placeholder="Email" >
 		
@@ -108,7 +135,10 @@ $(document).ready(function(){
 	
 	</div>
 	
-	<button type="submit" id="project-add-user-btn"  class="main-button pass-confirm-btn create-project-btn " data-dismiss="modal">Invite</button>
+	<button type="submit" id="project-add-user-btn"  class="main-button  create-project-btn " >Invite</button>
+	<button   class="gray-button  create-project-btn " data-dismiss="modal" >Cancel</button>
+	
+	</div>
   
 </div><!-- /.modal -->
 
@@ -135,7 +165,7 @@ $(document).ready(function(){
 			
 				<span>1 </span>
 				<p>Basic Information</p>
-				<hr>
+				<hr class="hidden-tablet hidden-phone">
 			
 			</div>
 			
@@ -143,7 +173,7 @@ $(document).ready(function(){
 			
 			<span>2 </span>
 				<p>Privacy Information</p>
-				<hr>
+				<hr class="hidden-tablet hidden-phone">
 			
 			</div>
 			
@@ -167,7 +197,7 @@ $(document).ready(function(){
 			<p class="create-project-phase-header">Privacy Information</p>
 			
 			
-			<form class="project-form-privacy" role="form">
+			<form class="project-form-privacy" action="create_project-publication.html" role="form">
 			
 			
 			<p>Team Members</p>

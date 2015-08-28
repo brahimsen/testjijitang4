@@ -122,7 +122,7 @@ $(function() {
 			
 				<span>1 </span>
 				<p>Basic Information</p>
-				<hr>
+				<hr class="hidden-tablet hidden-phone">
 			
 			</div>
 			
@@ -130,7 +130,7 @@ $(function() {
 			
 			<span>2 </span>
 				<p>Privacy Information</p>
-				<hr>
+				<hr class="hidden-tablet hidden-phone">
 			
 			</div>
 			
@@ -162,7 +162,7 @@ $(function() {
 				
 				<div class="input-group">
 				<p>Project Title:</p>
-					<input type="text" class="form-control" name="name" placeholder="Title">
+					<textarea class="form-control" name="name" placeholder="Title"></textarea>
 				</div>
 				
 				<div class="input-group">
@@ -183,7 +183,7 @@ $(function() {
 			<div class="project-form-image-inner">
                         
                         
-        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="#"/>
+        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="#" onError="this.src='img/screenshot-128.png';"/>
                         
                         
             </div>
@@ -215,13 +215,13 @@ $(function() {
 				
 					<p>Project Type</p>
 					
-					<div><input type="radio" name="projecttyperadio" value="blue" class="required"> Research Project (Crosswise Task)<br /></div>
-					<div><input type="radio" name="projecttyperadio" value="red"> Research Project (Longitudinal Task)<br /></div>
-					<div><input type="radio" name="projecttyperadio" value="red"> Graduate Thesis<br /></div>
-					<div><input type="radio" name="projecttyperadio" value="red"> Class Project/Work<br /></div>
-					<div><input type="radio" name="projecttyperadio" value="red"> Conference/Workshop/Seminar<br /></div>
-					<div><input type="radio" name="projecttyperadio" value="red"> Consultant Project<br /></div>
-					<div><input type="radio" name="projecttyperadio" value="red"> Project (Not Categoriezed)<br /></div>
+					<div><input type="radio" name="projecttyperadio" value="" class="required"> Research Project (Crosswise Task)<br /></div>
+					<div><input type="radio" name="projecttyperadio" value=""> Research Project (Longitudinal Task)<br /></div>
+					<div><input type="radio" name="projecttyperadio" value=""> Graduate Thesis<br /></div>
+					<div><input type="radio" name="projecttyperadio" value=""> Class Project/Work<br /></div>
+					<div><input type="radio" name="projecttyperadio" value=""> Conference/Workshop/Seminar<br /></div>
+					<div><input type="radio" name="projecttyperadio" value=""> Consultant Project<br /></div>
+					<div><input type="radio" name="projecttyperadio" value="" checked="checked"> Project (Not Categoriezed)<br /></div>
 					
 			
 			
