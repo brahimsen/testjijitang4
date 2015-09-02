@@ -25,9 +25,10 @@
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
+<script src="js/projects-script.js"></script>
 <script src="js/collection-script.js"></script>
 <script src="js/jquery.dataTables.js"></script>
-<script src="../js/myEntries.js"></script>  
+
 
 <style>
 
@@ -48,91 +49,11 @@
 
 
 
-$(document).ready(function() {
-	
-			 $(".profile-follow").click(function(){
-						$(".profile-unfollowed,.profile-followed",this).toggleClass("hide-follow-check");
-					
-						
-								
-				});
-	
-	
-
-});
-
-
 
 
 </script>
 
-<script>
 
-$(document).ready(function() {
-oTable = $('.example').dataTable({
-    "oLanguage": {
-    "sSearch": "",
-  },
-"lengthMenu": [[5, 6, 7, -1], [5, 6, 7, "All"]]
-});
-} ); 
-
-
-$(document).ready(function() {
-
-			$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-	
-			 $(".article-graph-save").click(function(f){
-						$(this).siblings(".article-graph-save-drop").toggleClass("article-graph-save-hide");
-						$(".article-graph-share").removeClass("article-graph-save-hide");
-						
-					
-						
-								
-				});
-				
-				
-				
-					 $(".article-graph-share-btn").click(function(e){
-						$(".article-graph-share",this).toggleClass("article-graph-save-hide");
-						$(".article-graph-save-drop").removeClass("article-graph-save-hide");
-					e.stopPropagation();
-						
-								
-				});
-				
-				
-				
-				$("html").click(function(e){
-					
-					$(".article-graph-share").removeClass("article-graph-save-hide");
-		
-				});
-				
-				
-				
-	
-	$(".read-later-full").hide();
-				$(".read-later-holder").click(function(){
-					
-					
-					$(this).children('.read-later-empty').toggle();
-					$(this).children('.read-later-full').toggle();
-					
-				});
-				
-	
-	
-
-});
-
-
-
-
-
-</script>
 
 
 
@@ -200,7 +121,7 @@ $(document).ready(function() {
  
 	<div class="square-grids">
 	
-	<div class="square-grid-item square-grid-filter" href="http://diveintohtml5.ep.io/"> 
+	<div class="project-square-grid-item project-square-grid-filter" href="http://diveintohtml5.ep.io/"> 
 			<div> 
 				<div class="articles-laft-inner" >
                         
@@ -300,11 +221,11 @@ $(document).ready(function() {
 			</div> 
 	</div> 
  
-<div class="square-grid-item" >
+<div class="project-square-grid-item" >
 
 	
 	
-<div class="square-grid-item-inner" > 
+<div class="project-square-grid-item-inner" > 
 
 		<div class="project-graph-content" style=" background:url(img/promotion-back.jpg) center no-repeat;">
 		
@@ -312,14 +233,14 @@ $(document).ready(function() {
 			
 				<div>
 				
-<div class="profile-follow">
-		<a class="profile-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check profile-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
 		</div>
 		
-		<div class="like-holder grid-bottom-container">
+		<div class="project-like-holder ">
                             
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
                             
                             		<span class="icon-uniE602"></span>
                             		
@@ -327,540 +248,7 @@ $(document).ready(function() {
                             
                             	</button>
                             	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		<div class="project-graph-bottom">
-		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhaji <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
-
-	
-
-</div>
-
-
-
-
-</div> 
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner" > 
-
-		<div class="project-graph-content" style=" background:url(img/index-back2.jpg) center no-repeat;">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="profile-follow">
-		<a class="profile-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check profile-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		<div class="project-graph-bottom">
-		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhaji <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
-
-	
-
-</div>
-
-
-
-
-</div> 
-
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner" > 
-
-		<div class="project-graph-content" style=" background:url(img/index-back.jpg) center no-repeat;">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="profile-follow">
-		<a class="profile-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check profile-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		<div class="project-graph-bottom">
-		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhaji <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
-
-	
-
-</div>
-
-
-
-
-</div> 
-
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner" > 
-
-		<div class="project-graph-content" style=" background:url(img/imagetest.jpg) center no-repeat;">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="profile-follow">
-		<a class="profile-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check profile-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		<div class="project-graph-bottom">
-		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhaji <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
-
-	
-
-</div>
-
-
-
-
-</div> 
-
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner" > 
-
-		<div class="project-graph-content" style=" background:url(img/promotion-back.jpg) center no-repeat;">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="profile-follow">
-		<a class="profile-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check profile-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		<div class="project-graph-bottom">
-		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhaji <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
-
-	
-
-</div>
-
-
-
-
-</div> 
-
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner" > 
-
-		<div class="project-graph-content" style=" background:url(img/promotion-back.jpg) center no-repeat;">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="profile-follow">
-		<a class="profile-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check profile-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		<div class="project-graph-bottom">
-		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhaji <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
-
-	
-
-</div>
-
-
-
-
-</div> 
-
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner" > 
-
-		<div class="project-graph-content" style=" background:url(img/promotion-back.jpg) center no-repeat;">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="profile-follow">
-		<a class="profile-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check profile-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
                             
                             		<span class="icon-uniE615" style="color: #fff"></span>
 									
@@ -923,6 +311,8 @@ $(document).ready(function() {
 
 
 
+
+
 	
 	</div>
   
@@ -934,46 +324,6 @@ $(document).ready(function() {
 
 $( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
-$( "#Entries1" ).load( "Testnotes/Note1.html" );
-$( "#Entries2" ).load( "Testnotes/Note2.html" );
-$( "#Entries3" ).load( "Testnotes/Note3.html" );
-$( "#Entries4" ).load( "Testnotes/Note4.html" );
-$( "#Entries5" ).load( "Testnotes/Note5.html" );
-
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-    
-    //smoothscroll
-    $('.index-arrow-down-holder a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
-});
-
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('.index-arrow-down-holder a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            currLink.addClass("left-active");
-        }
-        else{
-            currLink.removeClass("left-active");
-        }
-    });
-}
 
  
 </script>

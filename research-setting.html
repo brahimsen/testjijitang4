@@ -28,65 +28,57 @@
 <script src="js/myform.js"></script>
 <script src="js/myjavascript.js"></script>
 
+
 <script>
 
-$(document).ready(function() {
+$(document).ready(function(){
 	
-				
+
 	
-				$('.account-edit-password-holder').hide();
-				
-				$('.account-edit-email-holder').hide();
-				
-				$(".account-password-edit").click(function(){
-				
-					
-				$('.account-edit-password-holder').fadeIn(500);
-					});
-					
-					
-				$(".account-email-edit").click(function(){
-				
-				$('.account-edit-email-holder').fadeIn(500);
-					
-					
-				});
-				
-			
-			
-				
-				$(".cancel-password-edit").click(function(){
-				
-					
-				$('.account-edit-password-holder').hide();
-					});
-					
-					
-				$(".cancel-email-edit").click(function(){
-				
-				$('.account-edit-email-holder').hide();
-					
-					
-				});
-				
-				
-				
-				
-			
-			
-				
-				
-				
-				
-			
-			
-			
-				
-				
-				});
+	
+	$("#project-keywords").keypress(function(e) {
+    if(e.which == 13) {
+           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete'>x</div></div>");
+	   $("#project-keywords").val('')
+    }
+});
+
+	 $('.project-keyword-list').on('click', '.tag-delete', function(){
+	 	
+	 $(this).parent().remove()
+   
+});
+	
+	
+	});
+	
+	
+	$(document).ready(function(){
+	
+
+	
+	
+	$("#project-add-pub-btn").click(function(e) {
+    
+       $(".project-publications-holder").append(" <p class='project-single-publication'>"+$("#project-publication-content").val()+"<span class='publication-single-toolbar'><span  class='single-publication-edit icon-uniE605' ></span><span class='single-publication-delete icon-remove'></span></span></p>");
+	   $("#project-publication-content").val('');
+	   
+    
+});
+
+	 $('.project-publications-holder').on('click', '.single-publication-delete', function(){
+	 	
+	 $(this).parent().parent().remove()
+   
+});
+
+
+
+	
+	
+	});
+	
 </script>
-
-
 
 
 
@@ -103,6 +95,24 @@ $(document).ready(function() {
 
 
 <body>
+
+
+	<div class="modal fade" id="project-publications-modal">
+
+	<p class="project-modal-headers">Add a publication</p>
+
+	<div class="project-publication-modal-inner" >
+	
+		<textarea id="project-publication-content" placeholder="Publications..." ></textarea>
+		
+		
+	
+	
+	</div>
+	
+	<button type="submit" id="project-add-pub-btn"  class="main-button pass-confirm-btn create-project-btn " data-dismiss="modal">Subumit</button>
+  
+</div><!-- /.modal -->
 
 
 
@@ -148,9 +158,9 @@ $(document).ready(function() {
             
             <ul class="nav nav-tabs collections-nav settings-navigatiion">
             
-            <li  ><a href="profile-setting.html">Profile Settings</a></li>
-            <li class=" active"  ><a href="account-setting.html">Account Settings</a></li>
-			<li ><a href="research-setting.html">Research Settings</a></li>
+            <li ><a href="profile-setting.html">Profile Settings</a></li>
+            <li ><a href="account-setting.html">Account Settings</a></li>
+			<li class=" active" ><a href="research-setting.html">Research Settings</a></li>
 
             
             </ul>
@@ -159,19 +169,12 @@ $(document).ready(function() {
             <div class="collection-form-holder">
             
             	<div class="caption-div">
-               		<p>Email</p>
+               		<p>Research Field</p>
                		<hr/>
                     
-                    <p><span class="settings-email">brahim_senhaji@gmail.com</span><span class="account-email-edit">Edit</span></p>
+                    <select></select>
                     
-                    <div class="account-edit-email-holder">
-                    
-                    <p> <span class="settings-email span2">Old Email</span><span class="dark-gray-color">brahim_senhaji@gmail.com</span></p>
-                    <p> <span class="settings-email span2">New Email</span><input type="text"></p>
-                     <p> <span class="settings-email span2">Password</span><input type="password"></p>
-                     <p><span class="cancel-email-edit">Cancel</span></p>
-                     
-                     </div>
+                   
                     
                     
                </div>
@@ -179,56 +182,69 @@ $(document).ready(function() {
           
             
                <div class="caption-div">
-               		<p>Password</p>
+               		<p>Research Direction</p>
                		<hr/>
+					
+					<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="You can add at most 5 Key Words, Type ENTER to create one key word"/>
+				
+			<div class="project-keyword-list"></div>
                     
-                        <p><span class="settings-email">*************</span><span class="account-password-edit">Edit</span></p>
-                    
-                    <div class="account-edit-password-holder">
-                    
-                    <p> <span class="settings-email span2">Old Password</span><input type="password"></p>
-                    <p> <span class="settings-email span2">New Password</span><input type="password"></p>
-                     <p> <span class="settings-email span2">Confirm New Password</span><input type="password"></p>
-                     <p><span class="cancel-password-edit">Cancel</span></p>
                      
-                     </div>
                      
                      
                </div>
-             
-             	<div class="caption-div">
-               		<p>Connect Your account to Wechat</p>
+			   
+			   <div class="caption-div reserach-setting-institute">
+               		<p>Research Institute</p>
                		<hr/>
-               
+					
+					<input type="text" placeholder="Institute">
+					<input type="text" placeholder="Department">
+					<input type="text" placeholder="Your Role">
+					
+					<button type="submit" id="mybtn"  class="main-button  right-float">Save</button>
                     
+                     
+                     
+                     
                </div>
-               
-               <div class="connect-on-wechat">
-               
-               <img src="img/scan-me.png"/>
-               <p>Scan the left side QR code to connect your account to Wechat. </p>
-               
-               
+			   
+			   
+			   <div class="caption-div reserach-setting-experience">
+               		<p>Research Experience</p>
+               		<hr/>
+					
+					<textarea placeholder="Less Then 2000 words"></textarea>
+					
+					
+                    
+                     
+                     
+                     
                </div>
 			   
 			   
 			   <div class="caption-div">
-               <p>More Information</p>
-               <hr/>
-			   
-			   <div class="profile-setting-more-info">
-               
-               		<div>
-                    <span>Language</span><select></select>
-                    </div>
-                   
-               
-               
+               		<p>Publications</p>
+               		<hr/>
+					
+					<a data-toggle="modal" id="add-publication-modal-btn" data-target="#project-publications-modal">Add a Publications</a>
+			
+					<div class="project-publications-holder">
+			
+			
+				</div>
+					
+					
+                    
+                     
+                     
+                     
                </div>
 			   
 			   
-               </div>
-			   
+             
+             
                
                
                

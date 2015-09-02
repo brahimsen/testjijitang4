@@ -7,7 +7,7 @@
 /* Primary Styles */
   
 
-.square-grid-item  {
+.project-square-grid-item  {
 	float: left;
 	width: 100%;
 	height: auto;
@@ -16,7 +16,7 @@
 	background: #ff0;
 }
 
-.square-grid-item-inner {
+.project-square-grid-item-inner {
 
 
 
@@ -172,20 +172,20 @@ height: 220px;
 
 
 	
-	.square-grid-item  {
+	.project-square-grid-item  {
 		-webkit-transition: background-color .3s linear;
 		-moz-transition: -color .3s linear;
 		transition: background-color .3s linear;
 	}
-	.square-grid-item { background-color: #fff;  }
-	.square-grid-item  { background-color: #fff; }
-	.square-grid-item  {
+	.project-square-grid-item { background-color: #fff;  }
+	.project-square-grid-item  { background-color: #fff; }
+	.project-square-grid-item  {
 		position: relative;
 		top: 0;
 		
 	}
 	
-.square-grid-filter {
+.project-square-grid-filter {
 		
 		height: 870px !important;
 		background: rgba(237,235,213,0.5);
@@ -198,7 +198,7 @@ height: 220px;
 /* One Column */
 
 @media screen and (min-width:300px) {
-	.square-grid-item  {
+	.project-square-grid-item  {
 		width: 100%;
 		margin: 0 0% 30px 0;
 		height: 420px;
@@ -213,7 +213,7 @@ height: 220px;
 /* Two Column */
 
 @media screen and (min-width:767px) {
-	.square-grid-item  {
+	.project-square-grid-item  {
 	width: 100%;
 		margin: 0 0% 30px 0;
 		height: 420px;
@@ -233,7 +233,7 @@ height: 220px;
 /* Three Column */
 
 @media screen and (min-width:980px) {
-	.square-grid-item {
+	.project-square-grid-item {
 		width: 47%;
 		margin: 0 1.5% 30px 1.5%;
 		height: 420px;
@@ -246,7 +246,7 @@ height: 220px;
 /* Four Column */
 
 @media screen and (min-width:1140px) {
-	.square-grid-item {
+	.project-square-grid-item {
 		width: 31.33%;
 		margin: 0 1% 30px 1%;
 		height: 420px;
@@ -279,7 +279,7 @@ height: 220px;
 	
 	}
 
-.profile-follow {
+.project-follow {
 
 	float: right;
 	margin-left: 10px;
@@ -287,7 +287,7 @@ height: 220px;
 
 }
 
-.profile-unfollowed {
+.project-unfollowed {
 
 	
 	color: #fff;
@@ -300,13 +300,36 @@ height: 220px;
 
 }
 
-.profile-followed {
+.project-unfollowed:hover {
+
+	
+	color: #fff !important;
+	
+	
+
+
+
+}
+
+.project-followed:hover {
+
+	
+	color: #fff !important;
+	
+	
+
+
+
+}
+
+.project-followed {
 
 	
 	color: #fff;
 	text-decoration: none !important;
 	cursor: pointer;
 	font-size: 17px !important;
+	margin-right: -3px;
 
 
 
@@ -319,14 +342,14 @@ height: 220px;
 
 }
 
-.like-holder {
+.project-like-holder {
 
 		float: right;
 
 
 }
 
-.like-holder > button {
+.project-like-holder > button {
 
 		background: none !important;
 		border: 0px !important;
@@ -441,3 +464,5 @@ font-size: 13px;
 
 
 }
+
+

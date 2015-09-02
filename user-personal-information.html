@@ -1,0 +1,258 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+
+<script src="js/zebra_datepicker.js"></script>
+
+<style>
+
+.input-group {
+	
+	margin-bottom: 25px;
+
+
+
+}
+
+input {
+
+height: 40px !important;
+
+}
+
+
+
+.input-group p {
+
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+
+
+
+}
+
+</style>
+
+
+<script>
+
+$(document).ready(function(){
+	
+
+	
+	
+	$("#project-keywords").keypress(function(e) {
+    if(e.which == 13) {
+           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete'>x</div></div>");
+	   $("#project-keywords").val('')
+    }
+});
+
+	 $('.project-keyword-list').on('click', '.tag-delete', function(){
+	 	
+	 $(this).parent().remove()
+   
+});
+	
+	
+	});
+
+</script>
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+
+
+<body>
+
+  	<div class="header-wrapper">
+			
+            <header>
+
+
+			</header>
+
+		</div>
+
+	<div class="container-fluid">
+	
+		<div class="create-project-holder">
+		
+			
+		
+			<p>
+Personal Information</p>
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class="create-project-inner">
+			
+			
+			
+			
+			<form action="create_project-privacy.html" class="project-form-main" role="form">
+			
+			<div class="project-form-image-holder">
+				
+			  <div>
+			  
+				<div class="input-group">
+				<p>Your Name:</p>
+					<input class="form-control" placeholder="Your Name:">
+				</div>
+				
+				<div class="input-group">
+				<p>Short Description of Yourself:</p>
+					<textarea class="form-control" placeholder="Description"></textarea>
+				</div>
+				
+				
+				
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			<div>
+			
+			<div class="project-form-image-inner">
+                        
+                        
+        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="#" onError="this.src='img/screenshot-128.png';"/>
+                        
+                        
+            </div>
+			
+			<input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image">
+			
+			
+			</div>
+			
+			
+			<div>
+			
+			
+				
+				
+			
+			
+			
+			</div>
+			
+			</div>
+			
+			    
+			
+			<div class="input-group" style="width: 60%">
+					
+					<p>Research Field of This Project:</p>
+					<select name="project-category" class="form-control required">
+						<option disabled="disabled">Choose...</option>
+						<option value="1">Economics</option>
+						<option value="2">Natural Sciences</option>
+						</select>
+				</div>
+				
+				<div class="input-group " >
+				<p>Your Research Direction:</p>
+				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="You can add at most 5 Key Words, Type ENTER to create one key word"/>
+				
+				<div class="project-keyword-list"></div>
+				</div>
+				
+				
+				<div class="input-group reserach-setting-institute" >
+				
+					<p>Research Institute</p>
+					<span></span>
+				
+					<input type="text" placeholder="Institute">
+					<input type="text" placeholder="Department">
+					<input type="text" placeholder="Your Role">
+				</div>
+				
+				
+				<div class="input-group reserach-setting-experience" >
+				
+					<p>Research Experience</p>
+					
+				<textarea placeholder="Less Then 2000 words"></textarea>
+				</div>
+			
+			
+
+			
+			
+			
+			
+			
+		
+		
+		<button type="submit" id="mybtn"  class="main-button pass-confirm-btn create-project-btn ">Next</button>
+			
+			</form>
+			
+			
+			
+			</div>
+		
+		
+		</div>
+    
+
+    
+    </div>
+
+</body>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+
+
+
+ 
+</script>
+<script src="js/myjavascript.js"></script>
+
+
+
+
+

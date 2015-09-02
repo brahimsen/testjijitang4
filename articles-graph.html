@@ -27,6 +27,7 @@
 <script src="js/myform.js"></script>
 <script src="js/collection-script.js"></script>
 <script src="js/jquery.dataTables.js"></script>
+<script src="js/articles-graph-script.js"></script>
 <script src="../js/myEntries.js"></script>  
 
 <style>
@@ -43,75 +44,6 @@
 
 </style>
 
-
-
-<script>
-
-$(document).ready(function() {
-oTable = $('.example').dataTable({
-    "oLanguage": {
-    "sSearch": "",
-  },
-"lengthMenu": [[5, 6, 7, -1], [5, 6, 7, "All"]]
-});
-} ); 
-
-
-$(document).ready(function() {
-
-			$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-	
-			 $(".article-graph-save").click(function(f){
-						$(this).siblings(".article-graph-save-drop").toggleClass("article-graph-save-hide");
-						$(".article-graph-share").removeClass("article-graph-save-hide");
-						
-					
-						
-								
-				});
-				
-				
-				
-					 $(".article-graph-share-btn").click(function(e){
-						$(".article-graph-share",this).toggleClass("article-graph-save-hide");
-						$(".article-graph-save-drop").removeClass("article-graph-save-hide");
-					e.stopPropagation();
-						
-								
-				});
-				
-				
-				
-				$("html").click(function(e){
-					
-					$(".article-graph-share").removeClass("article-graph-save-hide");
-		
-				});
-				
-				
-				
-	
-	$(".read-later-full").hide();
-				$(".read-later-holder").click(function(){
-					
-					
-					$(this).children('.read-later-empty').toggle();
-					$(this).children('.read-later-full').toggle();
-					
-				});
-				
-	
-	
-
-});
-
-
-
-
-
-</script>
 
 
 
@@ -1871,42 +1803,7 @@ $( "#Entries3" ).load( "Testnotes/Note3.html" );
 $( "#Entries4" ).load( "Testnotes/Note4.html" );
 $( "#Entries5" ).load( "Testnotes/Note5.html" );
 
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-    
-    //smoothscroll
-    $('.index-arrow-down-holder a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
-});
 
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('.index-arrow-down-holder a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            currLink.addClass("left-active");
-        }
-        else{
-            currLink.removeClass("left-active");
-        }
-    });
-}
-
- 
 </script>
 <script src="js/myjavascript.js"></script>
 

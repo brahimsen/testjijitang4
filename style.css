@@ -955,6 +955,28 @@ position: relative;
 
 @media(max-width: 980px) {
 
+.myprofile-top-bar {
+
+margin-top: 0px !important;
+
+}
+
+.profile-info-holder {
+
+	width: 96% !important;
+	margin-left: 2% !important;
+	margin-right: 2% !important;
+
+}
+
+.profile-content-holders {
+
+
+margin-left: 2% !important;
+margin-right: 2% !important;
+
+}
+
 	.project-view-meta h2 {
 	
 	font-size: 24px !important;
@@ -1076,6 +1098,44 @@ position: relative;
 
 
 @media(max-width: 767px) {
+
+.mypage-tabs {
+
+	width: 25% !important;
+
+}
+
+.myprofile-top-bar {
+
+height: 40% !important;
+
+
+}
+
+.profile-info-holder {
+
+margin-top: 60px !important;
+
+}
+
+.profile-info-holder h3 {
+
+font-size: 18px !important;
+
+}
+
+.myprofile-image-holder > img {
+
+	width: 100px !important;
+
+
+}
+
+.myprofile-image-holder {
+
+	bottom: -50px !important;
+
+}
 
 .project-test-content-inner {
 
@@ -16546,6 +16606,10 @@ border: 1px solid #ccc;
 
 padding: 15px;
 margin-bottom: 30px;
+
+
+margin-left: 15%;
+margin-right: 15%;
 
 }
 
