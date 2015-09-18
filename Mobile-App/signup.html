@@ -18,6 +18,7 @@
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/mobile-script.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/form-validation/signup-form-validation.js"></script>
 		
 		
 		
@@ -42,8 +43,9 @@
     
 		<div data-demo-html="true" class="login-page">
 		
-		<form class="form-horizontal form">
+		<form class="form-horizontal form" >
 	  	
+		<div class="error-message-style" id="sign-up-error"></div>
 		
 		
 		<div class="box row-fluid">	
@@ -82,8 +84,10 @@
 			</p>
 			
 			
-			
+			<p class="outer-text margins">Verification code has been sent to 187****5889</p>
 			<div class="login-form-holder">
+			
+					
 				  <div data-demo-html="true" class="form-control">
 					<div class="ui-field-contain my-field-contain my-field-contain-last login-field-contain form-group top-bottom-border">
 					<label for="textinput-fc"><span class="lnr lnr-spell-check"></span></label>
@@ -110,8 +114,8 @@
 				 <div class="login-form-holder">
 				 
 				<div data-demo-html="true" class="form-control">
-			<div class="ui-field-contain my-field-contain login-field-contain form-group top-border">
-				<label for="textinput-fc"><span class="lnr lnr-lock"></span></label>
+					<div class="ui-field-contain my-field-contain login-field-contain form-group top-border">
+						<label for="textinput-fc"><span class="lnr lnr-lock"></span></label>
 				<input  type="password" id="fpassword" name="fpassword" placeholder="Password" value="">
 			</div>
 		</div><!--/demo-html -->
@@ -123,6 +127,12 @@
 		</div><!--/demo-html -->		  	
 			</div>
 			</div>
+			
+			
+			
+			
+			
+			
 			
 		
 			
@@ -150,79 +160,5 @@
 	</div>
 
 	</body>
-	
-	<script type="text/javascript">
-	$(document).ready(function(){
-		var current = 1;
-		
-		widget      = $(".step");
-		btnnext     = $(".next");
-		btnback     = $(".back"); 
-		btnsubmit   = $(".submit");
-
-		// Init buttons and UI
-		widget.not(':eq(0)').hide();
-		hideButtons(current);
-		
-
-		// Next button click action
-		btnnext.click(function(){
-			if(current < widget.length){
-				// Check validation
-				if($(".form").valid()){
-					widget.show();
-					widget.not(':eq('+(current++)+')').hide();
-					
-				}
-			}
-			hideButtons(current);
-		})
-
-		// Back button click action
-		btnback.click(function(){
-			if(current > 1){
-				current = current - 2;
-				if(current < widget.length){
-					widget.show();
-					widget.not(':eq('+(current++)+')').hide();
-					
-				}
-			}
-			hideButtons(current);
-		})
-
-	    $('.form').validate({ // initialize plugin
-			ignore:":not(:visible)",			
-			rules: {
-				phonenumber : "required",
-				verfification : "required",
-				fpassword : "required",
-				rpassword: { required : true, equalTo: "#password"},
-			},
-	    });
-
-	});
-
-
-	// Hide buttons according to the current step
-	hideButtons = function(current){
-		var limit = parseInt(widget.length); 
-
-		$(".action").hide();
-
-		if(current < limit) btnnext.show();
-		if(current > 1) btnback.show();
-		if (current == limit) { 
-			// Show entered values
-			$(".display label:not(.control-label)").each(function(){
-				console.log($(this).find("label:not(.control-label)").html($("#"+$(this).data("id")).val()));	
-			});
-			btnnext.hide(); 
-			btnsubmit.show();
-		}
-	}
-</script>
-
-
 
 </html>
