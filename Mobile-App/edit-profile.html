@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>JIJITANG</title>
+		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
+        <link rel="stylesheet" href="mobile-style.css">
+        <link rel="stylesheet" href="collections-style.css">
+		<link rel="stylesheet" href="css/editable-listview.css">
+
+      
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/mobile-script.js"></script>
+		<script src="js/editable-listview.js"></script>
+		
+		
+        
+	</head>
+	<body>
+	
+
+	<div data-role="page" id="Edit-profile-home">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Edit Profile</h1>
+       
+    </div><!-- /header -->
+    
+    <div data-demo-html="true">
+		
+		
+		
+		<ul data-role="listview" class="mywidgets">
+		
+					<li class="edit-profile-image-wdiget" data-icon="false"><a><img src="../img/brahim.png" />Edit Picture</a></li>
+					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#edit-profile-name" >Name<span>Brahim Senhaji</span></a></li>
+					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Short Bio
+					
+						<p>Computer science graduate with more than 3 years working experience as full-stack and front end web developer. Extensive knowledge with front end tools including jquery, angular, ember, node, html5/CSS3 </p>
+					
+					</a></li>
+					
+		</ul>
+		
+		<ul data-role="listview" class="mywidgets">
+					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Research Institute
+
+					
+						<p>Al Akhawayn University </p>
+					
+					</a></li>
+					
+					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Research Field
+
+					
+						<p>Client side scripting languages </p>
+					
+					</a></li>
+					
+					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#edit-research-direction">Research Direction
+
+					
+						<p><span>Ajax</span><span>Jquery</span><span>Ember</span><span>Node</span><span>HTML5</span><span>CSS3</span></p>
+					
+					</a></li>
+					
+					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Short Bio
+					
+						<p>Computer science graduate with more than 3 years working experience as full-stack and front end web developer. Extensive knowledge with front end tools including jquery, angular, ember, node, html5/CSS3 </p>
+					
+					</a></li>
+					
+		</ul>
+		
+		
+	</div><!--/demo-html -->
+	
+	
+    	
+    
+
+		
+	</div>
+	
+	
+	<div data-role="page" id="edit-profile-name">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Edit Name</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
+		<a class="header-left-link" href="#add-form">Submit</a>
+       
+    </div><!-- /header -->
+    
+		<div data-demo-html="true">
+		
+			<input class="edit-profile-input" type="text" name="text-basic" id="text-basic" placeholder="Full Name">
+				
+				
+		</div><!--/demo-html -->
+	
+	</div>
+	
+	<div data-role="page" id="edit-bio">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Edit Research Field</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
+		<a class="header-left-link" href="#add-form">Submit</a>
+       
+    </div><!-- /header -->
+    
+		<div data-demo-html="true">
+		
+			<textarea class="edit-profile-input" type="text" name="text-basic" id="text-basic" placeholder="Full Name"></textarea>
+				
+				
+		</div><!--/demo-html -->
+	
+	</div>
+	
+	<div data-role="page" id="edit-research-direction">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Edit Research Direction</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
+		<a class="header-left-link" href="#add-form">Submit</a>
+       
+    </div><!-- /header -->
+    
+		<div data-demo-html="true">
+		
+			<ul data-role="listview" data-editable="true">
+  <li>Itme 1</li>
+  <li>Itme 2</li>
+  <li>Itme 3</li>
+  <li>Itme n</li>
+</ul>
+				
+				
+		</div><!--/demo-html -->
+	
+	</div>
+	
+        
+	</body>
+</html>

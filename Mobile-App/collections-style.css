@@ -1,0 +1,211 @@
+		.collection-mobile-content {
+				
+				padding: 0px !important;
+			
+			
+			
+			}
+			
+			.main-list-view  {
+				
+				
+				
+				
+				box-shadow: none !important;
+				border: none !important;
+			
+			
+			}
+			
+			.main-list-view > li {
+				
+				
+				
+				border-radius: 0px !important;
+				box-shadow: none !important;
+			
+			
+			}
+			
+			.main-list-view > li > a {
+				
+				background-color: #FFF !important;
+				border-left: none !important;
+				border-right: none !important;
+				padding-left: 65px !important;
+				padding-top: 8px !important;
+				padding-bottom: 8px !important;
+				box-shadow: none !important;
+			
+			
+			}
+			
+			.main-list-view > li > a > h2 {
+				color: #877c21 !important;
+				text-shadow: none !important;
+				font-size: 14px;
+			
+			
+			}
+			
+			.main-list-view > li > a > h2 > span {
+				color: #999 !important;
+				text-shadow: none !important;
+				font-size: 12px !important;
+				margin-left: 15px;
+				font-weight: normal !important;
+			
+			
+			}
+			
+			.main-list-view > li > a > p {
+				
+				color: #333 !important;
+				text-shadow: none !important;
+				font-size: 14px;
+				
+				
+			
+			
+			
+			}
+			
+			.main-list-view > li > a > img {
+				width: 40px;
+				margin-top: 17px;
+				
+			
+			
+			}
+			
+			.mobile-nav-tabs > li > a {
+				
+				background-color: #FFF !important;
+				text-shadow: none !important;
+			
+			
+			
+			}
+			
+			
+			
+			.mobile-nav-tabs > li > .ui-btn-active {
+				
+				background-color: #eee !important;
+				text-shadow: none !important;
+				box-shadow: none !important;
+				color: #333 !important;
+				border: 1px solid #ccc !important;
+			
+			
+			
+			}
+			
+			.mobile-nav-tabs > .ui-state-active {
+				
+				
+				text-shadow: none !important;
+				box-shadow: none !important;
+				
+			
+			
+			
+			}
+			
+				.mobile-nav-tabs > .ui-state-active > a {
+					color: #FFF !important;
+					background-color: #877c21 !important;
+			
+			
+			
+			}
+			
+			.collection-header > a {
+				
+				background-color: #333 !important;
+				border: none !important;
+				color: #FFF !important;
+				margin-top: 5px !important;
+				
+			
+			
+			
+			}
+			
+			.collection-header  {
+				
+				border: none !important;
+				
+			
+			
+			
+			}
+			
+			.mobile-collection-content {
+				margin-top: 15px;
+			
+			}
+		
+		
+		.collection-mobile-content {
+		}
+		
+		
+		
+			.collection-mobile-content > div > div > h3 {
+				margin-top: 0px; color: #FFF; font-size: 16px; text-shadow: none; padding-top: 20px
+		
+		}
+		
+			.collection-mobile-content > div > div > p:nth-child(2) {
+				margin-top: 0px; color: #FFF; font-size: 14px; text-shadow: none
+		
+		}
+		
+			.collection-mobile-content > div > div > p:nth-child(3) {
+				margin-top: 0px; color: #FFF; font-size: 12px; text-shadow: none; position: absolute; bottom: 20px; width: 100%
+		
+		}
+		
+		#add-article-to-collection {
+		background: #FFF !important;
+	
+	}
+		
+			#add-article-to-collection > div > form > fieldset > div > div > label {
+		background: #FFF !important;
+		
+		border-left: none !important;
+		border-right: none !important;
+		border-radius: 0px !important;
+		font-size: 14px !important;
+		font-weight: normal !important;
+		text-shadow: none !important;
+		color: #000 !important;
+	
+	}
+	
+	#add-article-to-collection > div > form > fieldset > div > div:nth-child(1) > label {
+		border-top: 0px !important;
+	
+	}
+	
+	
+	#add-to-collection > div > form > fieldset {
+		margin-top: 0px !important;
+	
+	}
+	
+	.main-list-view > li {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		background: #FFF ;
+	
+	}
+	
+	.collection-mobile-nav {
+		margin-bottom: 10px !important;
+	
+	
+	}
+	
