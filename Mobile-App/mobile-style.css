@@ -1026,6 +1026,7 @@ text-shadow: none !important;
 	 input {
 		 box-shadow: none !important;
 		 text-shadow: none !important;
+		 color: #999 !important;
 	 
 	 }
 	 
@@ -1938,7 +1939,7 @@ margin-top: 20px !important;
 			
 			.follow-list-content {
 			
-				width: 70%;
+				width: 80%;
 				float: left;
 			
 			}
@@ -1952,16 +1953,113 @@ margin-top: 20px !important;
 			
 			.follow-list-btn {
 			
-				width: 30%;
+				width: 20%;
 				float: right;
 			
 			}
 			
-			.my-profile-exerpt {
+			.follow-list-content div {
 			
+				float: left;
 			
 			
 			}
+			
+			.follow-list-content .follow-img-holder {
+			
+				width: 60px;
+			
+			
+			}
+			
+			.follow-list-content .follow-content-holder {
+			
+				width: calc(100% - 60px) !important;
+			
+			
+			}
+			
+			.follow-list-content .follow-content-holder {
+			
+				width: calc(100% - 60px) !important;
+			
+			
+			}
+			
+			.follow-list-content .follow-content-holder a {
+			
+				width: 100%;
+				text-decoration: none !important;
+				text-transform: none !important;
+			
+			
+			}
+			
+			.follow-list-content .follow-content-holder h2 {
+			
+				color: #877c21 !important;
+				font-size: 13px !important;
+				margin-top: 0px !important;
+				font-weight: normal !important;
+			
+			
+			}
+			
+			.follow-list-content .follow-content-holder p {
+			
+				color: #999 !important;
+				margin-bottom: 5px !important;
+				margin-top: 0px !important;
+				line-height: 18px !important;
+				
+			
+			
+			}
+			
+			.follow-content-holder p:nth-child(3) {
+			
+				white-space: initial !important;
+				margin-bottom: 0px !important;
+	
+				
+			
+			
+			}
+			
+			.follow-list-btn button  {
+			
+				text-align: right;
+				background: #fff !important;
+				box-shadow: none !important;
+				border: 0px !important;
+				margin-bottom: 0px !important;
+				margin-top: 0px !important;
+			
+			
+				
+			
+			}
+			
+				.not-followed {
+			
+				color: #999 !important;
+				font-size: 24px !important;
+				
+				
+			
+			}
+			
+				.not-followed span {
+			
+				color: #999 !important;
+				content:"follow";
+				font-size: 12px !important;
+				display: inline-block;
+				margin-top: -10px !important;
+				margin-right: 5px !important;
+			
+			}
+			
 			
 			.logout-widget a {
 			
@@ -2265,3 +2363,123 @@ margin-top: 20px !important;
 				margin-bottom: 0px !important;
 				
 				}
+				
+				textarea {
+				
+					box-shadow: #none !important;
+					text-shadow: none !important;
+					
+				
+				}
+				
+				
+				
+				.thirty-margin-top {
+				
+					margin-top: 30px !important;
+					border-top: 1px solid #eee !important;
+				
+				}
+				
+				
+				.form-select .ui-btn {
+				
+				
+					background: #fff !important;
+					background-color: #fff !important;
+					border: 0px !important;
+					box-shadow: none !important;
+					color: #999 !important;
+					font-weight: normal !important;
+					font-size: 1em !important;
+					text-shadow: none !important;
+					text-align: left !important;
+					padding-left: 5px !important;
+					
+				
+				
+				
+				}
+				
+				.form-select .ui-select {
+				
+					margin-top: 0px !important;
+					margin-bottom: 0px !important;
+					
+				
+				
+				
+				}
+				
+				
+				.form-select select {
+				
+		
+					border: 0px !important;
+					box-shadow: 0px !important;
+					
+				
+				
+				
+				}
+				
+				.wswdg a {
+					border: 0px !important;
+					box-shadow: none !important;
+					font-size: 14px !important;
+					color: #999 !important;
+					display: inline-block !important;
+					width: 100% !important;
+					padding-top:24px;
+					padding-bottom: 24px;
+					background: #fff !important;
+					
+					padding-left: 25px !important;
+					height: 67px !important;
+					
+					font-weight: normal !important;
+				
+				}
+				
+				.wswdg li {
+				
+					height: 69px !important;
+					border-bottom: 1px solid #eee !important;
+					
+					
+				
+				}
+				
+				.user-profile-widget  a {
+				
+					padding-top: 10px !important;
+					padding-bottom: 10px !important;
+				
+				
+				}
+				
+				.user-profile-widget .user-photo-icon {
+				
+				font-size: 46px !important;
+				
+				
+				
+				}
+				
+				.user-profile-widget .user-profile-widget-text {
+				
+					
+					margin-top: -32px !important;
+					margin-left: 65px;
+				
+				
+				}
+				
+				.following {
+				
+				color: #877c21 !important;
+				
+				
+				
+				}
+				

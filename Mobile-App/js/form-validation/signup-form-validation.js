@@ -24,11 +24,14 @@ $(document).ready(function(){
 			hideButtons(current);
 		})
 		
+		
+		// if form valid go to user infomation
+		
 		btnsubmit.click(function(){
 		
 			if($(".form").valid()){
 					
-					alert("Its up you now xu");
+					window.location.href = "user-information.html";
 					
 				}
 			
@@ -72,6 +75,11 @@ $(document).ready(function(){
 			errorPlacement: function(error, element) {
 				 error.appendTo($('#sign-up-error'));
 			}
+			
+			
+			
+			
+			
 	    });
 
 	});

@@ -15,6 +15,7 @@
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/mobile-script.js"></script>
+		<script src="js/follow-script.js"></script>
        <script id="panel-init">
 		
     
@@ -25,7 +26,6 @@
         
 	</head>
 	<body>
-	
 	
 	
 
@@ -43,49 +43,74 @@
 				
 				
 				<ul class="mylist-view1 follow-list" data-role="listview" data-inset="true" >
-					<li data-icon="false">
+					
+					
+					<li data-icon="false" >
 					
 					<div class="follow-list-content">
 					<a href="#">
+					
+					<div class="follow-img-holder">		
 						<img src="img/brahim.png">
-					<h2>Mariuz Pudzianovski </h2>
-					<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced the lawsuit between Costco Whole Sale Corporation</p></a>
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						<p>Computer Science</p>
+
+						<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced</p></a>
+					
+					</div>
+					
 					</div>
 				
 					
-					<div class="follow-list-btn">
-					<a class="lnr lnr-plus-circle" href="http://shreerangpatwardhan.blogspot.com/p/resume.html"><span>asdfasdfasdf</span></a>
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
+					</div>
+				
+					</li>
+					
+						<li data-icon="false" >
+					
+					<div class="follow-list-content">
+					<a href="#">
+					
+					<div class="follow-img-holder">		
+						<img src="img/brahim.png">
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						<p>Computer Science</p>
+
+						<p>by Margaret Grazzini. The article introduced</p></a>
+					
+					</div>
+					
+					</div>
+				
+					
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
 					</div>
 				
 					</li>
 					
 					
-					
-					<li data-icon="false"><a href="#">
-						<img src="img/brahim.png">
-					<div><h2>Warning </h2></div>
-					<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced the lawsuit between Costco Whole Sale Corporation</p></a>
-					</li>
-					<li data-icon="false"><a href="#">
-						<img src="img/brahim.png">
-					<div><h2>Brahim Senhaji </h2></div>
-					<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced the lawsuit between Costco Whole Sale Corporation</p></a>
-					</li>
 
 					
 					
 				</ul>
 				
-				
-				<ul data-role="listview" data-split-icon="star" data-split-theme="c">
-        <li><a href="http://shreerangpatwardhan.blogspot.com">Spatial Unlimited</a><a href="http://shreerangpatwardhan.blogspot.com/p/resume.html"></a></li>
-        <li><a href="http://shreerangpatwardhan.blogspot.in/p/code-samples.html">Google Maps API Examples</a> <a href="http://shreerangpatwardhan.blogspot.com/p/resume.html"></a></li>
-        <li><a href="http://shreerangpatwardhan.blogspot.in/p/jquery-mobile.html">Jquery Mobile Examples</a> <a href="http://shreerangpatwardhan.blogspot.com/p/resume.html"></a></li>
-    </ul>
-				
+	
 		</div><!--/demo-html -->
 		
-	
+		<button type="submit" class="main-btn">Done</button>
 		
 	</div>
 	

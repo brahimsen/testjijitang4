@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>JIJITANG</title>
+		
+		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
+		<link rel="stylesheet" href="mobile-style.css">
+		<link rel="stylesheet" href="mobile-fonts.css">
+        <link rel="stylesheet" href="collections-style.css">
+		<link rel="stylesheet" href="user-style.css">
+      
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/mobile-script.js"></script>
+		<script src="js/direction-script.js"></script>
+		<script src="js/text-length-script.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/form-validation/user-form-validation.js"></script>
+		
+		
+        <script id="panel-init">
+		
+		</script>
+		
+	
+        
+	</head>
+	<body>
+	
+	
+	
+		<div data-role="page" id="user-info">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Profile Information</h1>
+		
+		
+       
+    </div><!-- /header -->
+	
+	
+		<div data-demo-html="true" class="login-page">
+		
+		<form class="user-form" role="form">
+		
+		<div class="error-message-style" id="login-error-message"></div>
+		
+		
+		<ul class="wswdg"  data-role="listview" data-inset="true">
+					<li class="thirty-margin-top user-profile-widget" data-icon="false"><a href="#">
+						<span class="lnr lnr-picture user-photo-icon"></span>
+					
+					<div class="user-profile-widget-text">Add Profile Picture</div></a>
+					</li>
+				
+					
+		</ul>
+		
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain login-field-contain form-group ">
+				
+				<input  type="text" name="fullname" placeholder="Full Name" value="">
+			</div>
+		</div><!--/demo-html -->
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<textarea name="bio" id="shortbio" placeholder="Short Bio" value=""></textarea>
+				<p class="text-counter" id="bio-counter"><span>0</span>/100</p>
+			</div>
+		</div><!--/demo-html -->	
+		
+		
+		
+		<ul class="wswdg"  data-role="listview" data-inset="true">
+					<li class="thirty-margin-top" data-icon="false"><a data-transition="none" href="#user-institute">
+						
+					
+					Institute</a>
+					</li>
+				
+					
+		</ul>
+		
+		 
+		 
+		
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group form-select ui-nodisc-icon ui-alt-icon ">
+				 <select class="form-control " name="field" >
+				      	<option value="">Select</option>
+				      	<option value="in">Education</option>
+				      	<option value="au">Economics</option>
+				      	<option value="us">Computer Science</option>
+				      	<option value="ja">Biology</option>
+				      	<option value="sg">Chemistery</option>
+				      	<option value="my">Geography</option>
+				      </select>
+				
+			</div>
+		</div><!--/demo-html -->
+		
+		
+
+		
+			<ul class="wswdg"  data-role="listview" data-inset="true">
+					<li data-icon="false"><a data-transition="none"  href="#user-direction">
+						
+					
+					Direction</a>
+					</li>
+				
+					
+		</ul>
+		
+		
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<textarea name="experience" id="reserachexp" placeholder="Research Experience" value=""></textarea>
+				<p class="text-counter" id="exp-counter"><span>0</span>/1000</p>
+			</div>
+		</div><!--/demo-html -->
+		
+		
+		
+	
+		
+		
+		
+		<button type="submit" class="main-btn user-form-submit">Next</button>
+		
+		
+		
+
+		
+		</form>
+	
+
+
+	
+	
+	</div>
+	
+	</div>
+	
+	
+	<div data-role="page" id="user-institute">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Institute</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="user-information.html" data-transition="none"></a>
+    </div><!-- /header -->
+    
+   
+    	  <div role="main" >
+		
+			
+		
+			<form class="institute-form" role="form">
+			
+		
+            
+			<div data-demo-html="true" class="form-control thirty-margin-top">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<input  type="text" name="myinstitute" placeholder="institute" value="">
+			</div>
+		</div><!--/demo-html -->
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<input  type="text" name="department" placeholder="department" value="">
+			</div>
+		</div><!--/demo-html -->
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<input  type="text" name="role" placeholder="role" value="">
+			</div>
+		</div><!--/demo-html -->
+		
+	
+
+		</form>
+
+        </div>
+
+		
+	</div>
+	
+	
+	<div data-role="page" id="user-direction">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Direction</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="user-information.html" data-transition="none"></a>
+    </div><!-- /header -->
+    
+   
+    	   <div role="main">
+		
+				<div class='direction-tag-list thirty-margin-top'>
+					<form class='new'>
+					<input id='new' placeholder='Write a direction' type='text'>
+					<button class=' lnr lnr-plus-circle'></button>
+					</form>
+					<ul class='list'>
+    
+					</ul>
+				</div>
+		
+		
+
+        </div>
+		
+	
+
+		</form>
+
+        </div>
+
+		
+	</div>
+
+	</body>
+	
+</html>
