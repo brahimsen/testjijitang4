@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>JIJITANG</title>
+		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
+        <link rel="stylesheet" href="mobile-style.css">
+        <link rel="stylesheet" href="collections-style.css">
+		<link rel="stylesheet" href="mobile-fonts.css">
+
+      
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/mobile-script.js"></script>
+		<script src="js/follow-script.js"></script>
+		
+		
+        
+	</head>
+	<body>
+	
+
+	<div data-role="page" id="profile-home">
+	
+	<div class="profile-page-top"  style="background: url(img/myback.jpg)  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+  
+			
+	
+			<div class="profile-page-top-layer">
+			
+			<a class="profile-return-link icon15-arrow-left" href="#" data-rel="back" data-ajax="false" data-transition="none"></a>
+			
+			</div>
+	
+			<div class="profile-page-inner">
+			
+				
+			
+				<img src="img/brahim.png" />
+				<p class="profile-page-name">Brahim Senhaji</p>
+				<p class="profile-page-bio">Graduated from al akhwayan university with bachelor of science in computer science, of busines administration</p>
+				<div class=" profile-top-follow-grid" data-demo-html="true">
+				<div class="ui-grid-a">
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#profile-followers" data-transition="none">102 Followers</a></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#profile-follows" data-transition="none">65 Follow</a></div></div>
+					
+					
+				</div><!-- /grid-b -->
+			</div><!--/demo-html -->
+			
+			</div>
+	
+	
+	</div>
+
+		
+    
+    <div data-demo-html="true">
+		
+		
+		
+		<ul data-role="listview" class="mywidgets">
+		
+					
+					<li class="edit-profile-small-wdiget thirty-margin-top " data-icon="false"><a data-transition="none" href="#edit-profile-name" >
+					
+					<p class="mywidget-label">Research Field</p>
+					
+					<p class="profile-info-content">Computer Science</p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#edit-profile-name" >
+					
+					<p class="mywidget-label">Research Institute</p>
+					
+					<p class="profile-info-content">Head Researcher, Schoold of Science and Engineering, Al Akhawayn University,</p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#edit-profile-name" >
+					
+					<p class="mywidget-label">Research Direction</p>
+					
+					<p class="profile-info-content"><span class="direction-span">JQUERY</span><span class="direction-span">Front End development</span><span class="direction-span">HTML5</span><span class="direction-span">CSS3</span></p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget thirty-margin-top " data-icon="false"><a data-transition="none" href="#edit-profile-name" >
+					
+					<p class="mywidget-label">Research Experience</p>
+					
+					<p class="profile-info-content">lot of text</p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget thirty-margin-top " data-icon="false"><a data-transition="none" href="#edit-profile-name" >
+					
+					<p class="mywidget-label">Publication</p>
+					
+					<p class="profile-publications-content">To Apply or Not to Apply: A Survey Analysis of Grant Writing Costs and Benefits</p>
+					<p class="profile-publications-content">To Apply or Not to Apply: A Survey Analysis of Grant Writing Costs and Benefits</p>
+					<p class="profile-publications-content">To Apply or Not to Apply: A Survey Analysis of Grant Writing Costs and Benefits</p>
+					<p class="profile-publications-content">To Apply or Not to Apply: A Survey Analysis of Grant Writing Costs and Benefits</p>
+					<p class="profile-publications-content">To Apply or Not to Apply: A Survey Analysis of Grant Writing Costs and Benefits</p>
+					
+					
+					</a></li>
+					
+					
+		</ul>
+		
+		<div class=" profile-footer thirty-margin-top " data-demo-html="true">
+				<div class="ui-grid-a">
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><a class="profilefollow"  >Follow</a></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="chat.html" rel="external" data-transition="none" >Chat</a></div></div>
+					
+					
+				</div><!-- /grid-b -->
+			</div><!--/demo-html -->
+		
+		
+		
+		
+	</div><!--/demo-html -->
+	
+	
+    	
+    
+
+		
+	</div>
+	
+	<div data-role="page" id="profile-followers">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Followers</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" data-rel="back" data-transition="none"></a>
+		
+       
+    </div><!-- /header -->
+    
+		<div data-demo-html="true">
+				
+				
+				<ul class="mylist-view1 follow-list" data-role="listview" data-inset="true" >
+					
+					
+					<li data-icon="false" >
+					
+					<div class="follow-list-content">
+					<a href="profile.html" rel="external" data-transition="none">
+					
+					<div class="follow-img-holder">		
+						<img src="img/brahim.png">
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						<p>Computer Science</p>
+
+						<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced</p></a>
+					
+					</div>
+					
+					</div>
+				
+					
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
+					</div>
+				
+					</li>
+					
+						<li data-icon="false" >
+					
+					<div class="follow-list-content">
+					<a href="profile.html" rel="external" data-transition="none">
+					
+					<div class="follow-img-holder">		
+						<img src="img/brahim.png">
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						<p>Computer Science</p>
+
+						<p>by Margaret Grazzini. The article introduced</p></a>
+					
+					</div>
+					
+					</div>
+				
+					
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
+					</div>
+				
+					</li>
+					
+					
+
+					
+					
+				</ul>
+				
+	
+		</div><!--/demo-html -->
+	
+	</div>
+	
+	<div data-role="page" id="profile-follows">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Follows</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" data-rel="back" data-transition="none"></a>
+		
+       
+    </div><!-- /header -->
+    
+		<div data-demo-html="true">
+				
+				
+				<ul class="mylist-view1 follow-list" data-role="listview" data-inset="true" >
+					
+					
+					<li data-icon="false" >
+					
+					<div class="follow-list-content">
+					<a href="profile.html" rel="external" data-transition="none">
+					
+					<div class="follow-img-holder">		
+						<img src="img/brahim.png">
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						<p>Computer Science</p>
+
+						<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced</p></a>
+					
+					</div>
+					
+					</div>
+				
+					
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
+					</div>
+				
+					</li>
+					
+						<li data-icon="false" >
+					
+					<div class="follow-list-content">
+					<a href="profile.html" rel="external" data-transition="none">
+					
+					<div class="follow-img-holder">		
+						<img src="img/brahim.png">
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						<p>Computer Science</p>
+
+						<p>by Margaret Grazzini. The article introduced</p></a>
+					
+					</div>
+					
+					</div>
+				
+					
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
+					</div>
+				
+					</li>
+					
+					
+
+					
+					
+				</ul>
+				
+	
+		</div><!--/demo-html -->
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+        
+	</body>
+</html>

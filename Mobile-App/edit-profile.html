@@ -7,7 +7,9 @@
 		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
         <link rel="stylesheet" href="mobile-style.css">
         <link rel="stylesheet" href="collections-style.css">
-		<link rel="stylesheet" href="css/editable-listview.css">
+		<link rel="stylesheet" href="mobile-fonts.css">
+        <link rel="stylesheet" href="collections-style.css">
+		<link rel="stylesheet" href="user-style.css">
 
       
 
@@ -16,7 +18,12 @@
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/mobile-script.js"></script>
-		<script src="js/editable-listview.js"></script>
+		
+		<script src="js/direction-script.js"></script>
+		<script src="js/text-length-script.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/form-validation/user-form-validation.js"></script>
+		<script src="js/edit-profile-script.js"></script>
 		
 		
         
@@ -25,127 +32,278 @@
 	
 
 	<div data-role="page" id="Edit-profile-home">
-
+		
 		<div class="collection-header" data-role="header" data-position="fixed">
         <h1>Edit Profile</h1>
+		<a  class="header-right-link header-return-link icon15-arrow-left" href="home.html#home-me" data-ajax="false" data-transition="none"></a>
        
     </div><!-- /header -->
     
-    <div data-demo-html="true">
+     <div data-demo-html="true">
 		
 		
 		
 		<ul data-role="listview" class="mywidgets">
 		
-					<li class="edit-profile-image-wdiget" data-icon="false"><a><img src="../img/brahim.png" />Edit Picture</a></li>
-					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#edit-profile-name" >Name<span>Brahim Senhaji</span></a></li>
-					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Short Bio
+		
+				<li class="edit-profile-small-wdiget thirty-margin-top profile-image-edit " data-icon="false"><a >
 					
-						<p>Computer science graduate with more than 3 years working experience as full-stack and front end web developer. Extensive knowledge with front end tools including jquery, angular, ember, node, html5/CSS3 </p>
+					
+					<img src="img/brahim.png" />
+					
+					<p class="profile-info-content" style="padding-top: 10px">Edit Profile</p>
+					
+					
+				</a></li>
+		
+					
+					<li class="edit-profile-small-wdiget  " data-icon="false"><a data-transition="none" href="#user-fullname" >
+					
+					
+					
+					<p id="username-content" class="profile-info-content">Brahim Senhaji</p>
+					
 					
 					</a></li>
+					
+					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#user-bio-page" >
+					
+					
+					
+					<p id="bio-content" class="profile-info-content">Graduated from al akhwayan university with bachelor of science in computer science, of busines administration</p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget thirty-margin-top" data-icon="false"><a data-transition="none" href="#user-institute" >
+					
+					
+					
+					<p class="profile-info-content">
+					
+						<span class="institute-span" id="role-content">Head Researcher </span> at 
+						<span class="institute-span" id="dept-content">Schoold of Science and Engineering</span>, 
+						<span class="institute-span" id="institute-content">Al Akhawayn University</span>,</p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#user-field" >
+					
+					
+					
+					<p id="field-content" class="profile-info-content">Economics</p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#user-direction" >
+					
+					
+					
+					<p class="profile-info-content"><span class="direction-span">JQUERY</span><span class="direction-span" >Front End development</span><span class="direction-span" >HTML5</span><span class="direction-span" >CSS3</span></p>
+					
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#user-experience" >
+					
+					
+					
+					<p id="experience-content" class="profile-info-content">Graduated from al akhwayan university with bachelor of science in computer science, of busines administration Graduated from al akhwayan university with bachelor of science in computer science, of busines administration Graduated from al akhwayan university with bachelor of science in computer science, of busines administration </p>
+					
+					
+					</a></li>
+					
+				
+					
 					
 		</ul>
 		
-		<ul data-role="listview" class="mywidgets">
-					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Research Institute
-
-					
-						<p>Al Akhawayn University </p>
-					
-					</a></li>
-					
-					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Research Field
-
-					
-						<p>Client side scripting languages </p>
-					
-					</a></li>
-					
-					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#edit-research-direction">Research Direction
-
-					
-						<p><span>Ajax</span><span>Jquery</span><span>Ember</span><span>Node</span><span>HTML5</span><span>CSS3</span></p>
-					
-					</a></li>
-					
-					<li class="edit-profile-big-wdiget" data-icon="false"><a href="#">Short Bio
-					
-						<p>Computer science graduate with more than 3 years working experience as full-stack and front end web developer. Extensive knowledge with front end tools including jquery, angular, ember, node, html5/CSS3 </p>
-					
-					</a></li>
-					
-		</ul>
+		
+		
 		
 		
 	</div><!--/demo-html -->
 	
 	
-    	
-    
-
-		
+	
 	</div>
 	
-	
-	<div data-role="page" id="edit-profile-name">
+	<div data-role="page" id="user-fullname">
 
 		<div class="collection-header" data-role="header" data-position="fixed">
-        <h1>Edit Name</h1>
-		<a class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
-		<a class="header-left-link" href="#add-form">Submit</a>
-       
-    </div><!-- /header -->
+        <h1>Full Name</h1>
+		<a id="profile-name-quit" class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
+		</div><!-- /header -->
     
-		<div data-demo-html="true">
 		
-			<input class="edit-profile-input" type="text" name="text-basic" id="text-basic" placeholder="Full Name">
+   
+    	   <div role="main">
+		
+			<div class="ui-field-contain my-field-contain login-field-contain form-group ">
 				
-				
-		</div><!--/demo-html -->
+				<input id="fullenametext"  type="text" name="fullname" placeholder="Full Name" value="Brahim Senhaji">
+			</div>
+		
+		
+
+        </div>
 	
-	</div>
+        </div>
 	
-	<div data-role="page" id="edit-bio">
+	
+	<div data-role="page" id="user-institute">
 
 		<div class="collection-header" data-role="header" data-position="fixed">
-        <h1>Edit Research Field</h1>
-		<a class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
-		<a class="header-left-link" href="#add-form">Submit</a>
-       
+        <h1>Institute</h1>
+		<a id="profile-institute-quit" class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
     </div><!-- /header -->
     
-		<div data-demo-html="true">
+   
+    	  <div role="main" >
 		
-			<textarea class="edit-profile-input" type="text" name="text-basic" id="text-basic" placeholder="Full Name"></textarea>
+			
+		
+			<form class="institute-form" role="form">
+			
+		
+            
+			<div data-demo-html="true" class="form-control thirty-margin-top">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
 				
-				
+				<input id="myinstitute"  type="text" name="myinstitute" placeholder="institute" value="Al Akhawayn University">
+			</div>
 		</div><!--/demo-html -->
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<input id="department"  type="text" name="department" placeholder="department" value="School od science and engineering">
+			</div>
+		</div><!--/demo-html -->
+		
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<input id="role"  type="text" name="role" placeholder="role" value="Head Researcher">
+			</div>
+		</div><!--/demo-html -->
+		
 	
+
+		</form>
+
+        </div>
+
+		
 	</div>
 	
-	<div data-role="page" id="edit-research-direction">
+	
+	<div data-role="page" id="user-direction">
 
 		<div class="collection-header" data-role="header" data-position="fixed">
-        <h1>Edit Research Direction</h1>
+        <h1>Direction</h1>
 		<a class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
-		<a class="header-left-link" href="#add-form">Submit</a>
-       
-    </div><!-- /header -->
+		</div><!-- /header -->
     
-		<div data-demo-html="true">
+   
+    	   <div role="main">
 		
-			<ul data-role="listview" data-editable="true">
-  <li>Itme 1</li>
-  <li>Itme 2</li>
-  <li>Itme 3</li>
-  <li>Itme n</li>
-</ul>
-				
-				
-		</div><!--/demo-html -->
+				<div class='direction-tag-list thirty-margin-top'>
+					<form class='new'>
+					<input id='new' placeholder='Write a direction' type='text'>
+					<button class=' lnr lnr-plus-circle'></button>
+					</form>
+					<ul class='list'>
+					
+					<li class="item"><input type="text" value="Jquery"><ol><li class="check lnr lnr-pencil"></li><li class="delete lnr lnr-cross"></li></ol></li>
+					<li class="item"><input type="text" value="Front end Development"><ol><li class="check lnr lnr-pencil"></li><li class="delete lnr lnr-cross"></li></ol></li>
+					<li class="item"><input type="text" value="HTML5"><ol><li class="check lnr lnr-pencil"></li><li class="delete lnr lnr-cross"></li></ol></li>
+					<li class="item"><input type="text" value="CSS3"><ol><li class="check lnr lnr-pencil"></li><li class="delete lnr lnr-cross"></li></ol></li>
+    
+					</ul>
+				</div>
+		
+		
+
+        </div>
 	
-	</div>
+        </div>
+		
+		<div data-role="page" id="user-bio-page">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Short Bio</h1>
+		<a id="profile-bio-quit" class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
+		</div><!-- /header -->
+    
+   
+    	   <div role="main">
+		
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<textarea name="bio" id="shortbio" placeholder="Short Bio" value="">Graduated from al akhwayan university with bachelor of science in computer science, of busines administration</textarea>
+				<p class="text-counter" id="bio-counter"><span>0</span>/100</p>
+			</div>
+		
+		
+
+        </div>
+	
+        </div>
+		
+		
+		<div data-role="page" id="user-experience">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Experience</h1>
+		<a id="profile-experience-quit" class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
+		</div><!-- /header -->
+    
+   
+    	   <div role="main">
+		
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<textarea  name="experience" id="reserachexp" placeholder="Research Experience" value="">Graduated from al akhwayan university with bachelor of science in computer science, of busines administration Graduated from al akhwayan university with bachelor of science in computer science, of busines administration Graduated from al akhwayan university with bachelor of science in computer science, of busines administration </textarea>
+				<p class="text-counter" id="exp-counter"><span>0</span>/1000</p>
+			</div>
+		
+		
+
+        </div>
+	
+        </div>
+		
+		<div data-role="page" id="user-field">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Field</h1>
+		<a id="profile-field-quit" class="header-right-link header-return-link icon15-arrow-left" href="#Edit-profile-home" data-transition="none"></a>
+		</div><!-- /header -->
+    
+   
+    	<div data-demo-html="true">
+                <fieldset data-role="controlgroup" class="filed-radio-list">
+                   
+                        <input type="radio" name="field-choice" id="radio-choice-1" value="Economics">
+                        <label for="radio-choice-1">Economics</label>
+
+                        <input type="radio" name="field-choice" id="radio-choice-2" value="Computer Science">
+                        <label for="radio-choice-2">Computer Science</label>
+
+                        <input type="radio" name="field-choice" id="radio-choice-3" value="Agriculture">
+                        <label for="radio-choice-3">Agriculture</label>
+
+                        <input type="radio" name="field-choice" id="radio-choice-4" value="History">
+                        <label for="radio-choice-4">History</label>
+                </fieldset>
+        </div><!-- /demo-html -->
+	
+        </div>
+
+		
 	
         
 	</body>

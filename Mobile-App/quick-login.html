@@ -16,11 +16,12 @@
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/mobile-script.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/form-validation/login-form-validation.js"></script>
+		<script src="js/form-validation/quick-login-form-validation.js"></script>
 		
         <script id="panel-init">
 		
 		</script>
+	
         
         
 	</head>
@@ -31,9 +32,9 @@
 		<div data-role="page" id="Login">
 
 		<div class="collection-header" data-role="header" data-position="fixed">
-        <h1>Login</h1>
-		<a class="header-right-link header-return-link lnr lnr-cross" href="welcome-page.html" rel="external" data-transition="none"></a>
-		<a class="header-left-link forgot-pass-link" href="password.html" rel="external" data-transition="none">Forgot<br> Password</a>
+        <h1>Quick Login</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="login.html" rel="external"  data-transition="none"></a>
+		
 		
        
     </div><!-- /header -->
@@ -49,15 +50,16 @@
 		
 		
 		<div data-demo-html="true">
-			<div class="ui-field-contain my-field-contain login-field-contain form-group top-border">
-				<label for="textinput-fc"><span class="lnr lnr-user"></span></label>
-				<input class="form-control" type="text" name="username" placeholder="Username" value="">
+			<div class="ui-field-contain my-field-contain login-field-contain form-group top-border quick-login-top-field">
+				<label for="textinput-fc"><span class="lnr lnr-smartphone"></span></label>
+				<input class="form-control" type="tel" name="phonenumber" placeholder="Phone Number" value="">
+				<a class="send-code-btn main-btn">Send Code</a>
 			</div>
 		</div><!--/demo-html -->
 		<div data-demo-html="true">
 			<div class="ui-field-contain my-field-contain my-field-contain-last login-field-contain form-group bottom-border">
-				<label for="textinput-fc"><span class="lnr lnr-lock"></span></label>
-				<input class="form-control" type="password" name="userpassword" placeholder="Password" value="">
+				<label for="textinput-fc"><span class="lnr lnr-spell-check"></span></label>
+				<input class="form-control" type="text" name="verification" placeholder="verification Code" value="">
 			</div>
 		</div><!--/demo-html -->
 		
@@ -70,12 +72,7 @@
 		<button type="submit" id="mybtn"  class="main-btn login-submit">Login</button>
 		
 			</div>
-		<div class="transparent-two-grid" data-demo-html="true">
-				<div class="ui-grid-a">
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><a class="left-text-align" href="signup.html" rel="external">Sign Up</a></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="quick-login.html" rel="external" class="right-text-align">Quick Login</a></div></div>
-				</div><!-- /grid-b -->
-			</div><!--/demo-html -->
+		
 
 		
 		</form>

@@ -23,8 +23,8 @@ $(document).ready(function(){
 	
 $(".login-form").validate(
 {rules:
-{username:"required",
-userpassword:"required",
+{phonenumber:"required",
+verification:"required",
 
 },
 
@@ -34,7 +34,7 @@ userpassword:"required",
             var errors = validator.numberOfInvalids();
 
             if (errors) {
-                $("#login-error-message").show().text("Please Enter Both Username and Password");
+                $("#login-error-message").show().text("Please Enter both Phone number and verification Code");
             } else {
                 $("#login-error-message").hide();
             }

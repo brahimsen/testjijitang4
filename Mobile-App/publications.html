@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>JIJITANG</title>
+		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
+        <link rel="stylesheet" href="mobile-style.css">
+        <link rel="stylesheet" href="collections-style.css">
+		<link rel="stylesheet" href="css/editable-listview.css">
+
+      
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/mobile-script.js"></script>
+		<script src="js/editable-listview.js"></script>
+		
+		<script>
+		
+		$('#add-publication').live('click', function(e){
+    
+				$('.my-publication-holder').append('<div class="ui-field-contain my-field-contain"><textarea class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"  placeholder="Publication" value=""></textarea></div>');
+
+	});
+		
+		
+		</script>
+        
+	</head>
+	<body>
+	
+
+	<div data-role="page" id="account-home">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Publications</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="home.html#home-me" data-ajax="false" data-transition="none"></a>
+       
+    </div><!-- /header -->
+    
+    <div data-demo-html="true" class="my-publication-holder">
+		
+		
+		
+		<div class="ui-field-contain my-field-contain   ">
+				
+				<textarea placeholder="Publication"  value="">Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking. </textarea>
+				
+		</div>
+		
+		<div class="ui-field-contain my-field-contain  ">
+				
+				<textarea placeholder="Publication"  value="">Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking. </textarea>
+				
+			</div>
+			
+			<div class="ui-field-contain my-field-contain   ">
+				
+				<textarea  placeholder="Publication" value="">Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking. </textarea>
+				
+			</div>
+		
+		
+		
+		
+		
+		
+		
+	</div><!--/demo-html -->
+	
+	
+    	<button id="add-publication" class="main-btn">ADD PUBLICATION</button>
+    
+
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+        
+	</body>
+</html>
