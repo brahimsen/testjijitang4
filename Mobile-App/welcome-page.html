@@ -6,7 +6,9 @@
 		<title>JIJITANG</title>
 		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
         <link rel="stylesheet" href="mobile-style.css">
+		<link rel="stylesheet" href="mobile-fonts.css">
         <link rel="stylesheet" href="collections-style.css">
+		<link rel="stylesheet" href="css/main.css">
       
 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
@@ -15,6 +17,7 @@
         
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/mobile-script.js"></script>
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         
         
@@ -23,6 +26,19 @@
 		
 		
 		<div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="Panel fixed positioning">
+		
+	<div id="loader-wrapper">
+				
+						<div class="loader-holder">
+						<div class="icon-load-holder"><img src="img/icon.png" /></div>
+						<div id="loader"></div>
+						
+						</div>
+
+						<div class="loader-section section-left"></div>
+						<div class="loader-section section-right"></div>
+
+				</div> 
 
     
 				<div class="home-page-top">
@@ -30,17 +46,17 @@
 					<div class="home-header">
 					
 					
-					<a class="transparent-button white-button small-button">Sign up</a>
-					<a class="transparent-button green-button small-button">Log in</a>
+					<a class="transparent-button white-button small-button" href="signup.html" rel="external" >Sign up</a>
+					<a class="transparent-button green-button small-button" href="login.html" rel="external">Log in</a>
 					
 					
 					</div>
 					
 					<div class="home-content">
 					
-						<h3>Home for Everyone's Research </h3>
+						<h3>欢迎来到唧唧堂研究人社区</h3>
 					
-						<a class="transparent-button white-button large-button block-display">START EXPLORING</a>
+						<a href="login.html" rel="external" class="transparent-button white-button large-button block-display">START EXPLORING</a>
 					
 					</div>
 				
@@ -51,18 +67,73 @@
 				
 					<div class="block-header">
 					
-						<p>Recommend Researchers</p>
-						<a>All</a>
+						<p class="block-header-text">Recommended Researchers<br> <a class="my-bullets"><span></span><span></span><span></span></a></p>
+						<a class="block-header-right-btn" rel="external" href="recommended-researchers.html"><span class="icon2-plus plus-span"></span><span class="more-span">More</span></a>
 					
 					</div>
 					
 					<div class="home-recommended-researchers">
 					
-						<div class="home-recommended-single">
+						<div class="home-recommended-single" style="background: url(img/profile1.jpg) center; background-size: cover">
 							<a href="#">
 							
-								<img src="../img/brahim.png"/>
-								<div class="home-recommended-researchers-bottom">Brahim Senhaji</div>
+								
+								<div class="home-recommended-researchers-bottom">
+								
+								<span class="rc-name">Albert Einstein</span>
+								<span class="rc-field">Quantum Physiscs</span>
+								<span class="my-tiny-bullets"><span></span><span></span><span></span></span>
+								
+								
+								</div>
+							</a>
+							
+						</div>
+						
+						<div class="home-recommended-single" style="background: url(img/profile4.jpg) center; background-size: cover">
+							<a href="#">
+							
+								
+								<div class="home-recommended-researchers-bottom">
+								
+								<span class="rc-name">Alan Turin</span>
+								<span class="rc-field">Computer Science</span>
+								<span class="my-tiny-bullets"><span></span><span></span><span></span></span>
+								
+								
+								</div>
+							</a>
+							
+						</div>
+						
+						<div class="home-recommended-single" style="background: url(img/profile3.jpg) center; background-size: cover">
+							<a href="#">
+							
+								
+								<div class="home-recommended-researchers-bottom">
+								
+								<span class="rc-name">Isaac Newton</span>
+								<span class="rc-field">Physics</span>
+								<span class="my-tiny-bullets"><span></span><span></span><span></span></span>
+								
+								
+								</div>
+							</a>
+							
+						</div>
+						
+						<div class="home-recommended-single" style="background: url(img/profile2.jpg) center; background-size: cover">
+							<a href="#">
+							
+								
+								<div class="home-recommended-researchers-bottom">
+								
+								<span class="rc-name">Dennis Ritchie</span>
+								<span class="rc-field">Computer Science</span>
+								<span class="my-tiny-bullets"><span></span><span></span><span></span></span>
+								
+								
+								</div>
 							</a>
 							
 						</div>
@@ -88,6 +159,8 @@
 
         
 	</body>
+	
+	<script src="js/main.js"></script>
 	
 
 </html>
