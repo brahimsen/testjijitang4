@@ -7,6 +7,9 @@
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/projects.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/article-grids.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
 
 <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -14,7 +17,7 @@
 <script src="js/Jquery-11.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-popover.js"></script>
 <script src="js/bootstrap-tooltip.js"></script>
@@ -24,7 +27,12 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/headerscript.js"></script>
+<script src="js/articles-graph-script.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/projects-script.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/profiles-script.js"></script>
+<script src="../js/myEntries.js"></script>  
 
 <style>
 
@@ -33,9 +41,10 @@
 }
 #sticky.sticka {
     position: fixed;
-    top: 50;
+    top: 67;
 	width: 100% !important;
     z-index: 10000;
+	margin-left: -2%;
     
 }
 
@@ -44,7 +53,30 @@
   
     opacity: 0;
 }
+
+.square-grids {
+
+	margin-top: 50px;
+	width: 100% !important;
+	padding-left: 0% !important;
+	background: #fff !important;
+
+}
+
+.project-square-grid-item {
+
+	border: 5px solid #fff;
+
+}
+
+#article-columns {
+
+	background: #ecead4 !important;
+
+}
+
 </style>
+
 
 <script>
 
@@ -74,13 +106,7 @@ $('.index-slide-holder').hide().fadeIn(2500);
 
 });
 
-$(window).scroll(function(e) {
-    var sw = $('.index-top-page-header'),
-       
-        diff = 300 - window.pageYOffset;
-            
-    sw.css('background-color', diff < 100 ? 'black' : '');
-});
+
 
 $(window).on("load",function() {
     function fade() {
@@ -138,9 +164,9 @@ $(window).on("load",function() {
                 
                  <div class="index-slide-holder"> 
                     
-                    	<h2>Home for Everyone's Research Writing Pieces</h2>
-                        <p>Get your Written Pieces Shared and Reviewed, Discover Newly Published Articles, Keep Learning and be Inspired !</p>
-                        <a class="brown-btn main-index-brown">GET STARTED</a>
+                    	<h2>MANAGE YOUR RESEARCH <br>PROJECTS AND ARTICLES</h2>
+                        
+                        <a class="new-big-button new-white-btn">START EXPLORING</a>
                     
                      </div>
             
@@ -153,13 +179,16 @@ $(window).on("load",function() {
         <div class="index-home-container">
         
         	<div class="index-thumb-holder">
+			
+		
             
-            		<div><span class="icon3-file"></span></div>
+            		
                     <div>
                     	
-                        <p>Write and Share</p>
-                        <p>Write your notes, papers, articles with jijitang collobeorative online editor.</p>
-                        <a class="brown-btn brown-padding">Start Writing</a>
+                        <p class="index-home-thumb-title">GET THE APP !</p>
+                        <p class="index-home-thumb-text">Write your notes, papers, articles with jijitang collobeorative online editor. Write your notes, papers, articles with jijitang collobeorative online editor </p>
+                        <a class="app-img"><img src="img/googleplay.png"></a>
+						<a class="app-img"><img src="img/appstore.png"></a>
                         
                     
                     
@@ -170,12 +199,12 @@ $(window).on("load",function() {
             </div>
             <div class="index-thumb-holder ">
             
-            		<div class="ten-p-left-margin"><span class="icon-uniE601"></span></div>
+            		
                     <div>
                     	
-                        <p>Read and Review</p>
-                        <p>Find newly published and popular reasearch articles and and stay updated on Jijitang.</p>
-                        <a class="brown-btn brown-padding">Start Research</a>
+                        <p class="index-home-thumb-title">FOLLOW US ON WECHAT</p>
+                        
+                        <a class="app-img" ><img style="width: 96px" src="img/wechatlogo.png"></a>
                         
                     
                     
@@ -190,16 +219,531 @@ $(window).on("load",function() {
         
         </div>
         <div id="arrow-target" ></div>
+		
+				 <div class="index-collections-holder-header  ">
         
-        <div class="index-collections-holder-header ">
+		
+		
+        	<p class="instead-of-h1">RESEARCHERS</p>
+			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+            <p class="instead-of-p">A Community for people who are passionate for researching, analysing and writing 
+			</p>
+			
+			<div class="home-more-btn-holder"><a class="new-big-button new-black-btn">SEE ALL</a></div>
+			
+			
+			</div>
+		
+		 <div class="index-collections-holder-header  ">
         
-        	<p class="instead-of-h1">A Community For Researchers</p>
-            <p class="instead-of-p">Growing with academic and industrial reasearchers and consultants from all over the world. Share, Create, Write and make a difference.</p>
+		
+		
+        	<p class="instead-of-h1">PROJECTS</p>
+			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+            <p class="instead-of-p">A Place for your projects to be seen and commented by other researchers</p>
         
+				<div class="square-grids">
+	
+	
+ 
+<div class="project-square-grid-item" style=" background:url(img/promotion-back.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
+	
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content" >
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+
+
+
+</div> 
+
+
+<div class="project-square-grid-item" style=" background:url(img/index-back2.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
+	
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content" >
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+				
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+
+
+
+</div> 
+
+<div class="project-square-grid-item" style=" background:url(img/myimage.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
+	
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content">
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+					
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+				
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+
+
+
+</div> 
+
+<div class="project-square-grid-item"  style=" background:url(img/profile1.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
+	
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content"">
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+</div>
+
+<div class="project-square-grid-item" style=" background:url(img/profile2.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
+	
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content" >
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+
+
+
+</div> 
+
+
+<div class="project-square-grid-item" style=" background:url(img/profile3.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
+	
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content" >
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+
+
+
+</div> 
+
+
+</div> 
+
         
         </div>
         
-         <div id="sticky-anchor"></div>
+        <div class="index-collections-holder-header  no-bottom-border ">
+        
+        	<p class="instead-of-h1">ARTICLES</p>
+			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+            <p class="instead-of-p" style="margin-bottom: 50px">Read, write, and share articles that matter to you.</p>
+        
+		
+		<div id="sticky-anchor"></div>
          <div class="new-index-nav-holder" id="sticky">
          
          
@@ -228,551 +772,962 @@ $(window).on("load",function() {
 
   <!-- Tab panes -->
   <div class="tab-content index-tab-contents">
-  
-  <div role="tabpanel" class="tab-pane" id="dropdown1" aria-labelledby="dropdown1-tab">
-        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-      </div>
-   
-   <div role="tabpanel" class="tab-pane" id="dropdown2" aria-labelledby="dropdown2-tab">
-        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
-      </div>
+
   
     <div role="tabpanel" class="tab-pane active" id="home">
     
-    	<div class="collections-dashbord-holder index-collections-dashbord-holder ">
-        	
-            <div>
-            
-            <div class="collection-item segmentListItem hideme " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
+    	<div class="square-grids" id="article-columns">
+	
+
+ 
+<div class="square-grid-item" >
+
+	<div class="article-graph-background" style="background: url(img/index-back2.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p>that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">12:34 P.M</span>
+		
+		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                   
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                   
+                                </span>
+		</span>
+		
+		
+		</p>
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+		
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
                             
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
                                 	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-                
-                    <div>
-            
-            <div class="collection-item segmentListItem hideme  " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
+                                 </button>
                                 
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-            
-                <div>
-            
-            <div class="collection-item segmentListItem hideme  " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-            
-                <div>
-            
-            <div class="collection-item segmentListItem hideme  " draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-            
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-            
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-            
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		    <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-                <div>
-            
-            <div class="collection-item segmentListItem hideme" draggable="true"  data-duration="3">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right" data-toggle="tooltip" data-original-title=" This is private">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right"  data-toggle="tooltip" data-original-title=" Follow Collection">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right"  data-toggle="tooltip" data-original-title=" Edit Collection">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Notes . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-                </div>
-    		
-    		
-                
-         	</div>
-        
-        
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
                 
                 
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
+                   
+                   
                 
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+
+
+<div class="square-grid-item" >
+
+	<div class="article-graph-background" style="background: url(img/myback.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p> that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+		<p class="article-grid-meta"><a><img src="img/profile1.jpg"  /></a> <a>Albert Einstein</a><span class="article-time-span">12:34 P.M</span>
+		
+		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                   
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                   
+                                </span>
+		</span>
+		
+		
+		</p>
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+		
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
+                                
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+
+<div class="square-grid-item" >
+
+	<div class="article-graph-background" style="background: url(img/promotion-back.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p>that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+		<p class="article-grid-meta"><a><img src="img/profile2.jpg"  /></a> <a>Dennis Ritchie</a><span class="article-time-span">12:34 P.M</span>
+		
+		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                   
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                   
+                                </span>
+		</span>
+		
+		
+		</p>
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+		
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
+                                
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+<div class="square-grid-item" >
+
+	<div class="article-graph-background" style="background: url(img/index-back2.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p>that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">12:34 P.M</span>
+		
+		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                   
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                   
+                                </span>
+		</span>
+		
+		
+		</p>
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+		
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
+                                
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+<div class="square-grid-item" >
+
+	<div class="article-graph-background" style="background: url(img/index-back2.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p>that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">12:34 P.M</span>
+		
+		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                   
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                   
+                                </span>
+		</span>
+		
+		
+		</p>
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe and what is the biggest one?</a></p>
+		
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
+                                
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+<div class="square-grid-item" >
+
+	<div class="article-graph-background" style="background: url(img/index-back2.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p>that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">12:34 P.M</span>
+		
+		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
+                            	<span class="read-later-empty">
+                                	<span class="icon-uniE600"></span>
+                                   
+                                </span>
+                                <span class="read-later-full">
+                                	<span class="icon-uniE616"></span>
+                                   
+                                </span>
+		</span>
+		
+		
+		</p>
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+		
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
+                                
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+
+  
+   	</div>	
     
     
     
@@ -783,88 +1738,26 @@ $(window).on("load",function() {
     
     
     
-    <div class="tab-panel-index-footer" >
-    
-    	<div> <span class="tab-panel-brown-btn"> <a> Sign Up Now </a> </span></div>
-        <div> <span class="tab-panel-gray-btn"> <a> Learn More </a> </span></div>
-    
-    
-    </div>
+  
     
     
   </div>
    
-        
-    <div class="new-index-footer">
-    
-    
-    		<div>
-            
-            	<div><h3>JIJITANG</h3></div>
-                <div>
-                	<h4> About </h4>
-                    <p> Jijitang is home for everyone's writing peieces. we provide tools and services to help you get better experience on research, reading writing, and sharing. </p>
-                    <a class="active">English</a><a>Chinese</a>
-                
-                </div>
-            
-            </div>
-            
-            
-            <div>
-            
-            		<div>
-                    	
-                        <h4>Jijitang</h4>
-                        <p><a>About</a></p>
-                        <p><a>Help</a></p>
-                        <p><a>Feedback</a></p>
-                        <p><a>Blogs</a></p>
-                        <p><a>Jobs</a></p>
-                    
-                    
-                    </div>
-                    
-                    <div>
-                    
-                    	<h4>Apps</h4>
-                        <p><a>JijiNote</a></p>
-                    	
-                    
-                    </div>
-                    
-                    <div>
-                    
-                    	  <h4>Social</h4>
-                        <p><a>Facebook</a></p>
-                        <p><a>Twitter</a></p>
-                        <p><a>Wechat</a></p>
-                        <p><a>Sina Weibo</a></p>
-                        <p><a>Douban</a></p>
-                    
-                    </div>
-                    <div class="hidden-tablet hidden-phone">
-                    
-                    		<h4>Join</h4>
-                            <a class="brown-btn footer-join-btn">GET STARTED</a>
-                    
-                    </div>
-            
-            
-            </div>
-       
-       
-      
-
-       
-  
 		
-
-
-	</div>
+        
+        </div>
+		
+	
+        
+         
+        
+    <footer>
+	
+	
     
-    
-    </div>
+    </footer>
+	
+	
 
 </body>
 

@@ -16,6 +16,7 @@
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/mobile-script.js"></script>
 		<script src="js/follow-script.js"></script>
+		<script src="js/researchers-script.js"></script>
          <script>
 		$( document ).on( "pagecreate", "#myPage", function() {
 		
@@ -72,72 +73,48 @@
     </div><!-- /header -->
 	
 	
-				<div class="long-list-view-footer" data-demo-html="true">
+				<div class="long-list-view-footer researchers-tabs" data-demo-html="true">
 				<div class="ui-grid-b">
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><a>Recommended</a></div></div>
+					<div class="ui-block-a" ><div class="ui-bar ui-bar-a"><a class="active">Editor's Pick</a></div></div>
 					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a>Popular</a></div></div>
 					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a>Latest</a></div></div>
 					
 				</div><!-- /grid-b -->
 			</div><!--/demo-html -->
 			
-	
-		
-		<div  data-demo-html="true">
-			<div data-role="tabs" id="tabs" class="researchers-tabs">
-		      <div data-role="navbar">
-			    <ul>
-			      <li><a href="#one" data-ajax="false" class="researcher-tabs-link">Fields</a></li>
-			      <li><a href="#two" data-ajax="false" class="researcher-tabs-link">Directions</a></li>
-			      <li><a href="#three" data-ajax="false" class="researcher-tabs-link">Institutions</a></li>
-			    </ul>
-		      </div>
-		      <div id="one" class="ui-body-d ui-content">
-			  
-					<form class="ui-filterable">
-					<input  data-type="search" placeholder="Find University">
-				</form>
-				<ul id="direction-autocomplete" data-role="listview" data-inset="true" data-filter="true" data-input="#direction-autocomplete-input"></ul>
-		       
-					<a class="direction-span">Computer Science</a>
-					<a class="direction-span">Ajax</a>
-					<a class="direction-span">CSS3</a>
-					<a class="direction-span active-direction">HTML5</a>
-					<a class="direction-span">JQUERY</a>
+			<div class="long-list-view-footer my-researchers-tabs" data-demo-html="true">
+				<div class="ui-grid-b">
+					<div class="ui-block-a" ><div class="ui-bar ui-bar-a">
 					
-			   
-			   
-			   
-		      </div>
-		      <div id="two">
-		        <ul data-role="listview" data-inset="true">
-		            <li><a href="#">Acura</a></li>
-		            <li><a href="#">Audi</a></li>
-		            <li><a href="#">BMW</a></li>
-		            <li><a href="#">Cadillac</a></li>
-		            <li><a href="#">Ferrari</a></li>
-		        </ul>
-		      </div>
-			  
-			  
-			   <div id="three">
-			   
-				<div data-demo-html="true" data-demo-js="true" data-demo-css="true" class="university-filter">
-				
-            	
-				<form class="ui-filterable">
-					<input id="autocomplete-input" data-type="search" placeholder="Find University">
-				</form>
-				<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-input="#autocomplete-input"></ul>
-			</div>
-		     
-		      </div>
-			  
-			  
-			  
-		    </div>
-		</div>
-		
+					
+					<select name="select-native-2" id="select-position">
+						<option value="All">All Positions</option>
+    					<option value="small">professor</option>
+    					<option value="medium">lab assistant</option>
+    					<option value="large">student</option>
+					</select>
+					
+					</div></div>
+					
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+					
+					<select name="select-native-2" id="select-field">
+					<option value="All">All Fields</option>
+    					<option value="small">econimics</option>
+    					<option value="medium">computer science</option>
+    					<option value="large">biology</option>
+					</select>
+					
+					
+					
+					</div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#interests-filter" data-transition="none" >Interests</a></div></div>
+					
+				</div><!-- /grid-b -->
+			</div><!--/demo-html -->
+			
+	
+			
 	
 	
 <!--	<div role="main" class="ui-content jqm-content">
@@ -156,14 +133,26 @@
 
 	</div> -->
     
+		
+		<div id="selected-interests"></div>
+		
 		<div data-demo-html="true">
 		
 
 				
-				<ul class="mylist-view1 follow-list" data-role="listview" data-inset="true" >
+				<ul class=" researchers-list mylist-view1 follow-list" data-role="listview" data-inset="true" >
 					
 					
 					<li data-icon="false" >
+					
+					<div class="update-follow-top">
+					
+						<p><span>Ecnonmics<span> . <span>Big Data, Economics<span></p>
+						
+						
+					
+					
+					</div>
 					
 					<div class="follow-list-content">
 					<a href="#">
@@ -176,7 +165,7 @@
 					<div class="follow-content-holder">
 						<h2>Mariuz Pudzianovski </h2>
 						
-						<p>Computer Science</p>
+						<p><span>PHP Student</span> <span>Harvard University</span></p>
 
 						<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced</p></a>
 					
@@ -192,6 +181,13 @@
 					</li>
 					
 						<li data-icon="false" >
+						
+						<div class="update-follow-top">
+					
+					<p><span>Ecnonmics<span> . <span>Big Data, Economics<span></p>
+					
+					
+					</div>
 					
 					<div class="follow-list-content">
 					<a href="#">
@@ -204,9 +200,13 @@
 					<div class="follow-content-holder">
 						<h2>Mariuz Pudzianovski </h2>
 						
-						<p>Computer Science</p>
+						
 
-						<p>by Margaret Grazzini. The article introduced</p></a>
+						<p><span>PHP Student</span> <span>Harvard University</span></p>
+						
+						<p>by Margaret Grazzini. The article introduced</p>
+						
+						</a>
 					
 					</div>
 					
@@ -232,7 +232,43 @@
 		
 	</div>
 	
+	<div data-role="page" id="interests-filter">
 
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Interests</h1>
+		<a  class="header-right-link header-return-link lnr lnr-chevron-left" href="#myPage" data-transition="none"></a>
+		
+		</div><!-- /header -->
+    
+	
+   
+<div data-demo-html="true" class="interest-filter-holder">
+                <fieldset id="interests-checkbox" class="multiple-checkbox" data-role="controlgroup" data-type="horizontal" data-filter="true" data-icon="false">
+                    
+                    <input type="checkbox" name="Ajax" id="checkbox-h-2a">
+                    <label for="checkbox-h-2a">Ajax</label>
+                    <input type="checkbox" name="Jquery" id="checkbox-h-2b">
+                    <label for="checkbox-h-2b">Jquery</label>
+                    <input type="checkbox" name="Computer Science" id="checkbox-h-2c">
+                    <label for="checkbox-h-2c">Computer Science</label>
+					<input type="checkbox" name="technology" id="checkbox-h-2d">
+                    <label for="checkbox-h-2d">technology</label>
+					<input type="checkbox" name="Science" id="checkbox-h-2e">
+                    <label for="checkbox-h-2e">Science</label>
+					<input type="checkbox" name="history" id="checkbox-h-2f">
+                    <label for="checkbox-h-2f">history</label>
+					<input type="checkbox" name="magic" id="checkbox-h-2g">
+                    <label for="checkbox-h-2g">magic</label>
+					<input type="checkbox" name="IT" id="checkbox-h-2h">
+                    <label for="checkbox-h-2h">IT</label>
+                </fieldset>
+            </div><!--/demo-html -->
+		
+		
+
+        </div>
+	
+        </div>
 	
 	
         

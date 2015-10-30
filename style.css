@@ -1,195 +1,40 @@
 /* Robotto fonts */
 @font-face {
-    font-family: 'RobotoRegular';
-    src: url('fonts/Roboto-Regular-webfont.eot');
-    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
-         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    font-family: 'OpenSans-Bold';
+    src: url('fonts/OpenSans-Bold.ttf');
+  
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'RobotoItalic';
-    src: url('fonts/Roboto-Italic-webfont.eot');
-    src: url('fonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Italic-webfont.woff') format('woff'),
-         url('fonts/Roboto-Italic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Italic-webfont.svg#RobotoItalic') format('svg');
+    font-family: 'OpenSans-ExtraBold';
+    src: url('fonts/OpenSans-ExtraBold.ttf');
+  
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'RobotoBold';
-    src: url('fonts/Roboto-Bold-webfont.eot');
-    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Bold-webfont.woff') format('woff'),
-         url('fonts/Roboto-Bold-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Bold-webfont.svg#RobotoBold') format('svg');
+    font-family: 'OpenSans-Semibold';
+    src: url('fonts/OpenSans-Semibold.ttf');
+  
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'RobotoBoldItalic';
-    src: url('fonts/Roboto-BoldItalic-webfont.eot');
-    src: url('fonts/Roboto-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-BoldItalic-webfont.woff') format('woff'),
-         url('fonts/Roboto-BoldItalic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-BoldItalic-webfont.svg#RobotoBoldItalic') format('svg');
+    font-family: 'OpenSans-Regular';
+    src: url('fonts/OpenSans-Regular.ttf');
+  
     font-weight: normal;
     font-style: normal;
 
 }
 
-@font-face {
-    font-family: 'RobotoCondensed';
-    src: url('fonts/Roboto-Condensed-webfont.eot');
-    src: url('fonts/Roboto-Condensed-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Condensed-webfont.woff') format('woff'),
-         url('fonts/Roboto-Condensed-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Condensed-webfont.svg#RobotoCondensed') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoCondensedItalic';
-    src: url('fonts/Roboto-CondensedItalic-webfont.eot');
-    src: url('fonts/Roboto-CondensedItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-CondensedItalic-webfont.woff') format('woff'),
-         url('fonts/Roboto-CondensedItalic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-CondensedItalic-webfont.svg#RobotoCondensedItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoBoldCondensed';
-    src: url('fonts/Roboto-BoldCondensed-webfont.eot');
-    src: url('fonts/Roboto-BoldCondensed-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-BoldCondensed-webfont.woff') format('woff'),
-         url('fonts/Roboto-BoldCondensed-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-BoldCondensed-webfont.svg#RobotoBoldCondensed') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoBoldCondensedItalic';
-    src: url('fonts/Roboto-BoldCondensedItalic-webfont.eot');
-    src: url('fonts/Roboto-BoldCondensedItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-BoldCondensedItalic-webfont.woff') format('woff'),
-         url('fonts/Roboto-BoldCondensedItalic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-BoldCondensedItalic-webfont.svg#RobotoBoldCondensedItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoThin';
-    src: url('fonts/Roboto-Thin-webfont.eot');
-    src: url('fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Thin-webfont.woff') format('woff'),
-         url('fonts/Roboto-Thin-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Thin-webfont.svg#RobotoThin') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoThinItalic';
-    src: url('fonts/Roboto-ThinItalic-webfont.eot');
-    src: url('fonts/Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-ThinItalic-webfont.woff') format('woff'),
-         url('fonts/Roboto-ThinItalic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoLight';
-    src: url('fonts/Roboto-Light-webfont.eot');
-    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Light-webfont.woff') format('woff'),
-         url('fonts/Roboto-Light-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Light-webfont.svg#RobotoLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoLightItalic';
-    src: url('fonts/Roboto-LightItalic-webfont.eot');
-    src: url('fonts/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-LightItalic-webfont.woff') format('woff'),
-         url('fonts/Roboto-LightItalic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-LightItalic-webfont.svg#RobotoLightItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoMedium';
-    src: url('fonts/Roboto-Medium-webfont.eot');
-    src: url('fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Medium-webfont.woff') format('woff'),
-         url('fonts/Roboto-Medium-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Medium-webfont.svg#RobotoMedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoMediumItalic';
-    src: url('fonts/Roboto-MediumItalic-webfont.eot');
-    src: url('fonts/Roboto-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-MediumItalic-webfont.woff') format('woff'),
-         url('fonts/Roboto-MediumItalic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-MediumItalic-webfont.svg#RobotoMediumItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoBlack';
-    src: url('fonts/Roboto-Black-webfont.eot');
-    src: url('fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-Black-webfont.woff') format('woff'),
-         url('fonts/Roboto-Black-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-Black-webfont.svg#RobotoBlack') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'RobotoBlackItalic';
-    src: url('fonts/Roboto-BlackItalic-webfont.eot');
-    src: url('fonts/Roboto-BlackItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Roboto-BlackItalic-webfont.woff') format('woff'),
-         url('fonts/Roboto-BlackItalic-webfont.ttf') format('truetype'),
-         url('fonts/Roboto-BlackItalic-webfont.svg#RobotoBlackItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
 @font-face {
@@ -709,6 +554,34 @@
 }
 
 
+@font-face {
+	font-family: 'share';
+	src:url('fonts/share.eot?w95j7e');
+	src:url('fonts/share.eot?w95j7e#iefix') format('embedded-opentype'),
+		url('fonts/share.ttf?w95j7e') format('truetype'),
+		url('fonts/share.woff?w95j7e') format('woff'),
+		url('fonts/share.svg?w95j7e#share') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon97-"], [class*=" icon97-"] {
+	font-family: 'share';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon97-share-alternitive:before {
+	content: "\e804";
+}
 
 
 
@@ -954,6 +827,12 @@ position: relative;
 }
 
 @media(max-width: 980px) {
+
+.index-top-page-header .nav-collapse.collapse {
+
+	float: none !important;
+
+}
 
 .myprofile-top-bar {
 
@@ -2012,30 +1891,7 @@ position: relative
 	color:#FFF;
 }
 
-footer > p > a {
-	font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	color: #3D7D8B;
-	
 
-}
-
-footer > p {
-	text-align: center;
-	
-
-}
-
-footer {
-	
-	 height: 40px;
-	 background:#FFF; 
-	 margin-left: 0px !important; 
-	 padding-top: 20px; 
-	 border-top: 1px solid #ccc; 
-	 margin-top: 100px
-
-}
 
 .notif-holder {
 	margin-left: 0px;
@@ -3050,7 +2906,7 @@ position: absolute; width: 100%; display: none
 
 .read-later-empty:hover {
 	font-size: 13px;
-	color: #877C21;
+	color: #a4ce4c;
 	
 
 
@@ -3058,7 +2914,7 @@ position: absolute; width: 100%; display: none
 
 .read-later-full {
 	font-size: 13px;
-	color: #877C21;
+	color: #a4ce4c;
 	margin-left: 15px;
 	cursor: pointer;
 	
@@ -11818,11 +11674,13 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 .index-top-page-header {
 	
-	height: 50px;
+	
 	
 	position: fixed;
 	width: 100%;
 	z-index: 9999;
+	background: #222222;
+
 
 
 }
@@ -11840,7 +11698,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 .index-top-page-header > div > span:nth-child(2) {
 	
 	float: right;
-	
+	margin-top: 19px;
 
 
 
@@ -11851,6 +11709,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 	
 	float: right;
 	margin-right: 30px;
+	margin-top: 19px;
 	
 
 
@@ -11871,7 +11730,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 }
 
 .index-top-page-header > div > span:nth-child(1){
-	margin-top: 17px !important;
+	
 	
 	
 
@@ -11906,7 +11765,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 .index-top-page-header > div > span {
 	
-	margin-top: 15px;
+	
 
 	
 
@@ -11932,12 +11791,14 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 }
 
 .index-home-container {
-	width: 75%;
-	margin-left: 12.5%;
+	width: 96%;
+	margin-left: 2%;
 	
 	
 	height:auto;
 	overflow: hidden;
+	border-bottom: 10px solid #000;
+	padding-bottom: 40px;
 	
 
 
@@ -11945,9 +11806,11 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 .index-home-full-width {
 	width: 100%;
-	border-bottom: 1px solid #eee;
+	
 	height: auto;
 	overflow: hidden;
+	margin-top: 40px;
+	
 
 }
 
@@ -11956,19 +11819,44 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 	
 	height: auto;
 	overflow: hidden;
-	padding-top: 20px;
-	padding-bottom: 20px;
+
 	float: left;
 }
 
 .index-thumb-holder:nth-child(1) {
-	border-right: 1px solid #eee;
+	border-right: 1px solid #ccc;
 }
 
 .index-thumb-holder > div:nth-child(1) {
-	width: 10%;
+	width: 80%;
+	margin-left: 10%;
+	margin-left: 10%;
 
-	float: left;
+	
+	text-align: center;
+}
+
+.index-home-thumb-title {
+
+	font-family: "OpenSans-Bold";
+	font-size: 28px;
+	line-height: 36px;
+
+}
+
+.app-img img {
+
+width: 150px;
+margin: 15px;
+margin-bottom: 0px !important;	
+
+}
+
+.index-home-thumb-text {
+
+font-family: "OpenSans-Regular";
+	font-size: 14px;
+
 }
 
 .index-thumb-holder > div:nth-child(1) > span {
@@ -11999,8 +11887,16 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 
 .index-slide-holder > h2 {
-	color: #FFF;
-	margin-bottom: 25px;
+	    color: #FFF;
+    margin-bottom: 25px;
+    font-family: "OpenSans-Bold";
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+}
+	
 
 
 
@@ -12009,7 +11905,8 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 .index-slide-holder > p {
 	color: #FFF;
 	font-size: 19px;
-	margin-bottom: 40px;
+	margin-bottom: 25px;
+	font-family: "OpenSans-Regular";
 
 
 }
@@ -12056,24 +11953,42 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
  }
  
  .index-collections-holder-header {
-	 width: 75%;
-	margin-left: 12.5%;
+	 width: 96%;
+	margin-left: 2%;
 	
 	
 	height:auto;
 	overflow: hidden;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-bottom: 10px solid #000;
+ 
+ 
+ }
+ 
+  .home-more-btn-holder {
+  
+text-align: center;
+margin-top: 30px;
  
  
  }
  
   .instead-of-h1 {
-	  color: #999 !important;
-	  margin-top: 90px;
-	  margin-bottom: 30px !important;
+	  color: #000 !important;
+	  
+	  
 	  text-align: center;
-	  font-size: 32px !important;
+	  font-size: 21px !important;
 	  line-height: 34px;
+	  font-family: "OpenSans-Bold";
  
+ 
+ }
+ 
+ .index-collections-holder-header .my-bullets {
+ 
+	margin-bottom: 30px;
  
  }
  
@@ -12084,8 +11999,9 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
  
    .instead-of-p {
 	   color: #666;
-	   font-size: 17px;
-	   margin-bottom: 90px;
+	   font-size: 25px;
+	   line-height: 32px;
+	   font-family: "OpenSans-Regular";
 	    text-align: center;
 		width: 60%;
 		margin-left: 20%;
@@ -12098,11 +12014,24 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 }
 
 @media (max-width: 980px) {
+
+.index-thumb-holder > div:nth-child(1) {
+
+	margin-left: 0% !important;
+	margin-bottom: 30px;
+
+}
+	
+	.index-thumb-holder {
+	
+	width: 100% !important;
+	
+	}
 	
 	.index-slide-holder {
 	width: 80%;
 	margin-left: 10%;
-	top: 15% !important;
+	top: 25% !important;
 
 
 }
@@ -12135,7 +12064,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 .index-thumb-holder > div:nth-child(1) {
 	width: 100% !important;
 	text-align: center;
-	height: 40px;
+
 }
 
 .index-thumb-holder > div:nth-child(2) {
@@ -12145,8 +12074,8 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 }
 
 .index-home-container {
-	width: 80%;
-	margin-left: 10%;
+	width: 96%;
+	margin-left: 2%;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	
@@ -12178,14 +12107,14 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
  
  .new-index-nav {
 	 width: 100% !important;
-	 margin-left: 0% !important;
+	 margin-left: -2% !important;
  
  }
  
  .new-index-nav > li {
 	 text-align: center;
 	 background: #FFF !important;
-	  border-bottom: 3px #877C21  solid !important;
+	  border-bottom: 3px #a4ce4c solid !important;
 	  border-radius: 0px !important;
 	  
  
@@ -12216,7 +12145,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
    .new-index-nav > li > a {
 	   margin-bottom: 0px !important;
 	   border-radius: 0px !important;
-	   color: #877C21 !important
+	   color: #a4ce4c !important
  
  }
  
@@ -12481,6 +12410,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 	border-bottom: 1px solid #ccc;
 	background: #FFF;
+	
 
 
 }
@@ -12500,7 +12430,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 .new-index-nav > .active > a {
 	
-	color: #877C21;
+	color: #a4ce4c;
 
 
 
@@ -12508,7 +12438,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 .new-index-nav > .active > a:hover {
 	
-	color: #877C21;
+	color: #a4ce4c;
 
 
 
@@ -12516,7 +12446,7 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 .new-index-nav > .active > a:focus {
 	
-	color: #877C21 ;
+	color: #a4ce4c ;
 
 
 
@@ -12524,8 +12454,8 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 
 .new-index-nav > .active {
 	
-	color: #877C21;
-	border-bottom: 4px solid #877C21;
+	color: #a4ce4c;
+	border-bottom: 4px solid #a4ce4c;
 	border-radius: 0px !important;
 
 
@@ -12845,6 +12775,69 @@ color: #666;
 
 
 @media (max-width: 980px) {
+
+.index-home-thumb-title {
+
+font-size: 18px !important;
+
+}
+
+.index-top-page-header {
+
+	padding-bottom: 20px !important;
+	padding-top: 17px !important;
+
+}
+
+.instead-of-p {
+
+	font-size: 15px !important;
+	line-height: 19px !important;
+	width: 90% !important;
+	margin-left: 5% !important;
+
+}
+
+.index-top-page-header .my-logo {
+
+
+	width: 120px;
+
+	
+
+
+}
+
+.home-header-btn {
+
+	margin-top: 1px !important;
+	
+
+
+}
+
+.index-top-page-header .new-small-button {
+
+	font-size: 12px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+
+
+}
+
+.index-top-page-header > div > span:nth-child(3) {
+
+	margin-right: 10px !important;
+	margin-top: 10px !important;
+
+}
+
+.index-top-page-header > div > span:nth-child(2) {
+
+	margin-top: 10px !important;
+}
 	
 .new-index-footer {
 	
@@ -13910,17 +13903,17 @@ margin-right: 10px;
 
 .articles-laft-inner {
 	
-	margin-left: 5%;
+	padding-left: 5%;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	margin-right: 5%
+	padding-right: 5%
 
 
 
 }
 
 .articles-laft-inner > div {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 10px solid #ecead4;
 	padding-bottom: 15px;
 	margin-top: 20px;
 
@@ -13990,7 +13983,7 @@ margin-right: 10px;
 	margin-right: 5px;
 	color: #666 !important;
 	border: 1px solid #ccc;
-	background: #eee;
+	background: #ecead4;
 	display: inline-block
 
 
@@ -14020,8 +14013,8 @@ margin-right: 10px;
 
 .articles-laft-inner > div > h4  {
 
-	color: #999;
-	font-size: 15px;;
+	color: #fff;
+	font-size: 15px;
 	margin-top: 0px !important;
 	
 
@@ -14076,14 +14069,14 @@ overflow: hidden;
 
 
 .articles-laft-inner > div > p > a {
-	color: #999 !important;
+	color: #fff !important;
 
 
 
 }
 
 .articles-laft-inner > div > p > .active {
-	color: #333 !important;
+	color: #a4ce4c !important;
 	font-weight: bold;
 
 
@@ -14675,10 +14668,12 @@ overflow: hidden;
 .register-lang-domain {
 	
 	text-align: center;
-	padding-top: 110px;
+	padding-top: 50px;
 	padding-bottom: 50px;
-	width: 80%;
-	margin-left: 10%;
+	width: 96%;
+	margin-left: 2%;
+	margin-top: 70px;
+	background: #fff;
 
 
 
@@ -14687,7 +14682,12 @@ overflow: hidden;
 .register-lang-domain > p {
 	font-size: 27px;
 	line-height: 32px;
-	margin-bottom: 50px;
+	
+	font-family: "OpenSans-Bold";
+	text-transform: uppercase;
+	width: 70%;
+	text-align: center;
+	margin-left: 15%;
 
 
 
@@ -14695,6 +14695,8 @@ overflow: hidden;
 
 .register-lang-domain > a {
 	color:  #3D7D8B ;
+	display: inline-block;
+	margin-top: 50px;
 	
 
 
@@ -15553,11 +15555,18 @@ overflow: hidden;
 .square-grids {
 
 	width: 96%;
-	margin-left: 2%;
+	padding-left: 2%;
 	height: auto;
 	overflow: hidden;
+	background: #ecead4;
+	padding-right: 2%;
 
 
+}
+
+.article-time-span {
+
+	float: right;
 
 }
 
@@ -16814,3 +16823,464 @@ margin-bottom: 30px;
 display: inline-block;
 
 }
+
+.filter-top-header  {
+
+height: auto;
+overflow: hidden;
+	
+
+
+
+}
+
+.filter-top-header a {
+
+	display: inline-block;
+	text-align: center;
+	color: #fff;
+	border: 2px solid #fff;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+
+
+
+}
+
+.filter-top-header div {
+
+	float: left;
+	width: 30%;
+	
+
+
+
+}
+
+.middle-filter {
+
+	margin-left: 4%;
+	margin-right: 4%;
+
+}
+
+.filter-top-header .active {
+
+	color: #a4ce4c !important;
+	border: 2px solid #a4ce4c !important;
+
+
+}
+
+.my-bullets > span {
+
+	width: 10px;
+	height: 10px;
+	margin-left: 7px;
+	background: #a4ce4c;
+	border-radius: 10px;
+	display: inline-block;
+
+
+}
+
+.center-bullets {
+
+	text-align: center;
+
+}
+
+
+.new-big-button {
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: inline-block;
+	font-family: "OpenSans-Regular";
+	font-size: 18px;
+	padding-left: 35px;
+	padding-right: 35px;
+
+
+}
+
+.new-white-btn {
+
+	color: #fff !important;
+	border: 2px solid #fff;
+	text-decoration: none;
+
+}
+
+.new-white-btn:hover {
+
+	background: #fff !important;
+	color: #000 !important;
+
+}
+
+.new-black-btn {
+
+	color: #000 !important;
+	border: 2px solid #000;
+	text-decoration: none;
+
+}
+
+.new-black-btn:hover {
+
+	background: #000 !important;
+	color: #fff !important;
+
+}
+
+
+.new-small-button {
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: "OpenSans-Regular";
+
+
+}
+
+.light-green-button {
+
+	border: 2px solid #a4ce4c;
+	COLOR: #a4ce4c !important;
+
+
+}
+
+.light-green-button:hover {
+
+COLOR: #fff !important;
+background: #a4ce4c !important;
+
+
+
+
+}
+
+.my-tiny-bullets > span {
+
+	width: 5px;
+	height: 5px;
+	margin-left: 4px;
+	background: #a4ce4c;
+	border-radius: 10px;
+	display: inline-block;
+
+
+}
+
+.my-tiny-bullets {
+
+	text-align: center;
+	margin-top: 5px;
+
+
+}
+
+footer {
+
+	background: #222;
+
+}
+
+footer > div {
+
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 96%;
+	margin-left: 2%;
+	text-align: center;
+
+}
+
+.index-footer-top > a {
+
+margin-left: 20px;
+margin-right: 20px;
+
+
+}
+
+.index-footer-top {
+
+	border-bottom: 1px solid #eee;
+
+
+}
+
+.index-footer-top a {
+
+	margin-bottom: 10px;
+	margin-top: 10px;
+
+
+}
+
+.index-footer-middle {
+
+	height: auto;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+	
+
+
+
+}
+
+.index-footer-middle > div {
+
+	height: auto;
+	overflow: hidden;
+	
+
+
+
+}
+
+.index-footer-middle > div:nth-child(1) {
+
+	width: 60%;
+	float: left;
+
+
+
+}
+
+.index-footer-middle > div:nth-child(1) > a {
+
+	float: left;
+	margin-right: 20px;
+	font-size: 16px;
+	line-height: 56px;
+	font-family: "OpenSans-Regular";
+	color: #fff;
+	text-decoration: none !important;
+
+}
+
+.index-footer-middle > div:nth-child(1) > a:hover {
+
+
+	color:  #a4ce4c !important;
+
+}
+
+.index-footer-middle > div:nth-child(2) > a {
+
+	    float: right;
+    margin-left: 10px;
+    color: #222;
+    background: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 50px;
+    font-size: 16px;
+	margin-top: 15px;
+}
+
+.index-footer-middle > div:nth-child(2) > a:hover {
+
+	color: #fff !important;
+	background: #a4ce4c !important;
+	text-decoration: none !important;
+
+}
+
+
+@media(max-width: 980px) {
+
+.index-footer-middle > div:nth-child(1) {
+
+	width: 100% !important;
+	float: left;
+
+
+
+}
+
+.index-footer-middle > div:nth-child(2) {
+
+	width: 100% !important;
+	float: left;
+
+
+
+}
+
+.index-footer-middle > div:nth-child(1) > a {
+
+	float: none !important;
+
+}
+
+.index-footer-middle > div:nth-child(2) > a {
+
+	float: none !important;
+
+}
+
+
+}
+
+.index-footer-bottom  {
+
+	padding-top: 20px;
+	padding-bottom: 10px;
+
+}
+
+.index-footer-bottom a {
+
+	color: #fff !important;
+
+}
+
+.index-footer-bottom p {
+
+	color: #fff !important;
+
+}
+
+.no-bottom-border {
+
+	border-bottom: 0px !important;
+	padding-bottom: 0px !important;
+
+
+}
+
+.my-phone-logo {
+
+	width: 40px;
+	float: left;
+	margin-right: 10px;
+
+}
+
+.my-logo {
+
+	
+	float: left;
+	margin-right: 10px;
+
+}
+
+.home-header-btn {
+
+	float: right;
+	margin-left: 15px;
+	
+	
+	margin-top: 7px;
+
+}
+
+.index-top-page-header .nav-collapse.collapse {
+
+	float: left;
+
+
+}
+
+.index-top-page-header .navbar-inverse .navbar-inner {
+
+	padding-top: 6px !important;
+	padding-bottom: 0px !important;
+	background: #222 !important;
+
+}
+
+.index-top-page-header .navbar .nav > li > a {
+
+    font-size: 14px;
+    line-height: 48px;
+    padding-bottom: 0px !important;
+	color: #fff !important;
+	margin-left: 5px;
+	font-family: "OpenSans-Regular";
+}
+
+.index-top-page-header .navbar .nav > li > a:hover {
+
+background: #222 !important;
+	color: #a4ce4c !important;
+ 
+}
+
+.index-top-page-header .navbar .nav > li > .active {
+
+	color: #a4ce4c !important;
+	border-bottom: 3px solid #a4ce4c !important;
+
+
+
+}
+
+
+
+.index-top-page-header .navbar-inverse .btn-navbar {
+
+	margin-left: 15px !important;
+	background: #222 !important;
+	border: 0px !important;
+	box-shadow: none !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+
+
+}
+
+
+ .index-top-page-header .navbar .btn-navbar .icon-bar {
+ 
+ width: 30px ;
+    height: 5px ;
+    margin-bottom: 4px ;
+ 
+ 
+ }
+ 
+ @media(max-width: 667px) {
+ 
+ .my-phone-logo {
+ 
+ margin-right: 0px !important;
+ 
+ }
+ 
+ .index-top-page-header .new-small-button {
+ 
+ margin-left: 5px !important;
+ 
+ }
+ 
+ .index-top-page-header .navbar-inverse .btn-navbar {
+ 
+	margin-left: 5px !important;
+ 
+ }
+ 
+ 
+ }
+ 
+  @media(max-width: 300px) {
+ 
+ .my-phone-logo {
+ 
+ display: none !important;
+ }
+ 
+ 
+ }
+

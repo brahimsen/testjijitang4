@@ -31,26 +31,39 @@
 	</head>
 	<body>
 	
+	<script>
+		
+		$('#add-publication').live('click', function(e){
+    
+				$('.my-publication-holder').prepend('<div class="ui-field-contain my-field-contain"><textarea class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"  placeholder="Publication" value=""></textarea></div>');
+
+	});
+		
+		
+		</script>
 	
 	
-		<div data-role="page" id="user-info">
+	<div data-role="page" id="Login">
 
 		<div class="collection-header" data-role="header" data-position="fixed">
-        <h1>Profile Information</h1>
-		
+        <h1>Pofile Information</h1>
+		<a class="header-right-link header-return-link lnr lnr-cross" href="login.html" rel="external" data-transition="none"></a>
 		
        
     </div><!-- /header -->
-	
-	
+    
 		<div data-demo-html="true" class="login-page">
 		
-		<form class="user-form" role="form">
+		<form class="form-horizontal form" >
+	  	
+		<div class="error-message-style" id="sign-up-error"></div>
 		
-		<div class="error-message-style" id="login-error-message"></div>
 		
-		
-		<ul class="wswdg"  data-role="listview" data-inset="true">
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+			<ul class="wswdg"  data-role="listview" data-inset="true">
 					<li class="thirty-margin-top user-profile-widget" data-icon="false"><a href="#">
 						<span class="lnr lnr-picture user-photo-icon"></span>
 					
@@ -68,34 +81,50 @@
 			</div>
 		</div><!--/demo-html -->
 		
-		<div data-demo-html="true" class="form-control">
+		<div data-demo-html="true" class="form-control last-element">
 			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
 				
 				<textarea name="bio" id="shortbio" placeholder="Short Bio" value=""></textarea>
 				<p class="text-counter" id="bio-counter"><span>0</span>/100</p>
 			</div>
-		</div><!--/demo-html -->	
+		</div><!--/demo-html -->
 		
-		
-		
-		<ul class="wswdg"  data-role="listview" data-inset="true">
-					<li class="thirty-margin-top" data-icon="false"><a data-transition="none" href="#user-institute">
+			</div>
+			
+			<div class="step">
+			
+			<ul class="wswdg thirty-margin-top fix-user-height"  data-role="listview" data-inset="true">
+					<li  data-icon="false"><a id="position-content" data-transition="none" href="#user-position">
 						
 					
-					Institute</a>
+					Position<span class="lnr lnr-chevron-right mobile-right-arrow user-right-arrow "></span></a>
+					</li>
+					
+					<li  data-icon="false"><a id="institute-content" data-transition="none" href="#user-institute">
+						
+					
+					Institute<span class="lnr lnr-chevron-right mobile-right-arrow user-right-arrow "></span></a>
+					</li>
+					
+					<li class="last-element"  data-icon="false"><a id="department-content" data-transition="none" href="#user-department">
+						
+					
+					Department<span class="lnr lnr-chevron-right mobile-right-arrow user-right-arrow"></span></a>
 					</li>
 				
 					
 		</ul>
+			
+		
 		
 		 
 		 
 		
 		
-		<div data-demo-html="true" class="form-control">
+		<div data-demo-html="true" class="form-control thirty-margin-top">
 			<div class="ui-field-contain my-field-contain  login-field-contain form-group form-select ui-nodisc-icon ui-alt-icon ">
 				 <select class="form-control " name="field" >
-				      	<option value="">Select</option>
+				      	<option value="">Reaearch Field</option>
 				      	<option value="in">Education</option>
 				      	<option value="au">Economics</option>
 				      	<option value="us">Computer Science</option>
@@ -110,11 +139,17 @@
 		
 
 		
-			<ul class="wswdg"  data-role="listview" data-inset="true">
+			<ul class="wswdg fix-user-height"  data-role="listview" data-inset="true">
 					<li data-icon="false"><a data-transition="none"  href="#user-direction">
 						
 					
-					Direction</a>
+					Research Interests<span class="lnr lnr-chevron-right mobile-right-arrow user-right-arrow"></a>
+					</li>
+					
+					<li  data-icon="false"><a data-transition="none" href="#publications-user">
+						
+					
+					Publications<span class="lnr lnr-chevron-right mobile-right-arrow user-right-arrow "></span></a>
 					</li>
 				
 					
@@ -122,42 +157,91 @@
 		
 		
 		
-		<div data-demo-html="true" class="form-control">
+		<div data-demo-html="true" class="form-control hundred-px-bottom-margin">
 			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
 				
 				<textarea name="experience" id="reserachexp" placeholder="Research Experience" value=""></textarea>
 				<p class="text-counter" id="exp-counter"><span>0</span>/1000</p>
 			</div>
 		</div><!--/demo-html -->
+
+	  	
+			</div>
+			
+			
+			
 		
+			
+			
+			
+			
+			
+			
+			
 		
+			<div data-role="footer" data-position="fixed" class="profile-footer thirty-margin-top user-info-footer">
+	
+			
+					
+					
+					<button type="button" class="action btn-sky text-capitalize main-btn next btn">NEXT</button>
+					<button type="button" class="action btn-hot text-capitalize main-btn submit btn">SUBMIT</button>
+			
+			
+			
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+	
+
+	
+	
+	
+	</div>
+	
+	</div>
+	
+
+       <div data-role="page" id="user-position">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Postion</h1>
+		<a id="user-position-quit" class="header-right-link header-return-link lnr lnr-chevron-left" href="user-information.html" data-transition="none"></a>
+    </div><!-- /header -->
+    
+   
+    	  <div role="main" >
+		
+			
+		
+			<form class="institute-form" role="form">
+			
+		
+		<div data-demo-html="true" class="form-control thirty-margin-top">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<input  type="text" name="role" placeholder="Position" id="positiontext" value="">
+			</div>
+		</div><!--/demo-html -->
 		
 	
-		
-		
-		
-		<button type="submit" class="main-btn user-form-submit">Next</button>
-		
-		
-		
 
-		
 		</form>
-	
 
+        </div>
 
-	
-	
+		
 	</div>
 	
-	</div>
-	
-	
-	<div data-role="page" id="user-institute">
+	 <div data-role="page" id="user-institute">
 
 		<div class="collection-header" data-role="header" data-position="fixed">
         <h1>Institute</h1>
-		<a class="header-right-link header-return-link lnr lnr-chevron-left" href="user-information.html" data-transition="none"></a>
+		<a id="user-institute-quit" class="header-right-link header-return-link lnr lnr-chevron-left" href="user-information.html" data-transition="none"></a>
     </div><!-- /header -->
     
    
@@ -172,23 +256,10 @@
 			<div data-demo-html="true" class="form-control thirty-margin-top">
 			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
 				
-				<input  type="text" name="myinstitute" placeholder="institute" value="">
+				<input  type="text" name="myinstitute" placeholder="institute" id="institutetext" value="">
 			</div>
 		</div><!--/demo-html -->
 		
-		<div data-demo-html="true" class="form-control">
-			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
-				
-				<input  type="text" name="department" placeholder="department" value="">
-			</div>
-		</div><!--/demo-html -->
-		
-		<div data-demo-html="true" class="form-control">
-			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
-				
-				<input  type="text" name="role" placeholder="role" value="">
-			</div>
-		</div><!--/demo-html -->
 		
 	
 
@@ -198,6 +269,40 @@
 
 		
 	</div>
+	
+	 <div data-role="page" id="user-department">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Department</h1>
+		<a id="user-department-quit" class="header-right-link header-return-link lnr lnr-chevron-left" href="user-information.html" data-transition="none"></a>
+    </div><!-- /header -->
+    
+   
+    	  <div role="main" >
+		
+			
+		
+			<form class="institute-form" role="form">
+			
+		
+		
+		<div data-demo-html="true" class="form-control thirty-margin-top">
+			<div class="ui-field-contain my-field-contain  login-field-contain form-group ">
+				
+				<input  type="text" name="department" placeholder="department" id="departmenttext" value="">
+			</div>
+		</div><!--/demo-html -->
+		
+		
+	
+
+		</form>
+
+        </div>
+
+		
+	</div>
+	
 	
 	
 	<div data-role="page" id="user-direction">
@@ -226,9 +331,44 @@
 		
 	
 
-		</form>
+		
 
         </div>
+		
+		
+		<div data-role="page" id="publications-user">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Publications</h1>
+		<a class="header-right-link header-return-link lnr lnr-chevron-left" href="user-information.html" data-transition="none"></a>
+		<a id="add-publication" class="main-btn" style="margin-top: 10px !important">ADD</a>
+       
+    </div><!-- /header -->
+    
+    <div data-demo-html="true" class="my-publication-holder">
+		
+		
+		
+		<div class="ui-field-contain my-field-contain   ">
+				
+				<textarea placeholder="Publication"  value=""></textarea>
+				
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><!--/demo-html -->
+	
+	
+    	
+		
+    
 
 		
 	</div>

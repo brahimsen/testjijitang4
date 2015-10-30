@@ -25,6 +25,7 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/profiles-script.js"></script>
 
 <style>
 
@@ -36,18 +37,6 @@
 
 
 
-$(document).ready(function() {
-	
-			 $(".profile-follow").click(function(){
-						$(".profile-unfollowed,.profile-followed",this).toggleClass("hide-follow-check");
-					
-						
-								
-				});
-	
-	
-
-});
 
 
 
@@ -80,7 +69,7 @@ $(document).ready(function() {
 
 		</div>
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="background: #ecead4">
     
     
   
@@ -90,7 +79,8 @@ $(document).ready(function() {
         <div class="register-lang-domain">
         
         	<p>Jijitang is a community for people who are passionate for  researching, analyzing and writing!</p>
-            <a class="brown-btn main-index-brown">Join the Community</a>
+			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+            <a class="new-big-button new-black-btn">Join the Community</a>
           
         
         
@@ -107,24 +97,24 @@ $(document).ready(function() {
         </div>
         
         
-        <hr class="full-width-hr"/>
+        
       
 
   <!-- Tab panes -->
  
  
  
-	<div class="square-grids">
+	<div class="square-grids" id="profile-columns">
 	
-	<div class="square-grid-item square-grid-filter" href="http://diveintohtml5.ep.io/"> 
+	<div class="profile-grid-item square-grid-filter" href="http://diveintohtml5.ep.io/"> 
 			<div> 
 				<div class="articles-laft-inner" >
                         
-                        		<div style="margin-top: 4px;">
+                        		<div class="filter-top-header">
                                 
-                                	<p><a>Recommend</a></p>
-                                    <p><a class="active">Popular</a></p>
-                                    <p><a>Upcoming</a></p>
+                                	<div><a>Recommend</a></div>
+                                    <div class="middle-filter"><a class="active">Popular</a></div>
+                                    <div ><a>Upcoming</a></div>
                                 
                                 </div>
                                 <div class="filter-categories">
@@ -195,637 +185,356 @@ $(document).ready(function() {
 			</div> 
 	</div> 
  
-<div class="square-grid-item" >
+<div class="profile-grid-item" > 
 
-	
-	
-<div class="square-grid-item-inner"> 
+<div class="profile-follow-wrapper">
 
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
 		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
 	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
 	</div>
 	
-	<div class="square-grid-bottom">
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
 		
 	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
 	</p>
 	</div>
 
 </div> 
 </div> 
 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
+<div class="profile-grid-item" > 
 
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration lsdfj asdlfj asdlfj asdfj asldfj alskdjf   fasldkfj asdlfkjs dlfj asdf   asldfkj asdfljas dfasldfkj as
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhajii</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
 		</div>
+
+</div>
+
+
+<div class="profile-grid-item-inner"> 
+
 	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
 	</div>
 	
-	<div class="square-grid-bottom">
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
 		
 	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-	<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-	<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
-	</p>
-	</div>
-
-</div> 
-</div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
-
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
-		</div>
-	</div>
-	
-	<div class="square-grid-bottom">
-		
-	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
 	</p>
 	</div>
 
 </div> 
 </div> 
 
+<div class="profile-grid-item" > 
 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
+<div class="profile-follow-wrapper">
 
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
 		</div>
+
+</div>
+
+
+<div class="profile-grid-item-inner"> 
+
 	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
 	</div>
 	
-	<div class="square-grid-bottom">
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
 		
 	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
 	</p>
 	</div>
 
 </div> 
 </div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
 
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
 		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
 	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
 	</div>
 	
-	<div class="square-grid-bottom">
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
 		
 	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
 	</p>
 	</div>
 
 </div> 
 </div> 
- 
-<div class="square-grid-item" > 
-<div class="square-grid-item-inner"> 
 
-	<div class="square-grid-desc">
-	<a href="#"><img src="img/brahim.png" /></a>
-	Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
-	
-	a minor in business a administration
-	
-	</div>
-	
-	<div class="square-grid-name">
-		
-		<a>Brahim Senhaji</a>
-		<div class="profile-follow">
-		<a class="profile-unfollowed"><span class="icon11-check "></span> Follow</a>
-		<a class="hide-follow-check profile-followed"><span class="icon11-check"></span> Unfollow</a>
+<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
 		</div>
+
+</div>
+
+
+<div class="profile-grid-item-inner"> 
+
 	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
 	</div>
 	
-	<div class="square-grid-bottom">
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
 		
 	<p>
-	<span>100</span> <span>Followers</span> . <span>52</span> <span>Fans</span> . <span>8</span> <span>Projects</span> . <span>50</span>
-	<span>Articles</span>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
 	</p>
 	</div>
 
 </div> 
 </div> 
+
+<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
 	
 	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
 	
 	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
 	</div>
   
-   		
+   		<footer>
+	</footer>
 
 </body>
 
 <script>
 
-$( "header" ).load( "header-jijitang.html" ); 
+$( "header" ).load( "welcome-header.html" ); 
 $( "footer" ).load( "footer.html" );
-$( "#Entries1" ).load( "Testnotes/Note1.html" );
-$( "#Entries2" ).load( "Testnotes/Note2.html" );
-$( "#Entries3" ).load( "Testnotes/Note3.html" );
-$( "#Entries4" ).load( "Testnotes/Note4.html" );
-$( "#Entries5" ).load( "Testnotes/Note5.html" );
-
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-    
-    //smoothscroll
-    $('.index-arrow-down-holder a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
-});
-
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('.index-arrow-down-holder a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            currLink.addClass("left-active");
-        }
-        else{
-            currLink.removeClass("left-active");
-        }
-    });
-}
 
  
 </script>

@@ -5,26 +5,53 @@
 /* CSS Reset (customised) */
 
 /* Primary Styles */
+
+#article-columns {
+
+-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: auto;
+
+
+}
   
 
 .square-grid-item  {
-	float: left;
-	width: 100%;
-	height: auto;
-	margin-bottom: 30px;
-	text-decoration: none;
+	display: inline-block;
+	
+	
+	
+	
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	
+	
+	
+	opacity: 1;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
 }
 
 .square-grid-item-inner {
 
 
 
-height: 240px;
-padding-left: 2%;
-padding-right: 2%;
-padding-top: 5px;
-padding-bottom: 3px;
-border: 1px solid #ccc;
+height: auto;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 0px;
+
+
 
 
 
@@ -50,12 +77,13 @@ border: 1px solid #ccc;
 		position: relative;
 		top: 0;
 		overflow: hidden;
+		margin-bottom: 10px;
 	}
 	
 .square-grid-filter {
 	
-		height: 790px !important;
-		background: rgba(237,235,213,0.5);
+		height: auto;
+		background: #888679;
 	
 	
 	
@@ -64,34 +92,8 @@ border: 1px solid #ccc;
 
 /* One Column */
 
-@media screen and (min-width:300px) {
-	.square-grid-item  {
-		width: 100%;
-		margin: 0 0% 20px 0;
-		height: 250px;
-		
-	}
-	
-		.square-grid-desc {
+@media screen and (max-width:300px) {
 
-		height: 100px;
-		
-		text-overflow: ellipsis;
-		
-  overflow: hidden;
-
-
-}
-
-.square-grid-desc  > a > img {
-height: 100%;
-float: left;
-margin-right: 10px;
-
-	
-
-
-}
 
 .article-graph-btn-text {
 	
@@ -103,49 +105,25 @@ margin-right: 10px;
 	
 }
 
-/* Two Column */
 
-@media screen and (min-width:767px) {
-	.square-grid-item  {
-	width: 100%;
-		margin: 0 0% 20px 0;
-		height: 250px;
-		
-	}
-	
-		.square-grid-desc {
-
-		height: 100px;
-		
-		text-overflow: ellipsis;
-		
-  overflow: hidden;
-
-
-}
-
-.square-grid-desc  > a > img {
-height: 100%;
-float: left;
-margin-right: 10px;
-
-	
-
-
-}
-	
-	
-}
 
 /* Three Column */
 
-@media screen and (min-width:980px) {
-	.square-grid-item {
-		width: 47%;
-		margin: 0 1.5% 20px 1.5%;
-		height: 250px;
-	
-	}
+@media screen and (max-width:980px) {
+	#article-columns {
+
+-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 2;
+	column-gap: 15px;
+	column-fill: auto;
+
+
+}
 	
 	.square-grid-desc {
 
@@ -176,13 +154,53 @@ margin-right: 10px;
 	}
 }
 
+/* Two Column */
+
+@media screen and (max-width:676px) {
+	#article-columns {
+
+-webkit-column-count: 1;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 1;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 1;
+	column-gap: 15px;
+	column-fill: auto;
+
+
+}
+	
+		.square-grid-desc {
+
+		height: 100px;
+		
+		text-overflow: ellipsis;
+		
+  overflow: hidden;
+
+
+}
+
+.square-grid-desc  > a > img {
+height: 100%;
+float: left;
+margin-right: 10px;
+
+	
+
+
+}
+	
+	
+}
+
 /* Four Column */
 
-@media screen and (min-width:1140px) {
+@media screen and (max-width:1140px) {
 	.square-grid-item {
-		width: 31.33%;
-		margin: 0 1% 20px 1%;
-		height: 250px;
+		
 		
 	}
 	
@@ -259,15 +277,25 @@ float: left;
 
 background: none;
 border: 0px !important;
-color: #999;
-font-size: 12px;
+color: #ccc;
+font-size: 15px;
 padding-left: 10px;
 padding-right: 10px;
-padding-top: 5px
+padding-top: 10px;
+padding-bottom: 10px;
+
 	
 
 
 }
+
+.square-grid-bottom > div > button:focus {
+
+	outline:0;
+
+}
+
+
 
 .square-grid-bottom > div {
 
@@ -328,12 +356,10 @@ white-space: nowrap;
 
 .square-grid-bottom  {
 
-position: absolute;
+position: relative;
+border-top: 2px solid #ecead4;
+height: 42px;
 
-width: 96%;
-bottom: 5px;
-padding-top: 5px;
-padding-bottom: 0px;
 
 
 
@@ -360,13 +386,6 @@ padding: 10px;
 }
 
 
-.square-grid-item-inner:hover {
-
-	background: #eee;
-
-
-
-}
 
 .profile-follow {
 
@@ -414,8 +433,10 @@ padding: 10px;
 
 .article-grid-title > a {
 
-color: #666 !important;
-font-weight: bold;
+color: #000 !important;
+font-family: "OpenSans-ExtraBold";
+font-size: 21px;
+line-height: 27px;
 
 
 }
@@ -453,17 +474,29 @@ margin-right: 10px;
 
 .article-grid-meta > a:nth-child(1) > img {
 
-	width: 30px;
-	border-radius: 30px;
+	width: 50px;
+	border-radius: 50px;
+	margin-top: -30px;
+	height: 50px;
 	
 }
 
 .article-grid-meta > a:nth-child(2) {
 
-color: #877C21;
+color: #000;
 font-size: 13px;
-font-weight: bold;
-margin-right: 10px;
+font-family: "OpenSans-Semibold";
+
+display: inline-block;
+margin-top: 5px;
+
+
+}
+
+.article-grid-meta > a:nth-child(2):hover {
+
+	text-decoration: none;
+	color: #999;
 
 
 }
@@ -472,16 +505,24 @@ margin-right: 10px;
 
 color: #999;
 font-size: 13px;
-margin-right: 10px;
+
+
 
 
 }
 
+.article-time-span {
+
+	display: inline-block;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 6px;
+}
+
 .article-grids-content-inner {
 
-	height: 100px;
-	max-height: 100px;
-	overflow: hidden;
+	
+	
 
 }
 
@@ -549,9 +590,9 @@ margin-right: 10px;
 
 	padding: 10px;
 	text-align: center;
-	color: #877c21;
+	color: #a4ce4c;
 	font-size: 13px;
-	background: #f2f2f2;
+	background: #ecead4;
 	border-bottom: 1px solid #ccc;
 
 }
@@ -692,7 +733,7 @@ table > tbody > tr > td:nth-child(3) {
 
 	float: none !important;
 	text-align: center !important;
-	background: #f2f2f2;
+	background: #ecead4;
 	padding: 10px !important;
 
 
@@ -821,8 +862,8 @@ margin-right: 10px;
 
 .article-grid-title {
 
-	max-height: 60px;
-	overflow: hidden;
+	margin-top: 15px;
+	margin-bottom: 15px;
 
 
 
@@ -832,6 +873,80 @@ margin-right: 10px;
 
 	width: 25%;
 	text-align: center;
+
+
+
+}
+
+.article-graph-background {
+
+	width: 100%;
+	
+
+}
+
+.article-content-graph-holder {
+
+
+	padding-top: 70px;
+	padding-bottom: 70px;
+	
+	
+	padding-left: 20px;
+	padding-right: 20px;
+
+
+
+
+
+}
+
+.article-content-graph-holder p {
+
+color: #fff;
+font-family: "OpenSans-Semibold";
+
+}
+
+.article-content-graph-holder a {
+
+color: #a4ce4c !important;
+font-family: "OpenSans-Bold";
+text-transform: uppercase;
+
+}
+
+.article-content-graph-holder p  {
+
+	opacity: 0;
+
+}
+
+.article-content-graph-holder a  {
+
+	opacity: 0;
+
+}
+
+.article-content-graph-holder:hover {
+
+	background: rgba(142,142,142,0.5)
+
+
+
+}
+
+.article-content-graph-holder:hover  a  {
+
+	opacity: 1;
+
+
+
+}
+
+.article-content-graph-holder:hover  p  {
+
+	opacity: 1;
 
 
 

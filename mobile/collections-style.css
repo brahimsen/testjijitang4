@@ -122,7 +122,7 @@
 			
 			.collection-header > a {
 				
-				background-color: #000 !important;
+				background-color: #333 !important;
 				border: none !important;
 				color: #FFF !important;
 				
@@ -147,7 +147,6 @@
 		
 		
 		.collection-mobile-content {
-			background: rgba(237,235,213,0.5) !important
 		}
 		
 		

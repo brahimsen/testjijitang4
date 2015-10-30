@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>JIJITANG</title>
+		
+		<link rel="stylesheet" href="themes/jquery.mobile-1.4.4.css">
+		
+		<link rel="stylesheet" href="mobile-style.css">
+		<link rel="stylesheet" href="mobile-fonts.css">
+        <link rel="stylesheet" href="collections-style.css">
+		
+      
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/mobile-script.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		
+		
+		
+        <script id="panel-init">
+		
+		</script>
+        
+        
+	</head>
+	<body>
+	
+	
+	
+		<div data-role="page" id="Login">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Sign Up</h1>
+		<a class="header-right-link header-return-link icon15-arrow-left" href="#account-home" data-transition="none"></a>
+		
+       
+    </div><!-- /header -->
+    
+		<div data-demo-html="true" class="login-page">
+		
+		<form class="form-horizontal form">
+	  	
+		
+		
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+			<p class="sign-up-progress">
+			
+				<span class="sign-up-active">1. 输入手机号 </span>
+				<span>2. 输入验证码 </span>
+				<span>3. 设置密码</span>
+				
+				
+			</p>
+			
+			<div class="login-form-holder">
+				<div data-demo-html="true" class="form-control">
+					<div class="ui-field-contain my-field-contain my-field-contain-last login-field-contain form-group top-bottom-border">
+					<label for="textinput-fc"><span class="lnr lnr-smartphone"></span></label>
+					<input  type="tel" name="phonenumber" placeholder="Enter your phone number" value="">
+			</div>
+			
+			</div><!--/demo-html -->
+			</div>
+			</div>
+			
+			<div class="step">
+			
+			<p class="sign-up-progress">
+			
+				<span class="sign-up-active">1. 输入手机号 </span>
+				<span class="sign-up-active">2. 输入验证码 </span>
+				<span>3. 设置密码</span>
+				
+				
+			</p>
+			
+			
+			
+			<div class="login-form-holder">
+				  <div data-demo-html="true" class="form-control">
+					<div class="ui-field-contain my-field-contain my-field-contain-last login-field-contain form-group top-bottom-border">
+					<label for="textinput-fc"><span class="lnr lnr-spell-check"></span></label>
+					<input  type="text" name="verfification" placeholder="Enter Verification Code" value="">
+			</div>
+		</div><!--/demo-html -->
+						  
+				</div>		  	
+			</div>
+			
+			
+			
+			<div class="step">
+			
+			<p class="sign-up-progress">
+			
+				<span class="sign-up-active">1. 输入手机号 </span>
+				<span class="sign-up-active">2. 输入验证码 </span>
+				<span class="sign-up-active">3. 设置密码</span>
+				
+				
+			</p>
+				 
+				 <div class="login-form-holder">
+				 
+				<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain login-field-contain form-group top-border">
+				<label for="textinput-fc"><span class="lnr lnr-lock"></span></label>
+				<input  type="password" id="fpassword" name="fpassword" placeholder="Password" value="">
+			</div>
+		</div><!--/demo-html -->
+		<div data-demo-html="true" class="form-control">
+			<div class="ui-field-contain my-field-contain my-field-contain-last login-field-contain form-group bottom-border">
+				<label for="textinput-fc"><span class="lnr lnr-lock"></span></label>
+				<input  type="password" name="rpassword" placeholder="Confirm Password" value="">
+			</div>
+		</div><!--/demo-html -->		  	
+			</div>
+			</div>
+			
+		
+			
+	
+			<div class="full-width-btn-container">
+					
+					
+					<button type="button" class="action btn-sky text-capitalize main-btn next btn">Next Step</button>
+					<button type="button" class="action btn-hot text-capitalize main-btn submit btn">Submit</button>
+			
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+	
+
+	
+	
+	
+	</div>
+	
+	</div>
+
+	</body>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var current = 1;
+		
+		widget      = $(".step");
+		btnnext     = $(".next");
+		btnback     = $(".back"); 
+		btnsubmit   = $(".submit");
+
+		// Init buttons and UI
+		widget.not(':eq(0)').hide();
+		hideButtons(current);
+		
+
+		// Next button click action
+		btnnext.click(function(){
+			if(current < widget.length){
+				// Check validation
+				if($(".form").valid()){
+					widget.show();
+					widget.not(':eq('+(current++)+')').hide();
+					
+				}
+			}
+			hideButtons(current);
+		})
+
+		// Back button click action
+		btnback.click(function(){
+			if(current > 1){
+				current = current - 2;
+				if(current < widget.length){
+					widget.show();
+					widget.not(':eq('+(current++)+')').hide();
+					
+				}
+			}
+			hideButtons(current);
+		})
+
+	    $('.form').validate({ // initialize plugin
+			ignore:":not(:visible)",			
+			rules: {
+				phonenumber : "required",
+				verfification : "required",
+				fpassword : "required",
+				rpassword: { required : true, equalTo: "#password"},
+			},
+	    });
+
+	});
+
+
+	// Hide buttons according to the current step
+	hideButtons = function(current){
+		var limit = parseInt(widget.length); 
+
+		$(".action").hide();
+
+		if(current < limit) btnnext.show();
+		if(current > 1) btnback.show();
+		if (current == limit) { 
+			// Show entered values
+			$(".display label:not(.control-label)").each(function(){
+				console.log($(this).find("label:not(.control-label)").html($("#"+$(this).data("id")).val()));	
+			});
+			btnnext.hide(); 
+			btnsubmit.show();
+		}
+	}
+</script>
+
+
+
+</html>

@@ -23,7 +23,7 @@
 		
 		$('#add-publication').live('click', function(e){
     
-				$('.my-publication-holder').append('<div class="ui-field-contain my-field-contain"><textarea class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"  placeholder="Publication" value=""></textarea></div>');
+				$('.my-publication-holder').prepend('<div class="ui-field-contain my-field-contain"><textarea class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"  placeholder="Publication" value=""></textarea></div>');
 
 	});
 		
@@ -39,6 +39,7 @@
 		<div class="collection-header" data-role="header" data-position="fixed">
         <h1>Publications</h1>
 		<a class="header-right-link header-return-link lnr lnr-chevron-left" href="home.html#home-me" data-ajax="false" data-transition="none"></a>
+		<a id="add-publication" class="main-btn" style="margin-top: 10px !important">ADD</a>
        
     </div><!-- /header -->
     
@@ -73,7 +74,8 @@
 	</div><!--/demo-html -->
 	
 	
-    	<button id="add-publication" class="main-btn">ADD PUBLICATION</button>
+    	
+		
     
 
 		
