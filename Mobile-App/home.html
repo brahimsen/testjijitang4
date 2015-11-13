@@ -15,6 +15,8 @@
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/mobile-script.js"></script>
+		<script src="js/follow-script.js"></script>
+		<script src="js/researchers-script.js"></script>
        <script id="panel-init">
 		
     
@@ -79,7 +81,7 @@
     	<div data-role="navbar">
 		<ul>
 			<li><a  href="#home-messages" data-transition="none" class="icon95-bubble active"><span class="footer-notification">5</span><span><br>Messages</span></a></li>
-			<li><a href="#home-followers" data-transition="none"   class="icon95-users"><span><br>Followers</span></a></li>
+			<li><a href="#home-followers" data-transition="none"   class="icon95-users"><span><br>Discover</span></a></li>
 			<li>
             <a href="#home-me" data-transition="none"  class="icon95-user"><span><br>Me</span></a>
             </li>
@@ -95,57 +97,160 @@
 
 </div><!-- /page -->
 
-
-
-
 <div data-role="page" id="home-followers" data-url="home-followers">
 
 		<div class="collection-header" data-role="header" data-position="fixed">
-        <h1>Followers</h1>
+        <h1>Discover</h1>
        
     </div><!-- /header -->
-    
-		<div data-demo-html="true">
-				<ul data-role="listview" class="mywidgets">
-					<li class="thirty-margin-top" data-icon="false"><a href="recommended-home.html" rel="external" data-transition="none"><span  class="lnr lnr-users mywidget-right-icon ui-li-icon"></span>Recommend to follow<span class="mywidgets-arrow icon15-arrow-right"></span></a></li>
-					<li data-icon="false"><a href="researchers.html" rel="external" data-transition="none"><span  class="lnr lnr-magnifier mywidget-right-icon ui-li-icon"></span>Find More Researchers<span class="mywidgets-arrow icon15-arrow-right"></span></a></li>
+	
+	
+				<div class="long-list-view-footer researchers-tabs" data-demo-html="true">
+				<div class="ui-grid-b">
+					<div class="ui-block-a" ><div class="ui-bar ui-bar-a"><a class="active">Editor's Pick</a></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a>Popular</a></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a>Latest</a></div></div>
 					
-				</ul>
+				</div><!-- /grid-b -->
+			</div><!--/demo-html -->
+			
+			<div class="long-list-view-footer my-researchers-tabs" data-demo-html="true">
+				<div class="ui-grid-b">
+					<div class="ui-block-a" ><div class="ui-bar ui-bar-a">
+					
+					
+					<select name="select-native-2" id="select-position">
+						<option value="All">All Positions</option>
+    					<option value="small">professor</option>
+    					<option value="medium">lab assistant</option>
+    					<option value="large">student</option>
+					</select>
+					
+					</div></div>
+					
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+					
+					<select name="select-native-2" id="select-field">
+					<option value="All">All Fields</option>
+    					<option value="small">econimics</option>
+    					<option value="medium">computer science</option>
+    					<option value="large">biology</option>
+					</select>
+					
+					
+					
+					</div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#interests-filter" data-transition="none" >Interests</a></div></div>
+					
+				</div><!-- /grid-b -->
+			</div><!--/demo-html -->
+			
+	
+    
+		
+		<div id="selected-interests"></div>
+		
+		<div data-demo-html="true">
+		
+
 				
-				<ul class="mylist-view1 home-messages-list" data-role="listview" data-inset="true">
-					<li class="thirty-margin-top" data-icon="false"><a href="profile.html" rel="external" data-transition="none">
+				<ul class=" researchers-list mylist-view1 follow-list" data-role="listview" data-inset="true" >
+					
+					
+					<li data-icon="false" >
+					
+					<div class="update-follow-top">
+					
+						<p><span>Ecnonmics<span> . <span>Big Data, Economics<span></p>
+						
+						
+					
+					
+					</div>
+					
+					<div class="follow-list-content">
+					<a href="#">
+					
+					<div class="follow-img-holder">		
 						<img src="img/brahim.png">
-					<div><h2>Mariuz Pudzianovski </h2> <span>Fan</span></div>
-					<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced the lawsuit between Costco Whole Sale Corporation</p></a>
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						<p><span>PHP Student</span> <span>Harvard University</span></p>
+
+						<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced</p></a>
+					
+					</div>
+					
+					</a>
+					
+					</div>
+				
+					
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
+					</div>
+				
 					</li>
-					<li data-icon="false"><a href="profile.html" rel="external" data-transition="none">
+					
+						<li data-icon="false" >
+						
+						<div class="update-follow-top">
+					
+					<p><span>Ecnonmics<span> . <span>Big Data, Economics<span></p>
+					
+					
+					</div>
+					
+					<div class="follow-list-content">
+					<a href="#">
+					
+					<div class="follow-img-holder">		
 						<img src="img/brahim.png">
-					<div><h2>Warning </h2> <span>Follower</span></div>
-					<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced the lawsuit between Costco Whole Sale Corporation</p></a>
+					</div>
+
+					
+					<div class="follow-content-holder">
+						<h2>Mariuz Pudzianovski </h2>
+						
+						
+
+						<p><span>PHP Student</span> <span>Harvard University</span></p>
+						
+						<p>by Margaret Grazzini. The article introduced</p>
+						
+						
+					
+					</div>
+					
+					</a>
+					
+					</div>
+				
+					
+					<div class="follow-list-btn" >
+					<button class="icon-user-add-outline followButton not-followed"></button>
+					</div>
+				
 					</li>
-					<li data-icon="false"><a href="profile.html" rel="external" data-transition="none">
-						<img src="img/brahim.png">
-					<div><h2>Brahim Senhaji </h2> <span>Follower</span></div>
-					<p>was published in the Berkeley Technology Law Journal on December 24, 2010, by Margaret Grazzini. The article introduced the lawsuit between Costco Whole Sale Corporation</p></a>
-					</li>
+					
+					
 
 					
 					
 				</ul>
 				
+	
 		</div><!--/demo-html -->
 		
-		
-		
-		
-		
-    	
-    
-<div data-role="footer" data-position="fixed" class="mobile-footer">
+		<div data-role="footer" data-position="fixed" class="mobile-footer">
     	<div data-role="navbar">
 		<ul>
-			<li><a  href="#home-messages" data-transition="none" class="icon95-bubble2"><span><br>Messages</span></a></li>
-			<li><a href="#home-followers" data-transition="none"   class="icon95-users2 active"><span><br>Followers</span></a></li>
+			<li><a  href="#home-messages" data-transition="none" class="icon95-bubble "><span class="footer-notification">5</span><span><br>Messages</span></a></li>
+			<li><a href="#home-followers" data-transition="none"   class="icon95-users active"><span><br>Discover</span></a></li>
 			<li>
             <a href="#home-me" data-transition="none"  class="icon95-user"><span><br>Me</span></a>
             </li>
@@ -157,6 +262,48 @@
     </div><!-- /footer -->
 		
 	</div>
+	
+	<div data-role="page" id="interests-filter">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Interests</h1>
+		<a  class="header-right-link header-return-link lnr lnr-chevron-left" href="#home-followers" data-transition="none"></a>
+		
+		</div><!-- /header -->
+    
+	
+   
+<div data-demo-html="true" class="interest-filter-holder">
+                <fieldset id="interests-checkbox" class="multiple-checkbox" data-role="controlgroup" data-type="horizontal" data-filter="true" data-icon="false">
+                    
+                    <input type="checkbox" name="Ajax" id="checkbox-h-2a">
+                    <label for="checkbox-h-2a">Ajax</label>
+                    <input type="checkbox" name="Jquery" id="checkbox-h-2b">
+                    <label for="checkbox-h-2b">Jquery</label>
+                    <input type="checkbox" name="Computer Science" id="checkbox-h-2c">
+                    <label for="checkbox-h-2c">Computer Science</label>
+					<input type="checkbox" name="technology" id="checkbox-h-2d">
+                    <label for="checkbox-h-2d">technology</label>
+					<input type="checkbox" name="Science" id="checkbox-h-2e">
+                    <label for="checkbox-h-2e">Science</label>
+					<input type="checkbox" name="history" id="checkbox-h-2f">
+                    <label for="checkbox-h-2f">history</label>
+					<input type="checkbox" name="magic" id="checkbox-h-2g">
+                    <label for="checkbox-h-2g">magic</label>
+					<input type="checkbox" name="IT" id="checkbox-h-2h">
+                    <label for="checkbox-h-2h">IT</label>
+                </fieldset>
+            </div><!--/demo-html -->
+		
+		
+
+        </div>
+	
+        </div>
+
+
+
+
 	
 	<div data-role="page" id="home-me" data-url="home-me">
 
@@ -175,8 +322,8 @@
 					
 					<div class="long-list-view-footer" data-demo-html="true">
 				<div class="ui-grid-a">
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><a><span>10 </span> Fans</a></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a><span>43</span> Followers</a></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#profile-follows" data-transition="none"><span>10 </span> Fans</a></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#profile-follows" data-transition="none"><span>43</span> Followers</a></div></div>
 				</div><!-- /grid-b -->
 			</div><!--/demo-html -->
 					
@@ -203,7 +350,7 @@
     	<div data-role="navbar">
 		<ul>
 			<li><a  href="#home-messages" data-transition="none" class="icon95-bubble2"><span><br>Messages</span></a></li>
-			<li><a href="#home-followers" data-transition="none" class="icon95-users"><span><br>Followers</span></a></li>
+			<li><a href="#home-followers" data-transition="none" class="icon95-users"><span><br>Discover</span></a></li>
 			<li>
             <a href="#home-me" data-transition="none" class="icon95-user2 active"><span><br>Me</span></a>
             </li>

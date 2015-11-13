@@ -2,6 +2,9 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/headerscript.js"></script>
+<script src="js/input-scripts.js"></script>
+<script src="js/user-form-validation.js"></script>
+
 
 
 
@@ -53,13 +56,22 @@
 </div>
 
 <div id="index-Sign-in-Modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+ <div class="modal-header">
+ 
+ <p>SIGN IN </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
  
  <div class="sign-in-alert full-width"> Wrong Email/Password combination.</div>
   <div class="modal-body">
-    <legend class="modal-legend">Log in Before Submit</legend>		
+    <legend class="modal-legend"><p>Welcome Back </p><p> Let us start reading and writing</p></legend>		
 		
-		<a class="wechat-login"><span class="icon-uniE611"></span> Continue with Wechat</a>
-		
+		<div class="wechat-btn-holder">
+		<a class="new-small-wide-button light-green-button  middle-button"><span class="icon-uniE611"></span> Continue with Wechat</a>
+		</div>
 		
 		<div class="form-group">
 			<div class="controls">
@@ -80,7 +92,11 @@
        
         <div class="form-group sign-in-text ">
 			
-            <p><a href="http://myjijitang/password.html" class="login-link"> Find back my Password </a></p>
+            <p>
+				<a href="http://myjijitang/password.html" class="login-link"> Forgot Password</a>
+				<a href="http://myjijitang/password.html" class="login-link"> Quick Phone number Login</a>
+				
+			</p>
             
 		</div>
 		
@@ -88,17 +104,22 @@
 	
 		
 		
-	      <div class="controls">
+	      <div class="controls modal-btn-holder">
 		  
-	       <button id="mybtn" class="main-button  pass-confirm-btn modal-confirm-btn" >Sign In</button>
-           <button data-dismiss="modal"  class="gray-btn-log pass-confirm-btn modal-confirm-btn" >Back To Main</button>
+	       <button id="mybtn" class="new-small-wide-button new-black-btn  middle-button" >Sign In</button>
+           
 
          
-           <hr class="login-line">
-           <div class="New-user-sign" style="text-align: center" ><a id="signup-link"> If You Are New To JIJIANG, Sign Up </a></div>
+           
+           
+  </div>
+  
+  
 	        
 	      </div>
-  </div>
+		  
+		  <div class="New-user-sign" style="text-align: center" ><a id="signup-link"> If You Are New To JIJIANG, Sign Up </a></div>
+		  
 </div>
 
 
@@ -107,14 +128,24 @@
 <!--Sign Up Modal-->
 
 
-<div id="Sign-up-Modal" class="modal hide fade sign-modals" tabindex="-1" style=" top: 54%">
+<div id="" class="modal hide fade sign-modals" tabindex="-1" style=" top: 54%">
+
+	 <div class="modal-header">
+ 
+ <p>Sign Up </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
   <div class="modal-body zero-margin" >
    <form class="myfirstform" role="form">
 	 
-		<legend>30 Seconds Sign Up</legend>		
+		<legend class="modal-legend"><p>Welcome ! </p><p> You are Just a Few Clicks Away</p></legend>		
 		
-		<a class="wechat-login"><span class="icon-uniE611"></span> Continue with Wechat</a>
-		
+		<div class="wechat-btn-holder">
+		<a class="new-small-wide-button light-green-button  middle-button"><span class="icon-uniE611"></span> Continue with Wechat</a>
+		</div>
 		<div class="form-group">
 			<div class="controls">
 			    <div class="input-group">
@@ -148,24 +179,143 @@
 			</div>
 		</div>
     
-            <div class="controls">
+            <div class="controls modal-btn-holder">
 		  
-	       <button type="submit"  class="main-button  pass-confirm-btn modal-confirm-btn" >Sign Up</button>
-           <button data-dismiss="modal"  class="gray-btn-log pass-confirm-btn modal-confirm-btn" >Back To Main</button>
+	       <button type="submit"  class="new-small-wide-button new-black-btn  middle-button" >Sign Up</button>
+         
 
          
-           <hr class="login-line">
-           <div class="New-user-sign" style="text-align: center" ><a id="Login-link"> If You Have a Jijitang Account, Sign In </a></div>
+           
+          
 	        
 	      </div>
           
 		</form>
   </div>
+   <div class="New-user-sign" style="text-align: center" ><a id="Login-link"> If You Have a Jijitang Account, Sign In </a></div>
 </div>
 
 
 
+<div id="Sign-up-Modal" class="modal hide fade sign-modals" tabindex="-1" style=" top: 54%">
 
+	 <div class="modal-header">
+ 
+ <p>User Registration </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+  <div class="modal-body zero-margin" >
+<form class="form-horizontal form" >
+	  	
+		<div class="error-message-style" id="sign-up-error"></div>
+		
+		
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+		
+		
+		
+				<div class="input-group">
+					<label class="control-label">Your Name:</label>
+					<input class="form-control" name="fullname" placeholder="Your Name:">
+				</div>
+				
+				<div class="input-group">
+					<label class="control-label">Short Description of Yourself:</label>
+					<textarea class="form-control" placeholder="Description"></textarea>
+				</div>
+		
+			</div>
+			
+			<div class="step">
+			
+			<div class="input-group">
+				<p>Position</p>
+					<input class="form-control"  placeholder="Position">
+				</div>
+				
+				<div class="input-group">
+				<p>Institution</p>
+					<input class="form-control"  placeholder="Institution">
+				</div>
+				
+				<div class="input-group">
+				<p>Department</p>
+					<input class="form-control"  placeholder="Department">
+				</div>
+			
+			<div class="input-group" >
+					
+					<p>Research Field</p>
+					<select name="field" class="form-control required">
+						<option value="">Reaearch Field</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						</select>
+				</div>
+			
+		
+			<div class="input-group " >
+				<p>Your Research Direction:</p>
+				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="You can add at most 5 Key Words, Type ENTER to create one key word"/>
+				
+				<div class="project-keyword-list"></div>
+				</div>
+		 
+		 
+		
+		
+		
+
+		
+		
+		
+		<div class="input-group reserach-setting-experience" >
+				
+					<p>Research Experience</p>
+					
+				<textarea placeholder="Less Then 2000 words"></textarea>
+				</div>
+
+	  	
+			</div>
+			
+			
+			
+		
+			
+			
+			
+			
+			
+			
+			
+		
+			<div data-role="footer" data-position="fixed" class="profile-footer thirty-margin-top user-info-footer">
+	
+			
+					
+					
+					<button type="button" class="action btn-sky text-capitalize main-btn next btn">NEXT</button>
+					<button type="button" class="action btn-hot text-capitalize main-btn submit btn">SUBMIT</button>
+			
+			
+			
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+  </div>
+   <div class="New-user-sign" style="text-align: center" ><a id="Login-link"> If You Have a Jijitang Account, Sign In </a></div>
+</div>
 
 
 

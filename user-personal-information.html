@@ -7,6 +7,7 @@
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="mobile-fonts.css" type="text/css" media="screen" />
 
 <link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -17,22 +18,42 @@
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/jquery.validate.min.js"></script>
+<script src="js/user-form-validation.js"></script>
 
 <script src="js/zebra_datepicker.js"></script>
 
 <style>
 
-.input-group {
-	
-	margin-bottom: 25px;
-
-
-
-}
+.
 
 input {
 
 height: 40px !important;
+
+}
+
+input:focus {
+
+border: 1px solid #a4ce4c !important;
+
+}
+
+textarea:focus {
+
+border: 1px solid #a4ce4c !important;
+
+}
+
+textarea:focus {
+
+border: 1px solid #a4ce4c !important;
+box-shadow: none !important;
+
+}
+
+textarea {
+
+	
 
 }
 
@@ -48,7 +69,32 @@ height: 40px !important;
 
 }
 
+.input-focused {
+
+color: #a4ce4c !important;
+
+}
+
+.form-horizontal .control-label {
+
+	text-align: left;
+	width: auto !important;
+
+}
+
 </style>
+
+<script>
+
+$(document).ready(function(){
+	
+	$(".form-control").on("focus blur",function(){
+    $(this).siblings(".control-label").toggleClass("input-focused");
+});
+	
+	});
+
+</script>
 
 
 <script>
@@ -93,23 +139,122 @@ $(document).ready(function(){
 
 <body>
 
-  	<div class="header-wrapper">
-			
-            <header>
-
-
-			</header>
-
-		</div>
+  	
 
 	<div class="container-fluid">
 	
-		<div class="create-project-holder">
+		<div class="user-form-holder">
 		
 			
+			<div class="user-form-inner">
+			
+			
+			<form class=" form" >
+	  	
+		<div class="error-message-style" id="sign-up-error"></div>
 		
-			<p>
-Personal Information</p>
+		
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+		<div class="user-info-upload-img">
+			
+			
+                        
+                        
+        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="#" />
+					
+                        <input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image" >
+						
+						<p class="input-file-text">ADD PHOTO</p>
+                        
+           
+			
+			
+			
+			
+			</div> 
+			
+		<div class="user-info-first-step-right">
+		
+		
+				<div class="input-group">
+					
+					<input class="form-control" name="fullname" placeholder="Your Name">
+				</div>
+				
+				<div class="input-group">
+					
+					<textarea class="form-control" placeholder="Description"></textarea>
+				</div>
+				
+		</div>
+		
+			</div>
+			
+			<div class="step">
+			
+			<div class="input-group">
+			
+					<input class="form-control"  placeholder="Position">
+				</div>
+				
+				<div class="input-group">
+				
+					<input class="form-control"  placeholder="Institution">
+				</div>
+				
+				<div class="input-group">
+				
+					<input class="form-control"  placeholder="Department">
+				</div>
+			
+			<div class="input-group" >
+					
+					
+					<select name="field" class="form-control required">
+						<option value="">Reaearch Field</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						</select>
+				</div>
+			
+		
+			<div class="input-group " >
+				
+				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="You can add at most 5 Key Words, Type ENTER to create one key word"/>
+				
+				<div class="project-keyword-list"></div>
+				</div>
+		 
+		 
+		
+		
+		
+
+		
+		
+		
+		<div class="input-group reserach-setting-experience" >
+				
+					
+					
+				<textarea placeholder="Less Then 2000 words"></textarea>
+				</div>
+
+	  	
+			</div>
+			
+				<div class="step">
+		
+					<h1>Last step </h1>
+		
+			</div>
+			
+			
+			
+		
 			
 			
 			
@@ -117,11 +262,27 @@ Personal Information</p>
 			
 			
 			
+		
 			
-			<div class="create-project-inner">
+	
+			
+					 <div class="controls modal-btn-holder">
+					
+					<button type="button" class="action btn-sky text-capitalize main-btn next btn new-small-wide-button new-black-btn  middle-button">NEXT</button>
+					<button type="button" class="action btn-hot text-capitalize main-btn submit btn new-small-wide-button new-black-btn  middle-button">SUBMIT</button>
 			
 			
 			
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+			
+			
+			<!--
 			
 			<form action="create_project-privacy.html" class="project-form-main" role="form">
 			
@@ -129,15 +290,7 @@ Personal Information</p>
 				
 			  <div>
 			  
-				<div class="input-group">
-				<p>Your Name:</p>
-					<input class="form-control" placeholder="Your Name:">
-				</div>
 				
-				<div class="input-group">
-				<p>Short Description of Yourself:</p>
-					<textarea class="form-control" placeholder="Description"></textarea>
-				</div>
 				
 				
 				
@@ -149,20 +302,7 @@ Personal Information</p>
 			
 			
 			
-			<div>
 			
-			<div class="project-form-image-inner">
-                        
-                        
-        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="#" onError="this.src='img/screenshot-128.png';"/>
-                        
-                        
-            </div>
-			
-			<input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image">
-			
-			
-			</div>
 			
 			
 			<div>
@@ -189,31 +329,13 @@ Personal Information</p>
 						</select>
 				</div>
 				
-				<div class="input-group " >
-				<p>Your Research Direction:</p>
-				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="You can add at most 5 Key Words, Type ENTER to create one key word"/>
-				
-				<div class="project-keyword-list"></div>
-				</div>
 				
 				
-				<div class="input-group reserach-setting-institute" >
 				
-					<p>Research Institute</p>
-					<span></span>
-				
-					<input type="text" placeholder="Institute">
-					<input type="text" placeholder="Department">
-					<input type="text" placeholder="Your Role">
-				</div>
+			
 				
 				
-				<div class="input-group reserach-setting-experience" >
 				
-					<p>Research Experience</p>
-					
-				<textarea placeholder="Less Then 2000 words"></textarea>
-				</div>
 			
 			
 
@@ -227,6 +349,8 @@ Personal Information</p>
 		<button type="submit" id="mybtn"  class="main-button pass-confirm-btn create-project-btn ">Next</button>
 			
 			</form>
+			
+			-->
 			
 			
 			
@@ -243,7 +367,7 @@ Personal Information</p>
 
 <script>
 
-$( "header" ).load( "header-jijitang.html" ); 
+
 $( "footer" ).load( "footer.html" );
 
 
