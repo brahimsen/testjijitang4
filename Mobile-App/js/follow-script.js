@@ -6,19 +6,44 @@
         //$.ajax(); Do Unfollow
         
         $button.removeClass('following');
-        $button.addClass('icon-user-add-outline');
-		$button.removeClass('icon-user-delete');
+		$button.removeClass('both-follow');
+		$button.addClass('not-followed');
+        
        
-    } else {
-        
-        // $.ajax(); Do Follow
-        $button.removeClass('icon-user-add-outline');
-        $button.addClass('following');
-		$button.addClass('icon-user-delete');
-		
-		
-        
     }
+	
+	else if($button.hasClass('both-follow')){
+        
+        //$.ajax(); Do Unfollow
+        
+        $button.removeClass('following');
+		$button.removeClass('both-follow');
+		$button.addClass('not-followed');
+        
+       
+    }
+
+   else if($button.hasClass('not-followed') && $button.hasClass('he-follow-flag')){
+        
+        //$.ajax(); Do Unfollow
+        
+        $button.removeClass('following');
+		$button.addClass('both-follow');
+		$button.removeClass('not-followed');
+        
+       
+    } else if($button.hasClass('not-followed') && !$button.hasClass('he-follow-flag')){
+        
+        //$.ajax(); Do Unfollow
+        
+        $button.addClass('following');
+		$button.removeClass('both-follow');
+		$button.removeClass('not-followed');
+        
+       
+    }
+	
+	
 });
 
 

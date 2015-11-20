@@ -1757,15 +1757,15 @@ background: #eee !important;
 			
 			.follow-list-content img {
 			
-				width: 40px;
-				border-radius: 40px !important;
+				width: 50px;
+				border-radius: 50px !important;
 			
 			}
 			
 			.follow-list-btn {
 			position: absolute;
 			right: 10px;
-			top: 55px;
+			top: 76px;
 			
 			
 			}
@@ -1813,6 +1813,7 @@ background: #eee !important;
 				font-size: 14px !important;
 				margin-top: 0px !important;
 				font-weight: normal !important;
+				width: calc(100% - 30px);
 			
 			
 			}
@@ -1823,6 +1824,7 @@ background: #eee !important;
 				margin-bottom: 5px !important;
 				margin-top: 0px !important;
 				line-height: 18px !important;
+				width: calc(100% - 30px);
 				
 			
 			
@@ -1842,12 +1844,16 @@ background: #eee !important;
 			.follow-list-btn button  {
 			
 				text-align: right;
-				background: transparent !important;
+				
 				box-shadow: none !important;
 				border: 0px !important;
 				margin-bottom: 0px !important;
 				margin-top: 0px !important;
-				padding: 5px !important;
+				width: 30px !important;
+				height: 30px;
+				padding: 5px;
+				border-radius: 2px !important;
+				background-color: transparent !important;
 			
 			
 				
@@ -1856,8 +1862,10 @@ background: #eee !important;
 			
 				.not-followed {
 			
-				color: #999 !important;
+				color: #a4ce4c !important;
 				font-size: 24px !important;
+				background-image: url(img/icon-follow.png) !important;
+				background-size: cover;
 				
 				
 			
@@ -2316,8 +2324,22 @@ background: #eee !important;
 				}
 				
 				.following {
+				color: #999 !important;
 				
-				color: #a4ce4c !important;
+				background-image: url(img/icon-followed.png) !important;
+				background-size: cover;
+				
+				
+				
+				
+				}
+				
+				.both-follow {
+				color: #999 !important;
+				
+				background-image: url(img/icon-both.png) !important;
+				background-size: cover;
+				
 				
 				
 				
@@ -2566,6 +2588,7 @@ background: #eee !important;
 				.profile-image-edit a  {
 				
 					height: 70px !important;
+					padding-left: 15px !important;
 				
 				
 				
@@ -2576,6 +2599,8 @@ background: #eee !important;
 					height: 50px !important;
 					margin-top: 10px !important;
 					margin-left: 10px !important;
+					left: auto !important;
+					right: 43px !important;
 				
 				
 				
@@ -3319,5 +3344,17 @@ margin-bottom: 100px !important;
 	color: #fff;
 	background: red;
 	border-radius: 20px;
+
+}
+
+.follow-btn-top-fix {
+
+	top: 22px !important;
+
+}
+
+.fifty-height {
+
+	height: 50px;
 
 }

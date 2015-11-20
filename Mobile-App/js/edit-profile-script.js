@@ -34,6 +34,23 @@
 	
 
 	});
+	
+	$('#user-role-quit').live('click', function(e){
+    
+	var newname = $("#role").val();
+	
+	if ($("#role").val()) { 
+	
+	
+	
+	$("#role-content").text(newname);
+	}
+	
+	
+
+	});
+	
+	
 
 
 	$('#profile-field-quit').live('click', function(e){
