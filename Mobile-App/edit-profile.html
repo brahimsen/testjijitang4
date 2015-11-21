@@ -42,16 +42,16 @@
      <div data-demo-html="true">
 		
 		
+		<p class="widget-label">Personal Profile</p>
+		<ul data-role="listview" class="mywidgets edit-profile-list">
 		
-		<ul data-role="listview" class="mywidgets">
 		
-		
-				<li class="edit-profile-small-wdiget thirty-margin-top profile-image-edit " data-icon="false"><a >
+				<li class="edit-profile-small-wdiget profile-image-edit " data-icon="false"><a >
 					
 					
 					<img src="img/brahim.png" />
 					
-					<p class="profile-info-content" style="padding-top: 10px">Edit Profile<span class="lnr lnr-chevron-right"></span></p>
+					<p class="profile-info-content" style="padding-top: 10px">Edit Photo<span class="lnr lnr-chevron-right zero-right-margin"></span></p>
 					
 					
 				</a></li>
@@ -67,38 +67,31 @@
 					
 					</p>
 					
+					<div class="lnr lnr-chevron-right profile-right-chevron" ></div>
+					
 					
 					</a></li>
 					
-					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#user-bio-page" >
+					<li class="edit-profile-small-wdiget  " data-icon="false"><a data-transition="none" href="#user-fullname" >
 					
-					<p class="edit-profile-label">Short Bio</p>
 					
-					<p id="bio-content" class="profile-info-content">Graduated from al akhwayan university with bachelor of science in computer science, of busines administration
 					
-					<span class="lnr lnr-chevron-right"></span>
+					<p  class="profile-info-content">Short Bio
+					
+					<span id="bio-content" > Graduated from al akhwayan university with bachelor of science in computer science, of busines administration </span>
 					
 					</p>
 					
-					
-					</a></li>
-					
-					<li class="edit-profile-small-wdiget thirty-margin-top" data-icon="false"><a data-transition="none" href="#user-institute" >
-					
-					
-					
-					<p class="profile-info-content">
-					
-						<span class="institute-span" id="role-content">Head Researcher </span> at 
-						<span class="institute-span" id="dept-content">Schoold of Science and Engineering</span>, 
-						<span class="institute-span" id="institute-content">Al Akhawayn University</span>,
-						
-						<span class="lnr lnr-chevron-right"></span>
-						
-						</p>
+					<div class="lnr lnr-chevron-right profile-right-chevron" ></div>
 					
 					
 					</a></li>
+					
+				</ul>
+				
+				
+					<p class="widget-label">Research Background</p>
+					<ul data-role="listview" class="mywidgets edit-profile-list">
 					
 					<li class="edit-profile-small-wdiget  " data-icon="false"><a data-transition="none" href="#user-role" >
 					
@@ -110,10 +103,43 @@
 					
 					</p>
 					
+					<div class="lnr lnr-chevron-right profile-right-chevron" ></div>
+					
 					
 					</a></li>
 					
+					<li class="edit-profile-small-wdiget  " data-icon="false"><a data-transition="none" href="#user-inst" >
 					
+					
+					
+					<p  class="profile-info-content">Institution
+					
+					<span id="institute-content" > Al Akhawayn University </span>
+					
+					</p>
+					
+					<div class="lnr lnr-chevron-right profile-right-chevron" ></div>
+					
+					</a></li>
+					
+					<li class="edit-profile-small-wdiget  " data-icon="false"><a data-transition="none" href="#user-dpt" >
+					
+					
+					
+					<p  class="profile-info-content">Department
+					
+					<span id="dept-content" > Schoold of Science and Engineering </span>
+					
+					</p>
+					
+					<div class="lnr lnr-chevron-right profile-right-chevron" ></div>
+					
+					</a></li>
+					
+					</ul>
+					
+					
+					<ul data-role="listview" class="mywidgets edit-profile-list edit-profile-last-list">
 					
 					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#user-field" >
 					
@@ -121,6 +147,7 @@
 					
 					<p  class="profile-info-content">Field <span id="field-content">Economics</span></p>
 					
+					<div class="lnr lnr-chevron-right profile-right-chevron" ></div>
 					
 					</a></li>
 					
@@ -128,22 +155,23 @@
 					
 					
 					
-					<p class="profile-info-content"><span class="direction-span">JQUERY</span><span class="direction-span" >Front End development</span><span class="direction-span" >HTML5</span><span class="direction-span" >CSS3</span>
+					<p class="profile-info-content">Research Interests
 					
-					<span class="lnr lnr-chevron-right"></span>
+					<span> JQuery, Front End Development, HTML5, CSS3 </span>
 					
 					</p>
 					
+					<div class="lnr lnr-chevron-right profile-right-chevron" ></div>
 					
 					</a></li>
 					
 					<li class="edit-profile-small-wdiget" data-icon="false"><a data-transition="none" href="#user-experience" >
 					
-					<p class="edit-profile-label">Research Experience</p>
+					<p class="research-exp-label">Research Experience</p>
 					
 					<p id="experience-content" class="profile-info-content">Graduated from al akhwayan university with bachelor of science in computer science, of busines administration Graduated from al akhwayan university with bachelor of science in computer science, of busines administration Graduated from al akhwayan university with bachelor of science in computer science, of busines administration 
 					
-					<span class="lnr lnr-chevron-right"></span>
+					
 					
 					</p>
 					
@@ -201,6 +229,50 @@
 			<div class="ui-field-contain my-field-contain login-field-contain form-group ">
 				
 				<input id="role"  type="text" name="fullname" placeholder="Position" value="Head Researcher">
+			</div>
+		
+		
+
+        </div>
+	
+        </div>
+		
+		<div data-role="page" id="user-inst">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Institution</h1>
+		<a id="profile-inst-quit" class="header-right-link header-return-link lnr lnr-chevron-left" href="#Edit-profile-home" data-transition="none"></a>
+		</div><!-- /header -->
+    
+		
+   
+    	   <div role="main">
+		
+			<div class="ui-field-contain my-field-contain login-field-contain form-group ">
+				
+				<input id="inst"  type="text"  placeholder="Position" value="Al Akhawayn University">
+			</div>
+		
+		
+
+        </div>
+	
+        </div>
+		
+		<div data-role="page" id="user-dpt">
+
+		<div class="collection-header" data-role="header" data-position="fixed">
+        <h1>Department</h1>
+		<a id="profile-dpt-quit" class="header-right-link header-return-link lnr lnr-chevron-left" href="#Edit-profile-home" data-transition="none"></a>
+		</div><!-- /header -->
+    
+		
+   
+    	   <div role="main">
+		
+			<div class="ui-field-contain my-field-contain login-field-contain form-group ">
+				
+				<input id="dpt"  type="text"  placeholder="Position" value="School of Science and Engineering">
 			</div>
 		
 		

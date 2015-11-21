@@ -50,6 +50,40 @@
 
 	});
 	
+	$('#profile-inst-quit').live('click', function(e){
+    
+	var newname = $("#inst").val();
+	
+	if ($("#inst").val()) { 
+	
+	
+	
+	
+	
+	$("#institute-content").text(newname);
+	}
+	
+	
+
+	});
+	
+	$('#profile-dpt-quit').live('click', function(e){
+    
+	var newname = $("#dpt").val();
+	
+	if ($("#dpt").val()) { 
+	
+		
+	
+	
+	
+	$("#dept-content").text(newname);
+	}
+	
+	
+
+	});
+	
 	
 
 
