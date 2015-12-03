@@ -21,6 +21,8 @@
 	});
 	
 	$('#profile-name-quit').live('click', function(e){
+		
+	
     
 	var newname = $("#fullenametext").val();
 	
@@ -36,12 +38,18 @@
 	});
 	
 	$('#user-role-quit').live('click', function(e){
-    
-	var newname = $("#role").val();
+		
+	if ($("input[name='position-choice']:checked").val()) { 
 	
-	if ($("#role").val()) { 
+	var newfield = $("input[name='position-choice']:checked").val();
 	
+	$("#role-content").text(newfield);
 	
+	} 
+	
+	if ($("#role").val() != "") { 
+	
+		var newname = $("#role").val();
 	
 	$("#role-content").text(newname);
 	}

@@ -3426,3 +3426,28 @@ margin-top: 20px !important;
 	display: none !important;
 
 }
+
+.empty-section {
+
+padding-top: 20px;
+padding-bottom: 20px;
+text-align: center;
+color: #999 !important;
+
+}
+
+.my-radio-boxes label {
+
+padding-top: 15px;
+padding-bottom: 15px;
+
+}
+
+.ui-radio .ui-btn.ui-radio-on:after {
+
+	width: 18px;
+	height: 18px;
+	background: #a4ce4c !important;
+	border-color: #a4ce4c !important;
+
+}

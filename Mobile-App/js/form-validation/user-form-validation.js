@@ -96,20 +96,22 @@ $(document).ready(function(){
 	
 	$('#user-position-quit').live('click', function(e){
 		
-		
+	if ($("input[name='field-choice']:checked").val()) { 
+	
+	var newfield = $("input[name='field-choice']:checked").val();
+	
+	$("#position-content").text(newfield);
+	
+	} 	
     
 	var newtext = $("#positiontext").val();
 	
 	
-	if(newtext == "") {
+	if($("#positiontext").val() != "") {
 	
 	
-	$("#position-content").text("Position")
+	$("#position-content").text(newtext)
 	
-	}else{
-		
-		$("#position-content").text(newtext)
-		
 	}
 
 	});
