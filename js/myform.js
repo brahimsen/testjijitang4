@@ -8,7 +8,7 @@ $(".myfirstform").validate(
 {name:"required",
 email:{required:true,email:true},
 pass: {required:true, minlength: 6},
-passconf: {required:true, equalTo: "#pass"},
+passconf: {required:true, equalTo: "#passregi"},
 },
 
 messages: {
@@ -17,7 +17,7 @@ email: {
 required: "Please enter your Email",
 email: "Please Enter a valid Email address"
 },
-pass: {
+passregi: {
 required: "Please enter your password",
 minlength: "Password must be at least 6 characters"
 },
