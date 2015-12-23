@@ -1,0 +1,137 @@
+.settings-page {
+
+height: auto;
+overflow: hidden;
+margin-top: 45px;
+background: #ecead4;
+
+}
+
+.settings-page-nav {
+
+width: 17%;
+background: #ecead4;
+float: left;
+text-align: center;
+padding-left: 1.5%;
+padding-right: 1.5%;
+
+
+}
+
+.settings-page-content {
+
+width: 80%;
+background: #fff;
+float: left;
+
+
+
+
+}
+
+.settings-page-header {
+
+color: #fff;
+font-size: 18px;
+line-height: 70px;
+background: #a4ce4c !important;
+padding-left: 20px;
+
+}
+
+.settings-page-nav > img {
+
+width: 120px;
+border-radius: 120px;
+
+}
+
+.settings-page-nav > div {
+
+margin-top: 15px;
+margin-bottom: 15px;
+padding-top: 30px;
+padding-bottom: 30px;
+border-top: 1px solid #000;
+border-bottom: 1px solid #000;
+
+}
+
+.settings-page-nav > div > a {
+
+
+display: block;
+color: #000;
+font-size: 16px;
+text-align: left;
+padding: 10px;
+
+}
+
+.settings-page-nav > div > .active {
+
+border: 2px solid #000;
+
+}
+
+.profile-form-section {
+
+margin-left: 20px;
+margin-right: 20px;
+padding-top: 25px;
+padding-bottom: 25px;
+border-bottom: 1px solid #ccc;
+height: auto;
+overflow: hidden;
+
+}
+
+.profile-form-label {
+
+width: 175px;
+float: left;
+
+
+
+}
+
+.profile-form-content {
+
+width: calc(100% - 175px);
+float: left;
+
+
+}
+
+.profile-form-content input {
+
+width: 300px;
+border: 2px solid #000 !important;
+margin-bottom: 0px !important
+
+
+}
+
+.profile-form-content textarea {
+
+
+border: 2px solid #000 !important;
+height: 80px !important;
+margin-bottom: 0px !important
+
+
+}
+
+.settings-page-nav > a {
+
+width: 100%;
+display: inline-block;
+
+}
+
+.user-info-upload-img {
+
+border: 1px solid #ccc;
+
+}

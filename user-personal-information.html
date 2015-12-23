@@ -7,7 +7,9 @@
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="mobile-fonts.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
 
 <link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -19,6 +21,9 @@
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/user-form-validation.js"></script>
+<script src="js/text-length-script.js"></script>
+<script src="js/profiles-script.js"></script>
+
 
 <script src="js/zebra_datepicker.js"></script>
 
@@ -82,6 +87,10 @@ color: #a4ce4c !important;
 
 }
 
+img[src='Error.src']{
+    display: none;
+}
+
 </style>
 
 <script>
@@ -104,11 +113,11 @@ $(document).ready(function(){
 
 	
 	
-	$("#project-keywords").keypress(function(e) {
-    if(e.which == 13) {
-           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete'>x</div></div>");
+	$("#add-interests-btn").click(function(e) {
+    
+           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete lnr lnr-cross'></div></div>");
 	   $("#project-keywords").val('')
-    }
+   
 });
 
 	 $('.project-keyword-list').on('click', '.tag-delete', function(){
@@ -119,6 +128,27 @@ $(document).ready(function(){
 	
 	
 	});
+	
+	
+	 $(document).ready(function() {
+  
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#fileToUploaddis').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#fileToUpload").change(function(){
+        readURL(this);
+    });
+  
+   });
 
 </script>
 
@@ -157,17 +187,26 @@ $(document).ready(function(){
 		<div class="box row-fluid">	
 			
 			<div class="step">
+			 <div class="modal-header user-step-header">
+ 
+				<p>Personal Profile </p>
+				<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+
+ 
+				</div>
+				
+				<p class="user-step-text">Tell us a Bit More About Yourself</p>
 			
 		<div class="user-info-upload-img">
 			
 			
                         
                         
-        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="#" />
+        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="img/select-img.png"  />
 					
                         <input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image" >
 						
-						<p class="input-file-text">ADD PHOTO</p>
+						
                         
            
 			
@@ -186,7 +225,8 @@ $(document).ready(function(){
 				
 				<div class="input-group">
 					
-					<textarea class="form-control" placeholder="Description"></textarea>
+					<textarea id="shortbio" class="form-control" placeholder="Short Bio"></textarea>
+					<p class="text-counter" id="bio-counter"><span>0</span>/200</p>
 				</div>
 				
 		</div>
@@ -194,6 +234,17 @@ $(document).ready(function(){
 			</div>
 			
 			<div class="step">
+			 <div class="modal-header user-step-header">
+
+				<p>Research Profile </p>
+				<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+
+ 
+				</div>
+				
+				<p class="user-step-text">Tell us a Bit More About Your Reaearch</p>
+			
+			<label class="group-label">Position, Intitution and Department</label>
 			
 			<div class="input-group">
 			
@@ -209,46 +260,406 @@ $(document).ready(function(){
 				
 					<input class="form-control"  placeholder="Department">
 				</div>
+				
+			<hr class="user-sep-line">
+				
+				
 			
-			<div class="input-group" >
+			<div class="input-group user-field-group" >
 					
+					<label class="user-field-label">Research Field</label>
 					
-					<select name="field" class="form-control required">
+					<select name="field" class="form-control required user-form-select">
 						<option value="">Reaearch Field</option>
 						<option value="Economics">Economics</option>
 						<option value="Natural Sciences">Natural Sciences</option>
+						
 						</select>
+						
+						
+					
 				</div>
+				
+			<hr class="user-sep-line">
 			
+			<label class="group-label">Research Interests</label>
 		
-			<div class="input-group " >
+			<div class="input-group keywords-group " >
 				
-				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="You can add at most 5 Key Words, Type ENTER to create one key word"/>
-				
+				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="Type Your Reearch Interests"/>
+				<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
 				<div class="project-keyword-list"></div>
 				</div>
 		 
 		 
 		
 		
-		
+		<hr class="user-sep-line">
 
 		
 		
-		
+		<label class="group-label">Research Experience</label>
 		<div class="input-group reserach-setting-experience" >
 				
 					
 					
-				<textarea placeholder="Less Then 2000 words"></textarea>
+				<textarea id="reserachexp" placeholder="Less Then 2000 words"></textarea>
+				<p class="text-counter"  id="exp-counter"><span>0</span>/2000</p>
 				</div>
 
 	  	
 			</div>
 			
 				<div class="step">
+				
+				<div class="modal-header user-step-header">
+ 
+				<p>Recommended Researchers</p>
+				<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+
+ 
+				</div>
+				
+				<p class="user-step-text">Connect with fellow researchers</p>
 		
-					<h1>Last step </h1>
+					  <div id="demo">
+       
+
+              <div id="owl-demo" class="owl-carousel">
+			  
+				
+			  
+                
+                <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+</div>
+                <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<p class="profile-box-text">Graduated from al alakhwayan university, and illinois weseleyan university with a bachelor degree of computer science and
+	
+	a minor in business a administration Graduated from al alakhwayan university.</p>
+	
+	<div class="profile-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Followers</a>
+	<a><span>10</span> Fans</a>
+	<a><span>23</span> Projects</a>
+	<a><span>127</span> Articles</a>
+	</p>
+	</div>
+
+</div> 
+</div> 
+
+</div>
+
+              </div>
+              <div class="my-owl-navigation">
+                <a class="prev-user lnr lnr-chevron-left"></a>
+                <a class="next-user lnr lnr-chevron-right"></a>
+              
+              </div>
+
+      
+    </div>
 		
 			</div>
 			
@@ -365,6 +776,38 @@ $(document).ready(function(){
 
 </body>
 
+<style>
+    #owl-demo .item{
+        
+        padding: 0px 0px;
+        margin: 10px;
+        color: #FFF;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-align: center;
+    }
+    .customNavigation{
+      text-align: center;
+    }
+    .customNavigation a{
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+	
+	.profile-grid-item {
+	
+		width: 425px;
+	
+	}
+    </style>
+
+<script src="js/owl.carousel.js"></script>
+
 <script>
 
 
@@ -374,6 +817,40 @@ $( "footer" ).load( "footer.html" );
 
  
 </script>
+
+   <script>
+    $(document).ready(function() {
+
+      var owl = $("#owl-demo");
+
+      owl.owlCarousel({
+
+      items : 2, //10 items above 1000px browser width
+      itemsDesktop : [1000,2], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
+      itemsTablet: [600,1], //2 items between 600 and 0;
+      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      
+      });
+
+      // Custom Navigation Events
+      $(".next-user").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev-user").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+
+
+    });
+    </script>
+
 <script src="js/myjavascript.js"></script>
 
 

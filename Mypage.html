@@ -8,6 +8,7 @@
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/projects.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/article-grids.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
 
 <link href="style.css" rel="stylesheet" type="text/css">
@@ -25,6 +26,8 @@
 <script src="js/follow-script.js"></script>
 <script src="js/jquery.dataTables.js"></script>
 <script src="js/projects-script.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/profiles-script.js"></script>
 <script src="js/articles-graph-script.js"></script>
 
 
@@ -48,49 +51,29 @@ background: #fff;
 
 }
 
+.square-grids {
+
+background: #fff;
+padding-top: 15px;
+padding-bottom: 15px;
+
+}
+
+.project-square-grid-item {
+
+border: 5px solid #fff;
+
+}
+
+.square-grid-item {
+
+border: 1px solid #ddd;
+
+}
+
 
 </style>
 
-<script>
-
-	
- $(document).ready(function() {
-				$(".like-full").hide();
-				$(".like-holder").click(function(){
-					$('.like,.like-full',this).toggle();
-				
-				});
-			});
-			
-				$(".read-later-full").hide();
-				$(".read-later-holder").click(function(){
-					$('.read-later-empty',this).hide();
-					$('.read-later-full',this).show();
-				});
-				
-				$(".note-popover-update").hide();
-				$(".save,.note-popover-update").click(function(e){
-					
-					$('.note-popover-update',this).fadeIn();
-					e.stopPropagation();
-					
-				
-					
-				});
-				
-				$("html").click(function(e){
-					
-					$('.note-popover-update').hide();
-					
-					
-				
-					
-				});
-
-				
-
-
-</script>
 
 
 <body>
@@ -105,12 +88,17 @@ background: #fff;
 	</header>
 </div>
 
-	<div class="myprofile-top-bar" style="background: url(img/myback.jpg) no-repeat center center fixed;"> 
+	<div class="padding-wrapper">
+	
+	<div class="padding-wrapper-inner">
+
+	<div class="myprofile-top-bar" style="background: url(img/index-back2.jpg) no-repeat center center fixed;"> 
 	
 	
 			<div class="myprofile-image-holder">
 			
 					  <img src="img/brahim.png"/>
+					  
 			
 			</div>
 			
@@ -118,54 +106,65 @@ background: #fff;
 			
 			
 			
+			</div>
+			
+			<div class="profile-info-wrapper">
+			
+			<div class="profile-section-header">
+			
+			<a class="section-edit lnr lnr-pencil"></a>
+			
+			 <div class="follow-user-btn-holder twenty-left-margin-min-with hidden-tablet hidden-phone ">
+                     	<button class="follow-btn follow-btn-short">Follow</button>
+                     	<button class="unfollow-btn follow-btn-short">Unfollow</button>
+                </div> 
 			</div>
 			
 			<div class="profile-info-holder">
 			
+			
+			
 				<h3>Brahim Senhaji</h3>
-				 <p class="">24 Followers . 32 Fans</p>
+				<div class="my-bullets center-bullets profile-name-bullets"><span></span><span></span><span></span></div>
+				 <p class="profile-page-inst"><span>Graphic Designer</span><span>Beijing University</span><span>Department of social sciences</span></p>
                 <p class="">Graduated From Al Akhawayn University and Illinois Wesleyan University with a Bachelor of Science in Computer Science with a minor in Business Administration.</p>
-                
-               <div class="follow-user-btn-holder twenty-left-margin-min-with hidden-tablet hidden-phone ">
+                <p class="profile-page-meta-info"><span>7 Followers</span><span>0 Fans</span><span>13 Projects</span><span>5 Articles</span></p>
+				
+				<div class="follow-user-btn-holder-mobile twenty-left-margin-min-with hidden-desktop ">
                      	<button class="follow-btn follow-btn-short">Follow</button>
                      	<button class="unfollow-btn follow-btn-short">Unfollow</button>
-                </div>  
+                </div> 
+               
       
     </div>
 	
+	</div>
 	
-		<div id="sticky-anchor"></div>
-         <div class="new-index-nav-holder" id="sticky">
+	</div>
+	
+	</div>
+	
+	
+		
+         <div class="profile-page-nav-holder" >
          
          
          
-          <ul class="nav nav-tabs new-index-nav"  role="tablist">
+          <ul class="nav nav-tabs profile-page-tabs"  role="tablist">
     <li role="presentation" class="active mypage-tabs "><a href="#profile" aria-controls="home" role="tab" data-toggle="tab">Profile</a></li>
     <li role="presentation" class="mypage-tabs"><a href="#projects" aria-controls="profile" role="tab" data-toggle="tab">Projects</a></li>
-    <li role="presentation" class="mypage-tabs"><a href="#articles" aria-controls="messages" role="tab" data-toggle="tab">Articles</a></li>
-	<li role="presentation" class="mypage-tabs"><a href="#collections" aria-controls="messages" role="tab" data-toggle="tab">Colections</a></li>
-  <!--  <li role="presentation" class="dropdown new-index-nav-drop"><a id="collectionsss" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Collections<b class="caret"></b></a>
-    
-    		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
-            <li class="hidden-desktop hidden-tablet"><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Business and Economics(<span>22</span>)</a></li>
-            <li class="hidden-desktop hidden-tablet"><a href="#profile"tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Psychology(<span>43</span>)</a></li>
-            <li class="hidden-desktop hidden-tablet"><a href="#messages" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Natural Sciences(<span>35</span>)</a></li>
-          <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Technology (<span>22</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> Religion(<span>12</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> IT(<span>26</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> ARTS(<span>3</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> Tech(<span>4</span>)</a></li>
-        </ul>
-    
-    </li> -->
-  </ul>
+    <li role="presentation" class="mypage-tabs"><a href="#articles" aria-controls="articles" role="tab" data-toggle="tab">Articles</a></li>
+	<li role="presentation" class="mypage-tabs"><a href="#collections" aria-controls="collections" role="tab" data-toggle="tab">Colections</a></li>
+
+		</ul>
   
   </div>
     
+	<div class="padding-wrapper" style="padding-top: 0px; padding-bottom: 25px">
          
         <div class="myprofile-content" >
        
-                   
+                   <div class="padding-wrapper-inner">
                   
                     
 
@@ -182,96 +181,104 @@ background: #fff;
 						
 								<div class="profile-content-holders profile-content-experience">
 								
-									<p class="profile-content-holders-header">Research Experience <a>Edit</a></p>
+								<div class="profile-section-header">
+			
+										<a class="section-edit lnr lnr-pencil"></a>
+		
+								</div>
+								
+									<div class="profile-logo-hoder">
 									
-									<p>
+									<img src="img/logo-ho.png" />
+									
+									</div>
+									
+									<p class="profile-inst-info">
 										<label>Research Field:</label>
 										<span>Business Management</span>
 									</p>
 									
-									<p>
+									<p class="profile-inst-info">
 										<label>Research Direction:</label>
 										<span>Organization Behavior</span>
 									</p>
 									
-									<p>
+									<p class="profile-inst-info">
 										<label>Research Institute:</label>
 										<span>Bejing University, Busienss School, Assistant Professor</span>
 									</p>
 									
-									<p>
-										<label>Research Experience:</label>
-										<span>Too often, scientists view writing and publishing as a burden, an unwelcome add-on that slows their momentum
-										and interferes with getting on to the next experiment. Why, then, do scientists write</span>
-									</p>
+								
+								</div>
+								
+								<div class="profile-content-holders profile-content-experience">
+								
+									<p class="profile-content-holders-header">Research Interests</p>
+									
+									<p><span>Chemistery</span> | <span>Computer Ssience</span> | <span>Biology</span> | <span>Finance</span></p>
+									
+								
+								</div>
+								
+								<div class="profile-content-holders profile-content-experience" style="border-bottom: 0px ">
+								
+									<p class="profile-content-holders-header">Research Experience</p>
+									
+									<p>Six incarnations of Bob Dylan: an actor, a folk singer, an electrified troubadour, Rimbaud, Billy the Kid, and Woody Guthrie. Put Dylan's music behind their adventures, soliloquies, interviews, marriage, and infidelity. Recreate 1960s documentaries in black and white. Put each at a crossroads, the artist becoming someone else. Jack, the son of Ramblin' Jack Elliott, finds Jesus; handsome Robbie falls in love then</p>
+									
 								
 								</div>
 								
 								<div class="profile-content-holders profile-content-publications">
 								
-									<p class="profile-content-holders-header">Publications <a>Edit</a></p>
+								<div class="profile-section-header">
+			
+										<a class="section-edit lnr lnr-pencil"></a>
+		
+								</div>
+								
+									<h3>Publications</h3>
+									<div class="my-bullets center-bullets profile-name-bullets"><span></span><span></span><span></span></div>
 									
-									<p>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
-									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking.<a>Read Later</a></p>
+									<p><a>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
+									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking</a></p>
 									
-									<p>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
-									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking.<a>Read Later</a></p>
-									
-									
-									<p>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
-									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking.<a>Read Later</a></p>
+									<p><a>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
+									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking.Read</a></p>
 									
 									
-									<p>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
-									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking.<a>Read Later</a></p>
+									<p><a>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
+									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking.Read</a></p>
+									
+									
+									<p><a>Liu, P., Tov, W., Kosinski, M., Stillwell, D. J., & Qiu, L. (2015). 
+									Do Facebook Status Updates Reflect Subjective Well-being? Valence and Time Matter. Cyberpsychology, Behavior, and Social Networking.Read </a></p>
 									
 									
 									
 								
 								</div>
-								
-								<div class="profile-content-holders profile-content-projects">
-								
-									<p class="profile-content-holders-header">Projects <a>Edit</a></p>
-									
-									
-									
-								
-								</div>
-								
-								<div class="profile-content-holders profile-content-Articles">
-								
-									<p class="profile-content-holders-header">Articles <a>Edit</a></p>
-									
-									
-									
-								
-								</div>
-                        
-                        
-                        
-                        
+
                         </div>
   
  					    <div class="tab-pane" id="projects"> 
 						
 						
-						
-						
-						
-						
-						
-						<div class="square-grids">
+									<div class="square-grids">
 	
 	
  
-<div class="project-square-grid-item" >
+<div class="project-square-grid-item" style=" background:url(img/index-back.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
 
 	
 	
 <div class="project-square-grid-item-inner" > 
 
-		<div class="project-graph-content" style=" background:url(img/promotion-back.jpg) center no-repeat;">
+		<div class="project-graph-content" >
 		
 			<div class="project-graph-inner-content">
 			
@@ -305,6 +312,9 @@ background: #fff;
 				<div>
 				
 					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
 				
 				
 				</div>
@@ -314,9 +324,11 @@ background: #fff;
 				
 				<div>
 				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
 				
 				</div>
 			
@@ -326,23 +338,7 @@ background: #fff;
 		
 		</div>
 		
-		<div class="project-graph-bottom">
 		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhajii <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
 
 	
 
@@ -353,13 +349,18 @@ background: #fff;
 
 </div> 
 
-<div class="project-square-grid-item" >
+
+<div class="project-square-grid-item" style=" background:url(img/big-logo.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
 
 	
 	
 <div class="project-square-grid-item-inner" > 
 
-		<div class="project-graph-content" style=" background:url(img/promotion-back.jpg) center no-repeat;">
+		<div class="project-graph-content" >
 		
 			<div class="project-graph-inner-content">
 			
@@ -393,6 +394,9 @@ background: #fff;
 				<div>
 				
 					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
 				
 				
 				</div>
@@ -402,9 +406,11 @@ background: #fff;
 				
 				<div>
 				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
 				
 				</div>
 			
@@ -414,23 +420,7 @@ background: #fff;
 		
 		</div>
 		
-		<div class="project-graph-bottom">
 		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhajii <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
 
 	
 
@@ -441,13 +431,18 @@ background: #fff;
 
 </div> 
 
-<div class="project-square-grid-item" >
+
+<div class="project-square-grid-item" style=" background:url(img/myback.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
 
 	
 	
 <div class="project-square-grid-item-inner" > 
 
-		<div class="project-graph-content" style=" background:url(img/promotion-back.jpg) center no-repeat;">
+		<div class="project-graph-content" >
 		
 			<div class="project-graph-inner-content">
 			
@@ -481,6 +476,9 @@ background: #fff;
 				<div>
 				
 					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
 				
 				
 				</div>
@@ -490,9 +488,11 @@ background: #fff;
 				
 				<div>
 				
-					<p><a>12 Followers</a><a>34 Dicussions</a></p>
-					<p><a>8 Contributors</a><a>10 Articles</a></p>
-					<p><a>3 Reviewers</a><a>1 Sponsor</a></p>
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
 				
 				</div>
 			
@@ -502,23 +502,7 @@ background: #fff;
 		
 		</div>
 		
-		<div class="project-graph-bottom">
 		
-			<a><img src="img/brahim.png" /></a>
-			<p>
-			<a>Yuyu Xuan<span>(Project Leader) </span></a>, 
-			
-			<a>Shirley Chen<span>(First Author) </span></a>,
-			
-			<a>Hamid Shabbat <span></span></a>,
-			
-			<a>Brahim Senhajii <span></span></a>
-			
-			
-			</p>
-		
-		
-		</div>
 
 	
 
@@ -531,9 +515,171 @@ background: #fff;
 
 
 
+<div class="project-square-grid-item" style=" background:url(img/profile1.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
 	
-	</div>
-                        
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content" >
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+
+
+
+</div> 
+
+
+
+<div class="project-square-grid-item" style=" background:url(img/aside.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" >
+
+	
+	
+<div class="project-square-grid-item-inner" > 
+
+		<div class="project-graph-content" >
+		
+			<div class="project-graph-inner-content">
+			
+				<div>
+				
+<div class="project-follow">
+		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
+		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
+		</div>
+		
+		<div class="project-like-holder ">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #fff"></span>
+									
+                                	
+                                 </button>
+                                
+                             </div>
+				
+				</div>
+				<div>
+				
+					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
+					
+					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+				
+				
+				</div>
+				
+				
+				
+				
+				<div>
+				
+					
+					
+				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
+				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
+					
+				
+				</div>
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+	
+
+</div>
+
+
+
+
+</div> 
+
+</div>  
                         	
                         
                            
@@ -543,18 +689,34 @@ background: #fff;
 						
     						<div class="tab-pane" id="articles">
 							
-						<div class="square-grids" style="overflow: initial">
-						
-						<div class="square-grid-item" >
-
+							
+						<div class="square-grids" id="article-columns">
 	
+
+ 
+<div class="square-grid-item" >
+
+	<div class="article-graph-background" style="background: url(img/index-back2.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p>that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
 	
 <div class="square-grid-item-inner"> 
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">12:34 P.M</span>
 		
 		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
@@ -572,8 +734,9 @@ background: #fff;
 		
 		<div class="article-grids-content-inner">
 		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
 		
 		</div>
 	
@@ -597,14 +760,15 @@ background: #fff;
                             	
                                 <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
-                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
 									<span class="mls"> 676</span>
                                 	
                                  </button>
                                 
-                             </div>
+        </div>
+		
 		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
-		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -620,7 +784,7 @@ background: #fff;
 		
 		
 		<div class="article-graph-save grid-bottom-container" >
-		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -657,131 +821,7 @@ background: #fff;
 						<td >Business ds fasd fasdf asd fas </td>
 						<td >Move Out</td>
 					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
+                 	
                    
                    
                 
@@ -813,14 +853,27 @@ background: #fff;
 
 <div class="square-grid-item" >
 
-	
+	<div class="article-graph-background" style="background: url(img/index-back2.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
 	
 <div class="square-grid-item-inner"> 
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">12:34 P.M</span>
 		
 		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
@@ -838,8 +891,9 @@ background: #fff;
 		
 		<div class="article-grids-content-inner">
 		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
 		
 		</div>
 	
@@ -863,14 +917,15 @@ background: #fff;
                             	
                                 <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
-                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
 									<span class="mls"> 676</span>
                                 	
                                  </button>
                                 
-                             </div>
+        </div>
+		
 		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
-		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -886,7 +941,7 @@ background: #fff;
 		
 		
 		<div class="article-graph-save grid-bottom-container" >
-		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -923,131 +978,7 @@ background: #fff;
 						<td >Business ds fasd fasdf asd fas </td>
 						<td >Move Out</td>
 					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
+                 	
                    
                    
                 
@@ -1076,17 +1007,32 @@ background: #fff;
 
 
 </div> 
+
+
 
 <div class="square-grid-item" >
 
-	
+	<div class="article-graph-background" style="background: url(img/myback.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+		<div class="article-content-graph-holder"><p> that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+		
+			<a>Read More</a>
+		
+		</div>
+  
+  
+  </div>
 	
 <div class="square-grid-item-inner"> 
 
 	<div class="article-grids-content">
 	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
+		
+		<p class="article-grid-meta"><a><img src="img/profile1.jpg"  /></a> <a>Albert Einstein</a><span class="article-time-span">12:34 P.M</span>
 		
 		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
                             	<span class="read-later-empty">
@@ -1104,8 +1050,9 @@ background: #fff;
 		
 		<div class="article-grids-content-inner">
 		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
+			
+			
+			<p class="article-grid-title"><a>What is the smallest thing in the universe?</a></p>
 		
 		</div>
 	
@@ -1129,14 +1076,15 @@ background: #fff;
                             	
                                 <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
                             
-                            		<span class="icon-uniE615" style="color: #877c21"></span>
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
 									<span class="mls"> 676</span>
                                 	
                                  </button>
                                 
-                             </div>
+        </div>
+		
 		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
-		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
 	
 			<div class="article-graph-share">
 			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
@@ -1152,7 +1100,7 @@ background: #fff;
 		
 		
 		<div class="article-graph-save grid-bottom-container" >
-		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
 		
 		
 		</div>
@@ -1189,131 +1137,7 @@ background: #fff;
 						<td >Business ds fasd fasdf asd fas </td>
 						<td >Move Out</td>
 					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
+                 	
                    
                    
                 
@@ -1343,541 +1167,9 @@ background: #fff;
 
 </div> 
 
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner"> 
-
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
-		
-		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
-                            	<span class="read-later-empty">
-                                	<span class="icon-uniE600"></span>
-                                   
-                                </span>
-                                <span class="read-later-full">
-                                	<span class="icon-uniE616"></span>
-                                   
-                                </span>
-		</span>
-		
-		
-		</p>
-		
-		<div class="article-grids-content-inner">
-		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
-		
-		</div>
-	
-	
-	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		<span class="mls"> 675</span>
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #877c21"></span>
-									<span class="mls"> 676</span>
-                                	
-                                 </button>
-                                
-                             </div>
-		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
-		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
-	
-			<div class="article-graph-share">
-			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
-            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
-            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
-           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
-           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
-			
-			</div>
-		
-		</div>
-		
-		
-		
-		<div class="article-graph-save grid-bottom-container" >
-		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
-		
-		
-		</div>
-		
-		<div class="article-graph-save-drop" >
-		
-			<div class="article-graph-save-drop-head">Save this Note</div>
-     
-	      	   <table class="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th></th>
-						<th></th>
-						<th></th>
-                     
-						
-					</tr>
-				</thead>
-                
-                
-                <tbody>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business dfasdfasdf sdf </td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business ds fasd fasdf asd fas </td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   
-                   
-                
-               
-                 
-                 
-                
-				</tbody>
-                
-			</table>
-
-  </div>
-		
-	
-		
-		
-		
-		
-		
-	
-	</div>
-
 </div>
-
-
-
-
-</div> 
-
-<div class="square-grid-item" >
-
-	
-	
-<div class="square-grid-item-inner"> 
-
-	<div class="article-grids-content">
-	
-		<p class="article-grid-title"><a>The Shape of a Ponytail and the Statistical Physics of Hair Fiber Bundles fasdfad ad fasd fasd fad fa sdfasd asdfasdfasdf a fasd fasdf asd</a></p>
-		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span>12:34 P.M</span>
-		
-		 <span data-toggle="tooltip" data-placement="top" title="Read Later" class="read-later-holder">
-                            	<span class="read-later-empty">
-                                	<span class="icon-uniE600"></span>
-                                   
-                                </span>
-                                <span class="read-later-full">
-                                	<span class="icon-uniE616"></span>
-                                   
-                                </span>
-		</span>
-		
-		
-		</p>
-		
-		<div class="article-grids-content-inner">
-		
-			<img src="img/imagetest.jpg" />
-			<p>Abstract A general continuum theory for the distribution of hairs in a bundle is developed, treating individual fibers as elastic filaments with random intrinsic curvatures.</p>
-		
-		</div>
-	
-	
-	</div>
-	
-	
-	
-	<div class="square-grid-bottom">
-	
-		
-		<div class="like-holder grid-bottom-container">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		<span class="mls"> 675</span>
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #877c21"></span>
-									<span class="mls"> 676</span>
-                                	
-                                 </button>
-                                
-                             </div>
-		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
-		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon-uniE603" ></span> <span>355</span></button>
-	
-			<div class="article-graph-share">
-			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
-            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
-            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
-           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
-           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
-			
-			</div>
-		
-		</div>
-		
-		
-		
-		<div class="article-graph-save grid-bottom-container" >
-		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-copy"></span> <span>345</span></button>
-		
-		
-		</div>
-		
-		<div class="article-graph-save-drop" >
-		
-			<div class="article-graph-save-drop-head">Save this Note</div>
-     
-	      	   <table class="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th></th>
-						<th></th>
-						<th></th>
-                     
-						
-					</tr>
-				</thead>
-                
-                
-                <tbody>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business dfasdfasdf sdf </td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business ds fasd fasdf asd fas </td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business sdf asdf asdf asdf as dfas fasd fasdfskfjhaskdf askjdfh aksjdfh kasjdfh aksjdfh aksjh </td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-					<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                 	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   	<tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-					<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                    <tr class="article-tag-table-row">
-						<td ><img src="img/imagetest.jpg" /></td>
-						<td >Business</td>
-						<td >Move Out</td>
-					</tr>
-                   
-                   
-                
-               
-                 
-                 
-                
-				</tbody>
-                
-			</table>
-
-  </div>
-		
-	
-		
-		
-		
-		
-		
-	
-	</div>
-
-</div>
-
-
-
-
-</div> 
-						
-						</div>
-                            
-                            
+							
+			  
                             </div>
     					
     						
@@ -2263,9 +1555,7 @@ background: #fff;
             
            
             
-        <footer  class="row-fluid span12">
-        
-		</footer>
+       
         
         
         
@@ -2274,8 +1564,12 @@ background: #fff;
     
     </div>
 
+</div>
+</div>
 
-
+ <footer>
+        
+		</footer>
 
 </div>
 

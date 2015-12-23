@@ -7,6 +7,8 @@
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/article-grids.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
 <link href="style.css" rel="stylesheet" type="text/css">
 
 
@@ -22,6 +24,8 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/articles-graph-script.js"></script>
 <script src="js/follow-script.js"></script>
 
 <script>
@@ -50,7 +54,7 @@ $(window).scroll(function(){
   
   else{ $('.main-sub-navigatiion').removeClass('fix-icon-banner-to-top'); $('.article-left-mobile-wrapper').removeClass('minus-twenty-top');
   
-			$('.dashbord-create-inner > div').css("padding-bottom","5px"); $('.main-sub-navigatiion').css("padding-top","15px"); 
+			$('.dashbord-create-inner > div').css("padding-bottom","5px"); $('.main-sub-navigatiion').css("padding-top","10px"); 
   
   
    }
@@ -71,6 +75,33 @@ $(function () {
 });
 
 </script>
+
+<style>
+
+	
+	#article-columns {
+
+-webkit-column-count: 2;
+	-webkit-column-gap: 30px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 2;
+	-moz-column-gap: 30px;
+	-moz-column-fill: auto;
+	column-count: 2;
+	column-gap: 30px;
+	column-fill: auto;
+
+
+}
+
+.square-grids {
+
+background: #CFCCB9;
+padding-top: 15px;
+
+}
+
+</style>
 
 
 
@@ -104,9 +135,10 @@ $(function () {
         
          <div class="main-sub-navigatiion">
             
-            <li class="active" ><a class="hidden-phone hidden-tablet" href="dashbord-new.html">Subscriptions</a><a class="hidden-desktop" href="dashbord-new.html"><span class="icon3-feed"></span></a></li>
-            <li ><a href="articles-new.html" class="hidden-phone hidden-tablet">My Articles</a><a class="hidden-desktop" href="articles-new.html"><span class="icon3-drawer"></span></a> </li>
-            <li  ><a href="collections-dashbord.html" class="hidden-phone hidden-tablet">My Collections</a><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon3-folders"></span></a></li>
+            <li class="active" ><a class="hidden-phone hidden-tablet" href="dashbord-new.html">FEED</a><a class="hidden-desktop" href="dashbord-new.html"><span class="icon3-feed"></span></a></li>
+            <li ><a href="articles-new.html" class="hidden-phone hidden-tablet">MY DOCUMENTS</a><a class="hidden-desktop" href="articles-new.html"><span class="icon3-drawer"></span></a> </li>
+            <li  ><a href="collections-dashbord.html" class="hidden-phone hidden-tablet">MY PROJECTS</a><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon3-folders"></span></a></li>
+			<li  ><a href="collections-dashbord.html" class="hidden-phone hidden-tablet">MY COLLECTIONS</a><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon3-folders"></span></a></li>
             <li style="margin-right: 3%;" class="hidden-desktop right-float padding-fix"  ><a  class="hidden-desktop" href="collections-dashbord.html"><span class="icon-copy"></span></a></li>
             <li  class="hidden-desktop right-float padding-fix" style="padding-left: 5px !important"   ><a class="hidden-desktop" href="collections-dashbord.html"><span class="icon-file"></span></a></li>
 
@@ -114,31 +146,26 @@ $(function () {
             </div>
         
         		
+				<div class="dashboard-wrapper">
                 
-                <div class="dashbord-content-left hidden-tablet hidden-phone" style="margin-top: 59px">
+                <div class="dashbord-content-left hidden-tablet hidden-phone" style="margin-top: 105px">
                 
                 	
                 
                         
                         
-                            <div class="dashbord-content-left-article subscription-followers" style="margin-top: 20px" >
+                            <div class="dashbord-content-left-article subscription-followers">
                         
-                          <div>
+							<a><img src="img/brahim.png" /></a>
+							<p>
+								Brahim Senhaji
+							</p>
                             
-                            	<span class="icon32-user"></span><span> Followed Researchers 34 </span>
-                            
-                            	<a>All</a>
-                           
-                            </div>
-                            
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Brahim Senhaji"><img src="img/brahim.png"/ ></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Brahim Senhaji"><img src="img/brahim.png"/ ></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Brahim Senhaji"><img src="img/brahim.png"/ ></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Brahim Senhaji"><img src="img/brahim.png"/ ></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Brahim Senhaji"><img src="img/brahim.png"/ ></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Brahim Senhaji"><img src="img/brahim.png"/ ></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Brahim Senhaji"><img src="img/brahim.png"/ ></a>
-                            
+							<p>
+							
+							lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-d
+							
+							</p>
                             
                             
                             
@@ -155,14 +182,39 @@ $(function () {
                                 
                         
                         </div>
+						
+						 <div class="dashbord-content-left-article">
+						 
+						 
+                        
+                          <div>
+                            
+                            	<span> My Meets</span>
+                            
+                            	
+                           
+                            </div>
+                            
+                            <!-- In case the user enters for the first time -->
+                            
+                            <div class="first-time-enter">
+                            
+                            <div><span>+</span></div><p>You don't have any meetings yet,<a>Create a new meeting</a></p>
+                            
+                            </div>
+                            
+                    
+                     
+                        </div>
+						
                 	
                      <div class="dashbord-content-left-article">
                         
                           <div>
                             
-                            	<span class="icon3-folders"></span><span> Followed Collections 55</span>
+                            	<span> My Publications</span>
                             
-                            	<a>All</a>
+                            	
                            
                             </div>
                             
@@ -177,23 +229,18 @@ $(function () {
                     <p><a> s target-of-rapamycin (TOR) signalling</a></p>
                      <p><a> lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose</a></p>
                       <p><a> Meristems encompaass stem</a></p>
-                            <p><a>  by nutrient signalling remains enigmatic in photosynthetic plants</a></p>
-                           
-                           
-                             
-                                
-                                
-                        
+                     <p><a>  by nutrient signalling remains enigmatic in photosynthetic plants</a></p>
+                     
                         </div>
-                    
+						<div class="dash-left-sec-div-footer"><a>SEE ALL</a></div> 
                 
                 		<div class="dashbord-content-left-article">
                         
                           <div>
                             
-                            	<span class="icon-uniE609"></span><span> Saved Articles 134</span>
+                            	<span> My Projects</span>
                             
-                            	<a>All</a>
+                            	
                            
                             </div>
                             
@@ -213,6 +260,7 @@ $(function () {
                                 
                         
                         </div>
+						<div class="dash-left-sec-div-footer"><a>SEE ALL</a></div> 
                         
                        
                         
@@ -220,10 +268,8 @@ $(function () {
                         
                           <div>
                             
-                            	<span class="icon-uniE602"></span><span> Likes Articles 67</span>
-                            
-                            	<a>All</a>
-                           
+                            	<span> My Articles</span>
+                         
                             </div>
                             
                             <!-- In case the user enters for the first time -->
@@ -238,94 +284,365 @@ $(function () {
                             <p><a>  by nutrient signalling remains enigmatic in photosynthetic plants</a></p>
                             <p><a> Meristems encompaass stem</a></p>
                             <p><a> lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose</a></p>
-                                
-                             
-                                
-                                
                         
                         </div>
+						<div class="dash-left-sec-div-footer"><a>SEE ALL</a></div> 
+						
+						 <div class="dashbord-content-left-article">
+                        
+                          <div>
+                            
+                            	<span> My Collections</span>
+                         
+                            </div>
+                            
+                            <!-- In case the user enters for the first time -->
+                            
+                            <!--<div class="first-time-enter">
+                            
+                            <div><span>+</span></div><p>You don't have any liked articles,<a>Find some interesting articles</a></p>
+                            
+                            </div>-->
+                            
+                        <p><a> s target-of-rapamycin (TOR) signalling</a></p>
+                            <p><a>  by nutrient signalling remains enigmatic in photosynthetic plants</a></p>
+                            <p><a> Meristems encompaass stem</a></p>
+                            <p><a> lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose</a></p>
+                        
+                        </div>
+						<div class="dash-left-sec-div-footer last-dash-left-div"><a>SEE ALL</a></div> 
                         
                     
                         
                 
                 </div>
                 
-                <div class="dashbord-content-right" style="margin-top: 80px;">
+                <div class="dashbord-content-right" style="margin-top: 105px;">
                 
              
-         		<div class="Entries1"></div>
-                
-                
-          
-                
-                
-           <!--     <div class="mynews">
-                            	<div class="mynews-header">
-                                	<div class="mynews-avatar">
-                                    <img src="img/brahim.png"/>
-                                    </div>
-                                    <div class="mynews-title" >
-                                    <p><span><a>Adam Tata</a></span>&nbsp Created a new Article &nbsp <span></span> <br/>
-                                    <span>April 10, 2014  10:22 PM</span></p>
-                                    </div>
-                                    
-                                </div>
+         		<div class="square-grids" id="article-columns">
+	
+	
+ 
+<div class="square-grid-item" >
+
+	<div class="dash-articles-grid-meta">
+	
+	<a><img src="img/profile1.jpg"  /></a> 
+	<p ><a> Albert Einstein</a> <span>added an article to the collection </span><a>World Wanderer</a><br><span class="dash-update-date"> Yesterday | 12:34 P.M</span></p>
+		
+	</div>	
+		
+		
+		
+
+	<div class="article-graph-background">
+  
+  <a><img src="img/myimage.jpg" /></a>
+  
+		
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+	
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title dash-article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+			<p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a class="dash-article-read-more">READ MORE</a>
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
-                                <div class="mynews-body ">
-                                <div class="pick-post mynews-pick-post">
-            		<div class="pick-head mynews-pick-head row-fluid">
-                    	<div class="span12">
-                        
-                        	<p class="pick-title "><a>Glucose-TOR signalling reprograms the transcriptome Glucose-TOR transcriptome Glucose-TOR</a>
-                            
-                            <span class="read-later-holder">
-                            	<span class="read-later-empty">
-                                	<span class="icon-uniE600"></span>
-                                    <span class="mls"> Read Later</span>
-                                </span>
-                                <span class="read-later-full">
-                                	<span class="icon-uniE616"></span>
-                                    <span class="mls"> Read Later</span>
-                                </span>
-                            </span> </p>
-                            
-                       
-                    
-                    	</div>
-                        
-                        
-                        
-                       
-            
-           			</div>
-            		
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
                    
-                 
-     <div class="new-article-update-body">
-                    
-                    	<img src="../img/jquery.jpg" />
-                        <p>Meristems encompaass stem/progenitor cells that sustain postembryonic growth of all plant organs. How meristems are activated and sustained by nutrient signalling remains enigmatic in photosynthetic plants. Combining chemical manipulations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose drives target-of-rapamycin (TOR) signalling relays through </p>
-                    
-                    
-                    </div>
-                    
-           		
-            	
+                   
                 
-                                </div>-->
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+
+
+<div class="square-grid-item" >
+
+	<div class="dash-articles-grid-meta">
+	
+	<a><img src="img/brahim.png"  /></a> 
+	<p ><a> Brahim Senhaji</a> <span>added an article to the collection </span><a>World Wanderer</a><br><span class="dash-update-date"> Yesterday | 12:34 P.M</span></p>
+		
+	</div>	
+		
+		
+		
+
+	<div class="article-graph-background" style="background: url(img/myback.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+  <a><img src="img/myback.jpg" /></a>
+  
+		
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+	
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title dash-article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+			<p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a class="dash-article-read-more">READ MORE</a>
+		</div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="square-grid-bottom">
+	
+		
+		<div class="like-holder grid-bottom-container">
+                            
+                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" like like-toggle">
+                            
+                            		<span class="icon-uniE602"></span>
+                            		<span class="mls"> 675</span>
+									
+                            
+                            	</button>
+                            	
+                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="like-full like-toggle" style="margin-left: 0px">
+                            
+                            		<span class="icon-uniE615" style="color: #a4ce4c !important"></span>
+									<span class="mls"> 676</span>
+                                	
+                                 </button>
                                 
-                              
-                                
-                         
+        </div>
+		
+		<div class="grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Comment"> <span class="icon-uniE607" ></span> <span>675</span></button></div>
+		<div class="article-graph-share-btn grid-bottom-container"><button data-toggle="tooltip" data-placement="top" title="Share"> <span class="icon97-share-alternitive" ></span> <span>355</span></button>
+	
+			<div class="article-graph-share">
+			<a><span class="icon-facebook"></span><span class="mls ">Facebook</span></a>
+            <a><span class="icon-twitter"></span><span class="mls ">Twitter</span></a>
+            <a><span class="icon-uniE611"></span><span class="mls ">Wechat</span></a>
+           <a><span class="icon-uniE612"></span><span class="mls ">Webo</span></a>
+           <a><span class="icon-blog"></span><span class="mls ">Douban</span></a>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		<div class="article-graph-save grid-bottom-container" >
+		 <button data-toggle="tooltip" data-placement="top" title="Save"><span class="icon-uniE609"></span> <span>345</span></button>
+		
+		
+		</div>
+		
+		<div class="article-graph-save-drop" >
+		
+			<div class="article-graph-save-drop-head">Save this Note</div>
+     
+	      	   <table class="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+                     
+						
+					</tr>
+				</thead>
+                
+                
+                <tbody>
+					<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business dfasdfasdf sdf </td>
+						<td >Move Out</td>
+					</tr>
+                    <tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business sd fasd fa df asdf asdf asdf asd fasd fasdf asd</td>
+						<td >Move Out</td>
+					</tr>
+                 	<tr class="article-tag-table-row">
+						<td ><img src="img/imagetest.jpg" /></td>
+						<td >Business ds fasd fasdf asd fas </td>
+						<td >Move Out</td>
+					</tr>
+                 	
+                   
+                   
+                
+               
+                 
+                 
+                
+				</tbody>
+                
+			</table>
+
+  </div>
+		
+	
+		
+		
+		
+		
+		
+	
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+
+
+
+
+
+
+
+  
+   	</div>	
+              
+                </div>
                             
                             
-                            </div>
+                </div>            
                             
                             
-                            
-                            
-                            
-                            </div>
+                </div>
     
                        
                          
@@ -335,13 +652,7 @@ $(function () {
         
    
         
-        </div>
-    
-    
-    
-    
-    
-    </div>
+   
    
 
       
@@ -353,7 +664,7 @@ $(function () {
 
 <script>
 
-$( "header" ).load( "header-jijitang.html" ); 
+$( "header" ).load( "new-header.html" );
 $( "footer" ).load( "footer.html" );
 $( "#aside" ).load( "aside.html" );
 $( ".Entries1" ).load( "Testnotes/NewNote1.html" );

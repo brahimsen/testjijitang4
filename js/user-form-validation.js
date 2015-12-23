@@ -66,7 +66,7 @@ $(document).ready(function(){
 			},
 			
 			errorPlacement: function(error, element) {
-				 error.appendTo($('#sign-up-error'));
+				 error.appendTo($('.error-message-style'));
 			}
 			
 			

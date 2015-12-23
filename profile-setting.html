@@ -12,6 +12,7 @@
 
 
 <link href="style.css" rel="stylesheet" type="text/css">
+<link href="css/settings-page.css" rel="stylesheet" type="text/css">
 
 
 <script src="js/Jquery-11.js"></script>
@@ -25,8 +26,60 @@
 <script src="js/jquery.json-2.4.min.js"></script>
 <script src="js/bootstrap-select.js"></script>
 <script src="js/jquery.validate.min.js"></script>
-<script src="js/myform.js"></script>
 <script src="js/myjavascript.js"></script>
+
+<script>
+
+$(document).ready(function(){
+	
+
+$(".profile-setting-form").validate(
+{rules:
+{name:"required",
+
+},
+
+messages: {
+name:"Please write down your name",
+},
+errorClass:"error",
+highlight: function(label) {
+    $(label).closest('.form-group').removeClass('has-success').addClass('has-error');
+  },
+
+success: function(label) {
+    label
+      .text('looks good').addClass('valid')
+	  .closest('.form-group').addClass('has-success');
+      
+  }
+}
+  
+);
+
+});
+
+ $(document).ready(function() {
+  
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#fileToUploaddis').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#fileToUpload").change(function(){
+        readURL(this);
+    });
+  
+   });
+
+</script>
 
 
 
@@ -45,17 +98,6 @@
 
 <body>
 
-<div id="Delete-collection-Modal" class="modal hide fade" tabindex="-1" data-width="460">
-
-  <div class="dialog-modal-body">
-  
-  		<p>Are you sure you want to delete this Collection? </p>
-        <button id="confirm-delete" class="Confirm-Modal-btn">Delete</button>
-        <button  data-dismiss="modal" id="cancel-delete" class="Cancel-Modal-btn">Cancel</button >
-  	
-  </div>
- 
-</div>
 
 	<div class="container-fluid">
 
@@ -65,110 +107,129 @@
         
         
 		</header>
-        </div>
-        
-        <div class="fixed-sidebar span4"> 
-        <div class="fixed-sidebar-wrapper">
-        	
-            <div class="fixed-sidebar-inner">
-           		<div class="fixed-bar-avatar">
-                	<img src="img/brahim.png" />
-                </div>
-                
-                
-               <div class="sidebar-inner-content">
-           			<p class="left-bar-title font-eighteen"><span>Full Name</span></p>
-               		<p class="left-bar-content font-thirteen hidden-phone"><span>Your Description</span></p>
-            	</div>
-             
-                
-               
-            	
-               
-            </div>
-       </div>          
-    </div>
-        
-
+  </div>
+  
+  
+  
+  	<div class="padding-wrapper">
+	
+	<div class="padding-wrapper-inner">
 
 	
-    
- 
-    
-             
-    <div class="span8 right-content right-content-log top-padding-bug" >
-       
+	<div class="settings-page">
+	
+		<div class="settings-page-nav">
+		
+		<img src="img/brahim.png" />
+		
+		<div>
+		
+		<a href="" class="active">ACCOUNT</a>
+		<a href="">PROFILE</a>
+		<a href="">RESEARCH</a>
+		
+		</div>
+		
+		<a class="green-button">VIEW PROFILE</a>
+		
+		
+		
+		
+		</div>
+		
+		<div class="settings-page-content">
+		
+			<div class="settings-page-header">
 			
-            <ul class="nav nav-tabs collections-nav settings-navigatiion">
-            
-            <li class=" active"  ><a href="profile-setting.html">Profile Settings</a></li>
-            <li   ><a href="account-setting.html">Account Settings</a></li>
-			<li ><a href="research-setting.html">Research Settings</a></li>
+				PROFILE
+			
+			</div>
+			
+			<form class="profile-setting-form" role="form">
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Profile Picture</div>
+			
+			<div class="profile-form-content">
+			
+			<div class="user-info-upload-img">
+			
+		
+        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="img/select-img.png"  />
+					
+                        <input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image" >
+	
+			</div> 
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Background Picture</div>
+			
+			<div class="profile-form-content">
+			
+			<div class="user-info-upload-img">
+			
+		
+        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="img/select-img.png"  />
+					
+                        <input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image" >
+	
+			</div> 
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Name</div>
+			<div class="profile-form-content">
+			
+					<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Short Bio</div>
+			<div class="profile-form-content">
+			
+					<textarea type="text" class="form-control" id="short-bio" placeholder="Short Biography"></textarea>
+			
+			</div>
+			
+			</div>
+			
+			 <button type="submit"  class="new-small-wide-button new-black-btn  middle-button" >Sign Up</button>
+			
+			
+			</form>
+		
+		
+		</div>
+	
+	
+	
+	</div>
+	
+			
 
-            
-            </ul>
-            
-            <div class="collection-form-holder">
-            
-            	<div class="caption-div">
-               <p>Background Picture</p>
-               <hr/>
-               </div>
-               <img style="margin-bottom: 50px;" src="img/screenshot-64.ico" />
-          
-            
-            	<!--<input type="file"/><img id="myImg" src="#" alt="your image" style="max-width: 200px" />-->
-               <div class="caption-div">
-               <p>Personal Information</p>
-               <hr/>
-               </div>
-               <img src="img/screenshot-64.ico" />
-            
-                <input class="coll-title" placeholder="Full Name" maxlength="30">
-                <textarea class="coll-content" maxlength="300" placeholder="Your Description"></textarea>
-                
-               
-               
-               
-            
-            	<div class="profile-settings-button-holder">
-            	<button class="main-button no-border">Save</button>
-                <button class="gray-btn-log paddin-fix">Cancel</button>
-                </div>
-                
-          
-               
-               
-               
-            
-            </div>
-            
-          
-   
-          
-       
-         
+	
+	</div>
+	
+	</div>
         
-         
-            
-           
-            
-        <footer  class="row-fluid span12">
-        
-		</footer>
-        
-        
-        
-        </div>
-        
-    
-    
+
     </div>
 
 
-
-
-</div>
 
 <script>
 
