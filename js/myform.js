@@ -6,14 +6,14 @@ $(document).ready(function(){
 $(".myfirstform").validate(
 {rules:
 {name:"required",
-email:{required:true,email:true},
-pass: {required:true, minlength: 6},
+emailregi:{required:true,email:true},
+passregi: {required:true, minlength: 6},
 passconf: {required:true, equalTo: "#passregi"},
 },
 
 messages: {
 name:"Please write down your name",
-email: {
+emailregi: {
 required: "Please enter your Email",
 email: "Please Enter a valid Email address"
 },
