@@ -27,6 +27,20 @@
 <script src="js/bootstrap-select.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myjavascript.js"></script>
+<script src="js/text-length-script.js"></script>
+
+<style>
+
+footer {
+
+    border-top: 25px solid #ecead4;
+
+}
+
+
+
+</style> 
+
 
 <script>
 
@@ -66,14 +80,36 @@ success: function(label) {
             var reader = new FileReader();
             
             reader.onload = function (e) {
-                $('#fileToUploaddis').attr('src', e.target.result);
+                $('.profile-new-image').attr('src', e.target.result);
             }
             
             reader.readAsDataURL(input.files[0]);
         }
     }
     
-    $("#fileToUpload").change(function(){
+    $("#profile-new-image-btn").change(function(){
+        readURL(this);
+    });
+  
+   });
+   
+    $(document).ready(function() {
+  
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                
+				$('#profile-new-back').css('background', 'transparent url('+e.target.result +') no-repeat center center', 'background-size', 'cover');
+
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#profile-new-back-btn").change(function(){
         readURL(this);
     });
   
@@ -120,13 +156,13 @@ success: function(label) {
 	
 		<div class="settings-page-nav">
 		
-		<img src="img/brahim.png" />
+		<img class="profile-new-image" src="img/brahim.png" />
 		
 		<div>
 		
-		<a href="" class="active">ACCOUNT</a>
-		<a href="">PROFILE</a>
-		<a href="">RESEARCH</a>
+		<a href="account-setting.html" >ACCOUNT</a>
+		<a href="profile-setting.html" class="active">PROFILE</a>
+		<a href="research-setting.html">RESEARCH</a>
 		
 		</div>
 		
@@ -153,14 +189,16 @@ success: function(label) {
 			
 			<div class="profile-form-content">
 			
-			<div class="user-info-upload-img">
+			<div class="profile-img-upload-box" >
 			
 		
-        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="img/select-img.png"  />
+        			<img style="width: 100%; height: 100%" class="profile-new-image" src="img/brahim.png"  />
 					
-                        <input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image" >
-	
+                      
 			</div> 
+			
+			<input id="profile-new-image-btn" type="file" class="custom-file-input" style="border: 0px !important;">
+
 			
 			</div>
 			
@@ -172,14 +210,16 @@ success: function(label) {
 			
 			<div class="profile-form-content">
 			
-			<div class="user-info-upload-img">
+			<div id="profile-new-back" class="profile-back-upload-box" style="background: url(img/myback.jpg) no-repeat center; background-size: cover" >
 			
-		
-        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="img/select-img.png"  />
-					
-                        <input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image" >
-	
 			</div> 
+			
+			<input id="profile-new-back-btn" type="file" class="custom-file-input" style="border: 0px !important;">
+
+		
+        			
+					
+                     
 			
 			</div>
 			
@@ -187,10 +227,10 @@ success: function(label) {
 			
 			<div class="profile-form-section">
 			
-			<div class="profile-form-label">Name</div>
+			<div class="profile-form-label">Name*</div>
 			<div class="profile-form-content">
 			
-					<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+					<input type="text" class="form-control" id="name" name="name" value="Brahim Senhaji" placeholder="Name">
 			
 			</div>
 			
@@ -201,13 +241,20 @@ success: function(label) {
 			<div class="profile-form-label">Short Bio</div>
 			<div class="profile-form-content">
 			
-					<textarea type="text" class="form-control" id="short-bio" placeholder="Short Biography"></textarea>
-			
+					<textarea type="text" class="form-control" id="shortbio" placeholder="Short Biography">Graduated From a Al Akhawayn University with a backlor of science of computer science, interested in software engineering and developement</textarea>
+					<p class="text-counter" id="bio-counter"><span>0</span>/200</p>
 			</div>
 			
 			</div>
 			
-			 <button type="submit"  class="new-small-wide-button new-black-btn  middle-button" >Sign Up</button>
+			
+			 
+			 <div class="profile-form-btns">
+			
+			 <button type="submit"  class="new-big-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+			 <button class="new-big-button new-black-btn big-long-btns   middle-button" >CANCEL</button>
+			
+			</div>
 			
 			
 			</form>
@@ -224,7 +271,13 @@ success: function(label) {
 	
 	</div>
 	
+	
+	
 	</div>
+	
+	<footer></footer>
+	
+	
         
 
     </div>

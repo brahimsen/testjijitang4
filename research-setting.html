@@ -8,6 +8,7 @@
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/bootstrap-select.css"  type="text/css"/>
+<link href="css/settings-page.css" rel="stylesheet" type="text/css">
 
 
 
@@ -29,6 +30,24 @@
 <script src="js/myjavascript.js"></script>
 
 
+<style>
+
+.editor-all-tags {
+
+margin-bottom: 0px;
+margin-top: 15px !important;
+
+}
+
+.project-keyword-list {
+
+padding-top: 0px !important;
+padding-bottom: 0px !important;
+
+}
+
+</style>
+
 <script>
 
 $(document).ready(function(){
@@ -36,11 +55,11 @@ $(document).ready(function(){
 
 	
 	
-	$("#project-keywords").keypress(function(e) {
-    if(e.which == 13) {
-           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete'>x</div></div>");
+	$("#add-interests-btn").click(function(e) {
+    
+           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete lnr lnr-cross'></div></div>");
 	   $("#project-keywords").val('')
-    }
+   
 });
 
 	 $('.project-keyword-list').on('click', '.tag-delete', function(){
@@ -115,8 +134,169 @@ $(document).ready(function(){
 </div><!-- /.modal -->
 
 
+<div class="container-fluid">
 
-	<div class="container-fluid">
+
+<div class="header-wrapper">
+		<header >
+        
+        
+		</header>
+  </div>
+  
+  
+  
+  	<div class="padding-wrapper">
+	
+	<div class="padding-wrapper-inner">
+
+	
+	<div class="settings-page">
+	
+		<div class="settings-page-nav">
+		
+		<img src="img/brahim.png" />
+		
+		<div>
+		
+		<a href="" >ACCOUNT</a>
+		<a href="">PROFILE</a>
+		<a href="" class="active">RESEARCH</a>
+		
+		</div>
+		
+		<a class="green-button">VIEW PROFILE</a>
+		
+		
+		
+		
+		</div>
+		
+		<div class="settings-page-content">
+		
+			<div class="settings-page-header">
+			
+				RESEARCH
+			
+			</div>
+			
+			<form class="profile-setting-form" role="form">
+			
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Position</div>
+			<div class="profile-form-content">
+			
+					<input class="form-control"  placeholder="Position">
+			
+			</div>
+			
+			</div>
+			
+		
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Institute</div>
+			<div class="profile-form-content">
+			
+			<input class="form-control"  placeholder="Institute">
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Department</div>
+			<div class="profile-form-content">
+			
+			<input class="form-control"  placeholder="Department">
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Reaearch Field</div>
+			<div class="profile-form-content">
+			
+			<select name="field" class="form-control required user-form-select">
+						<option value="">Reaearch Field</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+						</select>
+			
+			</div>
+			
+			</div>
+			
+				<div class="profile-form-section">
+			
+			<div class="profile-form-label">Reaearch Field</div>
+			<div class="profile-form-content">
+			
+			<div class="input-group keywords-group " style="margin-bottom: 0px !important" >
+				
+				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="Type Your Reearch Interests"/>
+				<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
+				<div class="project-keyword-list"></div>
+				</div>
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Research Experience</div>
+			<div class="profile-form-content">
+			
+					<textarea type="text" class="form-control" id="short-bio" placeholder="Reseach Experience"></textarea>
+			
+			</div>
+			
+			</div>
+		
+			
+			
+			
+			<div class="profile-form-btns">
+			
+			 <button type="submit"  class="new-big-button new-black-btn big-long-btns   middle-button" >SAVE</button>
+			 <button type="submit"  class="new-big-button new-black-btn big-long-btns   middle-button" >CANCEL</button>
+			
+			</div>
+			
+			</form>
+		
+		
+		</div> 
+		
+		
+	
+		
+	
+	
+	
+	</div>
+	
+			
+
+	
+	</div>
+	
+	</div>
+        
+
+    </div>
+
+
+
+<!--	<div class="container-fluid">
 
 
 
@@ -280,7 +460,7 @@ $(document).ready(function(){
 
 
 
-</div>
+</div> -->
 
 <script>
 

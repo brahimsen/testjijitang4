@@ -8,6 +8,7 @@
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/bootstrap-select.css"  type="text/css"/>
+<link href="css/settings-page.css" rel="stylesheet" type="text/css">
 
 
 
@@ -28,15 +29,25 @@
 <script src="js/myform.js"></script>
 <script src="js/myjavascript.js"></script>
 
+<style>
+
+footer {
+
+    border-top: 25px solid #ecead4;
+
+}
+
+
+
+</style> 
+
 <script>
 
 $(document).ready(function() {
 	
-				
-	
 				$('.account-edit-password-holder').hide();
 				
-				$('.account-edit-email-holder').hide();
+				
 				
 				$(".account-password-edit").click(function(){
 				
@@ -44,17 +55,8 @@ $(document).ready(function() {
 				$('.account-edit-password-holder').fadeIn(500);
 					});
 					
-					
-				$(".account-email-edit").click(function(){
-				
-				$('.account-edit-email-holder').fadeIn(500);
-					
-					
-				});
-				
 			
-			
-				
+
 				$(".cancel-password-edit").click(function(){
 				
 					
@@ -62,27 +64,8 @@ $(document).ready(function() {
 					});
 					
 					
-				$(".cancel-email-edit").click(function(){
-				
-				$('.account-edit-email-holder').hide();
-					
-					
-				});
-				
-				
-				
-				
 			
-			
-				
-				
-				
-				
-			
-			
-			
-				
-				
+
 				});
 </script>
 
@@ -105,166 +88,151 @@ $(document).ready(function() {
 <body>
 
 
-
 	<div class="container-fluid">
 
 
-
-		<div class="header-wrapper">
+<div class="header-wrapper">
 		<header >
         
         
 		</header>
-        </div>
-        
+  </div>
+  
+  
+  
+  	<div class="padding-wrapper">
+	
+	<div class="padding-wrapper-inner">
 
-		   <div class="fixed-sidebar span4"> 
-        <div class="fixed-sidebar-wrapper">
-        	
-            <div class="fixed-sidebar-inner">
-           		<div class="fixed-bar-avatar">
-                	<img src="img/brahim.png" />
-                </div>
-                
-                
-               <div class="sidebar-inner-content">
-           			<p class="left-bar-title font-eighteen ">Brahim Senhaji</p>
-               		<p class="left-bar-content font-thirteen hidden-phone ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-					ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            	</div>
-             
-                
-               
-            	
-               
-            </div>
-       </div>          
-    </div>   
-             
-    <div class="span8 right-content right-content-log top-padding-bug" >
-       
-
-            
-            
-            <ul class="nav nav-tabs collections-nav settings-navigatiion">
-            
-            <li  ><a href="profile-setting.html">Profile Settings</a></li>
-            <li class=" active"  ><a href="account-setting.html">Account Settings</a></li>
-			<li ><a href="research-setting.html">Research Settings</a></li>
-
-            
-            </ul>
-            
-            
-            <div class="collection-form-holder">
-            
-            	<div class="caption-div">
-               		<p>Email</p>
-               		<hr/>
-                    
-                    <p><span class="settings-email">brahim_senhaji@gmail.com</span><span class="account-email-edit">Edit</span></p>
-                    
-                    <div class="account-edit-email-holder">
-                    
-                    <p> <span class="settings-email span2">Old Email</span><span class="dark-gray-color">brahim_senhaji@gmail.com</span></p>
-                    <p> <span class="settings-email span2">New Email</span><input type="text"></p>
-                     <p> <span class="settings-email span2">Password</span><input type="password"></p>
-                     <p><span class="cancel-email-edit">Cancel</span></p>
-                     
-                     </div>
-                    
-                    
-               </div>
-              
-          
-            
-               <div class="caption-div">
-               		<p>Password</p>
-               		<hr/>
-                    
-                        <p><span class="settings-email">*************</span><span class="account-password-edit">Edit</span></p>
+	
+	<div class="settings-page">
+	
+		<div class="settings-page-nav">
+		
+		<img src="img/brahim.png" />
+		
+		<div>
+		
+		<a href="account-setting.html" class="active" >ACCOUNT</a>
+		<a href="profile-setting.html" >PROFILE</a>
+		<a href="research-setting.html">RESEARCH</a>
+		
+		</div>
+		
+		<a class="green-button">VIEW PROFILE</a>
+		
+		
+		
+		
+		</div>
+		
+		<div class="settings-page-content">
+		
+			<div class="settings-page-header">
+			
+				ACCOUNT
+			
+			</div>
+			
+			<form class="profile-setting-form" role="form">
+			
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">User Name / Email</div>
+			<div class="profile-form-content">
+			
+					<p class="profile-setting-form-text">brahim.senhaji@gmail.com</p>
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Password</div>
+			<div class="profile-form-content">
+			
+					  <p><span class="settings-email profile-setting-form-text">*************</span><span class="account-password-edit">Edit</span></p>
                     
                     <div class="account-edit-password-holder">
                     
-                    <p> <span class="settings-email span2">Old Password</span><input type="password"></p>
-                    <p> <span class="settings-email span2">New Password</span><input type="password"></p>
-                     <p> <span class="settings-email span2">Confirm New Password</span><input type="password"></p>
+                    <p><input placeholder="Old Password" type="password"></p>
+                    <p><input placeholder="New Password"  type="password"></p>
+                     <p><input placeholder="Confirm New Password Password"  type="password"></p>
                      <p><span class="cancel-password-edit">Cancel</span></p>
                      
                      </div>
-                     
-                     
-               </div>
-             
-             	<div class="caption-div">
-               		<p>Connect Your account to Wechat</p>
-               		<hr/>
-               
-                    
-               </div>
-               
-               <div class="connect-on-wechat">
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Connect Your <br> account to Wechat</div>
+			<div class="profile-form-content">
+			
+				<div class="connect-on-wechat">
                
                <img src="img/scan-me.png"/>
-               <p>Scan the left side QR code to connect your account to Wechat. </p>
+               
                
                
                </div>
-			   
-			   
-			   <div class="caption-div">
-               <p>More Information</p>
-               <hr/>
-			   
-			   <div class="profile-setting-more-info">
-               
-               		<div>
-                    <span>Language</span><select></select>
-                    </div>
-                   
-               
-               
-               </div>
-			   
-			   
-               </div>
-			   
-               
-               
-               
-              	<div class="profile-settings-button-holder">
-            	<button class="main-button no-border">Save</button>
-                <button class="gray-btn-log paddin-fix">Cancel</button>
-                </div>
-            
-            </div>
-            
-          
-   
-          
-       
-         
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-section">
+			
+			<div class="profile-form-label">Default Language</div>
+			<div class="profile-form-content">
+			
+			<select class="profile-select-language">
+			
+				<option value="eng">ENGLISH</option>
+				<option value="zh">CHINESE</option>
+				
+			
+			</select>
+			
+			</div>
+			
+			</div>
+			
+			<div class="profile-form-btns">
+			
+			 <button type="submit"  class="new-big-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+			 <button type="submit"  class="new-big-button new-black-btn big-long-btns   middle-button" >CANCEL</button>
+			
+			</div>
+			
+			</form>
+		
+		
+		</div>
+	
+	
+	
+	</div>
+	
+			
+
+	
+	</div>
+	
+	</div>
         
-         
-            
-           
-            
-        <footer  class="row-fluid span12">
-        
-		</footer>
-        
-        
-        
-        </div>
-        
-    
-    
+
+		<footer></footer>
+		
+		
     </div>
 
 
 
-
-</div>
 
 <script>
 

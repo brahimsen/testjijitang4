@@ -6886,9 +6886,11 @@ color: #3D7D8B !important;
 }
 
 .account-password-edit {
-	margin-left: 40px;
-	color: #3D7D8B !important;
+	margin-left: 20px;
+	color: #a4ce4c !important;
 	cursor: pointer;
+	float: right;
+	font-family: "OpenSans-Bold";
 
 
 }
@@ -6938,8 +6940,15 @@ color: #3D7D8B !important;
 
 .cancel-password-edit {
 	font-size: 12px;
-	text-decoration: underline;
+	border: 2px solid #000;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+	color: #000 !important;
 	cursor: pointer;
+	display: inline-block;
 
 
 }
@@ -15773,7 +15782,7 @@ overflow: hidden;
 .connect-on-wechat  {
 	height: auto;
 	overflow: hidden;
-	margin-bottom: 80px;
+	
 
 
 }
@@ -17586,6 +17595,7 @@ overflow: hidden;
 	border: 2px solid #000;
 	text-decoration: none;
 	border-radius: 0px !important;
+	background: transparent;
 
 }
 
@@ -18782,6 +18792,24 @@ box-shadow: none !important;
 	
 	padding-top: 20px;
 	padding-bottom: 20px;
+	
+	
+	}
+	
+	.big-long-btns {
+	
+	padding-left: 75px !important;
+	padding-right: 75px !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	}
+	
+	.new-black-back-btn {
+	
+	background: #000;
+	color: #fff;
+	border: 2px solid #000;
 	
 	
 	}
