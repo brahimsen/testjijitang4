@@ -93,6 +93,7 @@ overflow: hidden;
 width: 220px;
 float: left;
 font-size: 16px;
+font-family: "OpenSans-Regular";
 
 
 
@@ -136,7 +137,9 @@ font-family: "OpenSans-Bold";
 
 border: 2px solid #000 !important;
 width: 300px !important;
-margin-bottom: 0px !important
+margin-bottom: 0px !important;
+font-family: "OpenSans-Bold";
+color: #000;
 
 
 }
@@ -309,6 +312,7 @@ border-bottom: 4px solid #000;
 	width: 100%;
 	float: none;
 	margin-bottom: 15px;
+	
 
 }
 
@@ -316,6 +320,28 @@ border-bottom: 4px solid #000;
 
 	width: 100%;
 	float: none;
+
+}
+
+}
+
+.profile-publications-header {
+
+	border-top: 30px solid #ecead4;
+
+}
+
+@media(max-width: 676px) {
+
+.profile-form-content input {
+
+	width: 100% !important;
+
+}
+
+.profile-form-content select {
+
+	width: 100% !important;
 
 }
 

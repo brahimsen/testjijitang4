@@ -28,6 +28,7 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/myjavascript.js"></script>
+<script src="js/text-length-script.js"></script>
 
 
 <style>
@@ -45,6 +46,14 @@ padding-top: 0px !important;
 padding-bottom: 0px !important;
 
 }
+
+footer {
+
+    border-top: 25px solid #ecead4;
+
+}
+
+
 
 </style>
 
@@ -159,13 +168,13 @@ $(document).ready(function(){
 		
 		<div>
 		
-		<a href="" >ACCOUNT</a>
-		<a href="">PROFILE</a>
-		<a href="" class="active">RESEARCH</a>
+		<a href="account-setting.html" >ACCOUNT</a>
+		<a href="profile-setting.html">PROFILE</a>
+		<a href="research-setting.html" class="active">RESEARCH</a>
 		
 		</div>
 		
-		<a class="green-button">VIEW PROFILE</a>
+		<a class="green-button" href="mypage.html">VIEW PROFILE</a>
 		
 		
 		
@@ -188,7 +197,7 @@ $(document).ready(function(){
 			<div class="profile-form-label">Position</div>
 			<div class="profile-form-content">
 			
-					<input class="form-control"  placeholder="Position">
+					<input class="form-control"  placeholder="Position" value="Assistant Professor">
 			
 			</div>
 			
@@ -201,7 +210,7 @@ $(document).ready(function(){
 			<div class="profile-form-label">Institute</div>
 			<div class="profile-form-content">
 			
-			<input class="form-control"  placeholder="Institute">
+			<input class="form-control"  placeholder="Institute" value="AUI">
 			
 			</div>
 			
@@ -212,7 +221,7 @@ $(document).ready(function(){
 			<div class="profile-form-label">Department</div>
 			<div class="profile-form-content">
 			
-			<input class="form-control"  placeholder="Department">
+			<input class="form-control"  placeholder="Department" value="SSE">
 			
 			</div>
 			
@@ -224,9 +233,9 @@ $(document).ready(function(){
 			<div class="profile-form-content">
 			
 			<select name="field" class="form-control required user-form-select">
-						<option value="">Reaearch Field</option>
+						
 						<option value="Economics">Economics</option>
-						<option value="Natural Sciences">Natural Sciences</option>
+						<option value="Natural Sciences" selected="selected">Natural Sciences</option>
 						
 						</select>
 			
@@ -242,8 +251,17 @@ $(document).ready(function(){
 			<div class="input-group keywords-group " style="margin-bottom: 0px !important" >
 				
 				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="Type Your Reearch Interests"/>
-				<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
-				<div class="project-keyword-list"></div>
+				<a  id="add-interests-btn" class="new-small-button new-black-back-btn">Add</a>
+				<div class="project-keyword-list">
+				
+				<div class="editor-all-tags"><span class="tag-text">Software Engineering</span><div class="tag-delete lnr lnr-cross"></div></div>
+				<div class="editor-all-tags"><span class="tag-text">Computer Algorihtms</span><div class="tag-delete lnr lnr-cross"></div></div>
+				<div class="editor-all-tags"><span class="tag-text">Front end design</span><div class="tag-delete lnr lnr-cross"></div></div>
+				<div class="editor-all-tags"><span class="tag-text">Ajax</span><div class="tag-delete lnr lnr-cross"></div></div>
+				<div class="editor-all-tags"><span class="tag-text">HTML5/CSS3</span><div class="tag-delete lnr lnr-cross"></div></div>
+				
+				</div>
+				
 				</div>
 			
 			</div>
@@ -255,7 +273,9 @@ $(document).ready(function(){
 			<div class="profile-form-label">Research Experience</div>
 			<div class="profile-form-content">
 			
-					<textarea type="text" class="form-control" id="short-bio" placeholder="Reseach Experience"></textarea>
+					<textarea style="height: 150px !important" type="text" class="form-control" id="reserachexp" placeholder="Reseach Experience">In case you want to have a default text as a sort of placeholder/hint but not considered a valid value (something like "complete here", "select your nation" ecc.) you can do something like thiIn case you want to have a default text as a sort
+					</textarea>
+					<p class="text-counter"  id="exp-counter"><span>0</span>/2000</p>
 			
 			</div>
 			
@@ -266,13 +286,35 @@ $(document).ready(function(){
 			
 			<div class="profile-form-btns">
 			
-			 <button type="submit"  class="new-big-button new-black-btn big-long-btns   middle-button" >SAVE</button>
+			 <button type="submit"  class="new-big-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
 			 <button type="submit"  class="new-big-button new-black-btn big-long-btns   middle-button" >CANCEL</button>
 			
 			</div>
 			
 			</form>
-		
+			
+			<div class="settings-page-header profile-publications-header">
+			
+				PUBLICATIONS
+			
+			</div>
+			
+			<div class="publications-wrapper">
+			
+			<div class="project-publications-holder">
+			
+			<p class="project-single-publication">How can I set the default value for an HTML element?<span class="publication-single-toolbar"><span class="single-publication-edit icon-uniE605"></span><span class="single-publication-delete icon-remove"></span></span></p>
+			<p class="project-single-publication">However, this did not work as I had expected. How can I set which<span class="publication-single-toolbar"><span class="single-publication-edit icon-uniE605"></span><span class="single-publication-delete icon-remove"></span></span></p>
+			<p class="project-single-publication">
+12
+down vote
+In case you want to have a default text as a sort of placeholder/hint but not considered a valid value (something like "complete here", "select your nation" ecc.) you can do something like this:<span class="publication-single-toolbar"><span class="single-publication-edit icon-uniE605"></span><span class="single-publication-delete icon-remove"></span></span></p>
+			
+			
+				</div>
+				
+				<a data-toggle="modal" id="add-publication-modal-btn" data-target="#project-publications-modal">CREATE A NEW PUBLICATION</a>
+		</div>
 		
 		</div> 
 		
@@ -291,6 +333,7 @@ $(document).ready(function(){
 	
 	</div>
         
+		<footer></footer>
 
     </div>
 
