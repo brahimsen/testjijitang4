@@ -17102,6 +17102,15 @@ width: calc( 100% - 90px) !important;
 
 }
 
+#add-author-btn {
+
+	float: right !important;
+	padding-top: 7px !important;
+	padding-bottom: 7px !important;
+	cursor: pointer;
+
+}
+
 .create-project-extra-description {
 
 width: 100%;
@@ -18829,5 +18838,45 @@ box-shadow: none !important;
 		text-align: center;
 		padding-top: 20px;
 		padding-bottom: 20px;
+	
+	}
+	
+	.two-input-row input {
+	
+		width: 49% !important;
+		float: left !important;
+	
+	}
+	
+	.two-input-row input:nth-child(2) {
+	
+		margin-left: 2% !important;
+	
+	}
+	
+	.two-input-row  {
+	
+		height: auto;
+		overflow: hidden;
+	
+	}
+	
+	#project-publications-modal .modal-header {
+	
+	margin-top: -20px;
+	margin-left: -20px;
+	margin-right: -20px;
+	
+	}
+	
+	.pub-modal-header {
+	
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 0px !important;
+		font-size: 18px;
+		font-family: "OpenSans-Regular";
+		
 	
 	}

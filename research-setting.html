@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/bootstrap-select.css"  type="text/css"/>
 <link href="css/settings-page.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 
 
@@ -29,6 +30,7 @@
 <script src="js/myform.js"></script>
 <script src="js/myjavascript.js"></script>
 <script src="js/text-length-script.js"></script>
+
 
 
 <style>
@@ -59,6 +61,64 @@ footer {
 
 <script>
 
+$(function() {
+
+    $( "#datepickerstart" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+	  yearRange: "1985:2045"
+    });
+	
+	 $( "#datepickerend" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+	  yearRange: "1985:2045"
+    });
+  });
+  
+  
+  
+  $(document).ready(function(){
+  
+  $("#submit-publication").click(function() {
+  
+  
+	if($("#pub-title").val() == "" || $("#pub-publish-time").val() == "" || $("#pub-journal").val() == "" || $(".pub-author-list > div").length == 0 ){
+	
+		$(".publication-error").addClass("show-publication-error");
+		
+
+	}else{
+	var authorarray = [];
+	$('.pub-author-list').children('.editor-all-tags').each(function () {
+	authorarray.push($(this).children('.tag-text').text());
+    
+});
+	
+	
+	
+	$('#project-publications-modal').modal('hide');
+	$(".project-publications-holder").append(" <p class='project-single-publication'>"+authorarray+". ("+$("#pub-publish-time").val()+"). "+$("#pub-journal").val()+": "+$("#pub-title").val()+". "+$("#pub-link").val()+" <span class='publication-single-toolbar'><span  class='single-publication-edit icon-uniE605' ></span><span class='single-publication-delete icon-remove'></span></span></p>");
+
+	$("#pub-title").val("");
+	$("#pub-publish-time").val("");
+	$("#pub-journal").val("");
+	$("#pub-short-journal").val("");
+	$("#pub-link").val("");
+	$("#pub-journal").val("");
+	$(".pub-author-list").html("");
+	$(".publication-error").removeClass("show-publication-error");
+	
+	
+	}
+  
+		
+  
+
+  });
+  
+  });
+
 $(document).ready(function(){
 	
 
@@ -72,6 +132,27 @@ $(document).ready(function(){
 });
 
 	 $('.project-keyword-list').on('click', '.tag-delete', function(){
+	 	
+	 $(this).parent().remove()
+   
+});
+	
+	
+	});
+	
+	$(document).ready(function(){
+	
+
+	
+	
+	$("#add-author-btn").click(function(e) {
+    
+           $(".pub-author-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#authors-list").val()+"</span><div class='tag-delete lnr lnr-cross'></div></div>");
+	   $("#authors-list").val('')
+   
+});
+
+	 $('.pub-author-list').on('click', '.tag-delete', function(){
 	 	
 	 $(this).parent().remove()
    
@@ -94,11 +175,7 @@ $(document).ready(function(){
     
 });
 
-	 $('.project-publications-holder').on('click', '.single-publication-delete', function(){
-	 	
-	 $(this).parent().parent().remove()
-   
-});
+
 
 
 
@@ -126,19 +203,81 @@ $(document).ready(function(){
 
 
 	<div class="modal fade" id="project-publications-modal">
+	
+	<div class="modal-header">
+ 
+ <p>NEW PUBLICATION </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+	<div class="publication-error">Journal Name, publish time, title and author, are all REQUIRED.</div>
 
-	<p class="project-modal-headers">Add a publication</p>
+	<p class="pub-modal-header">Let's Get your Publication Started !</p>
 
 	<div class="project-publication-modal-inner" >
 	
-		<textarea id="project-publication-content" placeholder="Publications..." ></textarea>
 		
 		
+		<label class="group-label">Journal Information</label>
+		
+		<div class="input-group two-input-row">
+			
+					<input id="pub-journal" class="form-control"  placeholder="Journal Name">
+					<input id="pub-short-journal" class="form-control"  placeholder="Journal Short Name">
+		</div>
+		
+		<div class="input-group">
+			
+					<input id="pub-publish-time" placeholder="Publish Year" class="form-control" type="text">
+					
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Title & Author</label>
+		
+		<div class="input-group">
+			
+					<input id="pub-title" class="form-control"  placeholder="Title">
+					
+					<div class="input-group keywords-group " style="margin-bottom: 0px !important; margin-top: 20px;" >
+				
+				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
+				<a  id="add-author-btn" class="new-small-button new-black-back-btn">Add</a>
+				<div class="pub-author-list"></div>
+				
+				</div>
+					
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Link to Full Article</label>
+		
+		
+		<div class="input-group">
+			
+					<input id="pub-link" class="form-control"  placeholder="Link">
+					
+			
+					
+		</div>
+			
+			
+			
+		</div>
+
+		 <div class="profile-form-btns">
+			
+			 <button type="submit" id="submit-publication"  class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+			 <button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
+			
+			</div>
 	
 	
-	</div>
-	
-	<button type="submit" id="project-add-pub-btn"  class="main-button pass-confirm-btn create-project-btn " data-dismiss="modal">Subumit</button>
+
   
 </div><!-- /.modal -->
 

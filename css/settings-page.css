@@ -346,3 +346,27 @@ border-bottom: 4px solid #000;
 }
 
 }
+
+.publication-error {
+
+	display: none;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	margin-left: -20px;
+	margin-right: -20px;
+   
+   
+
+}
+
+.show-publication-error {
+
+	display: block !important;
+
+}
