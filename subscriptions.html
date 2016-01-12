@@ -94,6 +94,27 @@ $(function () {
 
 }
 
+@media(max-width: 767px) {
+
+#article-columns {
+
+-webkit-column-count: 1 !important;
+	-webkit-column-gap: 30px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 1 !important;
+	-moz-column-gap: 30px;
+	-moz-column-fill: auto;
+	column-count: 1 !important;
+	column-gap: 30px;
+	column-fill: auto;
+
+
+}
+
+
+
+}
+
 .square-grids {
 
 background: #CFCCB9;
@@ -664,7 +685,7 @@ padding-top: 15px;
 
 <script>
 
-$( "header" ).load( "new-header.html" );
+$( "header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
 $( "#aside" ).load( "aside.html" );
 $( ".Entries1" ).load( "Testnotes/NewNote1.html" );
