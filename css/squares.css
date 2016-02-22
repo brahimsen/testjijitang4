@@ -10,13 +10,13 @@
 #profile-columns {
 
 -webkit-column-count: 3;
-	-webkit-column-gap: 10px;
+	-webkit-column-gap: 25px;
 	-webkit-column-fill: auto;
 	-moz-column-count: 3;
-	-moz-column-gap: 10px;
+	-moz-column-gap: 25px;
 	-moz-column-fill: auto;
 	column-count: 3;
-	column-gap: 15px;
+	column-gap: 25px;
 	column-fill: auto;
 	padding-top: 20px;
 
@@ -99,13 +99,14 @@ display: inline-block;
 		position: relative;
 		top: 0;
 		overflow: hidden;
-		margin-bottom: 10px;
+		margin-bottom: 25px;
+		min-width: 100%;
 	}
 	
 .square-grid-filter {
 	
 		height: auto;
-		background: #888679;
+		background: #fff;
 	
 	
 	
@@ -173,13 +174,13 @@ margin-top: -20px;
 #profile-columns {
 
 -webkit-column-count: 2 !important;
-	-webkit-column-gap: 10px;
+	-webkit-column-gap: 25px;
 	-webkit-column-fill: auto;
 	-moz-column-count: 2 !important;
-	-moz-column-gap: 10px;
+	-moz-column-gap: 25px;
 	-moz-column-fill: auto;
 	column-count: 2 !important;
-	column-gap: 15px;
+	column-gap: 25px;
 	column-fill: auto;
 	padding-top: 20px;
 
@@ -227,6 +228,11 @@ width: 100%;
 
 padding-top: 10px;
 padding-bottom: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+    background: #CFCCB9;
+    padding-left: 20px;
+    padding-right: 20px;
 
 
 
@@ -237,8 +243,8 @@ padding-bottom: 10px;
 
 width: 25%;
 text-align: center;
-color: #999 !IMPORTANT;
-font-family: "OpenSans-Regular";
+color: #fff !IMPORTANT;
+font-family: "OpenSans-SemiBold";
 font-size: 14px;
 text-decoration: none !important;
 display: inline-block;
@@ -282,8 +288,9 @@ display: inline-block;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-top: 2px solid #ecead4;
-	border-bottom: 2px solid #ecead4;
+	
 	margin-bottom: 0px !important;
+	text-align: center;
 
 }
 
@@ -360,13 +367,13 @@ display: inline-block;
 #profile-columns {
 
 -webkit-column-count: 1 !important;
-	-webkit-column-gap: 10px;
+	-webkit-column-gap: 25px;
 	-webkit-column-fill: auto;
 	-moz-column-count: 1 !important;
-	-moz-column-gap: 10px;
+	-moz-column-gap: 25px;
 	-moz-column-fill: auto;
 	column-count: 1 !important;
-	column-gap: 15px;
+	column-gap: 25px;
 	column-fill: auto;
 	padding-top: 20px;
 
@@ -407,5 +414,18 @@ padding: 4%;
 padding-top: 20px;
 
 
+
+}
+
+.profile-update-inst {
+
+padding-right: 15px;
+border-right: 1px solid #000;
+
+}
+
+.profile-update-field {
+
+padding-left: 15px;
 
 }

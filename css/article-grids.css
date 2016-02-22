@@ -9,13 +9,13 @@
 #article-columns {
 
 -webkit-column-count: 3;
-	-webkit-column-gap: 10px;
+	-webkit-column-gap: 25px;
 	-webkit-column-fill: auto;
 	-moz-column-count: 3;
 	-moz-column-gap: 10px;
 	-moz-column-fill: auto;
 	column-count: 3;
-	column-gap: 15px;
+	column-gap: 25px;
 	column-fill: auto;
 
 
@@ -77,13 +77,14 @@ padding-top: 0px;
 		position: relative;
 		top: 0;
 		overflow: hidden;
-		margin-bottom: 10px;
+		margin-bottom: 25px;
+		width: 100%;
 	}
 	
 .square-grid-filter {
 	
 		height: auto;
-		background: #888679;
+		background: #fff;
 	
 	
 	
@@ -113,13 +114,13 @@ padding-top: 0px;
 	#article-columns {
 
 -webkit-column-count: 2;
-	-webkit-column-gap: 10px;
+	-webkit-column-gap: 25px;
 	-webkit-column-fill: auto;
 	-moz-column-count: 2;
 	-moz-column-gap: 10px;
 	-moz-column-fill: auto;
 	column-count: 2;
-	column-gap: 15px;
+	column-gap: 25px;
 	column-fill: auto;
 
 
@@ -160,13 +161,13 @@ margin-right: 10px;
 	#article-columns {
 
 -webkit-column-count: 1;
-	-webkit-column-gap: 10px;
+	-webkit-column-gap: 25px;
 	-webkit-column-fill: auto;
 	-moz-column-count: 1;
 	-moz-column-gap: 10px;
 	-moz-column-fill: auto;
 	column-count: 1;
-	column-gap: 15px;
+	column-gap: 25px;
 	column-fill: auto;
 
 
