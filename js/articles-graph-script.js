@@ -60,9 +60,9 @@ $(document).ready(function() {
 
 	
  $(document).ready(function() {
-				$(".like-full").hide();
+				
 				$(".like-holder").click(function(){
-					$('.like,.like-full',this).toggle();
+					$('.like,.like-full').toggleClass("hide-like-btn");
 				
 				});
 			});

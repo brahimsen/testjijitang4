@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/article-grids.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="mobile-fonts.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/collections.css" type="text/css" media="screen" />
 
 <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -28,48 +29,25 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/headerscript.js"></script>
-<script src="js/articles-graph-script.js"></script>
-<script src="js/jquery.dataTables.js"></script>
-<script src="js/projects-script.js"></script>
 <script src="js/collection-script.js"></script>
-<script src="js/profiles-script.js"></script>
-<script src="../js/myEntries.js"></script>  
+
 
 
 <style>
 
-#sticky {
-
-}
-#sticky.sticka {
-    position: fixed;
-    top: 67;
-	width: 100% !important;
-    z-index: 10000;
-	margin-left: -2%;
-    
-}
 
 
-.hideme {
-  
-    opacity: 0;
-}
 
 .square-grids {
 
 	margin-top: 50px;
 	width: 100% !important;
 	padding-left: 0% !important;
-	background: #fff !important;
+	padding-right: 0% !important;
 
 }
 
-.project-square-grid-item {
 
-	border: 5px solid #fff;
-
-}
 
 #article-columns {
 
@@ -85,28 +63,6 @@
 
 
 
-$(document).ready(function() {
-	
-	function sticky_relocate() {
-    var window_top = $(window).scrollTop();
-    var div_top = $('#sticky-anchor').offset().top;
-    if (window_top > div_top) {
-        $('#sticky').addClass('sticka');
-		
-    } else {
-        $('#sticky').removeClass('sticka');
-		
-    }
-}
-
-$(function () {
-    $(window).scroll(sticky_relocate);
-    sticky_relocate();
-});
-
-$('.index-slide-holder').hide().fadeIn(2500);
-
-});
 
 
 
@@ -222,7 +178,7 @@ $(window).on("load",function() {
         </div>
         <div id="arrow-target" ></div>
 		
-				 <div class="index-collections-holder-header  ">
+				 <div class="index-collections-holder-header">
         
 		
 		
@@ -236,504 +192,241 @@ $(window).on("load",function() {
 			
 			</div>
 		
-		 <div class="index-collections-holder-header  ">
+		 <div class="index-collections-holder-header brown-full-back">
         
 		
 		
-        	<p class="instead-of-h1">PROJECTS</p>
+        	<p class="instead-of-h1">COLLECTIONS</p>
 			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
             <p class="instead-of-p">A Place for your projects to be seen and commented by other researchers</p>
         
-				<div class="square-grids">
+			<div class="square-grids" id="collection-columns">
 	
-	
- 
-<div class="project-square-grid-item" style=" background:url(img/promotion-back.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;" >
+ <div class="collection-grid-item"  style=" background:url(img/profile1.jpg) no-repeat center center; background-size: cover;"  > 
 
-	
-	
-<div class="project-square-grid-item-inner" > 
+<div class="collection-follow-wrapper"  >
 
-		<div class="project-graph-content" >
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="project-follow">
-		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="project-like-holder ">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-					
-					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
-					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					
-					
-				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
-				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
-					
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		
-
-	
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
 
 </div>
 
+<div class="collection-grid-item-inner"> 
 
-
+	<a class="collection-grid-title">Computers</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
 
 </div> 
 
+<p class="collection-grid-meta">
 
-<div class="project-square-grid-item" style=" background:url(img/index-back2.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;" >
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
 
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
 	
-	
-<div class="project-square-grid-item-inner" > 
+	</p>
+	</div>
+</div> 
 
-		<div class="project-graph-content" >
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="project-follow">
-		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="project-like-holder ">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
-					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-				
-					
-				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
-				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
-					
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		
+ <div class="collection-grid-item"  style=" background:url(img/profile2.jpg) no-repeat center center; background-size: cover;"  > 
 
-	
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
 
 </div>
 
+<div class="collection-grid-item-inner"> 
 
-
+<a class="collection-grid-title">Why Blue whaltes dont make sound on the shallow</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
 
 </div> 
 
-<div class="project-square-grid-item" style=" background:url(img/myimage.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;" >
+<p class="collection-grid-meta">
 
-	
-	
-<div class="project-square-grid-item-inner" > 
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
 
-		<div class="project-graph-content">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="project-follow">
-		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="project-like-holder ">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
-					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
-					
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-				
-					
-				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
-				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
-					
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		
+</p>
 
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
 	
+	</p>
+	</div>
+</div> 
+
+ <div class="collection-grid-item"  style=" background:url(img/profile3.jpg) no-repeat center center; background-size: cover;"  > 
+
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
 
 </div>
 
-
-
+<div class="collection-grid-item-inner"> 
+	
+	<a class="collection-grid-title">Physics</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
 
 </div> 
 
-<div class="project-square-grid-item"  style=" background:url(img/profile1.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;" >
+<p class="collection-grid-meta">
 
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
 	
-	
-<div class="project-square-grid-item-inner" > 
+	</p>
+	</div>
+</div> 
 
-		<div class="project-graph-content"">
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="project-follow">
-		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="project-like-holder ">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-					
-					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
-					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					
-					
-				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
-				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
-					
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		
+ <div class="collection-grid-item"  style=" background:url(img/profile4.jpg) no-repeat center center; background-size: cover;"  > 
 
-	
+<div class="collection-follow-wrapper"  >
 
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
 </div>
 
 </div>
 
-<div class="project-square-grid-item" style=" background:url(img/profile2.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;" >
+<div class="collection-grid-item-inner"> 
 
+	<a class="collection-grid-title">Why cats dont wanna talk to humans, and why dogs are always loyal to his owner</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
 	
 	
-<div class="project-square-grid-item-inner" > 
-
-		<div class="project-graph-content" >
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="project-follow">
-		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="project-like-holder ">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-					
-					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
-					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					
-					
-				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
-				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
-					
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		
-
-	
-
-</div>
-
-
-
 
 </div> 
 
+<p class="collection-grid-meta">
 
-<div class="project-square-grid-item" style=" background:url(img/profile3.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;" >
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji Gninou ben abderafie</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
 
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
 	
-	
-<div class="project-square-grid-item-inner" > 
+	</p>
+	</div>
+</div> 
 
-		<div class="project-graph-content" >
-		
-			<div class="project-graph-inner-content">
-			
-				<div>
-				
-<div class="project-follow">
-		<a class="project-unfollowed" data-toggle="tooltip" data-placement="top" title="Follow" class=" like like-toggle"><span class="icon-star "></span></a>
-		<a class="hide-follow-check project-followed" data-toggle="tooltip" data-placement="top" title="Unfollow" class=" like like-toggle"><span class="icon2-star"></span></a>
-		</div>
-		
-		<div class="project-like-holder ">
-                            
-                            	<button data-toggle="tooltip" data-placement="top" title="Like" class=" project-like ">
-                            
-                            		<span class="icon-uniE602"></span>
-                            		
-									
-                            
-                            	</button>
-                            	
-                                <button data-toggle="tooltip" data-placement="top" title="Unlike" class="project-like-full hide-follow-check" style="margin-left: 0px">
-                            
-                            		<span class="icon-uniE615" style="color: #fff"></span>
-									
-                                	
-                                 </button>
-                                
-                             </div>
-				
-				</div>
-				<div>
-				
-					<p>Final Thesis - How to Prevent Global Warming by Smoking Less</p>
-					
-					<p class="project-meta-info-holder"><a>12 Saves</a><a>0 Dicussions</a></p>
-					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
-				
-				
-				</div>
-				
-				
-				
-				
-				<div>
-				
-					
-					
-				<div class="project-profiles-holder"><a><img src="img/brahim.png" /></a> <a><img src="img/profile1.jpg" /></a> <a><img src="img/profile2.jpg" /></a></div>
-				<div class="project-profile-names-holder"><a>Brahim Senhaji</a> - <a>Albert Einstein</a> -  <a>Dennis Ritchie</a></div>
-					
-				
-				</div>
-			
-			
-			</div>
-		
-		
-		</div>
-		
-		
+ <div class="collection-grid-item"  style=" background:url(img/profile4.jpg) no-repeat center center; background-size: cover;"  > 
 
-	
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
 
 </div>
 
+<div class="collection-grid-item-inner"> 
 
-
+	<a class="collection-grid-title">Why Blue whaltes dont make sound on the shallow</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
 
 </div> 
 
+<p class="collection-grid-meta">
+
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
+	
+	</p>
+	</div>
+</div> 
+
+ <div class="collection-grid-item"  style=" background:url(img/profile2.jpg) no-repeat center center; background-size: cover;"  > 
+
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
+
+</div>
+
+<div class="collection-grid-item-inner"> 
+
+	<a class="collection-grid-title">Why Blue whaltes dont make sound on the shallow</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
 
 </div> 
+
+<p class="collection-grid-meta">
+
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
+	
+	</p>
+	</div>
+</div> 
+
+
+
+	</div>
 
 <a class="home-see-more">SEE MORE PROJECTS</a>
         
@@ -741,405 +434,7 @@ $(window).on("load",function() {
 		
 		
         
-        <div class="index-collections-holder-header  no-bottom-border ">
-        
-        	<p class="instead-of-h1">COLLECTIONS</p>
-			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
-            <p class="instead-of-p" style="margin-bottom: 50px">Read, write, and share articles that matter to you.</p>
-        
-		
-		<div id="sticky-anchor"></div>
-         <div class="new-index-nav-holder" id="sticky">
-         
-         
-         
-          <ul class="nav nav-tabs new-index-nav"  role="tablist">
-    <li role="presentation" class="active  hidden-phone"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Business and Economics</a></li>
-    <li role="presentation" class="hidden-phone"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Psychology</a></li>
-    <li role="presentation" class="hidden-phone"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Natural Sciences</a></li>
-    <li role="presentation" class="dropdown new-index-nav-drop"><a id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">More<b class="caret"></b></a>
-    
-    		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
-            <li class="hidden-desktop hidden-tablet"><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Business and Economics(<span>22</span>)</a></li>
-            <li class="hidden-desktop hidden-tablet"><a href="#profile"tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Psychology(<span>43</span>)</a></li>
-            <li class="hidden-desktop hidden-tablet"><a href="#messages" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Natural Sciences(<span>35</span>)</a></li>
-          <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="true">Technology (<span>22</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> Religion(<span>12</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> IT(<span>26</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> ARTS(<span>3</span>)</a></li>
-          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"> Tech(<span>4</span>)</a></li>
-        </ul>
-    
-    </li>
-  </ul>
-  
-  </div>
-
-  <!-- Tab panes -->
-  <div class="tab-content index-tab-contents">
-
-  
-    <div role="tabpanel" class="tab-pane active" id="home">
-    
-    <div class="collections-dashbord-holder">
-
-            
-            	
-                
-                  
-                
-                
-                	<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/profile3.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-					
-					<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/profile2.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-					
-						<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/index-back2.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-					
-						<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/big-logo.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-					
-						<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/myback.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-					
-						<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/profile4.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-					
-						<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/index-back.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-					
-						<div class="collection-item segmentListItem" draggable="true"  data-duration="3" style=" background:url(img/profile1.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-                        <div class="collection-back"></div>
-                        <div class="collection-inner-content-holder">
-                        
-                        
-                        		<div class="privacy-icon" style="float:right">
-                        			<span class="privacy-icon-eye-blocked icon9-eye-blocked"></span>
-                                </div>
-                    			
-                                <div class="collection-icon" style="float:right">
-                                    <span class="collection-icon-empty icon-star "></span>
-                        			<span class="collection-icon-full icon2-star"></span>
-                                </div>
-                                
-                                 
-                                
-                                <div class="collection-tooltip" style="float:right">
-                                     <span class="edit-collection-icon icon-uniE605"></span>
-                                </div>
-                                
-                                
-                            <div class="collection-inner-content">
-                            
-                            		<p class="collection-list-name">Sara Seager's Publication</p>
-                              
-                                	
-                            </div>
-                            
-                            <div class="collection-inner-content-footer">
-                            
-                            	<p class="collection-list-author">Yuyu Xuan</p>
-                                	<p class="collection-footer">26 Articles . 34 Followers</p>
-                            
-                            </div>
-                        </div>
-                	</div>
-              
-                	
-            
-            </div>
-    
-    
-    
-    </div>
-    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
-    
-    
-    
-  
-    
-    
-  </div>
-  
-  <a class="home-see-more" style="margin-top: 20px; padding-bottom: 40px">SEE MORE PROJECTS</a>
-   
-		
-        
-        </div>
+     
 		
 	
         
