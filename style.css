@@ -2383,9 +2383,13 @@ margin-left: 0px !important;
 .header-btns {
 
 	float: right !important;
-	margin-left: 10px !important;
-	width: 165px;
+	
+	width: 90px;
 
+}
+
+#search-btn:clicked {
+	text-decoration: none !important;
 }
 
 .header-btns-holder {
@@ -3301,10 +3305,6 @@ margin-top: -30px;
 }
 		
 			
-.nav-admin-holder > li > a {
-	font-size: 12px !important;
-
-}
 
 .nav-admin-holder > li > a > span {
 	font-size: 14px !important;
@@ -3345,8 +3345,8 @@ border: 1px solid rgba(0, 0, 0, 0.2);
 #search-text {
 		float:right; 
 		margin-right: 0px; 
-		margin-top: 11px; 
-		height: 22px; 
+		margin-top: 10px; 
+		height: 30px; 
 		background: #FFF; 
 		margin-bottom: 0px !important;
 		border-radius: 0px !important;
@@ -12174,7 +12174,8 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 }
 
 .nav-admin-holder {
-	left: -9px !important;
+	right: 0px !important;
+	left: auto;
 }
 
 .nav-admin-holder > hr {
@@ -17435,7 +17436,7 @@ position: relative;
 -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover !important;
 
 
 }
@@ -20412,5 +20413,268 @@ button {
 .share-like-article .dropdown-menu {
 
 top: 70px;
+
+}
+
+.my-project-update {
+
+background: #fff;
+padding: 15px;
+margin-bottom: 15px;
+
+}
+
+.my-project-share-icons {
+
+margin-bottom: 0px !important;
+float: right;
+
+}
+
+.my-project-share-icons a {
+
+color: #CFCCB9 !important;
+font-size: 21px;
+margin-right: 15px;
+
+
+}
+
+.my-project-share-icons a span {
+
+font-size: 16px;
+
+
+}
+
+.my-project-share-icons a i {
+
+color: #CFCCB9 !important;
+margin-right: 5px;
+
+
+
+}
+
+.my-project-share-icons a:hover {
+
+text-decoration: none;
+
+
+}
+
+.my-project-update-footer {
+
+height: auto;
+overflow: hidden;
+padding-top: 10px;
+border-top: 2px solid #ecead4;
+
+}
+
+.my-project-privacy {
+
+	float: left;
+	margin-bottom: 0px !important;
+	color: #CFCCB9 !important;
+
+}
+
+
+.my-project-privacy .fa-lock {
+
+	    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #CFCCB9;
+    border-radius: 30px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+.my-project-privacy .fa-unlock {
+
+	    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #CFCCB9;
+    border-radius: 30px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+.my-project-label {
+	color: #CFCCB9;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 20px;
+
+}
+
+.my-project-title {
+
+	font-size: 21px;
+	font-family: "OpenSans-Bold";
+	color: #000;
+}
+
+.my-project-title:hover {
+
+	text-decoration: none;
+	color: #666;
+}
+
+.my-project-meta {
+
+margin-top: 5px;
+font-size: 13px;
+color: #CFCCB9;
+
+}
+
+.my-project-meta span {
+
+
+font-family: "OpenSans-Regular";
+font-style: italic;
+
+
+}
+.on-going-project {
+
+	color: #a4ce4c !important;
+	font-weight: bold;
+	font-style: italic;
+
+}
+
+.closed-project {
+
+	color: #a71a1a !important;
+	font-weight: bold;
+	font-style: italic;
+
+}
+
+.project-view-top-inner-bar {
+
+	padding: 10px;
+	background: #fff;
+	height: auto;
+	overflow: hidden;
+
+
+}
+.project-view-top-inner-bar p {
+
+	margin-bottom: 0px !important;
+
+}
+
+.project-view-top-inner-bar p:nth-child(1) {
+
+	float: left;
+	color: #CFCCB9;
+	text-transform: uppercase;
+
+}
+
+.project-view-top-inner-bar p:nth-child(2) {
+
+	float: right;
+	color: #CFCCB9;
+	
+
+}
+
+.project-view-top-inner-bar p:nth-child(2) > span:nth-child(1) {
+
+	font-style: italic;
+	
+
+}
+
+.project-view-top-inner-bar p > span:nth-child(3) {
+
+	float: right;
+	font-style: italic;
+	
+
+}
+
+.top-nav-author-info-see-all:hover {
+
+	text-decoration: none;
+	
+
+}
+
+.top-nav-author-info-see-all {
+
+	font-size: 11px;
+	color: #999 !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 45px;
+	
+
+}
+
+.project-view-img-holder {
+
+	position: relative;
+
+}
+
+.project-view-start-end {
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	background: rgba(0,0,0,0.3);
+	text-align: center;
+
+}
+
+.project-view-start-end span{
+
+color: #fff;
+border: 2px solid #fff;
+display: inline-block;
+text-align: center;
+padding-top: 30px;
+padding-bottom: 30px;
+padding-left: 50px;
+padding-right: 50px;
+font-size: 21px;
+line-height: 30px;
+margin-left: 30px;
+margin-right: 30px;
+margin-top: 100px;
+}
+
+.nav-admin-holder > li > a {
+	font-size: 12px !important;
+	color: #000 !important;
+	margin-left: 0px !important;
+}
+
+.nav-admin-holder > li > a:hover {
+	
+	color: #fff !important;
+	
+}
+
+a:hover {
+
+	text-decoration: none !important;
 
 }

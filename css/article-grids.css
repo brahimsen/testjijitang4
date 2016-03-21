@@ -110,6 +110,25 @@ padding-top: 0px;
 
 /* Three Column */
 
+@media screen and (min-width: 1440px) {
+
+	.article-columns {
+
+-webkit-column-count: 4;
+	-webkit-column-gap: 25px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 4;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 4;
+	column-gap: 25px;
+	column-fill: auto;
+
+
+}
+
+}
+
 @media screen and (max-width:980px) {
 	.article-columns {
 
