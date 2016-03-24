@@ -1,0 +1,433 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/collections.css" type="text/css" media="screen" />
+
+
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="mobile-fonts.css" type="text/css"  />
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/myjavascript.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<style>
+
+.collection-grid-bottom {
+	background: #fff;
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+}
+
+.collection-grid-bottom > p {
+
+	padding-top: 10px;
+	border-top: 2px solid #ecead4;
+
+}
+
+.collection-grid-bottom a {
+	
+	color: #CFCCB9 !important;
+
+}
+
+.square-grids {
+
+	width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0px !important;
+	background: none !important;
+	
+
+}
+
+#collection-columns {
+
+-webkit-column-count: 2;
+	-webkit-column-gap: 25px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 2;
+	-moz-column-gap: 25px;
+	-moz-column-fill: auto;
+	column-count: 2;
+	column-gap: 25px;
+	column-fill: auto;
+	padding-top: 20px;
+
+
+}
+  
+  @media screen and (min-width: 1440px) {
+
+	#collection-columns {
+
+-webkit-column-count: 3;
+	-webkit-column-gap: 25px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 25px;
+	column-fill: auto;
+
+
+}
+
+}
+
+</style>
+
+<script>
+
+ $(document).ready(function() {
+var options = {
+  valueNames: [ 'collection-grid-title' ]
+};
+
+var userList = new List('my-collections', options);
+
+});
+
+</script>
+
+<body>
+
+
+
+
+<div class="header-wrapper">
+	<header>
+
+
+	</header>
+</div>
+
+  <div class="main-page-wrapper">
+    
+    
+ 		
+        
+        <div class="main-page-content" >
+        
+		<div class="main-sub-navigation-wrapper">
+		<div class="main-sub-navigatiion">
+            
+          <a> <span class="fa fa-rss"></span> <span class="hidden-phone hidden-tablet">Feed</span></a>
+		  <a> <span class="fa fa-file-text"></span> <span class="hidden-phone hidden-tablet">My Documents</span></a>
+		  <a class="current" > <span class="fa fa-book"></span> <span class="hidden-phone hidden-tablet">My Collections</span></a>
+		  <a> <span class="fa fa-briefcase"></span> <span class="hidden-phone hidden-tablet">My Projects</span></a>
+		  <a> <span class="fa fa-bell"></span> <span class="hidden-phone hidden-tablet">My Notifications</span></a>
+		  <a> <span class="fa fa-envelope"></span> <span class="hidden-phone hidden-tablet">My Messages</span></a>
+		  
+            
+         </div>
+		 
+		 </div>
+        
+        		
+				<div class="dashboard-wrapper">
+                
+                <div class="dashbord-content-left hidden-tablet hidden-phone">
+                
+                	
+                
+                        
+                        
+                            <div class="dashbord-content-left-article subscription-followers">
+                        
+							<a><img src="img/brahim.png" /></a>
+							<p>
+								Brahim Senhaji
+							</p>
+                            
+							<p>
+							
+							lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-d
+							
+							</p>
+                            
+                   
+                      		
+                                
+                                
+                        
+                        </div>
+						
+				
+						
+                
+                	
+                        
+                    
+                        
+                
+                </div>
+                
+                <div class="dashbord-content-right" >
+				
+				<div class="dashbord-content-right-inner" >
+				
+				<div id="my-collections">
+				 
+				 <div class="full-width-search-holder">
+ <input class="search" placeholder="Search Collections" />
+ <button><i class="lnr lnr-magnifier"></i></button>
+  </div>
+                
+  <div class="square-grids list" id="collection-columns">
+ 
+	
+	
+
+ 
+ <div class="collection-grid-item"  style=" background:url(img/profile3.jpg) no-repeat center center; background-size: cover;"  > 
+
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
+
+</div>
+
+<div class="collection-grid-item-inner"> 
+
+	<a class="collection-grid-title">Computers</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
+
+</div> 
+
+<p class="collection-grid-meta">
+
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
+	
+	</p>
+	</div>
+</div> 
+
+ <div class="collection-grid-item"  style=" background:url(img/profile4.jpg) no-repeat center center; background-size: cover;"  > 
+
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
+
+</div>
+
+<div class="collection-grid-item-inner"> 
+
+<a class="collection-grid-title">Why Blue whaltes dont make sound on the shallow</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
+
+</div> 
+
+<p class="collection-grid-meta">
+
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
+	
+	</p>
+	</div>
+</div> 
+
+ <div class="collection-grid-item"  style=" background:url(img/profile1.jpg) no-repeat center center; background-size: cover;"  > 
+
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
+
+</div>
+
+<div class="collection-grid-item-inner"> 
+	
+	<a class="collection-grid-title">Physics</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
+
+</div> 
+
+<p class="collection-grid-meta">
+
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
+	
+	</p>
+	</div>
+</div> 
+
+ <div class="collection-grid-item"  style=" background:url(img/profile1.jpg) no-repeat center center; background-size: cover;"  > 
+
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
+
+</div>
+
+<div class="collection-grid-item-inner"> 
+
+	<a class="collection-grid-title">Why cats dont wanna talk to humans, and why dogs are always loyal to his owner</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
+
+</div> 
+
+<p class="collection-grid-meta">
+
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji Gninou ben abderafie</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
+	
+	</p>
+	</div>
+</div> 
+
+ <div class="collection-grid-item"  style=" background:url(img/profile3.jpg) no-repeat center center; background-size: cover;"  > 
+
+<div class="collection-follow-wrapper"  >
+
+<div class="collection-follow">
+		<a class="collection-page-unfollowed"> FOLLOW</a>
+		<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+</div>
+
+</div>
+
+<div class="collection-grid-item-inner"> 
+
+	<a class="collection-grid-title">Why Blue whaltes dont make sound on the shallow</a>
+	<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+	
+	
+
+</div> 
+
+<p class="collection-grid-meta">
+
+	<a><img src="img/brahim.png" /><span>Brahim Senhaji</span></a>
+	<span class="collection-grid-date">September 30 2015</span>
+
+</p>
+
+<div class="collection-grid-bottom">
+		
+	<p>
+	<a><span>7</span> Articles</a>
+	<a><span>10</span> Followers</a>
+	
+	</p>
+	</div>
+</div> 
+
+	
+
+	</div>
+	
+	<div class="load-more-button">LOAD MORE</div>
+
+	</div>
+	
+              </div>
+                </div>
+                            
+                            
+                </div>            
+                            
+                            
+                </div>
+    
+                       
+                         
+                
+                
+                </div>
+
+
+<footer></footer>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+
+
+  
+</script>
+<script src="js/list.js"></script>
+
