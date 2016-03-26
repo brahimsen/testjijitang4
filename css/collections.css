@@ -7,59 +7,14 @@
 /* Primary Styles */
   
 
-#collection-columns {
 
--webkit-column-count: 3;
-	-webkit-column-gap: 25px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 3;
-	-moz-column-gap: 25px;
-	-moz-column-fill: auto;
-	column-count: 3;
-	column-gap: 25px;
-	column-fill: auto;
-	padding-top: 20px;
-
-
-}
-  
-  @media screen and (min-width: 1440px) {
-
-	#collection-columns {
-
--webkit-column-count: 4;
-	-webkit-column-gap: 25px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 4;
-	-moz-column-gap: 10px;
-	-moz-column-fill: auto;
-	column-count: 4;
-	column-gap: 25px;
-	column-fill: auto;
-
-
-}
-
-}
 
 .collection-grid-item  {
-	display: inline-block;
+
+ width: calc( (100% - 60.1px) / 4 );
+ float: left;
+ margin-bottom: 20px;
 	
-	
-	
-	
-	-webkit-column-break-inside: avoid;
-	-moz-column-break-inside: avoid;
-	column-break-inside: avoid;
-	
-	
-	
-	opacity: 1;
-	
-	-webkit-transition: all .2s ease;
-	-moz-transition: all .2s ease;
-	-o-transition: all .2s ease;
-	transition: all .2s ease;
 }
 
 .collection-grid-item-inner {
@@ -69,7 +24,7 @@
 height: auto;
 padding-left: 20px;
 padding-right: 20px;
-height: 350px;
+height: 210px;
 padding-top: 112px;
 margin-top: -62px;
 
@@ -112,18 +67,12 @@ display: inline-block;
 
 	
 	.collection-grid-item  {
-		-webkit-transition: background-color .3s linear;
-		-moz-transition: -color .3s linear;
-		transition: background-color .3s linear;
+		
 	}
 	.collection-grid-item { background-color: #fff;  }
 	.collection-grid-item  { background-color: #fff; }
 	.collection-grid-item  {
-		position: relative;
-		top: 0;
-		overflow: hidden;
-		margin-bottom: 25px;
-		min-width: 100%;
+	
 	}
 	
 .collection-grid-filter {
@@ -143,6 +92,16 @@ display: inline-block;
 padding-bottom: 20px;
 margin-top: -20px;
 
+
+}
+
+  @media screen and (min-width: 1440px) {
+.collection-grid-item  {
+
+ width: calc( (100% - 80.1px) / 5 );
+ 
+	
+}
 
 }
 
@@ -194,20 +153,11 @@ margin-top: -20px;
 @media screen and (max-width:980px) {
 	
 	
-#collection-columns {
+.collection-grid-item  {
 
--webkit-column-count: 2 !important;
-	-webkit-column-gap: 25px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 2 !important;
-	-moz-column-gap: 25px;
-	-moz-column-fill: auto;
-	column-count: 2 !important;
-	column-gap: 25px;
-	column-fill: auto;
-	padding-top: 20px;
-
-
+ width: calc( (100% - 20.1px) / 2 );
+ 
+	
 }
 
 
@@ -252,10 +202,10 @@ overflow: hidden;
 padding-top: 10px;
 padding-bottom: 10px;
   
-    background: #CFCCB9;
-    padding-left: 20px;
-    padding-right: 20px;
-	text-align: center;
+background: #CFCCB9;
+padding-left: 20px;
+padding-right: 20px;
+text-align: center;
 
 
 
@@ -368,20 +318,11 @@ text-decoration: none !important;
 
 @media screen and (max-width:767px) {
 
-#collection-columns {
+.collection-grid-item  {
 
--webkit-column-count: 1 !important;
-	-webkit-column-gap: 25px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 1 !important;
-	-moz-column-gap: 25px;
-	-moz-column-fill: auto;
-	column-count: 1 !important;
-	column-gap: 25px;
-	column-fill: auto;
-	padding-top: 20px;
+ width: 100%;
 
-
+	
 }
 
 
@@ -409,10 +350,10 @@ text-decoration: none !important;
 
 	font-family: "OpenSans-SemiBold";
 	color: #fff;
-	font-size: 22px;
+	font-size: 17px;
 	text-transform: uppercase;
 	text-align: center;
-	line-height: 30px;
+	line-height: 24px;
 	display: inline-block;
 	margin-bottom: 10px;
 	
@@ -435,7 +376,7 @@ text-decoration: none;
 	margin-bottom: 0px;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-bottom: 15px;
+	padding-bottom: 7.5px;
 	
 
 }
@@ -445,13 +386,9 @@ text-decoration: none;
 	font-size: 14px;
     color: #000;
     font-family: "OpenSans-Bold";
-    padding-top: 7px;
-    display: inline-block;
-    max-width: 130px;
-    white-space: nowrap;
-    
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding-top: 4px;
+    display: block;
+   
 	
 
 }
@@ -479,10 +416,18 @@ margin-right: 5px;
 .collection-grid-meta .collection-grid-date {
 
 	color: #ccc;
-	float: right;
-	font-size: 14px;
-	display: inline-block;
-	padding-top: 7px;
 	
+	font-size: 13px;
+	display: block;
+	padding-top: 2px;
+	text-align: center;
+	
+
+}
+
+.collection-grid-meta a {
+	
+	display: block;
+	text-align: center;
 
 }

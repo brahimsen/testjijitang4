@@ -28,6 +28,7 @@
 <script src="js/jquery.dataTables.js"></script>
 <script src="js/articles-graph-script.js"></script>
 <script src="js/follow-script.js"></script>
+<script src="js/masonry.js"></script>
 
 <script>
 
@@ -47,46 +48,39 @@ $(function () {
 
 <style>
 
-	
-	#article-columns {
-
--webkit-column-count: 2;
-	-webkit-column-gap: 15px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 2;
-	-moz-column-gap: 30px;
-	-moz-column-fill: auto;
-	column-count: 2;
-	column-gap: 15px;
-	column-fill: auto;
 
 
+
+
+.square-grid-item  {
+ width: calc( (100% - 40.1px) / 3 );
+ float: left;
+ margin-bottom: 20px;
 }
 
-.square-grid-item {
+@media screen and (max-width:980px) {
 
-	margin-bottom: 15px !important;
+.square-grid-item  {
+ width: calc( (100% - 20.1px) / 2 );
 
+}
 }
 
 @media(max-width: 767px) {
 
-#article-columns {
-
--webkit-column-count: 1 !important;
-	-webkit-column-gap: 15px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 1 !important;
-	-moz-column-gap: 30px;
-	-moz-column-fill: auto;
-	column-count: 1 !important;
-	column-gap: 15px;
-	column-fill: auto;
-
+.square-grid-item  {
+ width: 100%;
 
 }
 
+}
 
+@media screen and (min-width: 1440px) {
+
+.square-grid-item  {
+ width: calc( (100% - 60.1px) / 4 );
+
+}
 
 }
 
@@ -100,7 +94,8 @@ $(function () {
 
 padding-left: 0% !important;
 padding-right: 0% !important;
-width: 100%;
+padding-top: 0px !important;
+width: 100% !important;
 background: #CFCCB9;
 
 }
@@ -342,7 +337,7 @@ background: #CFCCB9;
                 <div class="dashbord-content-right">
                 
 				<div class="dashbord-content-right-inner">
-         		<div class="square-grids" id="article-columns">
+         		<div class="square-grids article-columns">
 	
 	
  
@@ -388,14 +383,14 @@ background: #CFCCB9;
 	
 	
 	
-	<div class="square-grid-bottom">
+<div class="square-grid-bottom" style="margin-left: 0px !important; margin-right: 0px !important;">
 		<div class="grid-bottom-meta-icons">
 		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
 		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
 		<div><a><i class="fa fa-share-square-o squre-grid-share-icon"></i><span>65</span></a></div>
 		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
 		</div>
-		<div class="grid-bottom-label"><a>EVOLUTION</a></div>
+		
 	</div>
 
 </div>
@@ -453,14 +448,78 @@ background: #CFCCB9;
 	
 	
 	
-<div class="square-grid-bottom">
+<div class="square-grid-bottom" style="margin-left: 0px !important; margin-right: 0px !important;">
 		<div class="grid-bottom-meta-icons">
 		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
 		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
 		<div><a><i class="fa fa-share-square-o squre-grid-share-icon"></i><span>65</span></a></div>
 		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
 		</div>
-		<div class="grid-bottom-label"><a>EVOLUTION</a></div>
+		
+	</div>
+
+</div>
+
+
+
+
+</div> 
+
+
+<div class="square-grid-item" >
+
+	<div class="dash-articles-grid-meta">
+	
+	<a><img src="img/brahim.png"  /></a> 
+	<p ><a> Brahim Senhaji</a> <span>added an article to the collection </span><a>World Wanderer</a><br><span class="dash-update-date"> Yesterday | 12:34 P.M</span></p>
+		
+	</div>	
+		
+		
+		
+
+	<div class="article-graph-background" style="background: url(img/myback.jpg)  no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  
+  <a><img src="img/myback.jpg" /></a>
+  
+		
+  
+  
+  </div>
+	
+<div class="square-grid-item-inner"> 
+
+	<div class="article-grids-content">
+	
+		
+	
+		
+		<div class="article-grids-content-inner">
+		
+			
+			
+			<p class="article-grid-title dash-article-grid-title"><a>What is the smallest thing in the universe?</a></p>
+			<p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a class="dash-article-read-more">READ MORE</a>
+		</div>
+	
+	
+	</div>
+	
+	
+	
+<div class="square-grid-bottom" style="margin-left: 0px !important; margin-right: 0px !important;">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="fa fa-share-square-o squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
 	</div>
 
 </div>
@@ -520,5 +579,5 @@ $( ".Entries3" ).load( "Testnotes/NewNote3.html" );
 </script>
 
 <script src="js/myjavascript.js"></script>
-<script src="js/myEntries.js"></script>  
+<script src="js/masonry-scripts.js"></script>
 

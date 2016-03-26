@@ -16263,11 +16263,11 @@ overflow: hidden;
 .square-grids {
 
 	width: 96%;
-	padding-left: 2%;
-	height: auto;
-	overflow: hidden;
-	background: #ecead4;
-	padding-right: 2%;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
 
 
 }
@@ -18619,7 +18619,7 @@ box-shadow: none !important;
 	}
 	
 	.dash-articles-grid-meta {
-	margin: 20px !important;
+	margin: 10px !important;
 	display: inline-block;
 	height: auto;
 	overflow: hidden;
@@ -18675,13 +18675,14 @@ box-shadow: none !important;
 	.dash-update-date {
 	
 	color: #999 !important;
+	margin-left: 75px;
 	
 	}
 	
 	.dash-article-grid-title {
 	
 	border-bottom: 2px dashed #ccc;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	
 	}
 	
@@ -19469,8 +19470,8 @@ text-align: center;
 
 padding-top: 10px;
 padding-bottom: 10px;
-padding-left: 30px;
-padding-right: 30px;
+padding-left: 15px;
+padding-right: 15px;
 color: #999;
 font-family: "OpenSans-Semibold";
 display: inline-block;
@@ -20037,7 +20038,7 @@ text-overflow: ellipsis;
 
 .grid-bottom-meta-icons {
 
-	width: 70%;
+	width: 100%;
 
 }
 
@@ -20050,7 +20051,8 @@ text-overflow: ellipsis;
 .square-grid-bottom .grid-bottom-meta-icons  div {
 
 	
-	margin-right: 15px;
+	width: 25%;
+	text-align: center;
 	
 
 }
