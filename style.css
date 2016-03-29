@@ -20120,8 +20120,8 @@ text-overflow: ellipsis;
 
 .article-columns .square-grid-bottom {
 
-	margin-left: -20px !important;
-	margin-right: -20px !important;
+	margin-left: -10px !important;
+	margin-right: -10px !important;
 
 
 }
@@ -20722,4 +20722,9 @@ a:hover {
 
 }
 
+}
+
+.profile-articles-bug .square-grid-bottom {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
 }

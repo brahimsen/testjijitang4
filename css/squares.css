@@ -26,7 +26,7 @@ padding-top: 0px;
 }
 
   @media screen and (min-width: 1440px) {
-.collection-grid-item  {
+.profile-grid-item  {
 
  width: calc( (100% - 80.1px) / 5 );
  

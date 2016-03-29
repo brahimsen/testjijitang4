@@ -1,3 +1,4 @@
+$(window).load(function(){
 $('#collection-columns').masonry({
   itemSelector: '.collection-grid-item',
   percentPosition: true,
@@ -18,4 +19,5 @@ $('.article-columns').masonry({
   itemSelector: '.square-grid-item',
   percentPosition: true,
   gutter: 20
+});
 });

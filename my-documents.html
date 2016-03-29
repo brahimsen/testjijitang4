@@ -29,6 +29,7 @@
 <script src="js/follow-script.js"></script>
 <script src="js/jquery.dataTables.js"></script>
 <script src="js/articles-script.js"></script>
+<script src="js/masonry.js"></script>
 
 
 <script type="text/javascript" language="javascript" src="js/dataTables.scroller.js"></script>
@@ -38,47 +39,25 @@
 <style>
 
 	
-	#article-columns {
+	
 
--webkit-column-count: 2;
-	-webkit-column-gap: 30px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 2;
-	-moz-column-gap: 30px;
-	-moz-column-fill: auto;
-	column-count: 2;
-	column-gap: 30px;
-	column-fill: auto;
-
-
+.square-grid-item  {
+ width: calc( (100% - 40.1px) / 3 );
+ float: left;
+ margin-bottom: 20px;
 }
 
-.square-grid-item {
+@media screen and (min-width: 1440px) {
 
-	margin-bottom: 30px !important;
-
+.square-grid-item  {
+ width: calc( (100% - 60.1px) / 4 );
+ float: left;
+ margin-bottom: 20px;
 }
-
-@media(max-width: 767px) {
-
-#article-columns {
-
--webkit-column-count: 1 !important;
-	-webkit-column-gap: 30px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 1 !important;
-	-moz-column-gap: 30px;
-	-moz-column-fill: auto;
-	column-count: 1 !important;
-	column-gap: 30px;
-	column-fill: auto;
-
 
 }
 
 
-
-}
 
 .dashbord-content-right-inner {
 
@@ -266,12 +245,12 @@ var userList = new List('users', options);
                 
      <div id="users">
  
- <div class="full-width-search-holder" style="margin-bottom: 30px;">
+ <div class="full-width-search-holder">
  <input class="search" placeholder="Search Documents" />
  <button><i class="lnr lnr-magnifier"></i></button>
   </div>
 
-  <div class="list square-grids" id="article-columns">
+  <div class="list square-grids article-columns">
     <div class="square-grid-item my-document-grid-item">
 	<div class="document-paper-curl"></div>
 	  <a href="#" class="my-document-grid-item-inner">
@@ -383,6 +362,6 @@ $( ".Entries3" ).load( "Testnotes/Note3.html" );
 </script>
 
 <script src="js/myjavascript.js"></script>
-<script src="js/myEntries.js"></script>  
+<script src="js/masonry-scripts.js"></script>
 <script src="js/list.js"></script>
 

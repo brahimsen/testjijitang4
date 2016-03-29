@@ -336,10 +336,10 @@ margin-right: 10px;
 
 .article-grid-meta > a:nth-child(1) > img {
 
-	width: 70px;
-	border-radius: 70px;
-	margin-top: -35px;
-	height: 70px;
+	width: 50px;
+	border-radius: 50px;
+	margin-top: -25px;
+	height: 50px;
 	
 }
 
@@ -369,9 +369,9 @@ color: #999;
 font-size: 13px;
 display: block;
 float: left;
-margin-top: -10px;
+margin-top: -5px;
 font-size: 12px;
-margin-left: 83px;
+margin-left: 64px;
 
 
 
@@ -388,7 +388,7 @@ margin-left: 83px;
 
 .article-grids-content-inner {
 
-	
+		margin-top: 15px;
 	
 
 }
@@ -755,12 +755,13 @@ margin-right: 10px;
 .article-content-graph-holder {
 
 
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	
 	
 	padding-left: 20px;
 	padding-right: 20px;
+	min-height: 100px;
 
 
 
