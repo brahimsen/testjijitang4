@@ -23,13 +23,45 @@
 <script src="js/user-form-validation.js"></script>
 <script src="js/text-length-script.js"></script>
 <script src="js/profiles-script.js"></script>
+<script src="js/masonry.js"></script>
 
 
 <script src="js/zebra_datepicker.js"></script>
 
 <style>
 
-.
+.profile-grid-item  {
+	 width: calc( (100% - 20.1px) / 2 );
+ float: left;
+ margin-bottom: 20px;
+}
+
+  @media screen and (min-width: 1440px) {
+.profile-grid-item  {
+
+ width: calc( (100% - 40.1px) / 3 );
+ 
+	
+}
+
+}
+
+@media screen and (max-width:767px) {
+	
+	
+.profile-grid-item  {
+	 width: 100%;
+
+}
+
+}
+
+.square-grids {
+
+	width: 100%;
+	padding-top: 0px;
+
+}
 
 input {
 
@@ -55,13 +87,6 @@ border: 1px solid #a4ce4c !important;
 box-shadow: none !important;
 
 }
-
-textarea {
-
-	
-
-}
-
 
 
 .input-group p {
@@ -91,21 +116,6 @@ img[src='Error.src']{
     display: none;
 }
 
-#profile-columns {
-
--webkit-column-count: 2;
-	-webkit-column-gap: 25px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 3;
-	-moz-column-gap: 25px;
-	-moz-column-fill: auto;
-	column-count: 2;
-	column-gap: 25px;
-	column-fill: auto;
-	padding-top: 20px;
-
-
-}
 
 
 </style>
@@ -344,7 +354,10 @@ $(document).ready(function(){
 				
 				<p class="user-step-text">Connect with fellow researchers</p>
 		
-				<div class="square-grids" id="profile-columns">
+				
+				
+				
+<div class="square-grids" id="profile-columns">
 	
 	
 	
@@ -719,7 +732,7 @@ $(document).ready(function(){
 			
 					 <div class="controls modal-btn-holder">
 					
-					<button type="button" class="action btn-sky text-capitalize main-btn next btn new-small-wide-button new-black-btn  middle-button">NEXT</button>
+					<button type="button" class="action btn-sky text-capitalize main-btn next btn new-small-wide-button new-black-btn  middle-button regis-form-next">NEXT</button>
 					<button type="button" class="action btn-hot text-capitalize main-btn submit btn new-small-wide-button new-black-btn  middle-button">SUBMIT</button>
 			
 			
@@ -757,7 +770,7 @@ $( "footer" ).load( "footer.html" );
  
 </script>
 
-
+<script src="js/masonry-scripts-registration.js"></script>
 <script src="js/myjavascript.js"></script>
 
 

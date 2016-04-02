@@ -128,13 +128,13 @@ var userList = new List('my-projects', options);
                             
                             <!-- In case the user enters for the first time -->
                             
-                            <!--<div class="first-time-enter">
+                           <!-- <div class="first-time-enter empty-activities">
                             
-                            <div><span>+</span></div><p>No Activities</p>
+                            <p>No Activities</p>
                             
-                            </div>-->
+                            </div> -->
                             
-                 	<div class="notification-item">
+              	<div class="notification-item">
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
 		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group <a>Web developers</a></p>
 		<p class="notifications-item-meta"><span>projects</span><span>yesterday</span></p>
@@ -168,7 +168,7 @@ var userList = new List('my-projects', options);
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
 		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group <a>Web developers</a></p>
 		<p class="notifications-item-meta"><span>projects</span><span>yesterday</span></p>
-		</div>
+		</div> 
                      
                         </div>
 						
@@ -182,9 +182,13 @@ var userList = new List('my-projects', options);
                 
                 <div class="dashbord-content-right" >
 				
-				<div class="dashbord-content-right-inner" >
+			<!--		<div id="my-empty-projects"></div> -->
+				
+			 	<div class="dashbord-content-right-inner" >
+				
+					
                 
-     <div id="my-projects">
+    <div id="my-projects">
  
  <div class="full-width-search-holder">
  <input class="search" placeholder="Search Projects" />
@@ -253,10 +257,10 @@ var userList = new List('my-projects', options);
  <div class="load-more-button" style="margin-top: 0px">LOAD MORE</div>
  
   
-</div>
+</div> 
 
 
-              </div>
+              </div> 
                 </div>
                             
                             
@@ -288,10 +292,8 @@ var userList = new List('my-projects', options);
 
 $( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
-$( "#aside" ).load( "aside.html" );
-$( ".Entries1" ).load( "Testnotes/NewNote1.html" );
-$( ".Entries2" ).load( "Testnotes/NewNote2.html" );
-$( ".Entries3" ).load( "Testnotes/NewNote3.html" );
+$( "#my-empty-projects" ).load( "parts/my-projects-empty.html" );
+
 
   
 

@@ -38,33 +38,7 @@ var commentsArray = [
    "upvote_count": 2,
    "user_has_upvoted": true
 },
-{  
-   "id": 4,
-   "parent": 3,
-   "created": "2015-01-04",
-   "modified": "2015-01-04",
-   "file_url": "http://www.w3schools.com/html/mov_bbb.mp4",
-   "file_mime_type": "video/mp4",
-   "fullname": "Todd Brown",
-   "profile_picture_url": "../img/profile4.jpg",
-   "created_by_admin": false,
-   "created_by_current_user": false,
-   "upvote_count": 0,
-   "user_has_upvoted": false
-},
-{  
-   "id": 5,
-   "parent": 4,
-   "created": "2015-01-05",
-   "modified": "2015-01-05",
-   "content": "Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.",
-   "fullname": "Hank Smith",
-   "profile_picture_url": "../img/profile1.jpg",
-   "created_by_admin": false,
-   "created_by_current_user": false,
-   "upvote_count": 0,
-   "user_has_upvoted": false
-},
+
 {  
    "id": 6,
    "parent": 1,

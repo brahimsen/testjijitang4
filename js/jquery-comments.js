@@ -93,7 +93,7 @@
             defaultNavigationSortKey: 'newest',
 
             // Colors
-            highlightColor: '#a4ce4c',
+            highlightColor: '#000',
             deleteButtonColor: '#C9302C',
 
             roundProfilePictures: false,

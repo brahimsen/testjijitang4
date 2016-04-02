@@ -36,46 +36,6 @@
 <script type="text/javascript" src="data/comments-data.js"></script>
 <script type="text/javascript" src="js/jquery-comments.js"></script>
 
-	<script type="text/javascript">
-			$(function() {
-				$('#comments-container').comments({
-					profilePictureURL: 'img/brahim.png',
-					roundProfilePictures: true,
-					textareaRows: 1,
-					enableAttachments: true,
-					getComments: function(success, error) {
-						setTimeout(function() {
-							success(commentsArray);
-						}, 500);
-					},
-					postComment: function(data, success, error) {
-						setTimeout(function() {
-							success(data);
-						}, 500);
-					},
-					putComment: function(data, success, error) {
-						setTimeout(function() {
-							success(data);
-						}, 500);
-					},
-					deleteComment: function(data, success, error) {
-						setTimeout(function() {
-							success();
-						}, 500);
-					},
-					upvoteComment: function(data, success, error) {
-						setTimeout(function() {
-							success(data);
-						}, 500);
-					},
-					uploadAttachments: function(dataArray, success, error) {
-						setTimeout(function() {
-							success(dataArray);
-						}, 500);
-					},
-				});
-			});
-		</script>
 
 
 
@@ -90,6 +50,32 @@
 
 
 </head>
+
+<script type="text/javascript">
+  
+	
+	 $(document).ready(function() {
+  
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                
+				$('#project-back-preview').css('background', 'transparent url('+e.target.result +') no-repeat center center', 'background-size', 'cover');
+
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#change-project-background").change(function(){
+        readURL(this);
+    });
+  
+   });
+</script>
 
 <style>
 
@@ -129,7 +115,7 @@
 
 <div class="secondary-sub-navigation">
 
-	<div class="top-nav-author-info">
+	<div class="top-nav-author-info hidden-phone">
 		<div class="top-nav-author-info-img"><a><img src="img/profile1.jpg"/></a></div>
 		<div class="top-nav-author-info-img"><a><img src="img/profile2.jpg"/></a></div>
 		<div class="top-nav-author-info-img"><a><img src="img/profile3.jpg"/></a></div>
@@ -200,14 +186,26 @@
 		<p><span>research</span> | <span class="on-going-project">On-going</span></p>
 	</div>
 	
-	<div class="project-view-img-holder">
+	<div class="project-view-img-holder" id="project-back-preview" style="background: url(img/index-back2.jpg)  no-repeat center center; background-size: cover;">
+	
+	
+	
 	<div class="project-view-start-end">
 	
+		
+			
+			<div class="my-image-upload back-image-upload">
+				<label for="change-project-background" id="project-back-btn" class="fa fa-camera">
+				</label>
+				<input id="change-project-background" type="file"/>
+			</div>
+		
+		
 		<span>STARTS<br>Dec.8, 2015</span>
 		<span>ENDS<br>Dec.8, 2016</span>
 	
 	</div>
-	<img src="img/myback.jpg" />
+	
 	
 	</div>
 	
@@ -314,7 +312,7 @@ Moving to music is an essential human pleasure particularly related to musical g
 		  
 		  	<div class="article-view-section" style="position: relative">
        
-        	<p class="instead-of-h1">PEOPLE INTERESTED IN THIS ARTICLE</p>
+        	<p class="instead-of-h1">TEAM MEMBERS</p>
 			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
 			
 			
@@ -579,6 +577,272 @@ Moving to music is an essential human pleasure particularly related to musical g
 			</div>
 		  
 		  
+		  
+		  	  	<div class="article-view-section" style="position: relative">
+       
+        	<p class="instead-of-h1">PEOPLE INTERESTED IN THIS ARTICLE</p>
+			<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+			
+			
+								  <div id="demo">
+       
+
+              <div id="owl-demo-2" class="owl-carousel">
+			  
+				
+			  
+                
+                <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+
+</div> 
+</div> 
+
+</div>
+                <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+	
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+
+	
+<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+	
+	<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+</div> 
+</div> 
+
+</div>
+
+ <div class="item">         
+				
+				<div class="profile-grid-item" > 
+
+<div class="profile-follow-wrapper">
+
+
+
+<div class="profile-grid-item-inner"> 
+
+	
+	<div class="profile-grid-desc">
+	
+	<a href="#" class="profile-image"><img src="img/brahim.png" /></a>
+	
+	
+	<a class="profile-user-name">Brahim Senhaji</a>
+	<span class="profile-category">Sociology</span>
+	<div class="my-tiny-bullets"><span></span><span></span><span></span></div>
+
+	</div>
+
+	<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+
+</div> 
+</div> 
+
+</div>
+
+              </div>
+              <div class="my-owl-navigation">
+                <a class="prev-user2 lnr lnr-chevron-left"></a>
+                <a class="next-user2 lnr lnr-chevron-right"></a>
+              
+              </div>
+
+      
+    </div>
+			
+			
+			
+			</div>
 		
 			
 			
@@ -672,13 +936,30 @@ Moving to music is an essential human pleasure particularly related to musical g
       $(".prev-user").click(function(){
         owl.trigger('owl.prev');
       })
-      $(".play").click(function(){
-        owl.trigger('owl.play',1000);
-      })
-      $(".stop").click(function(){
-        owl.trigger('owl.stop');
-      })
+ 
+    });
+	
+	    $(document).ready(function() {
 
+      var owl2 = $("#owl-demo-2");
+
+      owl2.owlCarousel({
+
+      items : 3, //10 items above 1000px browser width
+      itemsDesktop : [1000,2], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
+      itemsTablet: [600,1], //2 items between 600 and 0;
+      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      
+      });
+
+      // Custom Navigation Events
+      $(".next-user2").click(function(){
+        owl2.trigger('owl.next');
+      })
+      $(".prev-user2").click(function(){
+        owl2.trigger('owl.prev');
+      })
 
     });
     </script>
