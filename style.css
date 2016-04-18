@@ -21216,7 +21216,7 @@ input[type=radio]:checked + .radio-label:before {
 
 .discussions-profile-holder {
 
-	width: 75px;
+	width: 60px;
 	float: left;
 	margin-right: 10px
 
@@ -21258,8 +21258,8 @@ input[type=radio]:checked + .radio-label:before {
 
 .start-discussion-holder img {
 
-	width: 75px;
-	height: 75px;
+	width: 60px;
+	height: 60px;
 	border-radius: 100px;
 
 }
@@ -21327,8 +21327,8 @@ input[type=radio]:checked + .radio-label:before {
 
 .discussion-post-header img {
 
-	width: 75px;
-	height: 75px;
+	width: 60px;
+	height: 60px;
 	border-radius: 100px;
 	margin-right: 10px;
 
@@ -22025,5 +22025,52 @@ padding-bottom: 10px;
 padding-left: 35px;
 padding-right: 35px;
 color: #000;
+margin-right: 10px;
+
+}
+
+.projet-application a {
+
+
+	float: left;
+
+}
+
+.project-application-meta {
+
+	float: left;
+	margin-bottom: 0px !important;
+
+}
+
+.project-application-meta span {
+
+	display: block;
+
+}
+
+.project-application-meta span:nth-child(2) {
+
+	display: block;
+	color: #a71a1a !important;
+	font-family: "OpenSans-Bold";
+	margin-top: 6px;
+
+}
+
+.project-page-applied {
+
+font-size: 16px !important;
+text-transform: uppercase;
+border: 2px solid #a4ce4c;
+display: inline-block;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 35px;
+padding-right: 35px;
+color: #fff;
+margin-right: 10px;
+background: #a4ce4c
+
 
 }
