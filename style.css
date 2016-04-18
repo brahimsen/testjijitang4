@@ -3925,13 +3925,16 @@ position: absolute; width: 100%; display: none
 }
 
 label.error{
-color: red !important;
-margin-left: 10px !important;
+color: #a94442;
+font-family: "OpenSans-Bold";
+margin-bottom: 0px !important;
+margin-top: 5px !important;
+
 }
 
 label.valid{
-margin-left: 10px !important;
-color: green !important;}
+
+color: #3c763d !important;}
 
 label {
 	display: inline-block !important;
@@ -4624,7 +4627,7 @@ text-align: center;  color:#FFF; font-family: Arial, Helvetica, sans-serif; font
 
 .modal-body {
 
-margin-top: 40px; margin-bottom: 30px; width: 90%; margin-left: auto; margin-right: auto
+margin-top: 40px; margin-bottom: 30px; margin-left: auto; margin-right: auto
 
 }
 
@@ -14901,7 +14904,7 @@ overflow: hidden;
 
 }
 
-.subscription-followers > a > img {
+.left-section-main-profile > img {
 	width: 100%;
 
 	z-index: -1;
@@ -14911,7 +14914,7 @@ overflow: hidden;
 
 }
 
-.subscription-followers > a  {
+.left-section-main-profile  {
 	width: 100px;
 	margin-bottom: 4px;
 	position: relative;
@@ -14929,7 +14932,7 @@ height: auto;
 overflow: hidden;
 }
 
-.subscription-followers > p:nth-child(2)  {
+.left-section-main-name  {
 
 	
 	font-size: 16px;
@@ -14941,7 +14944,7 @@ overflow: hidden;
 
 }
 
-.subscription-followers > p:nth-child(3)  {
+.left-section-main-description  {
 
 	border-bottom: 0px !important;
 	font-size: 13px;
@@ -19067,7 +19070,7 @@ background: #ecead4;
 	
 	.article-title-holder {
 	
-		background: #CFCCB9;
+		background: #222;
 		padding: 20px;
 	
 	}
@@ -19649,8 +19652,8 @@ padding-bottom: 40px !important;
 
 .add-new-article-btn a {
 
-color: #fff;
-background: #000;
+color: #000;
+background: #fff;
 text-transform: uppercase;
 display: inline-block;
 padding-top: 10px;
@@ -20469,6 +20472,13 @@ font-size: 16px;
 
 }
 
+.my-project-share-icons a:nth-child(4) {
+
+margin-right: 0px !important;
+
+
+}
+
 .my-project-share-icons a i {
 
 color: #CFCCB9 !important;
@@ -20967,7 +20977,7 @@ color: #000;
 .project-discussion-discussion-container {
 
 	background: #fff;
-	padding: 15px;
+	
 
 }
 
@@ -20989,14 +20999,14 @@ color: #000;
 
 .project-discussion-discussion-container .jquery-comments ul.main li.comment .comment-wrapper {
 
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 
 }
 
 .project-discussion-discussion-container .jquery-comments ul.main li.comment .comment-wrapper {
 
-	border-top: 10px solid #ecead4;
+	border-top: 2px solid #ecead4;
 
 }
 
@@ -21098,5 +21108,922 @@ color: #000;
 .empty-activities {
 
 	border-bottom: 0px !important;
+
+}
+
+.form-control {
+
+	margin-bottom: 0px !important;
+
+}
+
+.input-group-clear {
+
+	height: auto;
+	overflow: hidden;
+
+}
+
+.half-input-left {
+
+	width: 49%;
+	float: left;
+	margin-right: 1%
+
+
+}
+
+.half-input-right {
+
+	width: 49%;
+	float: left;
+	margin-left: 1%
+
+
+}
+
+.radio-label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+	font-family: "OpenSans-Semibold";
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.radio-label:before {
+    content: "";
+    display: inline-block;
+ 
+    width: 16px;
+    height: 16px;
+ 
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #fff;
+    
+}
+
+.radio .radio-label:before {
+    border-radius: 8px;
+}
+
+input[type=radio]:checked + .radio-label:before {
+    content: "\2022";
+    color: #a4ce4c;
+    font-size: 36px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.radio {
+
+	padding-left: 0px;
+
+}
+
+.invitation-modal-header {
+
+	background: #a4ce4c;
+	color: #fff;
+	font-size: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.start-discussion-holder {
+
+	border: 2px solid #ecead4;
+	padding: 15px;
+	height: auto;
+	overflow: hidden;
+	
+	
+
+}
+
+.discussions-profile-holder {
+
+	width: 75px;
+	float: left;
+	margin-right: 10px
+
+}
+
+.discussions-text-holder {
+
+	width: calc(100% - 85px);
+	float: left;
+
+}
+
+.discussions-text-holder input {
+
+	width: 100%;
+	border: 0px !important;
+	border-bottom: 2px solid #ecead4 !important;
+	font-family: "OpenSans-Bold";
+	font-size: 16px;
+	font-style: italic;
+	padding-bottom: 5px;
+
+}
+
+.discussions-text-holder textarea {
+
+	width: 100%;
+	border: 0px;
+	font-style: italic;
+	padding-top: 15px;
+
+}
+
+.discussions-text-holder textarea:focus {
+
+	border: 0px !important;
+
+}
+
+.start-discussion-holder img {
+
+	width: 75px;
+	height: 75px;
+	border-radius: 100px;
+
+}
+
+.black-wide-btn {
+
+	color: #fff;
+	background: #000;
+	border: 0px;
+	box-shadow: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+
+}
+
+.red-wide-btn {
+
+	color: #fff;
+	background: #a94442;
+	border: 0px;
+	box-shadow: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+
+}
+
+.right-float-btn {
+
+	float: right;
+
+}
+
+.discussion-post-header {
+
+	height: auto;
+	overflow: hidden;
+	
+
+}
+
+
+.discussion-post-title {
+
+	padding-top: 15px;
+	
+	
+	font-size: 16px;
+	font-family: "OpenSans-Bold";
+	
+
+}
+.discussion-post-meta {
+
+	height: auto;
+	overflow: hidden;
+	border-bottom: 10px solid #ecead4;
+	padding-bottom: 15px;
+	position: relative;
+
+}
+
+.discussion-post-header img {
+
+	width: 75px;
+	height: 75px;
+	border-radius: 100px;
+	margin-right: 10px;
+
+}
+
+.discussion-post-header .discussion-post-picture {
+
+	float: left;
+
+}
+
+.discussion-post-header a {
+
+	font-family: "OpenSans-Bold";
+	color: #000;
+
+}
+
+.discussion-post-header p {
+
+	margin-bottom: 0px;
+
+}
+
+.discussion-post-header .discussion-post-author {
+
+	padding-top: 15px;
+
+}
+
+.discussion-post-header .discussion-post-time {
+
+	color: #999;
+
+}
+
+.discussion-post-header span {
+
+	color: #000;
+	font-family: "OpenSans-Bold";
+
+}
+
+.discussion-post {
+
+padding: 15px;
+border-bottom: 15px solid #CFCCB9;
+
+}
+
+.discussion-post-content {
+
+	padding-top: 15px;
+	margin-top: 15px;
+	
+	border-top: 2px solid #ecead4;
+	display: none;
+
+}
+
+.discussion-post-text {
+
+	font-size: 14px;
+	line-height: 22px;
+
+}
+
+.discussion-top-holder {
+
+	padding: 15px;
+	border-bottom: 15px solid #CFCCB9;
+}
+
+.discussion-comments-holder {
+
+	display: none;
+
+}
+
+.jquery-comments ul.navigation {
+
+	display: none;
+}
+
+.discussion-comments-holder .commenting-field.main {
+
+	border-bottom: 10px solid #ecead4;
+	    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	margin-bottom: 0px !important;
+
+}
+
+.discussion-comments-holder .commenting-field.main {
+
+	border-bottom: 10px solid #ecead4;
+	    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.discussion-comments-holder .commenting-field.main .textarea {
+
+	height: 75px !important;
+
+}
+
+.discussion-comments-holder .actions .reply {
+
+	display: none !important;
+
+}
+
+.discussion-comments-holder .actions .separator {
+
+	display: none !important;
+
+}
+
+.discussion-comments-holder .actions .upvote {
+
+	display: none !important;
+
+}
+
+.discussion-comments-holder .actions .edit {
+
+	margin-left: 0px !important;
+	margin-top: 5px !important; 
+
+}
+
+.discussion-toggle-btn {
+
+	right: 0px;
+	position: absolute;
+	top: 15px;
+
+}
+
+.discussion-toggle-btn:after {
+
+	content: "SHOW DISCUSSION"
+
+}
+
+.discussion-btn-visible:after {
+
+	content: "HIDE DISCUSSION"
+
+}
+
+@media(max-width: 767px) {
+
+.discussion-toggle-btn:after {
+
+	content: "+"
+
+}
+
+.discussion-btn-visible:after {
+
+	content: "-"
+
+}
+
+
+
+}
+
+.white-wide-btn {
+
+	color: #000;
+    background: #fff;
+    border: 2px solid #000;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+	text-transform: uppercase;
+
+}
+
+.white-wide-btn:hover {
+
+	color: #fff;
+    background: #000;
+   
+
+}
+
+.show-discussion-content {
+
+	display: block !important;
+
+
+}
+
+.discussion-comments-toggle {
+
+		
+
+}
+
+.discussion-comments-toggle:after {
+
+	content: "Show"
+
+}
+
+.discussion-comments-toggle-visible:after {
+
+	content: "Hide"
+
+}
+
+.discussion-comments-number {
+
+	
+
+
+}
+
+.discussion-comments-reply {
+
+	float: right;
+
+}
+
+.discussion-post-content-footer {
+
+	height: auto;
+	overflow: hidden;
+
+
+}
+
+.discussion-post-content-footer span {
+
+	color: #a4ce4c;
+	font-family:"OpenSans-Semibold";
+	cursor: pointer;
+	
+
+
+}
+
+.discussion-comments-holder-visible {
+
+	display: block !important;
+
+}
+
+.black-wide-btn:disabled  {
+
+	opacity: 0.5;
+	cursor: default;
+
+}
+
+
+.invitation-row > div {
+
+	float: left;
+	height: 40px;
+
+}
+
+.invitation-row select  {
+
+	margin-bottom: 0px !important;
+	
+
+}
+
+.invitation-row input  {
+
+	margin-bottom: 0px !important;
+	
+
+}
+
+.invitation-row  {
+
+	height: 40px;
+	
+	background: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top: 2px solid #ecead4;
+	
+
+}
+
+.invitation-row:nth-child(1)  {
+
+	border-top: 0px !important;
+	
+
+}
+
+#Add-team-member {
+
+	width: 570px !important;
+
+}
+
+.invitation-email {
+
+	width: 228px;
+	text-align: center;
+	border-right: 2px solid #ecead4;
+
+}
+
+.invitation-email p {
+
+	margin-bottom: 0px !important;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family:"OpenSans-Bold";
+	line-height: 40px;
+	
+
+}
+
+.invitation-role {
+
+	width: 148px;
+	text-align: center;
+	border-right: 2px solid #ecead4;
+
+}
+
+.invitation-role > input {
+
+	    width: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    text-align: center;
+    padding: 0px;
+    border: 0px !important;
+}
+
+
+.invitation-type {
+
+	width: 108px;
+	text-align: center;
+	border-right: 2px solid #ecead4;
+
+}
+
+.invitation-type > select {
+
+	    width: 90px;
+    height: 40px;
+    border: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.invitation-remove {
+
+	width: 50px;
+	text-align: center;
+	cursor: pointer;
+
+}
+
+.invitation-remove span {
+
+	font-size: 16px;
+	line-height: 40px;
+
+}
+
+#invitationmessage {
+
+	height: 130px !important;
+
+}
+
+.discussion-comment-textarea {
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	
+	height: auto;
+	overflow: hidden;
+	
+
+}
+
+.discussion-comment-textarea textarea {
+
+	width: 100% !important;
+	height: 75px;
+}
+
+.discussion-comment-row {
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top: 2px solid #ecead4;
+	height: auto;
+	overflow: hidden;
+
+}
+
+.discussion-comment-list > .discussion-comment-row:nth-child(1)  {
+
+	border-top: 10px solid #ecead4 !important;
+
+}
+
+.discussion-comment-meta .discussion-comment-name {
+
+	font-family: "OpenSans-Bold";
+	color: #000;
+
+}
+
+.discussion-comment-row img {
+
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	margin-right: 10px;
+
+}
+
+.discussion-comment-row > a {
+
+	float: left;
+
+}
+
+.discussion-comment-row textarea {
+
+	width: calc(100% - 60px) !important;
+}
+
+.discussion-comment-row .discussion-comment-date {
+
+	float: right;
+	color: #999;
+
+}
+
+.discussion-comment-text {
+
+	margin-bottom: 0px !important;
+	margin-left: 60px;
+
+}
+
+.discussion-comment-edit-btns {
+
+	display: none;
+
+}
+
+.discussion-comment-edit-btns button {
+
+	float: right;
+	margin-left: 15px;
+
+}
+
+.discussion-comment-edit-btns-show {
+
+	display: block !important;
+
+}
+
+.discussion-comment-edit {
+
+	margin-left: 60px;
+	font-family:"OpenSans-Semibold";
+	color: #666;
+	cursor: pointer;
+	margin-top: 5px;
+
+}
+
+.discussion-comment-edit-hide {
+
+display: none;
+
+}
+
+.team-member-label {
+
+	font-size: 16px !important;
+	margin-bottom: 10px !important;
+
+}
+
+.team-member-radio label {
+
+	font-size: 16px !important;
+
+}
+
+.team-member-radio p {
+
+	margin-left: 25px;
+	margin-top: -5px;
+
+}
+
+.black-btn {
+	
+	border: 0px;
+	background: #000;
+	color: #fff;
+
+}
+
+.send-invt-btn {
+
+	margin-top: 10px;
+	margin-bottom: 5px;
+
+}
+
+.invitation-type-content i {
+
+display: block;
+margin-top: -10px;
+color: #a4ce4c;
+
+}
+
+.invitation-type-content  {
+
+line-height: 34px;
+cursor: pointer;
+
+}
+
+.add-member-alert {
+
+	
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 15px;
+   
+	margin-left: -15px;
+	margin-right: -15px;
+	display: none;
+    
+
+}
+
+.add-member-alert-show {
+
+	
+    display: block !important;
+    
+
+}
+
+.invitation-remove .dropdown-menu {
+
+	right: 0 !important;
+	left: auto;
+	border-radius: 0px;
+	min-width: 130px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.delete-invitation-row-btn {
+
+	font-size: 12px;
+	color: #fff;
+	background: #a94442;
+	border: 0px;
+	float: right;
+	margin-right: 10px;
+	
+
+}
+
+.cancel-small-btn {
+
+	background: #666;
+	color: #fff;
+	border: 0px;
+	font-size: 12px;
+	float: right;
+	margin-right: 10px;
+
+}
+
+.invitation-modal-footer {
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+.invitation-modal-footer button {
+
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+.left-section-edit-btn {
+
+	float: right;
+	background: #fff;
+	border: 0px;
+	color: #999;
+	font-size: 16px;
+	line-height: 20px !important;
+
+}
+
+.add-new-article-btn a {
+
+	cursor: pointer;
+
+}
+
+.project-view-meta-holder {
+
+	background: rgba(255,255,255,0.8);
+	padding: 20px;
+	
+	height: auto;
+	overflow: hidden;
+	
+
+}
+
+.project-view-meta-holder .projet-application {
+
+	float: left;
+
+}
+
+.project-view-meta-holder .profile-follow{
+
+	float: right;
+
+}
+
+.project-view-meta-holder .profile-follow a{
+
+font-size: 16px !important;
+text-transform: uppercase;
+border: 2px solid;
+display: inline-block;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 35px;
+padding-right: 35px;
+
+}
+
+.project-view-meta-holder .profile-follow .profile-page-followed{
+
+border: 2px solid #a4ce4c;
+
+}
+
+.project-page-unapplied {
+
+font-size: 16px !important;
+text-transform: uppercase;
+border: 2px solid #000;
+display: inline-block;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 35px;
+padding-right: 35px;
+color: #000;
 
 }

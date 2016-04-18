@@ -26,8 +26,7 @@
 <script src="js/myform.js"></script>
 <script src="js/collection-script.js"></script>
 <script src="js/follow-script.js"></script>
-<script type="text/javascript" src="data/comments-data.js"></script>
-<script type="text/javascript" src="js/jquery-comments.js"></script>
+
 
 
 <!-- HTML5 shim for IE backwards compatibility -->
@@ -39,50 +38,346 @@
 </head>
 
 <script type="text/javascript">
-			$(function() {
-				$('#comments-container').comments({
-					profilePictureURL: 'img/brahim.png',
-					roundProfilePictures: true,
-					textareaRows: 1,
-					enableAttachments: true,
-					getComments: function(success, error) {
-						setTimeout(function() {
-							success(commentsArray);
-						}, 500);
-					},
-					postComment: function(data, success, error) {
-						setTimeout(function() {
-							success(data);
-						}, 500);
-					},
-					putComment: function(data, success, error) {
-						setTimeout(function() {
-							success(data);
-						}, 500);
-					},
-					deleteComment: function(data, success, error) {
-						setTimeout(function() {
-							success();
-						}, 500);
-					},
-					upvoteComment: function(data, success, error) {
-						setTimeout(function() {
-							success(data);
-						}, 500);
-					},
-					uploadAttachments: function(dataArray, success, error) {
-						setTimeout(function() {
-							success(dataArray);
-						}, 500);
-					},
+		
+			
+			 $(document).ready(function() {
+					
+					$(".add-team-member-btn").click(function(){
+						$("#Add-team-member").modal('show');
+					});
+			});
+			 $(document).ready(function() {
+			 
+			 (function() {
+   
+	$(document).on('keyup', '.discussion-post-validation', function(){
+
+        var empty = false;
+        $('.discussion-post-validation').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#add-discussion-btn').attr('disabled', 'disabled');
+        } else {
+            $('#add-discussion-btn').removeAttr('disabled');
+        }
+    });
+	
+	 
+	
+})()
+
+
+
+			$("#add-discussion-btn").click(function(e) {
+    
+           $(".discussion-list").prepend("<div class='discussion-post'><div class='discussion-post-header'><div class='discussion-post-meta'><a class='discussion-post-picture'><img src='img/profile1.jpg' /></a><p class='discussion-post-author'><a>Brahim Senhaji</p></a><p class='discussion-post-time'>September 28 | 12:33 A.M</p><button class='discussion-toggle-btn white-wide-btn discussion-btn-hidden'></button></div><p class='discussion-post-title'>"+$("#discussion-title-input").val()+"</p></div><div class='discussion-post-content'><p class='discussion-post-text'>"+$("#discussion-content-input").val()+"</p><div class='discussion-post-content-footer'><span class='discussion-comment-number'> 12 Replies | </span><span class='discussion-comments-toggle'></span><span class='discussion-comments-reply'>Reply</span></div><div class='discussion-comments-holder'><div class='discussion-comment-textarea'><textarea class='add-discussion-comment-textarea' placeholder='Share your thoughts on the discussion'></textarea><button class='black-wide-btn right-float-btn add-discussion-comment-btn'>SEND</button></div><div class='discussion-comment-list'></div></div></div></div></div>");
+				
+					$("#discussion-title-input").val('');
+					$("#discussion-content-input").val('');
+					$('#add-discussion-btn').attr('disabled', 'disabled');					
+
+
+				});
+				
+				
+				
+				$(document).on('click', '.add-discussion-comment-btn', function(){
+				
+				if($.trim(($(this).siblings(".add-discussion-comment-textarea").val()).length) > 0) {
+					
+				$(this).parent(".discussion-comment-textarea").siblings(".discussion-comment-list").prepend("<div class='discussion-comment-row'><a><img src='img/brahim.png' /></a><p class='discussion-comment-meta'><a class='discussion-comment-name'>Brahim Senhaji</a><span class='discussion-comment-date'>September 18 | 13:54 A.M</span></p><p class='discussion-comment-text'>"+$(this).siblings(".add-discussion-comment-textarea").val()+"</p><div class='discussion-comment-edit-btns'><button class='black-wide-btn right-float-btn discussion-comment-edit-save' >SAVE</button><button class='red-wide-btn right-float-btn discussion-comment-edit-delete'>DELETE</button></div><a class='discussion-comment-edit'>Edit</a></div>");
+				$(this).siblings(".add-discussion-comment-textarea").val("");
+				
+				}
+				
+				
+				});
+				
+				
+				$(document).on('click', '.discussion-comment-edit', function(){
+				
+				$(this).siblings(".discussion-comment-text").replaceWith("<textarea>" + $( this ).siblings(".discussion-comment-text").text() + "</textarea>");
+				$(this).siblings(".discussion-comment-edit-btns").addClass("discussion-comment-edit-btns-show");
+				$(this).addClass("discussion-comment-edit-hide");
+				});
+				
+				
+				$(document).on('click', '.discussion-comment-edit-save', function(){
+				
+				if($.trim(($(this).parent(".discussion-comment-edit-btns").siblings("textarea").val()).length) > 0) {
+				
+				
+				
+				$(this).parent(".discussion-comment-edit-btns").siblings("textarea").replaceWith("<p class='discussion-comment-text'>" + $( this ).parent(".discussion-comment-edit-btns").siblings("textarea").val() + "</p>");;
+				$(this).parent(".discussion-comment-edit-btns").removeClass("discussion-comment-edit-btns-show");
+				$(this).parent(".discussion-comment-edit-btns").siblings(".discussion-comment-edit").removeClass("discussion-comment-edit-hide");
+				
+				}
+				
+				});
+				
+				
+				$(document).on('click', '.discussion-comment-edit-delete', function(){
+				
+				
+				
+				
+				$(this).parent(".discussion-comment-edit-btns").parent(".discussion-comment-row").remove();
+				
+				
+				
+				
+				});
+   
+});
+
+			$(document).ready(function() {
+			$(document).on('click', '.discussion-toggle-btn', function(){
+			
+    
+					$(this).parent(".discussion-post-meta").parent(".discussion-post-header").siblings(".discussion-post-content").toggleClass("show-discussion-content")
+					$(this).toggleClass("discussion-btn-visible");
 				});
 			});
+			
+				$(document).ready(function() {
+					$(document).on('click', '.discussion-comments-reply', function(){
+					
+			
+					$(this).siblings(".discussion-comments-toggle").addClass("discussion-comments-toggle-visible")
+					$(this).parent(".discussion-post-content-footer").siblings(".discussion-comments-holder").addClass("discussion-comments-holder-visible");
+				});
+			});
+			
+			$(document).ready(function() {
+					
+					$(document).on('click', '.discussion-comments-toggle', function(){
+			
+					$(this).toggleClass("discussion-comments-toggle-visible")
+					$(this).parent(".discussion-post-content-footer").siblings(".discussion-comments-holder").toggleClass("discussion-comments-holder-visible");
+				});
+			});
+		
+
+		// INVITATION SCRIPTS
+		
+		
+		
+		$(document).ready(function() {
+					
+			$(document).on('click', '#send-invitation-action', function(){
+			
+					if($("#invitee-email").val() !="" && $("#invitee-role").val() !="") {
+					
+					$("#invitation-row-section").prepend("<div class='invitation-row'><div class='invitation-email'><p>" + $("#invitee-email").val() + "</p></div><div class='invitation-role'><input type='text' value='" + $("#invitee-role").val() + "' /></div><div class='invitation-type'><span class='invitation-type-content'>" + $('input[name=privacy]:checked').val() + "<i class='fa fa-caret-down'></i></span></div><div class='invitation-remove dropdown'><span data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' class='lnr lnr-cross'></span><div class='dropdown-menu' aria-labelledby='dLabel'><button class='delete-invitation-row-btn'>Delete</button><button class='cancel-small-btn'>Cancel</button></div></div></div>");
+					
+						$("#invitee-email").val("");
+						$("#invitee-role").val("");
+						$("#invitationmessage").val("");
+						$("#add-member-alert-validation").removeClass("add-member-alert-show");
+						
+					
+					}else{
+					$("#add-member-alert-validation").addClass("add-member-alert-show");
+					
+					
+					}
+			});
+	
+			$(document).on('click', '.invitation-type-content', function(){
+		
+					$(this).replaceWith("<select><option value'Admin'>Admin</option><option value='Collaborator'>Collaborator</option></select>");;
+					
+			});	
+			
+			$(document).on('click', '.delete-invitation-row-btn', function(){
+			
+								$(this).parent(".dropdown-menu").parent(".invitation-remove").parent(".invitation-row").remove();
+
+		
+					
+			});	
+
+
+				
+			
+			
+			});
+		
+		
+					
+					
+						
+								
+								
+						
+								
+								
+						
+					
+					
+				
+		
 		</script>
 
 <body>
 
 
+<div id="Add-team-member" class="modal hide fade sign-modals" tabindex="-1" style=" top: 77%">
 
+	 <div class="modal-header">
+ 
+ <p>Add Team Member</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ <div id="add-member-alert-validation" class="add-member-alert full-width"> Member Email and Role are both required</div>
+ 
+  <div class="modal-body zero-margin" >
+   
+	 
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control" id="invitee-email" name="name" placeholder="Email">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control" id="invitee-role" name="emailregi" placeholder="Role">
+				</div>
+			</div>	
+		</div>
+		
+		
+        
+        <div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<textarea class="form-control" id="invitationmessage" name="invitationmessage" placeholder="Message Optional"></textarea>
+				</div>
+			</div>
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label team-member-label">Type of Member</label>
+		
+		<div class="radio team-member-radio">
+						<input id="Private" type="radio" name="privacy" value="Admin" checked="">
+						<label class="radio-label" for="Private">Admin</label>
+						<p>Can edit basic information, delete project and invite members.</p>
+						<input id="Public" type="radio" name="privacy" value="Collaborator">
+						<label class="radio-label" for="Public">Collaborator</label>
+						<p>can follow and contribute to discussions and add publications</p>
+					</div>
+    
+            <div class="controls modal-btn-holder">
+		  
+					<button type="submit" id="send-invitation-action"  class="new-small-wide-button black-btn  middle-button send-invt-btn" >SEND INVITATION</button>
+    
+			</div>
+			
+			<div class="invitation-modal-header">
+			
+				INVITATATIONS SENT
+			
+			</div>
+			
+			<div id="invitation-row-section" class="invitation-row-holder">
+			
+				<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+			
+			</div>
+			
+			<div class="invitation-modal-header">
+			
+				TEAM MEMBERS
+			
+			</div>
+			
+			<div class="invitation-row-holder">
+			
+				<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+			
+			</div>
+          
+		
+  </div>
+  
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+		  
+					<button data-dismiss="modal"  class="new-small-wide-button black-btn  middle-button" >SAVE</button>
+					<button data-dismiss="modal"  class="new-small-wide-button black-btn  middle-button" >CANCEL</button>
+    
+			</div>
+</div>
 
 
 <div class="header-wrapper">
@@ -151,6 +446,7 @@
                           <div>
                             
                             	<span> Team Members</span>
+								<button class="fa fa-pencil-square-o add-team-member-btn left-section-edit-btn"></button>
                          
                             </div>
                             
@@ -291,11 +587,138 @@
                 <div class="dashbord-content-right" >
 				
 				<div class="dashbord-content-right-inner" >
-                
+				
 					<div class="project-discussion-discussion-container">
+					
+					<div class="discussion-top-holder">
+					
 					<p class="discussions-top-label"><span class="fa fa-comments" ></span> Discussions</p>
-					<div id="comments-container"></div>
+					
+						<div class="start-discussion-holder">
+							
+							<div class="discussions-profile-holder">
+							<a><img src="img/brahim.png" /></a>
+							</div>
+							
+							<div class="discussions-text-holder">
+							<input id="discussion-title-input" class="discussion-post-validation" placeholder="Give your discussion a title" />
+							<textarea id="discussion-content-input" class="discussion-post-validation" placeholder="Write your discussion"></textarea>
+							<button id="add-discussion-btn" class="black-wide-btn right-float-btn" disabled="disabled">SEND</button>
+							</div>
+						
+						</div>
+					
 					</div>
+						
+						<div class="discussion-list">
+						
+							<div class="discussion-post">
+							
+								<div class="discussion-post-header">
+								
+									<div class="discussion-post-meta">
+
+										<a class="discussion-post-picture"><img src="img/profile1.jpg" /></a>
+										<p class="discussion-post-author"><a>Brahim Senhaji</p></a>
+										<p class="discussion-post-time">September 28 | 12:33 A.M</p>
+										<button class="discussion-toggle-btn white-wide-btn discussion-btn-hidden"></button>
+										
+									</div>
+									
+									<p class="discussion-post-title"> Nice article I would like ask you the question of how did you get to this conclusion</p>
+								
+								</div>
+								<div class="discussion-post-content">
+								
+									<p class="discussion-post-text">
+									
+									electronic dance music. Structural complexity has been related to 
+									
+									</p>
+									
+									<p class="discussion-post-text">
+									
+									positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure
+									
+									</p>
+									
+									<div class="discussion-post-content-footer">
+									
+										<span class="discussion-comment-number"> 12 Replies | </span> 
+										<span class="discussion-comments-toggle"></span>
+										<span class="discussion-comments-reply">Reply</span>
+									
+									</div>
+									
+									<div class="discussion-comments-holder">
+									
+										<div class="discussion-comment-textarea">
+										
+											<textarea class="add-discussion-comment-textarea" placeholder="Share your thoughts on the discussion"></textarea>
+											<button class="black-wide-btn right-float-btn add-discussion-comment-btn">SEND</button>
+										
+										</div>
+										
+										<div class="discussion-comment-list">
+										
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												<div class="discussion-comment-edit-btns">
+												
+													<button class="black-wide-btn right-float-btn discussion-comment-edit-save" >SAVE</button>
+													<button class="red-wide-btn right-float-btn discussion-comment-edit-delete">DELETE</button>
+												
+												</div>
+												<a class="discussion-comment-edit">Edit</a>
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+											
+											
+											</div>
+										
+										</div>
+									
+									
+									</div>
+									
+								</div>
+							
+							
+							</div>
+							
+							 <div class="load-more-button" style="margin-top: 0px">LOAD MORE</div>
+						
+						</div>
+					
+					</div>
+                
 
 
               </div>
@@ -330,10 +753,7 @@
 
 $( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
-$( "#aside" ).load( "aside.html" );
-$( ".Entries1" ).load( "Testnotes/NewNote1.html" );
-$( ".Entries2" ).load( "Testnotes/NewNote2.html" );
-$( ".Entries3" ).load( "Testnotes/NewNote3.html" );
+
 
   
 

@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="css/projects.css" type="text/css" media="screen" />
 <link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="mobile-fonts.css" type="text/css"  />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="css/neweditor.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
 
 
 <script src="js/Jquery-11.js"></script>
@@ -24,7 +27,12 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/myform.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/project-form.js"></script>
 <script src="js/follow-script.js"></script>
+<script src="js/zebra_datepicker.js"></script>
+<script src="js/jquery.hotkeys.js"></script>
+<script src="js/bootstrap-wysiwyg.js"></script>
+<script src="js/my-projects-top-scripts.js"></script>
 
 
 <!-- HTML5 shim for IE backwards compatibility -->
@@ -35,20 +43,246 @@
 
 </head>
 
-<script>
+<style>
 
- $(document).ready(function() {
-var options = {
-  valueNames: [ 'name' ]
-};
+.keywords-group {
 
-var userList = new List('my-projects', options);
+	margin-bottom: 0px !important;
 
-});
+}
 
-</script>
+#ui-datepicker-div {
+
+	z-index: 99999 !important;
+
+}
+
+.btn-toolbar {
+
+margin-top: 0px !important;
+margin-bottom: 0px !important;
+padding-top: 5px;
+padding-bottom: 5px;
+background: #CFCCB9;
+padding-left: 5%;
+padding-right: 5%;
+
+
+
+}
+
+.new-editor-wrapper {
+
+	margin-bottom: 20px;
+
+}
+
+.btn-toolbar .btn {
+
+    background: transparent;
+    border: 0px;
+   
+    box-shadow: none;
+    color: #fff;
+
+}
+
+
+</style>
+
 
 <body>
+
+
+<div id="create-project-modal" class="modal fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	<form class=" form" >
+	
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+		
+			 <div class="modal-header">
+ 
+ <p>NEW PROJECT</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ 
+  <div class="modal-body">
+    <legend class="modal-legend"><p>Let us bring your project to life!</p></legend>		
+		
+				
+		
+			    <label class="group-label">Project Title*</label>
+			
+				<div class="input-group">
+			
+					<input class="form-control" name="projecttitle" placeholder="Title">
+				</div>
+				
+				<hr class="user-sep-line">
+				
+				<label class="group-label">Project Duration*</label>
+			
+				<div class="input-group-clear">
+				
+				<div class="input-group half-input-left">
+                
+                    <input placeholder="start" class="form-control" type="text" placeholder="Project Start" name="datepickerstart" id="datepickerstart">
+                
+				</div>
+				
+				<div class="input-group half-input-right">
+                
+                    <input placeholder="end" class="form-control" type="text" placeholder="Project Start" name="datepickerend" id="datepickerend">
+                
+				</div>
+				
+				</div>
+				
+				<hr class="user-sep-line" style="margin-top: 0px">
+        
+				<div class="input-group project-radio-box">
+				
+					<label class="group-label">Privacy*</label>
+					
+					<div class="radio">
+						<input id="Private" type="radio" name="privacy" value="Private" checked >
+						<label class="radio-label" for="Private">Private</label>
+						<input id="Public" type="radio" name="privacy" value="Public">
+						<label class="radio-label" for="Public">Public</label>
+					</div>
+				</div>
+	</div>
+		
+		
+			</div>
+			
+			<div class="step">
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>BASIC INFORMATION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ 
+  <div class="modal-body">
+    <legend class="modal-legend"><p>Tell us a bit more</p></legend>		
+		
+				
+		
+				<div class="input-group user-field-group" >
+					
+					<label class="user-field-label">Research Field</label>
+					
+					<select class="form-control user-form-select">
+						<option value="">SELECT</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+						</select>
+				</div>
+				
+			<hr class="user-sep-line">
+				
+			<div class="input-group user-field-group" >
+					
+					<label class="user-field-label">Project Type</label>
+					
+					<select class="form-control user-form-select">
+						<option value="">SELECT</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+						</select>
+				</div>
+				
+			<hr class="user-sep-line">
+			
+  			
+			<label class="group-label">Keywords</label>
+		
+			<div class="input-group keywords-group " >
+				
+				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="Type Project Keywords"/>
+				<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
+				<div class="project-keyword-list"></div>
+				</div>
+
+		<hr class="user-sep-line"  style="margin-top: 0px">
+	
+			<label class="group-label">Description</label>
+			
+			 <div class="new-editor-wrapper">
+  
+	
+	<div id="alerts"></div>
+	
+	  <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+    
+      <div class="btn-group">
+         
+         <a class="btn" data-edit="fontSize 5"><font size="5">H1</font></a>
+         <a class="btn" data-edit="fontSize 3"><font size="3">H2</font></a>
+         <a class="btn" data-edit="fontSize 1"><font size="1">H3</font></a>
+         
+      </div>
+      <div class="btn-group">
+        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
+        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
+        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
+        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
+      </div>
+
+      
+     
+      <div class="btn-group">
+        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
+        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
+      </div>
+	
+      <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
+    </div>
+  
+	
+	<div class="editor-inner-holder">
+    <div id="editor">
+      Project Description 
+    </div>
+	</div>
+  </div>
+
+	      </div>
+
+	  	
+			</div>
+			
+
+
+					 <div class="controls modal-btn-holder">
+					 
+					<button type="button" class="action btn-sky text-capitalize main-btn next btn new-small-wide-button new-black-btn  middle-button regis-form-next">NEXT</button>
+					<button type="button" class="action btn-hot text-capitalize main-btn submit btn new-small-wide-button new-black-btn  middle-button">SUBMIT</button>
+		
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+		  
+		  
+</div>
 
 
 
@@ -93,13 +327,15 @@ var userList = new List('my-projects', options);
                         
                         
                             <div class="dashbord-content-left-article subscription-followers">
-                        
-							<a><img src="img/brahim.png" /></a>
-							<p>
+							
+							<a href="profile-setting.html" class="fa fa-pencil-square-o add-team-member-btn left-section-edit-btn"></a>
+							
+							<a class="left-section-main-profile"><img src="img/brahim.png" /></a>
+							<p class="left-section-main-name">
 								Brahim Senhaji
 							</p>
                             
-							<p>
+							<p class="left-section-main-description">
 							
 							lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-d
 							
@@ -116,7 +352,7 @@ var userList = new List('my-projects', options);
 						 
 						 
                        
-                            <a>CREATE NEW PROJECT</a>
+                            <a id="create-project-btn">+ CREATE NEW PROJECT</a>
                     
                      
                         </div>
@@ -195,7 +431,7 @@ var userList = new List('my-projects', options);
  <button><i class="lnr lnr-magnifier"></i></button>
   </div>
 
-  <div class="list">
+  <div class="list my-project-update-list">
   
 		<div class="my-project-update">
 			<span class="my-project-label">admin</span>
@@ -207,10 +443,11 @@ var userList = new List('my-projects', options);
 						<span>Private</span>
 					</p>
 					<p class="my-project-share-icons">
-						<a><i class="fa fa-heart-o"></i><span>112</span></a>
+						<a><i class="fa fa-user"></i><span>32</span></a>
 						<a><i class="fa fa-comment-o"></i><span>0</span></a>
+						<a><i class="fa fa-eye"></i><span>11</span></a>
 						<a><i class="fa fa-share-square-o"></i><span>65</span></a>
-						<a><i class="fa fa-floppy-o"></i><span>88</span></a>
+						
 					</p>
 			</div>
 		</div>
@@ -225,10 +462,11 @@ var userList = new List('my-projects', options);
 						<span>Public</span>
 					</p>
 					<p class="my-project-share-icons">
-						<a><i class="fa fa-heart-o"></i><span>0</span></a>
+						<a><i class="fa fa-user"></i><span>32</span></a>
 						<a><i class="fa fa-comment-o"></i><span>0</span></a>
-						<a><i class="fa fa-share-square-o"></i><span>0</span></a>
-						<a><i class="fa fa-floppy-o"></i><span>0</span></a>
+						<a><i class="fa fa-eye"></i><span>11</span></a>
+						<a><i class="fa fa-share-square-o"></i><span>65</span></a>
+						
 					</p>
 			</div>
 		</div>
@@ -243,10 +481,11 @@ var userList = new List('my-projects', options);
 						<span>Private</span>
 					</p>
 					<p class="my-project-share-icons">
-						<a><i class="fa fa-heart-o"></i><span>112</span></a>
+						<a><i class="fa fa-user"></i><span>32</span></a>
 						<a><i class="fa fa-comment-o"></i><span>0</span></a>
+						<a><i class="fa fa-eye"></i><span>11</span></a>
 						<a><i class="fa fa-share-square-o"></i><span>65</span></a>
-						<a><i class="fa fa-floppy-o"></i><span>88</span></a>
+						
 					</p>
 			</div>
 		</div>
@@ -256,6 +495,7 @@ var userList = new List('my-projects', options);
   
  <div class="load-more-button" style="margin-top: 0px">LOAD MORE</div>
  
+  	
   
 </div> 
 
@@ -294,12 +534,15 @@ $( "header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
 $( "#my-empty-projects" ).load( "parts/my-projects-empty.html" );
 
-
-  
-
 </script>
 
+<script>
+ 
+</script>
+<script src="js/tiny-editor-bottom-script.js"></script>
 <script src="js/myjavascript.js"></script>
 <script src="js/myEntries.js"></script> 
 <script src="js/list.js"></script>
+
+
 

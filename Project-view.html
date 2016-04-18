@@ -26,8 +26,6 @@
 <script src="js/bootstrap-modalmanager.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
-<script src="js/collection-script.js"></script>
-<script src="js/follow-script.js"></script>
 <script src="js/jquery.dataTables.js"></script>
 <script src="js/projects-script.js"></script>
 <script src="js/collection-script.js"></script>
@@ -53,6 +51,12 @@
 
 <script type="text/javascript">
   
+   $(document).ready(function() {
+					
+					$("#project-apply-btn").click(function(){
+						$("#project-apply-modal").modal('show');
+					});
+			});
 	
 	 $(document).ready(function() {
   
@@ -102,6 +106,63 @@
 
 
 <body>
+
+
+<div id="project-apply-modal" class="modal fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	<form class=" form" >
+	
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+		
+			 <div class="modal-header">
+ 
+ <p>PROJECT APPLICATION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ 
+  <div class="modal-body">
+    <legend class="modal-legend"><p>Say Something about your application!</p></legend>		
+		
+				
+		
+			    
+			
+				<div class="input-group">
+			
+					<textarea style="height: 75px !important" class="form-control" name="projecttitle" placeholder="Say something about your application"></textarea>
+				</div>
+				
+		
+	</div>
+		
+		
+			</div>
+	
+			
+
+
+					 <div class="controls modal-btn-holder">
+					 
+					
+					<button type="button" class=" text-capitalize main-btn submit btn new-small-wide-button new-black-btn  middle-button">SEND</button>
+					
+		
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+		  
+		  
+</div>
 
 	<div class="container-fluid">
 
@@ -206,8 +267,23 @@
 	
 	</div>
 	
+	<div class="project-view-meta-holder">
+	
+		<div class="projet-application">
+		<a id="project-apply-btn" class="project-page-unapplied"> APPLY</a>
+		<a class="hide-follow-check project-page-applied"><span class="icon11-check"></span> APPLICATION SENT</a>
+		</div>
+	
+		<div class="profile-follow">
+		<a class="profile-page-unfollowed"> Follow</a>
+		<a class="hide-follow-check profile-page-followed"><span class="icon11-check"></span> Unfollow</a>
+		</div>
+
+</div>
+	
 	
 	</div>
+	
 	
 		<div class="article-title-holder">
 		
