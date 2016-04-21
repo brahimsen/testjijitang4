@@ -45,6 +45,30 @@ var userList = new List('notifications', options);
 
 });
 
+$(document).ready(function() {
+	
+			 $(".accept-request").click(function(){
+						$(this).addClass("request-accepted");
+						$(this).removeClass("accept-request");
+						$(this).siblings(".reject-request").hide();
+					
+						
+								
+				});
+				
+					 $(".reject-request").click(function(){
+						$(this).addClass("request-rejected");
+						$(this).removeClass("reject-request");
+						$(this).siblings(".accept-request").hide();
+					
+						
+								
+				});
+	
+	
+
+});
+
 </script>
 
 <body>
@@ -91,9 +115,11 @@ var userList = new List('notifications', options);
                         
                         
                             <div class="dashbord-content-left-article subscription-followers">
+							
+							<a href="profile-setting.html" class="fa fa-pencil-square-o add-team-member-btn left-section-edit-btn"></a>
                         
-							<a><img src="img/brahim.png" /></a>
-							<p>
+							<a class="left-section-main-profile"><img src="img/brahim.png" /></a>
+							<p class="left-section-main-name">
 								Brahim Senhaji
 							</p>
                             
@@ -102,12 +128,7 @@ var userList = new List('notifications', options);
 							lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-d
 							
 							</p>
-                            
-                   
-                      		
-                                
-                                
-                        
+                      
                         </div>
 						
 				
@@ -130,8 +151,16 @@ var userList = new List('notifications', options);
  <input class="search" placeholder="Search Notifications" />
  <button><i class="lnr lnr-magnifier"></i></button>
   </div>
-
-  <div class="list notifications-list">
+  
+  		<ul class="nav nav-tabs notifications-tab" role="tablist">
+			
+			<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">NOTIFICATIONS</a></li>
+			<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">REQUESTS</a></li>
+   
+		</ul>
+	
+	<div class="tab-content">
+  <div role="tabpanel" class="list notifications-list tab-pane active" id="home">
 		<div class="notification-item">
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
 		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group <a>Web developers</a></p>
@@ -170,6 +199,40 @@ var userList = new List('notifications', options);
 		
   </div>
   
+  
+    <div role="tabpanel" class="list notifications-list tab-pane" id="profile">
+		
+		
+		
+		<div class="notification-item request-item">
+		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
+		
+		
+		
+		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group sdkfh asldkf asdlkfj asdlkfj asdklfj asldkjf asldkjf askdjf laskdjf laksdj flakdsj flkajsd flkajsd lfkj <a>Web developers</a></p>
+		<div class="notification-accept-btns"> 
+			<button class="new-small-button new-black-btn home-header-btn reject-request"></button>
+			<button class="new-small-button light-green-button home-header-btn accept-request"></button> 
+			
+		</div>
+		<p class="notifications-item-meta"><span>projects</span><span>yesterday</span></p>
+		
+		</div>
+		
+		<div class="notification-item request-item">
+		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
+		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group <a>Web developers</a></p>
+		<div class="notification-accept-btns"> 
+			<button class="new-small-button new-black-btn home-header-btn reject-request"></button>
+			<button class="new-small-button light-green-button home-header-btn accept-request"></button> 
+			
+		</div>
+		<p class="notifications-item-meta"><span>projects</span><span>yesterday</span></p>
+		</div>
+		
+  </div>
+  </div>
+  
   <div class="load-more-button">LOAD MORE</div>
 
 </div>
@@ -189,6 +252,11 @@ var userList = new List('notifications', options);
                 
                 
                 </div>
+				
+		
+
+  <!-- Tab panes -->
+
 
 
 <footer></footer>
