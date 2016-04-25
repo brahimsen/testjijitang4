@@ -8464,6 +8464,18 @@ margin-top: 10px; color:#666;
 
 }
 
+.lef-div-with-edit-btn  {
+	
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	margin-top: 5px;
+	border-bottom: 5px solid #ecead4;
+	
+
+}
+
 .fifty-six-top {
 	margin-top: 66px !important;
 
@@ -8490,6 +8502,18 @@ margin-top: 10px; color:#666;
 	line-height: 20px;
 	font-family: "OpenSans-Bold";
 	
+
+}
+
+.left-header-with-edit-btn {
+
+font-size: 14px;
+	font-weight: normal;
+	float: left;
+	color: #000 !important;
+	margin-right: 5px;
+	line-height: 20px;
+	font-family: "OpenSans-Bold";
 
 }
 
@@ -20196,7 +20220,7 @@ text-overflow: ellipsis;
 .standard-dropdown .dropdown-menu li a{
 
 	color: #fff !important;
-	padding: 0px !important;
+	padding: 0px;
 }
 
 .standard-dropdown .dropdown-menu li a:hover{
@@ -22202,8 +22226,111 @@ content: 'REQUEST ACCEPTED';
 content: 'REQUEST REJECTED';
 }
 
-.my-pages-left-profile {
 
-	width: 
+.edit-field-input-group {
 
+	height: auto;
+	overflow: hidden;
+
+}
+
+.edit-field-input-group select {
+
+	width: 100% !important;
+
+}
+
+.project-application-notification {
+
+	
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	border-top: 2px solid #ecead4;
+	border-bottom: 2px solid #ecead4;
+	background: #CFCCB9 !important;
+
+}
+
+.project-application-notification a {
+
+	
+	background: #a94442;
+	color: #fff;
+	font-family: "OpenSans-Semibold";
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+.project-discussion-main-nav {
+
+margin-bottom: 25px;
+
+}
+
+.project-discussion-right-nav a {
+
+	color: #000;
+	margin-right: 30px;
+	font-size: 16px;
+	line-height: 45px;
+
+}
+
+.new-delete-drop-down {
+
+	text-align: center;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	background: #fff !important;
+
+}
+
+.new-delete-drop-down a {
+
+	display: inline-block !important;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+
+.new-delete-drop-down .drop-down-delete-btn {
+
+	color: #fff;
+	background: #a94442;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+
+}
+
+.new-delete-drop-down .drop-down-delete-btn:hover {
+
+	
+	background: #a94442 !important;
+	
+
+}
+
+.new-delete-drop-down .drop-down-cancel-btn {
+
+	color: #fff;
+	background: #000;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+
+}
+
+.new-delete-drop-down .drop-down-cancel-btn:hover {
+
+	
+	background: #000 !important;
+	
 }

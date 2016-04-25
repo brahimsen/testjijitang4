@@ -11,6 +11,9 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
 <link rel="stylesheet" href="mobile-fonts.css" type="text/css"  />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="css/neweditor.css" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 
 <script src="js/Jquery-11.js"></script>
@@ -23,7 +26,9 @@
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/jquery.validate.min.js"></script>
-<script src="js/myform.js"></script>
+<script src="js/zebra_datepicker.js"></script>
+<script src="js/jquery.hotkeys.js"></script>
+<script src="js/bootstrap-wysiwyg.js"></script>
 <script src="js/collection-script.js"></script>
 <script src="js/follow-script.js"></script>
 <script src="js/project-discussion.js"></script>
@@ -46,7 +51,20 @@
 					$(".add-team-member-btn").click(function(){
 						$("#Add-team-member").modal('show');
 					});
+					
+					$("#edit-project-first-step-btn").click(function(){
+						$("#edit-project-modal-first-step").modal('show');
+					});
+					
+					$(".edit-project-second-step-btn").click(function(){
+						$("#edit-project-modal-second-step").modal('show');
+					});
 			});
+			
+			
+			
+			
+			edit-project-modal-first-step
 	
 		// INVITATION SCRIPTS
 		
@@ -95,19 +113,88 @@
 		
 		
 					
-					
+						 $(document).ready(function() {
+  
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                
+				$('#project-back-preview').css('background', 'transparent url('+e.target.result +') no-repeat center center', 'background-size', 'cover');
+
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#change-project-background").change(function(){
+        readURL(this);
+    });
+	
+		$(function() {
+
+    $( "#datepickerstart" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+	  yearRange: "1985:2045"
+    });
+	
+	 $( "#datepickerend" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+	  yearRange: "1985:2045"
+    });
+  });				
+		
+  
+   });
 						
 								
 								
 						
-								
-								
+						
 						
 					
 					
 				
 		
 		</script>
+		
+		<style>
+		
+		.btn-toolbar {
+
+margin-top: 0px !important;
+margin-bottom: 0px !important;
+padding-top: 5px;
+padding-bottom: 5px;
+background: #CFCCB9;
+padding-left: 5%;
+padding-right: 5%;
+
+
+
+}
+
+.new-editor-wrapper {
+
+	margin-bottom: 20px;
+
+}
+
+.btn-toolbar .btn {
+
+    background: transparent;
+    border: 0px;
+   
+    box-shadow: none;
+    color: #fff;
+
+}
+		
+		</style>
 
 <body>
 
@@ -265,6 +352,213 @@
 </div>
 
 
+
+<div id="edit-project-modal-first-step" class="modal fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	<form class=" form" >
+	
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+		
+			 <div class="modal-header">
+ 
+ <p>EDIT PROJECT</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ 
+  <div class="modal-body">
+    		
+		
+				
+		
+			    <label class="group-label">Project Title*</label>
+			
+				<div class="input-group">
+			
+					<input class="form-control" name="projecttitle" placeholder="Title" value="Minerals From Tropical Rainforests">
+				</div>
+				
+				<label class="group-label">Research Field*</label>
+				
+				<div class="input-group edit-field-input-group" >
+					
+					
+					
+					<select class="form-control user-form-select">
+						<option value="">SELECT</option>
+						<option value="Economics" selected>Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+						</select>
+				</div>
+				
+				<hr class="user-sep-line">
+				
+				<label class="group-label">Research Type*</label>
+				<div class="input-group edit-field-input-group" >
+				
+					<select class="form-control user-form-select">
+						<option value="">SELECT</option>
+						<option value="Economics">Research</option>
+						<option value="Natural Sciences" selected>Research</option>
+						
+						</select>
+				</div>
+				
+				<hr class="user-sep-line">
+				
+				<label class="group-label">Project Duration*</label>
+			
+				<div class="input-group-clear">
+				
+				<div class="input-group half-input-left">
+                
+                    <input placeholder="start" class="form-control" type="text" placeholder="Project Start" name="datepickerstart" id="datepickerstart">
+                
+				</div>
+				
+				<div class="input-group half-input-right">
+                
+                    <input placeholder="end" class="form-control" type="text" placeholder="Project Start" name="datepickerend" id="datepickerend">
+                
+				</div>
+				
+				</div>
+				
+				<hr class="user-sep-line" style="margin-top: 0px">
+        
+				<div class="input-group project-radio-box">
+				
+					<label class="group-label">Privacy*</label>
+					
+					<div class="radio">
+						<input id="Private" type="radio" name="privacy" value="Private" checked >
+						<label class="radio-label" for="Private">Private</label>
+						<input id="Public" type="radio" name="privacy" value="Public">
+						<label class="radio-label" for="Public">Public</label>
+					</div>
+				</div>
+	</div>
+		
+		
+			</div>
+			
+			
+			
+
+
+					 <div class="controls modal-btn-holder">
+					 
+					<button type="button" class="action btn-sky text-capitalize main-btn next btn new-small-wide-button new-black-btn  middle-button">CANCEL</button>
+					<button type="button" class="action btn-hot text-capitalize main-btn submit btn new-small-wide-button new-black-btn  middle-button">SUBMIT</button>
+		
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+		  
+		  
+</div>
+
+
+<div id="edit-project-modal-second-step" class="modal fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	<form class=" form" >
+	
+		<div class="box row-fluid">	
+			
+		<div class="step">
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>EDIT PROJECT</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ 
+  <div class="modal-body">
+    	
+		
+				<label class="group-label">Description</label>
+			
+				<div class="new-editor-wrapper">
+  
+	
+					<div id="alerts"></div>
+	
+  
+	
+						<div class="editor-inner-holder">
+							<div id="editor">
+									by nutrient signalling remains enigmatic in photosynthetic plants by nutrient signalling remains enigmatic in photosynthetic plants by nutrient signalling remains enigmatic in photosynthetic plants
+							</div>
+							</div>
+						</div>
+		
+				
+			
+				
+			
+				
+			<hr class="user-sep-line">
+			
+  			
+			<label class="group-label">Keywords</label>
+		
+			<div class="input-group keywords-group " >
+				
+				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="Type Project Keywords"/>
+				<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
+				<div class="project-keyword-list">
+				
+				<div class="editor-all-tags"><span class="tag-text">Science and technology</span><div class="tag-delete lnr lnr-cross"></div></div>
+				<div class="editor-all-tags"><span class="tag-text">New concepts of reerach</span><div class="tag-delete lnr lnr-cross"></div></div>
+				<div class="editor-all-tags"><span class="tag-text">Physics</span><div class="tag-delete lnr lnr-cross"></div></div>
+				
+				</div>
+				</div>
+
+		
+	
+			
+
+	      </div>
+
+	  	
+			</div>
+			
+			
+			
+
+
+					 <div class="controls modal-btn-holder">
+					 
+						<a href="/project-discussions.html" class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</a>
+						<a class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</a>
+					</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+		  
+		  
+</div>
+
+
 <div class="header-wrapper">
 	<header>
 
@@ -279,20 +573,46 @@
         
         <div class="main-page-content" >
         
-		<div class="main-sub-navigation-wrapper">
-		<div class="main-sub-navigatiion">
-            
-          <a> <span class="fa fa-rss"></span> <span class="hidden-phone hidden-tablet">Feed</span></a>
-		  <a> <span class="fa fa-file-text"></span> <span class="hidden-phone hidden-tablet">My Documents</span></a>
-		  <a> <span class="fa fa-book"></span> <span class="hidden-phone hidden-tablet">My Collections</span></a>
-		  <a  class="current"> <span class="fa fa-briefcase"></span> <span class="hidden-phone hidden-tablet">My Projects</span></a>
-		  <a> <span class="fa fa-bell"></span> <span class="hidden-phone hidden-tablet">My Notifications</span></a>
-		  <a> <span class="fa fa-envelope"></span> <span class="hidden-phone hidden-tablet">My Messages</span></a>
-		  
-            
-         </div>
-		 
-		 </div>
+		<div class="secondary-sub-navigation project-discussion-main-nav">
+
+	<div class="top-nav-author-info project-discussion-right-nav">
+		
+		<a><b>View Project</b></a>
+		<a>Invite</a>
+		<a>Share</a>
+		
+		
+	</div>
+	
+	<div class="top-nav-right-icons">
+	
+	
+		
+		<div class="dropdown standard-dropdown">
+			<button id="share-social-media" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="fa fa-trash-o">
+				
+				
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dLabel">
+				<div class="drop-down-arrow-down"></div>
+				<li class="dropdown-menu-header">ARE YOUR SURE?</li>
+				<li class="new-delete-drop-down">
+				
+					<a class="drop-down-delete-btn">DELETE</a>
+					<a class="drop-down-cancel-btn">CANCEL</a>
+
+				</li>
+				
+			</ul>
+		</div>
+		
+		
+	
+	</div>
+	
+
+
+</div>
         
         		
 				<div class="dashboard-wrapper">
@@ -305,9 +625,15 @@
                         
                             <div class="dashbord-content-left-article project-info-left-section">
 							
-								<div class="left-project-wrap" style="background: url(img/index-back2.jpg)  no-repeat center center; background-size: cover;"></div>
+								<div id="project-back-preview" class="left-project-wrap" style="background: url(img/index-back2.jpg)  no-repeat center center; background-size: cover;"></div>
+								
+								<div class="my-image-upload back-image-upload">
+										<label for="change-project-background" id="project-back-btn" class="fa fa-camera">
+										</label>
+										<input id="change-project-background" type="file"/>
+								</div>
                         
-							
+							<button id="edit-project-first-step-btn" class="fa fa-pencil-square-o left-section-edit-btn"></button>
 							<p class="project-left-title">
 								Minerals From Tropical Rainforests
 							</p>
@@ -324,14 +650,20 @@
                 
                         </div>
 						
+						
+						
 						<div class="dash-left-sec-div-footer project-left-footer"><span>SCIENCE</span><span>Research | <b>On-going</b></span></div> 
 						
+						   
+						   <div class="project-application-notification"><a>1 NEW APPLICATION</a></div>
+						   
+						   
 						   <div class="dashbord-content-left-article project-left-profiles">
                         
                           <div>
                             
                             	<span> Team Members</span>
-								<button class="fa fa-pencil-square-o add-team-member-btn left-section-edit-btn"></button>
+								<button  class="fa fa-pencil-square-o  add-team-member-btn left-section-edit-btn"></button>
                          
                             </div>
                             
@@ -377,11 +709,17 @@
 							<div class="dash-left-sec-div-footer"><a>SEE ALL</a></div> 
 							
 							
+							
 							 <div class="dashbord-content-left-article project-left-description">
+							 
+							
+							 
                         
-                          <div>
+                           <div class="lef-div-with-edit-btn" >
                             
-                            	<span>Desciption</span>
+                            	<span class="left-header-with-edit-btn">Desciption</span>
+								 
+								 <button class="fa fa-pencil-square-o edit-project-second-step-btn left-section-edit-btn"></button>
                          
                             </div>
                             
@@ -403,9 +741,11 @@
 						
 						 <div class="dashbord-content-left-article">
                         
-                          <div>
+                          <div class="lef-div-with-edit-btn">
                             
-                            	<span> Keywords</span>
+                            	<span class="left-header-with-edit-btn"> Keywords</span>
+								<button  class="fa fa-pencil-square-o edit-project-second-step-btn left-section-edit-btn"></button>
+
                          
                             </div>
                             
@@ -643,7 +983,7 @@ $( "footer" ).load( "footer.html" );
   
 
 </script>
-
+<script src="js/tiny-editor-bottom-script.js"></script>
 <script src="js/myjavascript.js"></script>
 <script src="js/myEntries.js"></script> 
 <script src="js/list.js"></script>
