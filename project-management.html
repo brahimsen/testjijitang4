@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
 <link rel="stylesheet" href="mobile-fonts.css" type="text/css"  />
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="css/settings-page.css" rel="stylesheet" type="text/css">
 <link href="css/neweditor.css" rel="stylesheet">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
@@ -32,6 +33,8 @@
 <script src="js/collection-script.js"></script>
 <script src="js/follow-script.js"></script>
 <script src="js/project-discussion.js"></script>
+<script src="js/project-invitation.js"></script>
+<script src="js/project-management-top.js"></script>
 
 
 
@@ -43,126 +46,35 @@
 
 </head>
 
-<script type="text/javascript">
-		
-			
-			 $(document).ready(function() {
-					
-					$(".add-team-member-btn").click(function(){
-						$("#Add-team-member").modal('show');
-					});
-					
-					$("#edit-project-first-step-btn").click(function(){
-						$("#edit-project-modal-first-step").modal('show');
-					});
-					
-					$(".edit-project-second-step-btn").click(function(){
-						$("#edit-project-modal-second-step").modal('show');
-					});
-			});
-			
-			
-			
-			
-			edit-project-modal-first-step
-	
-		// INVITATION SCRIPTS
-		
-		
-		
-		$(document).ready(function() {
-					
-			$(document).on('click', '#send-invitation-action', function(){
-			
-					if($("#invitee-email").val() !="" && $("#invitee-role").val() !="") {
-					
-					$("#invitation-row-section").prepend("<div class='invitation-row'><div class='invitation-email'><p>" + $("#invitee-email").val() + "</p></div><div class='invitation-role'><input type='text' value='" + $("#invitee-role").val() + "' /></div><div class='invitation-type'><span class='invitation-type-content'>" + $('input[name=privacy]:checked').val() + "<i class='fa fa-caret-down'></i></span></div><div class='invitation-remove dropdown'><span data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' class='lnr lnr-cross'></span><div class='dropdown-menu' aria-labelledby='dLabel'><button class='delete-invitation-row-btn'>Delete</button><button class='cancel-small-btn'>Cancel</button></div></div></div>");
-					
-						$("#invitee-email").val("");
-						$("#invitee-role").val("");
-						$("#invitationmessage").val("");
-						$("#add-member-alert-validation").removeClass("add-member-alert-show");
-						
-					
-					}else{
-					$("#add-member-alert-validation").addClass("add-member-alert-show");
-					
-					
-					}
-			});
-	
-			$(document).on('click', '.invitation-type-content', function(){
-		
-					$(this).replaceWith("<select><option value'Admin'>Admin</option><option value='Collaborator'>Collaborator</option></select>");;
-					
-			});	
-			
-			$(document).on('click', '.delete-invitation-row-btn', function(){
-			
-								$(this).parent(".dropdown-menu").parent(".invitation-remove").parent(".invitation-row").remove();
-
-		
-					
-			});	
-
-
-				
-			
-			
-			});
-		
-		
-					
-						 $(document).ready(function() {
-  
-  function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            reader.onload = function (e) {
-                
-				$('#project-back-preview').css('background', 'transparent url('+e.target.result +') no-repeat center center', 'background-size', 'cover');
-
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    
-    $("#change-project-background").change(function(){
-        readURL(this);
-    });
-	
-		$(function() {
-
-    $( "#datepickerstart" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-	  yearRange: "1985:2045"
-    });
-	
-	 $( "#datepickerend" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-	  yearRange: "1985:2045"
-    });
-  });				
-		
-  
-   });
-						
-								
-								
-						
-						
-						
-					
-					
-				
-		
-		</script>
 		
 		<style>
+		
+		.big-long-btns {
+		
+		    margin-left: 10px;
+			margin-right: 10px;
+			padding-left: 60px !important;
+			padding-right: 60px !important;
+		
+		}
+		
+		.show-edit-project-error {
+		    padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: center;
+			background: #F2DEDE;
+			border: 1px solid #EBCCD1;
+			color: #A94442;
+			margin-bottom: 0px;
+			
+			display: block !important;
+		
+		}
+		
+		.edit-project-error {
+		   display: none;
+		
+		}
 		
 		.btn-toolbar {
 
@@ -193,11 +105,54 @@ padding-right: 5%;
     color: #fff;
 
 }
+
+.modal-btn-holder a {
+
+display: inline-block;
+margin-left: 10px;
+margin-right: 10px;
+cursor: pointer;
+
+
+}
+
+.keywords-group {
+
+	margin-bottom: 0px !important;
+
+}
+
+#ui-datepicker-div {
+
+	z-index: 99999 !important;
+
+}
+
+.project-publication-tem-toolbar {
+
+	display: none;
+
+}
+
+.project-publication-tem-toolbar span {
+
+	font-size: 16px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+
+.project-publication-item:hover .project-publication-tem-toolbar {
+
+	display: inline-block !important;
+
+}
 		
 		</style>
 
 <body>
 
+<!-- Add member pop us -->
 
 <div id="Add-team-member" class="modal hide fade sign-modals" tabindex="-1" style=" top: 77%">
 
@@ -344,22 +299,23 @@ padding-right: 5%;
   
   
    <div class="controls modal-btn-holder invitation-modal-footer">
-		  
-					<button data-dismiss="modal"  class="new-small-wide-button black-btn  middle-button" >SAVE</button>
-					<button data-dismiss="modal"  class="new-small-wide-button black-btn  middle-button" >CANCEL</button>
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >CANCEL</button>
+					<button data-dismiss="modal"  class="new-small-button new-black-back-btn big-long-btns " >SAVE</button>
+					
     
 			</div>
 </div>
 
+<!-- Edit project information pop up -->
 
+<div id="edit-project-modal-first-step" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
 
-<div id="edit-project-modal-first-step" class="modal fade sign-modals" tabindex="-1" style="top: 54%" >
-
-	<form class=" form" >
+	
 	
 		<div class="box row-fluid">	
 			
-			<div class="step">
+			
 			
 		
 			 <div class="modal-header">
@@ -370,17 +326,17 @@ padding-right: 5%;
  
  </div>
  
+ <div class="edit-project-error">Project title, field, type, dates and privacy are all REQUIRED.</div>
  
   <div class="modal-body">
-    		
-		
-				
+  
+ 
 		
 			    <label class="group-label">Project Title*</label>
 			
 				<div class="input-group">
 			
-					<input class="form-control" name="projecttitle" placeholder="Title" value="Minerals From Tropical Rainforests">
+					<input class="form-control" id="project-title" name="projecttitle" placeholder="Title" value="Minerals From Tropical Rainforests">
 				</div>
 				
 				<label class="group-label">Research Field*</label>
@@ -389,7 +345,7 @@ padding-right: 5%;
 					
 					
 					
-					<select class="form-control user-form-select">
+					<select id="project-field" class="form-control user-form-select">
 						<option value="">SELECT</option>
 						<option value="Economics" selected>Economics</option>
 						<option value="Natural Sciences">Natural Sciences</option>
@@ -402,7 +358,7 @@ padding-right: 5%;
 				<label class="group-label">Research Type*</label>
 				<div class="input-group edit-field-input-group" >
 				
-					<select class="form-control user-form-select">
+					<select id="project-type" class="form-control user-form-select">
 						<option value="">SELECT</option>
 						<option value="Economics">Research</option>
 						<option value="Natural Sciences" selected>Research</option>
@@ -418,13 +374,13 @@ padding-right: 5%;
 				
 				<div class="input-group half-input-left">
                 
-                    <input placeholder="start" class="form-control" type="text" placeholder="Project Start" name="datepickerstart" id="datepickerstart">
+                    <input placeholder="start" class="form-control" type="text" placeholder="Project Start" value="01/06/2016" name="datepickerstart" id="datepickerstart">
                 
 				</div>
 				
 				<div class="input-group half-input-right">
                 
-                    <input placeholder="end" class="form-control" type="text" placeholder="Project Start" name="datepickerend" id="datepickerend">
+                    <input placeholder="end" class="form-control" type="text" placeholder="Project Start" value="01/06/2017" name="datepickerend" id="datepickerend">
                 
 				</div>
 				
@@ -437,16 +393,16 @@ padding-right: 5%;
 					<label class="group-label">Privacy*</label>
 					
 					<div class="radio">
-						<input id="Private" type="radio" name="privacy" value="Private" checked >
-						<label class="radio-label" for="Private">Private</label>
-						<input id="Public" type="radio" name="privacy" value="Public">
-						<label class="radio-label" for="Public">Public</label>
+						<input id="Privatett" type="radio" name="privacytt" value="Private" checked >
+						<label class="radio-label" for="Privatett">Private</label>
+						<input id="Publictt" type="radio" name="privacytt" value="Public">
+						<label class="radio-label" for="Publictt">Public</label>
 					</div>
 				</div>
 	</div>
 		
 		
-			</div>
+			
 			
 			
 			
@@ -454,8 +410,8 @@ padding-right: 5%;
 
 					 <div class="controls modal-btn-holder">
 					 
-					<button type="button" class="action btn-sky text-capitalize main-btn next btn new-small-wide-button new-black-btn  middle-button">CANCEL</button>
-					<button type="button" class="action btn-hot text-capitalize main-btn submit btn new-small-wide-button new-black-btn  middle-button">SUBMIT</button>
+					<button type="button"  class="new-small-button new-black-btn big-long-btns middle-button" data-dismiss="modal">CANCEL</button>
+					<button type="button" id="submit-edit-project-form-1" class="new-small-button new-black-back-btn big-long-btns middle-button"  >SUBMIT</button>
 		
 			</div>
 			 		
@@ -463,19 +419,20 @@ padding-right: 5%;
 		</div>
 		
 	 
-	</form> 
+	
 		  
 		  
-</div>
+</div> 
 
+<!-- Edit project description and keywords pop up -->
 
-<div id="edit-project-modal-second-step" class="modal fade sign-modals" tabindex="-1" style="top: 54%" >
+<div id="edit-project-modal-second-step" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
 
-	<form class=" form" >
+	<form class="form" action="project-management.html" >
 	
 		<div class="box row-fluid">	
 			
-		<div class="step">
+		
 			
 			
 		
@@ -507,11 +464,6 @@ padding-right: 5%;
 							</div>
 						</div>
 		
-				
-			
-				
-			
-				
 			<hr class="user-sep-line">
 			
   			
@@ -519,7 +471,7 @@ padding-right: 5%;
 		
 			<div class="input-group keywords-group " >
 				
-				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="Type Project Keywords"/>
+				<input type="text" class="create-project-keywords-input" id="project-keywords" placeholder="Type Project Keywords"/>
 				<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
 				<div class="project-keyword-list">
 				
@@ -530,25 +482,15 @@ padding-right: 5%;
 				</div>
 				</div>
 
-		
-	
-			
-
 	      </div>
 
-	  	
+			 <div class="controls modal-btn-holder">
+				
+				<button type="submit" class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+				<button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
+				
+					
 			</div>
-			
-			
-			
-
-
-					 <div class="controls modal-btn-holder">
-					 
-						<a href="/project-discussions.html" class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</a>
-						<a class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</a>
-					</div>
-			 		
 
 		</div>
 		
@@ -557,6 +499,146 @@ padding-right: 5%;
 		  
 		  
 </div>
+
+<!-- Share Pop up -->
+
+<div id="project-share-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	
+	
+		<div class="box row-fluid">	
+			
+		
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>SHARE PROJECT</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+		<div class="modal-body">
+		
+		<div class="input-group">
+			
+					<input class="form-control" id="project-title" name="projecttitle" placeholder="Share Link" >
+		
+		</div>
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">anyone with this link will be able to view this project</p>
+		
+		<button class="new-small-button new-black-btn big-long-btns full-width   middle-button" >Copy Link</button>
+		
+		<hr class="user-sep-line">
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">Or Share to </p>
+
+		
+		<div class="share-modal-social-icons">
+		<a class="fa fa-facebook"></a>
+		<a class="fa fa-twitter"></a>
+		<a class="fa fa-linkedin"></a>
+		<a class="fa fa-weibo"></a>
+		
+		</div>
+		
+		</div>
+ 
+
+			
+
+		</div>
+		
+	 
+	
+		  
+		  
+</div>
+
+<!-- Publication Pop up -->
+
+	<div class="modal fade" id="project-publications-modal">
+	
+	<div class="modal-header">
+ 
+ <p>NEW PUBLICATION </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+	<div class="publication-error">Journal Name, publish time, title and author, are all REQUIRED.</div>
+
+	<p class="pub-modal-header">Let's Get your Publication Started !</p>
+
+	<div class="project-publication-modal-inner" >
+	
+		
+		
+		<label class="group-label">Journal Information</label>
+		
+		<div class="input-group two-input-row">
+			
+					<input id="pub-journal" class="form-control"  placeholder="Journal Name">
+					<input id="pub-short-journal" class="form-control"  placeholder="Journal Short Name">
+		</div>
+		
+		<div class="input-group">
+			
+					<input id="pub-publish-time" placeholder="Publish Year" class="form-control" type="date">
+					
+					
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Title & Author</label>
+		
+		<div class="input-group">
+			
+					<input id="pub-title" class="form-control"  placeholder="Title">
+					
+					<div class="input-group keywords-group " style="margin-bottom: 0px !important; margin-top: 20px;" >
+				
+				<input type="text" class="create-project-keywords-input" id="authors-list"  placeholder="Author Name"/>
+				<a  id="add-author-btn" class="new-small-button new-black-back-btn">Add</a>
+				<div class="pub-author-list"></div>
+				
+				</div>
+					
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Link to Full Article</label>
+		
+		
+		<div class="input-group">
+			
+					<input id="pub-link" class="form-control"  placeholder="Link">
+					
+			
+					
+		</div>
+			
+			
+			
+		</div>
+
+		 <div class="profile-form-btns">
+			
+			 <button type="submit" id="submit-publication"  class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+			 <button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
+			
+			</div>
+	
+	
+
+  
+</div><!-- /.modal -->
 
 
 <div class="header-wrapper">
@@ -577,9 +659,9 @@ padding-right: 5%;
 
 	<div class="top-nav-author-info project-discussion-right-nav">
 		
-		<a><b>View Project</b></a>
-		<a>Invite</a>
-		<a>Share</a>
+		<a  href="project-view.html"><b>View Project</b></a>
+		<a class="add-team-member-btn" >Invite</a>
+		<a id="share-modal-btn">Share</a>
 		
 		
 	</div>
@@ -781,6 +863,8 @@ padding-right: 5%;
                           <div>
                             
                             	<span>Publications</span>
+								<button  class="fa fa-plus add-project-publication-btn left-section-edit-btn"></button>
+
                          
                             </div>
                             
@@ -792,10 +876,10 @@ padding-right: 5%;
                             
                             </div>-->
                             
-                        <p><a> s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling</a></p>
-                            <p><a>  by nutrient signalling remains enigmatic in photosynthetic plants s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling</a></p>
-                            <p><a> Meristems encompaass stem s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling</a></p>
-                            <p><a> lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose</a></p>
+                        <p class="project-publication-item"><a> s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling</a><span class="project-publication-tem-toolbar"><span class=" fa fa-pencil project-publication-edit"></span><span class=" fa fa-trash-o project-publication-delete"></span></span></p>
+                            <p class="project-publication-item"><a>  by nutrient signalling remains enigmatic in photosynthetic plants s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling</a><span class="project-publication-tem-toolbar"><span class=" fa fa-pencil project-publication-edit"></span><span class=" fa fa-trash-o project-publication-delete"></span></span></p>
+                            <p class="project-publication-item"><a> Meristems encompaass stem s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling s target-of-rapamycin (TOR) signalling</a><span class="project-publication-tem-toolbar"><span class=" fa fa-pencil project-publication-edit"></span><span class=" fa fa-trash-o project-publication-delete"></span></span></p>
+                            <p class="project-publication-item"><a> lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-derived glucose</a><span class="project-publication-tem-toolbar"><span class=" fa fa-pencil project-publication-edit"></span><span class=" fa fa-trash-o project-publication-delete"></span></span></p>
                         
                         </div>
 						<div class="dash-left-sec-div-footer"><a>SEE ALL</a></div> 
