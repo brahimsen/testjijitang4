@@ -13,6 +13,7 @@
 
 <link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="mobile-fonts.css" type="text/css"  />
+<link href="css/settings-page.css" rel="stylesheet" type="text/css">
 
 
 <script src="js/Jquery-11.js"></script>
@@ -26,6 +27,7 @@
 <script src="js/myjavascript.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/collection-script.js"></script>
+<script src="js/my-collections.js"></script>
 <script src="js/follow-script.js"></script>
 <script src="js/masonry.js"></script>
 
@@ -38,6 +40,12 @@
 </head>
 
 <style>
+
+.square-grids {
+
+padding-top: 0px;
+width: 100%;
+}
 
 .collection-grid-bottom {
 	background: #fff;
@@ -60,49 +68,41 @@
 
 }
 
-.square-grids {
+.collection-grid-item  {
+ width: calc( (100% - 40.1px) / 3 );
+ float: left;
+ margin-bottom: 20px;
+}
 
-	width: 100%;
-	padding-left: 0%;
-	padding-right: 0%;
-	padding-top: 0px !important;
-	background: none !important;
-	
+@media screen and (max-width:980px) {
+
+.collection-grid-item  {
+ width: calc( (100% - 20.1px) / 2 );
+
+}
+}
+
+@media(max-width: 767px) {
+
+.collection-grid-item  {
+ width: 100%;
 
 }
 
-#collection-columns {
+}
 
--webkit-column-count: 2;
-	-webkit-column-gap: 25px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 2;
-	-moz-column-gap: 25px;
-	-moz-column-fill: auto;
-	column-count: 2;
-	column-gap: 25px;
-	column-fill: auto;
-	padding-top: 20px;
+@media screen and (min-width: 1440px) {
 
+.collection-grid-item {
+ width: calc( (100% - 60.1px) / 4 );
 
 }
-  
-  @media screen and (min-width: 1440px) {
-
-	#collection-columns {
-
--webkit-column-count: 3;
-	-webkit-column-gap: 25px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 3;
-	-moz-column-gap: 10px;
-	-moz-column-fill: auto;
-	column-count: 3;
-	column-gap: 25px;
-	column-fill: auto;
-
 
 }
+
+.keywords-group {
+
+	margin-bottom: 0px !important;
 
 }
 
@@ -110,20 +110,108 @@
 
 <script>
 
- $(document).ready(function() {
-var options = {
-  valueNames: [ 'collection-grid-title' ]
-};
-
-var userList = new List('my-collections', options);
-
-});
-
 </script>
 
 <body>
 
+<div id="create-collection-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 75%" >
 
+	
+	
+		<div class="box row-fluid">	
+			
+		
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>CREATE COLLECTION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ <div class="create-edit-project-error">Collection Title is Required.</div>
+ 
+ 
+  <div class="modal-body">
+  
+  
+			<label class="group-label">Background Image</label>
+			<div class="collection-image-holder">
+			
+			<div class="collection-img-upload-box" >
+			
+		
+        	<div id="collection-new-back" class="collection-back-upload-box" style="background: url(img/big-logo.jpg) no-repeat center; background-size: cover" >
+			</div> 		
+                      
+			</div> 
+			
+			<input id="collection-new-back-btn" type="file" class="custom-file-input" style="border: 0px !important;">
+			
+			</div>
+			
+			<hr class="user-sep-line">
+    	
+		
+				<div class="input-group">
+					<input class="form-control" id="collection-title" name="collectiontitle" placeholder="Title (Required)" placeholder="Title">
+				</div>
+			
+				<div class="input-group">
+					<textarea placeholder="Short Description"></textarea>
+				</div>
+		
+				<hr class="user-sep-line">
+			
+  			
+				<label class="group-label">Keywords</label>
+		
+				<div class="input-group keywords-group " >
+				
+					<input type="text" class="create-project-keywords-input" id="project-keywords" placeholder="Type Project Keywords"/>
+					<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
+					<div class="project-keyword-list">
+			
+				
+				</div>
+				</div>
+				
+				<hr class="user-sep-line" style="margin-top: 0px">
+        
+				
+				
+					<label class="group-label team-member-label">Privacy*</label>
+					
+					<div class="radio team-member-radio">
+						<input id="Public" type="radio" name="privacy" value="Admin" checked="">
+						<label class="radio-label" for="Public">Public</label>
+						<p>Anyone can follow and read the articles you save.</p>
+						<input id="Private" type="radio" name="privacy" value="Collaborator">
+						<label class="radio-label" for="Private">Private</label>
+						<p>Keep this collection for yourself</p>
+					</div>
+				
+
+	      </div>
+
+			 <div class="controls modal-btn-holder">
+				
+				<button type="submit" id="submit-create-collection" class="new-small-button new-black-back-btn big-long-btns   middle-button" >CREATE COLLECTION</button>
+				
+				
+					
+			</div>
+
+		</div>
+		
+	 
+	
+		  
+		  
+</div>
 
 
 <div class="header-wrapper">
@@ -179,6 +267,15 @@ var userList = new List('my-collections', options);
 							
 							</p>
                       
+                        </div>
+						
+						 <div class="dashbord-content-left-article add-new-article-btn">
+						 
+						 
+                       
+                            <a id="create-collection-btn">+ CREATE NEW COLLECTION</a>
+                    
+                     
                         </div>
 						
 				

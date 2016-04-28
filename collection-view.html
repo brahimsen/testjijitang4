@@ -1,0 +1,604 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/projects.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/article-grids.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/collections.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="mobile-fonts.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="css/settings-page.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/projects-script.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/profiles-script.js"></script>
+<script src="js/articles-graph-script.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/collection-view.js"></script>
+<script src="js/masonry.js"></script>
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+
+<style>
+
+.article-tag-table-row {
+background: #fff;
+
+}
+
+.square-grids {
+
+	width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+
+}
+
+#collection-columns {
+
+	padding-top: 0px;
+
+}
+
+#project-columns {
+
+padding-top: 0px;
+}
+
+.square-grids {
+padding-top: 0px;
+
+}
+
+.collection-page-followed {
+
+border: 2px solid #a4ce4c;
+
+
+}
+
+.profile-page-tabs {
+
+	text-align: center;
+
+}
+
+.profile-page-tabs span {
+
+	font-size: 16px;
+	text-transform: uppercase;
+	border: 3px solid #a4ce4c !important;
+	color: #fff;
+	    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 20px;
+	display: inline-block;
+	padding-left: 25px;
+	padding-right: 25px;
+
+}
+
+</style>
+
+<div id="create-collection-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 85%" >
+
+		<div class="box row-fluid">	
+	
+		 <div class="modal-header">
+ 
+ <p>CREATE COLLECTION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ <div class="create-edit-project-error">Collection Title is Required.</div>
+ 
+ 
+  <div class="modal-body">
+  
+  
+			<label class="group-label">Background Image</label>
+			<div class="collection-image-holder">
+			
+			<div class="collection-img-upload-box" >
+			
+		
+        	<div id="collection-new-back" class="collection-back-upload-box" style="background: url(img/profile1.jpg) no-repeat center; background-size: cover" >
+			</div> 		
+                      
+			</div> 
+			
+			<input id="collection-new-back-btn" type="file" class="custom-file-input" style="border: 0px !important;">
+			
+			</div>
+			
+			<hr class="user-sep-line">
+    	
+		
+				<div class="input-group">
+					<input class="form-control" id="collection-title" name="collectiontitle" placeholder="Title (Required)" placeholder="Title" value="The evolution of rocks">
+				</div>
+			
+				<div class="input-group">
+					<textarea placeholder="Short Description">Here is the description of the collections</textarea>
+				</div>
+		
+				<hr class="user-sep-line">
+			
+  			
+				<label class="group-label">Keywords</label>
+		
+				<div class="input-group keywords-group " >
+				
+					<input type="text" class="create-project-keywords-input" id="project-keywords" placeholder="Type Project Keywords"/>
+					<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
+					<div class="project-keyword-list">
+					
+					<div class="editor-all-tags"><span class="tag-text">Science and technology</span><div class="tag-delete lnr lnr-cross"></div></div>
+					<div class="editor-all-tags"><span class="tag-text">New concepts of reerach</span><div class="tag-delete lnr lnr-cross"></div></div>
+					<div class="editor-all-tags"><span class="tag-text">Physics</span><div class="tag-delete lnr lnr-cross"></div></div>
+				
+				</div>
+				</div>
+				
+				<hr class="user-sep-line" style="margin-top: 0px">
+        
+				
+				
+					<label class="group-label team-member-label">Privacy*</label>
+					
+					<div class="radio team-member-radio">
+						<input id="Public" type="radio" name="privacy" value="Admin" checked="">
+						<label class="radio-label" for="Public">Public</label>
+						<p>Anyone can follow and read the articles you save.</p>
+						<input id="Private" type="radio" name="privacy" value="Collaborator">
+						<label class="radio-label" for="Private">Private</label>
+						<p>Keep this collection for yourself</p>
+					</div>
+				
+
+	      </div>
+
+			 <div class="controls modal-btn-holder">
+				
+				<button type="submit" id="submit-create-collection" class="new-small-button new-black-back-btn big-long-btns   middle-button" >EDIT COLLECTION</button>
+				
+				
+					
+			</div>
+
+		</div>
+		
+	 
+	
+		  
+		  
+</div>
+
+<div id="project-share-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	
+	
+		<div class="box row-fluid">	
+			
+		
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>SHARE PROJECT</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+		<div class="modal-body">
+		
+		<div class="input-group">
+			
+					<input class="form-control" id="project-title" name="projecttitle" placeholder="Share Link" >
+		
+		</div>
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">anyone with this link will be able to view this project</p>
+		
+		<button class="new-small-button new-black-btn big-long-btns full-width   middle-button" >Copy Link</button>
+		
+		<hr class="user-sep-line">
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">Or Share to </p>
+
+		
+		<div class="share-modal-social-icons">
+		<a class="fa fa-facebook"></a>
+		<a class="fa fa-twitter"></a>
+		<a class="fa fa-linkedin"></a>
+		<a class="fa fa-weibo"></a>
+		
+		</div>
+		
+		</div>
+ 
+
+			
+
+		</div>
+  
+</div>
+
+<body>
+
+	<div class="container-fluid" style="background: #ecead4">
+
+
+<div class="header-wrapper">
+	<header>
+
+
+	</header>
+</div>
+
+	<div class="secondary-sub-navigation project-discussion-main-nav">
+
+	<div class="top-nav-author-info project-discussion-right-nav">
+		
+		<a id="share-modal-btn">Share</a>
+		
+		
+	</div>
+	
+	<div class="top-nav-right-icons">
+	
+	
+		
+		<div class="dropdown standard-dropdown">
+			<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="fa fa-trash-o">
+				
+				
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dLabel">
+				<div class="drop-down-arrow-down"></div>
+				<li class="dropdown-menu-header">ARE YOUR SURE?</li>
+				<li class="new-delete-drop-down">
+				
+					<a class="drop-down-delete-btn">DELETE</a>
+					<a class="drop-down-cancel-btn">CANCEL</a>
+
+				</li>
+				
+			</ul>
+		</div>
+		
+		<button id="create-collection-btn" class="fa fa-pencil-square-o edit-collection-top-btn"></button>
+		
+		
+	
+	</div>
+	
+
+
+</div>
+
+	<div class="padding-wrapper">
+	
+	<div class="padding-wrapper-inner">
+
+	
+		<div class="collection-view-info-wrapper">
+		
+			<div class="collection-view-image-holder" style="background: url(img/profile1.jpg)  no-repeat center center; background-size: cover;">
+			
+			</div>
+			
+			<div class="collection-view-info-holder">
+			
+			
+				<div class="collection-view-top-header">
+				
+					<a class="collection-view-top-header-img"><img src="img/profile2.jpg" /></a>
+					<a class="collection-view-top-header-meta"> <span>Said Bensellam</span> <span>September 30 | 14:45 A.M</span> </a>
+					
+						<div class="collection-follow">
+							<a class="collection-page-unfollowed"> FOLLOW</a>
+							<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
+						</div>
+
+				</div>
+				
+				<div class="collection-view-content-info">
+				
+					<h2>THE EVOLUTION OF ROCKS</h2>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+					<p><span>12 Articles</span><span>89 Followers</span></p>
+				
+				</div>
+			
+			</div>
+		
+		
+		</div>
+	
+	
+	</div>
+	
+	</div>
+	
+	
+		
+         <div class="profile-page-nav-holder" >
+         
+         
+         
+          <ul class="nav nav-tabs profile-page-tabs"  role="tablist">
+
+				<span>ARTICLES</span>
+
+
+		</ul>
+  
+  </div>
+    
+	<div class="padding-wrapper" style="padding-top: 0px; padding-bottom: 25px">
+         
+        <div class="myprofile-content" >
+       
+                   <div class="padding-wrapper-inner">
+                  
+                    <div class="tab-content note-tab-content">
+					
+    						<div class="tab-pane profile-articles-bug active" id="articles">
+			
+	<div class="square-grids" id="article-columns-created">
+	
+		<div class="square-grid-item" >
+	<div class="article-graph-background" style="background: url(img/index-back2.jpg)  no-repeat center center; background-size: cover;">
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a>Read More</a>
+		</div>
+  </div>
+<div class="square-grid-item-inner"> 
+	<div class="article-grids-content">
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">September 30 | 12:45 A.M</span></p>
+		<div class="article-grids-content-inner">
+			<p class="article-grid-title"><a href="#">The turing machine</a></p>
+		</div>
+	</div>
+	<div class="square-grid-bottom">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="lnr lnr-exit-up squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
+	</div>
+</div> 
+</div>
+
+<div class="square-grid-item" >
+	<div class="article-graph-background" style="background: url(img/profile1.jpg)  no-repeat center center; background-size: cover;">
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a>Read More</a>
+		</div>
+  </div>
+<div class="square-grid-item-inner"> 
+	<div class="article-grids-content">
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">September 30 | 12:45 A.M</span></p>
+		<div class="article-grids-content-inner">
+			<p class="article-grid-title"><a href="#">What is the smallest thing in the universe, and where is it in this universe?</a></p>
+		</div>
+	</div>
+	<div class="square-grid-bottom">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="lnr lnr-exit-up squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
+	</div>
+</div> 
+</div>
+
+<div class="square-grid-item" >
+	<div class="article-graph-background" style="background: url(img/profile2.jpg)  no-repeat center center; background-size: cover;">
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a>Read More</a>
+		</div>
+  </div>
+<div class="square-grid-item-inner"> 
+	<div class="article-grids-content">
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">September 30 | 12:45 A.M</span></p>
+		<div class="article-grids-content-inner">
+			<p class="article-grid-title"><a href="#">What is the smallest thing in the universe?</a></p>
+		</div>
+	</div>
+	<div class="square-grid-bottom">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="lnr lnr-exit-up squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
+	</div>
+</div> 
+</div>
+
+<div class="square-grid-item" >
+	<div class="article-graph-background" style="background: url(img/profile3.jpg)  no-repeat center center; background-size: cover;">
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a>Read More</a>
+		</div>
+  </div>
+<div class="square-grid-item-inner"> 
+	<div class="article-grids-content">
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">September 30 | 12:45 A.M</span></p>
+		<div class="article-grids-content-inner">
+			<p class="article-grid-title"><a href="#">What is the smallest thing in the universe?</a></p>
+		</div>
+	</div>
+	<div class="square-grid-bottom">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="lnr lnr-exit-up squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
+	</div>
+</div> 
+</div>
+
+<div class="square-grid-item" >
+	<div class="article-graph-background" style="background: url(img/profile4.jpg)  no-repeat center center; background-size: cover;">
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a>Read More</a>
+		</div>
+  </div>
+<div class="square-grid-item-inner"> 
+	<div class="article-grids-content">
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">September 30 | 12:45 A.M</span></p>
+		<div class="article-grids-content-inner">
+			<p class="article-grid-title"><a href="#">What is the smallest thing in the universe?</a></p>
+		</div>
+	</div>
+	<div class="square-grid-bottom">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="lnr lnr-exit-up squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
+	</div>
+</div> 
+</div>
+
+<div class="square-grid-item" >
+	<div class="article-graph-background" style="background: url(img/big-logo.jpg)  no-repeat center center; background-size: cover;">
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a>Read More</a>
+		</div>
+  </div>
+<div class="square-grid-item-inner"> 
+	<div class="article-grids-content">
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">September 30 | 12:45 A.M</span></p>
+		<div class="article-grids-content-inner">
+			<p class="article-grid-title"><a href="#">What is the smallest thing in the universe?</a></p>
+		</div>
+	</div>
+	<div class="square-grid-bottom">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="lnr lnr-exit-up squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
+	</div>
+</div> 
+</div>
+
+<div class="square-grid-item" >
+	<div class="article-graph-background" style="background: url(img/profile1.jpg)  no-repeat center center; background-size: cover;">
+		<div class="article-content-graph-holder"><p>Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!Find newest published and most popular research articles on Jijitang, like or save pieces that you think are great!</p>
+			<a>Read More</a>
+		</div>
+  </div>
+<div class="square-grid-item-inner"> 
+	<div class="article-grids-content">
+		<p class="article-grid-meta"><a><img src="img/brahim.png"  /></a> <a> Brahim Senhaji</a><span class="article-time-span">September 30 | 12:45 A.M</span></p>
+		<div class="article-grids-content-inner">
+			<p class="article-grid-title"><a href="#">What is the smallest thing in the universe, and where is it in this universe?</a></p>
+		</div>
+	</div>
+	<div class="square-grid-bottom">
+		<div class="grid-bottom-meta-icons">
+		<div><a><i class="fa fa-heart-o"></i><span>112</span></a></div>
+		<div><a><i class="fa fa-comment-o"></i><span>0</span></a></div>
+		<div><a><i class="lnr lnr-exit-up squre-grid-share-icon"></i><span>65</span></a></div>
+		<div><a><i class="fa fa-floppy-o"></i><span>888</span></a></div>
+		</div>
+		
+	</div>
+</div> 
+</div>
+
+   	</div>	
+	
+	
+	
+	
+	
+							
+			
+                            </div>
+
+                	    
+                        
+                       
+                </div>
+    
+
+    </div>
+
+</div>
+</div>
+
+ <footer>
+        
+		</footer>
+
+</div>
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" );
+$( "footer" ).load( "footer.html" );
+
+
+
+
+
+
+
+  
+
+</script>
+<script src="js/masonry-scripts-profiles.js"></script>
+<script src="js/myjavascript.js"></script>
+
