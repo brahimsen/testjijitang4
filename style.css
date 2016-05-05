@@ -20702,8 +20702,8 @@ padding-right: 0px !important;
 	
 	background: rgba(0,0,0,0.3);
 	text-align: center;
-	padding-top: 175px;
-	padding-bottom: 175px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 
 }
 
@@ -22049,16 +22049,18 @@ border: 2px solid #a4ce4c;
 
 .project-page-unapplied {
 
-font-size: 16px !important;
+font-size: 14px !important;
 text-transform: uppercase;
-border: 2px solid #000;
 display: inline-block;
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
 padding-left: 35px;
 padding-right: 35px;
-color: #000;
-margin-right: 10px;
+color: #fff;
+cursor: pointer;
+background: #a4ce4c;
+
+
 
 }
 
@@ -22535,5 +22537,109 @@ margin-bottom: 25px;
     color: #A94442;
     margin-bottom: 0px;
     display: block !important
+
+}
+
+.project-view-documents-tab {
+
+background: #CFCCB9
+
+}
+
+.padding-wrapper-fix {
+
+padding-top: 0px !important;
+
+}
+
+.project-view-info-footer {
+
+padding-top: 20px;
+padding-bottom: 20px;
+margin-left: 20px;
+margin-right: 20px;
+border-top: 2px solid #ecead4;
+text-align: center;
+
+}
+
+
+.project-info-holder {
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+.project-info-holder h3 {
+
+	margin-top: 0px;
+	font-size: 36px;
+	word-spacing: 5px;
+
+}
+
+.project-info-holder .project-profiles-holder {
+
+border-top: 0px;
+margin-top: 0px;
+
+}
+
+.project-info-holder .project-profiles-holder img {
+
+width: 50px;
+height: 50px;
+
+}
+
+.project-info-holder .project-profile-more {
+
+width: 50px;
+height: 50px;
+}
+
+.project-info-holder p {
+
+margin-bottom: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.project-view-description-content {
+
+padding-top: 75px;
+
+}
+
+.project-view-description-content .instead-of-h1{
+
+line-height: 34px;
+margin-bottom: 0px;
+
+}
+
+.project-view-description-content .my-bullets {
+
+margin-bottom: 30px;
+
+}
+
+.article-view-references p {
+text-align: center;
+}
+
+.article-view-references a  {
+font-family: "OpenSans-Bold";
+color: #a4ce4c;
+    display: block;
+    margin-top: 5px;
+}
+
+.project-view-bottom-meta-info span {
+
+font-size: 15px;
+color: #999;
+margin-right: 15px;
 
 }
