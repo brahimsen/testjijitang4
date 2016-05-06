@@ -19937,7 +19937,7 @@ border-right: 0px solid #ecead4 !important;
 
 padding-bottom: 0px !important;
 margin-top: 0px !important;
-
+position: relative;
 
 
 }
@@ -22641,5 +22641,49 @@ color: #a4ce4c;
 font-size: 15px;
 color: #999;
 margin-right: 15px;
+
+}
+
+.profile-row-admin-label {
+
+	background: #999;
+	color: #fff;
+	text-transform: uppercase;
+	position: absolute;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 12px;
+	line-height: 12px;
+	left: 20px;
+
+}
+
+.project-view-inner-sub-navigation {
+
+	background: transparent;
+	position: absolute;
+	    width: auto;
+   
+    right: 0pc;
+    padding-right: 0px;
+    padding-left: 0px;
+	right: 12px;
+
+}
+
+.project-view-inner-sub-navigation .top-nav-right-icons button {
+
+background: transparent;
+color: #fff;
+margin-left: 8px;
+
+
+}
+
+.project-view-inner-sub-navigation .top-nav-right-icons button:before {
+
+font-size: 30px;
 
 }
