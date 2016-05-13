@@ -1,5 +1,17 @@
 		 $(document).ready(function() {
 			 
+			
+			
+			var maxlength = 200;
+			$('.discussion-post-excerpt').text(function (_, text) {
+				if($('.discussion-post-excerpt').length < 200){
+				
+				return $.trim(text).substring(0, maxlength)+ "...";
+				}else{
+					return $.trim(text).substring(0, maxlength);
+				}
+			});
+			 
 			 (function() {
    
 	$(document).on('keyup', '.discussion-post-validation', function(){
@@ -25,12 +37,27 @@
 
 
 			$("#add-discussion-btn").click(function(e) {
+				
+				var maxlength = 200;
+				
+			$("#discussion-content-input").val(function (_, text) {
+				if($("#discussion-content-input").val().length < 200){
+				
+				window.my_excerpt = $.trim(text).substring(0, maxlength);
+				
+				}else{
+					
+					window.my_excerpt = $.trim(text).substring(0, maxlength)+ "...";
+					
+				}
+			});
     
-           $(".discussion-list").prepend("<div class='discussion-post'><div class='discussion-post-header'><div class='discussion-post-meta'><a class='discussion-post-picture'><img src='img/profile1.jpg' /></a><p class='discussion-post-author'><a>Brahim Senhaji</p></a><p class='discussion-post-time'>September 28 | 12:33 A.M</p><button class='discussion-toggle-btn white-wide-btn discussion-btn-hidden'></button></div><p class='discussion-post-title'>"+$("#discussion-title-input").val()+"</p></div><div class='discussion-post-content'><p class='discussion-post-text'>"+$("#discussion-content-input").val()+"</p><div class='discussion-post-content-footer'><span class='discussion-comment-number'> 12 Replies | </span><span class='discussion-comments-toggle'></span><span class='discussion-comments-reply'>Reply</span></div><div class='discussion-comments-holder'><div class='discussion-comment-textarea'><textarea class='add-discussion-comment-textarea' placeholder='Share your thoughts on the discussion'></textarea><button class='black-wide-btn right-float-btn add-discussion-comment-btn'>SEND</button></div><div class='discussion-comment-list'></div></div></div></div></div>");
+					$(".discussion-list").prepend("<div class='discussion-post'><div class='discussion-post-header'><div class='discussion-post-meta'><a class='discussion-post-picture'><img src='img/profile1.jpg' /></a><p class='discussion-post-author'><a>Brahim Senhaji</p></a><p class='discussion-post-time'>September 28 | 12:33 A.M</p><button class='discussion-toggle-btn white-wide-btn discussion-btn-hidden discussion-btn-visible'></button></div><p class='discussion-post-title'>"+$("#discussion-title-input").val()+"</p><p class='discussion-post-excerpt discussion-post-excerpt-hidden'>"+$("#discussion-content-input").val()+"</p></div><div class='discussion-post-content show-discussion-content'><p class='discussion-post-text'>"+ my_excerpt +"</p><div class='discussion-post-content-footer'><span class='discussion-comment-number'> No Replies</span></div><div class='discussion-comments-holder'><div class='discussion-comment-textarea'><textarea class='add-discussion-comment-textarea' placeholder='Share your thoughts on the discussion'></textarea><button class='black-wide-btn right-float-btn add-discussion-comment-btn'>SEND</button></div><div class='discussion-comment-list'></div></div></div></div></div>");
 				
 					$("#discussion-title-input").val('');
 					$("#discussion-content-input").val('');
-					$('#add-discussion-btn').attr('disabled', 'disabled');					
+					$('#add-discussion-btn').attr('disabled', 'disabled');
+				
 
 
 				});
@@ -90,26 +117,18 @@
 	$(document).ready(function() {
 			$(document).on('click', '.discussion-toggle-btn', function(){
 			
-    
+					
+					
 					$(this).parent(".discussion-post-meta").parent(".discussion-post-header").siblings(".discussion-post-content").toggleClass("show-discussion-content")
 					$(this).toggleClass("discussion-btn-visible");
-				});
-			});
-			
-				$(document).ready(function() {
-					$(document).on('click', '.discussion-comments-reply', function(){
 					
-			
-					$(this).siblings(".discussion-comments-toggle").addClass("discussion-comments-toggle-visible")
-					$(this).parent(".discussion-post-content-footer").siblings(".discussion-comments-holder").addClass("discussion-comments-holder-visible");
-				});
-			});
-			
-			$(document).ready(function() {
+					$(this).parent(".discussion-post-meta").siblings(".discussion-post-excerpt").toggleClass("discussion-post-excerpt-hidden")
+
 					
-					$(document).on('click', '.discussion-comments-toggle', function(){
-			
-					$(this).toggleClass("discussion-comments-toggle-visible")
-					$(this).parent(".discussion-post-content-footer").siblings(".discussion-comments-holder").toggleClass("discussion-comments-holder-visible");
+					
+					
 				});
 			});
+			
+		
+			

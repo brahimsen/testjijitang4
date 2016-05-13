@@ -19222,6 +19222,7 @@ background: #ecead4;
 	
 		width: 135px;
 		float: left;
+		list-style-type: none;
 		
 	
 	}
@@ -21343,7 +21344,8 @@ input[type=radio]:checked + .radio-label:before {
 	padding-top: 15px;
 	
 	
-	font-size: 16px;
+	font-size: 20px;
+	line-height: 26px;
 	font-family: "OpenSans-Bold";
 	
 
@@ -21360,8 +21362,8 @@ input[type=radio]:checked + .radio-label:before {
 
 .discussion-post-header img {
 
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	border-radius: 100px;
 	margin-right: 10px;
 
@@ -21388,7 +21390,7 @@ input[type=radio]:checked + .radio-label:before {
 
 .discussion-post-header .discussion-post-author {
 
-	padding-top: 15px;
+	padding-top: 5px;
 
 }
 
@@ -21437,7 +21439,7 @@ border-bottom: 15px solid #CFCCB9;
 
 .discussion-comments-holder {
 
-	display: none;
+	
 
 }
 
@@ -21502,7 +21504,7 @@ border-bottom: 15px solid #CFCCB9;
 
 	right: 0px;
 	position: absolute;
-	top: 15px;
+	top: 9px;
 
 }
 
@@ -21605,7 +21607,7 @@ border-bottom: 15px solid #CFCCB9;
 
 .discussion-post-content-footer span {
 
-	color: #a4ce4c;
+	color: #999;
 	font-family:"OpenSans-Semibold";
 	cursor: pointer;
 	
@@ -22679,11 +22681,39 @@ background: transparent;
 color: #fff;
 margin-left: 8px;
 
-
 }
 
 .project-view-inner-sub-navigation .top-nav-right-icons button:before {
 
 font-size: 30px;
+
+}
+
+.discussion-post-excerpt {
+
+margin-top: 15px;
+padding-top: 15px;
+border-top: 2px solid #ecead4;
+
+
+}
+
+.discussion-post-excerpt-hidden {
+
+display: none;
+
+}
+
+.discussion-see-more-comments {
+
+background: #ecead4;
+font-family: "OpenSans-Bold";
+padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: -15px;
+	cursor: pointer;
 
 }
