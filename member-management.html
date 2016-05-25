@@ -1,0 +1,916 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/projects.css" type="text/css" media="screen" />
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+<link rel="stylesheet" href="mobile-fonts.css" type="text/css"  />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="css/settings-page.css" rel="stylesheet" type="text/css">
+<link href="css/neweditor.css" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/zebra_datepicker.js"></script>
+<script src="js/jquery.hotkeys.js"></script>
+<script src="js/bootstrap-wysiwyg.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
+<script src="js/project-discussion.js"></script>
+<script src="js/project-invitation.js"></script>
+<script src="js/project-management-top.js"></script>
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+
+		
+		<style>
+		
+		.big-long-btns {
+		
+		    margin-left: 10px;
+			margin-right: 10px;
+			padding-left: 60px !important;
+			padding-right: 60px !important;
+		
+		}
+		
+		.show-edit-project-error {
+		    padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: center;
+			background: #F2DEDE;
+			border: 1px solid #EBCCD1;
+			color: #A94442;
+			margin-bottom: 0px;
+			
+			display: block !important;
+		
+		}
+		
+		.edit-project-error {
+		   display: none;
+		
+		}
+		
+		.btn-toolbar {
+
+margin-top: 0px !important;
+margin-bottom: 0px !important;
+padding-top: 5px;
+padding-bottom: 5px;
+background: #CFCCB9;
+padding-left: 5%;
+padding-right: 5%;
+
+
+
+}
+
+.new-editor-wrapper {
+
+	margin-bottom: 20px;
+
+}
+
+.btn-toolbar .btn {
+
+    background: transparent;
+    border: 0px;
+   
+    box-shadow: none;
+    color: #fff;
+
+}
+
+.modal-btn-holder a {
+
+display: inline-block;
+margin-left: 10px;
+margin-right: 10px;
+cursor: pointer;
+
+
+}
+
+.keywords-group {
+
+	margin-bottom: 0px !important;
+
+}
+
+#ui-datepicker-div {
+
+	z-index: 99999 !important;
+
+}
+
+.project-publication-tem-toolbar {
+
+	display: none;
+
+}
+
+.project-publication-tem-toolbar span {
+
+	font-size: 16px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+
+.project-publication-item:hover .project-publication-tem-toolbar {
+
+	display: inline-block !important;
+
+}
+		
+		</style>
+
+<body>
+
+<div id="Add-team-member" class="modal hide fade sign-modals" tabindex="-1" style=" top: 77%">
+
+	 <div class="modal-header">
+ 
+ <p>Add Team Member</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ <div id="add-member-alert-validation" class="add-member-alert full-width"> Member Email and Role are both required</div>
+ 
+  <div class="modal-body zero-margin" >
+   
+	 
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control" id="invitee-email" name="name" placeholder="Email">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="text" class="form-control" id="invitee-role" name="emailregi" placeholder="Role">
+				</div>
+			</div>	
+		</div>
+		
+		
+        
+        <div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<textarea class="form-control" id="invitationmessage" name="invitationmessage" placeholder="Message Optional"></textarea>
+				</div>
+			</div>
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label team-member-label">Type of Member</label>
+		
+		<div class="radio team-member-radio">
+						<input id="Private" type="radio" name="privacy" value="Admin" checked="">
+						<label class="radio-label" for="Private">Admin</label>
+						<p>Can edit basic information, delete project and invite members.</p>
+						<input id="Public" type="radio" name="privacy" value="Collaborator">
+						<label class="radio-label" for="Public">Collaborator</label>
+						<p>can follow and contribute to discussions and add publications</p>
+					</div>
+    
+	
+          
+		
+  </div>
+  
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >CANCEL</button>
+					<button type="submit" id="send-invitation-action" class="new-small-button new-black-back-btn big-long-btns " >SEND INVITATION</button>
+					
+    
+			</div>
+</div>
+
+
+<div id="edit-project-modal-first-step" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	
+	
+		<div class="box row-fluid">	
+			
+			
+			
+		
+			 <div class="modal-header">
+ 
+ <p>EDIT PROJECT</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ <div class="edit-project-error">Project title, field, type, dates and privacy are all REQUIRED.</div>
+ 
+  <div class="modal-body">
+  
+ 
+		
+			    <label class="group-label">Project Title*</label>
+			
+				<div class="input-group">
+			
+					<input class="form-control" id="project-title" name="projecttitle" placeholder="Title" value="Minerals From Tropical Rainforests">
+				</div>
+				
+				<label class="group-label">Research Field*</label>
+				
+				<div class="input-group edit-field-input-group" >
+					
+					
+					
+					<select id="project-field" class="form-control user-form-select">
+						<option value="">SELECT</option>
+						<option value="Economics" selected>Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+						</select>
+				</div>
+				
+				<hr class="user-sep-line">
+				
+				<label class="group-label">Research Type*</label>
+				<div class="input-group edit-field-input-group" >
+				
+					<select id="project-type" class="form-control user-form-select">
+						<option value="">SELECT</option>
+						<option value="Economics">Research</option>
+						<option value="Natural Sciences" selected>Research</option>
+						
+						</select>
+				</div>
+				
+				<hr class="user-sep-line">
+				
+				<label class="group-label">Project Duration*</label>
+			
+				<div class="input-group-clear">
+				
+				<div class="input-group half-input-left">
+                
+                    <input placeholder="start" class="form-control" type="text" placeholder="Project Start" value="01/06/2016" name="datepickerstart" id="datepickerstart">
+                
+				</div>
+				
+				<div class="input-group half-input-right">
+                
+                    <input placeholder="end" class="form-control" type="text" placeholder="Project Start" value="01/06/2017" name="datepickerend" id="datepickerend">
+                
+				</div>
+				
+				</div>
+				
+				<hr class="user-sep-line" style="margin-top: 0px">
+        
+				<div class="input-group project-radio-box">
+				
+					<label class="group-label">Privacy*</label>
+					
+					<div class="radio">
+						<input id="Privatett" type="radio" name="privacytt" value="Private" checked >
+						<label class="radio-label" for="Privatett">Private</label>
+						<input id="Publictt" type="radio" name="privacytt" value="Public">
+						<label class="radio-label" for="Publictt">Public</label>
+					</div>
+				</div>
+	</div>
+		
+		
+			
+			
+			
+			
+
+
+					 <div class="controls modal-btn-holder">
+					 
+					<button type="button"  class="new-small-button new-black-btn big-long-btns middle-button" data-dismiss="modal">CANCEL</button>
+					<button type="button" id="submit-edit-project-form-1" class="new-small-button new-black-back-btn big-long-btns middle-button"  >SUBMIT</button>
+		
+			</div>
+			 		
+
+		</div>
+		
+	 
+	
+		  
+		  
+</div> 
+
+
+<div class="header-wrapper">
+	<header>
+
+
+	</header>
+</div>
+
+  <div class="main-page-wrapper">
+    
+    
+ 		
+        
+        <div class="main-page-content" >
+        
+		<div class="secondary-sub-navigation project-discussion-main-nav">
+
+	<div class="top-nav-author-info project-discussion-right-nav">
+		
+		<a  href="project-management.html"><b>Return to Project</b></a>
+		<a class="add-team-member-btn" >Invite</a>
+		
+		
+		
+	</div>
+	
+
+	
+
+
+</div>
+        
+        		
+				<div class="dashboard-wrapper">
+                
+                <div class="dashbord-content-left hidden-tablet hidden-phone">
+                
+                	
+                
+                        
+                        
+                            <div class="dashbord-content-left-article project-info-left-section">
+							
+								<div id="project-back-preview" class="left-project-wrap" style="background: url(img/index-back2.jpg)  no-repeat center center; background-size: cover;"></div>
+								
+								<div class="my-image-upload back-image-upload">
+										<label for="change-project-background" id="project-back-btn" class="fa fa-camera">
+										</label>
+										<input id="change-project-background" type="file"/>
+								</div>
+                        
+							<button id="edit-project-first-step-btn" class="fa fa-pencil-square-o left-section-edit-btn"></button>
+							<p class="project-left-title">
+								Minerals From Tropical Rainforests
+							</p>
+                            <p class="project-left-dates"><span>Nov. 28, 2015</span> - <span>Dec. 28, 2016</span></p>
+							
+							<p class="project-left-icons">
+							
+									<a><i class="lnr lnr-user"></i><span>112</span></a>
+									<a><i class="fa fa-comment-o"></i><span>0</span></a>
+									<a><i class="lnr lnr-eye"></i><span>65</span></a>
+									<a><i class="lnr lnr-exit-up"></i><span>888</span></a>
+							
+							</p>
+                
+                        </div>
+						
+						
+						
+						
+						
+						<div class="dash-left-sec-div-footer project-left-footer"><span>SCIENCE</span><span>Research | <b>On-going</b></span></div> 
+						
+						
+						<div class="project-application-notification">
+						   
+						   
+						   <a class="member-mag-not">2 INVITATIONS SENT</a>
+						   <a class="member-mag-not">2 INVITATIONS RECIEVED</a>
+						   <a class="member-mag-not">1 APPLICATION RECIEVED</a>
+						   <a>1 APPLICATION REJECTED</a>
+						   
+						   </div>
+						
+						  <div class="dashbord-content-left-article project-left-profiles">
+                        
+                          <div>
+                            
+                            	<span> Team Members</span>
+								<a class="fa fa-plus left-section-edit-btn add-team-member-btn"></a>
+                         
+                            </div>
+                            
+                            <!-- In case the user enters for the first time -->
+                            
+                            <!--<div class="first-time-enter">
+                            
+                            <div><span>+</span></div><p>You don't have any liked articles,<a>Find some interesting articles</a></p>
+                            
+                            </div>-->
+							
+							<div class="profile-row"><a><img src="img/profile1.jpg" /><p>Brahim Senhaji</p></a><span>Chemist</span></div>
+							<div class="profile-row"><a><img src="img/profile2.jpg" /><p>Albert Einstein</p></a><span>Biologist</span></div>
+							<div class="profile-row"><a><img src="img/profile3.jpg" /><p>Mariuz Pudzianovski</p></a><span>Bodybuilder</span></div>
+							<div class="profile-row"><a><img src="img/profile4.jpg" /><p>Alan Turin</p></a><span>Scientist</span></div>
+						
+							</div>
+						
+						   
+						   
+						   
+			
+					
+							</div>
+                
+                <div class="dashbord-content-right" >
+				
+				<div class="dashbord-content-right-inner" >
+				
+			
+                
+			<div class="team-member-section-header">
+			
+				<p>INVITATATIONS SENT</p>
+			
+			</div>
+			
+			<div id="invitation-row-section" class="invitation-row-holder" style="margin-bottom: 15px;">
+			
+				<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+					<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+					<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+					<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+					<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+			
+			</div>
+			
+					
+			
+			<div class="team-member-section-header">
+			
+				<p>APPLICATIONS RECIEVED</p>
+			
+			</div>
+			
+			<div class="invitation-row-holder"  style="margin-bottom: 15px">
+			
+				<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+						<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+						<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+						<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+			
+			</div>
+			
+			<div class="team-member-section-header">
+			
+				<p>TEAM MEMBERS</p>
+			
+			</div>
+			
+			<div class="invitation-row-holder">
+			
+				<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+						<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+						<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				
+						<div class="invitation-row">
+				
+					<div class="invitation-email"><p>brahim.senhaji@gmail.com</p></div>
+					<div class="invitation-role"><input type="text" value="Project leader" /></div>
+					<div class="invitation-type"><span class="invitation-type-content">Collaborator<i class="fa fa-caret-down"></i></span></div>
+					<div class="invitation-remove dropdown">
+					
+					
+  
+   
+					<span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="lnr lnr-cross"></span>
+  
+
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							
+							<button class="delete-invitation-row-btn">Delete</button>
+							<button class="cancel-small-btn">Cancel</button>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					
+					
+					
+				</div>
+			
+			</div>
+	
+
+
+              </div>
+                </div>
+                            
+                            
+                </div>            
+                            
+                            
+                </div>
+    
+                       
+                         
+                
+                
+                </div>
+   
+
+      
+   
+        <footer></footer>
+   
+
+      
+   
+        
+    
+    
+   
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" ); 
+$( "footer" ).load( "footer.html" );
+
+
+  
+
+</script>
+<script src="js/tiny-editor-bottom-script.js"></script>
+<script src="js/myjavascript.js"></script>
+<script src="js/myEntries.js"></script> 
+<script src="js/list.js"></script>
+

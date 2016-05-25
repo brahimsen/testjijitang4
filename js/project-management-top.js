@@ -3,6 +3,8 @@
 					
 					$("#submit-edit-project-form-1").click(function(){
 						
+						
+						
 						if($("#project-title").val() =="" || $("#project-field").val() =="" || $("#project-type").val() =="" || $("#datepickerstart").val() =="" || $("#datepickerend").val() =="") {
 						$(".edit-project-error").addClass('show-edit-project-error');
 						}else{
