@@ -76,7 +76,7 @@
 		<div class="form-group">
 			<div class="controls">
 			    <div class="input-group">
-					<input type="text" class="form-control" id="email" name="email" placeholder="Email">
+					<input type="text" class="form-control" id="email" name="email" placeholder="Email / Phone Number">
 				</div>
 			</div>	
 		</div>
@@ -90,15 +90,6 @@
 		</div>
         
        
-        <div class="form-group sign-in-text ">
-			
-            <p>
-				<a href="http://myjijitang/password.html" class="login-link"> Forgot Password</a>
-				<a href="http://myjijitang/password.html" class="login-link"> Quick Phone number Login</a>
-				
-			</p>
-            
-		</div>
 		
 	
 	
@@ -128,6 +119,111 @@
 <!--Sign Up Modal-->
 
 
+<div id="Sign-up-Modal-phone" class="modal hide fade sign-modals" tabindex="-1" style=" top: 54%">
+
+	 <div class="modal-header">
+ 
+ <p>Sign Up </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+	<div id="valid-phone-alert"> Please input a valid phone number.</div>
+	<div id="phone-validation-error">The verification Code is not valid</div>
+  <div class="modal-body zero-margin" >
+   
+	 
+		<legend class="modal-legend"><p>Welcome ! </p><p> You are Just a Few Clicks Away</p></legend>		
+		
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="tel" class="form-control" id="phonenumberreg" maxlength="10" placeholder="Phone Number">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<div class="controls">
+			    <div class="input-group verification-code-input">
+					<input type="text" class="form-control" disabled id="verficationcode" maxlength="6" placeholder="Verification Code (6 Digits)">
+					<span id="verificationcodesend">Send Code</span>
+				</div>
+			</div>	
+		</div>
+		
+		
+    
+            <div class="controls modal-btn-holder">
+		  
+	       <button type="submit" class="new-small-wide-button new-black-btn  middle-button" id="submitphonereg" >Sign Up</button>
+         
+			<span class=" sign-modal-bottom-link" id="email-switch-sign-up">Sign up with Email</span>
+         
+           
+          
+	        
+	      </div>
+          
+		
+  </div>
+   <div class="New-user-sign" style="text-align: center" ><a id="Login-link"> If You Have a Jijitang Account, Sign In </a></div>
+</div>
+
+
+
+<div id="password-reg-modal" class="modal hide fade sign-modals" tabindex="-1" style=" top: 54%">
+
+	 <div class="modal-header">
+ 
+ <p>Sign Up </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+  <div class="modal-body zero-margin" >
+   <form class="password-validation-form" role="form">
+	 
+		<legend class="modal-legend"><p>You have successfully registered</p><p> Set up a password for a quick login next time</p></legend>		
+		
+		
+		
+		<div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="password" class="form-control" id="passregiphone" name="passregiphone" placeholder="Password">
+				</div>
+			</div>
+		</div>
+        
+        <div class="form-group ">
+			<div class="controls">
+			    <div class="input-group">
+					<input type="password" class="form-control" id="passconfphone" name="passconfphone" placeholder="Password Confirmation">
+				</div>
+			</div>
+		</div>
+    
+            <div class="controls modal-btn-holder">
+		  
+	       <button type="submit"  class="new-small-wide-button new-black-btn  middle-button" >Submit</button>
+         
+
+         
+           
+          
+	        
+	      </div>
+          
+		</form>
+  </div>
+
+</div>
+
 <div id="Sign-up-Modal" class="modal hide fade sign-modals" tabindex="-1" style=" top: 54%">
 
 	 <div class="modal-header">
@@ -146,13 +242,7 @@
 		<div class="wechat-btn-holder">
 		<a class="new-small-wide-button light-green-button  middle-button"><span class="icon-uniE611"></span> Continue with Wechat</a>
 		</div>
-		<div class="form-group">
-			<div class="controls">
-			    <div class="input-group">
-					<input type="text" class="form-control" name="name" placeholder="Name">
-				</div>
-			</div>
-		</div>
+		
 		
 		
 		<div class="form-group">
@@ -184,7 +274,7 @@
 	       <button type="submit"  class="new-small-wide-button new-black-btn  middle-button" >Sign Up</button>
          
 
-         
+         <span class=" sign-modal-bottom-link" id="phone-switch-sign-up">Sign up with Phone Number</span>
            
           
 	        
@@ -192,14 +282,8 @@
           
 		</form>
   </div>
-   <div class="New-user-sign" style="text-align: center" ><a id="Login-link"> If You Have a Jijitang Account, Sign In </a></div>
+   <div class="New-user-sign" style="text-align: center" ><a id="Login-link-email"> If You Have a Jijitang Account, Sign In </a></div>
 </div>
-
-
-
-
-
-
 
 
 </div>

@@ -3943,8 +3943,8 @@ label {
 
 .form-control {
 	
-	height: 40px !important;
-	border: 1px solid #ccc !important;
+	height: 50px !important;
+	border: 0px !important;
 	width: 100%;
 
 }
@@ -22749,5 +22749,76 @@ background: #fff;
 .member-mag-not {
 
 margin-bottom: 15px;
+
+}
+
+.verification-code-input {
+
+height: auto;
+overflow: hidden;
+
+}
+
+.verification-code-input input {
+
+width: calc(100% - 100px)
+
+}
+
+.verification-code-input span {
+
+width: 90px;
+height: 50px;
+background: #000;
+color: #fff;
+cursor: pointer;
+float: right;
+line-height: 50px;
+text-align: center;
+
+
+}
+
+#valid-phone-alert {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+#phone-validation-error {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+.sign-modal-bottom-link {
+
+display: block;
+padding-top: 20px;
+font-family:"OpenSans-Semibold";
+cursor: pointer;
+
+}
+
+.show-number-error {
+display: block !important;
+
+}
+
+#Login-link-email {
+
+cursor: pointer;
 
 }

@@ -138,20 +138,28 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 		
 		$("#index-signup-modal").click(function(){
 
-				$("#Sign-up-Modal").modal('show');
+				$("#Sign-up-Modal-phone").modal('show');
 
 
 		});
 		
 			$("#signup-link").click(function(){
 
-				$("#Sign-up-Modal").modal('show');
+				$("#Sign-up-Modal-phone").modal('show');
 				$("#index-Sign-in-Modal").modal('hide');
 
 
 		});
 		
 			$("#Login-link").click(function(){
+
+				$("#Sign-up-Modal-phone").modal('hide');
+				$("#index-Sign-in-Modal").modal('show');
+
+
+		});
+		
+		$("#Login-link-email").click(function(){
 
 				$("#Sign-up-Modal").modal('hide');
 				$("#index-Sign-in-Modal").modal('show');
