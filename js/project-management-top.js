@@ -22,7 +22,7 @@
 			 $(document).ready(function() {
 					
 					$(".add-team-member-btn").click(function(){
-						$("#Add-team-member").modal('show');
+						$("#Add-team-member-search").modal('show');
 					});
 					
 					$("#edit-project-first-step-btn").click(function(){
@@ -39,6 +39,11 @@
 					
 					$(".add-project-publication-btn").click(function(){
 						$("#project-publications-modal").modal('show');
+					});
+					
+					$(".open-member-add-modal").click(function(){
+						$("#Add-team-member-search").modal('hide');
+						$("#Add-team-member").modal('show');
 					});
 					
 					
