@@ -21677,9 +21677,31 @@ border-bottom: 15px solid #CFCCB9;
 
 }
 
+.invitation-name-row {
+
+	width: 29%;
+	text-align: center;
+	border-right: 2px solid #ecead4;
+
+}
+
+.invitation-name-row p {
+
+	    margin-bottom: 0px !important;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+    line-height: 40px;
+
+}
+
 .invitation-email {
 
-	width: 40%;
+	width: 30%;
 	text-align: center;
 	border-right: 2px solid #ecead4;
 
@@ -21702,7 +21724,7 @@ border-bottom: 15px solid #CFCCB9;
 
 .invitation-role {
 
-	width: 30%;
+	width: 20%;
 	text-align: center;
 	border-right: 2px solid #ecead4;
 
@@ -21722,7 +21744,7 @@ border-bottom: 15px solid #CFCCB9;
 
 .invitation-type {
 
-	width: 24%;
+	width: 15%;
 	text-align: center;
 	border-right: 2px solid #ecead4;
 
@@ -22906,5 +22928,28 @@ color: #999;
 .member-to-be-invited > p:nth-child(3) {
 
 margin-bottom: 20px !important;
+
+}
+
+.fa-user-wth-plus {
+
+position: relative;
+
+}
+
+.fa-user-wth-plus span {
+
+position: absolute;
+top: 10px;
+
+}
+
+.member-cancel-actions-text {
+
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 0px !important;
+	padding-bottom: 0px !important;
+	padding-top: 30px !important;
 
 }

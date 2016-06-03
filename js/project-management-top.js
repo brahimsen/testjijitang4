@@ -20,6 +20,18 @@
 		
 			
 			 $(document).ready(function() {
+				 
+				   $(".application-recieved-btn").click(function(){
+						$("#dismiss-application-modal").modal('show');
+					});
+					
+					$(".team-member-delete-btn").click(function(){
+						$("#remove-member-modal").modal('show');
+					});
+					
+					$(".cancel-invitation-btn").click(function(){
+						$("#cancel-invitation-modal").modal('show');
+					});
 					
 					$(".add-team-member-btn").click(function(){
 						$("#Add-team-member-search").modal('show');
