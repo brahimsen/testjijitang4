@@ -1,0 +1,27 @@
+Front end css issues:
+
+fixed the sizes of input boxes, 
+fixed styling of error messages on the top for sign in sign up validation,
+restyled the search top bar to fit the mobile view,
+added a filter expander for mobile view, 
+
+Font end html issues:
+
+Front end Js issues:
+
+backend issues:
+
+1- Form validation for sign up is not working. after inspecting the issue I found that on the live version You did not call js/myform.js which is the file responsible for validating the form. also you called js/jquery-validate.js at the bottom of the page. please include js/myform.js in the page, and this file should be called after js/jquery-validate.js. 
+
+
+Front end issues to be fixed by xu:
+
+1- The collections part in homepage is pushed  by 15px to the left, this is because that part is not updated to the latest pages I have developed. Can you please update that part folllowing the homepage.html I have committed. and do not forget to call masonry.js and masonrty-scripts.js at the bottom of the page.
+
+2- add filter on project, artticle, collection, profiles, for mobile view filtering, 
+
+3- add filter no results part, you can find it in parts/empty-page-search-results.html
+
+ 
+
+ 

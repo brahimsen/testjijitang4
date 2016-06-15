@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -29,6 +29,21 @@
 <script src="js/zebra_datepicker.js"></script>
 
 <style>
+
+@media(max-width: 980px) {
+
+.user-form-holder {
+
+padding-top: 10px !important;
+
+}
+
+.index-top-page-header {
+
+position: relative !important;
+
+}
+}
 
 .profile-grid-item  {
 	 width: calc( (100% - 20.1px) / 2 );
@@ -122,6 +137,15 @@ img[src='Error.src']{
 
 <script>
 
+$( document ).ready(function() {
+	
+	if($(window).width() < 767){
+    $('#profile-columns').removeAttr('id');
+}
+	
+
+});
+
 $(document).ready(function(){
 	
 	$(".form-control").on("focus blur",function(){
@@ -158,20 +182,26 @@ $(document).ready(function(){
 	
 	
 	 $(document).ready(function() {
+	 
+	 
+	$('.regis-form-next').click(function(){
+    window.scrollTo(0,0)
+    return false;
+ });
   
   function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             
             reader.onload = function (e) {
-                $('#fileToUploaddis').attr('src', e.target.result);
+                $('.fileToUploaddis').attr('src', e.target.result);
             }
             
             reader.readAsDataURL(input.files[0]);
         }
     }
     
-    $("#fileToUpload").change(function(){
+    $(".fileToUpload").change(function(){
         readURL(this);
     });
   
@@ -227,16 +257,18 @@ $(document).ready(function(){
  
 				</div>
 				
-				<p class="user-step-text">Tell us a Bit More About Yourself</p>
+				<p class="user-step-text hidden-phone">Tell us a Bit More About Yourself</p>
+				
+				
 			
 		<div class="user-info-upload-img">
 			
 			
                         
                         
-        			<img style="width: 100%; height: 100%" id="fileToUploaddis" src="img/select-img.png"  />
+        			<img style="width: 100%; height: 100%" class="fileToUploaddis" src="img/select-img.png"  />
 					
-                        <input type="file" name="fileToUpload" id="fileToUpload" class="upload-project-image" >
+                        <input type="file" name="fileToUpload" class="upload-project-image fileToUpload fileToUpload-style" >
 						
 						
                         
@@ -246,6 +278,13 @@ $(document).ready(function(){
 			
 			
 			</div> 
+			
+			<div class="fileUpload btn btn-primary my-mobile-pic-uploader">
+				<span>Add Photo</span>
+				<input type="file" name="fileToUpload" class="upload fileToUpload" />
+			</div>
+			
+			
 			
 		<div class="user-info-first-step-right">
 		
@@ -274,7 +313,7 @@ $(document).ready(function(){
  
 				</div>
 				
-				<p class="user-step-text">Tell us a Bit More About Your Reaearch</p>
+				<p class="user-step-text hidden-phone">Tell us a Bit More About Your Reaearch</p>
 			
 			<label class="group-label">Position, Intitution and Department</label>
 			
@@ -301,7 +340,8 @@ $(document).ready(function(){
 					
 					<label class="user-field-label">Research Field</label>
 					
-					<select name="field" class="form-control required user-form-select">
+					
+					<select name="field" class="form-control user-form-select">
 						<option value="">Reaearch Field</option>
 						<option value="Economics">Economics</option>
 						<option value="Natural Sciences">Natural Sciences</option>
@@ -315,7 +355,7 @@ $(document).ready(function(){
 		
 			<div class="input-group keywords-group " >
 				
-				<input type="text" class="create-project-keywords-input" id="project-keywords" onKeyPress="return disableEnterKey(event)" placeholder="Type Your Reearch Interests"/>
+				<input type="text" class="create-project-keywords-input" id="project-keywords"  placeholder="Type Your Reearch Interests"/>
 				<a  id="add-interests-btn" class="new-small-button new-black-btn">Add</a>
 				<div class="project-keyword-list"></div>
 				</div>
@@ -349,7 +389,7 @@ $(document).ready(function(){
  
 				</div>
 				
-				<p class="user-step-text">Connect with fellow researchers</p>
+				<p class="user-step-text hidden-phone">Connect with fellow researchers</p>
 		
 				
 				
@@ -759,7 +799,7 @@ $(document).ready(function(){
 
 <script>
 
-$( ".new-index-header" ).load( "register-header.html" );
+$( ".new-index-header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
 
 

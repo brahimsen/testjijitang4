@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -58,7 +58,21 @@ padding-bottom: 20px;
 
 </head>
 
+<script>
 
+
+$( document ).ready(function() {
+	
+	if($(window).width() < 767){
+    $('.square-grids').removeClass('article-columns');
+}
+	
+
+});
+
+
+
+</script>
 
 <body style="background: #ecead4">
 
@@ -89,10 +103,7 @@ padding-bottom: 20px;
 	
 		<input class="main-search-input" placeholder="Search Articles">
 		<button><i class="lnr lnr-magnifier"></i></button>
-		<div class="search-radio-select">
-		<input type="radio" name="type" value="publication"> <span> By Publication Title </span>
-		<input type="radio" name="type" value="journal"> <span>By Journal Name</span>
-		</div>
+		
 		
 	
 	
@@ -102,8 +113,15 @@ padding-bottom: 20px;
 	<div class="square-grids article-columns">
 	
 	<div class="square-grid-item square-grid-filter"> 
+	
+	<div class="left-filter-expander  hidden-desktop hidden-tablet">
+	
+		<span>Filter</span>
+		<span class="filter-expand-btn fa fa-plus"></span>
+	
+	</div>
 			<div> 
-				<div class="articles-laft-inner" >
+				<div class="articles-laft-inner hidden-phone" >
                         
                         		<div class="filter-top-header">
                                 

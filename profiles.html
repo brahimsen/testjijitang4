@@ -1,13 +1,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="mobile-fonts.css">
 
 <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -37,9 +38,14 @@
 <script>
 
 
+$( document ).ready(function() {
+	
+	if($(window).width() < 767){
+    $('#profile-columns').removeAttr('id');
+}
+	
 
-
-
+});
 
 
 
@@ -87,10 +93,7 @@
 	
 		<input class="main-search-input" placeholder="Search Profiles">
 		<button><i class="lnr lnr-magnifier"></i></button>
-		<div class="search-radio-select">
-		<input type="radio" name="type" value="publication"> <span> By Publication Title </span>
-		<input type="radio" name="type" value="journal"> <span>By Journal Name</span>
-		</div>
+		
 		
 	
 	
@@ -100,9 +103,18 @@
  
 	<div class="square-grids" id="profile-columns">
 	
-	<div class="profile-grid-item square-grid-filter" href="http://diveintohtml5.ep.io/"> 
+	<div class="profile-grid-item square-grid-filter" > 
+	
+	<div class="left-filter-expander  hidden-desktop hidden-tablet">
+	
+		<span>Filter</span>
+		<span class="filter-expand-btn fa fa-plus"></span>
+	
+	</div>
+	
+	
 			<div> 
-				<div class="articles-laft-inner" >
+				<div class="articles-laft-inner hidden-phone" >
                         
                         		<div class="filter-top-header">
                                 
@@ -191,8 +203,7 @@
 
 			</div> 
 	</div> 
-	
-	
+
 
  
  <div class="profile-grid-item" > 

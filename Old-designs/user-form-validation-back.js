@@ -50,6 +50,30 @@ $(document).ready(function(){
 			hideButtons(current);
 		})
 
+	    $('.form').validate({ // initialize plugin
+			ignore:":not(:visible)",			
+			rules: {
+				fullname:"required",
+				field:"required",
+				
+				
+			
+			},
+			
+			messages: {
+				fullname : "Please Enter Your full Name",
+				field:"Please Select Your field of research",
+			},
+			
+			errorPlacement: function(error, element) {
+				 error.appendTo($('.error-message-style'));
+			}
+			
+			
+			
+			
+			
+	    });
 
 	});
 
