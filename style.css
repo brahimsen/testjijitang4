@@ -1376,6 +1376,16 @@ position: relative;
 
 @media(max-width: 980px) {
 
+.settings-page-nav {
+
+margin-top: 20px;
+padding-left: 0px !important;
+padding-right: 0px !important;
+padding-bottom: 0px !important;
+
+
+}
+
 
 
 .index-top-page-header .nav-collapse.collapse {
@@ -1386,7 +1396,7 @@ position: relative;
 
 .myprofile-top-bar {
 
-margin-top: 0px !important;
+
 
 }
 
@@ -1492,7 +1502,7 @@ margin-right: 15px !important;
  }
  
  header {
-	 position: relative !important;
+	 
 	
  
  }
@@ -5260,7 +5270,7 @@ color:#999
 
 
 
-#signup-link {
+.signup-link {
 	cursor: pointer;
 
 }
@@ -5983,7 +5993,7 @@ height: 270px;
 }
 
 .nav-tabs > li {
-	width: 100% !important;
+	width: 100%;
 
 }
 
@@ -9932,7 +9942,7 @@ width: 20%; float: left;
 	width: 35px;
 	height: 35px;
 	border-radius: 30px;
-	margin-top: 7px;
+	margin-top: 8px;
 
 
 }
@@ -9957,7 +9967,7 @@ width: 20%; float: left;
   
   .nav-collapse-2 .nav {
     float: none;
-    margin: 0 0 10px;
+    margin: 0 0 0px;
   }
   
 
@@ -9965,7 +9975,13 @@ width: 20%; float: left;
     float: none;
   }
   .nav-collapse-2 .nav > li > a {
-    margin-bottom: 2px;
+    margin-bottom: 0px;
+	border-bottom: 1px solid #333;
+	color: #fff !important;
+	font-size: 13px !important;
+	font-family: "OpenSans-Regular";
+	text-transform: uppercase;
+	tex-shadow: none !important;
   }
   .nav-collapse-2 .nav > .divider-vertical {
     display: none;
@@ -10070,6 +10086,14 @@ width: 20%; float: left;
   .nav-collapse-2.collapse {
     height: 0;
     overflow: hidden;
+	margin-left: -2%;
+	margin-right: -2%;
+	
+  }
+  
+  .nav-collapse-2.collapse .nav {
+  
+  border-top: 1px solid #333;
   }
 	
 }
@@ -10976,7 +11000,7 @@ margin-top: 7.5px !important;
 
 .nav-collapse-2 .nav > .active > a{
 	background: #000 !important;
-	color: #FFF !important;
+	color: #a4ce4c !important;
 	
 
 }
@@ -10989,11 +11013,21 @@ background-color: #222 !important;
 
 }
 
+.nav-collapse .nav {
+
+margin-bottom: 0px;
+
+}
 
 .nav-collapse .nav > li > a:hover {
 	
 	color: #FFF !important;
 
+}
+
+.nav-collapse .nav > li > a {
+
+margin-bottom: 0px;
 }
 
 .icon-banner-relativity {
@@ -17207,7 +17241,7 @@ overflow: hidden;
 	cursor: pointer;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	background: #a4ce4c !important;
+	background: #000 !important;
 	font-family: "OpenSans-Regular";
 	padding-left: 40px;
 	padding-right: 40px;
@@ -17237,7 +17271,7 @@ overflow: hidden;
 
 height: 50px !important;
 
-width: calc( 100% - 90px) !important;
+width: calc( 100% - 74px) !important;
 
 
 
@@ -17247,9 +17281,16 @@ width: calc( 100% - 90px) !important;
 #add-interests-btn {
 
 	float: right !important;
-	padding-top: 12px !important;
-	padding-bottom: 12px !important;
+	
 	cursor: pointer;
+	width: 70px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    height: 46px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    line-height: 46px;
 
 }
 
@@ -17436,6 +17477,7 @@ text-align: center;
 height: auto;
 overflow: hidden;
 position: relative;
+
 }
 
 .profile-content-holders-header {
@@ -17549,7 +17591,7 @@ border-bottom: 0px !important;
 
 .myprofile-top-bar {
 
-height: 50%;
+height: 275px;
 
 margin-top: 25px;
 position: relative;
@@ -17563,7 +17605,7 @@ position: relative;
 
 .myprofile-image-holder > img {
 
-width: 150px;
+width: 120px;
 border-radius: 200px;
 
 
@@ -17575,7 +17617,7 @@ border-radius: 200px;
 .myprofile-image-holder  {
 
 position: absolute;
-bottom: -75px;
+bottom: -60px;
 text-align: center;
 width: 100%;
 
@@ -17597,8 +17639,9 @@ width: 100%;
 
 
 	text-align: center;
-	width: 50%;
-	margin-left: 25%;
+	
+	margin-left: 30px;
+	margin-right: 30px;
 	position: relative;
 
 }
@@ -18696,26 +18739,26 @@ box-shadow: none !important;
 	font-size: 16px;
 	text-transform: uppercase;
 	font-family: "OpenSans-Regular";
-	border: 3px solid #222 !important;
+	border: 3px solid transparent !important;
 	
 	
 	}
 	
 	.profile-page-nav-holder > ul > li > a:hover {
 	
-		background: #222 !important;
+		background: transparent !important;
 	
 	}
 	
 	.profile-page-nav-holder > ul > .active {
 	
-	background: #222 !important;
+	background: transparent !important;
 	
 	}
 	
 	.profile-page-nav-holder > ul > .active > a {
 	
-	background: #222 !important;
+	background: transparent !important;
 	border: 3px solid #a4ce4c !important;
 	border-radius: 0px !important;
 	
@@ -18918,8 +18961,8 @@ box-shadow: none !important;
 	.profile-info-wrapper {
 	
 	position:  relative;
-	padding-top: 100px;
-	padding-bottom: 70;
+	padding-top: 65px;
+	padding-bottom: 30;
 	
 	}
 	
@@ -18939,10 +18982,10 @@ box-shadow: none !important;
 	.section-edit {
 	
 	color: #ccc;
-	font-size: 16px;
+	font-size: 18px;
 	text-decoration: none;
-	border: 1px solid #ccc;
-	padding: 2px;
+	
+	
 	display: inline-block;
 	float: left;
 	
@@ -18950,16 +18993,45 @@ box-shadow: none !important;
 	
 	.section-edit:hover {
 	
-	color: #fff;
-	font-size: 16px;
-	background: #a4ce4c !important;
-	text-decoration: none;
-	border: 1px solid #a4ce4c;
-	padding: 2px;
+	color: #999;
+	
+	
 	
 	}
 	
 	@media(max-width: 980px) {
+	
+	.profile-page-nav-holder > ul {
+	
+		width: 100% !important;
+	
+	}
+	
+	.profile-page-nav-holder > ul > li {
+	
+		width: 25% !important;
+	
+	}
+	
+	.profile-page-nav-holder > ul > li  > a {
+	
+		border: 0px !important;
+		font-size: 13px;
+		margin-right: 0px !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		text-transform: lowercase;
+	
+	}
+	
+	.profile-page-nav-holder > ul > .active > a {
+	
+		border: 0px !important;
+		color: #a4ce4c !important;
+		
+	
+	}
+	
 	
 	.user-field-label {
 	
@@ -20929,14 +21001,14 @@ a:hover {
 
 .empty-publications {
 
-	background: #CFCCB9;
-	color: #fff;
+	background: #fff;
+	color: #000;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 28px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	font-size: 21px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	margin-top: 30px;
 	font-family: "OpenSans-Light";
 	margin-bottom: 20px
@@ -22967,7 +23039,55 @@ padding-top: 10px;
 
 }
 
+#valid-phone-alert-reset-pass {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+#valid-phone-alert-sign-in {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
 #phone-validation-error {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+#phone-validation-error-reset-pass {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+#phone-validation-error-sign-in {
 padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
@@ -23315,7 +23435,7 @@ background: url(img/select-arrow.png) no-repeat right #fff;
 
 #reserachexp {
 
-	border: 0px !important;
+	
 
 }
 
@@ -23324,5 +23444,156 @@ background: url(img/select-arrow.png) no-repeat right #fff;
 .myfirstform {
 
 margin-bottom: 0px !important;
+
+}
+
+.my-new-mobile-filter .filter-top-header a {
+
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 12px;
+
+}
+
+.my-mobile-filter-main {
+
+border-bottom: 15px solid #ecead4;
+
+}
+
+.profile-select-language {
+
+height: 50px;
+
+}
+
+#Login-link-from-phone {
+
+cursor: pointer;
+
+}
+
+.max-width-limit {
+
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.profile-page-tab-content-holder {
+
+background: #ecead4;
+
+
+}
+
+.profile-page-profile-tab-section {
+
+background: #fff;
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+
+}
+
+.profile-info-holder p {
+
+margin-bottom: 15px;
+
+}
+
+.forgot-password-link {
+    margin-top: -10px;
+    display: inline-block;
+    color: #999;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+	cursor: pointer;
+
+}
+
+#reset-pass-valid-phone {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+#reset-pass-valid-email {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+#reset-pass-valid-verification {
+padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border-bottom: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	display: none;
+
+}
+
+.password-reset-form-inner {
+
+background: #ecead4 !important;
+
+}
+
+.password-reset-form-inner .modal-header {
+
+background: #a4ce4c !important
+
+}
+
+.password-reset-form-inner .modal-header .my-bullets > span {
+
+background: #fff !important;
+
+}
+
+.password-reset-form-holder {
+
+width: 500px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 100px;
+
+
+}
+
+.password-reset-form-holder form {
+
+margin-bottom: 0px;
+
+}
+
+@media(max-width: 767px) {
+
+.password-reset-form-holder {
+
+width: 100% !important;
+margin-left: auto;
+margin-right: auto;
+padding-top: 10px;
+
+
+}
 
 }

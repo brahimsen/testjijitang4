@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -47,7 +48,113 @@
 
 </head>
 
+<script>
+
+
+$(document).ready(function() {
+var stickyNavTop = $('#profile-top-bar-sticker').offset().top;
+ 
+var stickyNav = function(){
+var scrollTop = $(window).scrollTop();
+      
+if (scrollTop > stickyNavTop - 25) { 
+    $('#profile-top-bar-sticker').addClass('my-navbar-fixed');
+} else {
+    $('#profile-top-bar-sticker').removeClass('my-navbar-fixed'); 
+}
+};
+ 
+stickyNav();
+ 
+$(window).scroll(function() {
+    stickyNav();
+});
+});
+
+</script>
+
+<script>
+
+
+$( document ).ready(function() {
+	
+	if($(window).width() < 767){
+    $('#project-columns-created').removeAttr('id');
+	}
+	
+	if($(window).width() < 767){
+    $('#project-columns-saved').removeAttr('id');
+	}
+	
+	if($(window).width() < 767){
+    $('#article-columns-created').removeAttr('id');
+	}
+	
+	if($(window).width() < 767){
+    $('#article-columns-liked').removeAttr('id');
+	}
+	
+	if($(window).width() < 767){
+    $('#collection-columns-created').removeAttr('id');
+	}
+	
+	if($(window).width() < 767){
+    $('#collection-columns-saved').removeAttr('id');
+	}
+	
+	
+	
+
+});
+
+
+
+
+
+</script>
+
 <style>
+
+.my-navbar-fixed {
+   position: fixed;
+    width: 100%;
+    left: 0;
+    top: 50;
+    z-index: 100;
+    border-top: 0px !important;
+	border-bottom: 0px !important;
+	background: #CFCCB9;
+	padding-top: 0px;
+	padding-bottom: 0px;
+
+}
+
+.my-navbar-fixed > ul > .active > a {
+
+border-bottom: 3px solid #999 !important;
+border-top: 3px solid transparent !important;
+border-left: 0px !important;
+border-right: 0px !important;
+
+}
+
+@media(max-width: 980px) {
+
+.my-navbar-fixed > ul > .active > a {
+
+border-bottom: 3px solid #fff !important;
+border-top: 0px !important;
+border-left: 0px !important;
+border-right: 0px !important;
+color: #fff !important;
+
+
+}
+
+
+
+}
+
 
 .padding-wrapper {
 
@@ -101,7 +208,7 @@ padding-top: 0px;
 
 	<div class="padding-wrapper">
 	
-	<div class="padding-wrapper-inner">
+	<div class="padding-wrapper-inner max-width-limit">
 
 	<div class="myprofile-top-bar" style="background: url(img/index-back2.jpg) no-repeat center center fixed;"> 
 	
@@ -123,12 +230,8 @@ padding-top: 0px;
 			
 			<div class="profile-section-header">
 			
-			<a class="section-edit lnr lnr-pencil"></a>
+			<a class="section-edit fa fa-pencil"></a>
 			
-			 <div class="follow-user-btn-holder twenty-left-margin-min-with hidden-tablet hidden-phone ">
-                     	<button class="follow-btn follow-btn-short">Follow</button>
-                     	<button class="unfollow-btn follow-btn-short">Unfollow</button>
-                </div> 
 			</div>
 			
 			<div class="profile-info-holder">
@@ -139,11 +242,11 @@ padding-top: 0px;
 				<div class="my-bullets center-bullets profile-name-bullets"><span></span><span></span><span></span></div>
 				 <p class="profile-page-inst"><span>Graphic Designer</span><span>Beijing University</span><span>Department of social sciences</span></p>
                 <p class="">Graduated From Al Akhawayn University and Illinois Wesleyan University with a Bachelor of Science in Computer Science with a minor in Business Administration.</p>
-                <p class="profile-page-meta-info"><span>7 Followers</span><span>0 Fans</span><span>13 Projects</span><span>5 Articles</span></p>
+                <p class="profile-page-meta-info"><span>7 Following</span><span>0 Fans</span><span>13 Projects</span><span>5 Articles</span></p>
 				
-				<div class="follow-user-btn-holder-mobile twenty-left-margin-min-with hidden-desktop ">
-                     	<button class="follow-btn follow-btn-short">Follow</button>
-                     	<button class="unfollow-btn follow-btn-short">Unfollow</button>
+				<div class=" follow-user-btn-holder follow-user-btn-holder-mobile twenty-left-margin-min-with ">
+                     	<button class="follow-btn">Follow</button>
+                     	<button class="unfollow-btn">Unfollow</button>
                 </div> 
                
       
@@ -157,7 +260,7 @@ padding-top: 0px;
 	
 	
 		
-         <div class="profile-page-nav-holder" >
+         <div id="profile-top-bar-sticker" class="profile-page-nav-holder" >
          
          
          
@@ -165,7 +268,7 @@ padding-top: 0px;
     <li role="presentation" class="active mypage-tabs "><a href="#profile" aria-controls="home" role="tab" data-toggle="tab">Bakground</a></li>
     <li role="presentation" class="mypage-tabs"><a href="#projects" aria-controls="profile" role="tab" data-toggle="tab">Projects</a></li>
     <li role="presentation" class="mypage-tabs"><a href="#articles" aria-controls="articles" role="tab" data-toggle="tab">Articles</a></li>
-	<li role="presentation" class="mypage-tabs"><a href="#collections" aria-controls="collections" role="tab" data-toggle="tab">Colections</a></li>
+	<li role="presentation" class="mypage-tabs"><a href="#collections" aria-controls="collections" role="tab" data-toggle="tab">Collections</a></li>
 
 		</ul>
   
@@ -182,10 +285,10 @@ padding-top: 0px;
                     
                     
                     
-                    <div class="tab-content note-tab-content">
+                    <div class="tab-content note-tab-content profile-page-tab-content-holder">
 					
 					
-  						<div class="tab-pane active" id="profile">
+  						<div class="tab-pane active profile-page-profile-tab-section" id="profile">
 						
 						
 						
@@ -194,7 +297,7 @@ padding-top: 0px;
 								
 								<div class="profile-section-header">
 			
-										<a class="section-edit lnr lnr-pencil"></a>
+										<a class="section-edit fa fa-pencil"></a>
 		
 								</div>
 								
@@ -728,7 +831,7 @@ padding-top: 0px;
   
   						 <ul class="nav nav-tabs profile-page-sub-tabs"  role="tablist">
 							<li role="presentation" class="active"><a href="#collection-created" aria-controls="home" role="tab" data-toggle="tab">CREATED</a></li>
-							<li role="presentation"><a href="#collection-following" aria-controls="profile" role="tab" data-toggle="tab">SAVED</a></li>
+							<li role="presentation"><a href="#collection-following" aria-controls="profile" role="tab" data-toggle="tab">FOLLOWED</a></li>
 						</ul>
 					
 			

@@ -1,14 +1,3 @@
-Front end css issues:
-
-fixed the sizes of input boxes, 
-fixed styling of error messages on the top for sign in sign up validation,
-restyled the search top bar to fit the mobile view,
-added a filter expander for mobile view, 
-
-Font end html issues:
-
-Front end Js issues:
-
 backend issues:
 
 1- Form validation for sign up is not working. after inspecting the issue I found that on the live version You did not call js/myform.js which is the file responsible for validating the form. also you called js/jquery-validate.js at the bottom of the page. please include js/myform.js in the page, and this file should be called after js/jquery-validate.js. 
@@ -20,7 +9,11 @@ Front end issues to be fixed by xu:
 
 2- add filter on project, artticle, collection, profiles, for mobile view filtering, 
 
-3- add filter no results part, you can find it in parts/empty-page-search-results.html
+3- add no results part in case there are no results following the search queries, you can find it in parts/empty-page-search-results.html
+
+4- on articles, profiles, projects, and collections I sent you a good plugin that you can use for the autocomplete, also the search seems to be working well.
+
+5- I have updated the structure of navigation, Welcome-header.html, not too many modifications out there, just some classes that needs to be added, 
 
  
 

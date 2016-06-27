@@ -111,7 +111,7 @@ $(document).ready(function(){
 	$("#mybtn").click(function(){
 		
 			if( $("#email").val() == "jijitang" && $("#pass").val() == "jijitang" ){
-				window.location.replace("http://myjijitang/jijitang-index.html")
+				window.location.replace("/homepage.html")
 			}
 			else {
 			$(".sign-in-alert").fadeIn(500)
@@ -151,20 +151,103 @@ $(document).ready(function(){
 			
 			}
 		});
-		
-	$("#email-switch-sign-up").click(function(){
-		
-		$('#Sign-up-Modal-phone').modal('hide');
-		$('#Sign-up-Modal').modal('show');
-		
-		});
-		
-		$("#phone-switch-sign-up").click(function(){
-		
-		$('#Sign-up-Modal-phone').modal('show');
-		$('#Sign-up-Modal').modal('hide');
-		
+
+});
+
+
+
+$(document).ready(function(){
+	
+	$("#verificationcodesendsignin").click(function(){
+			
+			if(isNaN($("#phonenumberregsignin").val()) || $("#phonenumberregsignin").val() == "" ){
+				$("#valid-phone-alert-sign-in").addClass("show-number-error");
+			}
+			else {
+			$("#valid-phone-alert-sign-in").removeClass("show-number-error");
+			$('#verificationcodesignin').prop("disabled", false);
+			
+			}
 		});
 
 });
+
+$(document).ready(function(){
+	
+	$("#submitphoneregsignin").click(function(){
+			
+			if( $("#verificationcodesignin").val() == "" || $("#phonenumberregsignin").val() == "" ){
+				$("#phone-validation-error-sign-in").addClass("show-number-error");
+			}
+			else {
+			window.location.replace("/homepage.html")
+			
+			
+			}
+		});
+
+});
+
+
+$(document).ready(function(){
+	
+	$("#verificationcodesend-reset-pass").click(function(){
+		
+			
+			
+			if(isNaN($("#phonenumberreg-reset-pass").val()) || $("#phonenumberreg-reset-pass").val() == "" ){
+				
+				$("#valid-phone-alert-reset-pass").addClass("show-number-error");
+			}
+			else {
+			$("#valid-phone-alert-reset-pass").removeClass("show-number-error");
+			$('#verficationcode-reset-pass').prop("disabled", false);
+			
+			}
+		});
+
+});
+
+$(document).ready(function(){
+	
+	$("#submitphonereg-reset-pass").click(function(){
+			
+			if( $("#verficationcode-reset-pass").val() == "" || $("#phonenumberreg-reset-pass").val() == "" ){
+				$("#phone-validation-error-reset-pass").addClass("show-number-error");
+			}
+			else {
+			
+				window.location.replace("/password-change.html")
+			
+			}
+		});
+
+});
+
+$(document).ready(function(){
+	
+	function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+    return pattern.test(emailAddress);
+};
+	
+	$("#pass-email-retrieve").click(function(){
+		
+			var email = $("#email-retrieve").val();
+			if(!isValidEmailAddress(email)) {
+				$("#reset-pass-valid-email").addClass("show-number-error");
+				
+			}
+			
+			else {
+			
+			$("#reset-pass-valid-email").removeClass("show-number-error");
+			$('#forgot-password-Modal-email').modal('hide');
+			$('#forgot-password-Modal-email-submitted').modal('show');
+			
+			}
+		});
+
+});
+
 

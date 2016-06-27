@@ -143,10 +143,39 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 
 		});
 		
-			$("#signup-link").click(function(){
+			$(".signup-link").click(function(){
 
 				$("#Sign-up-Modal-phone").modal('show');
 				$("#index-Sign-in-Modal").modal('hide');
+				$("#forgot-password-Modal-phone").modal('hide');
+				$("#forgot-password-Modal-email").modal('hide');
+				
+
+
+		});
+		
+			$("#quick-sign-in").click(function(){
+
+				$("#Sign-in-Modal-phone").modal('show');
+				$("#index-Sign-in-Modal").modal('hide');
+
+
+		});
+		
+			$("#email-switch-sign-in").click(function(){
+
+				$("#Sign-in-Modal-phone").modal('hide');
+				$("#index-Sign-in-Modal").modal('show');
+
+
+		});
+		
+		
+		
+			$("#Login-link-from-phone").click(function(){
+
+				$("#Sign-in-Modal-phone").modal('hide');
+				$("#Sign-up-Modal-phone").modal('show');
 
 
 		});
@@ -166,3 +195,48 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 
 
 		});
+		
+		$("#email-switch-sign-up").click(function(){
+		
+		$('#Sign-up-Modal-phone').modal('hide');
+		$('#Sign-up-Modal').modal('show');
+		
+		});
+		
+		$("#phone-switch-sign-up").click(function(){
+		
+		$('#Sign-up-Modal-phone').modal('show');
+		$('#Sign-up-Modal').modal('hide');
+		
+		});
+		
+		$(".forgot-password-link").click(function(){
+		
+		$('#forgot-password-Modal-phone').modal('show');
+		$('#index-Sign-in-Modal').modal('hide');
+		
+		});
+		
+		$("#resubmit-phone-number-pass-reset").click(function(){
+		
+		$('#forgot-password-Modal-phone').modal('show');
+		$('#forgot-password-Modal-phone-verification').modal('hide');
+		
+		});
+		
+		$("#reset-pass-with-email-switch").click(function(){
+		
+		$('#forgot-password-Modal-phone').modal('hide');
+		$('#forgot-password-Modal-email').modal('show');
+		
+		});
+		
+		$("#reset-pass-with-phone-switch").click(function(){
+		
+		$('#forgot-password-Modal-phone').modal('show');
+		$('#forgot-password-Modal-email').modal('hide');
+		
+		});
+		
+		
+		
