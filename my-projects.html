@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -44,6 +44,17 @@
 </head>
 
 <style>
+
+@media (max-width: 767px) {
+
+.step {
+
+padding-top: 0px !important;
+
+
+}
+
+}
 
 .keywords-group {
 
@@ -94,7 +105,7 @@ padding-right: 5%;
 <body>
 
 
-<div id="create-project-modal" class="modal fade sign-modals" tabindex="-1" style="top: 54%" >
+<div id="create-project-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
 
 	<form class=" form" >
 	
@@ -278,14 +289,14 @@ padding-right: 5%;
         <div class="main-page-content" >
         
 		<div class="main-sub-navigation-wrapper">
-		<div class="main-sub-navigatiion">
+		<div class=" dash-main-sub-navigation main-sub-navigatiion">
             
-          <a> <span class="fa fa-rss"></span> <span class="hidden-phone hidden-tablet">Feed</span></a>
-		  <a> <span class="fa fa-file-text"></span> <span class="hidden-phone hidden-tablet">My Documents</span></a>
-		  <a> <span class="fa fa-book"></span> <span class="hidden-phone hidden-tablet">My Collections</span></a>
-		  <a  class="current"> <span class="fa fa-briefcase"></span> <span class="hidden-phone hidden-tablet">My Projects</span></a>
-		  <a> <span class="fa fa-bell"></span> <span class="hidden-phone hidden-tablet">My Notifications</span></a>
-		  <a> <span class="fa fa-envelope"></span> <span class="hidden-phone hidden-tablet">My Messages</span></a>
+          <div><a> <span class="fa fa-rss"></span> <span>Feed</span></a></div>
+		  <div><a> <span class="fa fa-file-text"></span> <span>Documents</span></a></div>
+		  <div> <a><span class="fa fa-book"></span> <span>Collections</span></a></div>
+		  <div  class="current"><a> <span class="fa fa-briefcase"></span> <span>Projects</span></a></div>
+		  <div class="hidden-phone hidden-tablet"><a> <span class="fa fa-bell"></span> <span>Notifications</span></a></div>
+		  <div class="hidden-phone hidden-tablet"><a> <span class="fa fa-envelope"></span> <span>Messages</span></a></div>
 		  
             
          </div>
@@ -339,11 +350,11 @@ padding-right: 5%;
                             
                             <!-- In case the user enters for the first time -->
                             
-                           <!-- <div class="first-time-enter empty-activities">
+                      <!--      <div class="first-time-enter empty-document-activities-holder">
                             
-                            <p>No Activities</p>
+                            <div class="empty-document-activities"><p>No Activities</p></div>
                             
-                            </div> -->
+                            </div>  -->
                             
               	<div class="notification-item">
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
@@ -393,13 +404,15 @@ padding-right: 5%;
                 
                 <div class="dashbord-content-right" >
 				
-			<!--		<div id="my-empty-projects"></div> -->
+					
 				
 			 	<div class="dashbord-content-right-inner" >
 				
+			<!--	<div id="my-empty-projects"></div> -->
+				
 					
                 
-    <div id="my-projects">
+   <div id="my-projects">
  
  <div class="full-width-search-holder">
  <input class="search" placeholder="Search Projects" />

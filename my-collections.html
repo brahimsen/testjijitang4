@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,12 @@
 </head>
 
 <style>
+
+.load-more-button {
+
+margin-top: 0px;
+
+}
 
 .square-grids {
 
@@ -229,14 +235,14 @@ width: 100%;
         <div class="main-page-content" >
         
 		<div class="main-sub-navigation-wrapper">
-		<div class="main-sub-navigatiion">
+		<div class=" dash-main-sub-navigation main-sub-navigatiion">
             
-          <a> <span class="fa fa-rss"></span> <span class="hidden-phone hidden-tablet">Feed</span></a>
-		  <a> <span class="fa fa-file-text"></span> <span class="hidden-phone hidden-tablet">My Documents</span></a>
-		  <a class="current" > <span class="fa fa-book"></span> <span class="hidden-phone hidden-tablet">My Collections</span></a>
-		  <a> <span class="fa fa-briefcase"></span> <span class="hidden-phone hidden-tablet">My Projects</span></a>
-		  <a> <span class="fa fa-bell"></span> <span class="hidden-phone hidden-tablet">My Notifications</span></a>
-		  <a> <span class="fa fa-envelope"></span> <span class="hidden-phone hidden-tablet">My Messages</span></a>
+          <div><a> <span class="fa fa-rss"></span> <span>Feed</span></a></div>
+		  <div><a> <span class="fa fa-file-text"></span> <span>Documents</span></a></div>
+		  <div class="current" > <a><span class="fa fa-book"></span> <span>Collections</span></a></div>
+		  <div><a> <span class="fa fa-briefcase"></span> <span>Projects</span></a></div>
+		  <div class="hidden-phone hidden-tablet"><a> <span class="fa fa-bell"></span> <span>Notifications</span></a></div>
+		  <div class="hidden-phone hidden-tablet"><a> <span class="fa fa-envelope"></span> <span>Messages</span></a></div>
 		  
             
          </div>

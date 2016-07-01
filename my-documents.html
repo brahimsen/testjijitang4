@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -57,6 +57,23 @@
 
 }
 
+@media screen and (max-width:980px) {
+
+.square-grid-item  {
+ width: calc( (100% - 20.1px) / 2 );
+
+}
+}
+
+@media(max-width: 767px) {
+
+.square-grid-item  {
+ width: 100%;
+
+}
+
+}
+
 
 
 .dashbord-content-right-inner {
@@ -71,14 +88,10 @@ padding-left: 0% !important;
 padding-right: 0% !important;
 width: 100%;
 background: #CFCCB9;
+padding-top: 0px;
 
 }
 
-.my-document-grid-item {
-
-
-
-}
 
 </style>
 
@@ -128,14 +141,14 @@ var userList = new List('users', options);
         <div class="main-page-content" >
         
 		<div class="main-sub-navigation-wrapper">
-		<div class="main-sub-navigatiion">
+		<div class=" dash-main-sub-navigation main-sub-navigatiion">
             
-          <a> <span class="fa fa-rss"></span> <span class="hidden-phone hidden-tablet">Feed</span></a>
-		  <a class="current"> <span class="fa fa-file-text"></span> <span class="hidden-phone hidden-tablet">My Documents</span></a>
-		  <a> <span class="fa fa-book"></span> <span class="hidden-phone hidden-tablet">My Collections</span></a>
-		  <a> <span class="fa fa-briefcase"></span> <span class="hidden-phone hidden-tablet">My Projects</span></a>
-		  <a> <span class="fa fa-bell"></span> <span class="hidden-phone hidden-tablet">My Notifications</span></a>
-		  <a> <span class="fa fa-envelope"></span> <span class="hidden-phone hidden-tablet">My Messages</span></a>
+          <div><a> <span class="fa fa-rss"></span> <span>Feed</span></a></div>
+		  <div  class="current" ><a> <span class="fa fa-file-text"></span> <span>Documents</span></a></div>
+		  <div > <a><span class="fa fa-book"></span> <span>Collections</span></a></div>
+		  <div><a> <span class="fa fa-briefcase"></span> <span>Projects</span></a></div>
+		  <div class="hidden-phone hidden-tablet"><a> <span class="fa fa-bell"></span> <span>Notifications</span></a></div>
+		  <div class="hidden-phone hidden-tablet"><a> <span class="fa fa-envelope"></span> <span>Messages</span></a></div>
 		  
             
          </div>
@@ -160,6 +173,8 @@ var userList = new List('users', options);
 								Brahim Senhaji
 							</p>
                             
+							<!--	<p class="just-empty-content">No Description</p> -->
+							
 							<p>
 							
 							lations and chemical genetics at the photoautotrophic transition checkpoint, we reveal that shoot photosynthesis-d
@@ -173,7 +188,7 @@ var userList = new List('users', options);
 						 
 						 
                        
-                            <a>ADD NEW ARTICLE</a>
+                            <a>+ CREATE DOCUMENT</a>
                     
                      
                         </div>
@@ -185,11 +200,11 @@ var userList = new List('users', options);
                             
                             <!-- In case the user enters for the first time -->
                             
-                            <!--<div class="first-time-enter">
+                          <!--  <div class="first-time-enter empty-document-activities-holder">
                             
-                            <div><span>+</span></div><p>No Activities</p>
+                            <div class="empty-document-activities"><p>No Activities</p></div>
                             
-                            </div>-->
+                            </div> -->
                             
                  	<div class="notification-item">
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
@@ -225,7 +240,7 @@ var userList = new List('users', options);
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
 		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group <a>Web developers</a></p>
 		<p class="notifications-item-meta"><span>projects</span><span>yesterday</span></p>
-		</div>
+		</div> 
                      
                         </div>
 						
@@ -240,6 +255,16 @@ var userList = new List('users', options);
                 <div class="dashbord-content-right" >
 				
 				<div class="dashbord-content-right-inner" >
+				
+				
+				<div class="empty-documents-holder">
+				
+				<!-- CALL parts/empty-my-documents.html in case there are no feeds -->
+				
+				
+			
+				
+				</div>
                 
      <div id="users">
  
@@ -317,7 +342,7 @@ var userList = new List('users', options);
 	
 	
   </div>
- <div class="load-more-button" style="margin-bottom: 30px; margin-top: 0px">LOAD MORE</div>
+ <div class="load-more-button" style="margin-bottom: 15px; margin-top: 0px">LOAD MORE</div>
  
   
 </div>
