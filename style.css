@@ -1532,6 +1532,19 @@ margin-right: 15px !important;
 
 @media(max-width: 767px) {
 
+.article-content {
+
+padding-top: 20px !important;
+padding-bottom: 20px !important;
+
+}
+
+.secondary-sub-navigation .top-nav-right-icons button {
+
+margin-left: 10px !important;
+
+}
+
  .step {
 
 padding-top: 75px;
@@ -14423,7 +14436,7 @@ font-size: 18px !important;
 
 .tag-article {
 	padding-top: 5px; padding-bottom: 5px !important;
-	padding-left: 10px; padding-right: 10px; color: #000 !important; background: #ecead4 !important; font-size: 12px !important;  display: inline-block; margin-bottom: 5px; font-family: "OpenSans-Semibold";
+	padding-left: 10px; padding-right: 10px; color: #fff !important; background: #a4ce4c !important; font-size: 12px !important;  display: inline-block; margin-bottom: 5px; font-family: "OpenSans-Semibold";
 
 }
 
@@ -19290,6 +19303,9 @@ background: #ecead4;
 	
 		background: #222;
 		padding: 20px;
+		
+		margin-left: auto;
+		margin-right: auto;
 	
 	}
 	
@@ -19304,9 +19320,10 @@ background: #ecead4;
 	color: #fff;
 	font-family: "OpenSans-Semibold";
 	text-transform: uppercase;
-	line-height: 46px;
+	line-height: 34px;
 	margin-bottom: 0px;
 	margin-top: 0px;
+	font-size: 24px;
 	
 		
 	
@@ -20700,13 +20717,25 @@ button {
 
 .share-like-article .like-holder {
 
-	display: inline-block
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+.share-like-article p a {
+
+color: #000;
+font-family: "OpenSans-SemiBold";
+padding-left: 
 
 }
 
 .share-like-article .dropdown {
 
-	display: inline-block
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
 
 }
 
@@ -23784,3 +23813,146 @@ border-bottom: 0px !important;
 
 
 }
+
+.top-bar-succes-message {
+
+
+width: 96%;
+background: rgba(223, 240, 216, 1);
+
+
+padding-left: 2%;
+padding-right: 2%;
+border-bottom: 1px solid #d6e9c6;
+height: auto;
+overflow: hidden;
+position: relative;
+
+}
+
+.top-bar-succes-message p {
+
+color: #3c763d;
+line-height: 50px;
+margin-bottom: 0px !important;
+float: left;
+max-width: 94%;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+
+}
+
+.top-bar-succes-message span {
+
+    position: absolute;
+	right: 2%;
+    font-size: 24px;
+    line-height: 50px;
+	color: #3c763d;
+	cursor: pointer;
+
+}
+
+.top-bar-error-message {
+
+width: 96%;
+background: #F2DEDE;
+
+
+padding-left: 2%;
+padding-right: 2%;
+border-bottom: 1px solid #EBCCD1;
+height: auto;
+overflow: hidden;
+position: relative;
+}
+
+.top-bar-error-message p {
+
+color: #A94442;
+line-height: 50px;
+margin-bottom: 0px !important;
+float: left;
+max-width: 94%;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+
+}
+
+.top-bar-error-message span {
+
+    position: absolute;
+	right: 2%;
+    font-size: 24px;
+    line-height: 50px;
+	color: #A94442;
+	cursor: pointer;
+
+}
+
+.no-similar-articles {
+
+text-align: center;
+line-height: 150px;
+font-family: "OpenSans-SemiBold";
+font-size: 16px;
+
+
+}
+
+.my-mobile-article-author {
+
+background: #fff;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+height: auto;
+overflow: hidden;
+
+
+}
+
+.my-mobile-article-author span {
+
+color: #999;
+
+
+}
+
+.my-mobile-article-author span a {
+
+color: #000;
+font-family: "OpenSans-SemiBold";
+
+}
+
+.my-mobile-article-author span:nth-child(1) {
+
+float: left;
+
+}
+
+.my-mobile-article-author span:nth-child(2) {
+
+float: right;
+
+}
+
+.my-mobile-article-author p {
+
+margin-bottom: 0px !important;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+
+}
+
+.jquery-comments .textarea-wrapper .textarea {
+
+	height: 120px !important;
+
+}
+

@@ -239,4 +239,30 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 		});
 		
 		
+		$(".article-share-open").click(function(){
+		
+		$('#article-share-modal').modal('show');
+	
+		
+		});
+		
+		$( document ).ready(function() {
+			
+			  setTimeout(function() {
+        $(".my-top-bar-message").hide('blind', {}, 500)
+    }, 5000);
+			
+			$(".close-top-bar-message").click(function(){
+		
+					$(this).parent().hide();
+	
+		
+		});
+
+		
+
+});
+
+		
+		
 		
