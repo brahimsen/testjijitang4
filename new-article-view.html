@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -76,6 +76,18 @@
 					},
 				});
 			});
+			
+			$(document).ready(function() {
+				
+			 $(".add-top-collection-row").click(function(){
+					 
+						$(this).children(".collection-select-check").toggleClass("collection-selected");
+					
+						
+								
+				});
+			});
+			
 		</script>
 
 
@@ -203,6 +215,57 @@ border: 1px solid #eee;
 
 <!-- Share Pop up -->
 
+<div id="add-to-collection-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	
+	
+		<div class="box row-fluid">	
+			
+		
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>ADD TO COLLECTION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+		<div class="modal-body" style="margin-top: 0px !important">
+		
+	<!--	<div class="empty-add-top-collection">
+		
+			You have not created any collections yet.
+			
+			<a >+ Create Collection</a>
+		
+		</div> -->
+		
+		
+		
+		<div class="add-top-collection-holder">
+		
+			<div class="add-top-collection-row"><img src="img/profile1.jpg" /><p>Moving to music is an essential human pleasure particularly related to musical groove</p><span class="fa fa-check collection-select-check collection-selected"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile2.jpg" /><p>Moving to music is an essential human pleasure.</p> <span class="fa fa-check collection-select-check collection-selected"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile3.jpg" /><p>Moving to music.</p> <span class="fa fa-check collection-select-check collection-selected"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile4.jpg" /><p>Moving to music is an essential human pleasure particularly related.</p><span class="fa fa-check collection-select-check collection-selected"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile1.jpg" /><p>Moving </p> <span class="fa fa-check collection-select-check collection-selected"></span></div>
+		
+		</div>
+		
+		<button data-dismiss="modal" class="new-small-button new-black-btn big-long-btns full-width   middle-button" >CLOSE</button>
+		
+		</div>
+ 
+
+			
+
+		</div>
+  
+</div>
+
 <div id="article-share-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
 
 	
@@ -280,28 +343,28 @@ border: 1px solid #eee;
 	<!-- <a class="fa fa-pencil-square-o edit-article-view-icon"></a> -->
 	
 		<div class="dropdown standard-dropdown">
-			<button id="add-to-collection" type="button"  class="fa fa-floppy-o">
-				12
+			<button id="add-to-collection" type="button"  class="fa fa-floppy-o add-to-collection-open">
+				<span>12</span>
 				
 			</button>
 		
 		</div>
 		
 		<div class="dropdown standard-dropdown">
-			<button id="share-social-media"  type="button" class="fa fa-rss article-share-open">
+			<button id="share-social-media"  type="button" class="fa fa-share-square-o article-share-open">
 				
-				334
+				<span>334</span>
 			</button>
 		
 		</div>
 		
 		 <div class="like-holder" >
              <div class="like article-view-like ">
-            	<button class="fa fa-heart-o">667</button>
+            	<button class="fa fa-heart-o"><span>667</span></button>
                 
              </div>
              <div class="like-full article-view-like hide-like-btn">
-            	<button class="fa fa-heart">668</button>
+            	<button class="fa fa-heart"><span>668</span></button>
                 
              </div>
             

@@ -48,35 +48,26 @@
 
 </head>
 
-<script>
-
-
-$(document).ready(function() {
-var stickyNavTop = $('#profile-top-bar-sticker').offset().top;
- 
-var stickyNav = function(){
-var scrollTop = $(window).scrollTop();
-      
-if (scrollTop > stickyNavTop - 25) { 
-    $('#profile-top-bar-sticker').addClass('my-navbar-fixed');
-} else {
-    $('#profile-top-bar-sticker').removeClass('my-navbar-fixed'); 
-}
-};
- 
-stickyNav();
- 
-$(window).scroll(function() {
-    stickyNav();
-});
-});
-
-</script>
 
 <script>
 
 
 $( document ).ready(function() {
+
+	$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 600) {
+        $('.scroll-to-btn').fadeIn();
+    } else {
+        $('.scroll-to-btn').fadeOut();
+    }
+});
+
+	$(".scroll-to-btn").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".profile-page-nav-holder").offset().top - 40},
+        'slow');
+});
 	
 	if($(window).width() < 767){
     $('#project-columns-created').removeAttr('id');
@@ -115,45 +106,7 @@ $( document ).ready(function() {
 
 <style>
 
-.my-navbar-fixed {
-   position: fixed;
-    width: 100%;
-    left: 0;
-    top: 50;
-    z-index: 100;
-    border-top: 0px !important;
-	border-bottom: 0px !important;
-	background: #CFCCB9;
-	padding-top: 0px;
-	padding-bottom: 0px;
 
-}
-
-.my-navbar-fixed > ul > .active > a {
-
-border-bottom: 3px solid #999 !important;
-border-top: 3px solid transparent !important;
-border-left: 0px !important;
-border-right: 0px !important;
-
-}
-
-@media(max-width: 980px) {
-
-.my-navbar-fixed > ul > .active > a {
-
-border-bottom: 3px solid #fff !important;
-border-top: 0px !important;
-border-left: 0px !important;
-border-right: 0px !important;
-color: #fff !important;
-
-
-}
-
-
-
-}
 
 
 .padding-wrapper {
@@ -260,7 +213,7 @@ padding-top: 0px;
 	
 	
 		
-         <div id="profile-top-bar-sticker" class="profile-page-nav-holder" >
+         <div  class="profile-page-nav-holder" >
          
          
          
@@ -1135,38 +1088,13 @@ padding-top: 0px;
                         
                        
                 </div>
-    
-    
-    
-					
-    
-    
-    
-    
-    
-       	      
-            
-   
-      
-             
-         
-     
-            
-         
-            
-           
-            
-       
-        
-        
-        
-        
-    
-    
+
     </div>
 
 </div>
 </div>
+
+<span class="scroll-to-btn fa fa-angle-up"></span>
 
  <footer>
         

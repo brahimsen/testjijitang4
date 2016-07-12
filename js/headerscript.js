@@ -246,6 +246,13 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 		
 		});
 		
+		$(".add-to-collection-open").click(function(){
+		
+		$('#add-to-collection-modal').modal('show');
+	
+		
+		});
+		
 		$( document ).ready(function() {
 			
 			  setTimeout(function() {

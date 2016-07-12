@@ -1,0 +1,424 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/projects.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/article-grids.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/squares.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+<link rel="stylesheet" type="text/css" href="mobile-fonts.css">
+
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/follow-script.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/projects-script.js"></script>
+<script src="js/collection-script.js"></script>
+<script src="js/profiles-script.js"></script>
+<script src="js/articles-graph-script.js"></script>
+<script type="text/javascript" src="data/comments-data.js"></script>
+<script type="text/javascript" src="js/jquery-comments.js"></script>
+<script src="js/masonry.js"></script>
+
+	<script type="text/javascript">
+			$(function() {
+				$('#comments-container').comments({
+					profilePictureURL: 'img/brahim.png',
+					roundProfilePictures: true,
+					textareaRows: 1,
+					enableAttachments: false,
+					getComments: function(success, error) {
+						setTimeout(function() {
+							success(commentsArray);
+						}, 500);
+					},
+					postComment: function(data, success, error) {
+						setTimeout(function() {
+							success(data);
+						}, 500);
+					},
+					putComment: function(data, success, error) {
+						setTimeout(function() {
+							success(data);
+						}, 500);
+					},
+					deleteComment: function(data, success, error) {
+						setTimeout(function() {
+							success();
+						}, 500);
+					},
+					upvoteComment: function(data, success, error) {
+						setTimeout(function() {
+							success(data);
+						}, 500);
+					},
+					uploadAttachments: function(dataArray, success, error) {
+						setTimeout(function() {
+							success(dataArray);
+						}, 500);
+					},
+				});
+			});
+			
+			$(document).ready(function() {
+				
+			 $(".add-top-collection-row").click(function(){
+					 
+						$(this).children(".collection-select-check").toggleClass("collection-selected");
+					
+						
+								
+				});
+			});
+			
+		</script>
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+<style>
+
+.square-grid-item  {
+ width: calc( (100% - 24.1px) / 2 );
+
+}
+
+@media(max-width: 767px) {
+
+.square-grid-item  {
+ width: 100%;
+ margin-left: -1px;
+
+}
+}
+
+
+
+.new-article-image-title-holder {
+
+padding-top: 20px;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+
+.article-content p {
+
+line-height: 25px;
+    font-size: 15px;
+
+}
+
+.article-content {
+
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 75px;
+padding-bottom: 75px;
+
+}
+
+@media(max-width: 980px) {
+
+.article-content {
+
+padding-left: 20px;
+padding-right: 20px;
+
+}
+
+}
+
+.max-width-limiter {
+
+	background: #ecead4;
+	padding-left: 2%;
+	padding-right: 2%;
+
+}
+
+.padding-wrapper {
+
+	padding-top: 20px;
+	padding-left: 0% !important;
+	padding-right: 0% !important;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.article-tag-table-row {
+background: #fff;
+
+}
+
+.square-grids {
+
+background: #fff;
+padding-top: 15px;
+padding-bottom: 15px;
+
+}
+
+.project-square-grid-item {
+
+border: 5px solid #fff;
+
+}
+
+.square-grid-item {
+
+border: 1px solid #eee;
+
+}
+
+.profile-follow {
+
+	float: none;
+
+}
+
+
+</style>
+
+<div id="article-share-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	
+	
+		<div class="box row-fluid">	
+			
+		
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>SHARE ARTICLE</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+		<div class="modal-body">
+		
+		<div class="input-group">
+			
+					<input class="form-control" name="projecttitle" placeholder="Share Link" >
+		
+		</div>
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">anyone with this link will be able to view this project</p>
+		
+		<button class="new-small-button new-black-btn big-long-btns full-width   middle-button" >Copy Link</button>
+		
+		<hr class="user-sep-line">
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">Or Share to </p>
+
+		
+		<div class="share-modal-social-icons">
+		<a class="fa fa-facebook"></a>
+		<a class="fa fa-twitter"></a>
+		<a class="fa fa-linkedin"></a>
+		<a class="fa fa-weibo"></a>
+		
+		</div>
+		
+		</div>
+ 
+
+			
+
+		</div>
+  
+</div>
+
+<body>
+
+	<div class="container-fluid">
+
+
+<div class="header-wrapper">
+	<header>
+
+
+	</header>
+</div>
+
+<!-- Subnavigation is case the previewer is not the author -->
+
+<!--
+
+<div class="secondary-sub-navigation">
+	<div class="top-nav-author-info hidden-phone">
+		<div class="top-nav-author-info-img"><a><img src="img/profile1.jpg"/></a></div>
+		<div class="top-nav-author-info-text"><a>Albert Einstein</a><span>Yesterday 12:45 A.M</span></div>
+	</div>
+</div> -->
+
+<div class="secondary-sub-navigation">
+
+		<div class="top-nav-left-icons">
+	
+	
+	 <a class="fa fa-chevron-circle-left top-bar-right-normal-btns"><span>Back</span></a> 
+	 
+	
+	
+	</div>
+	
+	
+	<div class="top-nav-right-icons">
+	
+	
+	 <a class="fa fa-share-square-o top-bar-right-normal-btns article-share-open"><span>Share</span></a> 
+	 <a class="fa fa-upload top-bar-right-normal-btns"><span>Publish</span></a> 
+	
+	
+	</div>
+	
+
+
+</div>
+	<div class="max-width-limiter">
+	
+	
+	<div class="new-article-image-title-holder">
+	
+	
+		<div class="article-title-holder">
+		
+	
+	<h1>Syncopation, Body-Movement and Pleasure in Groove Music Syncopation</h1>
+	
+	</div>
+	
+	</div>
+	
+	
+	<div class="padding-wrapper">
+	
+	<div class="my-mobile-article-author hidden-desktop">
+	
+		<p><span>By <a>Brahim Senhaji</a></span> <span> 23 Sep 2016</span></p>
+	
+	</div>
+	
+	<div class="article-content" style="border-bottom: 25px solid #ecead4">
+	
+		<h3>To Summarize</h3>
+		<p>
+Moving to music is an essential human pleasure particularly related to musical groove. Structurally, music associated with groove is often characterised by rhythmic complexity in the form of syncopation, frequently observed in </p>
+		<p>electronic dance music. Structural complexity has been related to positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure</p>
+		<p>particularly for participants who enjoy dancing to music. Hence, there is an inverted U-shaped relationship between syncopation, body-movement and pleasure, and syncopation seems to be an important structural factor in embodied and affective responses to groove</p>
+		
+		<h3>To Summarize</h3>
+		<p>
+Moving to music is an essential human pleasure particularly related to musical groove. Structurally, music associated with groove is often characterised by rhythmic complexity in the form of syncopation, frequently observed in </p>
+		<p>electronic dance music. Structural complexity has been related to positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure</p>
+		<p>particularly for participants who enjoy dancing to music. Hence, there is an inverted U-shaped relationship between syncopation, body-movement and pleasure, and syncopation seems to be an important structural factor in embodied and affective responses to groove</p>
+		
+		
+	<div class="article-view-references">
+	
+	<h3>References</h3>
+	
+	<p>12 down vote In case you want to have a default text as a sort of placeholder/hint but not considered a valid value (something like "complete here", "select your nation" ecc.) you can do something like this</p>
+		<p>12 down vote In case you want to have a default text as a sort of placeholder/hint but not considered a valid value (something like "complete here", "select your nation" ecc.) you can do something like this</p>
+	<p>12 down vote In case you want to have a default text as a sort of placeholder/hint but not considered a valid value (something like "complete here", "select your nation" ecc.) you can do something like this</p>
+
+	</div>
+	
+	
+	</div>
+	
+	 
+		  
+		 
+		 
+		 
+			
+			
+			</div>
+			
+			</div>
+			
+			
+	
+	
+	
+	</div>
+	
+		
+	
+    
+
+                  
+                   
+					
+					
+  
+ 			
+					  
+                          
+    			
+</div>
+
+ <footer>
+        
+		</footer>
+
+</div>
+
+
+
+
+
+<script>
+
+$( "header" ).load( "header-jijitang.html" );
+$( "footer" ).load( "footer.html" );
+
+
+
+
+
+
+  
+
+</script>
+<script src="js/masonry-scripts.js"></script>
+<script src="js/myjavascript.js"></script>
+
