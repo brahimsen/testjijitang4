@@ -253,6 +253,23 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 		
 		});
 		
+		$(".publish-document-open").click(function(){
+		
+		$('#publish-document-popup').modal('show');
+	
+		
+		});
+		
+		$("#delete-document-open").click(function(){
+		
+		$('#delete-document-popup').modal('show');
+	
+		
+		});
+		
+		
+		
+		
 		$( document ).ready(function() {
 			
 			  setTimeout(function() {

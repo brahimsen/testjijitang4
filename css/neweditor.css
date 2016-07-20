@@ -37,3 +37,191 @@ div[data-role="editor-toolbar"] {
 .dropdown-menu a {
   cursor: pointer;
 }
+
+
+.editor-link-dropdown {
+
+	padding: 10px;
+
+}
+
+.editor-link-dropdown button {
+
+	background: #a4ce4c !important;
+	border-radius: 0px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+
+}
+
+.editor-link-dropdown input {
+
+	height: 30px !important;
+
+}
+
+.editor-link-dropdown button:hover {
+
+	color: #fff !important;
+	
+
+}
+
+#editor div {
+
+margin-bottom: 15px;
+
+}
+
+#editor ul {
+
+margin-left: 0px;
+list-style-type: none;
+
+}
+
+#editor ul li {
+
+border-left: 5px solid #eee;
+padding-left: 20px;
+
+}
+
+#main-document-title {
+border: 1px solid #fff !important;
+}
+
+.btn-info {
+
+	background: #a4ce4c !important;
+
+}
+
+.editor-header-btn-active {
+ 
+ background: #a4ce4c !important;
+
+}
+
+#new-editor-placeholder {
+
+color: #999;
+
+}
+
+
+#editor {
+
+min-height: 350px;
+line-height: 30px;
+font-size: medium;
+
+}
+
+.btn-toolbar {
+
+margin-top: 0px !important;
+margin-bottom: 0px !important;
+padding-top: 15px;
+padding-bottom: 15px;
+background: #CFCCB9;
+padding-left: 15px;
+padding-right: 15px;
+
+
+
+}
+
+.btn-group > .btn:hover {
+
+	text-shadow: none !important;
+
+
+}
+
+.btn {
+
+    background: transparent;
+    border: 0px;
+   
+    box-shadow: none;
+    color: #fff;
+	text-shadow: none !important;
+	padding: 10px !important;
+
+}
+
+.new-editor-title {
+
+	    font-family: "OpenSans-Semibold" !important;
+    width: 100%;
+    margin-bottom: 0px !important;
+    font-size: 24px !important;
+  
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+    text-transform: uppercase;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    border: 0px !important;
+	line-height: 69px !important;
+
+
+}
+
+.new-editor-title-holder {
+
+	
+
+	background: #ecead4;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.editor-inner-holder {
+
+background: #ecead4;
+
+	padding-bottom: 30px;
+
+
+}
+
+.top-nav-right-icons {
+
+float: none;
+
+}
+
+@media(max-width: 767px) {
+
+.secondary-sub-navigation {
+
+	width: 100% !important;
+	padding-left: 0% !important;
+	padding-right: 0% !important;
+
+}
+
+.top-bar-right-normal-btns {
+
+	width: 20% !important;
+	margin-left: 0px !important;
+	font-size: 21px !important;
+}
+
+.top-bar-right-normal-btns span {
+
+	font-size: 12px !important;
+
+}
+
+.all-editor-wrapper {
+
+margin-left: 10px !important;
+margin-right: 10px !important;
+
+}
+
+}
+
