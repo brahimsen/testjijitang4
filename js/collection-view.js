@@ -21,7 +21,9 @@
 					$("#submit-create-collection").click(function(){
 						
 						if($("#collection-title").val() =="") {
+						$(".modal-scrollable").scrollTop(0);
 						$(".create-edit-project-error").addClass('show-create-edit-project-error');
+						
 						
 						}else{
 						
