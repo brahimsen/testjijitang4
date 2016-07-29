@@ -35,6 +35,11 @@
 <script src="js/collection-view.js"></script>
 <script src="js/masonry.js"></script>
 
+<script type="text/javascript" language="javascript" src="js/dataTables.scroller.js"></script>
+
+<script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="js/demo.js"></script>
+
 
 
 
@@ -110,6 +115,73 @@ border: 2px solid #a4ce4c;
 }
 
 </style>
+
+<script>
+
+ $(document).ready(function() {
+var options = {
+  valueNames: [ 'name' ]
+};
+
+var userList = new List('users', options);
+
+});
+
+</script>
+
+<div id="add-document-to-collection-popup" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+		<div class="box row-fluid">	
+
+			 <div class="modal-header">
+ 
+ <p>ADD DOCUMENTS TO COLLECTION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+<div class="modal-body" style="margin-top: 0px !important">
+		
+	<!--	<div class="empty-add-top-collection">
+		
+			You have not created any articles yet.
+			
+			<a >+ Write Article</a>
+		
+		</div> -->
+		
+		     <div id="users">
+ 
+ <div class="full-width-search-holder add-to-collection-search-input">
+ <input class="search" placeholder="Search Documents" />
+ <button><i class="lnr lnr-magnifier"></i></button>
+  </div>
+
+  <div class="list add-top-collection-holder">
+  
+  			<div class="add-top-collection-row"><img src="img/profile1.jpg" /><p class="name">Moving to music is an essential human pleasure particularly related to musical groove</p><span class="fa fa-check collection-select-check"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile2.jpg" /><p class="name">Moving to music is an essential human pleasure.</p> <span class="fa fa-check collection-select-check collection-selected"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile3.jpg" /><p class="name">Moving to music.</p> <span class="fa fa-check collection-select-check collection-selected"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile4.jpg" /><p class="name">Moving to music is an essential human pleasure particularly related.</p><span class="fa fa-check collection-select-check collection-selected"></span></div>
+			<div class="add-top-collection-row"><img src="img/profile1.jpg" /><p class="name">Moving </p> <span class="fa fa-check collection-select-check"></span></div>
+  
+	
+  </div>
+  
+  
+ 
+  
+</div>
+
+		
+		<button data-dismiss="modal" class="new-small-button new-black-btn big-long-btns full-width   middle-button" >CLOSE</button>
+		
+		</div>
+	
+				
+		</div>
+</div> 
 
 <div id="delete-document-popup" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
 
@@ -294,6 +366,7 @@ border: 2px solid #a4ce4c;
   
 </div>
 
+
 <body>
 
 	<div class="container-fluid" style="background: #ecead4">
@@ -347,12 +420,17 @@ border: 2px solid #a4ce4c;
 					<a class="collection-view-top-header-img"><img src="img/profile2.jpg" /></a>
 					<a class="collection-view-top-header-meta"> <span>Said Bensellam</span> <span>September 30 | 14:45 A.M</span> </a>
 					
-						<div class="collection-follow hidden-phone">
+					<!--	<div class="collection-follow hidden-phone">
 							<a class="collection-page-unfollowed"> FOLLOW</a>
 							<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
 						</div>
+						
+					-->
+				
 
 				</div>
+				
+				
 				
 				<div class="collection-view-content-info">
 				
@@ -360,10 +438,21 @@ border: 2px solid #a4ce4c;
 					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
 					<p><span>12 Articles</span><span>89 Followers</span></p>
 					
+					<!--
+					
 					<div class="collection-follow hidden-desktop hidden-tablet collection-follow-view-mobile">
 							<a class="collection-page-unfollowed"> FOLLOW</a>
 							<a class="hide-follow-check collection-page-followed"><span class="icon11-check"></span> FOLLOWING</a>
 					</div>
+					
+					-->
+					
+						
+					<button id="add-document-to-collection-btn" class="add-document-to-collection new-small-button light-green-button">
+					
+					<span>+</span> ADD DOCUMENT
+					
+					</button>
 				
 				</div>
 			
@@ -385,7 +474,7 @@ border: 2px solid #a4ce4c;
          
           <ul class="nav nav-tabs profile-page-tabs"  role="tablist">
 
-				<span>ARTICLES</span>
+				<span>DOCUMENTS</span>
 
 
 		</ul>
@@ -622,4 +711,5 @@ $( "footer" ).load( "footer.html" );
 </script>
 <script src="js/masonry-scripts-profiles.js"></script>
 <script src="js/myjavascript.js"></script>
+<script src="js/list.js"></script>
 

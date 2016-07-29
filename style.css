@@ -24333,5 +24333,46 @@ display: block;
     margin-top: 15px;
 	
 	}
+	
+	.add-document-to-collection {
+
+	margin-bottom: 30px;
+
+
+}
+
+}
+
+.add-document-to-collection {
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 13px;
+	margin-top: 20px;
+
+
+}
+
+.add-to-collection-search-input input {
+
+font-size: 14px;
+padding-top: 7.5px;
+padding-bottom: 7.5px;
+border: 1px solid #fff !important;
+
+}
+
+.add-to-collection-search-input button {
+
+padding-top: 10px !important;
+padding-bottom: 10px !important;
+
+}
+
+.add-to-collection-search-input i {
+
+font-size: 18px !important;
 
 }

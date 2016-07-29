@@ -9,6 +9,10 @@
 						$("#project-share-modal").modal('show');
 					});
 					
+					$("#add-document-to-collection-btn").click(function(){
+						$("#add-document-to-collection-popup").modal('show');
+					});
+					
 					
 					
 					
@@ -81,3 +85,13 @@
   
    });
 
+$(document).ready(function() {
+				
+			 $(".add-top-collection-row").click(function(){
+					 
+						$(this).children(".collection-select-check").toggleClass("collection-selected");
+					
+						
+								
+				});
+			});
