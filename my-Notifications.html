@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -36,14 +36,6 @@
 
 <script>
 
- $(document).ready(function() {
-var options = {
-  valueNames: [ 'not-events' ]
-};
-
-var userList = new List('notifications', options);
-
-});
 
 $(document).ready(function() {
 	
@@ -130,15 +122,7 @@ $(document).ready(function() {
 							</p>
                       
                         </div>
-						
-				
-						
-                
-                	
-                        
-                    
-                        
-                
+		
                 </div>
                 
                 <div class="dashbord-content-right" >
@@ -147,10 +131,6 @@ $(document).ready(function() {
                 
      <div id="notifications">
  
- <div class="full-width-search-holder">
- <input class="search" placeholder="Search Notifications" />
- <button><i class="lnr lnr-magnifier"></i></button>
-  </div>
   
   		<ul class="nav nav-tabs notifications-tab" role="tablist">
 			
@@ -158,9 +138,23 @@ $(document).ready(function() {
 			<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">REQUESTS</a></li>
    
 		</ul>
+		
+		
 	
 	<div class="tab-content">
-  <div role="tabpanel" class="list notifications-list tab-pane active" id="home">
+  <div role="tabpanel" class="tab-pane active" id="home">
+  
+		<ul class="nav nav-tabs notification-sub-tabs notifications-tab" role="tablist">
+			
+			<li role="presentation" class="active"><a href="#all-notifications" aria-controls="all-notifications" role="tab" data-toggle="tab">ALL</a></li>
+			<li role="presentation"><a href="#group-notifications" aria-controls="group-notifications" role="tab" data-toggle="tab">GROUPS</a></li>
+   
+		</ul>
+		
+		<div class="tab-content">
+		
+		<div role="tabpanel" class="notifications-list tab-pane active" id="all-notifications">
+  
 		<div class="notification-item">
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
 		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group <a>Web developers</a></p>
@@ -172,6 +166,10 @@ $(document).ready(function() {
 		<p class="notifications-item-event not-events"><a>Albert Einstein and 15 others</a> has followed the article <a>Why the blue whales dont make a sound</a></p>
 		<p class="notifications-item-meta"><span>projects</span><span>3:45 A.M</span></p>
 		</div>
+		
+		</div>
+		
+		<div role="tabpanel" class="list notifications-list tab-pane" id="group-notifications">
 		
 		<div class="notification-item">
 		<a class="notifications-item-img"><img src="img/profile3.jpg" /></a>
@@ -197,11 +195,27 @@ $(document).ready(function() {
 		<p class="notifications-item-meta"><span>projects</span><span>yesterday</span></p>
 		</div>
 		
+		</div>
+		
+		</div>
+		
+	
+		
   </div>
   
   
-    <div role="tabpanel" class="list notifications-list tab-pane" id="profile">
+    <div role="tabpanel" class="list tab-pane" id="profile">
 		
+		<ul class="nav nav-tabs notification-sub-tabs notifications-tab" role="tablist">
+			
+			<li role="presentation" class="active"><a href="#all-requests" aria-controls="all-requests" role="tab" data-toggle="tab">ALL</a></li>
+			<li role="presentation"><a href="#group-requests" aria-controls="group-requests" role="tab" data-toggle="tab">GROUPS</a></li>
+   
+		</ul>
+		
+		<div class="tab-content">
+		
+		<div role="tabpanel" class="notifications-list tab-pane active" id="all-requests">
 		
 		
 		<div class="notification-item request-item">
@@ -219,6 +233,10 @@ $(document).ready(function() {
 		
 		</div>
 		
+		</div>
+		
+		<div role="tabpanel" class="notifications-list tab-pane" id="group-requests">
+		
 		<div class="notification-item request-item">
 		<a class="notifications-item-img"><img src="img/profile1.jpg" /></a>
 		<p class="notifications-item-event not-events"><a>Brahim senhaji</a> has joined the group <a>Web developers</a></p>
@@ -228,6 +246,10 @@ $(document).ready(function() {
 			
 		</div>
 		<p class="notifications-item-meta"><span>projects</span><span>yesterday</span></p>
+		</div>
+		
+		</div>
+		
 		</div>
 		
   </div>
@@ -269,5 +291,5 @@ $( "footer" ).load( "footer.html" );
 
   
 </script>
-<script src="js/list.js"></script>
+
 
