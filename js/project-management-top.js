@@ -58,6 +58,11 @@
 						$("#Add-team-member").modal('show');
 					});
 					
+					$(".add-document-group-btn").click(function(){
+						
+						$("#add-document-to-collection-popup").modal('show');
+					});
+					
 					
 					
 					
