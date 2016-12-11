@@ -1,0 +1,38 @@
+<div class="session-background-holder">
+	
+	<div class="session-status upcoming-status-bullet ">UPCOMING <span></span></div>
+	
+	<div class="session-content-holder"> 
+	
+	<div class="session-countdown session-update-status-content session-view-countdown" data-wow-delay=".3s" data-date="OCT 22, 2016 06:00:00"></div>
+
+	</div>
+	
+	</div>
+	
+	<script type="text/javascript" src="../../js/jquery.countdown.min.js"></script>
+
+	<script>
+	
+	
+if ($('.session-countdown').length) { 
+			$('.session-countdown').countdown({
+				render: function(data) {
+					if (data.years >= 1) {
+						var $days =	(data.years*365)+data.days;
+					} else {
+						var $days = data.days;
+					}
+				  $(this.el).html(
+					  '<div class="day">' + this.leadingZeros($days) + ' <span>Days</span></div>'+
+					  '<div class="hour">' + this.leadingZeros(data.hours, 2) + ' <span>Hours</span></div>'+
+					  '<div class="min">' + this.leadingZeros(data.min, 2) + ' <span>Minutes</span></div>'+
+					  '<div class="sec">' + this.leadingZeros(data.sec, 2) + ' <span>Seconds</span></div>'
+				  );
+				}
+			});
+		}
+	
+	
+	
+	</script>

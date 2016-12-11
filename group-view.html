@@ -32,6 +32,7 @@
 <script src="js/profiles-script.js"></script>
 <script src="js/articles-graph-script.js"></script>
 <script src="js/project-discussion.js"></script>
+<script src="js/project-management-top.js"></script>
 <script src="js/masonry.js"></script>
 
 
@@ -83,6 +84,18 @@
 
 <style>
 
+.discussion-comments-holder {
+
+margin-top: 15px;
+
+}
+
+.discussion-show-replies:before {
+
+content: "Show Replies"
+
+}
+
 .profile-page-nav-holder > ul > li {
 
 	width: 25%;
@@ -114,7 +127,7 @@ padding-top: 10px;
 	padding-left: 0% !important;
 	padding-right: 0% !important;
 	border: 15px solid #CFCCB9;
-	border-bottom: 0px;
+	
 	padding-bottom: 0px !important;
 	
 
@@ -161,6 +174,58 @@ padding-bottom: 55px;
 
 <body>
 
+<div id="project-share-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
+
+	
+	
+		<div class="box row-fluid">	
+			
+		
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>SHARE PROJECT</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+		<div class="modal-body">
+		
+		<div class="input-group">
+			
+					<input class="form-control" name="projecttitle" placeholder="Share Link" >
+		
+		</div>
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">anyone with this link will be able to view this project</p>
+		
+		<button class="new-small-button new-black-btn big-long-btns full-width   middle-button" >Copy Link</button>
+		
+		<hr class="user-sep-line">
+		
+		<p class="pub-modal-header" style="padding-top: 0px; padding-bottom: 10px;">Or Share to </p>
+
+		
+		<div class="share-modal-social-icons">
+		<a class="fa fa-facebook"></a>
+		<a class="fa fa-twitter"></a>
+		<a class="fa fa-linkedin"></a>
+		<a class="fa fa-weibo"></a>
+		
+		</div>
+		
+		</div>
+ 
+
+			
+
+		</div>
+  
+</div>
+
 
 <div id="project-apply-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
 
@@ -173,7 +238,7 @@ padding-bottom: 55px;
 		
 			 <div class="modal-header">
  
- <p>PROJECT APPLICATION</p>
+ <p>GROUP APPLICATION</p>
  <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
  <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
  
@@ -228,7 +293,29 @@ padding-bottom: 55px;
 	</header>
 </div>
 
+<div class="secondary-sub-navigation project-discussion-main-nav">
 
+	<div class="top-nav-author-info project-discussion-right-nav">
+		
+		<a  href="group-management.html"><b class="hidden-phone">Group Discussions</b><b class="hidden-desktop hidden-tablet">Discussions</b></a>
+		
+		
+		
+	</div>
+	
+	<div class="top-nav-right-icons">
+	
+	<a id="share-modal-btn" class="fa fa-share-square-o top-bar-right-normal-btns article-share-open"><span>Share</span></a>
+	
+	
+		
+		
+	
+	</div>
+	
+
+
+</div>
 			
 		<div class="padding-wrapper padding-wrapper-fix">
 		<div class="padding-wrapper-inner max-width-limit">
@@ -347,35 +434,7 @@ Moving to music is an essential human pleasure particularly related to musical g
 		<p>particularly for participants who enjoy dancing to music. Hence, there is an inverted U-shaped relationship between syncopation, body-movement and pleasure, and syncopation seems to be an important structural factor in embodied and affective responses to groove</p>
 	
 	
-			<div class="share-like-article">
-			<div class="like-holder" >
-             <div class="like article-view-like ">
-            	<button class="fa fa-heart-o"></button>
-                
-             </div>
-             <div class="like-full article-view-like hide-like-btn">
-            	<button class="fa fa-heart"></button>
-                
-             </div>
-            
-            </div>
-			
-			<div class="dropdown standard-dropdown">
-			<button id="share-social-media" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="fa fa-rss">
-				
-				
-			</button>
-			<ul class="dropdown-menu" aria-labelledby="dLabel">
-				<div class="drop-down-arrow-down"></div>
-				<li class="dropdown-menu-header">Share</li>
-				<li><a>Facebook</a></li>
-				<li><a>Twitter</a></li>
-				<li><a>Weibo</a></li>
-				<li><a>Duban</a></li>
-			</ul>
-		</div>
-			
-		</div>
+		
 		  
 		  
 		 
@@ -441,25 +500,7 @@ Moving to music is an essential human pleasure particularly related to musical g
         
 				<div class="project-discussion-discussion-container">
 					
-					<div class="discussion-top-holder">
 					
-					
-					
-						<div class="start-discussion-holder">
-							
-							<div class="discussions-profile-holder">
-							<a><img src="img/brahim.png" /></a>
-							</div>
-							
-							<div class="discussions-text-holder">
-							<input id="discussion-title-input" class="discussion-post-validation" placeholder="Give your discussion a title" />
-							<textarea id="discussion-content-input" class="discussion-post-validation" placeholder="Write your discussion"></textarea>
-							<button id="add-discussion-btn" class="black-wide-btn right-float-btn" disabled="disabled">SEND</button>
-							</div>
-						
-						</div>
-					
-					</div>
 						
 						<div class="discussion-list">
 						
@@ -472,20 +513,16 @@ Moving to music is an essential human pleasure particularly related to musical g
 										<a class="discussion-post-picture"><img src="img/profile1.jpg" /></a>
 										<p class="discussion-post-author"><a>Brahim Senhaji</p></a>
 										<p class="discussion-post-time">September 28 | 12:33 A.M</p>
-										<button class="discussion-toggle-btn white-wide-btn discussion-btn-hidden"></button>
+										
 										
 									</div>
 									
-									<p class="discussion-post-title"> Nice article I would like ask you the question of how did you get to this conclusion</p>
+									
+									
 								
 								</div>
 								<div class="discussion-post-content">
 								
-									<p class="discussion-post-text">
-									
-									electronic dance music. Structural complexity has been related to 
-									
-									</p>
 									
 									<p class="discussion-post-text">
 									
@@ -495,20 +532,14 @@ Moving to music is an essential human pleasure particularly related to musical g
 									
 									<div class="discussion-post-content-footer">
 									
-										<span class="discussion-comment-number"> 12 Replies | </span> 
-										<span class="discussion-comments-toggle"></span>
-										<span class="discussion-comments-reply">Reply</span>
+										<span class="discussion-comment-number"> 12 Replies</span> . <span class="discussion-comment-reply-btn discussion-show-replies"></span>
+										
 									
 									</div>
 									
-									<div class="discussion-comments-holder">
+									<div class="discussion-comments-holder hidden-discussion-comment-section">
 									
-										<div class="discussion-comment-textarea">
 										
-											<textarea class="add-discussion-comment-textarea" placeholder="Share your thoughts on the discussion"></textarea>
-											<button class="black-wide-btn right-float-btn add-discussion-comment-btn">SEND</button>
-										
-										</div>
 										
 										<div class="discussion-comment-list">
 										
@@ -553,6 +584,7 @@ Moving to music is an essential human pleasure particularly related to musical g
 											
 											
 											</div>
+										<div class="discussion-see-more-comments">See More Replies</div>
 										
 										</div>
 									
@@ -564,7 +596,99 @@ Moving to music is an essential human pleasure particularly related to musical g
 							
 							</div>
 							
+							<div class="discussion-post">
 							
+								<div class="discussion-post-header">
+								
+									<div class="discussion-post-meta">
+
+										<a class="discussion-post-picture"><img src="img/profile1.jpg" /></a>
+										<p class="discussion-post-author"><a>Brahim Senhaji</p></a>
+										<p class="discussion-post-time">September 28 | 12:33 A.M</p>
+										
+										
+									</div>
+									
+									
+									
+								
+								</div>
+								<div class="discussion-post-content">
+								
+									
+									<p class="discussion-post-text">
+									
+									positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure
+									
+									</p>
+									
+									<div class="discussion-post-content-footer">
+									
+										<span class="discussion-comment-number"> 12 Replies</span> . <span class="discussion-comment-reply-btn discussion-show-replies"></span>
+										
+									
+									</div>
+									
+									<div class="discussion-comments-holder hidden-discussion-comment-section">
+									
+
+										
+										<div class="discussion-comment-list">
+										
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												<div class="discussion-comment-edit-btns">
+												
+													<button class="black-wide-btn right-float-btn discussion-comment-edit-save" >SAVE</button>
+													<button class="red-wide-btn right-float-btn discussion-comment-edit-delete">DELETE</button>
+												
+												</div>
+												<a class="discussion-comment-edit">Edit</a>
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+											
+											
+											</div>
+										<div class="discussion-see-more-comments">See More Replies</div>
+										
+										</div>
+									
+									
+									</div>
+									
+								</div>
+							
+							
+							</div>
+							
+							 <div class="load-more-button" style="margin-top: 0px;">LOAD MORE</div>
 						
 						</div>
 					
