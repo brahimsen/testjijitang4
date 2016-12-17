@@ -769,3 +769,36 @@ margin-bottom: 30px;
 	margin-right: 20px;
 
 }
+
+.publication-admin-author-link img {
+
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	margin-right: 5px;
+
+
+}
+
+.publication-admin-author-link a {
+
+	color: #333 !important;
+	    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+
+}
+
+.admin-table-manage span {
+
+font-size: 21px;
+margin-right: 10px;
+
+}
+
+.admin-table-manage {
+
+text-align: center;
+
+}
