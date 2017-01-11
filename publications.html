@@ -176,6 +176,9 @@ $(".publication-view-link").click(function(){
   
 </div><!-- /.modal -->
 
+
+
+
   	<div class="header-wrapper">
 			
             <header>
@@ -403,20 +406,34 @@ $(".publication-view-link").click(function(){
 	
 <!-- Call the negative search result section here parts/publication-no-search-results.html  -->
 
-
+	
  
 
  
-<div class="publication-grid-item" >
+ <div class="publication-grid-item" >
 	
 		<div class="publication-grid-inner">
 		
+			<div class="publication-grid-approval"><span><i class="lnr lnr-warning"></i>Waiting for approval</span></div>
+		
 			<div class="publication-grid-wrapper">
-			<span class="publication-grid-journal">American Economics Review</span>
+			<span class="publication-grid-journal">AER/American Economics Review</span>
 			<span class="publication-grid-date">DECEMBER 2016</span>
 			
-			<a class="publication-grid-title publication-view-link">What is the smallest thing in the universe, and where is it in this universe?</a>
-			<span class="publication-grid-author">By Albert Einstein</span>
+			<a class="publication-grid-title publication-view-link">
+			
+			<span class="pub-title-zh">
+			
+			側経意責家方家閉討店暖育田庁載社転線宇
+			
+			</span>
+			
+			<span>
+			What is the smallest thing in the universe, and where is it in this universe?
+			</span>
+			
+			
+			</a>			<span class="publication-grid-author">By Albert Einstein</span>
 			
 			<div class="publication-grid-links">
 			
@@ -450,13 +467,27 @@ $(".publication-view-link").click(function(){
 			<span class="publication-grid-journal">American Economics Review</span>
 			<span class="publication-grid-date">DECEMBER 2016</span>
 			
-			<a class="publication-grid-title publication-view-link">What is the smallest thing in the universe, and where is it in this universe?</a>
+
+			<a class="publication-grid-title publication-view-link">
+			
+			<span class="pub-title-zh">
+			
+			側経意責家方家閉討店暖育田庁載社転線宇
+			
+			</span>
+			
+			<span>
+			What is the smallest thing in the universe, and where is it in this universe?
+			</span>
+			
+			
+			</a>
 			<span class="publication-grid-author">By Albert Einstein</span>
 			
 			<div class="publication-grid-links">
 			
 				<a>SUMMARY</a>
-				<a>FULL ARTICLE</a>
+				<a class="non-active-pub-link">FULL ARTICLE</a>
 				<a>CITED BY 24</a>
 				<a>READ BY 24</a>
 			
@@ -485,8 +516,20 @@ $(".publication-view-link").click(function(){
 			<span class="publication-grid-journal">American Economics Review</span>
 			<span class="publication-grid-date">DECEMBER 2016</span>
 			
-			<a class="publication-grid-title publication-view-link">What is the smallest thing in the universe, and where is it in this universe?</a>
-			<span class="publication-grid-author">By Albert Einstein</span>
+			<a class="publication-grid-title publication-view-link">
+			
+			<span class="pub-title-zh">
+			
+			側経意責家方家閉討店暖育田庁載社転線宇
+			
+			</span>
+			
+			<span>
+			What is the smallest thing in the universe, and where is it in this universe?
+			</span>
+			
+			
+			</a>			<span class="publication-grid-author">By Albert Einstein</span>
 			
 			<div class="publication-grid-links">
 			
@@ -512,6 +555,34 @@ $(".publication-view-link").click(function(){
 	
 </div> 
 
+<div class="publication-grid-item" >
+	
+	<div class="publication-grid-inner">
+		
+			<div class="publication-grid-wrapper">
+	
+			<div class="pub-last-grid">
+			<p>Can't find what you are looking for.</p>
+			<p style="font-family: 'OpenSans-Regular'">Help us grow our publications database by submitting the publication you couldn't find</p>
+			</div>
+			
+			
+			<div class="publication-grid-btns">
+			
+				<a class="publication-grid-read-btn">+ ADD NEW PUBLICATION</a>
+				
+			
+			</div>
+		
+		
+		</div>
+		</div>
+	
+	
+</div> 
+
+
+
 
 
 
@@ -529,6 +600,7 @@ $(".publication-view-link").click(function(){
 
 $( "header" ).load( "welcome-header.html" ); 
 $( "footer" ).load( "footer.html" );
+$( ".no-search-results-toto" ).load( "parts/publication-no-search-results.html" );
 
 
 

@@ -268,6 +268,15 @@ $(".alert-btn,.alert-popover-desktop").click(function(e){
 		});
 		
 		
+		$("#submit-publication").click(function(){
+		
+		$('#success-pub-modal').modal('show');
+		$('#project-publications-modal').modal('hide');
+		
+		
+		});
+		
+		
 		
 		
 		$( document ).ready(function() {

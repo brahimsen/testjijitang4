@@ -31,8 +31,9 @@
 
 
 
-
 <style>
+
+
 
 .editor-all-tags {
 
@@ -80,6 +81,32 @@ border: 0px !important;
 
 
 <body>
+
+<div id="success-pub-modal" class="modal hide fade sign-modals" tabindex="-1">
+
+	 <div class="modal-header">
+ 
+ <p>NEW PUBLICATION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+
+  <div class="modal-body zero-margin" >
+   
+	 <p class="member-cancel-actions-text">Your Publication has been successfully submitted.<br>We will let you know once it has been approved.</p>
+	
+  </div>
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >DONE</button>
+					
+					
+    
+  </div>
+  
+</div>
 
 
 	<div class="modal fade hide" id="project-publications-modal">
@@ -144,6 +171,8 @@ border: 0px !important;
 								</div>
 					
 						<input id="doi-number" class="form-control"  placeholder="DOI Number">
+						<div class="doi-error">This journal already exists.</div>
+						
 		</div>
 		
 			<div class="input-group">
@@ -160,20 +189,10 @@ border: 0px !important;
 			
 					<input id="pub-title" class="form-control"  placeholder="Title">
 		
-					<input id="pub-title-zh" class="form-control"  placeholder="Title in Chinese" style="margin-top: 20px">
+					<input id="pub-title-zh" class="form-control"  placeholder="Title in Chinese" style="margin-top: 20px; margin-bottom: 20px !important">
 		
 					
-					<div class="input-group keywords-group " style="margin-bottom: 0px !important; margin-top: 20px;" >
-				
-				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
-				<a  id="add-author-btn" class="new-small-button new-black-back-btn add-to-list-btn">Add</a>
-				<div class="pub-author-list">
-				
-					<div class="editor-all-tags"><span class="tag-text">Albert Einstein</span><div class="tag-delete lnr lnr-cross"></div></div>
-				
-				</div>
-				
-				</div>
+					<textarea placeholder="Write author names seperated by commas."></textarea>
 					
 		</div>
 		
@@ -188,7 +207,7 @@ border: 0px !important;
 				
 		</div>
 		
-		<label class="group-label">Tags</label>
+		<label class="group-label">Keywords<span class="label-optional-span">(Optional)</span></label>
 		
 		<div class="input-group keywords-group " style="margin-bottom: 0px !important;" >
 				
@@ -206,27 +225,14 @@ border: 0px !important;
 		
 		<hr class="user-sep-line">
 		
-		<label class="group-label">Link to Full Article</label>
+		<label class="group-label">Link to Full Article<span class="label-optional-span">(Optional - Add link to page where others can find full articles.)</span></label>
 		<div class="input-group keywords-group " >
 				
-				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
-				<a  id="add-link-btn" class="new-small-button new-black-back-btn add-to-list-btn">Add</a>
-				<div class="pub-full-link-list">
-				
-				<div class="editor-all-tags"><span class="tag-text">https://www.google.com.hk</span><div class="tag-delete lnr lnr-cross"></div></div>
-				
-				</div>
+		<input  class="form-control"  placeholder="Link">
+
 					
 		</div>
-		
-		<label class="group-label">Other links (Jijitang or other platforms)</label>
-		<div class="input-group keywords-group " style="margin-bottom: 0px !important;" >
-				
-				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
-				<a  id="add-link-btn2" class="new-small-button new-black-back-btn add-to-list-btn">Add</a>
-				<div class="pub-author-list"></div>
-					
-		</div>
+	
 			
 			
 			
