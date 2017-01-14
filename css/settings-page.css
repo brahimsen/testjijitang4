@@ -410,3 +410,63 @@ border-radius: 200px;
 border: 2px solid #000 !important;
 
 }
+
+#pub-journal {
+
+width: 69%;
+
+}
+
+#pub-journal {
+
+width: 69% !important;
+
+}
+
+#pub-short-journal {
+
+width: 29% !important;
+
+}
+
+.doi-error {
+
+display: none;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #F2DEDE;
+    border: 1px solid #EBCCD1;
+    color: #A94442;
+    margin-bottom: 0px;
+	
+
+
+}
+
+@media(max-width: 980px) {
+
+#project-publications-modal .modal-header {
+
+
+
+}
+
+#project-publications-modal  {
+
+left: 0px;
+right: 0px;
+height: auto !important;
+overflow-y: scroll;
+padding: 20px !important;
+
+}
+
+.label-optional-span {
+
+display: inline !important;
+
+}
+
+}

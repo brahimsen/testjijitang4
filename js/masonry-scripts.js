@@ -20,4 +20,9 @@ $('.article-columns').masonry({
   percentPosition: true,
   gutter: 20
 });
+$('.publication-columns').masonry({
+  itemSelector: '.publication-grid-item',
+  percentPosition: true,
+  gutter: 40
+});
 });

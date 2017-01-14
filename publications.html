@@ -1,0 +1,614 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Jijitang Fron End Development</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/popover.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/publication-grids.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="mobile-fonts.css">
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="js/Jquery-11.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
+<script src="js/mydatepicker.js"></script> 
+<script src="js/masonry.js"></script>
+
+<style>
+
+	.publication-grids {
+	
+padding-top: 20px;
+padding-bottom: 20px;	
+	
+	}
+
+
+</style>
+
+
+
+
+
+
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+<script>
+
+
+$( document ).ready(function() {
+	
+	if($(window).width() < 767){
+    $('.publication-grids').removeClass('publication-columns');
+}
+	
+$(".publication-view-link").click(function(){
+
+				
+				$("#view-publications-modal").modal('show');
+
+
+		});
+	
+});
+
+
+
+
+</script>
+
+
+
+<body style="background: #ecead4">
+
+	<div class="modal fade hide" id="view-publications-modal" style="top: 75%">
+	
+	<div class="modal-header publication-view-modal-header">
+ 
+ <p class="pub-view-modal-meta">By Albert Einstein, Enonomics 2016 </p>
+  <p class="pub-view-modal-title">What is the smallest thing in the universe, and where is it in this universe?</p>
+ 
+ 
+ 
+	</div>
+	
+	<div class=" publication-view-modal-body">
+	
+	<label class="group-label">Summary</label>
+	
+	<div class="pub-view-modal-content">
+	
+	<p>Moving to music is an essential human pleasure particularly related to musical groove. Structurally, music associated with groove is often characterised by rhythmic complexity in the form of syncopation, frequently observed in</p>
+	
+	<p>electronic dance music. Structural complexity has been related to positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. </p>
+	
+	</div>
+	
+	<div class="pub-view-keywords-list">
+	
+										<span><a>JAVA</a></span> <span><a>HTML</a></span> <span><a>PHP</a></span>
+										<span><a>JQuery</a></span><span><a>AJAX</a></span><span><a>mvc</a></span><span><a>Json</a></span>
+										<span><a>CSS</a></span>
+										<span><a>Phonegap</a></span>
+										<span><a>Codeigniter</a></span>
+										<span><a>Zend</a></span>
+										<span><a>Symphony</a></span>
+										<span><a>Node.js</a></span>
+										<span><a>FTP</a></span>
+										<span><a>Angular.js</a></span>
+										<span><a>Ember.js</a></span>
+										<span><a>Lavarell</a></span>
+										<span><a>Bootstrap</a></span>
+										<span><a>Sticky.js</a></span>
+										<span><a>Business</a></span>
+	
+	
+	</div>
+	
+	<div class="pub-view-cite-section">
+	
+	<label class="group-label green-label">Cite</label>
+	
+	<div class="pub-view-cite-holder ">
+	
+	electronic dance music. Structural complexity has been related to positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. 
+	
+	</div>
+	
+	
+	
+	</div>
+	
+	<div class="pub-view-cite-section">
+	
+	<label class="group-label green-label">Cited by 24</label> <a class="pub-full-article-view">FULL ARTICLE</a>
+	
+	<div class="cited-by-holder">
+	
+		<p class="cited-by-title">What is the smallest thing in the universe, and where is it in this universe?</p>
+		
+		<p class="cited-by-link">http://myjijitang/publications.html</p>
+	
+	</div>
+	
+	</div>
+	
+	
+
+	
+
+		 <div class="profile-form-btns" style="text-align: center;">
+			
+			 <button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CLOSE</button>
+			
+			</div>
+	
+	
+ 
+	</div>
+	
+	
+	
+	
+	
+	
+
+  
+</div><!-- /.modal -->
+
+
+
+
+  	<div class="header-wrapper">
+			
+            <header>
+
+
+			</header>
+
+		</div>
+
+	
+ 
+		<div class="top-search-holder">
+	<div class="top-serach-section">
+	
+		    <li class="dropdown my-new-dropdown">
+    						
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PUBLICATIONS<b class="lnr lnr-chevron-down"></b></a>
+   							<ul class="dropdown-menu">
+    						
+                            	<li><a href="#">PROFILES</a></li>
+    							<li><a href="#">PROJECTS</a></li>
+    						
+                            </ul>
+			</li>
+	
+		<input class="main-search-input" placeholder="Search Publications">
+		<button><i class="lnr lnr-magnifier"></i></button>
+		
+		
+	
+	
+	</div>
+	</div>
+	
+	
+	
+		<!-- Call search top bar results here parts/search-results-bar.html -->
+	
+	
+	
+ 
+	<div class="publication-grids publication-columns">
+	
+	<div class="publication-grid-item square-grid-filter"> 
+	
+	<div class="my-new-mobile-filter hidden-desktop">
+	
+		<div class="my-mobile-filter-main">
+		
+		<div class="filter-top-header publication-page-top-filter">
+                                
+		<div><a>Most Checked</a></div>
+		<div class="publication-page-right-filter-btn"><a class="active">Latest</a></div>
+		
+                                
+        </div>
+		
+		</div>
+		
+			<div class="publication-date-filter" style="border-bottom: 15px solid #ecead4">
+								
+								
+								<div>
+								<select class="days"></select>
+								</div>
+								
+								<div class="pub-month-picker-holder">
+								<select class="months">
+								
+									<option value="1">January</option>
+									<option value="2">February</option>
+									<option value="3">March</option>
+									<option value="4">April</option>
+									<option value="5">May</option>
+									<option value="6">June</option>
+									<option value="7">July</option>
+									<option value="8">August</option>
+									<option value="9">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								
+								</select>
+								</div>
+								<div>
+								<select class="years"></select>
+								</div>
+								
+								</div>
+								
+		<select name="field" class="form-control user-form-select">
+						<option value="">Reaearch Field</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+		</select>
+	
+	</div>
+	
+	<!--
+	
+	<div class="left-filter-expander  hidden-desktop hidden-tablet">
+	
+		<span>Filter</span>
+		<span class="filter-expand-btn fa fa-plus"></span>
+	
+	</div> -->
+			<div> 
+				<div class="articles-laft-inner hidden-phone hidden-tablet" >
+				
+								<a class="left-add-pub-btn">+ ADD NEW PUBLICATION</a>
+                        
+                        		<div class="filter-top-header publication-page-top-filter">
+                                
+                                	<div><a>Most Checked</a></div>
+									<div class="publication-page-right-filter-btn"><a class="active ">Latest</a></div>
+                                
+                                </div>
+								
+								<div class="publication-date-filter">
+								<h4>Publication Date</h4>
+								
+								<div>
+								<select class="days"></select>
+								</div>
+								
+								<div class="pub-month-picker-holder">
+								<select class="months">
+								
+									<option value="1">January</option>
+									<option value="2">February</option>
+									<option value="3">March</option>
+									<option value="4">April</option>
+									<option value="5">May</option>
+									<option value="6">June</option>
+									<option value="7">July</option>
+									<option value="8">August</option>
+									<option value="9">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								
+								</select>
+								</div>
+								<div>
+								<select class="years"></select>
+								</div>
+								
+								</div>
+								
+								
+                                <div class="filter-categories">
+                                	
+									<h4>Journals</h4>
+                                    
+                                    <p><a>Economics / Finance</a></p>
+                                    <p ><a >Business, Management, Marketing</a></p>
+                                    <p><a class="active">Psychology</a></p>
+									<p><a>Arts and Literature</a></p>
+									<p><a>Astronomy / Astrophysics / Space Science</a></p>
+									<p><a>Biological Sciences</a></p>
+									<p><a>Chemistry</a></p>
+									<p ><a>Computer and Information Science</a></p>
+									<p><a>Design</a></p>
+									<p><a>Earth Sciences</a></p>
+									<p><a>Economics</a></p>
+									<p><a>Education</a></p>
+									<p><a>Electrical and Electronic Engineering</a></p>
+									<p><a>Engineering</a></p>
+									<p><a>Environmental Sciences</a></p>
+									<p><a>Humanities, Law</a></p>
+									<p><a>Linguistics</a></p>
+									<p><a>Materials Science</a></p>
+									<p><a>Mathematics</a></p>
+									<p><a>Medicine</a></p>
+									<p><a>Philosophy</a></p>
+									<p><a>Physics</a></p>
+									<p><a>Psychology</a></p>
+									<p><a>Social Sciences</a></p>
+									<p><a> Sports and Recreation</a></p>
+									
+                                    
+                                
+                                
+                                </div>
+                                
+                                
+                                <div class="filter-tags">
+                                
+                                	<h4>Tags</h4>
+                                    
+                                    <p><span><a>Business</a></span> <span><a>Business</a></span> 
+									<span><a>Histoty</a></span> <span><a>Information Technology</a></span>
+									<span><a>Business</a></span> <span><a>Information Technology</a></span>
+										<span><a>haj</a></span><span><a>hicham</a></span><span><a>isaac newton</a></span>
+										<span><a>Computers</a></span>
+										<span><a>JAVA</a></span> <span><a>HTML</a></span> <span><a>PHP</a></span>
+										<span><a>JQuery</a></span><span><a>AJAX</a></span><span><a>mvc</a></span><span><a>Json</a></span>
+										<span><a>CSS</a></span>
+										<span><a>Phonegap</a></span>
+										<span><a>Codeigniter</a></span>
+										<span><a>Zend</a></span>
+										<span><a>Symphony</a></span>
+										<span><a>Node.js</a></span>
+										<span><a>FTP</a></span>
+										<span><a>Angular.js</a></span>
+										<span><a>Ember.js</a></span>
+										<span><a>Lavarell</a></span>
+										<span><a>Bootstrap</a></span>
+										<span><a>Sticky.js</a></span>
+										<span><a>Business</a></span>
+										
+									</p>
+                                
+                                </div>
+								
+								<a class="left-filter-load-more">LOAD MORE</a>
+                        
+                        	
+                        
+                        </div>
+
+			</div> 
+	</div> 
+	
+<!-- Call the negative search result section here parts/publication-no-search-results.html  -->
+
+	
+ 
+
+ 
+ <div class="publication-grid-item" >
+	
+		<div class="publication-grid-inner">
+		
+			<div class="publication-grid-approval"><span><i class="lnr lnr-warning"></i>Waiting for approval</span></div>
+		
+			<div class="publication-grid-wrapper">
+			<span class="publication-grid-journal">AER/American Economics Review</span>
+			<span class="publication-grid-date">DECEMBER 2016</span>
+			
+			<a class="publication-grid-title publication-view-link">
+			
+			<span class="pub-title-zh">
+			
+			側経意責家方家閉討店暖育田庁載社転線宇
+			
+			</span>
+			
+			<span>
+			What is the smallest thing in the universe, and where is it in this universe?
+			</span>
+			
+			
+			</a>			<span class="publication-grid-author">By Albert Einstein</span>
+			
+			<div class="publication-grid-links">
+			
+				<a>SUMMARY</a>
+				<a>FULL ARTICLE</a>
+				<a>CITED BY 24</a>
+				<a>READ BY 24</a>
+			
+			</div>
+			
+			<div class="publication-grid-btns">
+			
+				<span class="publication-grid-mark-add-btn">Mark As Read</span>
+				<span class="publication-grid-mark-add-btn right-btn">Add to Reading List</span>
+				
+			
+			</div>
+		
+		
+		</div>
+		</div>
+	
+	
+</div>
+
+ <div class="publication-grid-item" >
+	
+	<div class="publication-grid-inner">
+		
+			<div class="publication-grid-wrapper">
+			<span class="publication-grid-journal">American Economics Review</span>
+			<span class="publication-grid-date">DECEMBER 2016</span>
+			
+
+			<a class="publication-grid-title publication-view-link">
+			
+			<span class="pub-title-zh">
+			
+			側経意責家方家閉討店暖育田庁載社転線宇
+			
+			</span>
+			
+			<span>
+			What is the smallest thing in the universe, and where is it in this universe?
+			</span>
+			
+			
+			</a>
+			<span class="publication-grid-author">By Albert Einstein</span>
+			
+			<div class="publication-grid-links">
+			
+				<a>SUMMARY</a>
+				<a class="non-active-pub-link">FULL ARTICLE</a>
+				<a>CITED BY 24</a>
+				<a>READ BY 24</a>
+			
+			</div>
+			
+			<div class="publication-grid-btns">
+			
+				<span class="publication-grid-mark-add-btn">Mark As Read</span>
+				<span class="publication-grid-remove-btn right-btn">Remove from Reading List</span>
+				
+			
+			</div>
+		
+		
+		</div>
+		</div>
+	
+	
+</div>
+
+<div class="publication-grid-item" >
+	
+	<div class="publication-grid-inner">
+		
+			<div class="publication-grid-wrapper">
+			<span class="publication-grid-journal">American Economics Review</span>
+			<span class="publication-grid-date">DECEMBER 2016</span>
+			
+			<a class="publication-grid-title publication-view-link">
+			
+			<span class="pub-title-zh">
+			
+			側経意責家方家閉討店暖育田庁載社転線宇
+			
+			</span>
+			
+			<span>
+			What is the smallest thing in the universe, and where is it in this universe?
+			</span>
+			
+			
+			</a>			<span class="publication-grid-author">By Albert Einstein</span>
+			
+			<div class="publication-grid-links">
+			
+				<a>SUMMARY</a>
+				<a>FULL ARTICLE</a>
+				<a>CITED BY 24</a>
+				<a>READ BY 24</a>
+			
+			</div>
+			
+			<div class="publication-grid-btns">
+			
+				<span class="publication-grid-read-btn">Read <i class="lnr lnr-checkmark-circle"></i></span>
+				
+				
+			
+			</div>
+		
+		
+		</div>
+		</div>
+	
+	
+</div> 
+
+<div class="publication-grid-item" >
+	
+	<div class="publication-grid-inner">
+		
+			<div class="publication-grid-wrapper">
+	
+			<div class="pub-last-grid">
+			<p>Can't find what you are looking for.</p>
+			<p style="font-family: 'OpenSans-Regular'">Help us grow our publications database by submitting the publication you couldn't find</p>
+			</div>
+			
+			
+			<div class="publication-grid-btns">
+			
+				<a class="publication-grid-read-btn">+ ADD NEW PUBLICATION</a>
+				
+			
+			</div>
+		
+		
+		</div>
+		</div>
+	
+	
+</div> 
+
+
+
+
+
+
+
+
+
+  
+   	</div>	
+	
+	<footer></footer>
+
+</body>
+
+<script>
+
+$( "header" ).load( "welcome-header.html" ); 
+$( "footer" ).load( "footer.html" );
+$( ".no-search-results-toto" ).load( "parts/publication-no-search-results.html" );
+
+
+
+</script>
+<script src="js/masonry-scripts.js"></script>
+<script src="js/myjavascript.js"></script>
+
+
+
+
+

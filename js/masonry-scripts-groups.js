@@ -6,6 +6,12 @@ $('.square-grids').masonry({
   gutter: 20
 });
 
+$('.square-grids-session').masonry({
+  itemSelector: '.session-grid-item',
+  percentPosition: true,
+  gutter: 20
+});
+
 
 
  $('a[data-toggle=tab]').each(function () {
@@ -15,6 +21,12 @@ $('.square-grids').masonry({
         
            $('.square-grids').masonry({
 				itemSelector: '.my-document-grid-item',
+				percentPosition: true,
+				gutter: 20
+			});
+			
+			 $('.square-grids-session').masonry({
+				itemSelector: '.session-grid-item',
 				percentPosition: true,
 				gutter: 20
 			});

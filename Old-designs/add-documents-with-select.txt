@@ -1,0 +1,18 @@
+<div class="list add-top-collection-holder-select">
+  
+							<div class="add-top-collection-row-select">
+								<input id="Private00" type="radio" name="select-document-discussion" value="Admin">
+								<label class="radio-label" for="Private00"></label>
+								<img src="img/profile1.jpg" />
+								<p class="name">Moving to music is an essential human pleasure particularly related to musical groove</p>
+								
+							</div>
+							
+							<div class="add-top-collection-row-select">
+								<input id="Public00" type="radio" name="select-document-discussion" value="Collaborator">
+								<label class="radio-label" for="Public00"></label>
+								<img src="img/profile1.jpg" />
+								<p class="name">Moving to music is an essential human pleasure particularly related to musical groove</p>
+								
+							</div>
+  </div>

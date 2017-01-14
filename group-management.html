@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Jijitang Fron End Development</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -26,14 +26,15 @@
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
 <script src="js/jquery.validate.min.js"></script>
-<script src="js/zebra_datepicker.js"></script>
+
 <script src="js/jquery.hotkeys.js"></script>
 <script src="js/bootstrap-wysiwyg.js"></script>
 <script src="js/collection-script.js"></script>
 <script src="js/follow-script.js"></script>
-<script src="js/project-discussion.js"></script>
-<script src="js/project-invitation.js"></script>
-<script src="js/project-management-top.js"></script>
+<script src="js/groups-discussion.js"></script>
+<script src="js/sessions-form.js"></script>
+<script src="js/groups-invitation.js"></script>
+<script src="js/groups-management-top.js"></script>
 <script src="js/masonry.js"></script>
 
 
@@ -45,6 +46,71 @@
 
 
 </head>
+
+<script>
+
+$(document).ready(
+
+
+
+function(){
+
+	 $('.group-attachement-wrapper').on('click', '.group-attachement-delete', function(){
+	 	
+	 $(this).parent().remove()
+   
+	});
+
+
+  $('#submit-document-to-discussion-btn').click(
+    function(){
+
+   
+
+      if ($('input[name=select-document-discussion]:checked').length) {
+	  
+			$(".group-attachement-wrapper").children('.group-attachement-holder').remove();
+	  
+			var title = $('input[name=select-document-discussion]:checked').siblings('.to-submit-document-title').text();
+			var author = $('input[name=select-document-discussion]:checked').siblings('.to-submit-document-author').text();
+			var category = $('input[name=select-document-discussion]:checked').siblings('.to-submit-document-category').text();
+			var date = $('input[name=select-document-discussion]:checked').siblings('.to-submit-document-publish-date').text();
+			var imagepath = $('input[name=select-document-discussion]:checked').siblings('img').attr("src");
+          
+          $(".group-attachement-wrapper").append("<div id='document-to-attach-content' class='group-attachement-holder'><span class='lnr lnr-cross group-attachement-delete'></span><img class='group-attachement-img' src='"+imagepath+"' /><p class='group-attachement-title'>"+title+"</p><p class='group-attachement-meta' ><span class='to-attach-document-author'>"+author+"</span><span class='to-attach-document-category'>"+category+"</span><span class='to-attach-document-publish-date'>"+date+"</span></p></div>");
+		  
+		  $('#add-document-to-collection-popup').modal('hide');
+		  documents
+		  
+		  
+			$('#group-management-tab a[href="#discussions"]').tab('show');
+			
+		  
+		  if(!$("#discussion-content-input").val()) {
+		  
+		  $("#discussion-content-input").val('Just added a document. Take a look.');
+		  
+		  $('#add-discussion-btn').removeAttr('disabled');
+		  
+		  }
+		 
+			}
+      else {
+           
+           $('.no-document-selected-error').addClass("show-document-selected-error");
+		   
+      }
+    }
+  );
+}
+);
+
+
+
+</script>
+
+
+
 
 		
 		<style>
@@ -196,6 +262,361 @@ cursor: pointer;
 
 <body>
 
+<div id="create-session-modal" class="modal hide fade sign-modals" tabindex="-1" style="top: 96%" >
+
+	<form class="create-session-form" >
+	
+		<div class="box row-fluid">	
+			
+			<div class="step">
+			
+		
+			 <div class="modal-header">
+ 
+ <p>NEW SESSION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ 
+  <div class="modal-body">
+   	
+		
+				
+						<div class="input-group user-field-group" >
+					
+					<label class="group-label">Session Title</label>
+					
+					<input class="form-control" name="sessiontitle" placeholder="Session Title">
+				
+				</div>
+				
+				<hr class="user-sep-line">
+				
+				
+								<div class="input-group user-field-group" >
+					
+					<label class="group-label">Session Type</label>
+					
+					<select name="sessiontype" class="form-control">
+						<option value="">SELECT</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+						</select>
+				</div>
+				
+				<hr class="user-sep-line">
+				
+						<div class="input-group user-field-group" >
+					
+					<label class="group-label">Research Field</label>
+					
+					<select name="sessionfield" class="form-control">
+						<option value="">SELECT</option>
+						<option value="Economics">Economics</option>
+						<option value="Natural Sciences">Natural Sciences</option>
+						
+						</select>
+				</div>
+				
+					<hr class="user-sep-line">
+				
+					<div class="input-group user-field-group" >
+					
+					<label class="group-label" style="display: block !important; width: 100% !important">Session Time</label>
+					
+					<div class="session-time-holder">
+					
+					<div class="session-date-picker-holder">
+					<input name="sessionstarttime" type="date" placeholder="From" class="form-control session-from-date">
+					</div>
+					
+					<div class="session-date-picker-holder">
+					<input name="sessionendtime" type="date" placeholder="To" class="form-control session-to-date">
+					</div>
+					
+					<div class="session-time-zone-holder">
+					
+					<select>
+					<option value="GMT8">GMT +8</option>
+					<option value="GMT7">GMT +7</option>
+					</select>
+					
+					</div>
+					
+					</div>
+				</div>
+				
+				<hr class="user-sep-line">
+				
+				<div class="input-group user-field-group" >
+					
+					<label class="group-label">Invite Another Researcher to Host</label>
+					
+					<div class="invitees-invite-holder">
+					
+					<input class="form-control" name="projecttitle" placeholder="Search Researcher by Email or Phone">
+					<span class="lnr lnr-magnifier invitees-search-icon"></span>
+					
+					</div>
+					
+					<div class="session-invitees-list">
+					
+					<div class="session-invitee-item">Brahim Senhaji <span class="tag-delete lnr lnr-cross"></span></div>
+					
+					</div>
+					
+					<div class="member-search-results"></div>
+					
+					
+				
+				</div>
+				
+				
+				
+				<hr class="user-sep-line" style="margin-top: 0px">
+				
+				<label class="group-label">Description</label>
+				
+				<div class="input-group">
+			
+					<textarea placeholder="Session Description"></textarea>
+			
+				</div>
+				
+				<hr class="user-sep-line" style="margin-top: 0px">
+			
+				<label class="group-label">Keywords</label>
+		
+			<div class="input-group keywords-group " >
+				
+				<input type="text" class="create-project-keywords-input" id="session-keywords" placeholder="Type Project Keywords"/>
+				<a  id="add-interests-session-btn" class="new-small-button new-black-btn">Add</a>
+				<div class="session-keyword-list">
+				
+				</div>
+				</div>
+				
+				<hr class="user-sep-line">
+			
+				<div class="input-group project-radio-box">
+				
+					<label class="group-label">Privacy*</label>
+					
+					<div class="radio session-privacy-radio">
+						<div class="radio-section-holder">
+						<input id="session-Private" type="radio" name="session-privacy" value="Private" checked >
+						<label class="radio-label" for="session-Private">Private</label>
+						<span>Share Link: www.jijitang.com</span>
+						</div>
+						
+						<div class="radio-section-holder">
+						<input id="session-Public" type="radio" name="session-privacy" value="Public">
+						<label class="radio-label" for="session-Public">Public</label>
+						<span>Allow All Researchers to register</span>
+						</div>
+					</div>
+					
+				</div>
+			
+			</div>
+		
+		
+			</div>
+			
+			<div class="step">
+			
+			
+		
+		 <div class="modal-header">
+ 
+ <p>BASIC INFORMATION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+ 
+  <div class="modal-body">
+    	
+				<label class="group-label">Availability</label>
+				
+				<div class="radio session-privacy-radio">
+						<div class="radio-section-holder">
+						<input id="session-unlimited" type="radio" name="session-availability" value="Private" checked >
+						<label class="radio-label" for="session-unlimited">Unlimited</label>
+						<span>Anyone can register</span>
+						</div>
+						
+						<div class="radio-section-holder">
+						<input id="session-limited" type="radio" name="session-availability" value="Public">
+						<label class="radio-label" for="session-limited">Limited Spots</label>
+						<div class="input-group number-researchers-holder" >
+						<input type="number" value="1"/>
+						<p>How many researchers can join your group</p>
+						</div>
+						</div>
+					</div>
+			
+			
+			<hr class="user-sep-line">
+		
+			<label class="group-label">Fees & Registration</label>
+				
+				<div class="radio session-privacy-radio">
+						<div class="radio-section-holder">
+						<input id="session-free" type="radio" name="session-fees" value="Private" checked >
+						<label class="radio-label" for="session-free">Free Session</label>
+						<span></span>
+						</div>
+						
+						<div class="radio-section-holder">
+						<input id="session-paid" type="radio" name="session-fees" value="Public">
+						<label class="radio-label" for="session-paid">Paid Session</label>
+						<div class="input-group number-researchers-holder" >
+						<input type="text" value="1"/>
+						<p>Per Spot</p>
+						</div>
+						</div>
+						
+						<div class="radio-section-holder">
+						<input id="session-paid2" type="radio" name="session-fees" value="Public">
+						<label class="radio-label" for="session-paid2">Paid Session</label>
+						<div class="input-group number-researchers-holder" >
+						<input type="text" value="1"/>
+						<span style="font-size: 12px ">Per Session. The price/spot will vary depending on how many researchers register.</span>
+						<p></p>
+						</div>
+						</div>
+						
+					</div>
+				
+			<hr class="user-sep-line">
+			
+			
+		
+			<label class="group-label">Fees & Registration</label>
+			
+			<div class="session-time-registration-holder">
+					
+					<div class="session-date-picker-holder">
+					<input type="text" name="sessionregfrom" placeholder="From" class="form-control registration-from-date">
+					</div>
+					
+					<div class="session-date-picker-holder">
+					<input type="text" name="sessionregto" placeholder="To" class="form-control registration-to-date" style="border-right: 0px !important">
+					</div>
+			</div>
+			
+			<div class="radio session-privacy-radio" style="margin-top: 75px;">
+						<div class="radio-section-holder">
+						<input id="session-limited-attentance" type="radio" name="session-attendance" value="Private" checked >
+						<label class="radio-label" for="session-limited-attentance">Manually accept those you want attend your session</label>
+						<span></span>
+						</div>
+						
+						<div class="radio-section-holder">
+						<input id="session-open-attendance" type="radio" name="session-attendance" value="Public">
+						<label class="radio-label" for="session-open-attendance">Anyone can attend</label>
+						
+						</div>
+						
+						
+					</div>
+				
+		
+				
+			<hr class="user-sep-line">
+			
+  		
+		
+		<label class="group-label team-member-label">Prompt Code</label>
+		
+		
+		<div class="input-group number-researchers-holder" >
+		
+		<p>Prompt code for free attendance</p>
+		<input style="margin-left: 20px; width: 75px" type="text"/>
+		</div>
+
+	      </div>
+
+	  	
+			</div>
+			
+
+
+					 <div class="controls modal-btn-holder multi-step-btn-holder">
+					 
+					<button type="button" class="action next  new-black-back-btn big-long-btns multistep-btns regis-form-next" style="margin-left: 0px !important; margin-right: 0px !important">NEXT</button>
+					<button type="button" class="action btn-hot text-capitalize  submit  new-black-back-btn big-long-btns multistep-btns" style="margin-left: 0px !important; margin-right: 0px !important">CREATE SESSION</button>
+					
+			</div>
+			 		
+
+		</div>
+		
+	 
+	</form> 
+		  
+		  
+</div>
+
+<div id="close-group-modal" class="modal hide fade sign-modals" tabindex="-1">
+
+	 <div class="modal-header">
+ 
+ <p>CLOSE GROUP</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+
+  <div class="modal-body zero-margin" >
+   
+	 <p class="member-cancel-actions-text">Are you sure you want to close this group ?</p>
+	
+  </div>
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >NO</button>
+					<button type="submit" class="new-small-button new-black-back-btn big-long-btns " >YES</button>
+					
+    
+  </div>
+  
+</div>
+
+
+<div id="leave-group-modal" class="modal hide fade sign-modals" tabindex="-1">
+
+	 <div class="modal-header">
+ 
+ <p>LEAVE GROUP</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+
+  <div class="modal-body zero-margin" >
+   
+	 <p class="member-cancel-actions-text">Are you sure you want to leave this group ?</p>
+	
+  </div>
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >NO</button>
+					<button type="submit" class="new-small-button new-black-back-btn big-long-btns " >YES</button>
+					
+    
+  </div>
+  
+</div>
+
 <!-- Add member pop us -->
 
 <div id="add-document-to-collection-popup" class="modal hide fade sign-modals" tabindex="-1" style="top: 54%" >
@@ -204,13 +625,15 @@ cursor: pointer;
 
 			 <div class="modal-header">
  
- <p>ADD DOCUMENTS TO COLLECTION</p>
+ <p>ADD DOCUMENTS TO DISCUSSION</p>
  <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
  <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
  
  </div>
  
 <div class="modal-body" style="margin-top: 0px !important">
+
+<div class="no-document-selected-error" >Please Select a Document to Attach</div>
 		
 	<!--	<div class="empty-add-top-collection">
 		
@@ -220,31 +643,45 @@ cursor: pointer;
 		
 		</div> -->
 		
+	
+		
 		     <div id="users">
+			 
+			
  
  <div class="full-width-search-holder add-to-collection-search-input">
  <input class="search" placeholder="Search Documents" />
  <button><i class="lnr lnr-magnifier"></i></button>
   </div>
 
-  <div class="list add-top-collection-holder">
+  <div class="list add-top-collection-holder-select">
   
-  			<div class="add-top-collection-row"><img src="img/profile1.jpg" /><p class="name">Moving to music is an essential human pleasure particularly related to musical groove</p><span class="fa fa-check collection-select-check"></span></div>
-			<div class="add-top-collection-row"><img src="img/profile2.jpg" /><p class="name">Moving to music is an essential human pleasure.</p> <span class="fa fa-check collection-select-check collection-selected"></span></div>
-			<div class="add-top-collection-row"><img src="img/profile3.jpg" /><p class="name">Moving to music.</p> <span class="fa fa-check collection-select-check collection-selected"></span></div>
-			<div class="add-top-collection-row"><img src="img/profile4.jpg" /><p class="name">Moving to music is an essential human pleasure particularly related.</p><span class="fa fa-check collection-select-check collection-selected"></span></div>
-			<div class="add-top-collection-row"><img src="img/profile1.jpg" /><p class="name">Moving </p> <span class="fa fa-check collection-select-check"></span></div>
-  
-	
+							<div class="add-top-collection-row-select">
+								<input id="document1" type="radio" name="select-document-discussion">
+								<label class="radio-label" for="document1"></label>
+								<img src="img/profile1.jpg" />
+								<p class="to-submit-document-title name">Moving to music is an essential human pleasure particularly related to musical groove</p>
+								<span class="to-submit-document-author hidden-value">brahim senhaji</span>
+								<span class="to-submit-document-category hidden-value">geology</span>
+								<span class="to-submit-document-publish-date hidden-value">12/01/2015</span>
+								
+							</div>
+							
+							<div class="add-top-collection-row-select">
+								<input id="document2" type="radio" name="select-document-discussion">
+								<label class="radio-label" for="document2"></label>
+								<img src="img/profile2.jpg" />
+								<p class="to-submit-document-title name">This is a second test article title</p>
+								<span class="to-submit-document-author hidden-value">Albert Einstein</span>
+								<span class="to-submit-document-category hidden-value">Physics</span>
+								<span class="to-submit-document-publish-date hidden-value">12/01/2015</span>
+								
+							</div>
   </div>
-  
-  
- 
-  
+    
 </div>
 
-		
-		<button data-dismiss="modal" class="new-small-button new-black-btn big-long-btns full-width   middle-button" >CLOSE</button>
+		<button id="submit-document-to-discussion-btn" class="new-small-button new-black-btn big-long-btns full-width   middle-button" >ADD</button>
 		
 		</div>
 	
@@ -341,7 +778,7 @@ cursor: pointer;
 						<input id="Public" type="radio" name="privacy" value="Collaborator">
 						<label class="radio-label" for="Public">Collaborator</label>
 						<p>can follow and contribute to discussions and add publications</p>
-					</div>
+		</div>
     
 	
           
@@ -371,7 +808,7 @@ cursor: pointer;
 		
 			 <div class="modal-header">
  
- <p>EDIT PROJECT</p>
+ <p>EDIT GROUP</p>
  <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
  <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
  
@@ -383,7 +820,7 @@ cursor: pointer;
   
  
 		
-			    <label class="group-label">Project Title*</label>
+			    <label class="group-label">Group Name*</label>
 			
 				<div class="input-group">
 			
@@ -406,7 +843,7 @@ cursor: pointer;
 				
 				<hr class="user-sep-line">
 				
-				<label class="group-label">Research Type*</label>
+				<label class="group-label">Group Type*</label>
 				<div class="input-group edit-field-input-group" >
 				
 					<select id="project-type" class="form-control user-form-select">
@@ -417,25 +854,6 @@ cursor: pointer;
 						</select>
 				</div>
 				
-				<hr class="user-sep-line">
-				
-				<label class="group-label">Project Duration*</label>
-			
-				<div class="input-group-clear">
-				
-				<div class="input-group half-input-left">
-                
-                    <input placeholder="start" class="form-control" type="text" placeholder="Project Start" value="01/06/2016" name="datepickerstart" id="datepickerstart">
-                
-				</div>
-				
-				<div class="input-group half-input-right">
-                
-                    <input placeholder="end" class="form-control" type="text" placeholder="Project Start" value="01/06/2017" name="datepickerend" id="datepickerend">
-                
-				</div>
-				
-				</div>
 				
 				<hr class="user-sep-line" style="margin-top: 0px">
         
@@ -449,7 +867,21 @@ cursor: pointer;
 						<input id="Publictt" type="radio" name="privacytt" value="Public">
 						<label class="radio-label" for="Publictt">Public</label>
 					</div>
+			
 				</div>
+				
+				<hr class="user-sep-line">
+		
+		<label class="group-label team-member-label">Type of Members</label>
+		
+		<div class="radio team-member-radio">
+						<input id="Private-group" type="radio" name="group-privacy" value="Admin" checked="">
+						<label class="radio-label" for="Private-group">Other researchers cannot apply to join your group</label>
+						
+						<input id="Public-group" type="radio" name="group-privacy" value="Collaborator">
+						<label class="radio-label" for="Public-group">Other researchers can apply to join your group</label>
+						
+		</div>
 	</div>
 	
 					 <div class="controls modal-btn-holder">
@@ -471,7 +903,7 @@ cursor: pointer;
 
 		 <div class="modal-header">
  
- <p>EDIT PROJECT</p>
+ <p>EDIT GROUP</p>
  <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
  <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
  
@@ -483,19 +915,11 @@ cursor: pointer;
 		
 				<label class="group-label">Description</label>
 			
-				<div class="new-editor-wrapper">
-  
-	
-					<div id="alerts"></div>
-	
-  
-	
-						<div class="editor-inner-holder">
-							<div id="editor">
-									by nutrient signalling remains enigmatic in photosynthetic plants by nutrient signalling remains enigmatic in photosynthetic plants by nutrient signalling remains enigmatic in photosynthetic plants
-							</div>
-							</div>
-						</div>
+				<div class="input-group" >
+			
+					<textarea placeholder="Group Description">by nutrient signalling remains enigmatic in photosynthetic plants by nutrient signalling remains enigmatic in photosynthetic plants by nutrient signalling remains enigmatic in photosynthetic plants</textarea>
+			
+				</div>
 		
 			<hr class="user-sep-line">
 			
@@ -514,14 +938,14 @@ cursor: pointer;
 				
 				</div>
 				</div>
-
+				
 	      </div>
 
 			 <div class="controls modal-btn-holder">
 				
-				<button type="submit" class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
-				<button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
 				
+				<button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
+				<button type="submit" class="new-small-button new-black-back-btn big-long-btns   middle-button" >SUBMIT</button>
 					
 			</div>
 
@@ -753,16 +1177,16 @@ cursor: pointer;
                             </div>-->
                         
 						
-						<a class="tag-article">Biology</a>
-						<a class="tag-article">Chemistery</a>
-						<a class="tag-article">IT</a>
-						<a class="tag-article">Computer Science</a>
-						<a class="tag-article">History</a>
-						<a class="tag-article">Javascript</a>
-						<a class="tag-article">Biology</a>
-						<a class="tag-article">Chemistery</a>
-						<a class="tag-article">IT</a>
-						<a class="tag-article">Computer Science</a>
+							<a class="tag-article">Biology</a>
+							<a class="tag-article">Chemistery</a>
+							<a class="tag-article">IT</a>
+							<a class="tag-article">Computer Science</a>
+							<a class="tag-article">History</a>
+							<a class="tag-article">Javascript</a>
+							<a class="tag-article">Biology</a>
+							<a class="tag-article">Chemistery</a>
+							<a class="tag-article">IT</a>
+							<a class="tag-article">Computer Science</a>
 							<a class="tag-article">History</a>
 							<a class="tag-article">Javascript</a>
 						
@@ -772,27 +1196,31 @@ cursor: pointer;
 						<div class="dash-left-sec-div-footer"><a>SEE ALL</a></div> 
 					
 					
-						<div class="leave-group"><a>LEAVE GROUP</a></div>
-						<div class=" close-group"><a>CLOSE GROUP</a></div>
+						<div id="leave-group-btn" class="leave-group"><a>LEAVE GROUP</a></div>
+						<div id="close-group-btn" class=" close-group"><a>CLOSE GROUP</a></div>
                 
-                	
-                        
-                    
-                        
-                
+           
                 </div>
                 
                 <div class="dashbord-content-right" >
 				
+				<div class="group-session-banner-holder" style="background: url(img/myback.jpg); background-size: cover">
+				<div class="group-session-banner-holder-footer-layer"></div>
+				<div id="countdown" data-wow-delay=".3s" data-date="SEP 22, 2016 06:00:00"></div>
+				<div class="group-session-banner-holder-footer">
+				<p>This is Session Title</p>
+				<span>15 People are attenting</span>
+				</div>
+				
+				</div>
+				
 				   <div  class="groups-tabs-holder" >
          
-					<ul class="nav nav-tabs"  role="tablist">
-						<li role="presentation" class="active"><a href="#discussions" aria-controls="home" role="tab" data-toggle="tab">DISCUSSIONS</a></li>
-						<li role="presentation" class=""><a href="#documents" aria-controls="profile" role="tab" data-toggle="tab">DOCUMENTS</a></li>
-						<li role="presentation" class=""><a href="#sessions" aria-controls="sessions" role="tab" data-toggle="tab">SESSIONS</a></li>
-						
-
-						</ul>
+					<ul id="group-management-tab" class="nav nav-tabs"  role="tablist">
+						<li role="presentation" class="active"><a href="#discussions" aria-controls="home" role="tab" data-toggle="tab">Discussions</a></li>
+						<li role="presentation" class=""><a href="#documents" aria-controls="profile" role="tab" data-toggle="tab">Documents</a></li>
+						<li role="presentation" class=""><a href="#sessions" aria-controls="sessions" role="tab" data-toggle="tab">Sessions</a></li>
+					</ul>
   
 				</div>
 				
@@ -804,8 +1232,6 @@ cursor: pointer;
 					
 					<div class="discussion-top-holder">
 					
-					<p class="discussions-top-label"><span class="fa fa-comments" ></span> Discussions</p>
-					
 						<div class="start-discussion-holder">
 							
 							<div class="discussions-profile-holder">
@@ -813,11 +1239,15 @@ cursor: pointer;
 							</div>
 							
 							<div class="discussions-text-holder">
-							<input id="discussion-title-input" class="discussion-post-validation" placeholder="Give your discussion a title" />
+							
 							<textarea id="discussion-content-input" class="discussion-post-validation" placeholder="Write your discussion"></textarea>
+							
+								<div class="group-attachement-wrapper"></div>
+							
 							<button id="add-discussion-btn" class="black-wide-btn right-float-btn discussion-box-btn" disabled="disabled">SEND MESSAGE</button>
-							<button class="set-up-session-group-btn discussion-box-btn">SET UP SESSION</button>
+							<button id="open-session-popup" class="set-up-session-group-btn discussion-box-btn">SET UP SESSION</button>
 							<button class="add-document-group-btn discussion-box-btn">ADD DOCUMENT</button>
+							
 							</div>
 						
 						</div>
@@ -835,13 +1265,12 @@ cursor: pointer;
 										<a class="discussion-post-picture"><img src="img/profile1.jpg" /></a>
 										<p class="discussion-post-author"><a>Brahim Senhaji</p></a>
 										<p class="discussion-post-time">September 28 | 12:33 A.M</p>
-										<button class="discussion-toggle-btn white-wide-btn discussion-btn-hidden"></button>
+										
 										
 									</div>
 									
-									<p class="discussion-post-title"> Nice article I would like ask you the question of how did you get to this conclusion</p>
 									
-									<p class="discussion-post-excerpt">	positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure</p>
+									
 								
 								</div>
 								<div class="discussion-post-content">
@@ -855,12 +1284,124 @@ cursor: pointer;
 									
 									<div class="discussion-post-content-footer">
 									
-										<span class="discussion-comment-number"> 12 Replies</span> 
+										<span class="discussion-comment-number"> 12 Replies</span> . <span class="discussion-comment-reply-btn discussion-show-replies"></span>
 										
 									
 									</div>
 									
-									<div class="discussion-comments-holder">
+										<div class="group-attachement-holder group-attachement-on-discussion">
+												
+												<a href="new-article-view.html">
+												<img class="group-attachement-img" src="img/profile1.jpg" />
+												<p class="group-attachement-title"> Here goes our article title</p>
+												<p class="group-attachement-meta" ><span>Brahim Senhaji</span><span>Geology</span><span>12 September 2012</span></p>
+												</a>
+							
+										</div>
+									
+									<div class="discussion-comments-holder hidden-discussion-comment-section">
+									
+										<div class="discussion-comment-textarea">
+										
+											<textarea class="add-discussion-comment-textarea" placeholder="Share your thoughts on the discussion"></textarea>
+											<button class="black-wide-btn right-float-btn add-discussion-comment-btn">SEND</button>
+										
+										</div>
+										
+										<div class="discussion-comment-list">
+										
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												<div class="discussion-comment-edit-btns">
+												
+													<button class="black-wide-btn right-float-btn discussion-comment-edit-save" >SAVE</button>
+													<button class="red-wide-btn right-float-btn discussion-comment-edit-delete">DELETE</button>
+												
+												</div>
+												<a class="discussion-comment-edit">Edit</a>
+											
+											
+											
+											</div>
+										
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+												
+											
+											</div>
+											
+											<div class="discussion-comment-row">
+											
+												<a><img src="img/brahim.png" /></a>
+												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
+												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
+											
+											
+											</div>
+										<div class="discussion-see-more-comments">See More Replies</div>
+										
+										</div>
+									
+									
+									</div>
+									
+								</div>
+							
+							
+							</div>
+							
+							<div class="discussion-post">
+							
+								<div class="discussion-post-header">
+								
+									<div class="discussion-post-meta">
+
+										<a class="discussion-post-picture"><img src="img/profile1.jpg" /></a>
+										<p class="discussion-post-author"><a>Brahim Senhaji</p></a>
+										<p class="discussion-post-time">September 28 | 12:33 A.M</p>
+										
+										
+									</div>
+									
+									
+									
+								
+								</div>
+								
+								
+								<div class="discussion-post-content">
+								
+									
+									<p class="discussion-post-text">
+									
+									positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure
+									
+									</p>
+									
+									<div class="discussion-post-content-footer">
+									
+										<span class="discussion-comment-number"> 12 Replies</span> . <span class="discussion-comment-reply-btn discussion-show-replies"></span>
+										
+									
+									</div>
+									
+									<div class="discussion-comments-holder hidden-discussion-comment-section">
 									
 										<div class="discussion-comment-textarea">
 										
@@ -924,117 +1465,23 @@ cursor: pointer;
 							
 							</div>
 							
-							<div class="discussion-post">
-							
-								<div class="discussion-post-header">
-								
-									<div class="discussion-post-meta">
-
-										<a class="discussion-post-picture"><img src="img/profile1.jpg" /></a>
-										<p class="discussion-post-author"><a>Brahim Senhaji</p></a>
-										<p class="discussion-post-time">September 28 | 12:33 A.M</p>
-										<button class="discussion-toggle-btn white-wide-btn discussion-btn-hidden"></button>
-										
-									</div>
-									
-									<p class="discussion-post-title"> Nice article I would like ask you the question of how did you get to this conclusion</p>
-									
-									<p class="discussion-post-excerpt">	positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure</p>
-								
-								</div>
-								<div class="discussion-post-content">
-								
-									
-									<p class="discussion-post-text">
-									
-									positive affect in music more broadly, but the function of syncopation in eliciting pleasure and body-movement in groove is unknown. Here we report results from a web-based survey which investigated the relationship between syncopation and ratings of wanting to move and experienced pleasure. Participants heard funk drum-breaks with varying degrees of syncopation and audio entropy, and rated the extent to which the drum-breaks made them want to move and how much pleasure they experienced. While entropy was found to be a poor predictor of wanting to move and pleasure, the results showed that medium degrees of syncopation elicited the most desire to move and the most pleasure
-									
-									</p>
-									
-									<div class="discussion-post-content-footer">
-									
-										<span class="discussion-comment-number"> 12 Replies</span> 
-										
-									
-									</div>
-									
-									<div class="discussion-comments-holder">
-									
-										<div class="discussion-comment-textarea">
-										
-											<textarea class="add-discussion-comment-textarea" placeholder="Share your thoughts on the discussion"></textarea>
-											<button class="black-wide-btn right-float-btn add-discussion-comment-btn">SEND</button>
-										
-										</div>
-										
-										<div class="discussion-comment-list">
-										
-											<div class="discussion-comment-row">
-											
-												<a><img src="img/brahim.png" /></a>
-												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
-												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
-												<div class="discussion-comment-edit-btns">
-												
-													<button class="black-wide-btn right-float-btn discussion-comment-edit-save" >SAVE</button>
-													<button class="red-wide-btn right-float-btn discussion-comment-edit-delete">DELETE</button>
-												
-												</div>
-												<a class="discussion-comment-edit">Edit</a>
-											
-											</div>
-											
-											<div class="discussion-comment-row">
-											
-												<a><img src="img/brahim.png" /></a>
-												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
-												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
-												
-											
-											</div>
-											
-											<div class="discussion-comment-row">
-											
-												<a><img src="img/brahim.png" /></a>
-												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
-												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
-												
-											
-											</div>
-											
-											<div class="discussion-comment-row">
-											
-												<a><img src="img/brahim.png" /></a>
-												<p class="discussion-comment-meta"><a class="discussion-comment-name">Brahim Senhaji</a><span class="discussion-comment-date">September 18 | 13:54 A.M</span></p>
-												<p class="discussion-comment-text">Nice article I would like to learn more how did you get to these concultions</p>
-											
-											
-											</div>
-										
-										</div>
-									
-									<div class="discussion-see-more-comments">See More Replies</div>
-									</div>
-									
-								</div>
-							
-							
-							</div>
-							
 							 <div class="load-more-button" style="margin-top: 0px">LOAD MORE</div>
 						
 						</div>
 					
 					</div>
 					
-					<div class=" tab-pane" id="documents">
+					<div class="tab-pane" id="documents">
 					
 					  <div id="users">
  
- <div class="full-width-search-holder">
+ <div style="height: auto; overflow: hidden">
+ <div class="full-width-search-holder add-document-search-input">
  <input class="search" placeholder="Search Documents" />
  <button><i class="lnr lnr-magnifier"></i></button>
   </div>
+ <div class="add-document-holder add-document-group-btn"><button>+ <span class="hidden-phone">ADD DOCUMENT</span></button></div>
+ </div>
 
   <div class="list square-grids article-columns">
     <div class="square-grid-item my-document-grid-item">
@@ -1113,11 +1560,199 @@ cursor: pointer;
 					
 					</div>
 					
-					<div class=" tab-pane" id="sessions">
-					sessions
+					<div class=" tab-pane " id="sessions">
+					
+					<div id="users-2">
+					
+					 <div style="height: auto; overflow: hidden">
+ <div class="full-width-search-holder add-document-search-input">
+ <input class="search" placeholder="Search Sessions" />
+ <button><i class="lnr lnr-magnifier"></i></button>
+  </div>
+ <div class="add-document-holder add-document-group-btn" id="open-session-popup"><button>+ <span class="hidden-phone">ADD SESSION</span></button></div>
+ </div>
+					
+					<div class="list square-grids-session article-columns">
+							
+					<div class="session-grid-item square-grid-item ">
+						
+							<div class="session-update-header session-update-live">
+							
+								<span class="session-update-status">Live<span></span></span>
+								
+								<div class="fa fa-play session-update-status-content "></div>
+							
+							</div>
+							
+							<div class="session-update-title-holder">
+							
+								<a class="session-update-title">This is Session Title Chosen by the user</a>
+								
+								<a class="session-update-creator"><img src="img/profile2.jpg" />Donald Trump</a>
+							
+							</div>
+							
+							<div class="session-update-meta">
+							
+							<p class="session-update-types">
+							
+								<span>Geology</span>
+								<span>Class</span>
+								
+							</p>
+							
+							<p class="session-update-schedule">
+							
+								<span>14 Sep 2016</span>
+								<span>4 P.M - 5 P.M</span>
+							
+							</p>
+							
+							<p class="session-update-price-spots">
+							
+								<span>150 RMB</span>
+								<span>100 Spots</span>
+								<span class="session-update-spots-left">56 left</span>
+							
+							</p>
+							
+							<a class="session-update-broadcast">VIEW BROADCAST</a>
+							
+							</div>
+							
+							<div class="session-update-footer">
+							
+							<span>44 Registered</span>
+							
+							<span>10 Saved</span>
+							
+							<span>22 Feedback</span>
+							
+							</div>
+						
+						</div>
+						
+						<div class="session-grid-item square-grid-item ">
+						
+							<div class="session-update-header session-update-upcoming">
+							
+								<span class="session-update-status">Upcoming <span></span></span>
+								
+								
+								<div class="session-countdown session-update-status-content" data-wow-delay=".3s" data-date="OCT 22, 2016 06:00:00"></div>
+							
+							</div>
+							
+							<div class="session-update-title-holder">
+							
+								<a class="session-update-title">This is Session Title Chosen by the user</a>
+								
+								<a class="session-update-creator"><img src="img/profile1.jpg" /> Donald Trump</a>
+							
+							</div>
+							
+									<div class="session-update-meta">
+							
+							<p class="session-update-types">
+							
+								<span>Geology</span>
+								<span>Class</span>
+								
+							</p>
+							
+							<p class="session-update-schedule">
+							
+								<span>14 Sep 2016</span>
+								<span>4 P.M - 5 P.M</span>
+							
+							</p>
+							
+							<p class="session-update-price-spots">
+							
+								<span>150 RMB</span>
+								<span>100 Spots</span>
+								<span class="session-update-spots-left">56 left</span>
+							
+							</p>
+							
+							<a class="session-update-register">REGISTER</a>
+							
+							</div>
+							
+							<div class="session-update-footer">
+							
+							<span>44 Registered</span>
+							
+							<span>10 Saved</span>
+							
+							<span>22 Feedback</span>
+							
+							</div>
+						
+						</div>
+						
+							<div class="session-grid-item square-grid-item ">
+						
+							<div class="session-update-header session-update-closed">
+							
+								<span class="session-update-status">Closed <span></span></span>
+								
+								<div class="session-update-status-content">APRIL 7 / 8:00 P.M -9:00 P.M</div>
+							
+							</div>
+							
+							<div class="session-update-title-holder">
+							
+								<a class="session-update-title">This is Session Title Chosen by the user</a>
+								
+								<a class="session-update-creator"><img src="img/profile3.jpg" /> Donald Trump</a>
+							
+							</div>
+							
+							<div class="session-update-meta">
+							
+							<p class="session-update-types">
+							
+								<span>Geology</span>
+								<span>Class</span>
+								
+							</p>
+							
+							<p class="session-update-schedule">
+							
+								<span>14 Sep 2016</span>
+								<span>4 P.M - 5 P.M</span>
+							
+							</p>
+							
+						
+							
+							
+							
+							</div>
+							
+							<div class="session-update-footer">
+							
+							<span>44 Registered</span>
+							
+							<span>10 Saved</span>
+							
+							<span>22 Feedback</span>
+							
+							</div>
+						
+						</div>
+						
+						</div>
+					
 					</div>
 					
 					</div>
+					
+					</div>
+				
+					
+				
                 
 
 
@@ -1155,6 +1790,15 @@ var userList = new List('users', options);
 
 });
 
+$(document).ready(function() {
+var options = {
+  valueNames: [ 'session-update-title' ]
+};
+
+var userList = new List('users-2', options);
+
+});
+
 </script>
     
     
@@ -1164,7 +1808,7 @@ var userList = new List('users', options);
 
 $( "header" ).load( "header-jijitang.html" ); 
 $( "footer" ).load( "footer.html" );
-$( ".member-search-results" ).load( "parts/search-members-have-results.html" );
+//$( ".member-search-results" ).load( "parts/group-session-invitation-form.html" );
 
 
   
@@ -1172,6 +1816,48 @@ $( ".member-search-results" ).load( "parts/search-members-have-results.html" );
 </script>
 
 <script src="js/myjavascript.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
 <script src="js/masonry-scripts-groups.js"></script>
 <script src="js/list.js"></script>
+
+<script type="text/javascript">
+if ($('#countdown').length) { 
+			$('#countdown').countdown({
+				render: function(data) {
+					if (data.years >= 1) {
+						var $days =	(data.years*365)+data.days;
+					} else {
+						var $days = data.days;
+					}
+				  $(this.el).html(
+					  '<div class="day">' + this.leadingZeros($days) + ' <span>Days</span></div>'+
+					  '<div class="hour">' + this.leadingZeros(data.hours, 2) + ' <span>Hours</span></div>'+
+					  '<div class="min">' + this.leadingZeros(data.min, 2) + ' <span>Minutes</span></div>'+
+					  '<div class="sec">' + this.leadingZeros(data.sec, 2) + ' <span>Seconds</span></div>'
+				  );
+				}
+			});
+		}
+		
+if ($('.session-countdown').length) { 
+			$('.session-countdown').countdown({
+				render: function(data) {
+					if (data.years >= 1) {
+						var $days =	(data.years*365)+data.days;
+					} else {
+						var $days = data.days;
+					}
+				  $(this.el).html(
+					  '<div class="day">' + this.leadingZeros($days) + ' <span>Days</span></div>'+
+					  '<div class="hour">' + this.leadingZeros(data.hours, 2) + ' <span>Hours</span></div>'+
+					  '<div class="min">' + this.leadingZeros(data.min, 2) + ' <span>Minutes</span></div>'+
+					  '<div class="sec">' + this.leadingZeros(data.sec, 2) + ' <span>Seconds</span></div>'
+				  );
+				}
+			});
+		}
+		
+
+
+</script>
 

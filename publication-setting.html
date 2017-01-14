@@ -25,16 +25,15 @@
 <script src="js/bootstrap-modalmanager.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/jquery.popover-1.1.2.js"></script>
-<script src="js/jquery.json-2.4.min.js"></script>
 <script src="js/bootstrap-select.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/myform.js"></script>
+<script src="js/mydatepicker.js"></script>
 <script src="js/myjavascript.js"></script>
-<script src="js/text-length-script.js"></script>
 
 
 
 <style>
+
+
 
 .editor-all-tags {
 
@@ -66,131 +65,6 @@ border: 0px !important;
 
 </style>
 
-<script>
-
-$(function() {
-
-    $( "#datepickerstart" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-	  yearRange: "1985:2045"
-    });
-	
-	 $( "#datepickerend" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-	  yearRange: "1985:2045"
-    });
-  });
-  
-  
-  
-  $(document).ready(function(){
-  
-  $("#submit-publication").click(function() {
-  
-  
-	if($("#pub-title").val() == "" || $("#pub-publish-time").val() == "" || $("#pub-journal").val() == "" || $(".pub-author-list > div").length == 0 ){
-	
-		$(".publication-error").addClass("show-publication-error");
-		
-
-	}else{
-	var authorarray = [];
-	$('.pub-author-list').children('.editor-all-tags').each(function () {
-	authorarray.push($(this).children('.tag-text').text());
-    
-});
-	
-	
-	
-	$('#project-publications-modal').modal('hide');
-	$(".project-publications-holder").append(" <p class='project-single-publication'>"+authorarray+". ("+$("#pub-publish-time").val()+"). "+$("#pub-journal").val()+": "+$("#pub-title").val()+". "+$("#pub-link").val()+" <span class='publication-single-toolbar'><span  class='single-publication-edit icon-uniE605' ></span><span class='single-publication-delete icon-remove'></span></span></p>");
-
-	$("#pub-title").val("");
-	$("#pub-publish-time").val("");
-	$("#pub-journal").val("");
-	$("#pub-short-journal").val("");
-	$("#pub-link").val("");
-	$("#pub-journal").val("");
-	$(".pub-author-list").html("");
-	$(".publication-error").removeClass("show-publication-error");
-	
-	
-	}
-  
-		
-  
-
-  });
-  
-  });
-
-$(document).ready(function(){
-	
-
-	
-	
-	$("#add-interests-btn").click(function(e) {
-    
-           $(".project-keyword-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#project-keywords").val()+"</span><div class='tag-delete lnr lnr-cross'></div></div>");
-	   $("#project-keywords").val('')
-   
-});
-
-	 $('.project-keyword-list').on('click', '.tag-delete', function(){
-	 	
-	 $(this).parent().remove()
-   
-});
-	
-	
-	});
-	
-	$(document).ready(function(){
-	
-
-	
-	
-	$("#add-author-btn").click(function(e) {
-    
-           $(".pub-author-list").append(" <div class='editor-all-tags'><span class='tag-text'>"+$("#authors-list").val()+"</span><div class='tag-delete lnr lnr-cross'></div></div>");
-	   $("#authors-list").val('')
-   
-});
-
-	 $('.pub-author-list').on('click', '.tag-delete', function(){
-	 	
-	 $(this).parent().remove()
-   
-});
-	
-	
-	});
-	
-	
-	$(document).ready(function(){
-	
-
-	
-	
-	$("#project-add-pub-btn").click(function(e) {
-    
-       $(".project-publications-holder").append(" <p class='project-single-publication'>"+$("#project-publication-content").val()+"<span class='publication-single-toolbar'><span  class='single-publication-edit icon-uniE605' ></span><span class='single-publication-delete icon-remove'></span></span></p>");
-	   $("#project-publication-content").val('');
-	   
-    
-});
-
-
-
-
-
-	
-	
-	});
-	
-</script>
 
 
 
@@ -208,8 +82,34 @@ $(document).ready(function(){
 
 <body>
 
+<div id="success-pub-modal" class="modal hide fade sign-modals" tabindex="-1">
 
-	<div class="modal fade" id="project-publications-modal">
+	 <div class="modal-header">
+ 
+ <p>NEW PUBLICATION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+
+  <div class="modal-body zero-margin" >
+   
+	 <p class="member-cancel-actions-text">Your Publication has been successfully submitted.<br>We will let you know once it has been approved.</p>
+	
+  </div>
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >DONE</button>
+					
+					
+    
+  </div>
+  
+</div>
+
+
+	<div class="modal fade hide" id="project-publications-modal">
 	
 	<div class="modal-header">
  
@@ -235,12 +135,51 @@ $(document).ready(function(){
 					<input id="pub-short-journal" class="form-control"  placeholder="Journal Short Name">
 		</div>
 		
+		<label class="group-label">Publish Date</label>
+		
 		<div class="input-group">
 			
-					<input id="pub-publish-time" placeholder="Publish Year" class="form-control" type="date">
+		<div class="publication-date-filter" style="border-bottom: 15px solid #ecead4">
+								
+								
+								<div>
+								<select class="days"></select>
+								</div>
+								
+								<div class="pub-month-picker-holder">
+								<select class="months">
+								
+									<option value="1">January</option>
+									<option value="2">February</option>
+									<option value="3">March</option>
+									<option value="4">April</option>
+									<option value="5">May</option>
+									<option value="6">June</option>
+									<option value="7">July</option>
+									<option value="8">August</option>
+									<option value="9">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								
+								</select>
+								</div>
+								<div>
+								<select class="years"></select>
+								</div>
+								
+								</div>
 					
-					
+						<input id="doi-number" class="form-control"  placeholder="DOI Number">
+						<div class="doi-error">This journal already exists.</div>
+						
 		</div>
+		
+			<div class="input-group">
+			
+				
+					
+			</div>
 		
 		<hr class="user-sep-line">
 		
@@ -249,29 +188,51 @@ $(document).ready(function(){
 		<div class="input-group">
 			
 					<input id="pub-title" class="form-control"  placeholder="Title">
+		
+					<input id="pub-title-zh" class="form-control"  placeholder="Title in Chinese" style="margin-top: 20px; margin-bottom: 20px !important">
+		
 					
-					<div class="input-group keywords-group " style="margin-bottom: 0px !important; margin-top: 20px;" >
-				
-				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
-				<a  id="add-author-btn" class="new-small-button new-black-back-btn">Add</a>
-				<div class="pub-author-list"></div>
-				
-				</div>
+					<textarea placeholder="Write author names seperated by commas."></textarea>
 					
 		</div>
 		
 		<hr class="user-sep-line">
 		
-		<label class="group-label">Link to Full Article</label>
-		
+		<label class="group-label">Summary</label>
 		
 		<div class="input-group">
 			
-					<input id="pub-link" class="form-control"  placeholder="Link">
-					
-			
+					<textarea style="height: 120px !important"  class="form-control"  placeholder="Introduce your publication in 350 characters"></textarea>
+				
+				
+		</div>
+		
+		<label class="group-label">Keywords<span class="label-optional-span">(Optional)</span></label>
+		
+		<div class="input-group keywords-group " style="margin-bottom: 0px !important;" >
+				
+				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
+				<a  id="add-tags-btn" class="new-small-button new-black-back-btn add-to-list-btn">Add</a>
+				<div class="pub-tags-list">
+				
+				<div class="editor-all-tags"><span class="tag-text">Astronomy</span><div class="tag-delete lnr lnr-cross"></div></div>
+				
+				</div>
 					
 		</div>
+		
+		
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Link to Full Article<span class="label-optional-span">(Optional - Add link to page where others can find full articles.)</span></label>
+		<div class="input-group keywords-group " >
+				
+		<input  class="form-control"  placeholder="Link">
+
+					
+		</div>
+	
 			
 			
 			
@@ -381,8 +342,7 @@ In case you want to have a default text as a sort of placeholder/hint but not co
 
 $( "header" ).load( "header-jijitang.html" );
 $( "footer" ).load( "footer.html" );
-$( "#aside" ).load( "aside.html" );
-$( "#Entries" ).load( "Entries.html" );
+
 
 
   
