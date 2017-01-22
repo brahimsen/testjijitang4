@@ -2422,7 +2422,7 @@ margin-left: 0px !important;
 
 	float: right !important;
 	
-	width: 90px;
+	width: 140px;
 
 }
 
@@ -2442,7 +2442,7 @@ margin-left: 0px !important;
 }
 
 .nav-admin-holder {
-	margin-top: 40px;
+	margin-top: 38px;
 
 }
 
@@ -3363,7 +3363,7 @@ color: #666 !important;
 
 }
 
-.nav-admin-holder > li:nth-child(2) > a > span {
+.plus-drop-down-icon {
 	font-size: 18px !important;
 	margin-right: 15px;
 	font-weight: bold;
@@ -12348,6 +12348,10 @@ background: #F00; width: 12px; height: 12px; border-radius: 10px; float: left; m
 .nav-admin-holder {
 	right: 0px !important;
 	left: auto;
+	padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 0px;
+	border: 1px solid #ddd;
 }
 
 .nav-admin-holder > hr {
@@ -26048,7 +26052,7 @@ margin-right: 5% !important;
 
 .left-add-pub-btn {
 
-background: #a4ce4c !important;
+background: #dbb957 !important;
 color: #fff;
 text-decoration: none;
 padding-top: 15px;
@@ -26294,5 +26298,148 @@ font-family: "OpenSans-SemiBold";
 .pub-last-grid p {
 text-align: center;
 font-family: "OpenSans-SemiBold";
+
+}
+
+.publication-tag {
+
+background: #dbb957;
+color: #fff;
+position: absolute;
+top: 0px;
+right: 0px;
+padding: 10px;
+
+
+}
+
+.pub-categories-filter p {
+
+width: 100% !important;
+max-width: 100% !important;
+margin-right: 0px !important;
+
+}
+
+.coin-holder {
+
+right: 47px !important;
+
+}
+
+.coin-holder {
+
+padding-top: 20px;
+padding-bottom: 20px;
+height: 60px;
+
+
+}
+
+.coin-holder span {
+
+display: block;
+text-align: center;
+font-family: "OpenSans-SemiBold";
+padding-top: 5px;
+padding-bottom: 5px;
+
+}
+
+.coin-holder span:nth-child(1) {
+
+font-size: 14px !important;
+
+}
+
+.coin-holder span:nth-child(2) {
+
+font-size: 21px !important;
+display: inline-block;
+width: 50%;
+position: absolute;
+text-align: right;
+left: 0px;
+
+}
+
+.coin-holder span:nth-child(3) {
+
+font-size: 24px !important;
+display: inline-block;
+width: 50%;
+position: absolute;
+text-align: left;
+right: 0px;
+
+}
+
+.coin-holder span:nth-child(3) .lnr {
+
+font-size: 24px !important;
+margin-left: 5px;
+font-weight: bold;
+
+}
+
+.my-profile-coin {
+
+font-weight: bold;
+float: right;
+position: relative;
+
+}
+
+.my-profile-coin .lnr {
+
+	position: absolute;
+    top: 11px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 3px;
+
+}
+
+.dropdown-notif-span {
+
+color: #fff;
+background: red;
+display: inline-block !important;
+position: absolute;
+width: 20px !important;
+height: 20px !important;
+line-height: 20px !important;
+min-height: 20px !important;
+text-align: center;
+font-weight: bold;
+border-radius: 20px;
+
+
+}
+
+.publication-error-pop-body {
+
+text-align: center;
+
+
+}
+
+.publication-error-pop-body p:nth-child(1) {
+
+font-size: 16px;
+font-family: "OpenSans-SemiBold";
+padding-top: 30px;
+padding-bottom: 30px;
+
+
+}
+
+.publication-error-pop-body p:nth-child(3) {
+
+text-align: center;
+font-family: "OpenSans-Regular";
+padding-top: 30px;
+padding-bottom: 30px;
+
 
 }

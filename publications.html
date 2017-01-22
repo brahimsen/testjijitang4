@@ -69,6 +69,14 @@ $(".publication-view-link").click(function(){
 
 
 		});
+		
+$(".open-error-popup").click(function(){
+
+				
+				$("#error-report-modal").modal('show');
+
+
+		});
 	
 });
 
@@ -80,6 +88,26 @@ $(".publication-view-link").click(function(){
 
 
 <body style="background: #ecead4">
+
+	<div class="modal fade hide" id="error-report-modal" style="border-radius: 0px">
+	
+				 <div class="modal-header">
+ 
+					<p>REPORT ERROR/ISSUE</p>
+					<div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+					<span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+	</div>
+	
+	<div class=" publication-error-pop-body">
+	
+			<P>Scan QR Code in order to reach us</P>
+			<img src="img/scan-me.png" />
+			<p>Thank you for taking the time <br> to help us fix these issues</p>
+
+	</div>
+
+</div><!-- /.modal -->
 
 	<div class="modal fade hide" id="view-publications-modal" style="top: 75%">
 	
@@ -289,7 +317,7 @@ $(".publication-view-link").click(function(){
 			<div> 
 				<div class="articles-laft-inner hidden-phone hidden-tablet" >
 				
-								<a class="left-add-pub-btn">+ ADD NEW PUBLICATION</a>
+								<a class="left-add-pub-btn open-error-popup">+ ADD NEW PUBLICATION</a>
                         
                         		<div class="filter-top-header publication-page-top-filter">
                                 
@@ -330,7 +358,7 @@ $(".publication-view-link").click(function(){
 								</div>
 								
 								
-                                <div class="filter-categories">
+                                <div class="filter-categories pub-categories-filter">
                                 	
 									<h4>Journals</h4>
                                     
@@ -414,6 +442,8 @@ $(".publication-view-link").click(function(){
 	
 		<div class="publication-grid-inner">
 		
+			<div class="publication-tag">Published Article</div>
+		
 			<div class="publication-grid-approval"><span><i class="lnr lnr-warning"></i>Waiting for approval</span></div>
 		
 			<div class="publication-grid-wrapper">
@@ -462,6 +492,8 @@ $(".publication-view-link").click(function(){
  <div class="publication-grid-item" >
 	
 	<div class="publication-grid-inner">
+	
+			<div class="publication-tag">Working Paper</div>
 		
 			<div class="publication-grid-wrapper">
 			<span class="publication-grid-journal">American Economics Review</span>
@@ -511,6 +543,8 @@ $(".publication-view-link").click(function(){
 <div class="publication-grid-item" >
 	
 	<div class="publication-grid-inner">
+	
+			<div class="publication-tag">Jijitang Article</div>
 		
 			<div class="publication-grid-wrapper">
 			<span class="publication-grid-journal">American Economics Review</span>

@@ -6,9 +6,13 @@
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/popover.css" type="text/css" media="screen" />
 <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.css">
+<link href="../css/settings-page.css" rel="stylesheet" type="text/css">
+<link href="../css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="../css/bootstrap-modal.css" rel="stylesheet" type="text/css">
 
 
 <link href="styleadmin.css" rel="stylesheet" type="text/css">
+<link href="../style.css" rel="stylesheet" type="text/css">
 <link href="../mobile-fonts.css" rel="stylesheet" type="text/css">
 
 
@@ -17,17 +21,59 @@
 <script src="../js/bootstrap.js"></script>
 <script src="../js/bootstrap-popover.js"></script>
 <script src="../js/bootstrap-tooltip.js"></script>
+<script src="../js/bootstrap-modalmanager.js"></script>
+<script src="../js/bootstrap-modal.js"></script>
 <script src="../js/admin-script.js"></script>
 
 
 	
-	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" language="javascript" class="init">
 
 
 $(document).ready(function() {
+
 	$('#example').dataTable();
+	
+	$('#example2').dataTable();
+	
+	$(".edit-publication-btn").click(function(){
+
+				$("#edit-admin-publications-modal").modal('show');
+
+	});
+	
+	$(".add-admin-publication-btn").click(function(){
+
+				$("#new-admin-publications-modal").modal('show');
+
+	});
+	
+		$(".edit-journal-btn").click(function(){
+
+				$("#edit-journal-publications-modal").modal('show');
+
+	});
+	
+	$(".delete-journal-btn").click(function(){
+
+				$("#delete-journal-modal").modal('show');
+
+	});
+	
+	$(".delete-publication-btn").click(function(){
+
+				$("#delete-publication-modal").modal('show');
+
+	});
+	
+	
+	
+	
+		
 } );
+
+
 
 
 	</script>
@@ -51,6 +97,409 @@ $(document).ready(function() {
 
 <body>
 
+<div id="delete-journal-modal" class="modal hide fade sign-modals" tabindex="-1">
+
+	 <div class="modal-header">
+ 
+ <p>DELETE JOURNAL</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+
+  <div class="modal-body zero-margin" >
+   
+	 <p class="member-cancel-actions-text">Are you sure you want to delete this journal ?</p>
+	
+  </div>
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >NO</button>
+					<button type="submit" class="new-small-button new-black-back-btn big-long-btns " >YES</button>
+					
+    
+  </div>
+  
+</div>
+
+<div id="delete-publication-modal" class="modal hide fade sign-modals" tabindex="-1">
+
+	 <div class="modal-header">
+ 
+ <p>DELETE PUBLICATION</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+
+  <div class="modal-body zero-margin" >
+   
+	 <p class="member-cancel-actions-text">Are you sure you want to delete this publication ?</p>
+	
+  </div>
+  
+   <div class="controls modal-btn-holder invitation-modal-footer">
+					
+					<button data-dismiss="modal"  class="new-small-button new-black-btn big-long-btns   middle-button" >NO</button>
+					<button type="submit" class="new-small-button new-black-back-btn big-long-btns " >YES</button>
+    
+  </div>
+  
+</div>
+
+
+<div class="modal fade hide" id="edit-journal-publications-modal">
+	
+	<div class="modal-header">
+ 
+ <p>EDIT JOURNAL</p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+	<div class="publication-error">Journal Name.</div>
+
+	
+
+	<div class="project-publication-modal-inner" >
+	
+		
+		
+		<label class="group-label">Journal Information</label>
+		
+		
+		
+		<div class="input-group two-input-row">
+			
+					<input id="pub-journal" class="form-control"  placeholder="Journal Name">
+					<input id="pub-short-journal" class="form-control"  placeholder="Journal Short Name">
+		</div>
+		
+
+		
+
+		</div>
+
+		 <div class="profile-form-btns">
+			
+			 <button type="submit" id="submit-publication"  class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+			 <button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
+			
+			</div>
+	
+	
+
+  
+</div><!-- /.modal -->
+
+	<div class="modal fade hide" id="new-admin-publications-modal">
+	
+	<div class="modal-header">
+ 
+ <p>NEW PUBLICATION </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+	<div class="publication-error">Journal Name, publish time, title and author, are all REQUIRED.</div>
+
+	
+
+	<div class="project-publication-modal-inner" >
+	
+		
+		
+		<label class="group-label">Journal Information</label>
+		
+		<div class="input-group">
+		
+						<input id="doi-number" class="form-control"  placeholder="DOI Number">
+						<div class="doi-error">This journal already exists.</div>
+		
+		</div>
+		
+		<div class="input-group two-input-row">
+		
+		
+			
+					<input id="pub-journal" class="form-control"  placeholder="Journal Name">
+					<input id="pub-short-journal" class="form-control"  placeholder="Journal Short Name">
+		</div>
+		
+		<label class="group-label">Publish Date</label>
+		
+		<div class="input-group">
+			
+		<div class="publication-date-filter" style="border-bottom: 15px solid #ecead4">
+								
+								
+								<div>
+								<select class="days"></select>
+								</div>
+								
+								<div class="pub-month-picker-holder">
+								<select class="months">
+								
+									<option value="1">January</option>
+									<option value="2">February</option>
+									<option value="3">March</option>
+									<option value="4">April</option>
+									<option value="5">May</option>
+									<option value="6">June</option>
+									<option value="7">July</option>
+									<option value="8">August</option>
+									<option value="9">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								
+								</select>
+								</div>
+								<div>
+								<select class="years"></select>
+								</div>
+								
+								</div>
+					
+						
+		</div>
+		
+			<div class="input-group">
+			
+				
+					
+			</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Title & Author</label>
+		
+		<div class="input-group">
+			
+					<input id="pub-title" class="form-control"  placeholder="Title">
+		
+					<input id="pub-title-zh" class="form-control"  placeholder="Title in Chinese" style="margin-top: 20px; margin-bottom: 20px !important">
+		
+					
+					<textarea placeholder="Write author names seperated by commas."></textarea>
+					
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Summary</label>
+		
+		<div class="input-group">
+			
+					<textarea style="height: 120px !important"  class="form-control"  placeholder="Introduce your publication in 350 characters"></textarea>
+				
+				
+		</div>
+		
+		<label class="group-label">Keywords<span class="label-optional-span">(Optional)</span></label>
+		
+		<div class="input-group keywords-group " style="margin-bottom: 0px !important;" >
+				
+				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
+				<a  id="add-tags-btn" class="new-small-button new-black-back-btn add-to-list-btn">Add</a>
+				<div class="pub-tags-list">
+				
+				<div class="editor-all-tags"><span class="tag-text">Astronomy</span><div class="tag-delete lnr lnr-cross"></div></div>
+				
+				</div>
+					
+		</div>
+		
+		
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Link to Full Article<span class="label-optional-span">(Optional - Add link to page where others can find full articles.)</span></label>
+		<div class="input-group keywords-group " >
+				
+		<input  class="form-control"  placeholder="Link">
+
+					
+		</div>
+		
+	
+			
+			
+			
+		</div>
+
+		 <div class="profile-form-btns">
+			
+			 <button type="submit" id="submit-publication"  class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+			 <button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
+			
+			</div>
+	
+	
+
+  
+</div><!-- /.modal -->
+
+	<div class="modal fade hide" id="edit-admin-publications-modal">
+	
+	<div class="modal-header">
+ 
+ <p>EDIT PUBLICATION </p>
+ <div class="my-bullets center-bullets"><span></span><span></span><span></span></div>
+ <span data-dismiss="modal" class="lnr lnr-cross close-modal-span"></span>
+ 
+ </div>
+ 
+	<div class="publication-error">Journal Name, publish time, title and author, are all REQUIRED.</div>
+
+	
+
+	<div class="project-publication-modal-inner" >
+	
+		
+		
+		<label class="group-label">Journal Information</label>
+		
+		<div class="input-group">
+		
+						<input id="doi-number" class="form-control"  placeholder="DOI Number">
+						<div class="doi-error">This journal already exists.</div>
+		
+		</div>
+		
+		<div class="input-group two-input-row">
+			
+					<input id="pub-journal" class="form-control"  placeholder="Journal Name">
+					<input id="pub-short-journal" class="form-control"  placeholder="Journal Short Name">
+		</div>
+		
+		<label class="group-label">Publish Date</label>
+		
+		<div class="input-group">
+			
+		<div class="publication-date-filter" style="border-bottom: 15px solid #ecead4">
+								
+								
+								<div>
+								<select class="days"></select>
+								</div>
+								
+								<div class="pub-month-picker-holder">
+								<select class="months">
+								
+									<option value="1">January</option>
+									<option value="2">February</option>
+									<option value="3">March</option>
+									<option value="4">April</option>
+									<option value="5">May</option>
+									<option value="6">June</option>
+									<option value="7">July</option>
+									<option value="8">August</option>
+									<option value="9">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								
+								</select>
+								</div>
+								<div>
+								<select class="years"></select>
+								</div>
+								
+								</div>
+					
+						
+						
+		</div>
+		
+			<div class="input-group">
+			
+				
+					
+			</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Title & Author</label>
+		
+		<div class="input-group">
+			
+					<input id="pub-title" class="form-control"  placeholder="Title">
+		
+					<input id="pub-title-zh" class="form-control"  placeholder="Title in Chinese" style="margin-top: 20px; margin-bottom: 20px !important">
+		
+					
+					<textarea placeholder="Write author names seperated by commas."></textarea>
+					
+		</div>
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Summary</label>
+		
+		<div class="input-group">
+			
+					<textarea style="height: 120px !important"  class="form-control"  placeholder="Introduce your publication in 350 characters"></textarea>
+				
+				
+		</div>
+		
+		<label class="group-label">Keywords<span class="label-optional-span">(Optional)</span></label>
+		
+		<div class="input-group keywords-group " style="margin-bottom: 0px !important;" >
+				
+				<input type="text" class="create-project-keywords-input" id="authors-list" onKeyPress="return disableEnterKey(event)" placeholder="Author Name"/>
+				<a  id="add-tags-btn" class="new-small-button new-black-back-btn add-to-list-btn">Add</a>
+				<div class="pub-tags-list">
+				
+				<div class="editor-all-tags"><span class="tag-text">Astronomy</span><div class="tag-delete lnr lnr-cross"></div></div>
+				
+				</div>
+					
+		</div>
+		
+		
+		
+		<hr class="user-sep-line">
+		
+		<label class="group-label">Link to Full Article<span class="label-optional-span">(Optional - Add link to page where others can find full articles.)</span></label>
+		<div class="input-group keywords-group " >
+				
+		<input  class="form-control"  placeholder="Link">
+
+					
+		</div>
+		
+		<label class="group-label">Status<span class="label-optional-span"></span></label>
+		
+		<select style="width: 100%; height: 50px;">
+  
+			<option>Select</option>
+			<option>Approve</option>
+			<option>Deny</option>
+  
+		</select>
+	
+			
+			
+			
+		</div>
+
+		 <div class="profile-form-btns">
+			
+			 <button type="submit" id="submit-publication"  class="new-small-button new-black-back-btn big-long-btns   middle-button" >SAVE</button>
+			 <button class="new-small-button new-black-btn big-long-btns   middle-button" data-dismiss="modal" >CANCEL</button>
+			
+			</div>
+	
+	
+
+  
+</div><!-- /.modal -->
+
 <header>
 </header>
 
@@ -67,9 +516,11 @@ $(document).ready(function() {
         
         	<ul class="nav nav-tabs">
   					<li class="active"><a href="#all-table" data-toggle="tab">All Publications</a></li>
-  					<li><a href="#create-admin" data-toggle="tab">Create/Edit Publication</a></li>
+  					<li><a href="#create-admin" data-toggle="tab">All Journals</a></li>
   					
 			</ul>
+			
+			<a class="add-admin-publication-btn">+ Create Publication</a>
         
         
         </div>
@@ -80,7 +531,6 @@ $(document).ready(function() {
             <section>
 			
 
-		
 
 			<table id="example" class="display" cellspacing="0" width="100%">
 				<thead>
@@ -99,16 +549,17 @@ $(document).ready(function() {
 
 				<tbody>
 					<tr class="publications-admin-row">
-						<td>23</td>
-						<td>Economics</td>
-						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico</td>
-						<td>2008</td>
+						<td class="search-field">23</td>
+						<td class="search-field">Economics</td>
+						<td class="search-field">Prehispanic Use of Chili Peppers in Chiapas, Mexico</td>
+						<td>August, 2008</td>
                         <td class="publication-admin-author-link"><a><img src="../img/profile1.jpg" />Brahim Senhaji</a></td>
 						<td class="admin-table-manage">
 						
-						<span class="fa fa-pencil"></span>
-						<span class="fa fa-check"></span>
-						<span class="fa fa-trash-o"></span>
+						<span class=" status-span approved-span">Approved</span>
+						<input type="number" value="0"/>
+						<span class="fa fa-pencil-square-o edit-publication-btn"></span>
+						<span class="fa fa-trash-o delete-publication-btn "></span>
 						
 						
 						</td>
@@ -119,13 +570,33 @@ $(document).ready(function() {
 						<td>23</td>
 						<td>Economics</td>
 						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico</td>
-						<td>2008</td>
+						<td>August, 2008</td>
                         <td class="publication-admin-author-link"><a><img src="../img/profile1.jpg" />Brahim Senhaji</a></td>
 						<td class="admin-table-manage">
 						
-						<span class="fa fa-pencil"></span>
-						<span class="fa fa-check"></span>
-						<span class="fa fa-trash-o"></span>
+						<span class=" status-span denied-span">Denied</span>
+						<input type="number" value="0"/>
+						<span class="fa fa-pencil-square-o edit-publication-btn"></span>
+						<span class="fa fa-trash-o delete-publication-btn"></span>
+						
+						
+						</td>
+						
+					</tr>
+					
+					
+					<tr class="publications-admin-row">
+						<td>23</td>
+						<td>Economics</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico</td>
+						<td>August, 2008</td>
+                        <td class="publication-admin-author-link"><a><img src="../img/profile1.jpg" />Brahim Senhaji</a></td>
+						<td class="admin-table-manage">
+						
+						<span class=" status-span pending-span">Pending</span>
+						<input type="number" value="0"/>
+						<span class="fa fa-pencil-square-o edit-publication-btn"></span>
+						<span class="fa fa-trash-o delete-publication-btn"></span>
 						
 						
 						</td>
@@ -150,7 +621,95 @@ $(document).ready(function() {
             
             
             </div>
-  			<div class="tab-pane" id="create-admin"></div>
+  			
+			<div class="tab-pane" id="create-admin">
+			
+				  <section>
+			
+
+		
+
+			<table id="example2" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						
+						<th>Short Title</th>
+						<th>Title</th>
+						<th >Manage</th>
+						
+					
+					</tr>
+				</thead>
+
+			
+
+				<tbody>
+					<tr class="publications-admin-row">
+						
+						<td>Econ</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico</td>
+						
+						<td class="admin-table-manage">
+						
+				
+						<input type="number" value="0"/>
+						<span class="fa fa-pencil-square-o edit-journal-btn"></span>
+						<span class="fa fa-trash-o delete-journal-btn"></span>
+						
+						
+						</td>
+						
+					</tr>
+                    
+					<tr class="publications-admin-row">
+					
+						<td>ECXB</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico</td>
+						<td class="admin-table-manage">
+						
+					
+						<input type="number" value="0"/>
+						<span class="fa fa-pencil-square-o edit-journal-btn"></span>
+						<span class="fa fa-trash-o delete-journal-btn"></span>
+						
+						
+						</td>
+						
+					</tr>
+					
+					
+					<tr class="publications-admin-row">
+					
+						<td>AAQV</td>
+						<td>Prehispanic Use of Chili Peppers in Chiapas, Mexico</td>
+						<td class="admin-table-manage">
+						
+						
+						<input type="number" value="0"/>
+						<span class="fa fa-pencil-square-o edit-journal-btn"></span>
+						<span class="fa fa-trash-o delete-journal-btn"></span>
+						
+						
+						</td>
+						
+					</tr>
+                    
+               
+					
+			
+				
+				
+				
+			
+				
+				</tbody>
+			</table>
+
+	
+	
+		</section>
+			
+			</div>
   			
 		</div>
         
